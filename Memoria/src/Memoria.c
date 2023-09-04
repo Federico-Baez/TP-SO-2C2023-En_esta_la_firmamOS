@@ -10,8 +10,16 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-
-int main(void) {
-	puts("!!!Hello World!!!"); /* prints !!!Hello World!!! */
-	return EXIT_SUCCESS;
+#include <commons/config.h>
+#include <commons/log.h>
+int main(int argc, char** argv) {
+	t_config* config;
+	t_log* logger;
+	config = config_create(argv[1]);
+	if(config=NULL){
+		log_error(logger, "No se encontro el path");
+		config_destroy(config);
+		log_destroy(logger);
+		exit(1);
+	}
 }
