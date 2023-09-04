@@ -16,7 +16,7 @@
 #include <commons/string.h>
 
 typedef enum{
-
+	CUALQUIERA
 }t_instruccion;
 
 
@@ -33,15 +33,26 @@ typedef enum{
 
 //Manejo de instrucciones del Kernel
 typedef enum{
+	SET,
+	ADD,
+	SUB,
+	SUM,
+	MOV_IN,
+	MOV_OUT,
+	SLEEP,
+	JNZ,
+	WAIT,
+	SIGNAL,
 	F_OPEN,
 	F_CLOSE,
 	F_SEEK,
 	F_TRUNCATE,
 	F_READ,
 	F_WRITE,
-	CREATE_PROCESS,
-	DELETE_PROCESS
+	EXIT_P
 }cod_instruccion;
+
+
 
 
 //Contexto de ejecucion
