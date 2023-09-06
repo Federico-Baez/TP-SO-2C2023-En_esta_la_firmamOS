@@ -8,7 +8,6 @@
 #ifndef MEMORIA_H_
 #define MEMORIA_H_
 
-#include <socket.h>
 #include <protocolo.h>
 #include <commons/log.h>
 #include <commons/config.h>
@@ -16,6 +15,7 @@
 #include <shared.h>
 #include <pthread.h>
 #include <protocolo.h>
+#include <socket.h>
 #include <stdlib.h>
 
 
@@ -35,11 +35,12 @@ int TAM_MEMORIA;
 int TAM_PAGINA;
 char* PATH_INSTRUCCIONES;
 int RETARDO_RESPUESTA;
-t_algoritmo ALGORITMO_REEMPLAZO;
+char* ALGORITMO_REEMPLAZO;
+//¿no debería ser un string para leerlo en el config?
 
-t_log* logger;
-t_log* log_obligatorio;
-t_config* config;
+t_log* memoria_logger;
+t_log* memoria_log_obligatorio;
+t_config* memoria_config;
 char* server_name;
 int socket_server;
 int fd_kernel;

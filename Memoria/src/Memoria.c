@@ -12,16 +12,18 @@
 #include "../include/Memoria.h"
 
 int main(int argc, char** argv) {
-	logger = log_create("memoria.log", "[Memoria]", 0, LOG_LEVEL_INFO);
-	config = config_create(argv[1]);
-	if(config=NULL){
-		log_error(logger, "No se encontro el path");
+	memoria_logger = log_create("memoria.log", "[Memoria]", 0, LOG_LEVEL_INFO);
+	memoria_log_obligatorio = log_create("memoria_log_obligatorio.log", "[Memoria- Log obligatorio]", 1, LOG_LEVEL_INFO);
+
+	memoria_config = config_create(argv[1]);
+	if(memoria_config == NULL){
+		log_error(memoria_logger, "No se encontro el path");
 		config_destroy(config);
-		log_destroy(logger);
+		log_destroy(memoria_logger);
 		exit(1);
 	}
-	log_obligatorio = log_create("memoria_log_obligatorio.log", "[Memoria- Log obligatorio]", 1, LOG_LEVEL_INFO);
-	leer_config();
+
+	leer_config(memoria_config);
 
 	//TODO: verificar como inicializar memoria
 	inicializar_memoria();
@@ -31,9 +33,17 @@ int main(int argc, char** argv) {
 
 
 }
-void leer_config(){
-
+void leer_config(t_config* config){
+	PUERTO_ESCUCHA = config_get_int_value(config, "PUERTO_ESCUCHA");
+	IP_FILESYSTEM = config_get_string_value(config, "IP_FILESYSTEM");
+	PUERTO_FILESYSTEM = config_get_int_value(config, "PUERTO_FILESYSTEM");
+	TAM_MEMORIA = config_get_int_value(config, "TAM_MEMORIA");
+	TAM_PAGINA = config_get_int_value(config, "TAM_PAGINA");
+	PATH_INSTRUCCIONES = config_get_string_value(config, "PATH_INSTRUCCIONES");
+	RETARDO_RESPUESTA = config_get_int_value(config, "RETARDO_RESPUESTA");
+	ALGORITMO_REEMPLAZO = config_get_string_value(config, "ALGORITMO_REEMPLAZO");
 }
+
 void inicializar_memoria(){
 
 }
