@@ -18,7 +18,7 @@ int main(int argc, char** argv) {
 	memoria_config = config_create(argv[1]);
 	if(memoria_config == NULL){
 		log_error(memoria_logger, "No se encontro el path");
-		config_destroy(config);
+		config_destroy(memoria_config);
 		log_destroy(memoria_logger);
 		exit(1);
 	}
@@ -28,7 +28,7 @@ int main(int argc, char** argv) {
 	//TODO: verificar como inicializar memoria
 	inicializar_memoria();
 
-	fd_memoria = iniciar_servidor(logger, IP_MEMORIA, PUERTO_ESCUCHA);
+	fd_memoria = iniciar_servidor(memoria_logger, IP_MEMORIA, PUERTO_ESCUCHA);
 
 
 
@@ -59,23 +59,23 @@ static void procesar_conexion(void *void_args){
 	while(cliente_socket != -1){
 		if(recv(cliente_socket,&cod_op,sizeof(cod_op),0)!= sizeof(cod_op)){
 
-			log_info(logger, "El cliente se desconecto del servidor %s .",server_name);
+			log_info(memoria_logger, "El cliente se desconecto del servidor %s .",server_name);
 			return;
 		}
 		switch(cod_op){
 			MENSAJE:
-				recibir_mensaje(logger, cliente_socket);
+				recibir_mensaje(memoria_logger, cliente_socket);
 				break;
 			PAQUETE:
 				t_list* paquete_recibido = recibir_paquete(cliente_socket);
-				log_info(logger, "Se reciben los siguientes paquetes: ");
+				log_info(memoria_logger, "Se reciben los siguientes paquetes: ");
 				list_iterate(paquete_recibido, (void*)iterator);
 				break;
 			case -1:
-				log_error(logger, "el cliente se desconecto. Terminando servidor");
+				log_error(memoria_logger, "el cliente se desconecto. Terminando servidor");
 				break;
 		default:
-			log_error(logger, "Operacion desconocida. No quieras meter la pata");
+			log_error(memoria_logger, "Operacion desconocida. No quieras meter la pata");
 
 		}
 
@@ -83,12 +83,12 @@ static void procesar_conexion(void *void_args){
 }
 
 void iterator(char *value) {
-	log_info(logger, "%s", value);
+	log_info(memoria_logger, "%s", value);
 }
 
 int server_escucha(){
 	server_name = "Memoria";
-	int cliente_socket = esperar_cliente(logger, server_name, fd_memoria);
+	int cliente_socket = esperar_cliente(memoria_logger, server_name, fd_memoria);
 	if(cliente_socket != -1){
 		pthread_t hilo_cliente;
 		int* args = malloc(sizeof(int));
