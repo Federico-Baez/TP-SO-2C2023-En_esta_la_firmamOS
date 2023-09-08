@@ -11,36 +11,61 @@
 #include "../include/Kernel.h"
 
 int main(int argc, char** argv) {
-	kernel_logger = log_create("memoria.log", "[Memoria]", 0, LOG_LEVEL_INFO);
-	kernel_log_obligatorio = log_create("memoria_log_obligatorio.log", "[Memoria- Log obligatorio]", 1, LOG_LEVEL_INFO);
+	kernel_logger = log_create("kernel.log", "[Kernel]", 0, LOG_LEVEL_INFO);
+	kernel_log_obligatorio = log_create("kernel_log_obligatorio.log", "[Kernel - Log obligatorio]", 1, LOG_LEVEL_INFO);
 
-	kernel_config = config_create(argv[1]);
+	//kernel_config = config_create(argv[1]); //Esto quiza lo descomentemos para las pruebas
+	kernel_config = config_create("kernel.config");
+
 	if(kernel_config == NULL){
-		log_error(kernel_logger, "No se encontro el path \n");
+		log_error(kernel_logger, "No se encontro el path del config\n");
 		config_destroy(kernel_config);
 		log_destroy(kernel_logger);
-		exit(1);
+		log_destroy(kernel_log_obligatorio);
+		exit(2);
 	}
 
-	leer_config(kernel_logger);
+	leer_config(kernel_config);
+
+
+	//pruebo con conectarme a cpu
+	fd_cpu_dispatcher = crear_conexion(IP_CPU, PUERTO_CPU_DISPATCH);
+	fd_cpu_interrupt = crear_conexion(IP_CPU, PUERTO_CPU_INTERRUPT);
+
+	enviar_mensaje("Me conecto a cpu por el canal dispatch", fd_cpu_dispatcher);
+	enviar_mensaje("Me conecto a cpu por el canal interrupt", fd_cpu_interrupt);
+
+	finalizar_kernel();
+
+	return EXIT_SUCCESS;
 }
 
 
 void leer_config(t_config* config){
-	IP_MEMORIA=config_get_string_value(config,"IP_MEMORIA");
-	PUERTO_MEMORIA=config_get_int_value(config,"PUERTO_MEMORIA");
-	IP_FILESYSTEM=config_get_string_value(config,"IP_FILESYSTEM");
-	PUERTO_FILESYSTEM=config_get_int_value(config,"PUERTO_FILESYSTEM");
-	IP_CPU=config_get_string_value(config,"IP_CPU");
-	PUERTO_CPU_DISPATCH=config_get_int_value(config,"PUERTO_CPU_DISPATCH");
-	PUERTO_CPU_INTERRUPT=config_get_int_value(config,"PUERTO_CPU_INTERRUPT");
-	char* algoritmo_planificacion =config_get_string_value(config,"ALGORITMO_PLANIFICACION");
+	IP_MEMORIA = config_get_string_value(config,"IP_MEMORIA");
+	PUERTO_MEMORIA = config_get_string_value(config,"PUERTO_MEMORIA");
+	IP_FILESYSTEM = config_get_string_value(config,"IP_FILESYSTEM");
+	PUERTO_FILESYSTEM = config_get_string_value(config,"PUERTO_FILESYSTEM");
+	IP_CPU = config_get_string_value(config,"IP_CPU");
+	PUERTO_CPU_DISPATCH = config_get_string_value(config,"PUERTO_CPU_DISPATCH");
+	PUERTO_CPU_INTERRUPT = config_get_string_value(config,"PUERTO_CPU_INTERRUPT");
+	char* algoritmo_planificacion = config_get_string_value(config,"ALGORITMO_PLANIFICACION");
 	asignar_planificador_cp(algoritmo_planificacion);
-	QUANTUM=config_get_int_value(config,"QUANTUM");
-	RECURSOS=config_get_array_value(config, "RECURSOS");
-	INSTANCIAS_RECURSOS= config_get_array_value(config, "INSTANCIAS_RECURSOS");
-	GRADO_MULTIPROGRAMACION_INI=config_get_int_value(config,"GRADO_MULTIPROGRAMACION_INI");
+	QUANTUM = config_get_int_value(config,"QUANTUM");
+	RECURSOS = config_get_array_value(config, "RECURSOS");
+	INSTANCIAS_RECURSOS = config_get_array_value(config, "INSTANCIAS_RECURSOS"); //TODO: tratar de convertirlo en un array de ints
+	GRADO_MULTIPROGRAMACION_INI = config_get_int_value(config,"GRADO_MULTIPROGRAMACION_INI");
 
+}
+
+void finalizar_kernel(){
+	log_destroy(kernel_logger);
+	log_destroy(kernel_log_obligatorio);
+	config_destroy(kernel_config);
+	liberar_conexion(fd_cpu_dispatcher);
+	liberar_conexion(fd_cpu_interrupt);
+	free(INSTANCIAS_RECURSOS);
+	free(RECURSOS);
 }
 
 void asignar_planificador_cp(char* algoritmo_planificacion){
@@ -55,14 +80,17 @@ void asignar_planificador_cp(char* algoritmo_planificacion){
 		}
 }
 
-bool conectarse_a_modulos(){
-	pthread_t  conexion_fs;
-	pthread_t  conexion_cpu_dispatcher;
-	pthread_t  conexion_cpu_interrupt;
+
+//TODO: Tira error al compilar
+/*bool conectarse_a_modulos(){
+	pthread_t conexion_fs;
+	pthread_t conexion_cpu_dispatcher;
+	pthread_t conexion_cpu_interrupt;
+	pthread_t conexion_memoria;
 
 	fd_cpu_dispatcher = crear_conexion(IP_CPU, PUERTO_CPU_DISPATCH);
 	fd_cpu_interrupt = crear_conexion(IP_CPU, PUERTO_CPU_INTERRUPT);
-	//TODO EN EL CASO DE TENER UNA INTERRUPCION SE DEBE DE CREAR OTRA CONEXION?
+	//TODO: EN EL CASO DE TENER UNA INTERRUPCION SE DEBE DE CREAR OTRA CONEXION?
 	pthread_create(&conexion_cpu_dispatcher, NULL, (void*)procesar_conexion, (void*) &fd_cpu_dispatcher);
 	pthread_create(&conexion_cpu_interrupt, NULL, (void*)procesar_conexion, (void*) &fd_cpu_interrupt);
 
@@ -81,7 +109,7 @@ bool conectarse_a_modulos(){
 
 }
 
-void procesar_conexion(){}
+void procesar_conexion(){}*/
 
 
 

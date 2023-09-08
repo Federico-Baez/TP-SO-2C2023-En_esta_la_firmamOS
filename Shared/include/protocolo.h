@@ -45,7 +45,11 @@ void crear_buffer(t_paquete* paquete);
 
 /******************TODO: revisar los PAQUETES*************/
 t_list* recibir_paquete(int);
-t_paquete* crear_paquete(op_code);
+t_paquete* crear_paquete(void);
+void agregar_a_paquete(t_paquete* paquete, void* valor, int tamanio);
+void enviar_paquete(t_paquete* paquete, int socket_cliente);
+void* serializar_paquete(t_paquete* paquete, int bytes);
+void eliminar_paquete(t_paquete* paquete);
 
 /******************TODO: revisar los EMPAQUETACION*************/
 
