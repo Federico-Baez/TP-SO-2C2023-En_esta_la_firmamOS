@@ -32,6 +32,7 @@ int iniciar_servidor(t_log* logger, char* ip, char* puerto)
 	return socket_servidor;
 }
 
+
 int esperar_cliente(t_log* logger, const char* name, int socket_servidor) {
     struct sockaddr_in dir_cliente;
     socklen_t tam_direccion = sizeof(struct sockaddr_in);

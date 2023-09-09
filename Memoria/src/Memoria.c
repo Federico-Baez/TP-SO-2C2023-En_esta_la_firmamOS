@@ -12,29 +12,33 @@
 #include "../include/Memoria.h"
 
 int main(int argc, char** argv) {
-	memoria_logger = log_create("memoria.log", "[Memoria]", 0, LOG_LEVEL_INFO);
-	memoria_log_obligatorio = log_create("memoria_log_obligatorio.log", "[Memoria- Log obligatorio]", 1, LOG_LEVEL_INFO);
-
 	memoria_config = config_create(argv[1]);
+	memoria_logger = log_create("Memoria.log", "[Memoria]", 0, LOG_LEVEL_INFO);
+	memoria_log_obligatorio = log_create("Memoria_log_obligatorio.log", "[Memoria- Log obligatorio]", 1, LOG_LEVEL_INFO);
+
 	if(memoria_config == NULL){
-		log_error(memoria_logger, "No se encontro el path");
+		log_error(memoria_logger, "No se encontro el path \n.");
 		config_destroy(memoria_config);
 		log_destroy(memoria_logger);
 		exit(1);
 	}
 
 	leer_config(memoria_config);
+	leer_log();
 
 	//TODO: verificar como inicializar memoria
-	inicializar_memoria();
+//	inicializar_memoria();
 
 	fd_memoria = iniciar_servidor(memoria_logger, IP_MEMORIA, PUERTO_ESCUCHA);
+//	printf("Se inicia el servidor");
 
+	while(server_escucha())
 
 
 }
 void leer_config(t_config* config){
-	PUERTO_ESCUCHA = config_get_int_value(config, "PUERTO_ESCUCHA");
+	IP_MEMORIA = config_get_string_value(config, "IP_MEMORIA");
+	PUERTO_ESCUCHA = config_get_string_value(config, "PUERTO_ESCUCHA");
 	IP_FILESYSTEM = config_get_string_value(config, "IP_FILESYSTEM");
 	PUERTO_FILESYSTEM = config_get_int_value(config, "PUERTO_FILESYSTEM");
 	TAM_MEMORIA = config_get_int_value(config, "TAM_MEMORIA");
@@ -44,6 +48,18 @@ void leer_config(t_config* config){
 	ALGORITMO_REEMPLAZO = config_get_string_value(config, "ALGORITMO_REEMPLAZO");
 }
 
+void leer_log(){
+	log_info(memoria_logger, "IP_MEMORIA: %s", IP_MEMORIA);
+	log_info(memoria_logger, "PUERTO_ESCUCHA: %d", PUERTO_ESCUCHA);
+	log_info(memoria_logger, "IP_FILESYSTEM: %s", IP_FILESYSTEM);
+	log_info(memoria_logger, "PUERTO_FILESYSTEM: %d", PUERTO_FILESYSTEM);
+	log_info(memoria_logger, "TAM_MEMORIA: %d",TAM_MEMORIA);
+	log_info(memoria_logger, "TAM_PAGINA: %d",TAM_PAGINA);
+	log_info(memoria_logger, "PATH_INSTRUCCIONES: %s",PATH_INSTRUCCIONES);
+	log_info(memoria_logger, "RETARDO_RESPUESTA: %d",RETARDO_RESPUESTA);
+	log_info(memoria_logger, "ALGORITMO DE ASIGNACION: %s \n",ALGORITMO_REEMPLAZO);
+
+}
 void inicializar_memoria(){
 
 }

@@ -28,9 +28,9 @@ typedef enum{
 
 //config
 char* IP_MEMORIA;
-int PUERTO_ESCUCHA;
+char* PUERTO_ESCUCHA;
 char* IP_FILESYSTEM;
-int PUERTO_FILESYSTEM;
+char* PUERTO_FILESYSTEM;
 int TAM_MEMORIA;
 int TAM_PAGINA;
 char* PATH_INSTRUCCIONES;
@@ -63,6 +63,7 @@ void terminar_programa();
 static void  procesar_conexion(void *void_args);
 void inicializar_memoria();
 void iterator(char *value);
+void leer_log();
 
 
 #endif /* MEMORIA_H_ */
