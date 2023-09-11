@@ -18,6 +18,7 @@
 #include<string.h>
 #include<assert.h>
 #include <commons/collections/queue.h>
+#define BACKLOG 100
 
 int iniciar_servidor(t_log* logger, char* ip, char* puerto);
 int esperar_cliente(t_log* logger, const char* name, int socket_servidor);

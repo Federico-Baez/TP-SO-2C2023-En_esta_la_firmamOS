@@ -9,13 +9,12 @@
 #define MEMORIA_H_
 
 #include <protocolo.h>
+#include <socket.h>
+#include <shared.h>
 #include <commons/log.h>
 #include <commons/config.h>
-#include <commons/collections/list.h>
-#include <shared.h>
 #include <pthread.h>
 #include <protocolo.h>
-#include <socket.h>
 #include <stdlib.h>
 
 
@@ -64,6 +63,6 @@ static void  procesar_conexion(void *void_args);
 void inicializar_memoria();
 void iterator(char *value);
 void leer_log();
-
+int server_escucha(int fd_memoria);
 
 #endif /* MEMORIA_H_ */

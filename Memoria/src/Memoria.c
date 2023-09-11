@@ -13,7 +13,7 @@
 
 int main(int argc, char** argv) {
 	memoria_config = config_create(argv[1]);
-	memoria_logger = log_create("Memoria.log", "[Memoria]", 0, LOG_LEVEL_INFO);
+	memoria_logger = log_create("Memoria.log", "[Memoria]", 1, LOG_LEVEL_INFO);
 	memoria_log_obligatorio = log_create("Memoria_log_obligatorio.log", "[Memoria- Log obligatorio]", 1, LOG_LEVEL_INFO);
 
 	if(memoria_config == NULL){
@@ -30,9 +30,11 @@ int main(int argc, char** argv) {
 //	inicializar_memoria();
 
 	fd_memoria = iniciar_servidor(memoria_logger, IP_MEMORIA, PUERTO_ESCUCHA);
-//	printf("Se inicia el servidor");
 
-	while(server_escucha())
+	while(server_escucha(fd_memoria)){
+		log_info(memoria_logger, "Se abre servidor de Memoria");
+	}
+
 
 
 }
@@ -102,7 +104,7 @@ void iterator(char *value) {
 	log_info(memoria_logger, "%s", value);
 }
 
-int server_escucha(){
+int server_escucha(int fd_memoria){
 	server_name = "Memoria";
 	int cliente_socket = esperar_cliente(memoria_logger, server_name, fd_memoria);
 	if(cliente_socket != -1){
@@ -110,9 +112,11 @@ int server_escucha(){
 		int* args = malloc(sizeof(int));
 		args = &cliente_socket;
 		pthread_create(&hilo_cliente, NULL, (void*) procesar_conexion, (void*)args);
+		log_info(memoria_logger, "[THREAD] Creo hilo para atender");
 		pthread_detach(hilo_cliente);
 		return 1;
 	}
+	log_info(memoria_logger, "Se activa el servidor %s ", server_name);
 	return 0;
 }
 
