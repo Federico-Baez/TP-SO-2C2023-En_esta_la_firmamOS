@@ -1,10 +1,3 @@
-/*
- * protocolo.h
- *
- *  Created on: Sep 4, 2023
- *      Author: utnso
- */
-
 #ifndef INCLUDE_PROTOCOLO_H_
 #define INCLUDE_PROTOCOLO_H_
 
@@ -34,7 +27,6 @@ typedef struct{
 	op_code codigo_operacion;
 	t_buffer* buffer;
 } t_paquete;
-
 
 /******************TODO: revisar los MENSAJES*************/
 void enviar_mensaje(char* mensaje, int socket_cliente);

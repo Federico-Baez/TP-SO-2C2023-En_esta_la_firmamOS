@@ -12,9 +12,11 @@
 #include "../include/Memoria.h"
 
 int main(int argc, char** argv) {
-	memoria_config = config_create(argv[1]);
 	memoria_logger = log_create("Memoria.log", "[Memoria]", 1, LOG_LEVEL_INFO);
 	memoria_log_obligatorio = log_create("Memoria_log_obligatorio.log", "[Memoria- Log obligatorio]", 1, LOG_LEVEL_INFO);
+
+	//memoria_config = config_create(argv[1]); //Esto quiza lo descomentemos para las pruebas
+	memoria_config = config_create("memoria.config");
 
 	if(memoria_config == NULL){
 		log_error(memoria_logger, "No se encontro el path \n.");
@@ -27,22 +29,31 @@ int main(int argc, char** argv) {
 	leer_log();
 
 	//TODO: verificar como inicializar memoria
-//	inicializar_memoria();
+	//inicializar_memoria();
 
-	fd_memoria = iniciar_servidor(memoria_logger, IP_MEMORIA, PUERTO_ESCUCHA);
+	server_fd_memoria = iniciar_servidor(memoria_logger, IP_MEMORIA, PUERTO_ESCUCHA);
 
-	while(server_escucha(fd_memoria)){
+	//TODO: ¿Conectar a filesystem antes o después de la escucha?
+	fd_filesystem = crear_conexion(IP_FILESYSTEM, PUERTO_FILESYSTEM);
+
+	//TODO: Se que esta la función de server_escucha pero dejo esto comentado para tener una guía
+	//fd_kernel = esperar_cliente(memoria_logger, "Kernel", server_fd_memoria);
+	//fd_kernel = esperar_cliente(memoria_logger, "File System", server_fd_memoria);
+	//fd_kernel = esperar_cliente(memoria_logger, "CPU", server_fd_memoria);
+
+	while(server_escucha(server_fd_memoria)){
 		log_info(memoria_logger, "Se abre servidor de Memoria");
 	}
 
+	finalizar_memoria();
 
-
+	return EXIT_SUCCESS;
 }
 void leer_config(t_config* config){
 	IP_MEMORIA = config_get_string_value(config, "IP_MEMORIA");
 	PUERTO_ESCUCHA = config_get_string_value(config, "PUERTO_ESCUCHA");
 	IP_FILESYSTEM = config_get_string_value(config, "IP_FILESYSTEM");
-	PUERTO_FILESYSTEM = config_get_int_value(config, "PUERTO_FILESYSTEM");
+	PUERTO_FILESYSTEM = config_get_string_value(config, "PUERTO_FILESYSTEM");
 	TAM_MEMORIA = config_get_int_value(config, "TAM_MEMORIA");
 	TAM_PAGINA = config_get_int_value(config, "TAM_PAGINA");
 	PATH_INSTRUCCIONES = config_get_string_value(config, "PATH_INSTRUCCIONES");
@@ -52,9 +63,9 @@ void leer_config(t_config* config){
 
 void leer_log(){
 	log_info(memoria_logger, "IP_MEMORIA: %s", IP_MEMORIA);
-	log_info(memoria_logger, "PUERTO_ESCUCHA: %d", PUERTO_ESCUCHA);
+	log_info(memoria_logger, "PUERTO_ESCUCHA: %s", PUERTO_ESCUCHA);
 	log_info(memoria_logger, "IP_FILESYSTEM: %s", IP_FILESYSTEM);
-	log_info(memoria_logger, "PUERTO_FILESYSTEM: %d", PUERTO_FILESYSTEM);
+	log_info(memoria_logger, "PUERTO_FILESYSTEM: %s", PUERTO_FILESYSTEM);
 	log_info(memoria_logger, "TAM_MEMORIA: %d",TAM_MEMORIA);
 	log_info(memoria_logger, "TAM_PAGINA: %d",TAM_PAGINA);
 	log_info(memoria_logger, "PATH_INSTRUCCIONES: %s",PATH_INSTRUCCIONES);
@@ -66,6 +77,11 @@ void inicializar_memoria(){
 
 }
 
+void finalizar_memoria(){
+	log_destroy(memoria_logger);
+	log_destroy(memoria_log_obligatorio);
+	config_destroy(memoria_config);
+}
 
 
 /*----------------TODO COMUNICACION SOCKETS --------*/
