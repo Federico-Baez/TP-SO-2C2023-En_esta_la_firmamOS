@@ -18,12 +18,44 @@
 #include <stdlib.h>
 
 
+typedef struct{
+	int base;
+	int pid;  //Pedirle el pid a Kernel
+	bool modificado;
+	bool presente;
+	int numero_pagina;
+	int pos_en_swap;
+}Marco;
+t_list* lst_marco;
+
+
+typedef struct{
+	int tamamo_usado;
+	bool en_memoria;
+	int ultimo_uso;//Para el algoritmo LRU
+	Marco* puntero_marco;
+
+}Pagina;
+typedef struct{
+	Pagina* page;
+}tabla_paginas;
+
+
+t_list* lst_pagina;
 
 
 typedef enum{
 	FIFO,
 	LRU
 }t_algoritmo;
+
+
+/*
+ *
+ * MEMORIA VIRTUAL
+ */
+
+FILE* disco;
 
 //config
 char* IP_MEMORIA;
@@ -48,6 +80,7 @@ int fd_cpu;
 int fd_memoria;
 void* espacio_usuario;
 
+t_dictionary* tablas;
 
 
 
@@ -57,12 +90,16 @@ void terminar_programa();
 
 
 
-/*----------------TODO COMUNICACION SOCKETS --------*/
+/*----------------COMUNICACION SOCKETS --------*/
 
 static void  procesar_conexion(void *void_args);
 void inicializar_memoria();
 void iterator(char *value);
 void leer_log();
 int server_escucha(int fd_memoria);
+
+/************TODO INICIAR LA TABLA DE PAGINAS***************/
+tabla_paginas* crear_tabla_paginas(int pid);
+Marco* crear_marco(int base, bool presente);
 
 #endif /* MEMORIA_H_ */

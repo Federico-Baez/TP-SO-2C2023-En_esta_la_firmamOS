@@ -27,7 +27,7 @@ int main(int argc, char** argv) {
 	leer_log();
 
 	//TODO: verificar como inicializar memoria
-//	inicializar_memoria();
+	inicializar_memoria();
 
 	fd_memoria = iniciar_servidor(memoria_logger, IP_MEMORIA, PUERTO_ESCUCHA);
 
@@ -63,11 +63,41 @@ void leer_log(){
 
 }
 void inicializar_memoria(){
+	log_info(memoria_logger, "Inicianlizando memoria");
+	espacio_usuario = malloc(TAM_MEMORIA);
+	lst_marco = list_create();
+	int cant_marcos = TAM_MEMORIA/TAM_PAGINA;
+
+
+	for(int i=0;i<= cant_marcos;i++){
+		Marco* nuevo_marco  = crear_marco(TAM_PAGINA*i, true);
+
+		list_add(lst_marco,nuevo_marco);
+
+	}
 
 }
 
+Marco* crear_marco(int base, bool presente){
+	Marco *nuevo_marco = malloc(sizeof(Marco));
+	nuevo_marco->base = base;
+	nuevo_marco->presente = presente;
+	return nuevo_marco;
+}
+tabla_paginas* crear_tabla_paginas(int pid){
+	tabla_paginas* nueva_tabla = malloc(sizeof(tabla_paginas));
+	log_debug(memoria_log_obligatorio,"[PAG]: Creo tabla de paginas PID %d", pid);
 
+	char spid[4];
+	string_from_format(spid, "%d", pid);
+	nueva_tabla->page = list_create();
 
+	/** es una variable que deberia de bloquear**/
+	dictionary_put(tablas,spid, nueva_tabla);
+	/** aca deberia de desbloquear este recurso **/
+	return nueva_tabla;
+
+}
 /*----------------TODO COMUNICACION SOCKETS --------*/
 static void procesar_conexion(void *void_args){
 	int* args = (int*) void_args;

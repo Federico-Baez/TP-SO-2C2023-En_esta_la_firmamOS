@@ -65,3 +65,16 @@
 [ERROR] 01:25:59:312 [Memoria]/(169013:169758): Operacion desconocida. No quieras meter la pata
 [ERROR] 01:25:59:312 [Memoria]/(169013:169758): Operacion desconocida. No quieras meter la pata
 [INFO] 01:25:59:312 [Memoria]/(169013:169758): El cliente se desconecto del servidor Memoria .
+[INFO] 23:06:49:448 [Memoria]/(171861:171861): IP_MEMORIA: 127.0.0.1
+[INFO] 23:06:49:448 [Memoria]/(171861:171861): PUERTO_ESCUCHA: -1040271120
+[INFO] 23:06:49:448 [Memoria]/(171861:171861): IP_FILESYSTEM: 127.0.0.1
+[INFO] 23:06:49:448 [Memoria]/(171861:171861): PUERTO_FILESYSTEM: 8003
+[INFO] 23:06:49:448 [Memoria]/(171861:171861): TAM_MEMORIA: 4096
+[INFO] 23:06:49:448 [Memoria]/(171861:171861): TAM_PAGINA: 16
+[INFO] 23:06:49:448 [Memoria]/(171861:171861): PATH_INSTRUCCIONES: /home/utnso/mappa-instrucciones
+[INFO] 23:06:49:448 [Memoria]/(171861:171861): RETARDO_RESPUESTA: 1000
+[INFO] 23:06:49:448 [Memoria]/(171861:171861): ALGORITMO DE ASIGNACION: FIFO 
+
+[INFO] 23:06:49:448 [Memoria]/(171861:171861): Inicianlizando memoria
+[INFO] 23:06:49:448 [Memoria]/(171861:171861): Cliente conectado a Memoria
+[INFO] 23:06:49:448 [Memoria]/(171861:171861): Se activa el servidor Memoria 
