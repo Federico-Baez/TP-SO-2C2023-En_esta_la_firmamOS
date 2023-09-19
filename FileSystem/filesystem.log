@@ -1,0 +1,5 @@
+[INFO] 00:30:20:063 [File System]/(6151:6151): Servidor listo para recibir a Kernel
+
+[INFO] 00:31:09:675 [File System]/(6151:6151): Cliente conectado a Kernel
+[INFO] 00:31:09:740 [File System]/(6151:6151): Me llego el mensaje Me conecto a File System
+[ERROR] 00:31:09:741 [File System]/(6151:6151): el cliente se desconecto. Terminando servidor

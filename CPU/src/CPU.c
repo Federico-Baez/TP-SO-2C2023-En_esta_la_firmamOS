@@ -1,16 +1,5 @@
-/*
- ============================================================================
- Name        : CPU.c
- Author      : 
- Version     :
- Copyright   : Your copyright notice
- Description : Hello World in C, Ansi-style
- ============================================================================
- */
-
 #include <stdio.h>
 #include <stdlib.h>
-#include <commons/temporal.h>
 
 #include "../include/CPU.h"
 
@@ -31,9 +20,9 @@ int main(int argc, char** argv) {
 
 	leer_config(cpu_config);
 
-	//TODO: POR LO QUE HE DEBUGUEADO CREO QUE EL ERROR SE ENCUENTRA EN ESTA FUNCIÓN
 	server_fd_cpu_dispatch = iniciar_servidor(cpu_logger, IP_CPU, PUERTO_ESCUCHA_DISPATCH);
 	server_fd_cpu_interrupt = iniciar_servidor(cpu_logger, IP_CPU, PUERTO_ESCUCHA_INTERRUPT);
+	fd_memoria = crear_conexion(IP_MEMORIA, PUERTO_MEMORIA);
 
 	log_info(cpu_logger, "Servidor listo para recibir a Kernel\n");
 
@@ -93,6 +82,7 @@ void leer_config(t_config* config){
 	PUERTO_ESCUCHA_DISPATCH = config_get_string_value(config,"PUERTO_ESCUCHA_DISPATCH");
 	PUERTO_ESCUCHA_INTERRUPT = config_get_string_value(config,"PUERTO_ESCUCHA_INTERRUPT");
 }
+
 
 void iterator(char* value) {
 	log_info(cpu_logger,"%s", value);

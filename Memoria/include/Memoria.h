@@ -1,10 +1,3 @@
-/*
- * Memoria.h
- *
- *  Created on: Sep 5, 2023
- *      Author: utnso
- */
-
 #ifndef MEMORIA_H_
 #define MEMORIA_H_
 
@@ -16,6 +9,7 @@
 #include <pthread.h>
 #include <protocolo.h>
 #include <stdlib.h>
+
 
 
 typedef struct{
@@ -74,10 +68,8 @@ t_log* memoria_log_obligatorio;
 t_config* memoria_config;
 char* server_name;
 int socket_server;
-int fd_kernel;
 int fd_filesystem;
-int fd_cpu;
-int fd_memoria;
+int server_fd_memoria;
 void* espacio_usuario;
 
 t_dictionary* tablas;
@@ -86,7 +78,7 @@ t_dictionary* tablas;
 
 /*----------------TODO INIT ------------------------*/
 void leer_config();
-void terminar_programa();
+void finalizar_memoria();
 
 
 

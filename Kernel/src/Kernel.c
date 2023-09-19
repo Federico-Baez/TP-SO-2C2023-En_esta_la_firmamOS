@@ -1,13 +1,3 @@
-/*
- ============================================================================
- Name        : Kernel.c
- Author      : 
- Version     :
- Copyright   : Your copyright notice
- Description : Hello World in C, Ansi-style
- ============================================================================
- */
-
 #include "../include/Kernel.h"
 
 int main(int argc, char** argv) {
@@ -31,9 +21,8 @@ int main(int argc, char** argv) {
 	//pruebo con conectarme a cpu
 	fd_cpu_dispatcher = crear_conexion(IP_CPU, PUERTO_CPU_DISPATCH);
 	fd_cpu_interrupt = crear_conexion(IP_CPU, PUERTO_CPU_INTERRUPT);
-
-	enviar_mensaje("Me conecto a cpu por el canal dispatch", fd_cpu_dispatcher);
-	enviar_mensaje("Me conecto a cpu por el canal interrupt", fd_cpu_interrupt);
+	fd_filesystem = crear_conexion(IP_FILESYSTEM, PUERTO_FILESYSTEM);
+	fd_memoria = crear_conexion(IP_MEMORIA, PUERTO_MEMORIA);
 
 	finalizar_kernel();
 
@@ -64,6 +53,8 @@ void finalizar_kernel(){
 	config_destroy(kernel_config);
 	liberar_conexion(fd_cpu_dispatcher);
 	liberar_conexion(fd_cpu_interrupt);
+	liberar_conexion(fd_filesystem);
+	liberar_conexion(fd_memoria);
 	free(INSTANCIAS_RECURSOS);
 	free(RECURSOS);
 }
