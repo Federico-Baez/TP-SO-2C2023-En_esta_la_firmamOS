@@ -18,6 +18,8 @@
 #include <socket.h>
 #include <stdlib.h>
 
+#include <stdio.h>
+
 
 typedef enum{
 	FIFO,
@@ -44,7 +46,7 @@ char* PUERTO_CPU_INTERRUPT;
 t_algoritmo ALGORITMO_PLANIFICACION;
 int QUANTUM;
 char** RECURSOS;
-int* INSTANCIAS_RECURSOS;
+char** INSTANCIAS_RECURSOS;
 int GRADO_MULTIPROGRAMACION_INI;
 
 void leer_config(t_config* config);
