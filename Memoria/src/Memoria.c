@@ -144,6 +144,9 @@ static void procesar_conexion(void *void_args){
 				log_info(memoria_logger, "Se reciben los siguientes paquetes: ");
 				list_iterate(paquete_recibido, (void*)iterator);
 				break;
+			case ADMINISTRAR_PAGINA_MEMORIA:
+				log_info(memoria_logger, "Se crea la pagina en memoria");
+				break;
 			case -1:
 				log_error(memoria_logger, "el cliente se desconecto. Terminando servidor");
 				break;
