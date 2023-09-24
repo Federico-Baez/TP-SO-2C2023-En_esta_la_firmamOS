@@ -88,7 +88,7 @@ static void  procesar_conexion(void *void_args);
 void inicializar_memoria();
 void iterator(char *value);
 void leer_log();
-int server_escucha(int fd_memoria);
+int server_escucha();
 
 /************TODO INICIAR LA TABLA DE PAGINAS***************/
 tabla_paginas* crear_tabla_paginas(int pid);

@@ -45,7 +45,7 @@ int main(int argc, char** argv) {
 	//fd_kernel = esperar_cliente(memoria_logger, "File System", server_fd_memoria);
 	//fd_kernel = esperar_cliente(memoria_logger, "CPU", server_fd_memoria);
 
-	while(server_escucha(server_fd_memoria)){
+	while(server_escucha()){
 		log_info(memoria_logger, "Se abre servidor de Memoria");
 	}
 
@@ -103,9 +103,6 @@ Marco* crear_marco(int base, bool presente){
 tabla_paginas* crear_tabla_paginas(int pid){
 	tabla_paginas* nueva_tabla = malloc(sizeof(tabla_paginas));
 	log_debug(memoria_log_obligatorio,"[PAG]: Creo tabla de paginas PID %d", pid);
-	return nueva_tabla;
-
-
 	char* spid[4];
 	string_from_format(spid, "%d", pid);
 	nueva_tabla->page = list_create();
@@ -115,6 +112,7 @@ tabla_paginas* crear_tabla_paginas(int pid){
 	/** aca deberia de desbloquear este recurso **/
 	return nueva_tabla;
 
+
 }
 
 void finalizar_memoria(){
@@ -122,6 +120,9 @@ void finalizar_memoria(){
 	log_destroy(memoria_log_obligatorio);
 	config_destroy(memoria_config);
 }
+
+
+
 /*----------------TODO COMUNICACION SOCKETS --------*/
 static void procesar_conexion(void *void_args){
 	int* args = (int*) void_args;
@@ -135,10 +136,10 @@ static void procesar_conexion(void *void_args){
 			return;
 		}
 		switch(cod_op){
-			MENSAJE:
+			case MENSAJE:
 				recibir_mensaje(memoria_logger, cliente_socket);
 				break;
-			PAQUETE:
+			case PAQUETE:
 				t_list* paquete_recibido = recibir_paquete(cliente_socket);
 				log_info(memoria_logger, "Se reciben los siguientes paquetes: ");
 				list_iterate(paquete_recibido, (void*)iterator);
@@ -158,12 +159,12 @@ void iterator(char *value) {
 	log_info(memoria_logger, "%s", value);
 }
 
-int server_escucha(int fd_memoria){
+int server_escucha(){
 	server_name = "Memoria";
-	int cliente_socket = esperar_cliente(memoria_logger, server_name, fd_memoria);
+	int cliente_socket = esperar_cliente(memoria_logger, server_name, server_fd_memoria );
 	if(cliente_socket != -1){
 		pthread_t hilo_cliente;
-		int* args = malloc(sizeof(int));
+		int *args = malloc(sizeof(int));
 		args = &cliente_socket;
 		pthread_create(&hilo_cliente, NULL, (void*) procesar_conexion, (void*)args);
 		log_info(memoria_logger, "[THREAD] Creo hilo para atender");
