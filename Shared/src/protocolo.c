@@ -162,3 +162,67 @@ void eliminar_paquete(t_paquete* paquete)
 	free(paquete->buffer);
 	free(paquete);
 }
+
+t_paquete* crear_super_paquete(op_code code_op){
+	t_paquete* super_paquete = malloc(sizeof(t_paquete));
+	super_paquete->codigo_operacion = code_op;
+	crear_buffer(super_paquete);
+	return  super_paquete;
+}
+
+void cargar_int_al_super_paquete(t_paquete* paquete, int numero){
+	paquete->buffer->stream = realloc(paquete->buffer->stream,
+										paquete->buffer->size + sizeof(int));
+	//t_primitivo coso_int = _INT;
+	//memcpy(paquete->buffer->stream + paquete->buffer->size, &coso_int, sizeof(int));
+	memcpy(paquete->buffer->stream + paquete->buffer->size, &numero, sizeof(int));
+
+	paquete->buffer->size += sizeof(int);
+}
+
+void cargar_string_al_super_paquete(t_paquete* paquete, char* string){
+	paquete->buffer->stream = realloc(paquete->buffer->stream,
+									paquete->buffer->size + sizeof(int) + sizeof(char)*(strlen(string)+1));
+	/*Falta completar esta parte*/
+}
+
+int recibir_int_del_buffer(t_buffer* coso){
+	int valor_a_devolver;
+	memcpy(&valor_a_devolver, coso->stream, sizeof(int));
+
+	int nuevo_size = coso->size - sizeof(int);
+	if(nuevo_size < 0){
+		printf("\n[ERROR]: BUFFER CON TAMAÑO NEGATIVO\n\n");
+		free(valor_a_devolver);
+		return 0;
+	}
+	void* nuevo_coso = malloc(nuevo_size);
+	memcpy(nuevo_coso, coso->stream + sizeof(int), nuevo_size);
+	free(coso->stream);
+	coso->stream = nuevo_coso;
+	coso->size = nuevo_size;
+
+	return valor_a_devolver;
+}
+
+char* recibir_string_del_buffer(t_buffer* coso){
+	int size_string;
+	char* string;
+	memcpy(&size_string, coso->stream, sizeof(int));
+	string = malloc(sizeof(size_string));
+	memcpy(string, coso->stream + sizeof(int), size_string);
+
+	int nuevo_size = coso->size - sizeof(int) - size_string;
+	if(nuevo_size < 0){
+		printf("\n[ERROR]: BUFFER CON TAMAÑO NEGATIVO\n\n");
+		free(string);
+		return "[ERROR]: BUFFER CON TAMAÑO NEGATIVO";
+	}
+	void* nuevo_coso = malloc(nuevo_size);
+	memcpy(nuevo_coso, coso->stream + sizeof(int) + size_string, nuevo_size);
+	free(coso->stream);
+	coso->stream = nuevo_coso;
+	coso->size = nuevo_size;
+
+	return string;
+}

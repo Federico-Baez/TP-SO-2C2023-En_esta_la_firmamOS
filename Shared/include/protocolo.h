@@ -32,20 +32,37 @@ typedef enum{
 	ESCRITURA_USUARIO,
 	REEMPLAZO_PAGINA,
 	HANDSHAKE,
+	//-------
 	EJECUTAR_PROCESO_KC,
 	FORZAR_DESALOJO_KC,
+	//--------
 	SYSCALL_KF,
-	PETICION_ASIGNACION_BLOQUE_SWAP,
+	//--------
+	PETICION_ASIGNACION_BLOQUE_SWAP_FM,
 	LIBERAR_PAGINAS_FM,
 	PETICION_PAGE_FAULT_FM,
 	CARGAR_INFO_DE_LECTURA_FM,
 	GUARDAR_INFO_FM,
+	//------
 	PETICION_INFO_RELEVANTE_CM,
 	PETICION_DE_INSTRUCCIONES_CM,
 	PETICION_DE_EJECUCION_CM,
 	CONSULTA_DE_PAGINA_CM
 
 }op_code;
+
+typedef enum{
+	MEMORIA,
+	FILE_SYSTEM,
+	CPU,
+	KERNEL
+}t_module;
+
+typedef enum{
+	_INT,
+	_STRING,
+	_VOID
+}t_primitivo;
 
 typedef struct{
 	int size;
@@ -56,6 +73,7 @@ typedef struct{
 	op_code codigo_operacion;
 	t_buffer* buffer;
 } t_paquete;
+
 
 /******************TODO: revisar los MENSAJES*************/
 void enviar_mensaje(char* mensaje, int socket_cliente);
@@ -83,7 +101,14 @@ void eliminar_paquete(t_paquete* paquete);
 
 /******************TODO: revisar los DESTROY*************/
 
+
 int* recibir_int(t_log* logger, void* coso);
 t_list* recibir_paquete_int(int socket_cliente);
+
+t_paquete* crear_super_paquete(op_code code_op);
+void cargar_int_al_super_paquete(t_paquete* paquete, int numero);
+void cargar_string_al_super_paquete(t_paquete* paquete, char* string);
+int recibir_int_del_buffer(t_buffer* coso);
+char* recibir_string_del_buffer(t_buffer* coso);
 
 #endif /* INCLUDE_PROTOCOLO_H_ */
