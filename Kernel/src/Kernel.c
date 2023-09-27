@@ -24,6 +24,12 @@ int main(int argc, char** argv) {
 	fd_filesystem = crear_conexion(IP_FILESYSTEM, PUERTO_FILESYSTEM);
 	fd_memoria = crear_conexion(IP_MEMORIA, PUERTO_MEMORIA);
 
+	t_paquete* paquete = crear_paquete();
+	int numero = 7321;
+	agregar_a_paquete(paquete, &numero, sizeof(int));
+	enviar_paquete(paquete, fd_memoria);
+	eliminar_paquete(paquete);
+
 	finalizar_kernel();
 
 	return EXIT_SUCCESS;

@@ -10,10 +10,19 @@
 #include<string.h>
 #include<commons/log.h>
 #include"shared.h"
-
+/*
+typedef enum {
+	INT,
+	STRING,
+	VOID
+}op_tipo_dato;
+*/
 typedef enum{
 	MENSAJE,
 	PAQUETE,
+	INT,
+	STRING,
+	VOID,
 	SUPER_PAQUETE,
 	ADMINISTRAR_PAGINA_MEMORIA,
 	ACCESO_USUARIO_MEMORIA,
@@ -21,7 +30,20 @@ typedef enum{
 	ELIMINAR_PAGINA,
 	LECTURA_USUARIO,
 	ESCRITURA_USUARIO,
-	REEMPLAZO_PAGINA
+	REEMPLAZO_PAGINA,
+	HANDSHAKE,
+	EJECUTAR_PROCESO_KC,
+	FORZAR_DESALOJO_KC,
+	SYSCALL_KF,
+	PETICION_ASIGNACION_BLOQUE_SWAP,
+	LIBERAR_PAGINAS_FM,
+	PETICION_PAGE_FAULT_FM,
+	CARGAR_INFO_DE_LECTURA_FM,
+	GUARDAR_INFO_FM,
+	PETICION_INFO_RELEVANTE_CM,
+	PETICION_DE_INSTRUCCIONES_CM,
+	PETICION_DE_EJECUCION_CM,
+	CONSULTA_DE_PAGINA_CM
 
 }op_code;
 
@@ -60,5 +82,8 @@ void eliminar_paquete(t_paquete* paquete);
 
 
 /******************TODO: revisar los DESTROY*************/
+
+int* recibir_int(t_log* logger, void* coso);
+t_list* recibir_paquete_int(int socket_cliente);
 
 #endif /* INCLUDE_PROTOCOLO_H_ */

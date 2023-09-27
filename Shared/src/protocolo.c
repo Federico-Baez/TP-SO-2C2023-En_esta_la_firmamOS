@@ -51,6 +51,14 @@ void recibir_mensaje(t_log* logger, int socket_cliente)
 	free(buffer);
 }
 
+int* recibir_int(t_log* logger, void* coso)
+{
+	int* buffer_int = malloc(sizeof(int));
+	memcpy(buffer_int,coso,sizeof(int));
+	log_info(logger, "Me llego el numero: %d", *buffer_int);
+	return buffer_int;
+}
+
 void crear_buffer(t_paquete* paquete)
 {
 	paquete->buffer = malloc(sizeof(t_buffer));
@@ -67,6 +75,7 @@ t_list* recibir_paquete(int socket_cliente)
 	int tamanio;
 
 	buffer = recibir_buffer(&size, socket_cliente);
+
 	while(desplazamiento < size)
 	{
 		memcpy(&tamanio, buffer + desplazamiento, sizeof(int));
@@ -76,6 +85,30 @@ t_list* recibir_paquete(int socket_cliente)
 		desplazamiento+=tamanio;
 		list_add(valores, valor);
 	}
+	free(buffer);
+	return valores;
+}
+
+
+t_list* recibir_paquete_int(int socket_cliente)
+{
+	int size;
+	int desplazamiento = 0;
+	void * buffer;
+	t_list* valores = list_create();
+	int tamanio;
+
+	buffer = recibir_buffer(&size, socket_cliente);
+
+	//int* del_punter_coso;
+
+	memcpy(&tamanio, buffer + desplazamiento, sizeof(int));
+	desplazamiento+=sizeof(int);
+	int* valor = malloc(tamanio);
+	memcpy(valor, buffer+desplazamiento, tamanio);
+	desplazamiento+=tamanio;
+	list_add(valores, valor);
+
 	free(buffer);
 	return valores;
 }

@@ -86,7 +86,7 @@ void finalizar_memoria();
 
 static void  procesar_conexion(void *void_args);
 void inicializar_memoria();
-void iterator(char *value);
+void iterator(int *value);
 void leer_log();
 int server_escucha();
 

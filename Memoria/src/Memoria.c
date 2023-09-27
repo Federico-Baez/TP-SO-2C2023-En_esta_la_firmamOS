@@ -143,9 +143,13 @@ static void procesar_conexion(void *void_args){
 			recibir_mensaje(memoria_logger, cliente_socket);
 			break;
 		case PAQUETE:
-			t_list* paquete_recibido = recibir_paquete(cliente_socket);
+			//int* numero_xd = recibir_int(logger, coso)
+
+			t_list* paquete_recibido = recibir_paquete_int(cliente_socket);
+			//t_list* paquete_recibido = recibir_paquete(cliente_socket);
 			log_info(memoria_logger, "Se reciben los siguientes paquetes: ");
 			list_iterate(paquete_recibido, (void*)iterator);
+
 			break;
 		case ADMINISTRAR_PAGINA_MEMORIA:
 			log_info(memoria_logger, "Se crea la pagina en memoria");
@@ -161,8 +165,8 @@ static void procesar_conexion(void *void_args){
 	}
 }
 
-void iterator(char *value) {
-	log_info(memoria_logger, "%s", value);
+void iterator(int *value) {
+	log_info(memoria_logger, "%d", *value);
 }
 
 int server_escucha(){
