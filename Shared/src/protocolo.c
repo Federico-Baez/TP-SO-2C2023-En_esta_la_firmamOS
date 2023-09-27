@@ -181,9 +181,15 @@ void cargar_int_al_super_paquete(t_paquete* paquete, int numero){
 }
 
 void cargar_string_al_super_paquete(t_paquete* paquete, char* string){
+	int size_string = strlen(string)+1;
 	paquete->buffer->stream = realloc(paquete->buffer->stream,
-									paquete->buffer->size + sizeof(int) + sizeof(char)*(strlen(string)+1));
+									paquete->buffer->size + sizeof(int) + sizeof(char)*size_string);
 	/*Falta completar esta parte*/
+	memcpy(paquete->buffer->stream + paquete->buffer->size, &size_string, sizeof(int));
+	memcpy(paquete->buffer->stream + paquete->buffer->size + sizeof(int), string, sizeof(char)*size_string);
+
+	paquete->buffer->size += sizeof(int);
+	paquete->buffer->size += sizeof(char)*size_string;
 }
 
 int recibir_int_del_buffer(t_buffer* coso){
@@ -193,7 +199,7 @@ int recibir_int_del_buffer(t_buffer* coso){
 	int nuevo_size = coso->size - sizeof(int);
 	if(nuevo_size < 0){
 		printf("\n[ERROR]: BUFFER CON TAMAÑO NEGATIVO\n\n");
-		free(valor_a_devolver);
+		//free(valor_a_devolver);
 		return 0;
 	}
 	void* nuevo_coso = malloc(nuevo_size);

@@ -27,7 +27,27 @@ int main(int argc, char** argv) {
 
 	fd_kernel = esperar_cliente(filesystem_logger, "Kernel", server_fd_filesystem);
 
+	/*Recibiendo por funcionalidades practicas de serializacion */
+	int valor1, valor2;
+	char* myString;
+	int cod_op = recibir_operacion(fd_kernel);
+	switch(cod_op){
+	case PRUEBAS:
+		t_buffer* myBuffer = malloc(sizeof(t_buffer));
+		int size;
+		myBuffer->stream = recibir_buffer(&size, fd_kernel);
+		myBuffer->size = size;
 
+		valor1 = recibir_int_del_buffer(myBuffer);
+		valor2 = recibir_int_del_buffer(myBuffer);
+		myString = recibir_string_del_buffer(myBuffer);
+		log_info(filesystem_logger, "Recibido exitoso:%d | %d | %s", valor1, valor2, myString);
+
+		break;
+	default:
+		log_warning(filesystem_logger,"Operacion desconocida. No quieras meter la pata");
+		break;
+	}
 
 	return EXIT_SUCCESS;
 }

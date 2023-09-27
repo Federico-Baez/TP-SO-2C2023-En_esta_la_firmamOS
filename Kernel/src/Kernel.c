@@ -30,6 +30,19 @@ int main(int argc, char** argv) {
 	enviar_paquete(paquete, fd_memoria);
 	eliminar_paquete(paquete);
 
+	//Pruebas de nuevas funcionalidades practicas de serializacion
+	op_code nuermo_de_operacion = PRUEBAS;
+	t_paquete* paquete2 = crear_super_paquete(nuermo_de_operacion);
+	int valor1 = 25;
+	int valor2 = 32;
+	char* myString = "Ever Lizarraga";
+	log_info(kernel_logger, "int: %d | int: %d | char*: %s", valor1, valor2, myString);
+	cargar_int_al_super_paquete(paquete2, valor1);
+	cargar_int_al_super_paquete(paquete2, valor2);
+	cargar_string_al_super_paquete(paquete2, myString);
+	enviar_paquete(paquete2, fd_filesystem);
+	eliminar_paquete(paquete2);
+
 	finalizar_kernel();
 
 	return EXIT_SUCCESS;
