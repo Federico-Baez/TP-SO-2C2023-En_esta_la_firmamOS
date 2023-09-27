@@ -4,11 +4,11 @@
 #include "../include/CPU.h"
 
 int main(int argc, char** argv) {
-	cpu_logger = log_create("cpu.log", "[CPU]", 0, LOG_LEVEL_INFO);
+	cpu_logger = log_create("cpu.log", "[CPU]", 1, LOG_LEVEL_INFO);
 	cpu_log_obligatorio = log_create("cpu_log_obligatorio.log", "[CPU - Log obligatorio]", 1, LOG_LEVEL_INFO);
 
-	//cpu_config = config_create(argv[1]); //Esto quiza lo descomentemos para las pruebas
-	cpu_config = config_create("cpu.config");
+	cpu_config = config_create(argv[1]); //Esto quiza lo descomentemos para las pruebas
+	//cpu_config = config_create("cpu.config");
 
 	if(cpu_config == NULL){
 		log_error(cpu_logger, "No se encontro el path del config\n");

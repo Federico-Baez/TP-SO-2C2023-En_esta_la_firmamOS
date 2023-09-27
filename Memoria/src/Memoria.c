@@ -15,8 +15,9 @@ int main(int argc, char** argv) {
 	memoria_logger = log_create("Memoria.log", "[Memoria]", 1, LOG_LEVEL_INFO);
 	memoria_log_obligatorio = log_create("Memoria_log_obligatorio.log", "[Memoria- Log obligatorio]", 1, LOG_LEVEL_INFO);
 
-	//memoria_config = config_create(argv[1]); //Esto quiza lo descomentemos para las pruebas
-	memoria_config = config_create("memoria.config");
+	memoria_config = config_create(argv[1]); //Esto quiza lo descomentemos para las pruebas
+	//char* config_path = "../memoria.config";
+	//memoria_config = config_create(config_path);
 
 	if(memoria_config == NULL){
 		log_error(memoria_logger, "No se encontro el path \n.");
@@ -100,6 +101,7 @@ Marco* crear_marco(int base, bool presente){
 	nuevo_marco->presente = presente;
 	return nuevo_marco;
 }
+/*
 tabla_paginas* crear_tabla_paginas(int pid){
 	tabla_paginas* nueva_tabla = malloc(sizeof(tabla_paginas));
 	log_debug(memoria_log_obligatorio,"[PAG]: Creo tabla de paginas PID %d", pid);
@@ -107,14 +109,14 @@ tabla_paginas* crear_tabla_paginas(int pid){
 	string_from_format(spid, "%d", pid);
 	nueva_tabla->page = list_create();
 
-	/** es una variable que deberia de bloquear**/
+	//es una variable que deberia de bloquear
 	dictionary_put(tablas,spid, nueva_tabla);
-	/** aca deberia de desbloquear este recurso **/
+	// aca deberia de desbloquear este recurso
 	return nueva_tabla;
 
 
 }
-
+*/
 void finalizar_memoria(){
 	log_destroy(memoria_logger);
 	log_destroy(memoria_log_obligatorio);
@@ -128,31 +130,32 @@ static void procesar_conexion(void *void_args){
 	int* args = (int*) void_args;
 	int cliente_socket = *args;
 	t_list* paquete_recibido;
-	op_code cod_op;
+	//op_code cod_op;
+	int cod_op;
 	while(cliente_socket != -1){
-		if(recv(cliente_socket,&cod_op,sizeof(cod_op),0)!= sizeof(cod_op)){
+		if(recv(cliente_socket,&cod_op,sizeof(cod_op),MSG_WAITALL)!= sizeof(cod_op)){
 
 			log_info(memoria_logger, "El cliente se desconecto del servidor %s .",server_name);
 			return;
 		}
 		switch(cod_op){
-			case MENSAJE:
-				recibir_mensaje(memoria_logger, cliente_socket);
-				break;
-			case PAQUETE:
-				t_list* paquete_recibido = recibir_paquete(cliente_socket);
-				log_info(memoria_logger, "Se reciben los siguientes paquetes: ");
-				list_iterate(paquete_recibido, (void*)iterator);
-				break;
-			case ADMINISTRAR_PAGINA_MEMORIA:
-				log_info(memoria_logger, "Se crea la pagina en memoria");
-				break;
-			case -1:
-				log_error(memoria_logger, "el cliente se desconecto. Terminando servidor");
-				break;
+		case MENSAJE:
+			recibir_mensaje(memoria_logger, cliente_socket);
+			break;
+		case PAQUETE:
+			t_list* paquete_recibido = recibir_paquete(cliente_socket);
+			log_info(memoria_logger, "Se reciben los siguientes paquetes: ");
+			list_iterate(paquete_recibido, (void*)iterator);
+			break;
+		case ADMINISTRAR_PAGINA_MEMORIA:
+			log_info(memoria_logger, "Se crea la pagina en memoria");
+			break;
+		case -1:
+			log_error(memoria_logger, "el cliente se desconecto. Terminando servidor");
+			break;
 		default:
 			log_error(memoria_logger, "Operacion desconocida. No quieras meter la pata");
-
+			break;
 		}
 
 	}

@@ -3,12 +3,12 @@
 
 #include "../include/FileSystem.h"
 
-int main(void) {
-	filesystem_logger = log_create("filesystem.log", "[File System]", 0, LOG_LEVEL_INFO);
+int main(int argc, char** argv) {
+	filesystem_logger = log_create("filesystem.log", "[File System]", 1, LOG_LEVEL_INFO);
 	filesystem_log_obligatorio = log_create("filesystem_log_obligatorio.log", "[File System - Log obligatorio]", 1, LOG_LEVEL_INFO);
 
-	//filesystem_config = config_create(argv[1]); //Esto quiza lo descomentemos para las pruebas
-	filesystem_config = config_create("filesystem.config");
+	filesystem_config = config_create(argv[1]); //Esto quiza lo descomentemos para las pruebas
+	//filesystem_config = config_create("filesystem.config");
 
 	if(filesystem_config == NULL){
 		log_error(filesystem_logger, "No se encontro el path del config\n");

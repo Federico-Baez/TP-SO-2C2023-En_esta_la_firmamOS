@@ -1,11 +1,11 @@
 #include "../include/Kernel.h"
 
 int main(int argc, char** argv) {
-	kernel_logger = log_create("kernel.log", "[Kernel]", 0, LOG_LEVEL_INFO);
+	kernel_logger = log_create("kernel.log", "[Kernel]", 1, LOG_LEVEL_INFO);
 	kernel_log_obligatorio = log_create("kernel_log_obligatorio.log", "[Kernel - Log obligatorio]", 1, LOG_LEVEL_INFO);
 
-	//kernel_config = config_create(argv[1]); //Esto quiza lo descomentemos para las pruebas
-	kernel_config = config_create("kernel.config");
+	kernel_config = config_create(argv[1]); //Esto quiza lo descomentemos para las pruebas
+	//kernel_config = config_create("kernel.config");
 
 	if(kernel_config == NULL){
 		log_error(kernel_logger, "No se encontro el path del config\n");
