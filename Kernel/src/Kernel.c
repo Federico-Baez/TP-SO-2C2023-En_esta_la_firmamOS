@@ -24,29 +24,50 @@ int main(int argc, char** argv) {
 	fd_filesystem = crear_conexion(IP_FILESYSTEM, PUERTO_FILESYSTEM);
 	fd_memoria = crear_conexion(IP_MEMORIA, PUERTO_MEMORIA);
 
-	t_paquete* paquete = crear_paquete();
-	int numero = 7321;
-	agregar_a_paquete(paquete, &numero, sizeof(int));
-	enviar_paquete(paquete, fd_memoria);
-	eliminar_paquete(paquete);
+//	t_paquete* paquete = crear_paquete();
+//	int numero = 7321;
+//	agregar_a_paquete(paquete, &numero, sizeof(int));
+//	enviar_paquete(paquete, fd_memoria);
+//	eliminar_paquete(paquete);
 
 	//Pruebas de nuevas funcionalidades practicas de serializacion
 	op_code nuermo_de_operacion = PRUEBAS;
+	op_code administrar_pagina = ADMINISTRAR_PAGINA_MEMORIA;
 	t_paquete* paquete2 = crear_super_paquete(nuermo_de_operacion);
+	t_paquete* paquete_m = crear_super_paquete(administrar_pagina);
 
 	int valor1 = 25;
 	int valor2 = 32;
 	char* myString = "Ever Lizarraga";
 	char* unchoclo = "Esto es un choclo";
 
+
 	log_info(kernel_logger, "int: %d | char*: %s | char*: %s | int: %d ", valor1, myString, unchoclo, valor2);
+
+
+
 
 	cargar_int_al_super_paquete(paquete2, valor1);
 	cargar_string_al_super_paquete(paquete2, myString);
 	cargar_choclo_al_super_paquete(paquete2, unchoclo, sizeof(char)*(strlen(unchoclo)+1));
 	cargar_int_al_super_paquete(paquete2, valor2);
 	enviar_paquete(paquete2, fd_filesystem);
+
+	int valor_m = 12;
+	int valor2_m = 24;
+	char* otro_dato = "otro char*";
+	char* dato_m = "Soy un char*";
+	log_info(kernel_logger, "int: %d | char*: %s | char*: %s | int: %d ", valor_m, otro_dato, dato_m, valor2_m);
+	cargar_int_al_super_paquete(paquete_m, valor_m);
+	cargar_string_al_super_paquete(paquete_m, otro_dato);
+	cargar_choclo_al_super_paquete(paquete_m, dato_m, sizeof(char)*(strlen(dato_m)+1));
+	cargar_int_al_super_paquete(paquete_m, valor2_m);
+	enviar_paquete(paquete_m, fd_memoria);
+
+
+
 	eliminar_paquete(paquete2);
+	eliminar_paquete(paquete_m);
 
 	finalizar_kernel();
 

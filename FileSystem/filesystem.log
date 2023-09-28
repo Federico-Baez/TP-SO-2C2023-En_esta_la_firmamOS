@@ -3,3 +3,9 @@
 [INFO] 00:31:09:675 [File System]/(6151:6151): Cliente conectado a Kernel
 [INFO] 00:31:09:740 [File System]/(6151:6151): Me llego el mensaje Me conecto a File System
 [ERROR] 00:31:09:741 [File System]/(6151:6151): el cliente se desconecto. Terminando servidor
+[ERROR] 02:11:45:233 [File System]/(4367:4367): No se encontro el path del config
+
+[INFO] 02:18:40:005 [File System]/(4850:4850): Servidor listo para recibir a Kernel
+
+[INFO] 02:24:42:280 [File System]/(4850:4850): Cliente conectado a Kernel
+[WARNING] 02:24:42:280 [File System]/(4850:4850): Operacion desconocida. No quieras meter la pata

@@ -1,0 +1,28 @@
+[INFO] 18:19:23:095 [CPU]/(217758:217758): Servidor listo para recibir a Kernel
+
+[INFO] 18:20:29:744 [CPU]/(217775:217775): Servidor listo para recibir a Kernel
+
+[INFO] 18:20:29:744 [CPU]/(217775:217775): Cliente conectado a Kernel por dispatch
+[INFO] 18:20:29:744 [CPU]/(217775:217775): Cliente conectado a Kernel por interrupt
+[ERROR] 18:20:29:744 [CPU]/(217775:217775): el cliente se desconecto. Terminando servidor
+[INFO] 18:20:52:067 [CPU]/(217790:217790): Servidor listo para recibir a Kernel
+
+[INFO] 18:20:52:067 [CPU]/(217790:217790): Cliente conectado a Kernel por dispatch
+[INFO] 18:20:52:067 [CPU]/(217790:217790): Cliente conectado a Kernel por interrupt
+[ERROR] 18:20:52:067 [CPU]/(217790:217790): el cliente se desconecto. Terminando servidor
+[INFO] 20:24:47:622 [CPU]/(218606:218606): Servidor listo para recibir a Kernel
+
+[INFO] 20:24:54:013 [CPU]/(218619:218619): Servidor listo para recibir a Kernel
+
+[INFO] 20:24:54:013 [CPU]/(218619:218619): Cliente conectado a Kernel por dispatch
+[INFO] 20:24:54:013 [CPU]/(218619:218619): Cliente conectado a Kernel por interrupt
+[ERROR] 20:24:54:013 [CPU]/(218619:218619): el cliente se desconecto. Terminando servidor
+[INFO] 20:27:56:823 [CPU]/(218707:218707): Servidor listo para recibir a Kernel
+
+[INFO] 20:29:24:092 [CPU]/(218707:218707): Cliente conectado a Kernel por dispatch
+[INFO] 20:29:24:092 [CPU]/(218707:218707): Cliente conectado a Kernel por interrupt
+[ERROR] 20:29:24:094 [CPU]/(218707:218707): el cliente se desconecto. Terminando servidor
+[INFO] 20:31:14:080 [CPU]/(218790:218790): Servidor listo para recibir a Kernel
+
+[ERROR] 02:19:29:072 [CPU]/(4874:4874): No se encontro el path del config
+

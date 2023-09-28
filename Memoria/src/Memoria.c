@@ -129,7 +129,12 @@ void finalizar_memoria(){
 static void procesar_conexion(void *void_args){
 	int* args = (int*) void_args;
 	int cliente_socket = *args;
-	t_list* paquete_recibido;
+//	int valor1, valor2;
+//	char* myString;
+//	char* unChoclo;
+//	t_buffer* myBuffer = malloc(sizeof(t_buffer));
+//	int size;
+//	t_list* paquete_recibido;
 	//op_code cod_op;
 	int cod_op;
 	while(cliente_socket != -1){
@@ -147,15 +152,48 @@ static void procesar_conexion(void *void_args){
 
 			t_list* paquete_recibido = recibir_paquete_int(cliente_socket);
 			//t_list* paquete_recibido = recibir_paquete(cliente_socket);
-			log_info(memoria_logger, "Se reciben los siguientes paquetes: ");
+			log_info(memoria_logger, "Se reciben los siguientes paqubetes: ");
 			list_iterate(paquete_recibido, (void*)iterator);
 
 			break;
 		case ADMINISTRAR_PAGINA_MEMORIA:
 			log_info(memoria_logger, "Se crea la pagina en memoria");
+			int valor_m, valor2_m;
+			char* otro_dato;
+			char* dato_m;
+			t_buffer* myBuffer = malloc(sizeof(t_buffer));
+			int size;
+			myBuffer->stream = recibir_buffer(&size, cliente_socket);
+			myBuffer->size = size;
+
+			valor_m = recibir_int_del_buffer(myBuffer);
+			otro_dato = recibir_string_del_buffer(myBuffer);
+			dato_m = (char*)recibir_choclo_del_buffer(myBuffer);
+			valor2_m = recibir_int_del_buffer(myBuffer);
+
+			log_info(memoria_logger, "Recibido exitoso:%d | %s | %s | %d", valor_m, otro_dato, dato_m, valor2_m);
+
+			free(myBuffer->stream);
+			free(myBuffer);
 			break;
 		case -1:
 			log_error(memoria_logger, "el cliente se desconecto. Terminando servidor");
+			break;
+		case PRUEBAS:
+
+//			myBuffer->stream = recibir_buffer(&size, fd_kernel);
+//			myBuffer->size = size;
+//
+//			valor1 = recibir_int_del_buffer(myBuffer);
+//			myString = recibir_string_del_buffer(myBuffer);
+//			unChoclo = (char*)recibir_choclo_del_buffer(myBuffer);
+//			valor2 = recibir_int_del_buffer(myBuffer);
+//
+//			log_info(memoria_logger, "Recibido exitoso:%d | %s | %s | %d", valor1, myString, unChoclo, valor2);
+//
+//			free(myBuffer->stream);
+//			free(myBuffer);
+
 			break;
 		default:
 			log_error(memoria_logger, "Operacion desconocida. No quieras meter la pata");

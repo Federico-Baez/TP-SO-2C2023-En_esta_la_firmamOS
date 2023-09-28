@@ -165,3 +165,87 @@
 [INFO] 20:31:14:080 [Memoria]/(218663:218663): Cliente conectado a Memoria
 [INFO] 20:31:14:080 [Memoria]/(218663:218663): [THREAD] Creo hilo para atender
 [INFO] 20:31:14:080 [Memoria]/(218663:218663): Se abre servidor de Memoria
+[INFO] 02:08:57:201 [Memoria]/(4191:4191): IP_MEMORIA: 127.0.0.1
+[INFO] 02:08:57:202 [Memoria]/(4191:4191): PUERTO_ESCUCHA: 8002
+[INFO] 02:08:57:202 [Memoria]/(4191:4191): IP_FILESYSTEM: 127.0.0.1
+[INFO] 02:08:57:203 [Memoria]/(4191:4191): PUERTO_FILESYSTEM: 8003
+[INFO] 02:08:57:203 [Memoria]/(4191:4191): TAM_MEMORIA: 4096
+[INFO] 02:08:57:203 [Memoria]/(4191:4191): TAM_PAGINA: 16
+[INFO] 02:08:57:203 [Memoria]/(4191:4191): PATH_INSTRUCCIONES: /home/utnso/mappa-instrucciones
+[INFO] 02:08:57:203 [Memoria]/(4191:4191): RETARDO_RESPUESTA: 1000
+[INFO] 02:08:57:203 [Memoria]/(4191:4191): ALGORITMO DE ASIGNACION: FIFO 
+
+[INFO] 02:08:57:203 [Memoria]/(4191:4191): Inicianlizando memoria
+[INFO] 02:08:57:203 [Memoria]/(4191:4191): Cliente conectado a Memoria
+[INFO] 02:08:57:204 [Memoria]/(4191:4191): Se activa el servidor Memoria 
+[INFO] 02:11:29:465 [Memoria]/(4344:4344): IP_MEMORIA: 127.0.0.1
+[INFO] 02:11:29:465 [Memoria]/(4344:4344): PUERTO_ESCUCHA: 8002
+[INFO] 02:11:29:466 [Memoria]/(4344:4344): IP_FILESYSTEM: 127.0.0.1
+[INFO] 02:11:29:466 [Memoria]/(4344:4344): PUERTO_FILESYSTEM: 8003
+[INFO] 02:11:29:466 [Memoria]/(4344:4344): TAM_MEMORIA: 4096
+[INFO] 02:11:29:466 [Memoria]/(4344:4344): TAM_PAGINA: 16
+[INFO] 02:11:29:466 [Memoria]/(4344:4344): PATH_INSTRUCCIONES: /home/utnso/mappa-instrucciones
+[INFO] 02:11:29:466 [Memoria]/(4344:4344): RETARDO_RESPUESTA: 1000
+[INFO] 02:11:29:466 [Memoria]/(4344:4344): ALGORITMO DE ASIGNACION: FIFO 
+
+[INFO] 02:11:29:466 [Memoria]/(4344:4344): Inicianlizando memoria
+[INFO] 02:18:40:004 [Memoria]/(4344:4344): Cliente conectado a Memoria
+[INFO] 02:18:40:005 [Memoria]/(4344:4344): [THREAD] Creo hilo para atender
+[INFO] 02:18:40:005 [Memoria]/(4344:4344): Se abre servidor de Memoria
+[INFO] 02:24:42:280 [Memoria]/(4344:4855): El cliente se desconecto del servidor Memoria .
+[INFO] 02:24:54:026 [Memoria]/(4344:4344): Cliente conectado a Memoria
+[INFO] 02:24:54:027 [Memoria]/(4344:4344): [THREAD] Creo hilo para atender
+[INFO] 02:24:54:027 [Memoria]/(4344:4344): Se abre servidor de Memoria
+[INFO] 02:25:03:475 [Memoria]/(4344:4344): Cliente conectado a Memoria
+[INFO] 02:25:03:475 [Memoria]/(4344:4344): [THREAD] Creo hilo para atender
+[INFO] 02:25:03:475 [Memoria]/(4344:4344): Se abre servidor de Memoria
+[INFO] 02:25:13:078 [Memoria]/(4344:4344): Cliente conectado a Memoria
+[INFO] 02:25:13:078 [Memoria]/(4344:4344): [THREAD] Creo hilo para atender
+[INFO] 02:25:13:078 [Memoria]/(4344:4344): Se abre servidor de Memoria
+[INFO] 02:25:13:081 [Memoria]/(4344:5064): El cliente se desconecto del servidor Memoria .
+[INFO] 02:25:13:081 [Memoria]/(4344:5070): Se reciben los siguientes paqubetes: 
+[INFO] 02:25:13:081 [Memoria]/(4344:5070): 7321
+[INFO] 02:25:13:082 [Memoria]/(4344:5070): El cliente se desconecto del servidor Memoria .
+[INFO] 02:25:13:082 [Memoria]/(4344:5067): El cliente se desconecto del servidor Memoria .
+[INFO] 02:31:21:333 [Memoria]/(4344:4344): Cliente conectado a Memoria
+[INFO] 02:31:21:333 [Memoria]/(4344:4344): [THREAD] Creo hilo para atender
+[INFO] 02:31:21:333 [Memoria]/(4344:4344): Se abre servidor de Memoria
+[INFO] 02:31:25:523 [Memoria]/(4344:4344): Cliente conectado a Memoria
+[INFO] 02:31:25:523 [Memoria]/(4344:4344): [THREAD] Creo hilo para atender
+[INFO] 02:31:25:523 [Memoria]/(4344:4344): Se abre servidor de Memoria
+[INFO] 02:31:30:018 [Memoria]/(4344:4344): Cliente conectado a Memoria
+[INFO] 02:31:30:018 [Memoria]/(4344:4344): [THREAD] Creo hilo para atender
+[INFO] 02:31:30:018 [Memoria]/(4344:4344): Se abre servidor de Memoria
+[INFO] 02:31:30:018 [Memoria]/(4344:5789): El cliente se desconecto del servidor Memoria .
+[INFO] 02:31:30:018 [Memoria]/(4344:5793): Se reciben los siguientes paqubetes: 
+[INFO] 02:31:30:019 [Memoria]/(4344:5793): 7321
+[INFO] 02:31:30:019 [Memoria]/(4344:5793): El cliente se desconecto del servidor Memoria .
+[INFO] 02:31:30:019 [Memoria]/(4344:5791): El cliente se desconecto del servidor Memoria .
+[INFO] 02:43:48:433 [Memoria]/(4344:4344): Cliente conectado a Memoria
+[INFO] 02:43:48:433 [Memoria]/(4344:4344): [THREAD] Creo hilo para atender
+[INFO] 02:43:48:433 [Memoria]/(4344:4344): Se abre servidor de Memoria
+[INFO] 02:44:05:794 [Memoria]/(4344:7976): El cliente se desconecto del servidor Memoria .
+[INFO] 02:45:35:944 [Memoria]/(8097:8097): IP_MEMORIA: 127.0.0.1
+[INFO] 02:45:35:945 [Memoria]/(8097:8097): PUERTO_ESCUCHA: 8002
+[INFO] 02:45:35:945 [Memoria]/(8097:8097): IP_FILESYSTEM: 127.0.0.1
+[INFO] 02:45:35:945 [Memoria]/(8097:8097): PUERTO_FILESYSTEM: 8003
+[INFO] 02:45:35:945 [Memoria]/(8097:8097): TAM_MEMORIA: 4096
+[INFO] 02:45:35:945 [Memoria]/(8097:8097): TAM_PAGINA: 16
+[INFO] 02:45:35:945 [Memoria]/(8097:8097): PATH_INSTRUCCIONES: /home/utnso/mappa-instrucciones
+[INFO] 02:45:35:945 [Memoria]/(8097:8097): RETARDO_RESPUESTA: 1000
+[INFO] 02:45:35:945 [Memoria]/(8097:8097): ALGORITMO DE ASIGNACION: FIFO 
+
+[INFO] 02:45:35:945 [Memoria]/(8097:8097): Inicianlizando memoria
+[INFO] 02:45:40:313 [Memoria]/(8097:8097): Cliente conectado a Memoria
+[INFO] 02:45:40:313 [Memoria]/(8097:8097): Se activa el servidor Memoria 
+[INFO] 02:46:43:802 [Memoria]/(8162:8162): IP_MEMORIA: 127.0.0.1
+[INFO] 02:46:43:802 [Memoria]/(8162:8162): PUERTO_ESCUCHA: 8002
+[INFO] 02:46:43:802 [Memoria]/(8162:8162): IP_FILESYSTEM: 127.0.0.1
+[INFO] 02:46:43:802 [Memoria]/(8162:8162): PUERTO_FILESYSTEM: 8003
+[INFO] 02:46:43:802 [Memoria]/(8162:8162): TAM_MEMORIA: 4096
+[INFO] 02:46:43:802 [Memoria]/(8162:8162): TAM_PAGINA: 16
+[INFO] 02:46:43:802 [Memoria]/(8162:8162): PATH_INSTRUCCIONES: /home/utnso/mappa-instrucciones
+[INFO] 02:46:43:802 [Memoria]/(8162:8162): RETARDO_RESPUESTA: 1000
+[INFO] 02:46:43:802 [Memoria]/(8162:8162): ALGORITMO DE ASIGNACION: FIFO 
+
+[INFO] 02:46:43:803 [Memoria]/(8162:8162): Inicianlizando memoria

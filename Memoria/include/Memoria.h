@@ -68,6 +68,8 @@ t_log* memoria_log_obligatorio;
 t_config* memoria_config;
 char* server_name;
 int socket_server;
+int fd_kernel;
+int fd_cpu;
 int fd_filesystem;
 int server_fd_memoria;
 void* espacio_usuario;
