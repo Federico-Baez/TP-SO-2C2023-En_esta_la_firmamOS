@@ -15,6 +15,8 @@
 #include <commons/config.h>
 #include <commons/string.h>
 
+#include "socket.h"
+
 
 
 typedef enum{

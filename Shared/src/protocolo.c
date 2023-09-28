@@ -1,5 +1,9 @@
 #include "../include/protocolo.h"
 
+void handhsake_modules(int conexion, char* mensaje){
+	send(conexion, mensaje, sizeof(char*)*(strlen(mensaje)+1), 0);
+}
+
 void enviar_mensaje(char* mensaje, int socket_cliente)
 {
 	t_paquete* paquete = malloc(sizeof(t_paquete));

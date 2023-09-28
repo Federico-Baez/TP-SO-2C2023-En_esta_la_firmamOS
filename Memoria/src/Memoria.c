@@ -195,6 +195,28 @@ static void procesar_conexion(void *void_args){
 //			free(myBuffer);
 
 			break;
+		case HANDSHAKE:
+			char* saludo;
+			t_buffer* buffer_handshake = malloc(sizeof(t_buffer));
+			int size_handshake;
+			buffer_handshake->stream = recibir_buffer(&size_handshake, cliente_socket);
+			buffer_handshake->size = size_handshake;
+
+			saludo = recibir_string_del_buffer(buffer_handshake);
+			log_info(memoria_logger, "%s CONECTADO !!!!!!!", saludo);
+
+			free(buffer_handshake->stream);
+			free(buffer_handshake);
+
+			//////
+
+			op_code operacion_handshake = HANDSHAKE;
+			t_paquete* paquete_handshake = crear_super_paquete(operacion_handshake);
+			cargar_string_al_super_paquete(paquete_handshake, "MEMORIA");
+			enviar_paquete(paquete_handshake, cliente_socket);
+			eliminar_paquete(paquete_handshake);
+
+			break;
 		default:
 			log_error(memoria_logger, "Operacion desconocida. No quieras meter la pata");
 			break;

@@ -24,12 +24,36 @@ int main(int argc, char** argv) {
 	fd_filesystem = crear_conexion(IP_FILESYSTEM, PUERTO_FILESYSTEM);
 	fd_memoria = crear_conexion(IP_MEMORIA, PUERTO_MEMORIA);
 
+	//HANDSHAKE
+	op_code operacion_handshake = HANDSHAKE;
+	t_paquete* paquete_handshake = crear_super_paquete(operacion_handshake);
+	cargar_string_al_super_paquete(paquete_handshake, "KERNEL");
+	enviar_paquete(paquete_handshake, fd_memoria);
+	eliminar_paquete(paquete_handshake);
+
+	int cod_op = recibir_operacion(fd_memoria);
+	if(cod_op == HANDSHAKE){
+		char* saludo;
+		t_buffer* buffer_handshake = malloc(sizeof(t_buffer));
+		int size_handshake;
+		buffer_handshake->stream = recibir_buffer(&size_handshake, fd_memoria);
+		buffer_handshake->size = size_handshake;
+
+		saludo = recibir_string_del_buffer(buffer_handshake);
+		log_info(kernel_logger, "%s!!!!!!!!!! CONECTADO !!!!!!!", saludo);
+
+		free(buffer_handshake->stream);
+		free(buffer_handshake);
+	}
+
+
 //	t_paquete* paquete = crear_paquete();
 //	int numero = 7321;
 //	agregar_a_paquete(paquete, &numero, sizeof(int));
 //	enviar_paquete(paquete, fd_memoria);
 //	eliminar_paquete(paquete);
 
+	/*
 	//Pruebas de nuevas funcionalidades practicas de serializacion
 	op_code nuermo_de_operacion = PRUEBAS;
 	op_code administrar_pagina = ADMINISTRAR_PAGINA_MEMORIA;
@@ -68,7 +92,7 @@ int main(int argc, char** argv) {
 
 	eliminar_paquete(paquete2);
 	eliminar_paquete(paquete_m);
-
+	*/
 	finalizar_kernel();
 
 	return EXIT_SUCCESS;
