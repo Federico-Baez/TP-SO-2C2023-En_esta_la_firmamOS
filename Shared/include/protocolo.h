@@ -32,6 +32,9 @@ typedef enum{
 	ESCRITURA_USUARIO,
 	REEMPLAZO_PAGINA,
 	HANDSHAKE,
+	//-----
+	INICIAR_ESTRUCTURA_KM,
+	LIBERAR_ESTRUCTURA_KM,
 	//-------
 	EJECUTAR_PROCESO_KC,
 	FORZAR_DESALOJO_KC,
@@ -76,6 +79,11 @@ typedef struct{
 	t_buffer* buffer;
 } t_paquete;
 
+/**/
+
+
+/**/
+
 
 /******************TODO: revisar los MENSAJES*************/
 void enviar_mensaje(char* mensaje, int socket_cliente);
@@ -83,6 +91,8 @@ int recibir_operacion(int socket_cliente);
 void* recibir_buffer(int* size, int socket_cliente);
 void recibir_mensaje(t_log* logger, int socket_cliente);
 void crear_buffer(t_paquete* paquete);
+
+void atender_handshake_respuesta(t_buffer* myBuffer, t_log* logger);
 
 /******************TODO: revisar los PAQUETES*************/
 t_list* recibir_paquete(int);
@@ -114,5 +124,7 @@ void cargar_choclo_al_super_paquete(t_paquete* paquete, void* choclo, int size);
 int recibir_int_del_buffer(t_buffer* coso);
 char* recibir_string_del_buffer(t_buffer* coso);
 void* recibir_choclo_del_buffer(t_buffer* coso);
+
+t_buffer* recibiendo_el_contenido(int conexion);
 
 #endif /* INCLUDE_PROTOCOLO_H_ */
