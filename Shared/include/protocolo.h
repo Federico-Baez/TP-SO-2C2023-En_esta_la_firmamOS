@@ -110,7 +110,9 @@ t_list* recibir_paquete_int(int socket_cliente);
 t_paquete* crear_super_paquete(op_code code_op);
 void cargar_int_al_super_paquete(t_paquete* paquete, int numero);
 void cargar_string_al_super_paquete(t_paquete* paquete, char* string);
+void cargar_choclo_al_super_paquete(t_paquete* paquete, void* choclo, int size);
 int recibir_int_del_buffer(t_buffer* coso);
 char* recibir_string_del_buffer(t_buffer* coso);
+void* recibir_choclo_del_buffer(t_buffer* coso);
 
 #endif /* INCLUDE_PROTOCOLO_H_ */

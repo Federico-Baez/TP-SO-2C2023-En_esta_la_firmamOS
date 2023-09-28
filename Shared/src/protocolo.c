@@ -184,12 +184,23 @@ void cargar_string_al_super_paquete(t_paquete* paquete, char* string){
 	int size_string = strlen(string)+1;
 	paquete->buffer->stream = realloc(paquete->buffer->stream,
 									paquete->buffer->size + sizeof(int) + sizeof(char)*size_string);
-	/*Falta completar esta parte*/
+	/**/
 	memcpy(paquete->buffer->stream + paquete->buffer->size, &size_string, sizeof(int));
 	memcpy(paquete->buffer->stream + paquete->buffer->size + sizeof(int), string, sizeof(char)*size_string);
 
 	paquete->buffer->size += sizeof(int);
 	paquete->buffer->size += sizeof(char)*size_string;
+}
+
+void cargar_choclo_al_super_paquete(t_paquete* paquete, void* choclo, int size){
+	paquete->buffer->stream = realloc(paquete->buffer->stream,
+											paquete->buffer->size + sizeof(int) + size);
+
+	memcpy(paquete->buffer->stream + paquete->buffer->size, &size, sizeof(int));
+	memcpy(paquete->buffer->stream + paquete->buffer->size + sizeof(int), choclo, size);
+
+	paquete->buffer->size += sizeof(int);
+	paquete->buffer->size += size;
 }
 
 int recibir_int_del_buffer(t_buffer* coso){
@@ -231,4 +242,26 @@ char* recibir_string_del_buffer(t_buffer* coso){
 	coso->size = nuevo_size;
 
 	return string;
+}
+
+void* recibir_choclo_del_buffer(t_buffer* coso){
+	int size_choclo;
+	void* choclo;
+	memcpy(&size_choclo, coso->stream, sizeof(int));
+	choclo = malloc(size_choclo);
+	memcpy(choclo, coso->stream + sizeof(int), size_choclo);
+
+	int nuevo_size = coso->size - sizeof(int) - size_choclo;
+	if(nuevo_size < 0){
+		printf("\n[ERROR]: BUFFER CON TAMAÑO NEGATIVO\n\n");
+		free(choclo);
+		return "";
+	}
+	void* nuevo_choclo = malloc(nuevo_size);
+	memcpy(nuevo_choclo, coso->stream + sizeof(int) + size_choclo, nuevo_size);
+	free(coso->stream);
+	coso->stream = nuevo_choclo;
+	coso->size = nuevo_size;
+
+	return choclo;
 }

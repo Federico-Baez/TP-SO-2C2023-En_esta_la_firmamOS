@@ -30,6 +30,7 @@ int main(int argc, char** argv) {
 	/*Recibiendo por funcionalidades practicas de serializacion */
 	int valor1, valor2;
 	char* myString;
+	char* unChoclo;
 	int cod_op = recibir_operacion(fd_kernel);
 	switch(cod_op){
 	case PRUEBAS:
@@ -39,9 +40,14 @@ int main(int argc, char** argv) {
 		myBuffer->size = size;
 
 		valor1 = recibir_int_del_buffer(myBuffer);
-		valor2 = recibir_int_del_buffer(myBuffer);
 		myString = recibir_string_del_buffer(myBuffer);
-		log_info(filesystem_logger, "Recibido exitoso:%d | %d | %s", valor1, valor2, myString);
+		unChoclo = (char*)recibir_choclo_del_buffer(myBuffer);
+		valor2 = recibir_int_del_buffer(myBuffer);
+
+		log_info(filesystem_logger, "Recibido exitoso:%d | %s | %s | %d", valor1, myString, unChoclo, valor2);
+
+		free(myBuffer->stream);
+		free(myBuffer);
 
 		break;
 	default:

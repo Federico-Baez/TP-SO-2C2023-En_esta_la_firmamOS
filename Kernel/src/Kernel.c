@@ -33,13 +33,18 @@ int main(int argc, char** argv) {
 	//Pruebas de nuevas funcionalidades practicas de serializacion
 	op_code nuermo_de_operacion = PRUEBAS;
 	t_paquete* paquete2 = crear_super_paquete(nuermo_de_operacion);
+
 	int valor1 = 25;
 	int valor2 = 32;
 	char* myString = "Ever Lizarraga";
-	log_info(kernel_logger, "int: %d | int: %d | char*: %s", valor1, valor2, myString);
+	char* unchoclo = "Esto es un choclo";
+
+	log_info(kernel_logger, "int: %d | char*: %s | char*: %s | int: %d ", valor1, myString, unchoclo, valor2);
+
 	cargar_int_al_super_paquete(paquete2, valor1);
-	cargar_int_al_super_paquete(paquete2, valor2);
 	cargar_string_al_super_paquete(paquete2, myString);
+	cargar_choclo_al_super_paquete(paquete2, unchoclo, sizeof(char)*(strlen(unchoclo)+1));
+	cargar_int_al_super_paquete(paquete2, valor2);
 	enviar_paquete(paquete2, fd_filesystem);
 	eliminar_paquete(paquete2);
 
