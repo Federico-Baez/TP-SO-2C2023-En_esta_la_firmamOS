@@ -68,10 +68,12 @@ typedef struct{
 }t_contexto_ejecucion;
 
 typedef struct{
-	cod_instruccion pseudo_c;
-    char *fst_param;
-    char *snd_param;
+	char* pseudo_c;
+    char* fst_param;
+    char* snd_param;
 }t_instruccion_codigo;
 
-cod_instruccion convertir_string_a_instruccion(const char *str_instruccion);
+t_list* lista_instrucciones(t_log* logger, char* dir);
+cod_instruccion convertir_string_a_instruccion(t_log* logger, const char *str_instruccion);
+void liberar_lista_instrucciones(t_list *lista);
 #endif /* INCLUDE_SHARED_H_ */

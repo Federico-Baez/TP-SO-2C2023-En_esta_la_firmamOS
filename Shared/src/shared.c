@@ -16,13 +16,14 @@ t_list* lista_instrucciones(t_log* logger, char* dir){
 		log_info(logger, "Leyendo archivo de instrucciones");
 		strings_de_instrucciones = string_from_format("%s", linea);
 		char** l_instrucciones = string_split(strings_de_instrucciones, " ");
-		cod_instruccion pseudo_codigo = convertir_string_a_instruccion(l_instrucciones[0]);
+		cod_instruccion pseudo_codigo = convertir_string_a_instruccion(logger,l_instrucciones[0]);
 		if(pseudo_codigo != 0){
-			t_instruccion_codigo* pseudo_cod = malloc(sizeof(cod_instruccion));
-			pseudo_cod->pseudo_c = pseudo_codigo;
+			t_instruccion_codigo* pseudo_cod = malloc(sizeof(t_instruccion_codigo));
+			//pseudo_cod->pseudo_c = pseudo_codigo;
+			pseudo_cod->pseudo_c = l_instrucciones[0] ? strdup(l_instrucciones[0]): NULL;
 			pseudo_cod->fst_param = l_instrucciones[1] ? strdup(l_instrucciones[1]): NULL;
 			pseudo_cod->snd_param = l_instrucciones[2] ? strdup(l_instrucciones[2]): NULL;
-			log_info(logger, "Primera fila de speudocodigo: %d, primer parametro: %s y segundo parametro: %s",pseudo_cod->pseudo_c,pseudo_cod->fst_param, pseudo_cod->snd_param );
+			log_info(logger, "Se agrega la siguiente instruccion al listado de pseudocodigo: %s \n",l_instrucciones[0]);
 			list_add(list_instrucciones,pseudo_cod );
 		}
 		free(strings_de_instrucciones);
@@ -35,9 +36,12 @@ t_list* lista_instrucciones(t_log* logger, char* dir){
 	return list_instrucciones;
 }
 
+void liberar_lista_instrucciones(t_list *lista) {
+    list_destroy_and_destroy_elements(lista, (void *) lista);
+}
 
 
-cod_instruccion convertir_string_a_instruccion(const char *str_instruccion) {
+cod_instruccion convertir_string_a_instruccion(t_log* logger, const char *str_instruccion) {
     if (strcmp(str_instruccion, "SET") == 0) return SET;
     if (strcmp(str_instruccion, "SUM") == 0) return SUM;
     if (strcmp(str_instruccion, "SUB") == 0) return SUB;
@@ -54,7 +58,12 @@ cod_instruccion convertir_string_a_instruccion(const char *str_instruccion) {
     if (strcmp(str_instruccion, "F_READ") == 0) return F_READ;
     if (strcmp(str_instruccion, "F_CLOSE") == 0) return F_CLOSE;
     if (strcmp(str_instruccion, "EXIT") == 0) return EXIT_P;
-    return 0;
+
+	log_info(logger, "Se lee la siguiente instruccion: %s \n",str_instruccion);
+
+
+    return -1;
+
 }
 
 

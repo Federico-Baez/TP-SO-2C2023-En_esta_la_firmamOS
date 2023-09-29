@@ -28,7 +28,8 @@ int main(int argc, char** argv) {
 
 	leer_config(memoria_config);
 	leer_log();
-	lista_instrucciones(memoria_logger, PATH_INSTRUCCIONES);
+	const char *path_instrucciones = "/home/utnso/tp-2023-2c-En_esta_la_firmamOS/prueba_instrucciones/psudocodigos.txt";
+	t_list* instrucciones_pseudo = lista_instrucciones(memoria_logger, PATH_INSTRUCCIONES);
 
 	//TODO: verificar como inicializar memoria
 
@@ -50,7 +51,7 @@ int main(int argc, char** argv) {
 	while(server_escucha()){
 		log_info(memoria_logger, "Se abre servidor de Memoria");
 	}
-
+	liberar_lista_instrucciones(instrucciones_pseudo);
 	finalizar_memoria();
 
 	return EXIT_SUCCESS;

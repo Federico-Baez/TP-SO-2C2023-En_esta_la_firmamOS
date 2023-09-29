@@ -249,3 +249,762 @@
 [INFO] 02:46:43:802 [Memoria]/(8162:8162): ALGORITMO DE ASIGNACION: FIFO 
 
 [INFO] 02:46:43:803 [Memoria]/(8162:8162): Inicianlizando memoria
+[INFO] 01:09:16:319 [Memoria]/(28912:28912): IP_MEMORIA: 127.0.0.1
+[INFO] 01:09:16:328 [Memoria]/(28912:28912): PUERTO_ESCUCHA: 8002
+[INFO] 01:09:16:328 [Memoria]/(28912:28912): IP_FILESYSTEM: 127.0.0.1
+[INFO] 01:09:16:328 [Memoria]/(28912:28912): PUERTO_FILESYSTEM: 8003
+[INFO] 01:09:16:328 [Memoria]/(28912:28912): TAM_MEMORIA: 4096
+[INFO] 01:09:16:328 [Memoria]/(28912:28912): TAM_PAGINA: 16
+[INFO] 01:09:16:328 [Memoria]/(28912:28912): PATH_INSTRUCCIONES: /home/utnso/tp-2023-2c-En_esta_la_firmamOS/prueba_instrucciones/psudocodigos.txt
+[INFO] 01:09:16:328 [Memoria]/(28912:28912): RETARDO_RESPUESTA: 1000
+[INFO] 01:09:16:328 [Memoria]/(28912:28912): ALGORITMO DE ASIGNACION: FIFO 
+
+[INFO] 01:09:16:328 [Memoria]/(28912:28912): Leyendo archivo de instrucciones
+[INFO] 01:09:16:328 [Memoria]/(28912:28912): Leyendo archivo de instrucciones
+[INFO] 01:09:16:328 [Memoria]/(28912:28912): Leyendo archivo de instrucciones
+[INFO] 01:09:16:329 [Memoria]/(28912:28912): La fila de speudocodigo: SUM, primer parametro: AX y segundo parametro: BX
+
+[INFO] 01:09:16:329 [Memoria]/(28912:28912): Leyendo archivo de instrucciones
+[INFO] 01:09:16:329 [Memoria]/(28912:28912): La fila de speudocodigo: SUB, primer parametro: AX y segundo parametro: BX
+
+[INFO] 01:09:16:329 [Memoria]/(28912:28912): Leyendo archivo de instrucciones
+[INFO] 01:09:16:329 [Memoria]/(28912:28912): La fila de speudocodigo: MOV_IN, primer parametro: DX y segundo parametro: 0
+
+[INFO] 01:09:16:329 [Memoria]/(28912:28912): Leyendo archivo de instrucciones
+[INFO] 01:09:16:329 [Memoria]/(28912:28912): La fila de speudocodigo: MOV_OUT, primer parametro: 0 y segundo parametro: CX
+
+[INFO] 01:09:16:329 [Memoria]/(28912:28912): Leyendo archivo de instrucciones
+[INFO] 01:09:16:329 [Memoria]/(28912:28912): La fila de speudocodigo: SLEEP, primer parametro: 10
+ y segundo parametro: (null)
+[INFO] 01:09:16:329 [Memoria]/(28912:28912): Leyendo archivo de instrucciones
+[INFO] 01:09:16:329 [Memoria]/(28912:28912): La fila de speudocodigo: JNZ, primer parametro: AX y segundo parametro: 4
+
+[INFO] 01:09:16:330 [Memoria]/(28912:28912): Leyendo archivo de instrucciones
+[INFO] 01:09:16:330 [Memoria]/(28912:28912): La fila de speudocodigo: WAIT, primer parametro: RECURSO_1
+ y segundo parametro: (null)
+[INFO] 01:09:16:330 [Memoria]/(28912:28912): Leyendo archivo de instrucciones
+[INFO] 01:09:16:330 [Memoria]/(28912:28912): La fila de speudocodigo: SIGNAL, primer parametro: RECURSO_1
+ y segundo parametro: (null)
+[INFO] 01:09:16:330 [Memoria]/(28912:28912): Leyendo archivo de instrucciones
+[INFO] 01:09:16:330 [Memoria]/(28912:28912): La fila de speudocodigo: F_OPEN, primer parametro: ARCHIVO y segundo parametro: W
+
+[INFO] 01:09:16:331 [Memoria]/(28912:28912): Leyendo archivo de instrucciones
+[INFO] 01:09:16:331 [Memoria]/(28912:28912): La fila de speudocodigo: F_TRUNCATE, primer parametro: ARCHIVO y segundo parametro: 64
+
+[INFO] 01:09:16:331 [Memoria]/(28912:28912): Leyendo archivo de instrucciones
+[INFO] 01:09:16:331 [Memoria]/(28912:28912): La fila de speudocodigo: F_SEEK, primer parametro: ARCHIVO y segundo parametro: 8
+
+[INFO] 01:09:16:331 [Memoria]/(28912:28912): Leyendo archivo de instrucciones
+[INFO] 01:09:16:331 [Memoria]/(28912:28912): La fila de speudocodigo: F_WRITE, primer parametro: ARCHIVO y segundo parametro: 0
+
+[INFO] 01:09:16:331 [Memoria]/(28912:28912): Leyendo archivo de instrucciones
+[INFO] 01:09:16:331 [Memoria]/(28912:28912): La fila de speudocodigo: F_READ, primer parametro: ARCHIVO y segundo parametro: 0
+
+[INFO] 01:09:16:331 [Memoria]/(28912:28912): Leyendo archivo de instrucciones
+[INFO] 01:09:16:331 [Memoria]/(28912:28912): La fila de speudocodigo: F_CLOSE, primer parametro: ARCHIVO
+ y segundo parametro: (null)
+[INFO] 01:09:16:331 [Memoria]/(28912:28912): Leyendo archivo de instrucciones
+[INFO] 01:09:16:331 [Memoria]/(28912:28912): Inicianlizando memoria
+[INFO] 01:09:16:332 [Memoria]/(28912:28912): Cliente conectado a Memoria
+[INFO] 01:09:16:332 [Memoria]/(28912:28912): Se activa el servidor Memoria 
+[INFO] 01:20:49:201 [Memoria]/(29151:29151): IP_MEMORIA: 127.0.0.1
+[INFO] 01:20:49:201 [Memoria]/(29151:29151): PUERTO_ESCUCHA: 8002
+[INFO] 01:20:49:201 [Memoria]/(29151:29151): IP_FILESYSTEM: 127.0.0.1
+[INFO] 01:20:49:201 [Memoria]/(29151:29151): PUERTO_FILESYSTEM: 8003
+[INFO] 01:20:49:201 [Memoria]/(29151:29151): TAM_MEMORIA: 4096
+[INFO] 01:20:49:201 [Memoria]/(29151:29151): TAM_PAGINA: 16
+[INFO] 01:20:49:202 [Memoria]/(29151:29151): PATH_INSTRUCCIONES: /home/utnso/tp-2023-2c-En_esta_la_firmamOS/prueba_instrucciones/psudocodigos.txt
+[INFO] 01:20:49:202 [Memoria]/(29151:29151): RETARDO_RESPUESTA: 1000
+[INFO] 01:20:49:202 [Memoria]/(29151:29151): ALGORITMO DE ASIGNACION: FIFO 
+
+[INFO] 01:20:49:202 [Memoria]/(29151:29151): Leyendo archivo de instrucciones
+[INFO] 01:20:49:202 [Memoria]/(29151:29151): Leyendo archivo de instrucciones
+[INFO] 01:20:49:202 [Memoria]/(29151:29151): Leyendo archivo de instrucciones
+[INFO] 01:20:49:202 [Memoria]/(29151:29151): La fila de speudocodigo: SUM, primer parametro: 1699784416 y segundo parametro: 1699785744
+[INFO] 01:20:49:202 [Memoria]/(29151:29151): Leyendo archivo de instrucciones
+[INFO] 01:20:49:202 [Memoria]/(29151:29151): La fila de speudocodigo: SUB, primer parametro: 1699784640 y segundo parametro: 1699785872
+[INFO] 01:20:49:202 [Memoria]/(29151:29151): Leyendo archivo de instrucciones
+[INFO] 01:20:49:202 [Memoria]/(29151:29151): La fila de speudocodigo: MOV_IN, primer parametro: 1699784672 y segundo parametro: 1699785440
+[INFO] 01:20:49:203 [Memoria]/(29151:29151): Leyendo archivo de instrucciones
+[INFO] 01:20:49:203 [Memoria]/(29151:29151): La fila de speudocodigo: MOV_OUT, primer parametro: 1699786176 y segundo parametro: 1699783216
+[INFO] 01:20:49:203 [Memoria]/(29151:29151): Leyendo archivo de instrucciones
+[INFO] 01:20:49:203 [Memoria]/(29151:29151): La fila de speudocodigo: SLEEP, primer parametro: 1699796416 y segundo parametro: 0
+[INFO] 01:20:49:203 [Memoria]/(29151:29151): Leyendo archivo de instrucciones
+[INFO] 01:20:49:203 [Memoria]/(29151:29151): La fila de speudocodigo: JNZ, primer parametro: 1699785504 y segundo parametro: 1699796608
+[INFO] 01:20:49:203 [Memoria]/(29151:29151): Leyendo archivo de instrucciones
+[INFO] 01:20:49:203 [Memoria]/(29151:29151): La fila de speudocodigo: WAIT, primer parametro: 1699797312 y segundo parametro: 0
+[INFO] 01:20:49:203 [Memoria]/(29151:29151): Leyendo archivo de instrucciones
+[INFO] 01:20:49:203 [Memoria]/(29151:29151): La fila de speudocodigo: SIGNAL, primer parametro: 1699797504 y segundo parametro: 0
+[INFO] 01:20:49:203 [Memoria]/(29151:29151): Leyendo archivo de instrucciones
+[INFO] 01:20:49:203 [Memoria]/(29151:29151): La fila de speudocodigo: F_OPEN, primer parametro: 1699797104 y segundo parametro: 1699797984
+[INFO] 01:20:49:204 [Memoria]/(29151:29151): Leyendo archivo de instrucciones
+[INFO] 01:20:49:204 [Memoria]/(29151:29151): La fila de speudocodigo: F_TRUNCATE, primer parametro: 1699798512 y segundo parametro: 1699798544
+[INFO] 01:20:49:204 [Memoria]/(29151:29151): Leyendo archivo de instrucciones
+[INFO] 01:20:49:204 [Memoria]/(29151:29151): La fila de speudocodigo: F_SEEK, primer parametro: 1699796512 y segundo parametro: 1699796544
+[INFO] 01:20:49:204 [Memoria]/(29151:29151): Leyendo archivo de instrucciones
+[INFO] 01:20:49:204 [Memoria]/(29151:29151): La fila de speudocodigo: F_WRITE, primer parametro: 1699797872 y segundo parametro: 1699798576
+[INFO] 01:20:49:204 [Memoria]/(29151:29151): Leyendo archivo de instrucciones
+[INFO] 01:20:49:204 [Memoria]/(29151:29151): La fila de speudocodigo: F_READ, primer parametro: 1699798784 y segundo parametro: 1699784544
+[INFO] 01:20:49:204 [Memoria]/(29151:29151): Leyendo archivo de instrucciones
+[INFO] 01:20:49:204 [Memoria]/(29151:29151): La fila de speudocodigo: F_CLOSE, primer parametro: 1699797904 y segundo parametro: 0
+[INFO] 01:20:49:204 [Memoria]/(29151:29151): Leyendo archivo de instrucciones
+[INFO] 01:20:49:205 [Memoria]/(29151:29151): Inicianlizando memoria
+[INFO] 01:20:49:205 [Memoria]/(29151:29151): Cliente conectado a Memoria
+[INFO] 01:20:49:205 [Memoria]/(29151:29151): Se activa el servidor Memoria 
+[INFO] 01:21:57:729 [Memoria]/(29304:29304): IP_MEMORIA: 127.0.0.1
+[INFO] 01:21:57:737 [Memoria]/(29304:29304): PUERTO_ESCUCHA: 8002
+[INFO] 01:21:57:737 [Memoria]/(29304:29304): IP_FILESYSTEM: 127.0.0.1
+[INFO] 01:21:57:737 [Memoria]/(29304:29304): PUERTO_FILESYSTEM: 8003
+[INFO] 01:21:57:738 [Memoria]/(29304:29304): TAM_MEMORIA: 4096
+[INFO] 01:21:57:738 [Memoria]/(29304:29304): TAM_PAGINA: 16
+[INFO] 01:21:57:738 [Memoria]/(29304:29304): PATH_INSTRUCCIONES: /home/utnso/tp-2023-2c-En_esta_la_firmamOS/prueba_instrucciones/psudocodigos.txt
+[INFO] 01:21:57:738 [Memoria]/(29304:29304): RETARDO_RESPUESTA: 1000
+[INFO] 01:21:57:739 [Memoria]/(29304:29304): ALGORITMO DE ASIGNACION: FIFO 
+
+[INFO] 01:21:57:739 [Memoria]/(29304:29304): Leyendo archivo de instrucciones
+[INFO] 01:21:57:739 [Memoria]/(29304:29304): Leyendo archivo de instrucciones
+[INFO] 01:21:57:739 [Memoria]/(29304:29304): Leyendo archivo de instrucciones
+[INFO] 01:21:57:739 [Memoria]/(29304:29304): La fila de speudocodigo: SUM, primer parametro: AX y segundo parametro: BX
+
+[INFO] 01:21:57:739 [Memoria]/(29304:29304): Leyendo archivo de instrucciones
+[INFO] 01:21:57:740 [Memoria]/(29304:29304): La fila de speudocodigo: SUB, primer parametro: AX y segundo parametro: BX
+
+[INFO] 01:21:57:740 [Memoria]/(29304:29304): Leyendo archivo de instrucciones
+[INFO] 01:21:57:740 [Memoria]/(29304:29304): La fila de speudocodigo: MOV_IN, primer parametro: DX y segundo parametro: 0
+
+[INFO] 01:21:57:740 [Memoria]/(29304:29304): Leyendo archivo de instrucciones
+[INFO] 01:21:57:740 [Memoria]/(29304:29304): La fila de speudocodigo: MOV_OUT, primer parametro: 0 y segundo parametro: CX
+
+[INFO] 01:21:57:740 [Memoria]/(29304:29304): Leyendo archivo de instrucciones
+[INFO] 01:21:57:741 [Memoria]/(29304:29304): La fila de speudocodigo: SLEEP, primer parametro: 10
+ y segundo parametro: (null)
+[INFO] 01:21:57:741 [Memoria]/(29304:29304): Leyendo archivo de instrucciones
+[INFO] 01:21:57:741 [Memoria]/(29304:29304): La fila de speudocodigo: JNZ, primer parametro: AX y segundo parametro: 4
+
+[INFO] 01:21:57:741 [Memoria]/(29304:29304): Leyendo archivo de instrucciones
+[INFO] 01:21:57:741 [Memoria]/(29304:29304): La fila de speudocodigo: WAIT, primer parametro: RECURSO_1
+ y segundo parametro: (null)
+[INFO] 01:21:57:741 [Memoria]/(29304:29304): Leyendo archivo de instrucciones
+[INFO] 01:21:57:741 [Memoria]/(29304:29304): La fila de speudocodigo: SIGNAL, primer parametro: RECURSO_1
+ y segundo parametro: (null)
+[INFO] 01:21:57:742 [Memoria]/(29304:29304): Leyendo archivo de instrucciones
+[INFO] 01:21:57:742 [Memoria]/(29304:29304): La fila de speudocodigo: F_OPEN, primer parametro: ARCHIVO y segundo parametro: W
+
+[INFO] 01:21:57:742 [Memoria]/(29304:29304): Leyendo archivo de instrucciones
+[INFO] 01:21:57:742 [Memoria]/(29304:29304): La fila de speudocodigo: F_TRUNCATE, primer parametro: ARCHIVO y segundo parametro: 64
+
+[INFO] 01:21:57:743 [Memoria]/(29304:29304): Leyendo archivo de instrucciones
+[INFO] 01:21:57:743 [Memoria]/(29304:29304): La fila de speudocodigo: F_SEEK, primer parametro: ARCHIVO y segundo parametro: 8
+
+[INFO] 01:21:57:743 [Memoria]/(29304:29304): Leyendo archivo de instrucciones
+[INFO] 01:21:57:743 [Memoria]/(29304:29304): La fila de speudocodigo: F_WRITE, primer parametro: ARCHIVO y segundo parametro: 0
+
+[INFO] 01:21:57:743 [Memoria]/(29304:29304): Leyendo archivo de instrucciones
+[INFO] 01:21:57:743 [Memoria]/(29304:29304): La fila de speudocodigo: F_READ, primer parametro: ARCHIVO y segundo parametro: 0
+
+[INFO] 01:21:57:744 [Memoria]/(29304:29304): Leyendo archivo de instrucciones
+[INFO] 01:21:57:744 [Memoria]/(29304:29304): La fila de speudocodigo: F_CLOSE, primer parametro: ARCHIVO
+ y segundo parametro: (null)
+[INFO] 01:21:57:744 [Memoria]/(29304:29304): Leyendo archivo de instrucciones
+[INFO] 01:21:57:744 [Memoria]/(29304:29304): Inicianlizando memoria
+[INFO] 01:21:57:745 [Memoria]/(29304:29304): Cliente conectado a Memoria
+[INFO] 01:21:57:745 [Memoria]/(29304:29304): Se activa el servidor Memoria 
+[INFO] 01:31:15:832 [Memoria]/(31541:31541): IP_MEMORIA: 127.0.0.1
+[INFO] 01:31:15:832 [Memoria]/(31541:31541): PUERTO_ESCUCHA: 8002
+[INFO] 01:31:15:832 [Memoria]/(31541:31541): IP_FILESYSTEM: 127.0.0.1
+[INFO] 01:31:15:832 [Memoria]/(31541:31541): PUERTO_FILESYSTEM: 8003
+[INFO] 01:31:15:832 [Memoria]/(31541:31541): TAM_MEMORIA: 4096
+[INFO] 01:31:15:832 [Memoria]/(31541:31541): TAM_PAGINA: 16
+[INFO] 01:31:15:832 [Memoria]/(31541:31541): PATH_INSTRUCCIONES: /home/utnso/tp-2023-2c-En_esta_la_firmamOS/prueba_instrucciones/psudocodigos.txt
+[INFO] 01:31:15:832 [Memoria]/(31541:31541): RETARDO_RESPUESTA: 1000
+[INFO] 01:31:15:833 [Memoria]/(31541:31541): ALGORITMO DE ASIGNACION: FIFO 
+
+[INFO] 01:31:15:833 [Memoria]/(31541:31541): Leyendo archivo de instrucciones
+[INFO] 01:31:15:833 [Memoria]/(31541:31541): Leyendo archivo de instrucciones
+[INFO] 01:31:15:833 [Memoria]/(31541:31541): Leyendo archivo de instrucciones
+[INFO] 01:31:15:833 [Memoria]/(31541:31541): La fila de speudocodigo: SUM, primer parametro: AX y segundo parametro: BX
+
+[INFO] 01:31:15:833 [Memoria]/(31541:31541): Leyendo archivo de instrucciones
+[INFO] 01:31:15:833 [Memoria]/(31541:31541): La fila de speudocodigo: SUB, primer parametro: AX y segundo parametro: BX
+
+[INFO] 01:31:15:833 [Memoria]/(31541:31541): Leyendo archivo de instrucciones
+[INFO] 01:31:15:833 [Memoria]/(31541:31541): La fila de speudocodigo: MOV_IN, primer parametro: DX y segundo parametro: 0
+
+[INFO] 01:31:15:833 [Memoria]/(31541:31541): Leyendo archivo de instrucciones
+[INFO] 01:31:15:833 [Memoria]/(31541:31541): La fila de speudocodigo: MOV_OUT, primer parametro: 0 y segundo parametro: CX
+
+[INFO] 01:31:15:834 [Memoria]/(31541:31541): Leyendo archivo de instrucciones
+[INFO] 01:31:15:834 [Memoria]/(31541:31541): La fila de speudocodigo: SLEEP, primer parametro: 10
+ y segundo parametro: (null)
+[INFO] 01:31:15:834 [Memoria]/(31541:31541): Leyendo archivo de instrucciones
+[INFO] 01:31:15:834 [Memoria]/(31541:31541): La fila de speudocodigo: JNZ, primer parametro: AX y segundo parametro: 4
+
+[INFO] 01:31:15:834 [Memoria]/(31541:31541): Leyendo archivo de instrucciones
+[INFO] 01:31:15:834 [Memoria]/(31541:31541): La fila de speudocodigo: WAIT, primer parametro: RECURSO_1
+ y segundo parametro: (null)
+[INFO] 01:31:15:834 [Memoria]/(31541:31541): Leyendo archivo de instrucciones
+[INFO] 01:31:15:834 [Memoria]/(31541:31541): La fila de speudocodigo: SIGNAL, primer parametro: RECURSO_1
+ y segundo parametro: (null)
+[INFO] 01:31:15:834 [Memoria]/(31541:31541): Leyendo archivo de instrucciones
+[INFO] 01:31:15:835 [Memoria]/(31541:31541): La fila de speudocodigo: F_OPEN, primer parametro: ARCHIVO y segundo parametro: W
+
+[INFO] 01:31:15:835 [Memoria]/(31541:31541): Leyendo archivo de instrucciones
+[INFO] 01:31:15:835 [Memoria]/(31541:31541): La fila de speudocodigo: F_TRUNCATE, primer parametro: ARCHIVO y segundo parametro: 64
+
+[INFO] 01:31:15:835 [Memoria]/(31541:31541): Leyendo archivo de instrucciones
+[INFO] 01:31:15:835 [Memoria]/(31541:31541): La fila de speudocodigo: F_SEEK, primer parametro: ARCHIVO y segundo parametro: 8
+
+[INFO] 01:31:15:835 [Memoria]/(31541:31541): Leyendo archivo de instrucciones
+[INFO] 01:31:15:835 [Memoria]/(31541:31541): La fila de speudocodigo: F_WRITE, primer parametro: ARCHIVO y segundo parametro: 0
+
+[INFO] 01:31:15:835 [Memoria]/(31541:31541): Leyendo archivo de instrucciones
+[INFO] 01:31:15:835 [Memoria]/(31541:31541): La fila de speudocodigo: F_READ, primer parametro: ARCHIVO y segundo parametro: 0
+
+[INFO] 01:31:15:835 [Memoria]/(31541:31541): Leyendo archivo de instrucciones
+[INFO] 01:31:15:835 [Memoria]/(31541:31541): La fila de speudocodigo: F_CLOSE, primer parametro: ARCHIVO
+ y segundo parametro: (null)
+[INFO] 01:31:15:836 [Memoria]/(31541:31541): Leyendo archivo de instrucciones
+[INFO] 01:31:15:836 [Memoria]/(31541:31541): No se encontro la instruccion del pseudocodigo
+
+[INFO] 01:46:18:971 [Memoria]/(31802:31802): IP_MEMORIA: 127.0.0.1
+[INFO] 01:46:18:972 [Memoria]/(31802:31802): PUERTO_ESCUCHA: 8002
+[INFO] 01:46:18:972 [Memoria]/(31802:31802): IP_FILESYSTEM: 127.0.0.1
+[INFO] 01:46:18:972 [Memoria]/(31802:31802): PUERTO_FILESYSTEM: 8003
+[INFO] 01:46:18:972 [Memoria]/(31802:31802): TAM_MEMORIA: 4096
+[INFO] 01:46:18:972 [Memoria]/(31802:31802): TAM_PAGINA: 16
+[INFO] 01:46:18:972 [Memoria]/(31802:31802): PATH_INSTRUCCIONES: /home/utnso/tp-2023-2c-En_esta_la_firmamOS/prueba_instrucciones/psudocodigos.txt
+[INFO] 01:46:18:972 [Memoria]/(31802:31802): RETARDO_RESPUESTA: 1000
+[INFO] 01:46:18:972 [Memoria]/(31802:31802): ALGORITMO DE ASIGNACION: FIFO 
+
+[INFO] 01:46:18:973 [Memoria]/(31802:31802): Leyendo archivo de instrucciones
+[INFO] 01:46:18:973 [Memoria]/(31802:31802): Leyendo archivo de instrucciones
+[INFO] 01:46:18:973 [Memoria]/(31802:31802): Leyendo archivo de instrucciones
+[INFO] 01:46:18:973 [Memoria]/(31802:31802): La fila de speudocodigo: SUM, primer parametro: AX y segundo parametro: BX
+
+[INFO] 01:46:18:973 [Memoria]/(31802:31802): Leyendo archivo de instrucciones
+[INFO] 01:46:18:973 [Memoria]/(31802:31802): La fila de speudocodigo: SUB, primer parametro: AX y segundo parametro: BX
+
+[INFO] 01:46:18:973 [Memoria]/(31802:31802): Leyendo archivo de instrucciones
+[INFO] 01:46:18:973 [Memoria]/(31802:31802): La fila de speudocodigo: MOV_IN, primer parametro: DX y segundo parametro: 0
+
+[INFO] 01:46:18:973 [Memoria]/(31802:31802): Leyendo archivo de instrucciones
+[INFO] 01:46:18:973 [Memoria]/(31802:31802): La fila de speudocodigo: MOV_OUT, primer parametro: 0 y segundo parametro: CX
+
+[INFO] 01:46:18:973 [Memoria]/(31802:31802): Leyendo archivo de instrucciones
+[INFO] 01:46:18:973 [Memoria]/(31802:31802): La fila de speudocodigo: SLEEP, primer parametro: 10
+ y segundo parametro: (null)
+[INFO] 01:46:18:973 [Memoria]/(31802:31802): Leyendo archivo de instrucciones
+[INFO] 01:46:18:973 [Memoria]/(31802:31802): La fila de speudocodigo: JNZ, primer parametro: AX y segundo parametro: 4
+
+[INFO] 01:46:18:973 [Memoria]/(31802:31802): Leyendo archivo de instrucciones
+[INFO] 01:46:18:973 [Memoria]/(31802:31802): La fila de speudocodigo: WAIT, primer parametro: RECURSO_1
+ y segundo parametro: (null)
+[INFO] 01:46:18:973 [Memoria]/(31802:31802): Leyendo archivo de instrucciones
+[INFO] 01:46:18:973 [Memoria]/(31802:31802): La fila de speudocodigo: SIGNAL, primer parametro: RECURSO_1
+ y segundo parametro: (null)
+[INFO] 01:46:18:973 [Memoria]/(31802:31802): Leyendo archivo de instrucciones
+[INFO] 01:46:18:973 [Memoria]/(31802:31802): La fila de speudocodigo: F_OPEN, primer parametro: ARCHIVO y segundo parametro: W
+
+[INFO] 01:46:18:973 [Memoria]/(31802:31802): Leyendo archivo de instrucciones
+[INFO] 01:46:18:973 [Memoria]/(31802:31802): La fila de speudocodigo: F_TRUNCATE, primer parametro: ARCHIVO y segundo parametro: 64
+
+[INFO] 01:46:18:973 [Memoria]/(31802:31802): Leyendo archivo de instrucciones
+[INFO] 01:46:18:973 [Memoria]/(31802:31802): La fila de speudocodigo: F_SEEK, primer parametro: ARCHIVO y segundo parametro: 8
+
+[INFO] 01:46:18:973 [Memoria]/(31802:31802): Leyendo archivo de instrucciones
+[INFO] 01:46:18:973 [Memoria]/(31802:31802): La fila de speudocodigo: F_WRITE, primer parametro: ARCHIVO y segundo parametro: 0
+
+[INFO] 01:46:18:973 [Memoria]/(31802:31802): Leyendo archivo de instrucciones
+[INFO] 01:46:18:973 [Memoria]/(31802:31802): La fila de speudocodigo: F_READ, primer parametro: ARCHIVO y segundo parametro: 0
+
+[INFO] 01:46:18:973 [Memoria]/(31802:31802): Leyendo archivo de instrucciones
+[INFO] 01:46:18:973 [Memoria]/(31802:31802): La fila de speudocodigo: F_CLOSE, primer parametro: ARCHIVO
+ y segundo parametro: (null)
+[INFO] 01:46:18:973 [Memoria]/(31802:31802): Leyendo archivo de instrucciones
+[INFO] 01:46:18:973 [Memoria]/(31802:31802): Se lee la siguiente instruccion: EXIT
+ 
+
+[INFO] 01:48:56:451 [Memoria]/(32104:32104): IP_MEMORIA: 127.0.0.1
+[INFO] 01:48:56:451 [Memoria]/(32104:32104): PUERTO_ESCUCHA: 8002
+[INFO] 01:48:56:451 [Memoria]/(32104:32104): IP_FILESYSTEM: 127.0.0.1
+[INFO] 01:48:56:451 [Memoria]/(32104:32104): PUERTO_FILESYSTEM: 8003
+[INFO] 01:48:56:451 [Memoria]/(32104:32104): TAM_MEMORIA: 4096
+[INFO] 01:48:56:451 [Memoria]/(32104:32104): TAM_PAGINA: 16
+[INFO] 01:48:56:451 [Memoria]/(32104:32104): PATH_INSTRUCCIONES: /home/utnso/tp-2023-2c-En_esta_la_firmamOS/prueba_instrucciones/psudocodigos.txt
+[INFO] 01:48:56:451 [Memoria]/(32104:32104): RETARDO_RESPUESTA: 1000
+[INFO] 01:48:56:451 [Memoria]/(32104:32104): ALGORITMO DE ASIGNACION: FIFO 
+
+[INFO] 01:48:56:451 [Memoria]/(32104:32104): Leyendo archivo de instrucciones
+[INFO] 01:48:56:451 [Memoria]/(32104:32104): Leyendo archivo de instrucciones
+[INFO] 01:48:56:451 [Memoria]/(32104:32104): Leyendo archivo de instrucciones
+[INFO] 01:48:56:451 [Memoria]/(32104:32104): Se agrega la siguiente instruccion al listado de pseudocodigo: SUM 
+
+[INFO] 01:48:56:451 [Memoria]/(32104:32104): Leyendo archivo de instrucciones
+[INFO] 01:48:56:451 [Memoria]/(32104:32104): Se agrega la siguiente instruccion al listado de pseudocodigo: SUB 
+
+[INFO] 01:48:56:451 [Memoria]/(32104:32104): Leyendo archivo de instrucciones
+[INFO] 01:48:56:451 [Memoria]/(32104:32104): Se agrega la siguiente instruccion al listado de pseudocodigo: MOV_IN 
+
+[INFO] 01:48:56:451 [Memoria]/(32104:32104): Leyendo archivo de instrucciones
+[INFO] 01:48:56:451 [Memoria]/(32104:32104): Se agrega la siguiente instruccion al listado de pseudocodigo: MOV_OUT 
+
+[INFO] 01:48:56:451 [Memoria]/(32104:32104): Leyendo archivo de instrucciones
+[INFO] 01:48:56:451 [Memoria]/(32104:32104): Se agrega la siguiente instruccion al listado de pseudocodigo: SLEEP 
+
+[INFO] 01:48:56:451 [Memoria]/(32104:32104): Leyendo archivo de instrucciones
+[INFO] 01:48:56:451 [Memoria]/(32104:32104): Se agrega la siguiente instruccion al listado de pseudocodigo: JNZ 
+
+[INFO] 01:48:56:451 [Memoria]/(32104:32104): Leyendo archivo de instrucciones
+[INFO] 01:48:56:451 [Memoria]/(32104:32104): Se agrega la siguiente instruccion al listado de pseudocodigo: WAIT 
+
+[INFO] 01:48:56:451 [Memoria]/(32104:32104): Leyendo archivo de instrucciones
+[INFO] 01:48:56:451 [Memoria]/(32104:32104): Se agrega la siguiente instruccion al listado de pseudocodigo: SIGNAL 
+
+[INFO] 01:48:56:451 [Memoria]/(32104:32104): Leyendo archivo de instrucciones
+[INFO] 01:48:56:451 [Memoria]/(32104:32104): Se agrega la siguiente instruccion al listado de pseudocodigo: F_OPEN 
+
+[INFO] 01:48:56:451 [Memoria]/(32104:32104): Leyendo archivo de instrucciones
+[INFO] 01:48:56:451 [Memoria]/(32104:32104): Se agrega la siguiente instruccion al listado de pseudocodigo: F_TRUNCATE 
+
+[INFO] 01:48:56:451 [Memoria]/(32104:32104): Leyendo archivo de instrucciones
+[INFO] 01:48:56:451 [Memoria]/(32104:32104): Se agrega la siguiente instruccion al listado de pseudocodigo: F_SEEK 
+
+[INFO] 01:48:56:451 [Memoria]/(32104:32104): Leyendo archivo de instrucciones
+[INFO] 01:48:56:451 [Memoria]/(32104:32104): Se agrega la siguiente instruccion al listado de pseudocodigo: F_WRITE 
+
+[INFO] 01:48:56:451 [Memoria]/(32104:32104): Leyendo archivo de instrucciones
+[INFO] 01:48:56:451 [Memoria]/(32104:32104): Se agrega la siguiente instruccion al listado de pseudocodigo: F_READ 
+
+[INFO] 01:48:56:451 [Memoria]/(32104:32104): Leyendo archivo de instrucciones
+[INFO] 01:48:56:451 [Memoria]/(32104:32104): Se agrega la siguiente instruccion al listado de pseudocodigo: F_CLOSE 
+
+[INFO] 01:48:56:451 [Memoria]/(32104:32104): Leyendo archivo de instrucciones
+[INFO] 01:48:56:451 [Memoria]/(32104:32104): Se lee la siguiente instruccion: EXIT
+ 
+
+[INFO] 01:53:30:251 [Memoria]/(32839:32839): IP_MEMORIA: 127.0.0.1
+[INFO] 01:53:30:251 [Memoria]/(32839:32839): PUERTO_ESCUCHA: 8002
+[INFO] 01:53:30:251 [Memoria]/(32839:32839): IP_FILESYSTEM: 127.0.0.1
+[INFO] 01:53:30:251 [Memoria]/(32839:32839): PUERTO_FILESYSTEM: 8003
+[INFO] 01:53:30:251 [Memoria]/(32839:32839): TAM_MEMORIA: 4096
+[INFO] 01:53:30:251 [Memoria]/(32839:32839): TAM_PAGINA: 16
+[INFO] 01:53:30:251 [Memoria]/(32839:32839): PATH_INSTRUCCIONES: /home/utnso/tp-2023-2c-En_esta_la_firmamOS/prueba_instrucciones/psudocodigos.txt
+[INFO] 01:53:30:251 [Memoria]/(32839:32839): RETARDO_RESPUESTA: 1000
+[INFO] 01:53:30:251 [Memoria]/(32839:32839): ALGORITMO DE ASIGNACION: FIFO 
+
+[INFO] 01:53:30:251 [Memoria]/(32839:32839): Leyendo archivo de instrucciones
+[INFO] 01:53:30:251 [Memoria]/(32839:32839): Leyendo archivo de instrucciones
+[INFO] 01:53:30:251 [Memoria]/(32839:32839): Leyendo archivo de instrucciones
+[INFO] 01:53:30:251 [Memoria]/(32839:32839): Se agrega la siguiente instruccion al listado de pseudocodigo: SUM 
+
+[INFO] 01:53:30:251 [Memoria]/(32839:32839): Leyendo archivo de instrucciones
+[INFO] 01:53:30:251 [Memoria]/(32839:32839): Se agrega la siguiente instruccion al listado de pseudocodigo: SUB 
+
+[INFO] 01:53:30:251 [Memoria]/(32839:32839): Leyendo archivo de instrucciones
+[INFO] 01:53:30:251 [Memoria]/(32839:32839): Se agrega la siguiente instruccion al listado de pseudocodigo: MOV_IN 
+
+[INFO] 01:53:30:251 [Memoria]/(32839:32839): Leyendo archivo de instrucciones
+[INFO] 01:53:30:251 [Memoria]/(32839:32839): Se agrega la siguiente instruccion al listado de pseudocodigo: MOV_OUT 
+
+[INFO] 01:53:30:251 [Memoria]/(32839:32839): Leyendo archivo de instrucciones
+[INFO] 01:53:30:251 [Memoria]/(32839:32839): Se agrega la siguiente instruccion al listado de pseudocodigo: SLEEP 
+
+[INFO] 01:53:30:251 [Memoria]/(32839:32839): Leyendo archivo de instrucciones
+[INFO] 01:53:30:251 [Memoria]/(32839:32839): Se agrega la siguiente instruccion al listado de pseudocodigo: JNZ 
+
+[INFO] 01:53:30:251 [Memoria]/(32839:32839): Leyendo archivo de instrucciones
+[INFO] 01:53:30:251 [Memoria]/(32839:32839): Se agrega la siguiente instruccion al listado de pseudocodigo: WAIT 
+
+[INFO] 01:53:30:251 [Memoria]/(32839:32839): Leyendo archivo de instrucciones
+[INFO] 01:53:30:251 [Memoria]/(32839:32839): Se agrega la siguiente instruccion al listado de pseudocodigo: SIGNAL 
+
+[INFO] 01:53:30:251 [Memoria]/(32839:32839): Leyendo archivo de instrucciones
+[INFO] 01:53:30:251 [Memoria]/(32839:32839): Se agrega la siguiente instruccion al listado de pseudocodigo: F_OPEN 
+
+[INFO] 01:53:30:251 [Memoria]/(32839:32839): Leyendo archivo de instrucciones
+[INFO] 01:53:30:251 [Memoria]/(32839:32839): Se agrega la siguiente instruccion al listado de pseudocodigo: F_TRUNCATE 
+
+[INFO] 01:53:30:251 [Memoria]/(32839:32839): Leyendo archivo de instrucciones
+[INFO] 01:53:30:251 [Memoria]/(32839:32839): Se agrega la siguiente instruccion al listado de pseudocodigo: F_SEEK 
+
+[INFO] 01:53:30:251 [Memoria]/(32839:32839): Leyendo archivo de instrucciones
+[INFO] 01:53:30:252 [Memoria]/(32839:32839): Se agrega la siguiente instruccion al listado de pseudocodigo: F_WRITE 
+
+[INFO] 01:53:30:252 [Memoria]/(32839:32839): Leyendo archivo de instrucciones
+[INFO] 01:53:30:252 [Memoria]/(32839:32839): Se agrega la siguiente instruccion al listado de pseudocodigo: F_READ 
+
+[INFO] 01:53:30:252 [Memoria]/(32839:32839): Leyendo archivo de instrucciones
+[INFO] 01:53:30:252 [Memoria]/(32839:32839): Se agrega la siguiente instruccion al listado de pseudocodigo: F_CLOSE 
+
+[INFO] 01:53:30:252 [Memoria]/(32839:32839): Leyendo archivo de instrucciones
+[INFO] 01:53:30:252 [Memoria]/(32839:32839): Se lee la siguiente instruccion: EXIT
+ 
+
+[INFO] 01:53:30:252 [Memoria]/(32839:32839): Se agrega la siguiente instruccion al listado de pseudocodigo: EXIT
+ 
+
+[INFO] 01:53:30:252 [Memoria]/(32839:32839): Inicianlizando memoria
+[INFO] 01:53:30:252 [Memoria]/(32839:32839): Cliente conectado a Memoria
+[INFO] 01:53:30:252 [Memoria]/(32839:32839): Se activa el servidor Memoria 
+[INFO] 01:56:22:712 [Memoria]/(33152:33152): IP_MEMORIA: 127.0.0.1
+[INFO] 01:56:22:712 [Memoria]/(33152:33152): PUERTO_ESCUCHA: 8002
+[INFO] 01:56:22:712 [Memoria]/(33152:33152): IP_FILESYSTEM: 127.0.0.1
+[INFO] 01:56:22:712 [Memoria]/(33152:33152): PUERTO_FILESYSTEM: 8003
+[INFO] 01:56:22:712 [Memoria]/(33152:33152): TAM_MEMORIA: 4096
+[INFO] 01:56:22:712 [Memoria]/(33152:33152): TAM_PAGINA: 16
+[INFO] 01:56:22:712 [Memoria]/(33152:33152): PATH_INSTRUCCIONES: /home/utnso/tp-2023-2c-En_esta_la_firmamOS/prueba_instrucciones/psudocodigos.txt
+[INFO] 01:56:22:712 [Memoria]/(33152:33152): RETARDO_RESPUESTA: 1000
+[INFO] 01:56:22:712 [Memoria]/(33152:33152): ALGORITMO DE ASIGNACION: FIFO 
+
+[INFO] 01:56:22:712 [Memoria]/(33152:33152): Leyendo archivo de instrucciones
+[INFO] 01:56:22:712 [Memoria]/(33152:33152): Leyendo archivo de instrucciones
+[INFO] 01:56:22:712 [Memoria]/(33152:33152): Leyendo archivo de instrucciones
+[INFO] 01:56:22:712 [Memoria]/(33152:33152): Se agrega la siguiente instruccion al listado de pseudocodigo: SUM 
+
+[INFO] 01:56:22:712 [Memoria]/(33152:33152): Leyendo archivo de instrucciones
+[INFO] 01:56:22:712 [Memoria]/(33152:33152): Se agrega la siguiente instruccion al listado de pseudocodigo: SUB 
+
+[INFO] 01:56:22:712 [Memoria]/(33152:33152): Leyendo archivo de instrucciones
+[INFO] 01:56:22:712 [Memoria]/(33152:33152): Se agrega la siguiente instruccion al listado de pseudocodigo: MOV_IN 
+
+[INFO] 01:56:22:712 [Memoria]/(33152:33152): Leyendo archivo de instrucciones
+[INFO] 01:56:22:712 [Memoria]/(33152:33152): Se agrega la siguiente instruccion al listado de pseudocodigo: MOV_OUT 
+
+[INFO] 01:56:22:712 [Memoria]/(33152:33152): Leyendo archivo de instrucciones
+[INFO] 01:56:22:712 [Memoria]/(33152:33152): Se agrega la siguiente instruccion al listado de pseudocodigo: SLEEP 
+
+[INFO] 01:56:22:712 [Memoria]/(33152:33152): Leyendo archivo de instrucciones
+[INFO] 01:56:22:712 [Memoria]/(33152:33152): Se agrega la siguiente instruccion al listado de pseudocodigo: JNZ 
+
+[INFO] 01:56:22:712 [Memoria]/(33152:33152): Leyendo archivo de instrucciones
+[INFO] 01:56:22:712 [Memoria]/(33152:33152): Se agrega la siguiente instruccion al listado de pseudocodigo: WAIT 
+
+[INFO] 01:56:22:712 [Memoria]/(33152:33152): Leyendo archivo de instrucciones
+[INFO] 01:56:22:712 [Memoria]/(33152:33152): Se agrega la siguiente instruccion al listado de pseudocodigo: SIGNAL 
+
+[INFO] 01:56:22:712 [Memoria]/(33152:33152): Leyendo archivo de instrucciones
+[INFO] 01:56:22:712 [Memoria]/(33152:33152): Se agrega la siguiente instruccion al listado de pseudocodigo: F_OPEN 
+
+[INFO] 01:56:22:712 [Memoria]/(33152:33152): Leyendo archivo de instrucciones
+[INFO] 01:56:22:712 [Memoria]/(33152:33152): Se agrega la siguiente instruccion al listado de pseudocodigo: F_TRUNCATE 
+
+[INFO] 01:56:22:712 [Memoria]/(33152:33152): Leyendo archivo de instrucciones
+[INFO] 01:56:22:712 [Memoria]/(33152:33152): Se agrega la siguiente instruccion al listado de pseudocodigo: F_SEEK 
+
+[INFO] 01:56:22:712 [Memoria]/(33152:33152): Leyendo archivo de instrucciones
+[INFO] 01:56:22:712 [Memoria]/(33152:33152): Se agrega la siguiente instruccion al listado de pseudocodigo: F_WRITE 
+
+[INFO] 01:56:22:712 [Memoria]/(33152:33152): Leyendo archivo de instrucciones
+[INFO] 01:56:22:712 [Memoria]/(33152:33152): Se agrega la siguiente instruccion al listado de pseudocodigo: F_READ 
+
+[INFO] 01:56:22:712 [Memoria]/(33152:33152): Leyendo archivo de instrucciones
+[INFO] 01:56:22:712 [Memoria]/(33152:33152): Se agrega la siguiente instruccion al listado de pseudocodigo: F_CLOSE 
+
+[INFO] 01:56:22:712 [Memoria]/(33152:33152): Leyendo archivo de instrucciones
+[INFO] 01:56:22:712 [Memoria]/(33152:33152): Se lee la siguiente instruccion: EXIT
+ 
+
+[INFO] 01:56:22:712 [Memoria]/(33152:33152): Se agrega la siguiente instruccion al listado de pseudocodigo: EXIT
+ 
+
+[INFO] 01:56:22:712 [Memoria]/(33152:33152): Inicianlizando memoria
+[INFO] 01:56:22:713 [Memoria]/(33152:33152): Cliente conectado a Memoria
+[INFO] 01:56:22:713 [Memoria]/(33152:33152): Se activa el servidor Memoria 
+[INFO] 02:01:34:035 [Memoria]/(33498:33498): IP_MEMORIA: 127.0.0.1
+[INFO] 02:01:34:036 [Memoria]/(33498:33498): PUERTO_ESCUCHA: 8002
+[INFO] 02:01:34:036 [Memoria]/(33498:33498): IP_FILESYSTEM: 127.0.0.1
+[INFO] 02:01:34:036 [Memoria]/(33498:33498): PUERTO_FILESYSTEM: 8003
+[INFO] 02:01:34:036 [Memoria]/(33498:33498): TAM_MEMORIA: 4096
+[INFO] 02:01:34:036 [Memoria]/(33498:33498): TAM_PAGINA: 16
+[INFO] 02:01:34:036 [Memoria]/(33498:33498): PATH_INSTRUCCIONES: /home/utnso/tp-2023-2c-En_esta_la_firmamOS/prueba_instrucciones/psudocodigos.txt
+[INFO] 02:01:34:036 [Memoria]/(33498:33498): RETARDO_RESPUESTA: 1000
+[INFO] 02:01:34:036 [Memoria]/(33498:33498): ALGORITMO DE ASIGNACION: FIFO 
+
+[INFO] 02:01:34:036 [Memoria]/(33498:33498): Leyendo archivo de instrucciones
+[INFO] 02:01:34:037 [Memoria]/(33498:33498): Leyendo archivo de instrucciones
+[INFO] 02:01:34:037 [Memoria]/(33498:33498): Leyendo archivo de instrucciones
+[INFO] 02:01:34:037 [Memoria]/(33498:33498): Se agrega la siguiente instruccion al listado de pseudocodigo: SUM 
+
+[INFO] 02:01:34:037 [Memoria]/(33498:33498): Leyendo archivo de instrucciones
+[INFO] 02:01:34:037 [Memoria]/(33498:33498): Se agrega la siguiente instruccion al listado de pseudocodigo: SUB 
+
+[INFO] 02:01:34:037 [Memoria]/(33498:33498): Leyendo archivo de instrucciones
+[INFO] 02:01:34:037 [Memoria]/(33498:33498): Se agrega la siguiente instruccion al listado de pseudocodigo: MOV_IN 
+
+[INFO] 02:01:34:037 [Memoria]/(33498:33498): Leyendo archivo de instrucciones
+[INFO] 02:01:34:037 [Memoria]/(33498:33498): Se agrega la siguiente instruccion al listado de pseudocodigo: MOV_OUT 
+
+[INFO] 02:01:34:037 [Memoria]/(33498:33498): Leyendo archivo de instrucciones
+[INFO] 02:01:34:037 [Memoria]/(33498:33498): Se agrega la siguiente instruccion al listado de pseudocodigo: SLEEP 
+
+[INFO] 02:01:34:038 [Memoria]/(33498:33498): Leyendo archivo de instrucciones
+[INFO] 02:01:34:038 [Memoria]/(33498:33498): Se agrega la siguiente instruccion al listado de pseudocodigo: JNZ 
+
+[INFO] 02:01:34:038 [Memoria]/(33498:33498): Leyendo archivo de instrucciones
+[INFO] 02:01:34:038 [Memoria]/(33498:33498): Se agrega la siguiente instruccion al listado de pseudocodigo: WAIT 
+
+[INFO] 02:01:34:038 [Memoria]/(33498:33498): Leyendo archivo de instrucciones
+[INFO] 02:01:34:038 [Memoria]/(33498:33498): Se agrega la siguiente instruccion al listado de pseudocodigo: SIGNAL 
+
+[INFO] 02:01:34:038 [Memoria]/(33498:33498): Leyendo archivo de instrucciones
+[INFO] 02:01:34:038 [Memoria]/(33498:33498): Se agrega la siguiente instruccion al listado de pseudocodigo: F_OPEN 
+
+[INFO] 02:01:34:038 [Memoria]/(33498:33498): Leyendo archivo de instrucciones
+[INFO] 02:01:34:038 [Memoria]/(33498:33498): Se agrega la siguiente instruccion al listado de pseudocodigo: F_TRUNCATE 
+
+[INFO] 02:01:34:039 [Memoria]/(33498:33498): Leyendo archivo de instrucciones
+[INFO] 02:01:34:039 [Memoria]/(33498:33498): Se agrega la siguiente instruccion al listado de pseudocodigo: F_SEEK 
+
+[INFO] 02:01:34:039 [Memoria]/(33498:33498): Leyendo archivo de instrucciones
+[INFO] 02:01:34:039 [Memoria]/(33498:33498): Se agrega la siguiente instruccion al listado de pseudocodigo: F_WRITE 
+
+[INFO] 02:01:34:039 [Memoria]/(33498:33498): Leyendo archivo de instrucciones
+[INFO] 02:01:34:039 [Memoria]/(33498:33498): Se agrega la siguiente instruccion al listado de pseudocodigo: F_READ 
+
+[INFO] 02:01:34:039 [Memoria]/(33498:33498): Leyendo archivo de instrucciones
+[INFO] 02:01:34:039 [Memoria]/(33498:33498): Se agrega la siguiente instruccion al listado de pseudocodigo: F_CLOSE 
+
+[INFO] 02:01:34:039 [Memoria]/(33498:33498): Leyendo archivo de instrucciones
+[INFO] 02:01:34:039 [Memoria]/(33498:33498): Se agrega la siguiente instruccion al listado de pseudocodigo: EXIT 
+
+[INFO] 02:01:34:039 [Memoria]/(33498:33498): Inicianlizando memoria
+[INFO] 02:01:34:040 [Memoria]/(33498:33498): Cliente conectado a Memoria
+[INFO] 02:01:34:040 [Memoria]/(33498:33498): Se activa el servidor Memoria 
+[INFO] 02:16:37:542 [Memoria]/(33751:33751): IP_MEMORIA: 127.0.0.1
+[INFO] 02:16:37:543 [Memoria]/(33751:33751): PUERTO_ESCUCHA: 8002
+[INFO] 02:16:37:543 [Memoria]/(33751:33751): IP_FILESYSTEM: 127.0.0.1
+[INFO] 02:16:37:543 [Memoria]/(33751:33751): PUERTO_FILESYSTEM: 8003
+[INFO] 02:16:37:543 [Memoria]/(33751:33751): TAM_MEMORIA: 4096
+[INFO] 02:16:37:543 [Memoria]/(33751:33751): TAM_PAGINA: 16
+[INFO] 02:16:37:543 [Memoria]/(33751:33751): PATH_INSTRUCCIONES: /home/utnso/tp-2023-2c-En_esta_la_firmamOS/prueba_instrucciones/psudocodigos.txt
+[INFO] 02:16:37:543 [Memoria]/(33751:33751): RETARDO_RESPUESTA: 1000
+[INFO] 02:16:37:543 [Memoria]/(33751:33751): ALGORITMO DE ASIGNACION: FIFO 
+
+[INFO] 02:16:37:543 [Memoria]/(33751:33751): Leyendo archivo de instrucciones
+[INFO] 02:16:37:543 [Memoria]/(33751:33751): Leyendo archivo de instrucciones
+[INFO] 02:16:37:543 [Memoria]/(33751:33751): Leyendo archivo de instrucciones
+[INFO] 02:16:37:543 [Memoria]/(33751:33751): Se agrega la siguiente instruccion al listado de pseudocodigo: SUM 
+
+[INFO] 02:16:37:543 [Memoria]/(33751:33751): Leyendo archivo de instrucciones
+[INFO] 02:16:37:543 [Memoria]/(33751:33751): Se agrega la siguiente instruccion al listado de pseudocodigo: SUB 
+
+[INFO] 02:16:37:543 [Memoria]/(33751:33751): Leyendo archivo de instrucciones
+[INFO] 02:16:37:543 [Memoria]/(33751:33751): Se agrega la siguiente instruccion al listado de pseudocodigo: MOV_IN 
+
+[INFO] 02:16:37:543 [Memoria]/(33751:33751): Leyendo archivo de instrucciones
+[INFO] 02:16:37:543 [Memoria]/(33751:33751): Se agrega la siguiente instruccion al listado de pseudocodigo: MOV_OUT 
+
+[INFO] 02:16:37:543 [Memoria]/(33751:33751): Leyendo archivo de instrucciones
+[INFO] 02:16:37:543 [Memoria]/(33751:33751): Se agrega la siguiente instruccion al listado de pseudocodigo: SLEEP 
+
+[INFO] 02:16:37:543 [Memoria]/(33751:33751): Leyendo archivo de instrucciones
+[INFO] 02:16:37:543 [Memoria]/(33751:33751): Se agrega la siguiente instruccion al listado de pseudocodigo: JNZ 
+
+[INFO] 02:16:37:543 [Memoria]/(33751:33751): Leyendo archivo de instrucciones
+[INFO] 02:16:37:543 [Memoria]/(33751:33751): Se agrega la siguiente instruccion al listado de pseudocodigo: WAIT 
+
+[INFO] 02:16:37:543 [Memoria]/(33751:33751): Leyendo archivo de instrucciones
+[INFO] 02:16:37:543 [Memoria]/(33751:33751): Se agrega la siguiente instruccion al listado de pseudocodigo: SIGNAL 
+
+[INFO] 02:16:37:543 [Memoria]/(33751:33751): Leyendo archivo de instrucciones
+[INFO] 02:16:37:543 [Memoria]/(33751:33751): Se agrega la siguiente instruccion al listado de pseudocodigo: F_OPEN 
+
+[INFO] 02:16:37:543 [Memoria]/(33751:33751): Leyendo archivo de instrucciones
+[INFO] 02:16:37:543 [Memoria]/(33751:33751): Se agrega la siguiente instruccion al listado de pseudocodigo: F_TRUNCATE 
+
+[INFO] 02:16:37:543 [Memoria]/(33751:33751): Leyendo archivo de instrucciones
+[INFO] 02:16:37:543 [Memoria]/(33751:33751): Se agrega la siguiente instruccion al listado de pseudocodigo: F_SEEK 
+
+[INFO] 02:16:37:544 [Memoria]/(33751:33751): Leyendo archivo de instrucciones
+[INFO] 02:16:37:544 [Memoria]/(33751:33751): Se agrega la siguiente instruccion al listado de pseudocodigo: F_WRITE 
+
+[INFO] 02:16:37:544 [Memoria]/(33751:33751): Leyendo archivo de instrucciones
+[INFO] 02:16:37:544 [Memoria]/(33751:33751): Se agrega la siguiente instruccion al listado de pseudocodigo: F_READ 
+
+[INFO] 02:16:37:544 [Memoria]/(33751:33751): Leyendo archivo de instrucciones
+[INFO] 02:16:37:544 [Memoria]/(33751:33751): Se agrega la siguiente instruccion al listado de pseudocodigo: F_CLOSE 
+
+[INFO] 02:16:37:544 [Memoria]/(33751:33751): Leyendo archivo de instrucciones
+[INFO] 02:16:37:544 [Memoria]/(33751:33751): Leyendo archivo de instrucciones
+[INFO] 02:17:17:694 [Memoria]/(33923:33923): IP_MEMORIA: 127.0.0.1
+[INFO] 02:17:17:694 [Memoria]/(33923:33923): PUERTO_ESCUCHA: 8002
+[INFO] 02:17:17:694 [Memoria]/(33923:33923): IP_FILESYSTEM: 127.0.0.1
+[INFO] 02:17:17:694 [Memoria]/(33923:33923): PUERTO_FILESYSTEM: 8003
+[INFO] 02:17:17:694 [Memoria]/(33923:33923): TAM_MEMORIA: 4096
+[INFO] 02:17:17:694 [Memoria]/(33923:33923): TAM_PAGINA: 16
+[INFO] 02:17:17:694 [Memoria]/(33923:33923): PATH_INSTRUCCIONES: /home/utnso/tp-2023-2c-En_esta_la_firmamOS/prueba_instrucciones/psudocodigos.txt
+[INFO] 02:17:17:694 [Memoria]/(33923:33923): RETARDO_RESPUESTA: 1000
+[INFO] 02:17:17:694 [Memoria]/(33923:33923): ALGORITMO DE ASIGNACION: FIFO 
+
+[INFO] 02:17:17:694 [Memoria]/(33923:33923): Leyendo archivo de instrucciones
+[INFO] 02:17:17:694 [Memoria]/(33923:33923): Leyendo archivo de instrucciones
+[INFO] 02:17:17:694 [Memoria]/(33923:33923): Leyendo archivo de instrucciones
+[INFO] 02:17:17:694 [Memoria]/(33923:33923): Se agrega la siguiente instruccion al listado de pseudocodigo: SUM 
+
+[INFO] 02:17:17:694 [Memoria]/(33923:33923): Leyendo archivo de instrucciones
+[INFO] 02:17:17:694 [Memoria]/(33923:33923): Se agrega la siguiente instruccion al listado de pseudocodigo: SUB 
+
+[INFO] 02:17:17:694 [Memoria]/(33923:33923): Leyendo archivo de instrucciones
+[INFO] 02:17:17:694 [Memoria]/(33923:33923): Se agrega la siguiente instruccion al listado de pseudocodigo: MOV_IN 
+
+[INFO] 02:17:17:694 [Memoria]/(33923:33923): Leyendo archivo de instrucciones
+[INFO] 02:17:17:694 [Memoria]/(33923:33923): Se agrega la siguiente instruccion al listado de pseudocodigo: MOV_OUT 
+
+[INFO] 02:17:17:694 [Memoria]/(33923:33923): Leyendo archivo de instrucciones
+[INFO] 02:17:17:694 [Memoria]/(33923:33923): Se agrega la siguiente instruccion al listado de pseudocodigo: SLEEP 
+
+[INFO] 02:17:17:695 [Memoria]/(33923:33923): Leyendo archivo de instrucciones
+[INFO] 02:17:17:695 [Memoria]/(33923:33923): Se agrega la siguiente instruccion al listado de pseudocodigo: JNZ 
+
+[INFO] 02:17:17:695 [Memoria]/(33923:33923): Leyendo archivo de instrucciones
+[INFO] 02:17:17:695 [Memoria]/(33923:33923): Se agrega la siguiente instruccion al listado de pseudocodigo: WAIT 
+
+[INFO] 02:17:17:695 [Memoria]/(33923:33923): Leyendo archivo de instrucciones
+[INFO] 02:17:17:695 [Memoria]/(33923:33923): Se agrega la siguiente instruccion al listado de pseudocodigo: SIGNAL 
+
+[INFO] 02:17:17:695 [Memoria]/(33923:33923): Leyendo archivo de instrucciones
+[INFO] 02:17:17:695 [Memoria]/(33923:33923): Se agrega la siguiente instruccion al listado de pseudocodigo: F_OPEN 
+
+[INFO] 02:17:17:695 [Memoria]/(33923:33923): Leyendo archivo de instrucciones
+[INFO] 02:17:17:695 [Memoria]/(33923:33923): Se agrega la siguiente instruccion al listado de pseudocodigo: F_TRUNCATE 
+
+[INFO] 02:17:17:695 [Memoria]/(33923:33923): Leyendo archivo de instrucciones
+[INFO] 02:17:17:696 [Memoria]/(33923:33923): Se agrega la siguiente instruccion al listado de pseudocodigo: F_SEEK 
+
+[INFO] 02:17:17:696 [Memoria]/(33923:33923): Leyendo archivo de instrucciones
+[INFO] 02:17:17:696 [Memoria]/(33923:33923): Se agrega la siguiente instruccion al listado de pseudocodigo: F_WRITE 
+
+[INFO] 02:17:17:696 [Memoria]/(33923:33923): Leyendo archivo de instrucciones
+[INFO] 02:17:17:696 [Memoria]/(33923:33923): Se agrega la siguiente instruccion al listado de pseudocodigo: F_READ 
+
+[INFO] 02:17:17:696 [Memoria]/(33923:33923): Leyendo archivo de instrucciones
+[INFO] 02:17:17:696 [Memoria]/(33923:33923): Se agrega la siguiente instruccion al listado de pseudocodigo: F_CLOSE 
+
+[INFO] 02:17:17:696 [Memoria]/(33923:33923): Leyendo archivo de instrucciones
+[INFO] 02:17:17:696 [Memoria]/(33923:33923): Se agrega la siguiente instruccion al listado de pseudocodigo: EXIT 
+
+[INFO] 02:17:17:696 [Memoria]/(33923:33923): Inicianlizando memoria
+[INFO] 02:17:17:697 [Memoria]/(33923:33923): Cliente conectado a Memoria
+[INFO] 02:17:17:697 [Memoria]/(33923:33923): Se activa el servidor Memoria 
+[INFO] 02:28:32:439 [Memoria]/(34150:34150): IP_MEMORIA: 127.0.0.1
+[INFO] 02:28:32:440 [Memoria]/(34150:34150): PUERTO_ESCUCHA: 8002
+[INFO] 02:28:32:440 [Memoria]/(34150:34150): IP_FILESYSTEM: 127.0.0.1
+[INFO] 02:28:32:440 [Memoria]/(34150:34150): PUERTO_FILESYSTEM: 8003
+[INFO] 02:28:32:440 [Memoria]/(34150:34150): TAM_MEMORIA: 4096
+[INFO] 02:28:32:440 [Memoria]/(34150:34150): TAM_PAGINA: 16
+[INFO] 02:28:32:440 [Memoria]/(34150:34150): PATH_INSTRUCCIONES: /home/utnso/tp-2023-2c-En_esta_la_firmamOS/prueba_instrucciones/psudocodigos.txt
+[INFO] 02:28:32:440 [Memoria]/(34150:34150): RETARDO_RESPUESTA: 1000
+[INFO] 02:28:32:440 [Memoria]/(34150:34150): ALGORITMO DE ASIGNACION: FIFO 
+
+[INFO] 02:28:32:440 [Memoria]/(34150:34150): Leyendo archivo de instrucciones
+[INFO] 02:28:32:441 [Memoria]/(34150:34150): Leyendo archivo de instrucciones
+[INFO] 02:28:32:441 [Memoria]/(34150:34150): Leyendo archivo de instrucciones
+[INFO] 02:28:32:441 [Memoria]/(34150:34150): Se agrega la siguiente instruccion al listado de pseudocodigo: SUM 
+
+[INFO] 02:28:32:441 [Memoria]/(34150:34150): Leyendo archivo de instrucciones
+[INFO] 02:28:32:441 [Memoria]/(34150:34150): Se agrega la siguiente instruccion al listado de pseudocodigo: SUB 
+
+[INFO] 02:28:32:441 [Memoria]/(34150:34150): Leyendo archivo de instrucciones
+[INFO] 02:28:32:441 [Memoria]/(34150:34150): Leyendo archivo de instrucciones
+[INFO] 02:28:32:441 [Memoria]/(34150:34150): Leyendo archivo de instrucciones
+[INFO] 02:28:32:441 [Memoria]/(34150:34150): Se agrega la siguiente instruccion al listado de pseudocodigo: MOV_IN 
+
+[INFO] 02:28:32:442 [Memoria]/(34150:34150): Leyendo archivo de instrucciones
+[INFO] 02:28:32:442 [Memoria]/(34150:34150): Se agrega la siguiente instruccion al listado de pseudocodigo: MOV_OUT 
+
+[INFO] 02:28:32:442 [Memoria]/(34150:34150): Leyendo archivo de instrucciones
+[INFO] 02:28:32:442 [Memoria]/(34150:34150): Se agrega la siguiente instruccion al listado de pseudocodigo: SLEEP 
+
+[INFO] 02:28:32:442 [Memoria]/(34150:34150): Leyendo archivo de instrucciones
+[INFO] 02:28:32:442 [Memoria]/(34150:34150): Se agrega la siguiente instruccion al listado de pseudocodigo: JNZ 
+
+[INFO] 02:28:32:442 [Memoria]/(34150:34150): Leyendo archivo de instrucciones
+[INFO] 02:28:32:442 [Memoria]/(34150:34150): Se agrega la siguiente instruccion al listado de pseudocodigo: WAIT 
+
+[INFO] 02:28:32:442 [Memoria]/(34150:34150): Leyendo archivo de instrucciones
+[INFO] 02:28:32:442 [Memoria]/(34150:34150): Se agrega la siguiente instruccion al listado de pseudocodigo: SIGNAL 
+
+[INFO] 02:28:32:442 [Memoria]/(34150:34150): Leyendo archivo de instrucciones
+[INFO] 02:28:32:442 [Memoria]/(34150:34150): Se agrega la siguiente instruccion al listado de pseudocodigo: F_OPEN 
+
+[INFO] 02:28:32:442 [Memoria]/(34150:34150): Leyendo archivo de instrucciones
+[INFO] 02:28:32:443 [Memoria]/(34150:34150): Se agrega la siguiente instruccion al listado de pseudocodigo: F_TRUNCATE 
+
+[INFO] 02:28:32:443 [Memoria]/(34150:34150): Leyendo archivo de instrucciones
+[INFO] 02:28:32:443 [Memoria]/(34150:34150): Se agrega la siguiente instruccion al listado de pseudocodigo: F_SEEK 
+
+[INFO] 02:28:32:443 [Memoria]/(34150:34150): Leyendo archivo de instrucciones
+[INFO] 02:28:32:443 [Memoria]/(34150:34150): Se agrega la siguiente instruccion al listado de pseudocodigo: F_WRITE 
+
+[INFO] 02:28:32:443 [Memoria]/(34150:34150): Leyendo archivo de instrucciones
+[INFO] 02:28:32:443 [Memoria]/(34150:34150): Se agrega la siguiente instruccion al listado de pseudocodigo: F_READ 
+
+[INFO] 02:28:32:443 [Memoria]/(34150:34150): Leyendo archivo de instrucciones
+[INFO] 02:28:32:443 [Memoria]/(34150:34150): Se agrega la siguiente instruccion al listado de pseudocodigo: F_CLOSE 
+
+[INFO] 02:28:32:443 [Memoria]/(34150:34150): Leyendo archivo de instrucciones
+[INFO] 02:28:32:443 [Memoria]/(34150:34150): Se agrega la siguiente instruccion al listado de pseudocodigo: EXIT 
+
+[INFO] 02:28:32:443 [Memoria]/(34150:34150): Inicianlizando memoria
+[INFO] 02:28:32:444 [Memoria]/(34150:34150): Cliente conectado a Memoria
+[INFO] 02:28:32:444 [Memoria]/(34150:34150): Se activa el servidor Memoria 
+[INFO] 02:30:56:500 [Memoria]/(34439:34439): IP_MEMORIA: 127.0.0.1
+[INFO] 02:30:56:501 [Memoria]/(34439:34439): PUERTO_ESCUCHA: 8002
+[INFO] 02:30:56:501 [Memoria]/(34439:34439): IP_FILESYSTEM: 127.0.0.1
+[INFO] 02:30:56:501 [Memoria]/(34439:34439): PUERTO_FILESYSTEM: 8003
+[INFO] 02:30:56:501 [Memoria]/(34439:34439): TAM_MEMORIA: 4096
+[INFO] 02:30:56:501 [Memoria]/(34439:34439): TAM_PAGINA: 16
+[INFO] 02:30:56:501 [Memoria]/(34439:34439): PATH_INSTRUCCIONES: /home/utnso/tp-2023-2c-En_esta_la_firmamOS/prueba_instrucciones/psudocodigos.txt
+[INFO] 02:30:56:501 [Memoria]/(34439:34439): RETARDO_RESPUESTA: 1000
+[INFO] 02:30:56:501 [Memoria]/(34439:34439): ALGORITMO DE ASIGNACION: FIFO 
+
+[INFO] 02:30:56:501 [Memoria]/(34439:34439): Leyendo archivo de instrucciones
+[INFO] 02:30:56:501 [Memoria]/(34439:34439): Leyendo archivo de instrucciones
+[INFO] 02:30:56:501 [Memoria]/(34439:34439): Leyendo archivo de instrucciones
+[INFO] 02:30:56:501 [Memoria]/(34439:34439): Se agrega la siguiente instruccion al listado de pseudocodigo: SUM 
+
+[INFO] 02:30:56:501 [Memoria]/(34439:34439): Leyendo archivo de instrucciones
+[INFO] 02:30:56:501 [Memoria]/(34439:34439): Se agrega la siguiente instruccion al listado de pseudocodigo: SUB 
+
+[INFO] 02:30:56:501 [Memoria]/(34439:34439): Leyendo archivo de instrucciones
+[INFO] 02:30:56:502 [Memoria]/(34439:34439): Se agrega la siguiente instruccion al listado de pseudocodigo: MOV_IN 
+
+[INFO] 02:30:56:502 [Memoria]/(34439:34439): Leyendo archivo de instrucciones
+[INFO] 02:30:56:502 [Memoria]/(34439:34439): Se agrega la siguiente instruccion al listado de pseudocodigo: MOV_OUT 
+
+[INFO] 02:30:56:502 [Memoria]/(34439:34439): Leyendo archivo de instrucciones
+[INFO] 02:30:56:502 [Memoria]/(34439:34439): Se agrega la siguiente instruccion al listado de pseudocodigo: SLEEP 
+
+[INFO] 02:30:56:502 [Memoria]/(34439:34439): Leyendo archivo de instrucciones
+[INFO] 02:30:56:502 [Memoria]/(34439:34439): Se agrega la siguiente instruccion al listado de pseudocodigo: JNZ 
+
+[INFO] 02:30:56:502 [Memoria]/(34439:34439): Leyendo archivo de instrucciones
+[INFO] 02:30:56:502 [Memoria]/(34439:34439): Se agrega la siguiente instruccion al listado de pseudocodigo: WAIT 
+
+[INFO] 02:30:56:502 [Memoria]/(34439:34439): Leyendo archivo de instrucciones
+[INFO] 02:30:56:503 [Memoria]/(34439:34439): Se agrega la siguiente instruccion al listado de pseudocodigo: SIGNAL 
+
+[INFO] 02:30:56:503 [Memoria]/(34439:34439): Leyendo archivo de instrucciones
+[INFO] 02:30:56:503 [Memoria]/(34439:34439): Se agrega la siguiente instruccion al listado de pseudocodigo: F_OPEN 
+
+[INFO] 02:30:56:503 [Memoria]/(34439:34439): Leyendo archivo de instrucciones
+[INFO] 02:30:56:503 [Memoria]/(34439:34439): Se agrega la siguiente instruccion al listado de pseudocodigo: F_TRUNCATE 
+
+[INFO] 02:30:56:503 [Memoria]/(34439:34439): Leyendo archivo de instrucciones
+[INFO] 02:30:56:503 [Memoria]/(34439:34439): Se agrega la siguiente instruccion al listado de pseudocodigo: F_SEEK 
+
+[INFO] 02:30:56:503 [Memoria]/(34439:34439): Leyendo archivo de instrucciones
+[INFO] 02:30:56:503 [Memoria]/(34439:34439): Se agrega la siguiente instruccion al listado de pseudocodigo: F_WRITE 
+
+[INFO] 02:30:56:503 [Memoria]/(34439:34439): Leyendo archivo de instrucciones
+[INFO] 02:30:56:503 [Memoria]/(34439:34439): Se agrega la siguiente instruccion al listado de pseudocodigo: F_READ 
+
+[INFO] 02:30:56:503 [Memoria]/(34439:34439): Leyendo archivo de instrucciones
+[INFO] 02:30:56:503 [Memoria]/(34439:34439): Se agrega la siguiente instruccion al listado de pseudocodigo: F_CLOSE 
+
+[INFO] 02:30:56:504 [Memoria]/(34439:34439): Leyendo archivo de instrucciones
+[INFO] 02:30:56:504 [Memoria]/(34439:34439): Se agrega la siguiente instruccion al listado de pseudocodigo: EXIT 
+
+[INFO] 02:30:56:504 [Memoria]/(34439:34439): Inicianlizando memoria
+[INFO] 02:30:56:504 [Memoria]/(34439:34439): Cliente conectado a Memoria
+[INFO] 02:30:56:504 [Memoria]/(34439:34439): Se activa el servidor Memoria 
