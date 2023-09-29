@@ -269,3 +269,20 @@ void* recibir_choclo_del_buffer(t_buffer* coso){
 
 	return choclo;
 }
+
+t_buffer* recibiendo_el_contenido(int conexion){
+	t_buffer* unBuffer = malloc(sizeof(t_buffer));
+	int size;
+	unBuffer->stream = recibir_buffer(&size, conexion);
+	unBuffer->size = size;
+	return unBuffer;
+}
+
+void atender_handshake_respuesta(t_buffer* myBuffer, t_log* logger){
+	char* string = recibir_string_del_buffer(myBuffer);
+	log_info(logger, "HANDSHAKE CON %s >> [OK]", string);
+	free(myBuffer->stream);
+	free(myBuffer);
+	free(string);
+}
+

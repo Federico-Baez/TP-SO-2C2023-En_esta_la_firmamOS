@@ -204,11 +204,11 @@ static void procesar_conexion(void *void_args){
 			buffer_handshake->size = size_handshake;
 
 			saludo = recibir_string_del_buffer(buffer_handshake);
-			log_info(memoria_logger, "%s CONECTADO !!!!!!!", saludo);
+			log_info(memoria_logger, "¡¡¡¡¡¡¡¡¡ %s CONECTADO !!!!!!!", saludo);
 
 			free(buffer_handshake->stream);
 			free(buffer_handshake);
-
+			free(saludo);
 			//////
 
 			op_code operacion_handshake = HANDSHAKE;

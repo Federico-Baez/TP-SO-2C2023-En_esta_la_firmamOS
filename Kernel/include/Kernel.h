@@ -17,8 +17,8 @@
 #include <protocolo.h>
 #include <socket.h>
 #include <stdlib.h>
-
 #include <stdio.h>
+#include <readline/readline.h>
 
 
 typedef enum{
@@ -52,5 +52,17 @@ int GRADO_MULTIPROGRAMACION_INI;
 void leer_config(t_config* config);
 void finalizar_kernel();
 void asignar_planificador_cp(char* algoritmo_planificacion);
+
+void leer_consola(void);
+void enviar_los_handshake(void);
+void atender_esta_prueba(t_buffer* unBuffer);
+
+
+void atender_memoria(int* conexion);
+void atender_filesystem(int* conexion);
+void atender_cpu_dispatch(int* conexion);
+void atender_cpu_interrupt(int* conexion);
+
+
 
 #endif /* KERNEL_H_ */
