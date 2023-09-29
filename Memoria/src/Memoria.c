@@ -28,6 +28,7 @@ int main(int argc, char** argv) {
 
 	leer_config(memoria_config);
 	leer_log();
+	lista_instrucciones(memoria_logger, PATH_INSTRUCCIONES);
 
 	//TODO: verificar como inicializar memoria
 
@@ -243,6 +244,10 @@ int server_escucha(){
 	}
 	log_info(memoria_logger, "Se activa el servidor %s ", server_name);
 	return 0;
+}
+
+void enviar_instrucciones_a_cpu(){
+	lista_instrucciones(memoria_logger, PATH_INSTRUCCIONES);
 }
 
 
