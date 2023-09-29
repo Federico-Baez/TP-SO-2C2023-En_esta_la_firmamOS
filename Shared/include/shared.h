@@ -14,6 +14,7 @@
 #include <commons/log.h>
 #include <commons/config.h>
 #include <commons/string.h>
+#include <commons/collections/list.h>
 
 #include "socket.h"
 
@@ -57,8 +58,6 @@ typedef enum{
 }cod_instruccion;
 
 
-
-
 //Contexto de ejecucion
 typedef struct{
 	int pid;
@@ -68,6 +67,11 @@ typedef struct{
 	//  <--- archivos_abiertos;
 }t_contexto_ejecucion;
 
+typedef struct{
+	cod_instruccion pseudo_c;
+    char *fst_param;
+    char *snd_param;
+}t_instruccion_codigo;
 
-
+cod_instruccion convertir_string_a_instruccion(const char *str_instruccion);
 #endif /* INCLUDE_SHARED_H_ */
