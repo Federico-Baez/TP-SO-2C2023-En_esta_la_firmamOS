@@ -109,7 +109,7 @@ void atender_kernel(){
 			myBuffer = recibiendo_super_paquete(fd_kernel);
 			int handshake_del_kernel = recibir_int_del_buffer(myBuffer);
 			log_info(filesystem_logger, "!!!!! [%d] CONECTADO !!!!!", handshake_del_kernel);
-			enviar_handshake(fd_kernel, FILESYSTEM);
+			enviar_handshake(fd_kernel);
 			break;
 		case SYSCALL_KF:
 			myBuffer = recibiendo_super_paquete(fd_kernel);

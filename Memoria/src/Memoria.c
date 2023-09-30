@@ -28,7 +28,6 @@ int main(int argc, char** argv) {
 
 	leer_config(memoria_config);
 	//leer_log();
-	const char *path_instrucciones = "/home/utnso/tp-2023-2c-En_esta_la_firmamOS/prueba_instrucciones/psudocodigos.txt";
 	t_list* instrucciones_pseudo = lista_instrucciones(memoria_logger, PATH_INSTRUCCIONES);
 
 	//TODO: verificar como inicializar memoria

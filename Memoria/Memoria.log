@@ -1008,3 +1008,174 @@
 [INFO] 02:30:56:504 [Memoria]/(34439:34439): Inicianlizando memoria
 [INFO] 02:30:56:504 [Memoria]/(34439:34439): Cliente conectado a Memoria
 [INFO] 02:30:56:504 [Memoria]/(34439:34439): Se activa el servidor Memoria 
+[INFO] 13:56:50:268 [Memoria]/(39690:39690): Leyendo archivo de instrucciones
+[INFO] 13:56:50:268 [Memoria]/(39690:39690): Leyendo archivo de instrucciones
+[INFO] 13:56:50:269 [Memoria]/(39690:39690): Leyendo archivo de instrucciones
+[INFO] 13:56:50:269 [Memoria]/(39690:39690): Se agrega la siguiente instruccion al listado de pseudocodigo: SUM 
+
+[INFO] 13:56:50:269 [Memoria]/(39690:39690): Leyendo archivo de instrucciones
+[INFO] 13:56:50:269 [Memoria]/(39690:39690): Se agrega la siguiente instruccion al listado de pseudocodigo: SUB 
+
+[INFO] 13:56:50:269 [Memoria]/(39690:39690): Leyendo archivo de instrucciones
+[INFO] 13:56:50:269 [Memoria]/(39690:39690): Se agrega la siguiente instruccion al listado de pseudocodigo: MOV_IN 
+
+[INFO] 13:56:50:270 [Memoria]/(39690:39690): Leyendo archivo de instrucciones
+[INFO] 13:56:50:270 [Memoria]/(39690:39690): Se agrega la siguiente instruccion al listado de pseudocodigo: MOV_OUT 
+
+[INFO] 13:56:50:270 [Memoria]/(39690:39690): Leyendo archivo de instrucciones
+[INFO] 13:56:50:270 [Memoria]/(39690:39690): Se agrega la siguiente instruccion al listado de pseudocodigo: SLEEP 
+
+[INFO] 13:56:50:270 [Memoria]/(39690:39690): Leyendo archivo de instrucciones
+[INFO] 13:56:50:270 [Memoria]/(39690:39690): Se agrega la siguiente instruccion al listado de pseudocodigo: JNZ 
+
+[INFO] 13:56:50:270 [Memoria]/(39690:39690): Leyendo archivo de instrucciones
+[INFO] 13:56:50:270 [Memoria]/(39690:39690): Se agrega la siguiente instruccion al listado de pseudocodigo: WAIT 
+
+[INFO] 13:56:50:270 [Memoria]/(39690:39690): Leyendo archivo de instrucciones
+[INFO] 13:56:50:270 [Memoria]/(39690:39690): Se agrega la siguiente instruccion al listado de pseudocodigo: SIGNAL 
+
+[INFO] 13:56:50:270 [Memoria]/(39690:39690): Leyendo archivo de instrucciones
+[INFO] 13:56:50:270 [Memoria]/(39690:39690): Se agrega la siguiente instruccion al listado de pseudocodigo: F_OPEN 
+
+[INFO] 13:56:50:270 [Memoria]/(39690:39690): Leyendo archivo de instrucciones
+[INFO] 13:56:50:270 [Memoria]/(39690:39690): Se agrega la siguiente instruccion al listado de pseudocodigo: F_TRUNCATE 
+
+[INFO] 13:56:50:270 [Memoria]/(39690:39690): Leyendo archivo de instrucciones
+[INFO] 13:56:50:270 [Memoria]/(39690:39690): Se agrega la siguiente instruccion al listado de pseudocodigo: F_SEEK 
+
+[INFO] 13:56:50:270 [Memoria]/(39690:39690): Leyendo archivo de instrucciones
+[INFO] 13:56:50:270 [Memoria]/(39690:39690): Se agrega la siguiente instruccion al listado de pseudocodigo: F_WRITE 
+
+[INFO] 13:56:50:270 [Memoria]/(39690:39690): Leyendo archivo de instrucciones
+[INFO] 13:56:50:270 [Memoria]/(39690:39690): Se agrega la siguiente instruccion al listado de pseudocodigo: F_READ 
+
+[INFO] 13:56:50:270 [Memoria]/(39690:39690): Leyendo archivo de instrucciones
+[INFO] 13:56:50:271 [Memoria]/(39690:39690): Se agrega la siguiente instruccion al listado de pseudocodigo: F_CLOSE 
+
+[INFO] 13:56:50:271 [Memoria]/(39690:39690): Leyendo archivo de instrucciones
+[INFO] 14:40:24:679 [Memoria]/(42978:42978): Leyendo archivo de instrucciones
+[INFO] 14:40:24:684 [Memoria]/(42978:42978): Leyendo archivo de instrucciones
+[INFO] 14:40:24:684 [Memoria]/(42978:42978): Leyendo archivo de instrucciones
+[INFO] 14:40:24:684 [Memoria]/(42978:42978): Leyendo archivo de instrucciones
+[INFO] 14:40:24:684 [Memoria]/(42978:42978): Leyendo archivo de instrucciones
+[INFO] 14:40:24:684 [Memoria]/(42978:42978): Leyendo archivo de instrucciones
+[INFO] 14:40:24:684 [Memoria]/(42978:42978): Leyendo archivo de instrucciones
+[INFO] 14:40:24:684 [Memoria]/(42978:42978): Leyendo archivo de instrucciones
+[INFO] 14:40:24:684 [Memoria]/(42978:42978): Leyendo archivo de instrucciones
+[INFO] 14:40:24:684 [Memoria]/(42978:42978): Leyendo archivo de instrucciones
+[INFO] 14:40:24:684 [Memoria]/(42978:42978): Leyendo archivo de instrucciones
+[INFO] 14:40:24:684 [Memoria]/(42978:42978): Leyendo archivo de instrucciones
+[INFO] 14:40:24:684 [Memoria]/(42978:42978): Leyendo archivo de instrucciones
+[INFO] 14:40:24:684 [Memoria]/(42978:42978): Leyendo archivo de instrucciones
+[INFO] 14:40:24:684 [Memoria]/(42978:42978): Leyendo archivo de instrucciones
+[INFO] 14:40:24:685 [Memoria]/(42978:42978): Leyendo archivo de instrucciones
+[INFO] 14:40:24:685 [Memoria]/(42978:42978): Leyendo archivo de instrucciones
+[INFO] 14:40:24:685 [Memoria]/(42978:42978): Inicianlizando memoria
+[INFO] 14:47:52:993 [Memoria]/(43461:43461): Leyendo archivo de instrucciones
+[INFO] 14:47:52:993 [Memoria]/(43461:43461): Se agrega la siguiente instruccion al listado de pseudocodigo: 0 
+
+[INFO] 14:47:52:993 [Memoria]/(43461:43461): Leyendo archivo de instrucciones
+[INFO] 14:47:52:993 [Memoria]/(43461:43461): Se agrega la siguiente instruccion al listado de pseudocodigo: 0 
+
+[INFO] 14:47:52:993 [Memoria]/(43461:43461): Leyendo archivo de instrucciones
+[INFO] 14:47:52:993 [Memoria]/(43461:43461): Se agrega la siguiente instruccion al listado de pseudocodigo: 3 
+
+[INFO] 14:47:52:993 [Memoria]/(43461:43461): Leyendo archivo de instrucciones
+[INFO] 14:47:52:993 [Memoria]/(43461:43461): Se agrega la siguiente instruccion al listado de pseudocodigo: 2 
+
+[INFO] 14:47:52:993 [Memoria]/(43461:43461): Leyendo archivo de instrucciones
+[INFO] 14:47:52:993 [Memoria]/(43461:43461): Se agrega la siguiente instruccion al listado de pseudocodigo: 4 
+
+[INFO] 14:47:52:993 [Memoria]/(43461:43461): Leyendo archivo de instrucciones
+[INFO] 14:47:52:993 [Memoria]/(43461:43461): Se agrega la siguiente instruccion al listado de pseudocodigo: 5 
+
+[INFO] 14:47:52:993 [Memoria]/(43461:43461): Leyendo archivo de instrucciones
+[INFO] 14:47:52:993 [Memoria]/(43461:43461): Se agrega la siguiente instruccion al listado de pseudocodigo: 6 
+
+[INFO] 14:47:52:993 [Memoria]/(43461:43461): Leyendo archivo de instrucciones
+[INFO] 14:47:52:993 [Memoria]/(43461:43461): Se agrega la siguiente instruccion al listado de pseudocodigo: 7 
+
+[INFO] 14:47:52:993 [Memoria]/(43461:43461): Leyendo archivo de instrucciones
+[INFO] 14:47:52:993 [Memoria]/(43461:43461): Se agrega la siguiente instruccion al listado de pseudocodigo: 8 
+
+[INFO] 14:47:52:993 [Memoria]/(43461:43461): Leyendo archivo de instrucciones
+[INFO] 14:47:52:993 [Memoria]/(43461:43461): Se agrega la siguiente instruccion al listado de pseudocodigo: 9 
+
+[INFO] 14:47:52:994 [Memoria]/(43461:43461): Leyendo archivo de instrucciones
+[INFO] 14:47:52:994 [Memoria]/(43461:43461): Se agrega la siguiente instruccion al listado de pseudocodigo: 10 
+
+[INFO] 14:47:52:994 [Memoria]/(43461:43461): Leyendo archivo de instrucciones
+[INFO] 14:47:52:994 [Memoria]/(43461:43461): Se agrega la siguiente instruccion al listado de pseudocodigo: 13 
+
+[INFO] 14:47:52:994 [Memoria]/(43461:43461): Leyendo archivo de instrucciones
+[INFO] 14:47:52:994 [Memoria]/(43461:43461): Se agrega la siguiente instruccion al listado de pseudocodigo: 12 
+
+[INFO] 14:47:52:994 [Memoria]/(43461:43461): Leyendo archivo de instrucciones
+[INFO] 14:47:52:994 [Memoria]/(43461:43461): Se agrega la siguiente instruccion al listado de pseudocodigo: 15 
+
+[INFO] 14:47:52:994 [Memoria]/(43461:43461): Leyendo archivo de instrucciones
+[INFO] 14:47:52:994 [Memoria]/(43461:43461): Se agrega la siguiente instruccion al listado de pseudocodigo: 14 
+
+[INFO] 14:47:52:994 [Memoria]/(43461:43461): Leyendo archivo de instrucciones
+[INFO] 14:47:52:994 [Memoria]/(43461:43461): Se agrega la siguiente instruccion al listado de pseudocodigo: 11 
+
+[INFO] 14:47:52:994 [Memoria]/(43461:43461): Leyendo archivo de instrucciones
+[INFO] 14:47:52:994 [Memoria]/(43461:43461): Se agrega la siguiente instruccion al listado de pseudocodigo: 16 
+
+[INFO] 14:47:52:994 [Memoria]/(43461:43461): Inicianlizando memoria
+[INFO] 14:47:52:994 [Memoria]/(43461:43461): Cliente conectado a Memoria
+[INFO] 14:47:52:994 [Memoria]/(43461:43461): Se activa el servidor Memoria 
+[INFO] 14:49:59:902 [Memoria]/(44144:44144): Leyendo archivo de instrucciones
+[INFO] 14:49:59:903 [Memoria]/(44144:44144): Se agrega el numero del codigo del  pseudocodigo: 0 y la instruccion: SET  
+
+[INFO] 14:49:59:903 [Memoria]/(44144:44144): Leyendo archivo de instrucciones
+[INFO] 14:49:59:903 [Memoria]/(44144:44144): Se agrega el numero del codigo del  pseudocodigo: 0 y la instruccion: SET  
+
+[INFO] 14:49:59:903 [Memoria]/(44144:44144): Leyendo archivo de instrucciones
+[INFO] 14:49:59:903 [Memoria]/(44144:44144): Se agrega el numero del codigo del  pseudocodigo: 3 y la instruccion: SUM  
+
+[INFO] 14:49:59:903 [Memoria]/(44144:44144): Leyendo archivo de instrucciones
+[INFO] 14:49:59:903 [Memoria]/(44144:44144): Se agrega el numero del codigo del  pseudocodigo: 2 y la instruccion: SUB  
+
+[INFO] 14:49:59:903 [Memoria]/(44144:44144): Leyendo archivo de instrucciones
+[INFO] 14:49:59:903 [Memoria]/(44144:44144): Se agrega el numero del codigo del  pseudocodigo: 4 y la instruccion: MOV_IN  
+
+[INFO] 14:49:59:903 [Memoria]/(44144:44144): Leyendo archivo de instrucciones
+[INFO] 14:49:59:903 [Memoria]/(44144:44144): Se agrega el numero del codigo del  pseudocodigo: 5 y la instruccion: MOV_OUT  
+
+[INFO] 14:49:59:903 [Memoria]/(44144:44144): Leyendo archivo de instrucciones
+[INFO] 14:49:59:903 [Memoria]/(44144:44144): Se agrega el numero del codigo del  pseudocodigo: 6 y la instruccion: SLEEP  
+
+[INFO] 14:49:59:903 [Memoria]/(44144:44144): Leyendo archivo de instrucciones
+[INFO] 14:49:59:903 [Memoria]/(44144:44144): Se agrega el numero del codigo del  pseudocodigo: 7 y la instruccion: JNZ  
+
+[INFO] 14:49:59:903 [Memoria]/(44144:44144): Leyendo archivo de instrucciones
+[INFO] 14:49:59:903 [Memoria]/(44144:44144): Se agrega el numero del codigo del  pseudocodigo: 8 y la instruccion: WAIT  
+
+[INFO] 14:49:59:903 [Memoria]/(44144:44144): Leyendo archivo de instrucciones
+[INFO] 14:49:59:903 [Memoria]/(44144:44144): Se agrega el numero del codigo del  pseudocodigo: 9 y la instruccion: SIGNAL  
+
+[INFO] 14:49:59:903 [Memoria]/(44144:44144): Leyendo archivo de instrucciones
+[INFO] 14:49:59:903 [Memoria]/(44144:44144): Se agrega el numero del codigo del  pseudocodigo: 10 y la instruccion: F_OPEN  
+
+[INFO] 14:49:59:903 [Memoria]/(44144:44144): Leyendo archivo de instrucciones
+[INFO] 14:49:59:903 [Memoria]/(44144:44144): Se agrega el numero del codigo del  pseudocodigo: 13 y la instruccion: F_TRUNCATE  
+
+[INFO] 14:49:59:904 [Memoria]/(44144:44144): Leyendo archivo de instrucciones
+[INFO] 14:49:59:904 [Memoria]/(44144:44144): Se agrega el numero del codigo del  pseudocodigo: 12 y la instruccion: F_SEEK  
+
+[INFO] 14:49:59:904 [Memoria]/(44144:44144): Leyendo archivo de instrucciones
+[INFO] 14:49:59:904 [Memoria]/(44144:44144): Se agrega el numero del codigo del  pseudocodigo: 15 y la instruccion: F_WRITE  
+
+[INFO] 14:49:59:904 [Memoria]/(44144:44144): Leyendo archivo de instrucciones
+[INFO] 14:49:59:904 [Memoria]/(44144:44144): Se agrega el numero del codigo del  pseudocodigo: 14 y la instruccion: F_READ  
+
+[INFO] 14:49:59:904 [Memoria]/(44144:44144): Leyendo archivo de instrucciones
+[INFO] 14:49:59:904 [Memoria]/(44144:44144): Se agrega el numero del codigo del  pseudocodigo: 11 y la instruccion: F_CLOSE  
+
+[INFO] 14:49:59:904 [Memoria]/(44144:44144): Leyendo archivo de instrucciones
+[INFO] 14:49:59:904 [Memoria]/(44144:44144): Se agrega el numero del codigo del  pseudocodigo: 16 y la instruccion: EXIT  
+
+[INFO] 14:49:59:904 [Memoria]/(44144:44144): Inicianlizando memoria
+[INFO] 14:49:59:904 [Memoria]/(44144:44144): Cliente conectado a Memoria
+[INFO] 14:49:59:904 [Memoria]/(44144:44144): Se activa el servidor Memoria 
