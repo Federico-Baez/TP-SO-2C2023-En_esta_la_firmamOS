@@ -286,11 +286,17 @@ void atender_handshake_respuesta(t_buffer* myBuffer, t_log* logger){
 	free(string);
 }
 
-void enviar_handshake(int conexion, modulo_code modulo){
-	t_paquete* paquete = crear_super_paquete(HANDSHAKE);
-	cargar_int_al_super_paquete(paquete, modulo);
-	enviar_paquete(paquete, conexion);
-	eliminar_paquete(paquete);
+void enviar_handshake(int conexion){
+	//t_paquete* paquete = crear_super_paquete(HANDSHAKE);
+	//cargar_int_al_super_paquete(paquete, modulo);
+	//enviar_paquete(paquete, conexion);
+	//eliminar_paquete(paquete);
+
+	void* coso_a_enviar = malloc(sizeof(int));
+	int saludar = HANDSHAKE;
+	memcpy(coso_a_enviar, &saludar, sizeof(int));
+	send(conexion, coso_a_enviar, sizeof(int),0);
+	free(coso_a_enviar);
 }
 
 int recibir_handshake(int conexion){

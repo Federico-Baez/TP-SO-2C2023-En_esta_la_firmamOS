@@ -62,7 +62,7 @@ typedef enum{
 	//-------
 	MENSAJES_POR_CONSOLA,
 	PRUEBAS,
-
+	IDENTIFICACION
 }op_code;
 
 //typedef enum{
@@ -135,7 +135,7 @@ char* recibir_string_del_buffer(t_buffer* coso);
 void* recibir_choclo_del_buffer(t_buffer* coso);
 
 t_buffer* recibiendo_super_paquete(int conexion);
-void enviar_handshake(int conexion, modulo_code modulo);
+void enviar_handshake(int conexion);
 int recibir_handshake(int conexion);
 
 #endif /* INCLUDE_PROTOCOLO_H_ */

@@ -127,158 +127,34 @@ void finalizar_memoria(){
 
 void atender_mensajes_kernel(t_buffer* buffer){
 	char* mensaje = recibir_string_del_buffer(buffer);
-	log_info(memoria_logger, "[[[%s]]]", mensaje);
+	log_info(memoria_logger, "[KERNEL]> %s", mensaje);
 	free(mensaje);
-}
-
-void atender_al_kernel(int* conexion){
-	fd_kernel = *conexion;
-	int control_key = 1;
-	log_info(memoria_logger, "!!!!!! [%d][KERNEL] CONECTADO !!!!!!", fd_kernel);
-	while(control_key){
-		int cod_op = recibir_operacion(fd_kernel);
-		t_buffer* myBuffer;
-		//log_info(memoria_logger, "Se recibio algo de KERNEL");
-
-		switch (cod_op) {
-		case INICIAR_ESTRUCTURA_KM:
-			myBuffer = recibiendo_super_paquete(fd_kernel);
-			//
-			break;
-		case LIBERAR_ESTRUCTURA_KM:
-			myBuffer = recibiendo_super_paquete(fd_kernel);
-			//
-			break;
-		case MENSAJES_POR_CONSOLA:
-			myBuffer = recibiendo_super_paquete(fd_kernel);
-			atender_mensajes_kernel(myBuffer);
-			break;
-		case -1:
-			log_error(memoria_logger, "[DESCONEXION]: KERNEL");
-			control_key = 0;
-			break;
-		default:
-			log_warning(memoria_logger, "Operacion desconocida");
-			free(myBuffer);
-			break;
-		}
-	}
-	log_info(memoria_logger, "Saliendo del hilo de MEMORIA - KERNEL");
-}
-
-void atender_al_filesystem(int* conexion){
-	fd_filesystem = *conexion;
-	int control_key = 1;
-	log_info(memoria_logger, "!!!!!! [FILESYSTEM] CONECTADO !!!!!!");
-	while(control_key){
-		int cod_op = recibir_operacion(fd_filesystem);
-		t_buffer* myBuffer;
-		//log_info(memoria_logger, "Se recibio algo de FILESYSTEM");
-
-		switch (cod_op) {
-		case PETICION_ASIGNACION_BLOQUE_SWAP_FM:
-			myBuffer = recibiendo_super_paquete(fd_filesystem);
-			//
-			break;
-		case LIBERAR_PAGINAS_FM:
-			myBuffer = recibiendo_super_paquete(fd_filesystem);
-			//
-			break;
-		case PETICION_PAGE_FAULT_FM:
-			myBuffer = recibiendo_super_paquete(fd_filesystem);
-			//
-			break;
-		case CARGAR_INFO_DE_LECTURA_FM:
-			myBuffer = recibiendo_super_paquete(fd_filesystem);
-			//
-			break;
-		case GUARDAR_INFO_FM:
-			myBuffer = recibiendo_super_paquete(fd_filesystem);
-			//
-			break;
-		case MENSAJES_POR_CONSOLA:
-			myBuffer = recibiendo_super_paquete(fd_filesystem);
-			//
-			break;
-		case -1:
-			log_error(memoria_logger, "[DESCONEXION]: FILESYSTEM");
-			control_key = 0;
-			break;
-		default:
-			log_warning(memoria_logger, "Operacion desconocida");
-			free(myBuffer);
-			break;
-		}
-	}
-	log_info(memoria_logger, "Saliendo del hilo de MEMORIA - FILESYSTEM");
-}
-
-void atender_al_cpu(int* conexion){
-	fd_cpu = *conexion;
-	int control_key = 1;
-	log_info(memoria_logger, "!!!!!! [CPU] CONECTADO !!!!!!");
-	while(control_key){
-		int cod_op = recibir_operacion(fd_cpu);
-		t_buffer* myBuffer;
-		//log_info(memoria_logger, "Se recibio algo de CPU");
-
-		switch (cod_op) {
-		case INICIAR_ESTRUCTURA_KM:
-			myBuffer = recibiendo_super_paquete(fd_cpu);
-			//
-			break;
-		case LIBERAR_ESTRUCTURA_KM:
-			myBuffer = recibiendo_super_paquete(fd_cpu);
-			//
-			break;
-		case MENSAJES_POR_CONSOLA:
-			myBuffer = recibiendo_super_paquete(fd_cpu);
-			//
-			break;
-		case -1:
-			log_error(memoria_logger, "[DESCONEXION]: CPU");
-			control_key = 0;
-			break;
-		default:
-			log_warning(memoria_logger, "Operacion desconocida");
-			free(myBuffer);
-			break;
-		}
-	}
-	log_info(memoria_logger, "Saliendo del hilo de MEMORIA - CPU");
 }
 
 /*----------------TODO COMUNICACION SOCKETS --------*/
 
-void identificar_cliente(void *void_args){
-	int* args = (int*) void_args;
-	//int cliente_socket = *args;
-
-	int code_op = recibir_operacion(*args);
-	if(code_op != HANDSHAKE){
-		printf("\nEL PRIMER SALUDO TENDRIA QUE SER UN HANDSHAKE\n");
-		exit(EXIT_FAILURE);
-	}
-	int modulo = recibir_handshake(*args);
-	switch (modulo) {
+void identificar_modulo(t_buffer* unBuffer, int conexion){
+	int modulo_id = recibir_int_del_buffer(unBuffer);
+	switch (modulo_id) {
 		case KERNEL:
-			enviar_handshake(*args, MEMORIA);
-			atender_al_kernel(args);
-			break;
-		case FILESYSTEM:
-			enviar_handshake(*args, MEMORIA);
-			atender_al_filesystem(args);
+			fd_kernel = conexion;
+			log_info(memoria_logger, "!!!!! KERNEL CONECTADO !!!!!");
 			break;
 		case CPU:
-			enviar_handshake(*args, MEMORIA);
-			atender_al_cpu(args);
+			fd_cpu = conexion;
+			log_info(memoria_logger, "!!!!! CPU CONECTADO !!!!!");
+			break;
+		case FILESYSTEM:
+			fd_filesystem = conexion;
+			log_info(memoria_logger, "!!!!! FILESYSTEM CONECTADO !!!!!");
 			break;
 		default:
+			log_error(memoria_logger, "[%d]Error al identificar modulo",modulo_id);
+			exit(EXIT_FAILURE);
 			break;
 	}
 }
 
-/*
 static void procesar_conexion(void *void_args){
 	int* args = (int*) void_args;
 	int cliente_socket = *args;
@@ -289,13 +165,11 @@ static void procesar_conexion(void *void_args){
 //	int size;
 //	t_list* paquete_recibido;
 	//op_code cod_op;
-	int cod_op;
-	while(cliente_socket != -1){
-		if(recv(cliente_socket,&cod_op,sizeof(cod_op),MSG_WAITALL)!= sizeof(cod_op)){
-
-			log_info(memoria_logger, "El cliente se desconecto del servidor %s .",server_name);
-			return;
-		}
+	int control_key = 1;
+	printf("Procesando conexion\n");
+	while(control_key){
+		int cod_op = recibir_operacion(cliente_socket);
+		t_buffer* unBuffer;
 		switch(cod_op){
 		case MENSAJE:
 			recibir_mensaje(memoria_logger, cliente_socket);
@@ -310,47 +184,71 @@ static void procesar_conexion(void *void_args){
 
 			break;
 		case ADMINISTRAR_PAGINA_MEMORIA:
-			log_info(memoria_logger, "Se crea la pagina en memoria");
-			int valor_m, valor2_m;
-			char* otro_dato;
-			char* dato_m;
-			t_buffer* myBuffer = malloc(sizeof(t_buffer));
-			int size;
-			myBuffer->stream = recibir_buffer(&size, cliente_socket);
-			myBuffer->size = size;
 
-			valor_m = recibir_int_del_buffer(myBuffer);
-			otro_dato = recibir_string_del_buffer(myBuffer);
-			dato_m = (char*)recibir_choclo_del_buffer(myBuffer);
-			valor2_m = recibir_int_del_buffer(myBuffer);
-
-			log_info(memoria_logger, "Recibido exitoso:%d | %s | %s | %d", valor_m, otro_dato, dato_m, valor2_m);
-
-			free(myBuffer->stream);
-			free(myBuffer);
 			break;
+		case IDENTIFICACION:
+			unBuffer = recibiendo_super_paquete(cliente_socket);
+			identificar_modulo(unBuffer, cliente_socket);
+			break;
+		//======= KERNEL ===========================
+		case INICIAR_ESTRUCTURA_KM:
+			unBuffer = recibiendo_super_paquete(fd_kernel);
+			//
+			break;
+		case LIBERAR_ESTRUCTURA_KM:
+			unBuffer = recibiendo_super_paquete(fd_kernel);
+			//
+			break;
+		case MENSAJES_POR_CONSOLA:
+			unBuffer = recibiendo_super_paquete(fd_kernel);
+			atender_mensajes_kernel(unBuffer);
+			break;
+		//======= CPU ===========================
+		case PETICION_INFO_RELEVANTE_CM:
+			unBuffer = recibiendo_super_paquete(fd_cpu);
+			//
+			break;
+		case PETICION_DE_INSTRUCCIONES_CM:
+			unBuffer = recibiendo_super_paquete(fd_cpu);
+			//
+			break;
+		case PETICION_DE_EJECUCION_CM:
+			unBuffer = recibiendo_super_paquete(fd_cpu);
+			//
+			break;
+		case CONSULTA_DE_PAGINA_CM:
+			unBuffer = recibiendo_super_paquete(fd_cpu);
+			//
+			break;
+		//======= FILESYSTEM ===========================
+		case PETICION_ASIGNACION_BLOQUE_SWAP_FM:
+			unBuffer = recibiendo_super_paquete(fd_filesystem);
+			//
+			break;
+		case LIBERAR_PAGINAS_FM:
+			unBuffer = recibiendo_super_paquete(fd_filesystem);
+			//
+			break;
+		case PETICION_PAGE_FAULT_FM:
+			unBuffer = recibiendo_super_paquete(fd_filesystem);
+			//
+			break;
+		case CARGAR_INFO_DE_LECTURA_FM:
+			unBuffer = recibiendo_super_paquete(fd_filesystem);
+			//
+			break;
+		case GUARDAR_INFO_FM:
+			unBuffer = recibiendo_super_paquete(fd_filesystem);
+			//
+			break;
+		//==================================================
 		case PRUEBAS:
 
-//			myBuffer->stream = recibir_buffer(&size, fd_kernel);
-//			myBuffer->size = size;
-//
-//			valor1 = recibir_int_del_buffer(myBuffer);
-//			myString = recibir_string_del_buffer(myBuffer);
-//			unChoclo = (char*)recibir_choclo_del_buffer(myBuffer);
-//			valor2 = recibir_int_del_buffer(myBuffer);
-//
-//			log_info(memoria_logger, "Recibido exitoso:%d | %s | %s | %d", valor1, myString, unChoclo, valor2);
-//
-//			free(myBuffer->stream);
-//			free(myBuffer);
-
 			break;
-		case HANDSHAKE:
 
-
-			break;
 		case -1:
-			log_error(memoria_logger, "el cliente se desconecto. Terminando servidor");
+			control_key = 0;
+			log_error(memoria_logger, "CLIENTE DESCONCETADO");
 			break;
 		default:
 			log_error(memoria_logger, "Operacion desconocida. No quieras meter la pata");
@@ -359,11 +257,39 @@ static void procesar_conexion(void *void_args){
 
 	}
 }
-*/
+
 
 void iterator(int *value) {
 	log_info(memoria_logger, "%d", *value);
 }
+
+void saludar_cliente(void *void_args){
+	int* conexion = (int*) void_args;
+	//int cliente_socket = *args;
+	printf("\nGestionando saludo\n");
+
+	int code_op = recibir_operacion(*conexion);
+	switch (code_op) {
+		case HANDSHAKE:
+			printf("Se detecto HANDSHAKE\n");
+			void* coso_a_enviar = malloc(sizeof(int));
+			int respuesta = 1;
+			memcpy(coso_a_enviar, &respuesta, sizeof(int));
+			send(*conexion, coso_a_enviar, sizeof(int),0);
+			free(coso_a_enviar);
+
+			printf("Rpta enviada\n");
+			procesar_conexion(conexion);
+			break;
+		case -1:
+			log_error(memoria_logger, "Deseconexion en HANDSHAKE");
+			break;
+		default:
+			log_error(memoria_logger, "ERROR EN HANDSHAKE: Operacion desconocida");
+			break;
+	}
+}
+
 
 int server_escucha(){
 	server_name = "Memoria";
@@ -373,7 +299,7 @@ int server_escucha(){
 		int *args = malloc(sizeof(int));
 		//args = &cliente_socket;
 		*args = cliente_socket;
-		pthread_create(&hilo_cliente, NULL, (void*) identificar_cliente, (void*)args);
+		pthread_create(&hilo_cliente, NULL, (void*) saludar_cliente, (void*)args);
 		log_info(memoria_logger, "[THREAD] Creo hilo para atender");
 		pthread_detach(hilo_cliente);
 		return 1;

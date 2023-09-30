@@ -87,7 +87,9 @@ void finalizar_memoria();
 
 /*----------------COMUNICACION SOCKETS --------*/
 
-void identificar_cliente(void *void_args);
+void saludar_cliente(void *void_args);
+void identificar_modulo(t_buffer* unBuffer, int conexion);
+void atender_mensajes_kernel(t_buffer* buffer);
 
 //static void  procesar_conexion(void *void_args);
 void inicializar_memoria();
@@ -100,6 +102,6 @@ int server_escucha();
 tabla_paginas* crear_tabla_paginas(int pid);
 Marco* crear_marco(int base, bool presente);
 
-void atender_mensajes_kernel(t_buffer* buffer);
+
 
 #endif /* MEMORIA_H_ */

@@ -18,72 +18,33 @@ int main(int argc, char** argv) {
 	leer_config(kernel_config);
 
 //	pthread_t hilo_cpu_dispatch, hilo_cpu_interrupt, hilo_memoria, hilo_filesystem;
-	pthread_t hilo_memoria, hilo_filesystem;
+	pthread_t hilo_memoria;
+	pthread_t hilo_consola;
 
 	//pruebo con conectarme a cpu
 //	fd_cpu_dispatcher = crear_conexion(IP_CPU, PUERTO_CPU_DISPATCH);
 //	fd_cpu_interrupt = crear_conexion(IP_CPU, PUERTO_CPU_INTERRUPT);
-	fd_filesystem = crear_conexion(IP_FILESYSTEM, PUERTO_FILESYSTEM);
+	//fd_filesystem = crear_conexion(IP_FILESYSTEM, PUERTO_FILESYSTEM);
 	fd_memoria = crear_conexion(IP_MEMORIA, PUERTO_MEMORIA);
 
-	pthread_create(&hilo_memoria, NULL, (void*)atender_memoria, NULL);
-	pthread_detach(hilo_memoria);
-	pthread_create(&hilo_filesystem, NULL, (void*)atender_filesystem, NULL);
-	pthread_detach(hilo_filesystem);
+
+//	pthread_create(&hilo_filesystem, NULL, (void*)atender_filesystem, NULL);
+//	pthread_detach(hilo_filesystem);
 //	pthread_create(&hilo_cpu_dispatch, NULL, (void*)atender_cpu_dispatch, &fd_cpu_dispatcher);
 //	pthread_detach(hilo_cpu_dispatch);
 //	pthread_create(&hilo_cpu_interrupt, NULL, (void*)atender_cpu_interrupt, &fd_cpu_interrupt);
 //	pthread_detach(hilo_cpu_interrupt);
 
-	leer_consola();
+	pthread_create(&hilo_consola, NULL, (void*)leer_consola, NULL);
+	pthread_detach(hilo_consola);
+	//pthread_join(hilo_consola, NULL);
 
-
-//	t_paquete* paquete = crear_paquete();
-//	int numero = 7321;
-//	agregar_a_paquete(paquete, &numero, sizeof(int));
-//	enviar_paquete(paquete, fd_memoria);
-//	eliminar_paquete(paquete);
-
-	/*
-	//Pruebas de nuevas funcionalidades practicas de serializacion
-	op_code nuermo_de_operacion = PRUEBAS;
-	op_code administrar_pagina = ADMINISTRAR_PAGINA_MEMORIA;
-	t_paquete* paquete2 = crear_super_paquete(nuermo_de_operacion);
-	t_paquete* paquete_m = crear_super_paquete(administrar_pagina);
-
-	int valor1 = 25;
-	int valor2 = 32;
-	char* myString = "Ever Lizarraga";
-	char* unchoclo = "Esto es un choclo";
-
-
-	log_info(kernel_logger, "int: %d | char*: %s | char*: %s | int: %d ", valor1, myString, unchoclo, valor2);
+	pthread_create(&hilo_memoria, NULL, (void*)atender_memoria, NULL);
+	//pthread_detach(hilo_memoria);
+	pthread_join(hilo_memoria, NULL);
 
 
 
-
-	cargar_int_al_super_paquete(paquete2, valor1);
-	cargar_string_al_super_paquete(paquete2, myString);
-	cargar_choclo_al_super_paquete(paquete2, unchoclo, sizeof(char)*(strlen(unchoclo)+1));
-	cargar_int_al_super_paquete(paquete2, valor2);
-	enviar_paquete(paquete2, fd_filesystem);
-
-	int valor_m = 12;
-	int valor2_m = 24;
-	char* otro_dato = "otro char*";
-	char* dato_m = "Soy un char*";
-	log_info(kernel_logger, "int: %d | char*: %s | char*: %s | int: %d ", valor_m, otro_dato, dato_m, valor2_m);
-	cargar_int_al_super_paquete(paquete_m, valor_m);
-	cargar_string_al_super_paquete(paquete_m, otro_dato);
-	cargar_choclo_al_super_paquete(paquete_m, dato_m, sizeof(char)*(strlen(dato_m)+1));
-	cargar_int_al_super_paquete(paquete_m, valor2_m);
-	enviar_paquete(paquete_m, fd_memoria);
-
-
-
-	eliminar_paquete(paquete2);
-	eliminar_paquete(paquete_m);
-	*/
 	finalizar_kernel();
 
 	return EXIT_SUCCESS;
@@ -164,35 +125,41 @@ void atender_esta_prueba(t_buffer* myBuffer){
 	//
 }
 
+void gestionar_handshake(int conexion, modulo_code modulo){
+	enviar_handshake(conexion);
+	int respuesta_handshake = recibir_operacion(conexion);
+	if(respuesta_handshake != 1){
+		log_error(kernel_logger, "Error en handshake con Memeoria");
+	}
+	t_paquete* paquete = crear_super_paquete(IDENTIFICACION);
+	int modulo_id_ = modulo;
+	cargar_int_al_super_paquete(paquete, modulo_id_);
+	enviar_paquete(paquete, conexion);
+	eliminar_paquete(paquete);
 
+}
 
 void atender_memoria(){
-	enviar_handshake(fd_memoria, KERNEL);
-	int recibir_codigo_op = recibir_operacion(fd_memoria);
-	int respuesta_handshake = recibir_handshake(fd_memoria);
-	if(recibir_codigo_op != HANDSHAKE || respuesta_handshake != MEMORIA){
-		log_error(kernel_logger, "ERROR EN HANDSHAKE CON MEMORIA");
-		exit(EXIT_FAILURE);
-	}
+	gestionar_handshake(fd_memoria, KERNEL);
 	log_info(kernel_logger, "HANDSHAKE CON MEMORIA [EXITOSO]");
 
 	int control_key = 1;
 	while(control_key){
 		int cod_op = recibir_operacion(fd_memoria);
-		t_buffer* myBuffer;
+		t_buffer* unBuffer;
 		log_info(kernel_logger, "Se recibio algo de MEMORIA");
 
 		switch (cod_op) {
 		case INICIAR_ESTRUCTURA_KM:
-			myBuffer = recibiendo_super_paquete(fd_memoria);
+			unBuffer = recibiendo_super_paquete(fd_memoria);
 			//
 			break;
 		case LIBERAR_ESTRUCTURA_KM:
-			myBuffer = recibiendo_super_paquete(fd_memoria);
+			unBuffer = recibiendo_super_paquete(fd_memoria);
 			//
 			break;
 		case PRUEBAS:
-			myBuffer = recibiendo_super_paquete(fd_memoria);
+			unBuffer = recibiendo_super_paquete(fd_memoria);
 			//atender_esta_prueba(myBuffer);
 			break;
 		case -1:
@@ -201,14 +168,14 @@ void atender_memoria(){
 			break;
 		default:
 			log_warning(kernel_logger, "Operacion desconocida");
-			free(myBuffer);
+			free(unBuffer);
 			break;
 		}
 	}
 
 }
 void atender_filesystem(){
-	enviar_handshake(fd_filesystem, KERNEL);
+	//enviar_handshake(fd_filesystem, KERNEL);
 	int recibir_codigo_op = recibir_operacion(fd_filesystem);
 	int respuesta_handshake = recibir_handshake(fd_filesystem);
 	if(recibir_codigo_op != HANDSHAKE || respuesta_handshake != FILESYSTEM){
@@ -220,16 +187,16 @@ void atender_filesystem(){
 	int control_key = 1;
 	while(control_key){
 		int cod_op = recibir_operacion(fd_filesystem);
-		t_buffer* myBuffer;
+		t_buffer* unBuffer;
 		log_info(kernel_logger, "Se recibio algo de FILESYSTEM");
 
 		switch (cod_op) {
 		case SYSCALL_KF:
-			myBuffer = recibiendo_super_paquete(fd_filesystem);
+			unBuffer = recibiendo_super_paquete(fd_filesystem);
 			//
 			break;
 		case PRUEBAS:
-			myBuffer = recibiendo_super_paquete(fd_filesystem);
+			unBuffer = recibiendo_super_paquete(fd_filesystem);
 			//
 			break;
 		case -1:
@@ -238,7 +205,7 @@ void atender_filesystem(){
 			break;
 		default:
 			log_warning(kernel_logger, "Operacion desconocida");
-			free(myBuffer);
+			free(unBuffer);
 			break;
 		}
 	}
