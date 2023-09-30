@@ -10,6 +10,7 @@
 #include <protocolo.h>
 #include <stdlib.h>
 
+#include <unistd.h>
 
 
 typedef struct{
@@ -86,14 +87,19 @@ void finalizar_memoria();
 
 /*----------------COMUNICACION SOCKETS --------*/
 
-static void  procesar_conexion(void *void_args);
+void identificar_cliente(void *void_args);
+
+//static void  procesar_conexion(void *void_args);
 void inicializar_memoria();
 void iterator(int *value);
 void leer_log();
 int server_escucha();
 
+
 /************TODO INICIAR LA TABLA DE PAGINAS***************/
 tabla_paginas* crear_tabla_paginas(int pid);
 Marco* crear_marco(int base, bool presente);
+
+void atender_mensajes_kernel(t_buffer* buffer);
 
 #endif /* MEMORIA_H_ */

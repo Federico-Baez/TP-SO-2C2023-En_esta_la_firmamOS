@@ -58,10 +58,10 @@ void enviar_los_handshake(void);
 void atender_esta_prueba(t_buffer* unBuffer);
 
 
-void atender_memoria(int* conexion);
-void atender_filesystem(int* conexion);
-void atender_cpu_dispatch(int* conexion);
-void atender_cpu_interrupt(int* conexion);
+void atender_memoria();
+void atender_filesystem();
+void atender_cpu_dispatch();
+void atender_cpu_interrupt();
 
 
 

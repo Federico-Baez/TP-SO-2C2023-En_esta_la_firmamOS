@@ -270,7 +270,7 @@ void* recibir_choclo_del_buffer(t_buffer* coso){
 	return choclo;
 }
 
-t_buffer* recibiendo_el_contenido(int conexion){
+t_buffer* recibiendo_super_paquete(int conexion){
 	t_buffer* unBuffer = malloc(sizeof(t_buffer));
 	int size;
 	unBuffer->stream = recibir_buffer(&size, conexion);
@@ -284,5 +284,20 @@ void atender_handshake_respuesta(t_buffer* myBuffer, t_log* logger){
 	free(myBuffer->stream);
 	free(myBuffer);
 	free(string);
+}
+
+void enviar_handshake(int conexion, modulo_code modulo){
+	t_paquete* paquete = crear_super_paquete(HANDSHAKE);
+	cargar_int_al_super_paquete(paquete, modulo);
+	enviar_paquete(paquete, conexion);
+	eliminar_paquete(paquete);
+}
+
+int recibir_handshake(int conexion){
+	t_buffer* buffer = recibiendo_super_paquete(conexion);
+	int modulo = recibir_int_del_buffer(buffer);
+	free(buffer->stream);
+	free(buffer);
+	return modulo;
 }
 

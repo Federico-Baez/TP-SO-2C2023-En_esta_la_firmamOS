@@ -37,4 +37,7 @@ int RETARDO_ACCESO_FAT;
 void leer_config(t_config* config);
 void iterator(char* value);
 
+void atender_kernel(void);
+void atender_mensajes_kernel(t_buffer* buffer);
+
 #endif /* CPU_H_ */

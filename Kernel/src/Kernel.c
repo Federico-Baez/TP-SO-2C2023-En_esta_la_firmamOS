@@ -17,25 +17,23 @@ int main(int argc, char** argv) {
 
 	leer_config(kernel_config);
 
-	pthread_t hilo_cpu_dispatch, hilo_cpu_interrupt, hilo_memoria, hilo_filesystem;
+//	pthread_t hilo_cpu_dispatch, hilo_cpu_interrupt, hilo_memoria, hilo_filesystem;
+	pthread_t hilo_memoria, hilo_filesystem;
 
 	//pruebo con conectarme a cpu
-	fd_cpu_dispatcher = crear_conexion(IP_CPU, PUERTO_CPU_DISPATCH);
-	fd_cpu_interrupt = crear_conexion(IP_CPU, PUERTO_CPU_INTERRUPT);
+//	fd_cpu_dispatcher = crear_conexion(IP_CPU, PUERTO_CPU_DISPATCH);
+//	fd_cpu_interrupt = crear_conexion(IP_CPU, PUERTO_CPU_INTERRUPT);
 	fd_filesystem = crear_conexion(IP_FILESYSTEM, PUERTO_FILESYSTEM);
 	fd_memoria = crear_conexion(IP_MEMORIA, PUERTO_MEMORIA);
 
-	pthread_create(&hilo_memoria, NULL, (void*)atender_memoria, &fd_memoria);
+	pthread_create(&hilo_memoria, NULL, (void*)atender_memoria, NULL);
 	pthread_detach(hilo_memoria);
-	pthread_create(&hilo_filesystem, NULL, (void*)atender_filesystem, &fd_filesystem);
+	pthread_create(&hilo_filesystem, NULL, (void*)atender_filesystem, NULL);
 	pthread_detach(hilo_filesystem);
-	pthread_create(&hilo_cpu_dispatch, NULL, (void*)atender_cpu_dispatch, &fd_cpu_dispatcher);
-	pthread_detach(hilo_cpu_dispatch);
-	pthread_create(&hilo_cpu_interrupt, NULL, (void*)atender_cpu_interrupt, &fd_cpu_interrupt);
-	pthread_detach(hilo_cpu_interrupt);
-
-	//HANDSHAKE
-	enviar_los_handshake();
+//	pthread_create(&hilo_cpu_dispatch, NULL, (void*)atender_cpu_dispatch, &fd_cpu_dispatcher);
+//	pthread_detach(hilo_cpu_dispatch);
+//	pthread_create(&hilo_cpu_interrupt, NULL, (void*)atender_cpu_interrupt, &fd_cpu_interrupt);
+//	pthread_detach(hilo_cpu_interrupt);
 
 	leer_consola();
 
@@ -114,7 +112,13 @@ void leer_consola(){
 	leido = readline("> ");
 
 	while(strcmp(leido,"\0") != 0){
-		log_info(kernel_logger, "%s [%d]",leido, (int)strlen(leido));
+		//log_info(kernel_logger, "%s [%d]",leido, (int)strlen(leido));
+		t_paquete* paquete = crear_super_paquete(MENSAJES_POR_CONSOLA);
+		cargar_string_al_super_paquete(paquete, leido);
+		enviar_paquete(paquete, fd_memoria);
+		enviar_paquete(paquete, fd_filesystem);
+
+		eliminar_paquete(paquete);
 		free(leido);
 		leido = readline("> ");
 	}
@@ -147,13 +151,13 @@ void asignar_planificador_cp(char* algoritmo_planificacion){
 }
 
 void enviar_los_handshake(){
-	t_paquete* paquete_handshake = crear_super_paquete(HANDSHAKE);
-	cargar_string_al_super_paquete(paquete_handshake, "KERNEL");
-	enviar_paquete(paquete_handshake, fd_memoria);
-	enviar_paquete(paquete_handshake, fd_filesystem);
-	enviar_paquete(paquete_handshake, fd_cpu_dispatcher);
-	enviar_paquete(paquete_handshake, fd_cpu_interrupt);
-	eliminar_paquete(paquete_handshake);
+//	t_paquete* paquete_handshake = crear_super_paquete(HANDSHAKE);
+//	cargar_string_al_super_paquete(paquete_handshake, "KERNEL");
+//	enviar_paquete(paquete_handshake, fd_memoria);
+//	enviar_paquete(paquete_handshake, fd_filesystem);
+//	enviar_paquete(paquete_handshake, fd_cpu_dispatcher);
+//	enviar_paquete(paquete_handshake, fd_cpu_interrupt);
+//	eliminar_paquete(paquete_handshake);
 }
 
 void atender_esta_prueba(t_buffer* myBuffer){
@@ -162,29 +166,38 @@ void atender_esta_prueba(t_buffer* myBuffer){
 
 
 
-void atender_memoria(int* conexion){
+void atender_memoria(){
+	enviar_handshake(fd_memoria, KERNEL);
+	int recibir_codigo_op = recibir_operacion(fd_memoria);
+	int respuesta_handshake = recibir_handshake(fd_memoria);
+	if(recibir_codigo_op != HANDSHAKE || respuesta_handshake != MEMORIA){
+		log_error(kernel_logger, "ERROR EN HANDSHAKE CON MEMORIA");
+		exit(EXIT_FAILURE);
+	}
+	log_info(kernel_logger, "HANDSHAKE CON MEMORIA [EXITOSO]");
 
-	while(1){
-		int cod_op = recibir_operacion(*conexion);
+	int control_key = 1;
+	while(control_key){
+		int cod_op = recibir_operacion(fd_memoria);
 		t_buffer* myBuffer;
-		log_info(kernel_logger, "Se recibio algo de memoria");
+		log_info(kernel_logger, "Se recibio algo de MEMORIA");
 
 		switch (cod_op) {
-		case HANDSHAKE:
-			myBuffer = recibiendo_el_contenido(*conexion);
-			atender_handshake_respuesta(myBuffer, kernel_logger);
-			break;
 		case INICIAR_ESTRUCTURA_KM:
-			myBuffer = recibiendo_el_contenido(*conexion);
+			myBuffer = recibiendo_super_paquete(fd_memoria);
 			//
 			break;
 		case LIBERAR_ESTRUCTURA_KM:
-			myBuffer = recibiendo_el_contenido(*conexion);
+			myBuffer = recibiendo_super_paquete(fd_memoria);
 			//
 			break;
 		case PRUEBAS:
-			myBuffer = recibiendo_el_contenido(*conexion);
-			atender_esta_prueba(myBuffer);
+			myBuffer = recibiendo_super_paquete(fd_memoria);
+			//atender_esta_prueba(myBuffer);
+			break;
+		case -1:
+			log_error(kernel_logger, "[DESCONEXION]: MEMORIA");
+			control_key = 0;
 			break;
 		default:
 			log_warning(kernel_logger, "Operacion desconocida");
@@ -194,13 +207,46 @@ void atender_memoria(int* conexion){
 	}
 
 }
-void atender_filesystem(int* conexion){
+void atender_filesystem(){
+	enviar_handshake(fd_filesystem, KERNEL);
+	int recibir_codigo_op = recibir_operacion(fd_filesystem);
+	int respuesta_handshake = recibir_handshake(fd_filesystem);
+	if(recibir_codigo_op != HANDSHAKE || respuesta_handshake != FILESYSTEM){
+		log_error(kernel_logger, "ERROR EN HANDSHAKE CON FILESYSTEM");
+		exit(EXIT_FAILURE);
+	}
+	log_info(kernel_logger, "HANDSHAKE CON FILESYSTEM [EXITOSO]");
+
+	int control_key = 1;
+	while(control_key){
+		int cod_op = recibir_operacion(fd_filesystem);
+		t_buffer* myBuffer;
+		log_info(kernel_logger, "Se recibio algo de FILESYSTEM");
+
+		switch (cod_op) {
+		case SYSCALL_KF:
+			myBuffer = recibiendo_super_paquete(fd_filesystem);
+			//
+			break;
+		case PRUEBAS:
+			myBuffer = recibiendo_super_paquete(fd_filesystem);
+			//
+			break;
+		case -1:
+			log_error(kernel_logger, "[DESCONEXION]: FILESYSTEM");
+			control_key = 0;
+			break;
+		default:
+			log_warning(kernel_logger, "Operacion desconocida");
+			free(myBuffer);
+			break;
+		}
+	}
+}
+void atender_cpu_dispatch(){
 
 }
-void atender_cpu_dispatch(int* conexion){
-
-}
-void atender_cpu_interrupt(int* conexion){
+void atender_cpu_interrupt(){
 
 }
 

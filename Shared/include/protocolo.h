@@ -17,6 +17,14 @@ typedef enum {
 	VOID
 }op_tipo_dato;
 */
+
+typedef enum{
+	MEMORIA,
+	FILESYSTEM,
+	CPU,
+	KERNEL
+}modulo_code;
+
 typedef enum{
 	MENSAJE,
 	PAQUETE,
@@ -52,16 +60,17 @@ typedef enum{
 	PETICION_DE_EJECUCION_CM,
 	CONSULTA_DE_PAGINA_CM,
 	//-------
-	PRUEBAS
+	MENSAJES_POR_CONSOLA,
+	PRUEBAS,
 
 }op_code;
 
-typedef enum{
-	MEMORIA,
-	FILE_SYSTEM,
-	CPU,
-	KERNEL
-}t_module;
+//typedef enum{
+//	MEMORIA,
+//	FILE_SYSTEM,
+//	CPU,
+//	KERNEL
+//}t_module;
 
 typedef enum{
 	_INT,
@@ -125,6 +134,8 @@ int recibir_int_del_buffer(t_buffer* coso);
 char* recibir_string_del_buffer(t_buffer* coso);
 void* recibir_choclo_del_buffer(t_buffer* coso);
 
-t_buffer* recibiendo_el_contenido(int conexion);
+t_buffer* recibiendo_super_paquete(int conexion);
+void enviar_handshake(int conexion, modulo_code modulo);
+int recibir_handshake(int conexion);
 
 #endif /* INCLUDE_PROTOCOLO_H_ */
