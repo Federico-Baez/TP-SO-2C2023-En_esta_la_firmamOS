@@ -186,12 +186,20 @@ void cargar_int_al_super_paquete(t_paquete* paquete, int numero){
 
 void cargar_string_al_super_paquete(t_paquete* paquete, char* string){
 	int size_string = strlen(string)+1;
-	paquete->buffer->stream = realloc(paquete->buffer->stream,
-									paquete->buffer->size + sizeof(int) + sizeof(char)*size_string);
-	/**/
-	memcpy(paquete->buffer->stream + paquete->buffer->size, &size_string, sizeof(int));
-	memcpy(paquete->buffer->stream + paquete->buffer->size + sizeof(int), string, sizeof(char)*size_string);
 
+	if(paquete->buffer->size == 0){
+		paquete->buffer->stream = malloc(sizeof(char)*size_string);
+		memcpy(paquete->buffer->stream, &size_string, sizeof(int));
+		memcpy(paquete->buffer->stream + sizeof(int), string, sizeof(char)*size_string);
+
+	}else {
+		paquete->buffer->stream = realloc(paquete->buffer->stream,
+										paquete->buffer->size + sizeof(int) + sizeof(char)*size_string);
+		/**/
+		memcpy(paquete->buffer->stream + paquete->buffer->size, &size_string, sizeof(int));
+		memcpy(paquete->buffer->stream + paquete->buffer->size + sizeof(int), string, sizeof(char)*size_string);
+
+	}
 	paquete->buffer->size += sizeof(int);
 	paquete->buffer->size += sizeof(char)*size_string;
 }
@@ -234,10 +242,16 @@ char* recibir_string_del_buffer(t_buffer* coso){
 	memcpy(string, coso->stream + sizeof(int), size_string);
 
 	int nuevo_size = coso->size - sizeof(int) - size_string;
+	if(nuevo_size == 0){
+		coso->size = 0;
+		free(coso->stream);
+		return string;
+	}
 	if(nuevo_size < 0){
 		printf("\n[ERROR]: BUFFER CON TAMAÑO NEGATIVO\n\n");
 		free(string);
-		return "[ERROR]: BUFFER CON TAMAÑO NEGATIVO";
+		//return "[ERROR]: BUFFER CON TAMAÑO NEGATIVO";
+		exit(EXIT_FAILURE);
 	}
 	void* nuevo_coso = malloc(nuevo_size);
 	memcpy(nuevo_coso, coso->stream + sizeof(int) + size_string, nuevo_size);

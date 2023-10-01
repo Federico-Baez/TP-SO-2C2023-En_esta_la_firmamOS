@@ -55,7 +55,7 @@ static void atender_mensajes_kernel_v2(t_buffer* buffer, char* tipo_de_hilo){
 	char* mensaje = recibir_string_del_buffer(buffer);
 	log_info(cpu_logger, "[KERNEL_%s]> %s",tipo_de_hilo , mensaje);
 	free(mensaje);
-	free(buffer->stream);
+	//free(buffer->stream);
 	free(buffer);
 }
 

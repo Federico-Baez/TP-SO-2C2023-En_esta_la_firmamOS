@@ -117,6 +117,7 @@ void atender_mensajes_kernel(t_buffer* buffer){
 	char* mensaje = recibir_string_del_buffer(buffer);
 	log_info(memoria_logger, "[KERNEL]> %s", mensaje);
 	free(mensaje);
+	free(buffer);
 }
 
 /*----------------TODO COMUNICACION SOCKETS --------*/
