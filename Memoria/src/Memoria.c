@@ -34,18 +34,7 @@ int main(int argc, char** argv) {
 
 	inicializar_memoria();
 
-	//inicializar_memoria();
-
-
 	server_fd_memoria = iniciar_servidor(memoria_logger, IP_MEMORIA, PUERTO_ESCUCHA);
-
-	//TODO: ¿Conectar a filesystem antes o después de la escucha?
-	//fd_filesystem = crear_conexion(IP_FILESYSTEM, PUERTO_FILESYSTEM);
-
-	//TODO: Se que esta la función de server_escucha pero dejo esto comentado para tener una guía
-	//fd_kernel = esperar_cliente(memoria_logger, "Kernel", server_fd_memoria);
-	//fd_kernel = esperar_cliente(memoria_logger, "File System", server_fd_memoria);
-	//fd_kernel = esperar_cliente(memoria_logger, "CPU", server_fd_memoria);
 
 	while(server_escucha()){
 		//log_info(memoria_logger, "Se abre servidor de Memoria");
@@ -157,15 +146,7 @@ void identificar_modulo(t_buffer* unBuffer, int conexion){
 static void procesar_conexion(void *void_args){
 	int* args = (int*) void_args;
 	int cliente_socket = *args;
-//	int valor1, valor2;
-//	char* myString;
-//	char* unChoclo;
-//	t_buffer* myBuffer = malloc(sizeof(t_buffer));
-//	int size;
-//	t_list* paquete_recibido;
-	//op_code cod_op;
 	int control_key = 1;
-	printf("Procesando conexion\n");
 	while(control_key){
 		int cod_op = recibir_operacion(cliente_socket);
 		t_buffer* unBuffer;
@@ -265,19 +246,16 @@ void iterator(int *value) {
 void saludar_cliente(void *void_args){
 	int* conexion = (int*) void_args;
 	//int cliente_socket = *args;
-	printf("\nGestionando saludo\n");
 
 	int code_op = recibir_operacion(*conexion);
 	switch (code_op) {
 		case HANDSHAKE:
-			printf("Se detecto HANDSHAKE\n");
 			void* coso_a_enviar = malloc(sizeof(int));
 			int respuesta = 1;
 			memcpy(coso_a_enviar, &respuesta, sizeof(int));
 			send(*conexion, coso_a_enviar, sizeof(int),0);
 			free(coso_a_enviar);
 
-			printf("Rpta enviada\n");
 			procesar_conexion(conexion);
 			break;
 		case -1:

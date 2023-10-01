@@ -54,7 +54,6 @@ void finalizar_kernel();
 void asignar_planificador_cp(char* algoritmo_planificacion);
 
 void leer_consola(void);
-void enviar_los_handshake(void);
 void atender_esta_prueba(t_buffer* unBuffer);
 
 

@@ -278,20 +278,8 @@ t_buffer* recibiendo_super_paquete(int conexion){
 	return unBuffer;
 }
 
-void atender_handshake_respuesta(t_buffer* myBuffer, t_log* logger){
-	char* string = recibir_string_del_buffer(myBuffer);
-	log_info(logger, "HANDSHAKE CON %s >> [OK]", string);
-	free(myBuffer->stream);
-	free(myBuffer);
-	free(string);
-}
 
 void enviar_handshake(int conexion){
-	//t_paquete* paquete = crear_super_paquete(HANDSHAKE);
-	//cargar_int_al_super_paquete(paquete, modulo);
-	//enviar_paquete(paquete, conexion);
-	//eliminar_paquete(paquete);
-
 	void* coso_a_enviar = malloc(sizeof(int));
 	int saludar = HANDSHAKE;
 	memcpy(coso_a_enviar, &saludar, sizeof(int));
@@ -299,11 +287,44 @@ void enviar_handshake(int conexion){
 	free(coso_a_enviar);
 }
 
-int recibir_handshake(int conexion){
-	t_buffer* buffer = recibiendo_super_paquete(conexion);
-	int modulo = recibir_int_del_buffer(buffer);
-	free(buffer->stream);
-	free(buffer);
-	return modulo;
+void gestionar_handshake_como_cliente(int conexion, char* modulo_destino, t_log* logger){
+	enviar_handshake(conexion);
+	int respuesta_handshake = recibir_operacion(conexion);
+	if(respuesta_handshake != 1){
+		log_error(logger, "Error en handshake con %s", modulo_destino);
+		exit(EXIT_FAILURE);
+	}
 }
+
+void gestionar_handshake_como_server(int conexion, t_log* logger){
+	int code_op = recibir_operacion(conexion);
+	switch (code_op) {
+		case HANDSHAKE:
+			void* coso_a_enviar = malloc(sizeof(int));
+			int respuesta = 1;
+			memcpy(coso_a_enviar, &respuesta, sizeof(int));
+			send(conexion, coso_a_enviar, sizeof(int),0);
+			free(coso_a_enviar);
+
+			break;
+		case -1:
+			log_error(logger, "Deseconexion en HANDSHAKE");
+			exit(EXIT_FAILURE);
+			break;
+		default:
+			log_error(logger, "ERROR EN HANDSHAKE: Operacion desconocida");
+			exit(EXIT_FAILURE);
+			break;
+	}
+}
+
+//Usado por los clientes de memoria para que se identifiquen
+void identificarme_con_memoria(int conexion, modulo_code modulo_cliente){
+	t_paquete* paquete = crear_super_paquete(IDENTIFICACION);
+	int modulo_id_ = modulo_cliente;
+	cargar_int_al_super_paquete(paquete, modulo_id_);
+	enviar_paquete(paquete, conexion);
+	eliminar_paquete(paquete);
+}
+
 

@@ -101,7 +101,6 @@ void* recibir_buffer(int* size, int socket_cliente);
 void recibir_mensaje(t_log* logger, int socket_cliente);
 void crear_buffer(t_paquete* paquete);
 
-void atender_handshake_respuesta(t_buffer* myBuffer, t_log* logger);
 
 /******************TODO: revisar los PAQUETES*************/
 t_list* recibir_paquete(int);
@@ -136,6 +135,9 @@ void* recibir_choclo_del_buffer(t_buffer* coso);
 
 t_buffer* recibiendo_super_paquete(int conexion);
 void enviar_handshake(int conexion);
-int recibir_handshake(int conexion);
+void gestionar_handshake_como_cliente(int conexion, char* modulo_destino, t_log* logger);
+void gestionar_handshake_como_server(int conexion, t_log* logger);
+void identificarme_con_memoria(int conexion, modulo_code modulo);
+
 
 #endif /* INCLUDE_PROTOCOLO_H_ */

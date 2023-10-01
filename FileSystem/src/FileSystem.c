@@ -25,42 +25,14 @@ int main(int argc, char** argv) {
 
 	//log_info(filesystem_logger, "Servidor listo para recibir a Kernel\n");
 
+	pthread_t hilo_kernel, hilo_memoria;
 
+	pthread_create(&hilo_memoria, NULL, (void*)atender_memoria, NULL);
+	pthread_detach(hilo_memoria);
+	//pthread_join(hilo_memoria, NULL);
 
-//	pthread_t hilo_kernel;
-//
-//	pthread_create(&hilo_kernel, NULL, (void*)atender_kernel, NULL);
-//	pthread_detach(hilo_kernel);
-
-	atender_kernel();
-
-	/*Recibiendo por funcionalidades practicas de serializacion */
-//	int valor1, valor2;
-//	char* myString;
-//	char* unChoclo;
-//	int cod_op = recibir_operacion(fd_kernel);
-//	switch(cod_op){
-//	case PRUEBAS:
-//		t_buffer* myBuffer = malloc(sizeof(t_buffer));
-//		int size;
-//		myBuffer->stream = recibir_buffer(&size, fd_kernel);
-//		myBuffer->size = size;
-//
-//		valor1 = recibir_int_del_buffer(myBuffer);
-//		myString = recibir_string_del_buffer(myBuffer);
-//		unChoclo = (char*)recibir_choclo_del_buffer(myBuffer);
-//		valor2 = recibir_int_del_buffer(myBuffer);
-//
-//		log_info(filesystem_logger, "Recibido exitoso:%d | %s | %s | %d", valor1, myString, unChoclo, valor2);
-//
-//		free(myBuffer->stream);
-//		free(myBuffer);
-//
-//		break;
-//	default:
-//		log_warning(filesystem_logger,"Operacion desconocida. No quieras meter la pata");
-//		break;
-//	}
+	pthread_create(&hilo_kernel, NULL, (void*)atender_kernel, NULL);
+	pthread_join(hilo_kernel, NULL);
 
 	return EXIT_SUCCESS;
 }
@@ -92,43 +64,75 @@ void iterator(char* value) {
 
 void atender_mensajes_kernel(t_buffer* buffer){
 	char* mensaje = recibir_string_del_buffer(buffer);
-	log_info(filesystem_logger, "[[[%s]]]", mensaje);
+	log_info(filesystem_logger, "[KERNEL]> %s", mensaje);
 	free(mensaje);
 }
 
+
 void atender_kernel(){
 	fd_kernel = esperar_cliente(filesystem_logger, "Kernel", server_fd_filesystem);
-	int control_key = 1;
-	while(control_key){
+	gestionar_handshake_como_server(fd_kernel, filesystem_logger);
+	log_info(filesystem_logger, "::::::::::: KERNEL CONECTADO ::::::::::::");
+	//int control_key = 1;
+	while(1){
 		int cod_op = recibir_operacion(fd_kernel);
-		t_buffer* myBuffer;
+		t_buffer* unBuffer;
 		//log_info(filesystem_logger, "Se recibio algo de KERNEL");
 
 		switch (cod_op) {
-		case HANDSHAKE:
-			myBuffer = recibiendo_super_paquete(fd_kernel);
-			int handshake_del_kernel = recibir_int_del_buffer(myBuffer);
-			log_info(filesystem_logger, "!!!!! [%d] CONECTADO !!!!!", handshake_del_kernel);
-			enviar_handshake(fd_kernel);
-			break;
 		case SYSCALL_KF:
-			myBuffer = recibiendo_super_paquete(fd_kernel);
+			unBuffer = recibiendo_super_paquete(fd_kernel);
 			//
 			break;
 		case MENSAJES_POR_CONSOLA:
-			myBuffer = recibiendo_super_paquete(fd_kernel);
-			atender_mensajes_kernel(myBuffer);
+			unBuffer = recibiendo_super_paquete(fd_kernel);
+			atender_mensajes_kernel(unBuffer);
 			break;
 		case -1:
 			log_error(filesystem_logger, "[DESCONEXION]: KERNEL");
-			control_key = 0;
+			//control_key = 0;
+			exit(EXIT_FAILURE);
 			break;
 		default:
 			log_warning(filesystem_logger, "Operacion desconocida");
-			free(myBuffer);
+			free(unBuffer);
 			break;
 		}
 	}
 	log_info(filesystem_logger, "Saliendo del hilo de FILESYSTEM - KERNEL");
+}
+
+void atender_memoria(){
+	gestionar_handshake_como_cliente(fd_memoria, MEMORIA, filesystem_logger);
+	identificarme_con_memoria(fd_memoria, FILESYSTEM);
+	log_info(filesystem_logger, "HANDSHAKE CON MEMORIA [EXITOSO]");
+
+	int control_key = 1;
+	while(control_key){
+		int cod_op = recibir_operacion(fd_memoria);
+		t_buffer* unBuffer;
+		log_info(filesystem_logger, "Se recibio algo de MEMORIA");
+
+		switch (cod_op) {
+		case SYSCALL_KF:
+			unBuffer = recibiendo_super_paquete(fd_memoria);
+			//
+			break;
+		case MENSAJES_POR_CONSOLA:
+			unBuffer = recibiendo_super_paquete(fd_memoria);
+			atender_mensajes_kernel(unBuffer);
+			break;
+		case -1:
+			log_error(filesystem_logger, "[DESCONEXION]: KERNEL");
+			control_key = 0;
+			exit(EXIT_FAILURE);
+			break;
+		default:
+			log_warning(filesystem_logger, "Operacion desconocida");
+			free(unBuffer);
+			break;
+		}
+	}
+	log_info(filesystem_logger, "Saliendo del hilo de FILESYSTEM - MEMORIA");
 }
 

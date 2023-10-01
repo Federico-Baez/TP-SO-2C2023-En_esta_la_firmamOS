@@ -20,29 +20,30 @@ int main(int argc, char** argv) {
 //	pthread_t hilo_cpu_dispatch, hilo_cpu_interrupt, hilo_memoria, hilo_filesystem;
 	pthread_t hilo_memoria;
 	pthread_t hilo_consola;
+	pthread_t hilo_filesystem;
 
 	//pruebo con conectarme a cpu
 //	fd_cpu_dispatcher = crear_conexion(IP_CPU, PUERTO_CPU_DISPATCH);
 //	fd_cpu_interrupt = crear_conexion(IP_CPU, PUERTO_CPU_INTERRUPT);
-	//fd_filesystem = crear_conexion(IP_FILESYSTEM, PUERTO_FILESYSTEM);
+	fd_filesystem = crear_conexion(IP_FILESYSTEM, PUERTO_FILESYSTEM);
 	fd_memoria = crear_conexion(IP_MEMORIA, PUERTO_MEMORIA);
 
 
-//	pthread_create(&hilo_filesystem, NULL, (void*)atender_filesystem, NULL);
-//	pthread_detach(hilo_filesystem);
+	pthread_create(&hilo_filesystem, NULL, (void*)atender_filesystem, NULL);
+	pthread_detach(hilo_filesystem);
 //	pthread_create(&hilo_cpu_dispatch, NULL, (void*)atender_cpu_dispatch, &fd_cpu_dispatcher);
 //	pthread_detach(hilo_cpu_dispatch);
 //	pthread_create(&hilo_cpu_interrupt, NULL, (void*)atender_cpu_interrupt, &fd_cpu_interrupt);
 //	pthread_detach(hilo_cpu_interrupt);
 
-	pthread_create(&hilo_consola, NULL, (void*)leer_consola, NULL);
-	pthread_detach(hilo_consola);
-	//pthread_join(hilo_consola, NULL);
 
 	pthread_create(&hilo_memoria, NULL, (void*)atender_memoria, NULL);
-	//pthread_detach(hilo_memoria);
-	pthread_join(hilo_memoria, NULL);
+	pthread_detach(hilo_memoria);
+	//pthread_join(hilo_memoria, NULL);
 
+	pthread_create(&hilo_consola, NULL, (void*)leer_consola, NULL);
+	//pthread_detach(hilo_consola);
+	pthread_join(hilo_consola, NULL);
 
 
 	finalizar_kernel();
@@ -111,40 +112,18 @@ void asignar_planificador_cp(char* algoritmo_planificacion){
 		}
 }
 
-void enviar_los_handshake(){
-//	t_paquete* paquete_handshake = crear_super_paquete(HANDSHAKE);
-//	cargar_string_al_super_paquete(paquete_handshake, "KERNEL");
-//	enviar_paquete(paquete_handshake, fd_memoria);
-//	enviar_paquete(paquete_handshake, fd_filesystem);
-//	enviar_paquete(paquete_handshake, fd_cpu_dispatcher);
-//	enviar_paquete(paquete_handshake, fd_cpu_interrupt);
-//	eliminar_paquete(paquete_handshake);
-}
 
 void atender_esta_prueba(t_buffer* myBuffer){
 	//
 }
 
-void gestionar_handshake(int conexion, modulo_code modulo){
-	enviar_handshake(conexion);
-	int respuesta_handshake = recibir_operacion(conexion);
-	if(respuesta_handshake != 1){
-		log_error(kernel_logger, "Error en handshake con Memeoria");
-	}
-	t_paquete* paquete = crear_super_paquete(IDENTIFICACION);
-	int modulo_id_ = modulo;
-	cargar_int_al_super_paquete(paquete, modulo_id_);
-	enviar_paquete(paquete, conexion);
-	eliminar_paquete(paquete);
-
-}
-
 void atender_memoria(){
-	gestionar_handshake(fd_memoria, KERNEL);
+	gestionar_handshake_como_cliente(fd_memoria, "MEMORIA", kernel_logger);
+	identificarme_con_memoria(fd_memoria, KERNEL);
 	log_info(kernel_logger, "HANDSHAKE CON MEMORIA [EXITOSO]");
 
-	int control_key = 1;
-	while(control_key){
+	//int control_key = 1;
+	while(1){
 		int cod_op = recibir_operacion(fd_memoria);
 		t_buffer* unBuffer;
 		log_info(kernel_logger, "Se recibio algo de MEMORIA");
@@ -164,7 +143,8 @@ void atender_memoria(){
 			break;
 		case -1:
 			log_error(kernel_logger, "[DESCONEXION]: MEMORIA");
-			control_key = 0;
+			//control_key = 0;
+			exit(EXIT_FAILURE);
 			break;
 		default:
 			log_warning(kernel_logger, "Operacion desconocida");
@@ -175,17 +155,11 @@ void atender_memoria(){
 
 }
 void atender_filesystem(){
-	//enviar_handshake(fd_filesystem, KERNEL);
-	int recibir_codigo_op = recibir_operacion(fd_filesystem);
-	int respuesta_handshake = recibir_handshake(fd_filesystem);
-	if(recibir_codigo_op != HANDSHAKE || respuesta_handshake != FILESYSTEM){
-		log_error(kernel_logger, "ERROR EN HANDSHAKE CON FILESYSTEM");
-		exit(EXIT_FAILURE);
-	}
+	gestionar_handshake_como_cliente(fd_filesystem, "FILESYSTEM", kernel_logger);
 	log_info(kernel_logger, "HANDSHAKE CON FILESYSTEM [EXITOSO]");
 
-	int control_key = 1;
-	while(control_key){
+	//int control_key = 1;
+	while(1){
 		int cod_op = recibir_operacion(fd_filesystem);
 		t_buffer* unBuffer;
 		log_info(kernel_logger, "Se recibio algo de FILESYSTEM");
@@ -201,7 +175,8 @@ void atender_filesystem(){
 			break;
 		case -1:
 			log_error(kernel_logger, "[DESCONEXION]: FILESYSTEM");
-			control_key = 0;
+			//control_key = 0;
+			exit(EXIT_FAILURE);
 			break;
 		default:
 			log_warning(kernel_logger, "Operacion desconocida");
@@ -217,35 +192,6 @@ void atender_cpu_interrupt(){
 
 }
 
-//TODO: Tira error al compilar
-/*bool conectarse_a_modulos(){
-	pthread_t conexion_fs;
-	pthread_t conexion_cpu_dispatcher;
-	pthread_t conexion_cpu_interrupt;
-	pthread_t conexion_memoria;
-
-	fd_cpu_dispatcher = crear_conexion(IP_CPU, PUERTO_CPU_DISPATCH);
-	fd_cpu_interrupt = crear_conexion(IP_CPU, PUERTO_CPU_INTERRUPT);
-	//TODO: EN EL CASO DE TENER UNA INTERRUPCION SE DEBE DE CREAR OTRA CONEXION?
-	pthread_create(&conexion_cpu_dispatcher, NULL, (void*)procesar_conexion, (void*) &fd_cpu_dispatcher);
-	pthread_create(&conexion_cpu_interrupt, NULL, (void*)procesar_conexion, (void*) &fd_cpu_interrupt);
-
-	pthread_detach(conexion_cpu_dispatcher);
-	pthread_detach(conexion_cpu_interrupt);
-
-
-	fd_filesystem = crear_conexion(IP_FILESYSTEM, PUERTO_FILESYSTEM);
-	pthread_create(&conexion_fs, NULL, (void*)procesar_conexion, (void*) &fd_filesystem);
-	pthread_detach(conexion_fs);
-
-
-	fd_memoria = crear_conexion(IP_MEMORIA, PUERTO_MEMORIA);
-
-	return fd_cpu_dispatcher != -1 && fd_cpu_interrupt != -1 && fd_filesystem != -1 && fd_memoria != -1;
-
-}
-
-void procesar_conexion(){}*/
 
 
 
