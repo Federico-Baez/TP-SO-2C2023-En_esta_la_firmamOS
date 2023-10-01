@@ -34,4 +34,8 @@ char* PUERTO_ESCUCHA_INTERRUPT;
 void leer_config(t_config* config);
 void iterator(char* value);
 
+void atender_cpu_dispatch(void);
+void atender_cpu_interrupt(void);
+void atender_cpu_memoria(void);
+
 #endif /* CPU_H_ */

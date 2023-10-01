@@ -31,7 +31,7 @@ int main(int argc, char** argv) {
 	pthread_detach(hilo_memoria);
 	//pthread_join(hilo_memoria, NULL);
 
-	pthread_create(&hilo_kernel, NULL, (void*)atender_kernel, NULL);
+	pthread_create(&hilo_kernel, NULL, (void*)atender_filesystem_kernel, NULL);
 	pthread_join(hilo_kernel, NULL);
 
 	return EXIT_SUCCESS;
@@ -66,10 +66,12 @@ void atender_mensajes_kernel(t_buffer* buffer){
 	char* mensaje = recibir_string_del_buffer(buffer);
 	log_info(filesystem_logger, "[KERNEL]> %s", mensaje);
 	free(mensaje);
+	free(buffer->stream);
+	free(buffer);
 }
 
 
-void atender_kernel(){
+void atender_filesystem_kernel(){
 	fd_kernel = esperar_cliente(filesystem_logger, "Kernel", server_fd_filesystem);
 	gestionar_handshake_como_server(fd_kernel, filesystem_logger);
 	log_info(filesystem_logger, "::::::::::: KERNEL CONECTADO ::::::::::::");
@@ -95,7 +97,7 @@ void atender_kernel(){
 			break;
 		default:
 			log_warning(filesystem_logger, "Operacion desconocida");
-			free(unBuffer);
+			//free(unBuffer);
 			break;
 		}
 	}
@@ -103,7 +105,7 @@ void atender_kernel(){
 }
 
 void atender_memoria(){
-	gestionar_handshake_como_cliente(fd_memoria, MEMORIA, filesystem_logger);
+	gestionar_handshake_como_cliente(fd_memoria, "MEMORIA", filesystem_logger);
 	identificarme_con_memoria(fd_memoria, FILESYSTEM);
 	log_info(filesystem_logger, "HANDSHAKE CON MEMORIA [EXITOSO]");
 

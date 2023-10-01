@@ -17,32 +17,30 @@ int main(int argc, char** argv) {
 
 	leer_config(kernel_config);
 
-//	pthread_t hilo_cpu_dispatch, hilo_cpu_interrupt, hilo_memoria, hilo_filesystem;
+	pthread_t hilo_cpu_dispatch, hilo_cpu_interrupt;
 	pthread_t hilo_memoria;
 	pthread_t hilo_consola;
 	pthread_t hilo_filesystem;
 
-	//pruebo con conectarme a cpu
-//	fd_cpu_dispatcher = crear_conexion(IP_CPU, PUERTO_CPU_DISPATCH);
-//	fd_cpu_interrupt = crear_conexion(IP_CPU, PUERTO_CPU_INTERRUPT);
+	//Probando conexiones
+	fd_cpu_dispatcher = crear_conexion(IP_CPU, PUERTO_CPU_DISPATCH);
+	fd_cpu_interrupt = crear_conexion(IP_CPU, PUERTO_CPU_INTERRUPT);
 	fd_filesystem = crear_conexion(IP_FILESYSTEM, PUERTO_FILESYSTEM);
 	fd_memoria = crear_conexion(IP_MEMORIA, PUERTO_MEMORIA);
 
 
 	pthread_create(&hilo_filesystem, NULL, (void*)atender_filesystem, NULL);
 	pthread_detach(hilo_filesystem);
-//	pthread_create(&hilo_cpu_dispatch, NULL, (void*)atender_cpu_dispatch, &fd_cpu_dispatcher);
-//	pthread_detach(hilo_cpu_dispatch);
-//	pthread_create(&hilo_cpu_interrupt, NULL, (void*)atender_cpu_interrupt, &fd_cpu_interrupt);
-//	pthread_detach(hilo_cpu_interrupt);
 
+	pthread_create(&hilo_cpu_dispatch, NULL, (void*)atender_cpu_dispatch, NULL);
+	pthread_detach(hilo_cpu_dispatch);
+	pthread_create(&hilo_cpu_interrupt, NULL, (void*)atender_cpu_interrupt, NULL);
+	pthread_detach(hilo_cpu_interrupt);
 
 	pthread_create(&hilo_memoria, NULL, (void*)atender_memoria, NULL);
 	pthread_detach(hilo_memoria);
-	//pthread_join(hilo_memoria, NULL);
 
 	pthread_create(&hilo_consola, NULL, (void*)leer_consola, NULL);
-	//pthread_detach(hilo_consola);
 	pthread_join(hilo_consola, NULL);
 
 
@@ -79,6 +77,8 @@ void leer_consola(){
 		cargar_string_al_super_paquete(paquete, leido);
 		enviar_paquete(paquete, fd_memoria);
 		enviar_paquete(paquete, fd_filesystem);
+		enviar_paquete(paquete, fd_cpu_dispatcher);
+		enviar_paquete(paquete, fd_cpu_interrupt);
 
 		eliminar_paquete(paquete);
 		free(leido);
@@ -186,10 +186,62 @@ void atender_filesystem(){
 	}
 }
 void atender_cpu_dispatch(){
+	gestionar_handshake_como_cliente(fd_cpu_dispatcher, "CPU_Dispatch", kernel_logger);
+	log_info(kernel_logger, "HANDSHAKE CON CPU_Dispatch [EXITOSO]");
+	while(1){
+		int cod_op = recibir_operacion(fd_cpu_dispatcher);
+		t_buffer* unBuffer;
+		log_info(kernel_logger, "Se recibio algo de FILESYSTEM");
 
+		switch (cod_op) {
+		case EJECUTAR_PROCESO_KC:
+			unBuffer = recibiendo_super_paquete(fd_cpu_dispatcher);
+			//
+			break;
+		case PRUEBAS:
+			unBuffer = recibiendo_super_paquete(fd_cpu_dispatcher);
+			//
+			break;
+		case -1:
+			log_error(kernel_logger, "[DESCONEXION]: FILESYSTEM");
+			//control_key = 0;
+			exit(EXIT_FAILURE);
+			break;
+		default:
+			log_warning(kernel_logger, "Operacion desconocida");
+			free(unBuffer);
+			break;
+		}
+	}
 }
 void atender_cpu_interrupt(){
+	gestionar_handshake_como_cliente(fd_cpu_interrupt, "CPU_Interrupt", kernel_logger);
+	log_info(kernel_logger, "HANDSHAKE CON CPU_Interrupt [EXITOSO]");
+	while(1){
+		int cod_op = recibir_operacion(fd_cpu_interrupt);
+		t_buffer* unBuffer;
+		log_info(kernel_logger, "Se recibio algo de FILESYSTEM");
 
+		switch (cod_op) {
+		case FORZAR_DESALOJO_KC:
+			unBuffer = recibiendo_super_paquete(fd_cpu_interrupt);
+			//
+			break;
+		case PRUEBAS:
+			unBuffer = recibiendo_super_paquete(fd_cpu_interrupt);
+			//
+			break;
+		case -1:
+			log_error(kernel_logger, "[DESCONEXION]: FILESYSTEM");
+			//control_key = 0;
+			exit(EXIT_FAILURE);
+			break;
+		default:
+			log_warning(kernel_logger, "Operacion desconocida");
+			free(unBuffer);
+			break;
+		}
+	}
 }
 
 
