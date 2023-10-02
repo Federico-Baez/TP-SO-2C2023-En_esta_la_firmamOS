@@ -52,8 +52,9 @@ void iterator(char* value) {
 }
 
 static void atender_mensajes_kernel_v2(t_buffer* buffer, char* tipo_de_hilo){
+	int tamanio = recibir_int_del_buffer(buffer);
 	char* mensaje = recibir_string_del_buffer(buffer);
-	log_info(cpu_logger, "[KERNEL_%s]> %s",tipo_de_hilo , mensaje);
+	log_info(cpu_logger, "[KERNEL_%s]> [%d]%s", tipo_de_hilo, tamanio, mensaje);
 	free(mensaje);
 	//free(buffer->stream);
 	free(buffer);

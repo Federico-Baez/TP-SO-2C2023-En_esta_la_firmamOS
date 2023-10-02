@@ -114,8 +114,9 @@ void finalizar_memoria(){
 }
 
 void atender_mensajes_kernel(t_buffer* buffer){
+	int tamanio = recibir_int_del_buffer(buffer);
 	char* mensaje = recibir_string_del_buffer(buffer);
-	log_info(memoria_logger, "[KERNEL]> %s", mensaje);
+	log_info(memoria_logger, "[KERNEL]> [%d]%s", tamanio, mensaje);
 	free(mensaje);
 	free(buffer);
 }

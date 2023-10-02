@@ -175,11 +175,15 @@ t_paquete* crear_super_paquete(op_code code_op){
 }
 
 void cargar_int_al_super_paquete(t_paquete* paquete, int numero){
-	paquete->buffer->stream = realloc(paquete->buffer->stream,
-										paquete->buffer->size + sizeof(int));
-	//t_primitivo coso_int = _INT;
-	//memcpy(paquete->buffer->stream + paquete->buffer->size, &coso_int, sizeof(int));
-	memcpy(paquete->buffer->stream + paquete->buffer->size, &numero, sizeof(int));
+	if(paquete->buffer->size == 0){
+		paquete->buffer->stream = malloc(sizeof(int));
+		memcpy(paquete->buffer->stream, &numero, sizeof(int));
+	}else{
+		paquete->buffer->stream = realloc(paquete->buffer->stream,
+											paquete->buffer->size + sizeof(int));
+		/**/
+		memcpy(paquete->buffer->stream + paquete->buffer->size, &numero, sizeof(int));
+	}
 
 	paquete->buffer->size += sizeof(int);
 }
@@ -188,7 +192,7 @@ void cargar_string_al_super_paquete(t_paquete* paquete, char* string){
 	int size_string = strlen(string)+1;
 
 	if(paquete->buffer->size == 0){
-		paquete->buffer->stream = malloc(sizeof(char)*size_string);
+		paquete->buffer->stream = malloc(sizeof(int) + sizeof(char)*size_string);
 		memcpy(paquete->buffer->stream, &size_string, sizeof(int));
 		memcpy(paquete->buffer->stream + sizeof(int), string, sizeof(char)*size_string);
 
@@ -205,11 +209,17 @@ void cargar_string_al_super_paquete(t_paquete* paquete, char* string){
 }
 
 void cargar_choclo_al_super_paquete(t_paquete* paquete, void* choclo, int size){
-	paquete->buffer->stream = realloc(paquete->buffer->stream,
-											paquete->buffer->size + sizeof(int) + size);
+	if(paquete->buffer->size == 0){
+		paquete->buffer->stream = malloc(sizeof(int) + size);
+		memcpy(paquete->buffer->stream, &size, sizeof(int));
+		memcpy(paquete->buffer->stream + sizeof(int), choclo, size);
+	}else{
+		paquete->buffer->stream = realloc(paquete->buffer->stream,
+												paquete->buffer->size + sizeof(int) + size);
 
-	memcpy(paquete->buffer->stream + paquete->buffer->size, &size, sizeof(int));
-	memcpy(paquete->buffer->stream + paquete->buffer->size + sizeof(int), choclo, size);
+		memcpy(paquete->buffer->stream + paquete->buffer->size, &size, sizeof(int));
+		memcpy(paquete->buffer->stream + paquete->buffer->size + sizeof(int), choclo, size);
+	}
 
 	paquete->buffer->size += sizeof(int);
 	paquete->buffer->size += size;
@@ -220,10 +230,17 @@ int recibir_int_del_buffer(t_buffer* coso){
 	memcpy(&valor_a_devolver, coso->stream, sizeof(int));
 
 	int nuevo_size = coso->size - sizeof(int);
+	if(nuevo_size == 0){
+		free(coso->stream);
+		coso->stream = NULL;
+		coso->size = 0;
+		return valor_a_devolver;
+	}
 	if(nuevo_size < 0){
 		printf("\n[ERROR]: BUFFER CON TAMAÑO NEGATIVO\n\n");
 		//free(valor_a_devolver);
-		return 0;
+		//return 0;
+		exit(EXIT_FAILURE);
 	}
 	void* nuevo_coso = malloc(nuevo_size);
 	memcpy(nuevo_coso, coso->stream + sizeof(int), nuevo_size);
@@ -243,8 +260,9 @@ char* recibir_string_del_buffer(t_buffer* coso){
 
 	int nuevo_size = coso->size - sizeof(int) - size_string;
 	if(nuevo_size == 0){
-		coso->size = 0;
 		free(coso->stream);
+		coso->stream = NULL;
+		coso->size = 0;
 		return string;
 	}
 	if(nuevo_size < 0){
@@ -270,10 +288,17 @@ void* recibir_choclo_del_buffer(t_buffer* coso){
 	memcpy(choclo, coso->stream + sizeof(int), size_choclo);
 
 	int nuevo_size = coso->size - sizeof(int) - size_choclo;
+	if(nuevo_size == 0){
+		free(coso->stream);
+		coso->stream = NULL;
+		coso->size = 0;
+		return choclo;
+	}
 	if(nuevo_size < 0){
 		printf("\n[ERROR]: BUFFER CON TAMAÑO NEGATIVO\n\n");
 		free(choclo);
-		return "";
+		//return "";
+		exit(EXIT_FAILURE);
 	}
 	void* nuevo_choclo = malloc(nuevo_size);
 	memcpy(nuevo_choclo, coso->stream + sizeof(int) + size_choclo, nuevo_size);

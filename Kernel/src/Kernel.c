@@ -74,7 +74,9 @@ void leer_consola(){
 	while(strcmp(leido,"\0") != 0){
 		//log_info(kernel_logger, "%s [%d]",leido, (int)strlen(leido));
 		t_paquete* paquete = crear_super_paquete(MENSAJES_POR_CONSOLA);
+		cargar_int_al_super_paquete(paquete, strlen(leido) + 1);
 		cargar_string_al_super_paquete(paquete, leido);
+
 		enviar_paquete(paquete, fd_memoria);
 		enviar_paquete(paquete, fd_filesystem);
 		enviar_paquete(paquete, fd_cpu_dispatcher);
