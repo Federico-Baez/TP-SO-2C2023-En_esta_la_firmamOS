@@ -19,6 +19,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <readline/readline.h>
+#include <unistd.h>
 
 
 typedef enum{
@@ -55,7 +56,7 @@ void asignar_planificador_cp(char* algoritmo_planificacion);
 
 void leer_consola(void);
 void atender_esta_prueba(t_buffer* unBuffer);
-
+void atender_experimentos_xd(void);
 
 void atender_memoria();
 void atender_filesystem();

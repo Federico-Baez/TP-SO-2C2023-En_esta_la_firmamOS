@@ -21,6 +21,7 @@ int main(int argc, char** argv) {
 	pthread_t hilo_memoria;
 	pthread_t hilo_consola;
 	pthread_t hilo_filesystem;
+	pthread_t hilo_experimentos_xd;
 
 	//Probando conexiones
 	fd_cpu_dispatcher = crear_conexion(IP_CPU, PUERTO_CPU_DISPATCH);
@@ -39,6 +40,9 @@ int main(int argc, char** argv) {
 
 	pthread_create(&hilo_memoria, NULL, (void*)atender_memoria, NULL);
 	pthread_detach(hilo_memoria);
+
+	pthread_create(&hilo_experimentos_xd, NULL, (void*)atender_experimentos_xd, NULL);
+	pthread_detach(hilo_experimentos_xd);
 
 	pthread_create(&hilo_consola, NULL, (void*)leer_consola, NULL);
 	pthread_join(hilo_consola, NULL);
@@ -114,6 +118,21 @@ void asignar_planificador_cp(char* algoritmo_planificacion){
 		}
 }
 
+void atender_experimentos_xd(){
+//	t_paquete* paquete = crear_super_paquete(MENSAJES_POR_CONSOLA);
+	int i;
+	char* cadena = string_new();
+	sleep(2);
+	for(i=1; i<=50; i++){
+		t_paquete* paquete = crear_super_paquete(MENSAJES_POR_CONSOLA);
+		cadena = string_repeat('A', i);
+		cargar_int_al_super_paquete(paquete, strlen(cadena)+1);
+		cargar_string_al_super_paquete(paquete, cadena);
+		enviar_paquete(paquete, fd_cpu_dispatcher);
+		eliminar_paquete(paquete);
+		sleep(1);
+	}
+}
 
 void atender_esta_prueba(t_buffer* myBuffer){
 	//
