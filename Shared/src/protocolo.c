@@ -255,7 +255,8 @@ char* recibir_string_del_buffer(t_buffer* coso){
 	int size_string;
 	char* string;
 	memcpy(&size_string, coso->stream, sizeof(int));
-	string = malloc(sizeof(size_string));
+	//string = malloc(sizeof(size_string));
+	string = malloc(size_string);
 	memcpy(string, coso->stream + sizeof(int), size_string);
 
 	int nuevo_size = coso->size - sizeof(int) - size_string;

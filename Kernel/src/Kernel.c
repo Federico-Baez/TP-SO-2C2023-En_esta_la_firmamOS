@@ -41,8 +41,8 @@ int main(int argc, char** argv) {
 	pthread_create(&hilo_memoria, NULL, (void*)atender_memoria, NULL);
 	pthread_detach(hilo_memoria);
 
-	pthread_create(&hilo_experimentos_xd, NULL, (void*)atender_experimentos_xd, NULL);
-	pthread_detach(hilo_experimentos_xd);
+//	pthread_create(&hilo_experimentos_xd, NULL, (void*)atender_experimentos_xd, NULL);
+//	pthread_detach(hilo_experimentos_xd);
 
 	pthread_create(&hilo_consola, NULL, (void*)leer_consola, NULL);
 	pthread_join(hilo_consola, NULL);
