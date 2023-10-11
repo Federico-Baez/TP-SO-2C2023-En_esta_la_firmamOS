@@ -28,6 +28,21 @@ typedef enum{
 	PRIORIDADES
 }t_algoritmo;
 
+typedef enum{
+	INICIAR_PROCESO,
+	FINALIZAR_PROCESO,
+	DETENER_PLANIFICACION,
+	INICIAR_PLANIFICACION,
+	MULTIPROGRAMACION,
+	PROCESO_ESTADO
+}t_op_instruction;
+
+typedef struct{
+	char* instruction_name;
+	t_op_instruction op_instruction;
+	int instruction_n_param;
+}t_instruction;
+
 t_log* kernel_logger;
 t_log* kernel_log_obligatorio;
 t_config* kernel_config;
