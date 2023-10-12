@@ -21,27 +21,14 @@
 #include <readline/readline.h>
 #include <unistd.h>
 
+#include "k_consola.h"
+
 
 typedef enum{
 	FIFO,
 	ROUNDROBIN,
 	PRIORIDADES
 }t_algoritmo;
-
-typedef enum{
-	INICIAR_PROCESO,
-	FINALIZAR_PROCESO,
-	DETENER_PLANIFICACION,
-	INICIAR_PLANIFICACION,
-	MULTIPROGRAMACION,
-	PROCESO_ESTADO
-}t_op_instruction;
-
-typedef struct{
-	char* instruction_name;
-	t_op_instruction op_instruction;
-	int instruction_n_param;
-}t_instruction;
 
 t_log* kernel_logger;
 t_log* kernel_log_obligatorio;
@@ -69,7 +56,6 @@ void leer_config(t_config* config);
 void finalizar_kernel();
 void asignar_planificador_cp(char* algoritmo_planificacion);
 
-void leer_consola(void);
 void atender_esta_prueba(t_buffer* unBuffer);
 void atender_experimentos_xd(void);
 
