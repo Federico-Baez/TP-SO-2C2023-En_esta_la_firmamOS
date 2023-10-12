@@ -1,9 +1,9 @@
 #include "../include/k_consola.h"
 
 void leer_consola(){
-
+	sleep(100/1000);
+	//CARGAR INSTRUCCIONES VALIDAS EN UNA LISTA
 	t_list* list_instructions = list_create();
-
 	add_instruction_list(list_instructions, "INICIAR_PROCESO", INICIAR_PROCESO, 3);
 	add_instruction_list(list_instructions, "FINALIZAR_PROCESO", FINALIZAR_PROCESO, 1);
 	add_instruction_list(list_instructions, "DETENER_PLANIFICACION", DETENER_PLANIFICACION, 0);
@@ -17,22 +17,9 @@ void leer_consola(){
 	char* leido;
 	leido = readline("> ");
 	while(strcmp(leido,"\0") != 0){
-//		printf("Mensaje: %s \n", leido);
-
 		if(validar_instruccion(leido, list_instructions)){
 			printf("Comando válido\n");
 		}
-
-
-
-//		t_paquete* paquete = crear_super_paquete(MENSAJES_POR_CONSOLA);
-//		cargar_int_al_super_paquete(paquete, strlen(leido) + 1);
-//		cargar_string_al_super_paquete(paquete, leido);
-//		enviar_paquete(paquete, fd_memoria);
-//		enviar_paquete(paquete, fd_filesystem);
-//		enviar_paquete(paquete, fd_cpu_dispatcher);
-//		enviar_paquete(paquete, fd_cpu_interrupt);
-//		eliminar_paquete(paquete);
 
 		free(leido);
 		leido = readline("> ");
@@ -72,9 +59,10 @@ bool validar_instruccion(char* leido, t_list* list_instructions){
 	while(list_iterator_has_next(iterador_carousel)){
 		t_instruction* instruction = list_iterator_next(iterador_carousel);
 		if(strcmp(instruction->instruction_name, comando_consola[0]) == 0){
-			elemento_encontrado++;
+			elemento_encontrado = 1;
 			if(instruction->instruction_n_param == cantidad_de_parametros){
-				elemento_encontrado++;
+				elemento_encontrado = 2;
+				break;
 			}
 		}
 	}
@@ -86,13 +74,16 @@ bool validar_instruccion(char* leido, t_list* list_instructions){
 		resultado = true;
 		break;
 	case 1:
-		printf("[ERROR]: Cantidad de parametros incorrectos\n");
+//		printf("[ERROR]: Cantidad de parametros incorrectos\n");
+		log_warning(kernel_logger, "N°  Param. Incorrecto");
 		break;
 	case 0:
-		printf("[ERROR]: Comando NO RECONOCIDO\n");
+//		printf("[ERROR]: Comando NO RECONOCIDO\n");
+		log_error(kernel_logger, "Comando no reconocido");
 		break;
 	default:
-		printf("[ERROR]: Algo salio mal en el reconocimiento de Comandos\n");
+//		printf("[ERROR]: Algo salio mal en el reconocimiento de Comandos\n");
+		log_error(kernel_logger, "Algo salio mal en el reconocimiento de Comandos");
 		break;
 	}
 
@@ -102,4 +93,30 @@ bool validar_instruccion(char* leido, t_list* list_instructions){
 	return resultado;
 }
 
+bool validar_instruccion_2(char* leido, t_list* list_instructions){
+	char** comando_consola = string_split(leido, " ");
+	int cantidad_de_parametros = string_array_size(comando_consola) - 1;
+	//bool resultado = false;
+
+	bool _validador(t_instruction* instruction){
+		//bool respuesta = false;
+		if(strcmp(instruction->instruction_name, comando_consola[0]) == 0){
+			if(instruction->instruction_n_param == cantidad_de_parametros){
+				//respuesta = true;
+				return true;
+			}
+		}
+		return false;
+	}
+
+	if(list_any_satisfy(list_instructions, (void*)_validador)){
+		//resultado = true;
+		printf("> ");
+		return true;
+	}
+
+	string_array_destroy(comando_consola);
+
+	return false;
+}
 

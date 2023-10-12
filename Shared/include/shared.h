@@ -73,6 +73,14 @@ typedef struct{
     char* snd_param;
 }t_instruccion_codigo;
 
+typedef struct{
+	uint32_t AX;
+	uint32_t BX;
+	uint32_t CX;
+	uint32_t DX;
+	int program_counter;
+}t_registros_CPU;
+
 t_list* lista_instrucciones(t_log* logger, char* dir);
 cod_instruccion convertir_string_a_instruccion(t_log* logger, const char *str_instruccion);
 void liberar_lista_instrucciones(t_list *lista);

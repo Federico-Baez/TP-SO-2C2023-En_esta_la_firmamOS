@@ -10,6 +10,8 @@
 #include <stdio.h>
 #include <readline/readline.h>
 
+#include "k_gestor.h"
+
 
 typedef enum{
 	INICIAR_PROCESO,
@@ -27,7 +29,7 @@ typedef struct{
 }t_instruction;
 
 
-
+extern t_log* kernel_logger;
 
 
 void leer_consola(void);
@@ -35,8 +37,7 @@ void add_instruction_list(t_list* lista, char* instruccion, t_op_instruction op_
 void imprimir_instrucciones(t_instruction* instruction);
 void destruir_elementos(t_instruction* instruction);
 bool validar_instruccion(char* leido, t_list* list_instructions);
-
-
+bool validar_instruccion_2(char* leido, t_list* list_instructions);
 
 
 

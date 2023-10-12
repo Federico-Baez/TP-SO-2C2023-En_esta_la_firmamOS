@@ -11,6 +11,7 @@
 #include <commons/log.h>
 #include <commons/config.h>
 #include <commons/collections/list.h>
+#include <commons/collections/queue.h>
 #include <commons/string.h>
 #include <shared.h>
 #include <pthread.h>
@@ -22,6 +23,7 @@
 #include <unistd.h>
 
 #include "k_consola.h"
+#include "k_gestor.h"
 
 
 typedef enum{
@@ -51,6 +53,16 @@ int QUANTUM;
 char** RECURSOS;
 char** INSTANCIAS_RECURSOS;
 int GRADO_MULTIPROGRAMACION_INI;
+
+int _PID;
+t_list* procesos;
+
+t_queue* new;
+t_list* ready;
+//t_list* execute;
+t_list* blocked;
+t_list* exit;
+
 
 void leer_config(t_config* config);
 void finalizar_kernel();
