@@ -176,6 +176,7 @@ static void procesar_conexion(void *void_args){
 		case INICIAR_ESTRUCTURA_KM:
 			unBuffer = recibiendo_super_paquete(fd_kernel);
 			//
+			recv_inicializar_estructura(unBuffer, memoria_logger); // Recibe el path, size y el pid del proceso, si hace falta algo mas ,se puede agregar.
 			break;
 		case LIBERAR_ESTRUCTURA_KM:
 			unBuffer = recibiendo_super_paquete(fd_kernel);
@@ -290,7 +291,6 @@ int server_escucha(){
 void enviar_instrucciones_a_cpu(){
 	lista_instrucciones(memoria_logger, PATH_INSTRUCCIONES);
 }
-
 
 
 

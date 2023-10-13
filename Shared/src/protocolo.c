@@ -367,4 +367,25 @@ void identificarme_con_memoria(int conexion, modulo_code modulo_cliente){
 	eliminar_paquete(paquete);
 }
 
+// Manejo del path_size MEMORIA
+void send_path_memoria(int fd_modulo, char* path,int size){
+	t_paquete* paquete = crear_super_paquete(INICIAR_ESTRUCTURA_KM);
+	cargar_string_al_super_paquete(paquete, path);
+	cargar_int_al_super_paquete(paquete, size);
+
+	enviar_paquete(paquete,fd_modulo);
+	eliminar_paquete(paquete);
+}
+
+void recv_inicializar_estructura(t_buffer* buffer, t_log* memoria_logger){
+	char* path = recibir_string_del_buffer(buffer);
+	int size = recibir_int_del_buffer(buffer);
+	int pid = recibir_int_del_buffer(buffer);
+
+	free(path);
+	free(buffer);
+}
+
+
+
 
