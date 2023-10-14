@@ -90,7 +90,7 @@ void finalizar_memoria();
 void saludar_cliente(void *void_args);
 void identificar_modulo(t_buffer* unBuffer, int conexion);
 void atender_mensajes_kernel(t_buffer* buffer);
-
+// void recv_inicializar_estructura(t_buffer* buffer);
 //static void  procesar_conexion(void *void_args);
 void inicializar_memoria();
 void iterator(int *value);

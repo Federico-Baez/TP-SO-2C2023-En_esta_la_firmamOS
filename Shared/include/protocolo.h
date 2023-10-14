@@ -41,6 +41,13 @@ typedef enum{
 	REEMPLAZO_PAGINA,
 	HANDSHAKE,
 	//-----
+	INICICAR_PROCESO,
+	FINALIZAR_PROCESO,
+	DETENER_PLANIFICACION,
+	INICICAR_PLANIFICACION,
+	MULTIPROGRAMACION,
+	PROCESO_ESTADO,
+	//-----
 	INICIAR_ESTRUCTURA_KM,
 	LIBERAR_ESTRUCTURA_KM,
 	//-------
@@ -138,6 +145,10 @@ void enviar_handshake(int conexion);
 void gestionar_handshake_como_cliente(int conexion, char* modulo_destino, t_log* logger);
 void gestionar_handshake_como_server(int conexion, t_log* logger);
 void identificarme_con_memoria(int conexion, modulo_code modulo);
+
+/******************PROCESOS*************/
+// void send_path_memoria(int fd_modulo, char* path,int size); // Se usa dependiendo de como inicialicemos las estructuras
+void recv_inicializar_estructura(t_buffer* buffer, t_log* memoria_logger);
 
 
 #endif /* INCLUDE_PROTOCOLO_H_ */

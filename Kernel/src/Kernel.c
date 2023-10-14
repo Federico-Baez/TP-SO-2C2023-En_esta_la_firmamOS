@@ -23,6 +23,11 @@ int main(int argc, char** argv) {
 	pthread_t hilo_filesystem;
 	//pthread_t hilo_experimentos_xd;
 
+	// ---------------- LE DAMOS CORRIENTE A LOS SEMAFOROS ----------------
+	iniciar_semaforos();
+	iniciar_pthread();
+	iniciar_listas();
+
 	//Probando conexiones
 	fd_cpu_dispatcher = crear_conexion(IP_CPU, PUERTO_CPU_DISPATCH);
 	fd_cpu_interrupt = crear_conexion(IP_CPU, PUERTO_CPU_INTERRUPT);
@@ -71,6 +76,48 @@ void leer_config(t_config* config){
 
 }
 
+
+void leer_consola(){
+	char* leido;
+	leido = readline("> ");
+	char** ingreso = string_split(leido, " ");
+	t_pcb* pcb;
+
+	// Despues hay que actualizar la consola para que no tire error
+	while(strcmp(leido,"\0") != 0){
+		//log_info(kernel_logger, "%s [%d]",leido, (int)strlen(leido));
+		if(string_equals_ignore_case(ingreso[0], "INICIAR_PROCESO")){
+			log_info(kernel_logger, "Selecionaste INICIAR_PROCESO");
+			pcb = iniciar_pcb(atoi(ingreso[3]));
+			log_info(kernel_log_obligatorio, "Se crea el proceso %d en NEW", pcb -> pid);
+
+			agregar_pcb_lista(pcb, list_new, mutex_list_new);
+			if(!list_is_empty(list_new)){
+				inicializar_estructura(fd_memoria, ingreso[1], atoi(ingreso[2]), pcb);
+			}
+		}else if(string_equals_ignore_case(ingreso[0], "FINALIZAR_PROCESO")){
+			//
+		}else if(string_equals_ignore_case(ingreso[0], "DETENER_PLANIFICACION")){
+			//
+		}else if(string_equals_ignore_case(ingreso[0], "INICIAR_PLANIFICACION")){
+			//
+		}else if(string_equals_ignore_case(ingreso[0], "MULTIPROGRAMACION")){
+			//
+		}else if(string_equals_ignore_case(ingreso[0], "PROCESO_ESTADO")){
+			//
+		}else if(string_equals_ignore_case(ingreso[0], "SALIR")){
+			free(leido);
+			free(ingreso);
+			break;
+		}
+		free(leido);
+		free(ingreso);
+		leido = readline("> ");
+		ingreso = string_split(leido, " ");
+	}
+
+	free(leido);
+}
 
 void finalizar_kernel(){
 	log_destroy(kernel_logger);
@@ -243,8 +290,64 @@ void atender_cpu_interrupt(){
 	}
 }
 
+void iniciar_semaforos(){
+	sem_init(&sem_init_pcb, 0, 1);
+	sem_init(&sem_grado_multiprogramacion, 0, 1);
+}
 
+void iniciar_pthread(){
+	pthread_mutex_init(&mutex_list_new, NULL);
+	pthread_mutex_init(&mutex_list_ready, NULL);
+}
 
+void iniciar_listas(){
+	list_new = list_create();
+	list_ready = list_create();
+	list_execute = list_create();
+	list_blocked = list_create();
+}
 
+// ------ Inicializar proceso ------
 
+t_pcb* iniciar_pcb(int prioridad){
+	sem_wait(&sem_init_pcb);
 
+	t_pcb* new_pcb = crear_pcb(process_id, prioridad);
+	process_id ++;
+
+	sem_post(&sem_init_pcb);
+
+	return new_pcb;
+}
+
+void agregar_pcb_lista(t_pcb* pcb, t_list* list_estado, pthread_mutex_t mutex_list_new){
+	pthread_mutex_lock(&mutex_list_new);
+	list_add(list_estado, pcb);
+	pthread_mutex_unlock(&mutex_list_new);
+}
+
+void transferir_from_new_to_ready(){
+//	sem_wait(&sem_grado_multiprogramacion);   // Queda comentado hasta que agreguemos el sem_post, porque todavia no esta hecho el finalizar proceso
+	t_pcb* pcb;
+
+	pthread_mutex_lock(&mutex_list_new);
+	pcb = list_remove(list_new, 0);
+	pthread_mutex_unlock(&mutex_list_new);
+
+	cambiar_estado_pcb(pcb, READY);
+	agregar_pcb_lista(pcb, list_ready, mutex_list_ready);
+
+	log_info(kernel_log_obligatorio, " PID: %d - Estado Anterior: NEW - Estado Actual: READY", pcb -> pid);
+}
+
+void inicializar_estructura(int fd_memoria, char* path, int size, t_pcb* pcb){
+	transferir_from_new_to_ready();
+
+	t_paquete* paquete = crear_super_paquete(INICIAR_ESTRUCTURA_KM);
+	cargar_string_al_super_paquete(paquete, path);
+	cargar_int_al_super_paquete(paquete, size);
+	cargar_int_al_super_paquete(paquete, pcb -> pid);
+
+	enviar_paquete(paquete, fd_memoria);
+	eliminar_paquete(paquete);
+}

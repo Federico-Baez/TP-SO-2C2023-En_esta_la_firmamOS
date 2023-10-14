@@ -9,6 +9,7 @@
 #define INCLUDE_SHARED_H_
 
 
+#include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <commons/log.h>
@@ -18,10 +19,15 @@
 
 #include "socket.h"
 
+// Registros CPU
 
 
-typedef enum{
-	CUALQUIERA
+
+typedef struct{
+	uint32_t AX;
+	uint32_t BX;
+	uint32_t CD;
+	uint32_t DX;
 }t_instruccion;
 
 
@@ -32,9 +38,15 @@ typedef enum{
 	EXEC,
 	BLOCKED,
 	EXIT
-}est_proceso;
+}est_pcb;
 
-
+// Morivos de vuelta al Kernel
+typedef enum{
+	FINALIZACION,
+	PETICION,
+	BLOCK,
+	INTERRUPCION
+}t_vuelta;
 
 //Manejo de instrucciones del Kernel
 typedef enum{
@@ -63,9 +75,12 @@ typedef struct{
 	int pid;
 	int program_counter;
 	int prioridad;
-	t_instruccion*registros;
+	t_instruccion* registros;
+	est_pcb estado;
+	t_vuelta* motivo_vuelta;
 	//  <--- archivos_abiertos;
-}t_contexto_ejecucion;
+	//  <--- abria que agregar las intruccioens enviadas por memoria?
+}t_pcb;
 
 typedef struct{
 	char* pseudo_c;
@@ -84,4 +99,10 @@ typedef struct{
 t_list* lista_instrucciones(t_log* logger, char* dir);
 cod_instruccion convertir_string_a_instruccion(t_log* logger, const char *str_instruccion);
 void liberar_lista_instrucciones(t_list *lista);
+
+// ------ PCB ------
+t_pcb* crear_pcb(int pid, int prioridad);
+void cambiar_estado_pcb(t_pcb* pcb, est_pcb nuevo_estado);
+
+
 #endif /* INCLUDE_SHARED_H_ */

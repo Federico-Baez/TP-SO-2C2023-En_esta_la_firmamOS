@@ -63,7 +63,26 @@ cod_instruccion convertir_string_a_instruccion(t_log* logger, const char *str_in
 
 
     return -1;
+}
 
+t_pcb* crear_pcb(int process_id, int prioridad){
+	t_pcb* new_pcb = malloc(sizeof(t_pcb));
+
+	new_pcb->pid = process_id;
+	new_pcb->program_counter = 0;
+	new_pcb->prioridad = prioridad;
+//	new_pcb->registros->AX = 0;
+//	new_pcb->registros->BX = 0; // No se si hay que inicializarlas o modificarlas cuando memoria nos de las instrucciones.
+//	new_pcb->registros->CX = 0;
+//	new_pcb->registros->DX = 0;
+	new_pcb->estado = NEW;
+	new_pcb->motivo_vuelta = NULL;
+
+	return new_pcb;
+}
+
+void cambiar_estado_pcb(t_pcb* pcb, est_pcb nuevo_estado){
+	pcb -> estado = nuevo_estado;
 }
 
 
