@@ -76,7 +76,7 @@ int server_fd_memoria;
 void* espacio_usuario;
 
 t_dictionary* tablas;
-
+t_list* instrucciones_para_cpu;
 
 
 /*----------------TODO INIT ------------------------*/
@@ -101,7 +101,7 @@ int server_escucha();
 /************TODO INICIAR LA TABLA DE PAGINAS***************/
 tabla_paginas* crear_tabla_paginas(int pid);
 Marco* crear_marco(int base, bool presente);
-
-
-
+t_list* leer_archivo_y_cargar_instrucciones(const char* path_archivo);
+void liberar_memoria_de_instrucciones(t_list* instrucciones);
+char* enviar_instruccion_a_cpu(t_list* instrucciones);
 #endif /* MEMORIA_H_ */

@@ -28,7 +28,7 @@ int main(int argc, char** argv) {
 
 	leer_config(memoria_config);
 	//leer_log();
-	t_list* instrucciones_pseudo = lista_instrucciones(memoria_logger, PATH_INSTRUCCIONES);
+	instrucciones_para_cpu = leer_archivo_y_cargar_instrucciones(PATH_INSTRUCCIONES);
 
 	//TODO: verificar como inicializar memoria
 
@@ -39,7 +39,9 @@ int main(int argc, char** argv) {
 	while(server_escucha()){
 		//log_info(memoria_logger, "Se abre servidor de Memoria");
 	}
-	liberar_lista_instrucciones(instrucciones_pseudo);
+//	liberar_lista_instrucciones(instrucciones_pseudo);
+	leer_archivo_y_cargar_instrucciones(instrucciones_para_cpu);
+	liberar_memoria_de_instrucciones(instrucciones_para_cpu);
 	finalizar_memoria();
 
 	return EXIT_SUCCESS;
@@ -192,7 +194,7 @@ static void procesar_conexion(void *void_args){
 			break;
 		case PETICION_DE_INSTRUCCIONES_CM:
 			unBuffer = recibiendo_super_paquete(fd_cpu);
-			//
+//			enviar_instrucciones_a_cpu(instrucciones_para_cpu);
 			break;
 		case PETICION_DE_EJECUCION_CM:
 			unBuffer = recibiendo_super_paquete(fd_cpu);
@@ -291,9 +293,68 @@ void enviar_instrucciones_a_cpu(){
 	lista_instrucciones(memoria_logger, PATH_INSTRUCCIONES);
 }
 
+t_list* leer_archivo_y_cargar_instrucciones(const char* path_archivo) {
+    FILE* archivo = fopen(path_archivo, "rt");
+    t_list* instrucciones = list_create();
 
+    if(archivo == NULL) {
+        perror("No se encontró el archivo");
+        return instrucciones;
+    }
 
+    char linea_instruccion[256];
+    while(fgets(linea_instruccion, sizeof(linea_instruccion), archivo)) {
 
+        linea_instruccion[strcspn(linea_instruccion, "\n\r")] = '\0';
+
+        char** l_instrucciones = string_split(linea_instruccion, " ");
+        t_instruccion_codigo* pseudo_cod = malloc(sizeof(t_instruccion_codigo));
+        pseudo_cod->pseudo_c = l_instrucciones[0];
+        pseudo_cod->fst_param = l_instrucciones[1] ? strdup(l_instrucciones[1]) : NULL;
+        pseudo_cod->snd_param = l_instrucciones[2] ? strdup(l_instrucciones[2]) : NULL;
+
+        int i = 0;
+        while(l_instrucciones[i]) i++;
+
+        char* instruccion_formateada = NULL;
+        if(i == 3) {
+            instruccion_formateada = string_from_format("%s %s %s", pseudo_cod->pseudo_c, pseudo_cod->fst_param, pseudo_cod->snd_param);
+        } else if(i == 2) {
+            instruccion_formateada = string_from_format("%s %s", pseudo_cod->pseudo_c, pseudo_cod->fst_param);
+        } else {
+            instruccion_formateada = strdup(pseudo_cod->pseudo_c);
+        }
+
+        log_info(memoria_logger, "Se carga la instrucción: %s", instruccion_formateada);
+        list_add(instrucciones, instruccion_formateada);
+
+        // Limpieza
+        free(pseudo_cod);
+        for(int j = 0; j < i; j++) {
+            free(l_instrucciones[j]);
+        }
+        free(l_instrucciones);
+    }
+
+    fclose(archivo);
+    return instrucciones;
+}
+void liberar_memoria_de_instrucciones(t_list* instrucciones){
+	list_destroy_and_destroy_elements(instrucciones, free);
+}
+
+char* enviar_instruccion_a_cpu(t_list* instrucciones){
+	int indice_actual =0;
+	char* instruccion_actual;
+	if(indice_actual <list_size(instrucciones)){
+		instruccion_actual = list_get(instrucciones,indice_actual);
+		log_info(memoria_logger,"[Se enviara el siguiente mensaje] >> %s",instruccion_actual );
+		indice_actual+=1;
+	}else{
+		log_info(memoria_logger, "todas las instrucciones fueron enviadas");
+	}
+	return instruccion_actual;
+}
 
 
 

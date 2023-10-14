@@ -1179,3 +1179,6 @@
 [INFO] 14:49:59:904 [Memoria]/(44144:44144): Inicianlizando memoria
 [INFO] 14:49:59:904 [Memoria]/(44144:44144): Cliente conectado a Memoria
 [INFO] 14:49:59:904 [Memoria]/(44144:44144): Se activa el servidor Memoria 
+[INFO] 22:49:52:490 [Memoria]/(107982:107982): Se carga la instruccion SET
+[INFO] 22:49:52:490 [Memoria]/(107982:107982): Se carga la instruccion 1
+
