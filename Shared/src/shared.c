@@ -19,7 +19,7 @@ t_list* lista_instrucciones(t_log* logger, char* dir){
 		cod_instruccion pseudo_codigo = convertir_string_a_instruccion(logger,l_instrucciones[0]);
 		if(pseudo_codigo >= 0){
 			t_instruccion_codigo* pseudo_cod = malloc(sizeof(t_instruccion_codigo));
-			pseudo_cod->pseudo_c = pseudo_codigo;
+			pseudo_cod->pseudo_c = l_instrucciones[0];
 //			pseudo_cod->pseudo_c = l_instrucciones[0]; //set sum mov_in ...
 			pseudo_cod->fst_param = l_instrucciones[1] ? strdup(l_instrucciones[1]): NULL;
 			pseudo_cod->snd_param = l_instrucciones[2] ? strdup(l_instrucciones[2]): NULL;

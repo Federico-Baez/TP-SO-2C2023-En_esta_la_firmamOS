@@ -68,7 +68,7 @@ typedef struct{
 }t_contexto_ejecucion;
 
 typedef struct{
-	cod_instruccion pseudo_c;
+	char* pseudo_c;
     char* fst_param;
     char* snd_param;
 }t_instruccion_codigo;
