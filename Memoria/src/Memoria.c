@@ -32,10 +32,10 @@ int main(int argc, char** argv) {
 	//TODO: verificar como inicializar memoria
 
 	inicializar_memoria();
-
 	server_fd_memoria = iniciar_servidor(memoria_logger, IP_MEMORIA, PUERTO_ESCUCHA);
-
+	printf("%d \n",server_fd_memoria);
 	while(server_escucha())
+
 	log_info(memoria_logger, "Finaliza servidor de Memoria");
 	instrucciones_para_cpu = leer_archivo_y_cargar_instrucciones(PATH_INSTRUCCIONES);
 	liberar_memoria_de_instrucciones(instrucciones_para_cpu);
@@ -191,8 +191,8 @@ static void procesar_conexion(void *void_args){
 			//
 			break;
 		case PETICION_DE_INSTRUCCIONES_CM:
-			unBuffer = recibiendo_super_paquete(fd_cpu);
-//			enviar_instrucciones_a_cpu(instrucciones_para_cpu);
+			unBuffer = recibiendo_super_paquete(fd_cpu); //recibo el [pId] y el [PC]
+			enviar_instrucciones_a_cpu(unBuffer);
 			break;
 		case PETICION_DE_EJECUCION_CM:
 			unBuffer = recibiendo_super_paquete(fd_cpu);
@@ -272,6 +272,7 @@ void saludar_cliente(void *void_args){
 
 int server_escucha(){
 	server_name = "Memoria";
+	printf("%d \n",server_fd_memoria);
 	int cliente_socket = esperar_cliente(memoria_logger, server_name, server_fd_memoria );
 	if(cliente_socket != -1){
 		pthread_t hilo_cliente;
@@ -287,8 +288,8 @@ int server_escucha(){
 	return 0;
 }
 
-void enviar_instrucciones_a_cpu(){
-	lista_instrucciones(memoria_logger, PATH_INSTRUCCIONES);
+void enviar_instrucciones_a_cpu(t_buffer* buffer){
+	enviar_instruccion_a_cpu(buffer);
 }
 
 t_list* leer_archivo_y_cargar_instrucciones(const char* path_archivo) {
@@ -311,7 +312,7 @@ t_list* leer_archivo_y_cargar_instrucciones(const char* path_archivo) {
         }
 
         t_instruccion_codigo* pseudo_cod = malloc(sizeof(t_instruccion_codigo));
-        pseudo_cod->pseudo_c = l_instrucciones[0];
+        pseudo_cod->pseudo_c = strdup(l_instrucciones[0]);
         pseudo_cod->fst_param = (i > 1) ? strdup(l_instrucciones[1]) : NULL;
         pseudo_cod->snd_param = (i > 2) ? strdup(l_instrucciones[2]) : NULL;
 
@@ -325,14 +326,15 @@ t_list* leer_archivo_y_cargar_instrucciones(const char* path_archivo) {
 
         log_info(memoria_logger, "Se carga la instrucción %s", instruccion_formateada);
         list_add(instrucciones, instruccion_formateada);
-        free(pseudo_cod->pseudo_c);
-        if(pseudo_cod->fst_param) free(pseudo_cod->fst_param);
-        if(pseudo_cod->snd_param) free(pseudo_cod->snd_param);
-        free(pseudo_cod);
+
         for (int j = 0; j < i; j++) {
             free(l_instrucciones[j]);
         }
         free(l_instrucciones);
+        free(pseudo_cod->pseudo_c);
+		if(pseudo_cod->fst_param) free(pseudo_cod->fst_param);
+		if(pseudo_cod->snd_param) free(pseudo_cod->snd_param);
+		free(pseudo_cod);
         i = 0; // Restablece la cuenta para la próxima iteración
     }
 
@@ -345,16 +347,24 @@ void liberar_memoria_de_instrucciones(t_list* instrucciones){
 	list_destroy_and_destroy_elements(instrucciones, free);
 }
 
-char* enviar_instruccion_a_cpu(t_list* instrucciones){
+//TODO con el buffer desempaqueto busco el pId y el PC para poder enviar el char* del nro de instruccion
+//que indice que el PC por ejemplo  linea 5 MOV_IN DX 0
+//enviar a CPU solo la linea MOV_IN DX 0
+
+//TODO: crear una lista de procesos que esta enlazado con un listado de instrucciones correspondiente
+// a su pID
+//Lista general de nodos
+//nodo [int pid, t_list* instrucciones]
+char* enviar_instruccion_a_cpu(t_buffer* buffer){
 	int indice_actual =0;
 	char* instruccion_actual;
-	if(indice_actual <list_size(instrucciones)){
-		instruccion_actual = list_get(instrucciones,indice_actual);
-		log_info(memoria_logger,"[Se enviara el siguiente mensaje] >> %s",instruccion_actual );
-		indice_actual+=1;
-	}else{
-		log_info(memoria_logger, "todas las instrucciones fueron enviadas");
-	}
+//	if(indice_actual <list_size(instrucciones)){
+//		instruccion_actual = list_get(instrucciones,indice_actual);
+//		log_info(memoria_logger,"[Se enviara el siguiente mensaje] >> %s",instruccion_actual );
+//		indice_actual+=1;
+//	}else{
+//		log_info(memoria_logger, "todas las instrucciones fueron enviadas");
+//	}
 	return instruccion_actual;
 }
 

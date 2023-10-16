@@ -23,6 +23,13 @@ typedef struct{
 }Marco;
 t_list* lst_marco;
 
+typedef struct{
+	int pid;
+	int size;
+	char* pathInstrucciones;
+}procss_recibido;
+
+t_list* l_procss_recibidos;
 
 typedef struct{
 	int tamamo_usado;
@@ -97,11 +104,14 @@ void iterator(int *value);
 void leer_log();
 int server_escucha();
 
+/************TODO MANEJO DE INSTRUCCIONES CON CPU***************/
+t_list* leer_archivo_y_cargar_instrucciones(const char* path_archivo);
+void liberar_memoria_de_instrucciones(t_list* instrucciones);
+char* enviar_instruccion_a_cpu(t_buffer* buffer);
+void enviar_instrucciones_a_cpu(t_buffer* buffer);
 
 /************TODO INICIAR LA TABLA DE PAGINAS***************/
 tabla_paginas* crear_tabla_paginas(int pid);
 Marco* crear_marco(int base, bool presente);
-t_list* leer_archivo_y_cargar_instrucciones(const char* path_archivo);
-void liberar_memoria_de_instrucciones(t_list* instrucciones);
-char* enviar_instruccion_a_cpu(t_list* instrucciones);
+
 #endif /* MEMORIA_H_ */

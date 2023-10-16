@@ -1182,3 +1182,95 @@
 [INFO] 22:49:52:490 [Memoria]/(107982:107982): Se carga la instruccion SET
 [INFO] 22:49:52:490 [Memoria]/(107982:107982): Se carga la instruccion 1
 
+[INFO] 00:08:05:076 [Memoria]/(115378:115378): IP_MEMORIA: 127.0.0.1
+[INFO] 00:08:05:076 [Memoria]/(115378:115378): PUERTO_ESCUCHA: 8002
+[INFO] 00:08:05:077 [Memoria]/(115378:115378): IP_FILESYSTEM: 127.0.0.1
+[INFO] 00:08:05:077 [Memoria]/(115378:115378): PUERTO_FILESYSTEM: 8003
+[INFO] 00:08:05:077 [Memoria]/(115378:115378): TAM_MEMORIA: 4096
+[INFO] 00:08:05:077 [Memoria]/(115378:115378): TAM_PAGINA: 16
+[INFO] 00:08:05:077 [Memoria]/(115378:115378): PATH_INSTRUCCIONES: /home/utnso/tp-2023-2c-En_esta_la_firmamOS/prueba_instrucciones/psudocodigos.txt
+[INFO] 00:08:05:077 [Memoria]/(115378:115378): RETARDO_RESPUESTA: 1000
+[INFO] 00:08:05:077 [Memoria]/(115378:115378): ALGORITMO DE ASIGNACION: FIFO 
+
+[INFO] 00:08:05:077 [Memoria]/(115378:115378): Inicianlizando memoria
+[INFO] 00:08:05:077 [Memoria]/(115378:115378): Cliente conectado a Memoria
+[INFO] 00:08:05:077 [Memoria]/(115378:115378): Se activa el servidor Memoria 
+[INFO] 00:08:05:077 [Memoria]/(115378:115378): Se carga la instrucción SET AX 1
+
+[INFO] 00:08:05:077 [Memoria]/(115378:115378): Se carga la instrucción SET BX 1
+
+[INFO] 00:08:05:077 [Memoria]/(115378:115378): Se carga la instrucción SUM AX BX
+
+[INFO] 00:08:05:077 [Memoria]/(115378:115378): Se carga la instrucción SUB AX BX
+
+[INFO] 00:08:05:077 [Memoria]/(115378:115378): Se carga la instrucción MOV_IN DX 0
+
+[INFO] 00:08:05:077 [Memoria]/(115378:115378): Se carga la instrucción MOV_OUT 0 CX
+
+[INFO] 00:08:05:077 [Memoria]/(115378:115378): Se carga la instrucción SLEEP 10
+
+[INFO] 00:08:05:077 [Memoria]/(115378:115378): Se carga la instrucción JNZ AX 4
+
+[INFO] 00:08:05:077 [Memoria]/(115378:115378): Se carga la instrucción WAIT RECURSO_1
+
+[INFO] 00:08:05:077 [Memoria]/(115378:115378): Se carga la instrucción SIGNAL RECURSO_1
+
+[INFO] 00:08:05:077 [Memoria]/(115378:115378): Se carga la instrucción F_OPEN ARCHIVO W
+
+[INFO] 00:08:05:077 [Memoria]/(115378:115378): Se carga la instrucción F_TRUNCATE ARCHIVO 64
+
+[INFO] 00:08:05:077 [Memoria]/(115378:115378): Se carga la instrucción F_SEEK ARCHIVO 8
+
+[INFO] 00:08:05:077 [Memoria]/(115378:115378): Se carga la instrucción F_WRITE ARCHIVO 0
+
+[INFO] 00:08:05:077 [Memoria]/(115378:115378): Se carga la instrucción F_READ ARCHIVO 0
+
+[INFO] 00:08:05:077 [Memoria]/(115378:115378): Se carga la instrucción F_CLOSE ARCHIVO
+
+[INFO] 00:08:05:077 [Memoria]/(115378:115378): Se carga la instrucción EXIT
+[INFO] 00:10:48:857 [Memoria]/(115529:115529): IP_MEMORIA: 127.0.0.1
+[INFO] 00:10:48:857 [Memoria]/(115529:115529): PUERTO_ESCUCHA: 8002
+[INFO] 00:10:48:857 [Memoria]/(115529:115529): IP_FILESYSTEM: 127.0.0.1
+[INFO] 00:10:48:857 [Memoria]/(115529:115529): PUERTO_FILESYSTEM: 8003
+[INFO] 00:10:48:857 [Memoria]/(115529:115529): TAM_MEMORIA: 4096
+[INFO] 00:10:48:857 [Memoria]/(115529:115529): TAM_PAGINA: 16
+[INFO] 00:10:48:857 [Memoria]/(115529:115529): PATH_INSTRUCCIONES: /home/utnso/tp-2023-2c-En_esta_la_firmamOS/prueba_instrucciones/psudocodigos.txt
+[INFO] 00:10:48:857 [Memoria]/(115529:115529): RETARDO_RESPUESTA: 1000
+[INFO] 00:10:48:857 [Memoria]/(115529:115529): ALGORITMO DE ASIGNACION: FIFO 
+
+[INFO] 00:10:48:857 [Memoria]/(115529:115529): Inicianlizando memoria
+[INFO] 00:10:48:857 [Memoria]/(115529:115529): Cliente conectado a Memoria
+[INFO] 00:10:48:857 [Memoria]/(115529:115529): Se activa el servidor Memoria 
+[INFO] 00:10:48:857 [Memoria]/(115529:115529): Se carga la instrucción SET AX 1
+
+[INFO] 00:10:48:857 [Memoria]/(115529:115529): Se carga la instrucción SET BX 1
+
+[INFO] 00:10:48:857 [Memoria]/(115529:115529): Se carga la instrucción SUM AX BX
+
+[INFO] 00:10:48:857 [Memoria]/(115529:115529): Se carga la instrucción SUB AX BX
+
+[INFO] 00:10:48:857 [Memoria]/(115529:115529): Se carga la instrucción MOV_IN DX 0
+
+[INFO] 00:10:48:857 [Memoria]/(115529:115529): Se carga la instrucción MOV_OUT 0 CX
+
+[INFO] 00:10:48:857 [Memoria]/(115529:115529): Se carga la instrucción SLEEP 10
+
+[INFO] 00:10:48:857 [Memoria]/(115529:115529): Se carga la instrucción JNZ AX 4
+
+[INFO] 00:10:48:857 [Memoria]/(115529:115529): Se carga la instrucción WAIT RECURSO_1
+
+[INFO] 00:10:48:857 [Memoria]/(115529:115529): Se carga la instrucción SIGNAL RECURSO_1
+
+[INFO] 00:10:48:857 [Memoria]/(115529:115529): Se carga la instrucción F_OPEN ARCHIVO W
+
+[INFO] 00:10:48:857 [Memoria]/(115529:115529): Se carga la instrucción F_TRUNCATE ARCHIVO 64
+
+[INFO] 00:10:48:857 [Memoria]/(115529:115529): Se carga la instrucción F_SEEK ARCHIVO 8
+
+[INFO] 00:10:48:857 [Memoria]/(115529:115529): Se carga la instrucción F_WRITE ARCHIVO 0
+
+[INFO] 00:10:48:857 [Memoria]/(115529:115529): Se carga la instrucción F_READ ARCHIVO 0
+
+[INFO] 00:10:48:857 [Memoria]/(115529:115529): Se carga la instrucción F_CLOSE ARCHIVO
+
+[INFO] 00:10:48:857 [Memoria]/(115529:115529): Se carga la instrucción EXIT

@@ -30,7 +30,11 @@ int iniciar_servidor(t_log* logger, char* ip, char* puerto)
 //	freeaddrinfo(servinfo);
 //
 //	return socket_servidor;
-	if(puerto == NULL) return -1;
+
+	if(puerto == NULL) {
+		printf("No encuentra el puerto");
+		return -1;
+	}
 
 		struct addrinfo hints;
 		struct addrinfo *server_info;
@@ -50,10 +54,14 @@ int iniciar_servidor(t_log* logger, char* ip, char* puerto)
 
 		if(server_socket == -1 || bind(server_socket, server_info->ai_addr, server_info->ai_addrlen) == -1){
 			freeaddrinfo(server_info);
+			printf("fallo el bindeo");
 			return -1;
 		}
 		freeaddrinfo(server_info);
-		if(listen(server_socket, BACKLOG) == -1) return -1;
+		if(listen(server_socket, BACKLOG) == -1){
+			printf("fallo el listen");
+			return -1;
+		}
 		return server_socket;
 }
 
