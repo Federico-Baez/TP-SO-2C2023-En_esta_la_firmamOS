@@ -27,6 +27,7 @@ typedef struct{
 	int pid;
 	int size;
 	char* pathInstrucciones;
+	t_list* instrucciones;
 }procss_recibido;
 
 t_list* l_procss_recibidos;
@@ -44,7 +45,7 @@ typedef struct{
 
 
 t_list* lst_pagina;
-
+t_list* lst_instruciones;
 
 typedef enum{
 	FIFO,
@@ -104,12 +105,19 @@ void iterator(int *value);
 void leer_log();
 int server_escucha();
 
-/************TODO MANEJO DE INSTRUCCIONES CON CPU***************/
+
+/************TODO CARGAR LISTADO DE INSTRUCCIONES DEL PROCESO***************/
 t_list* leer_archivo_y_cargar_instrucciones(const char* path_archivo);
 void liberar_memoria_de_instrucciones(t_list* instrucciones);
-char* enviar_instruccion_a_cpu(t_buffer* buffer);
-void enviar_instrucciones_a_cpu(t_buffer* buffer);
+char* obtener_instruccion_por_indice(int indice_instruccion, t_list* instrucciones);
 
+/******************************FUNCIONES PARA PROCESOS*****************************/
+procss_recibido* obtener_proceso_por_id(int pid, t_list* lst_procesos);
+void agregar_proceso_a_listado(t_buffer* unBuffer, t_list* lst_procesos_recibido);
+void liberar_proceso(procss_recibido* proceso);
+
+/************TODO MANEJO DE INSTRUCCIONES CON CPU***************/
+void enviar_instrucciones_a_cpu(int pid_buffer,int ip_buffer);
 /************TODO INICIAR LA TABLA DE PAGINAS***************/
 tabla_paginas* crear_tabla_paginas(int pid);
 Marco* crear_marco(int base, bool presente);
