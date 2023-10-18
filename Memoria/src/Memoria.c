@@ -292,7 +292,7 @@ int server_escucha(){
 }
 
 
-
+/******************************INSTRUCCIONES*****************************/
 t_list* leer_archivo_y_cargar_instrucciones(const char* path_archivo) {
     FILE* archivo = fopen(path_archivo, "rt");
     t_list* instrucciones = list_create();
@@ -362,6 +362,10 @@ char* obtener_instruccion_por_indice(int indice_instruccion, t_list* instruccion
 			? instruccion_actual = list_get(instrucciones,indice_instruccion) : NULL;
 
 }
+/******************************CARGAR INSTRUCCIONES*****************************/
+
+/******************************FUNCIONES PARA PROCESOS*****************************/
+
 procss_recibido* obtener_proceso_por_id(int pid, t_list* lst_procesos){
 	bool buscar_el_pid(void* proceso){
 		return ((procss_recibido*)proceso)->pid == pid;
@@ -394,6 +398,16 @@ void liberar_proceso(procss_recibido* proceso) {
     free(proceso->pathInstrucciones);
     free(proceso);
 }
+void liberar_listado_procesos(t_list* lst_procesos) {
+    for (int i = 0; i < list_size(lst_procesos); i++) {
+        procss_recibido* proceso = list_get(lst_procesos, i);
+        liberar_proceso(proceso);
+    }
+    list_destroy(lst_procesos);
+}
+
+/******************************FUNCIONES PARA CPU*****************************/
+
 void enviar_instrucciones_a_cpu(int pid_buffer,int ip_buffer){
 	t_paquete* paquete = crear_super_paquete(PETICION_DE_INSTRUCCIONES_CM);
 

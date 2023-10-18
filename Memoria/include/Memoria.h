@@ -115,7 +115,7 @@ char* obtener_instruccion_por_indice(int indice_instruccion, t_list* instruccion
 procss_recibido* obtener_proceso_por_id(int pid, t_list* lst_procesos);
 void agregar_proceso_a_listado(t_buffer* unBuffer, t_list* lst_procesos_recibido);
 void liberar_proceso(procss_recibido* proceso);
-
+void liberar_listado_procesos(t_list* lst_procesos);
 /************TODO MANEJO DE INSTRUCCIONES CON CPU***************/
 void enviar_instrucciones_a_cpu(int pid_buffer,int ip_buffer);
 /************TODO INICIAR LA TABLA DE PAGINAS***************/
