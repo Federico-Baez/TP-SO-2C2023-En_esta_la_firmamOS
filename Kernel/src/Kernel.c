@@ -27,6 +27,7 @@ int main(int argc, char** argv) {
 	iniciar_semaforos();
 	iniciar_pthread();
 	iniciar_listas();
+	iniciar_recursos();
 
 	//Probando conexiones
 	fd_cpu_dispatcher = crear_conexion(IP_CPU, PUERTO_CPU_DISPATCH);
@@ -57,7 +58,6 @@ int main(int argc, char** argv) {
 
 	return EXIT_SUCCESS;
 }
-
 
 void leer_config(t_config* config){
 	IP_MEMORIA = config_get_string_value(config,"IP_MEMORIA");
@@ -95,6 +95,7 @@ void leer_consola(){
 
 			if(!list_is_empty(list_new)){
 				inicializar_estructura(fd_memoria, ingreso[1], atoi(ingreso[2]), pcb);
+				sem_post(&sem_list_ready);
 				//inicializar_ejecucion();
 			}
 		}else if(string_equals_ignore_case(ingreso[0], "FINALIZAR_PROCESO")){
@@ -158,7 +159,7 @@ void atender_memoria(){
 
 		switch (cod_op){
 		case ESTRUCTURA_INICIADA_KM_OK:
-			unBuffer = recibiendo_super_paquete(fd_memoria);
+//			unBuffer = recibiendo_super_paquete(fd_memoria);
 //			char* mensaje = recibir_string_del_buffer(unBuffer);
 //			log_info(kernel_logger, mensaje);
 //			free(mensaje);
@@ -314,10 +315,11 @@ void atender_cpu_interrupt(){
 	}
 }
 
+// ------ Inicializamos Variables y Recursos ------
 void iniciar_semaforos(){
 	sem_init(&sem_init_pcb, 0, 1);
 	sem_init(&sem_grado_multiprogramacion, 0, GRADO_MULTIPROGRAMACION_INI);
-	sem_init(&sem_list_ready, 0, 1);
+	sem_init(&sem_list_ready, 0, 0);
 	sem_init(&sem_iniciar_estructuras_memoria, 0, 0);
 }
 
@@ -332,6 +334,19 @@ void iniciar_listas(){
 	list_ready = list_create();
 	list_execute = list_create();
 	list_blocked = list_create();
+	list_recursos = list_create();
+}
+
+void iniciar_recursos(){
+	t_recurso* recurso = malloc(sizeof(t_recurso));
+	for(int i = 0; i < string_array_size(RECURSOS); i++){
+		char* El_recurso = RECURSOS[i];
+		recurso -> nombre_recurso =  malloc(sizeof(char) * strlen(El_recurso) + 1);
+		recurso -> nombre_recurso = El_recurso;
+		recurso -> instancias = atoi(INSTANCIAS_RECURSOS[i]);
+		recurso -> procesos_que_solicitan = list_create();
+		recurso -> procesos_que_retienen = list_create();
+	}
 }
 
 // ------ Inicializar proceso ------
@@ -374,6 +389,7 @@ void inicializar_estructura(int fd_memoria, char* path, int size, t_pcb* pcb){
 
 	send_enviar_path_memoria(fd_memoria, path, size, pcb -> pid);
 	free(pids_en_ready);
+
 //	sem_wait(&sem_iniciar_estructuras_memoria);
 }
 
@@ -387,7 +403,7 @@ void agregar_pcb_lista(t_pcb* pcb, t_list* list_estado, pthread_mutex_t mutex_li
 t_pcb* remover_proceso_lista(t_list* list_estado, pthread_mutex_t mutex){
 	t_pcb* pcb;
 	pthread_mutex_lock(&mutex);
-	pcb = list_remove(list_estado, pcb);
+	pcb = list_remove(list_estado, 0);
 	pthread_mutex_unlock(&mutex);
 	return pcb;
 }

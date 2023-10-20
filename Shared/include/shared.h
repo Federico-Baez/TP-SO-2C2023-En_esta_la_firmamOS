@@ -19,13 +19,13 @@
 #include "protocolo.h"
 #include "socket.h"
 
-//t_list* list_recursos;
+
 
 typedef struct{
 	char* nombre_recurso;
 	int instancias;
 	t_list* procesos_que_solicitan;
-	t_list* procesos_que__retienen;
+	t_list* procesos_que_retienen;
 }t_recurso;
 
 typedef struct{

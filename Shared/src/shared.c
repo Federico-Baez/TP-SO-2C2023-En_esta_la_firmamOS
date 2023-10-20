@@ -23,7 +23,7 @@ t_list* lista_instrucciones(t_log* logger, char* dir){
 //			pseudo_cod->pseudo_c = l_instrucciones[0]; //set sum mov_in ...
 			pseudo_cod->fst_param = l_instrucciones[1] ? strdup(l_instrucciones[1]): NULL;
 			pseudo_cod->snd_param = l_instrucciones[2] ? strdup(l_instrucciones[2]): NULL;
-			log_info(logger, "Se agrega el numero del codigo del  pseudocodigo: %d y la instruccion: %s  \n",pseudo_cod->pseudo_c,l_instrucciones[0] );
+			log_info(logger, "Se agrega el numero del codigo del  pseudocodigo: %s y la instruccion: %s  \n",pseudo_cod->pseudo_c, l_instrucciones[0] );
 			list_add(list_instrucciones,pseudo_cod );
 		}
 		free(strings_de_instrucciones);

@@ -21,8 +21,6 @@
 #include <stdio.h>
 #include <readline/readline.h>
 #include <unistd.h>
-#include "k_consola.h"
-#include "k_gestor.h"
 #include <semaphore.h>
 
 typedef enum{
@@ -36,6 +34,7 @@ t_list* list_new;
 t_list* list_ready;
 t_list* list_execute;
 t_list* list_blocked;
+t_list* list_recursos;
 
 t_log* kernel_logger;
 t_log* kernel_log_obligatorio;
@@ -86,6 +85,8 @@ void atender_filesystem();
 void atender_cpu_dispatch();
 void atender_cpu_interrupt();
 
+void leer_consola();
+
 // ------ Inicializar variables ------
 void iniciar_semaforos();
 void iniciar_pthread();
@@ -112,11 +113,11 @@ void transferir_from_actual_to_siguiente(t_list* list_actual, pthread_mutex_t mu
 // ------ PCB ------
 t_pcb* iniciar_pcb(int prioridad);
 void agregar_pcb_lista(t_pcb* pcb, t_list* list_estados, pthread_mutex_t mutex_list);
-
 char* estado_to_string(est_pcb estado);
-
 t_pcb* recv_pcb(t_buffer* paquete_pcb);
 
+// ------ RECURSOS ------
+void iniciar_recursos();
 
 #endif /* KERNEL_H_ */
 
