@@ -177,6 +177,7 @@ static void procesar_conexion(void *void_args){
 			//
 			recv_inicializar_estructura(unBuffer, memoria_logger); // Recibe el path, size y el pid del proceso, si hace falta algo mas ,se puede agregar.
 			agregar_proceso_a_listado(unBuffer, l_procss_recibidos);
+
 			break;
 		case LIBERAR_ESTRUCTURA_KM:
 			unBuffer = recibiendo_super_paquete(fd_kernel);
@@ -387,6 +388,7 @@ void agregar_proceso_a_listado(t_buffer* unBuffer, t_list* lst_procesos_recibido
 
 	list_add(lst_procesos_recibido, un_proceso);
 	free(unBuffer);
+	handhsake_modules(fd_kernel,"PROCESO INICIALIZADO ESTRUCTURA KERNEL MEMORIA");
 }
 
 void liberar_proceso(procss_recibido* proceso) {
@@ -413,6 +415,7 @@ void enviar_instrucciones_a_cpu(int pid_buffer,int ip_buffer){
 
 	procss_recibido* un_proceso = obtener_proceso_por_id(pid_buffer, l_procss_recibidos);
 	char* instruccion = obtener_instruccion_por_indice(ip_buffer, un_proceso->instrucciones);
+	enviar_paquete(paquete, fd_cpu);
 	cargar_string_al_super_paquete(paquete, instruccion);
 	eliminar_paquete(paquete);
 }

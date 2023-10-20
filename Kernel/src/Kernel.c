@@ -175,7 +175,7 @@ void atender_memoria(){
 		log_info(kernel_logger, "Se recibio algo de MEMORIA");
 
 		switch (cod_op) {
-		case INICIAR_ESTRUCTURA_KM:
+		case ESTRUCTURA_INICIADA_KM_OK:
 			unBuffer = recibiendo_super_paquete(fd_memoria);
 			//
 			break;

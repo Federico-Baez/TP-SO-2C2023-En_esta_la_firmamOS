@@ -63,15 +63,6 @@ char** INSTANCIAS_RECURSOS;
 int GRADO_MULTIPROGRAMACION_INI;
 
 
-int _PID;
-t_list* procesos;
-
-t_queue* new;
-t_list* ready;
-//t_list* execute;
-t_list* blocked;
-t_list* exit;
-
 
 // ------ SEMAFOROS ------
 sem_t sem_init_pcb;
