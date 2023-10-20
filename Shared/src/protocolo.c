@@ -1,7 +1,11 @@
 #include "../include/protocolo.h"
 
 void handhsake_modules(int conexion, char* mensaje){
-	send(conexion, mensaje, sizeof(char*)*(strlen(mensaje)+1), 0);
+	t_paquete* un_paquete = crear_super_paquete(ESTRUCTURA_INICIADA_KM_OK);
+
+	cargar_string_al_super_paquete(un_paquete, mensaje);
+	enviar_paquete(un_paquete, conexion);
+	eliminar_paquete(un_paquete);
 }
 
 void enviar_mensaje(char* mensaje, int socket_cliente)

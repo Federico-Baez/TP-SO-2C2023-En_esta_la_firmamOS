@@ -29,7 +29,7 @@ int main(int argc, char** argv) {
 	leer_config(memoria_config);
 	leer_log();
 
-	l_procss_recibidos = list_create();
+	list_procss_recibidos = list_create();
 	//TODO: verificar como inicializar memoria
 	inicializar_memoria();
 	server_fd_memoria = iniciar_servidor(memoria_logger, IP_MEMORIA, PUERTO_ESCUCHA);
@@ -176,7 +176,7 @@ static void procesar_conexion(void *void_args){
 			unBuffer = recibiendo_super_paquete(fd_kernel);
 			//
 			recv_inicializar_estructura(unBuffer, memoria_logger); // Recibe el path, size y el pid del proceso, si hace falta algo mas ,se puede agregar.
-			agregar_proceso_a_listado(unBuffer, l_procss_recibidos);
+			agregar_proceso_a_listado(unBuffer, list_procss_recibidos);
 
 			break;
 		case LIBERAR_ESTRUCTURA_KM:
@@ -367,17 +367,17 @@ char* obtener_instruccion_por_indice(int indice_instruccion, t_list* instruccion
 
 /******************************FUNCIONES PARA PROCESOS*****************************/
 
-procss_recibido* obtener_proceso_por_id(int pid, t_list* lst_procesos){
+proceso_recibido* obtener_proceso_por_id(int pid, t_list* lst_procesos){
 	bool buscar_el_pid(void* proceso){
-		return ((procss_recibido*)proceso)->pid == pid;
+		return ((proceso_recibido*)proceso)->pid == pid;
 	}
-	procss_recibido* un_proceso = list_find(lst_procesos, buscar_el_pid);
+	proceso_recibido* un_proceso = list_find(lst_procesos, buscar_el_pid);
 	return un_proceso;
 }
 
 
 void agregar_proceso_a_listado(t_buffer* unBuffer, t_list* lst_procesos_recibido){
-	procss_recibido* un_proceso = malloc(sizeof(procss_recibido));
+	proceso_recibido* un_proceso = malloc(sizeof(proceso_recibido));
 	if (un_proceso == NULL) {
 	        perror("Error al reservar memoria para el proceso");
 	        exit(EXIT_FAILURE);
@@ -389,9 +389,10 @@ void agregar_proceso_a_listado(t_buffer* unBuffer, t_list* lst_procesos_recibido
 	list_add(lst_procesos_recibido, un_proceso);
 	free(unBuffer);
 	handhsake_modules(fd_kernel,"PROCESO INICIALIZADO ESTRUCTURA KERNEL MEMORIA");
+
 }
 
-void liberar_proceso(procss_recibido* proceso) {
+void liberar_proceso(proceso_recibido* proceso) {
     for (int i = 0; i < list_size(proceso->instrucciones); i++) {
         char* instruccion = list_get(proceso->instrucciones, i);
         free(instruccion);
@@ -402,7 +403,7 @@ void liberar_proceso(procss_recibido* proceso) {
 }
 void liberar_listado_procesos(t_list* lst_procesos) {
     for (int i = 0; i < list_size(lst_procesos); i++) {
-        procss_recibido* proceso = list_get(lst_procesos, i);
+        proceso_recibido* proceso = list_get(lst_procesos, i);
         liberar_proceso(proceso);
     }
     list_destroy(lst_procesos);
@@ -413,7 +414,7 @@ void liberar_listado_procesos(t_list* lst_procesos) {
 void enviar_instrucciones_a_cpu(int pid_buffer,int ip_buffer){
 	t_paquete* paquete = crear_super_paquete(PETICION_DE_INSTRUCCIONES_CM);
 
-	procss_recibido* un_proceso = obtener_proceso_por_id(pid_buffer, l_procss_recibidos);
+	proceso_recibido* un_proceso = obtener_proceso_por_id(pid_buffer, list_procss_recibidos);
 	char* instruccion = obtener_instruccion_por_indice(ip_buffer, un_proceso->instrucciones);
 	enviar_paquete(paquete, fd_cpu);
 	cargar_string_al_super_paquete(paquete, instruccion);

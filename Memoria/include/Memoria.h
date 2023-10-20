@@ -28,9 +28,9 @@ typedef struct{
 	int size;
 	char* pathInstrucciones;
 	t_list* instrucciones;
-}procss_recibido;
+}proceso_recibido;
 
-t_list* l_procss_recibidos;
+t_list* list_procss_recibidos;
 
 typedef struct{
 	int tamamo_usado;
@@ -44,8 +44,8 @@ typedef struct{
 }tabla_paginas;
 
 
-t_list* lst_pagina;
-t_list* lst_instruciones;
+t_list* list_pagina;
+t_list* list_instruciones;
 
 typedef enum{
 	FIFO,
@@ -112,9 +112,9 @@ void liberar_memoria_de_instrucciones(t_list* instrucciones);
 char* obtener_instruccion_por_indice(int indice_instruccion, t_list* instrucciones);
 
 /******************************FUNCIONES PARA PROCESOS*****************************/
-procss_recibido* obtener_proceso_por_id(int pid, t_list* lst_procesos);
+proceso_recibido* obtener_proceso_por_id(int pid, t_list* lst_procesos);
 void agregar_proceso_a_listado(t_buffer* unBuffer, t_list* lst_procesos_recibido);
-void liberar_proceso(procss_recibido* proceso);
+void liberar_proceso(proceso_recibido* proceso);
 void liberar_listado_procesos(t_list* lst_procesos);
 /************TODO MANEJO DE INSTRUCCIONES CON CPU***************/
 void enviar_instrucciones_a_cpu(int pid_buffer,int ip_buffer);
