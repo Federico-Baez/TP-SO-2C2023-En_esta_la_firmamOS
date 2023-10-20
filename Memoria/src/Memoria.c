@@ -36,7 +36,7 @@ int main(int argc, char** argv) {
 	printf("%d \n",server_fd_memoria);
 	while(server_escucha())
 
-	log_info(memoria_logger, "Finaliza servidor de Memoria");
+//	log_info(memoria_logger, "Finaliza servidor de Memoria");
 	instrucciones_para_cpu = leer_archivo_y_cargar_instrucciones(PATH_INSTRUCCIONES);
 	liberar_memoria_de_instrucciones(instrucciones_para_cpu);
 	finalizar_memoria();
@@ -382,9 +382,9 @@ void agregar_proceso_a_listado(t_buffer* unBuffer, t_list* lst_procesos_recibido
 	        perror("Error al reservar memoria para el proceso");
 	        exit(EXIT_FAILURE);
 	}
-	un_proceso->pid =recibir_int_del_buffer(unBuffer);
-	un_proceso->size = recibir_int_del_buffer(unBuffer);
 	un_proceso->pathInstrucciones = recibir_string_del_buffer(unBuffer);
+	un_proceso->size = recibir_int_del_buffer(unBuffer);
+	un_proceso->pid =recibir_int_del_buffer(unBuffer);
 
 	list_add(lst_procesos_recibido, un_proceso);
 	free(unBuffer);
@@ -416,7 +416,7 @@ void enviar_instrucciones_a_cpu(int pid_buffer,int ip_buffer){
 
 	proceso_recibido* un_proceso = obtener_proceso_por_id(pid_buffer, list_procss_recibidos);
 	char* instruccion = obtener_instruccion_por_indice(ip_buffer, un_proceso->instrucciones);
-	enviar_paquete(paquete, fd_cpu);
 	cargar_string_al_super_paquete(paquete, instruccion);
+	enviar_paquete(paquete, fd_cpu);
 	eliminar_paquete(paquete);
 }

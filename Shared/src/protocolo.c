@@ -392,14 +392,7 @@ void send_enviar_path_memoria(int fd_memoria, char* path, int size, int process_
 }
 
 
-void recv_inicializar_estructura(t_buffer* buffer, t_log* memoria_logger){
-	char* path = recibir_string_del_buffer(buffer);
-	int size = recibir_int_del_buffer(buffer);
-	int pid = recibir_int_del_buffer(buffer);
 
-	free(path);
-	free(buffer);
-}
 
 
 

@@ -12,4 +12,9 @@ LD_LIBRARY_PATH=/home/utnso/tp-2023-2c-En_esta_la_firmamOS/Shared/Debug/ ./CPU .
 LD_LIBRARY_PATH=/home/utnso/tp-2023-2c-En_esta_la_firmamOS/Shared/Debug/ ./FIleSystem ../filesystem.config
 LD_LIBRARY_PATH=/home/utnso/tp-2023-2c-En_esta_la_firmamOS/Shared/Debug/ ./Memoria ../memoria.config
 
+#Valgrind de memoria
+LD_LIBRARY_PATH=/home/utnso/tp-2023-2c-En_esta_la_firmamOS/Shared/Debug/ valgrind --leak-check=full ./Memoria ../memoria.config
+
+#INICIAR PROCESO EN KERNEL 
+INICIAR_PROCESO /home/utnso/tp-2023-2c-En_esta_la_firmamOS/prueba_instrucciones/psudocodigos.txt 12 1
 
