@@ -85,15 +85,17 @@ void leer_consola(){
 
 	// Despues hay que actualizar la consola para que no tire error
 	while(strcmp(leido,"\0") != 0){
-		//log_info(kernel_logger, "%s [%d]",leido, (int)strlen(leido));
 		if(string_equals_ignore_case(ingreso[0], "INICIAR_PROCESO")){
-			log_info(kernel_logger, "Selecionaste INICIAR_PROCESO");
+			log_info(kernel_logger, "Ingreso en: INICIAR_PROCESO");
+
 			pcb = iniciar_pcb(atoi(ingreso[3]));
-			log_info(kernel_log_obligatorio, "Se crea el proceso %d en NEW", pcb -> pid);
+			log_info(kernel_log_obligatorio, "Se crea el proceso %d en %s", pcb -> pid, estado_to_string(pcb -> estado));
 
 			agregar_pcb_lista(pcb, list_new, mutex_list_new);
+
 			if(!list_is_empty(list_new)){
 				inicializar_estructura(fd_memoria, ingreso[1], atoi(ingreso[2]), pcb);
+				//inicializar_ejecucion();
 			}
 		}else if(string_equals_ignore_case(ingreso[0], "FINALIZAR_PROCESO")){
 			//
@@ -143,26 +145,6 @@ void asignar_planificador_cp(char* algoritmo_planificacion){
 		}
 }
 
-void atender_experimentos_xd(){
-//	t_paquete* paquete = crear_super_paquete(MENSAJES_POR_CONSOLA);
-	int i;
-	char* cadena = string_new();
-	sleep(2);
-	for(i=1; i<=50; i++){
-		t_paquete* paquete = crear_super_paquete(MENSAJES_POR_CONSOLA);
-		cadena = string_repeat('A', i);
-		cargar_int_al_super_paquete(paquete, strlen(cadena)+1);
-		cargar_string_al_super_paquete(paquete, cadena);
-		enviar_paquete(paquete, fd_cpu_dispatcher);
-		eliminar_paquete(paquete);
-		sleep(1);
-	}
-}
-
-void atender_esta_prueba(t_buffer* myBuffer){
-	//
-}
-
 void atender_memoria(){
 	gestionar_handshake_como_cliente(fd_memoria, "MEMORIA", kernel_logger);
 	identificarme_con_memoria(fd_memoria, KERNEL);
@@ -174,10 +156,13 @@ void atender_memoria(){
 		t_buffer* unBuffer;
 		log_info(kernel_logger, "Se recibio algo de MEMORIA");
 
-		switch (cod_op) {
+		switch (cod_op){
 		case ESTRUCTURA_INICIADA_KM_OK:
 			unBuffer = recibiendo_super_paquete(fd_memoria);
-			//
+//			char* mensaje = recibir_string_del_buffer(unBuffer);
+//			log_info(kernel_logger, mensaje);
+//			free(mensaje);
+//			sem_post(&sem_iniciar_estructuras_memoria);
 			break;
 		case LIBERAR_ESTRUCTURA_KM:
 			unBuffer = recibiendo_super_paquete(fd_memoria);
@@ -200,6 +185,7 @@ void atender_memoria(){
 	}
 
 }
+
 void atender_filesystem(){
 	gestionar_handshake_como_cliente(fd_filesystem, "FILESYSTEM", kernel_logger);
 	log_info(kernel_logger, "HANDSHAKE CON FILESYSTEM [EXITOSO]");
@@ -231,6 +217,7 @@ void atender_filesystem(){
 		}
 	}
 }
+
 void atender_cpu_dispatch(){
 	gestionar_handshake_como_cliente(fd_cpu_dispatcher, "CPU_Dispatch", kernel_logger);
 	log_info(kernel_logger, "HANDSHAKE CON CPU_Dispatch [EXITOSO]");
@@ -240,13 +227,40 @@ void atender_cpu_dispatch(){
 		log_info(kernel_logger, "Se recibio algo de FILESYSTEM");
 
 		switch (cod_op) {
-		case EJECUTAR_PROCESO_KC:
+		case FINALIZAR_PROCESO_CPK: // Este caso seria para el PLANIFICADOR LARGO PLAZO
 			unBuffer = recibiendo_super_paquete(fd_cpu_dispatcher);
-			//
+//			t_pcb* pcb = recv_pcb(unBuffer);
+//			transferir_from_actual_to_siguiente();
 			break;
-		case PRUEBAS:
+		case ATENDER_INSTRUCCION_CPK:
 			unBuffer = recibiendo_super_paquete(fd_cpu_dispatcher);
-			//
+			char* instruccion_CPU = recibir_string_del_buffer(unBuffer); // Se supone que puede ser SLEEP, WAIT, SIGNAL
+			if(strcmp(instruccion_CPU, "SLEEP")){
+
+			}else if(strcmp(instruccion_CPU, "WAIT")){
+
+			}else if(strcmp(instruccion_CPU, "SIGNAL")){
+
+			}else if(strcmp(instruccion_CPU, "MOV_IN")){
+
+			}else if(strcmp(instruccion_CPU, "MOV_OUT")){
+
+			}else if(strcmp(instruccion_CPU, "F_OPEN")){
+
+			}else if(strcmp(instruccion_CPU, "F_CLOSE")){
+
+			}else if(strcmp(instruccion_CPU, "F_SEEK")){
+
+			}else if(strcmp(instruccion_CPU, "F_READ")){
+
+			}else if(strcmp(instruccion_CPU, "F_WRITE")){
+
+			}else if(strcmp(instruccion_CPU, "F_TRUNCATE")){
+
+			}else if(strcmp(instruccion_CPU, "EXIT")){
+
+			}
+//			atender_motivo_block(pcb);
 			break;
 		case -1:
 			log_error(kernel_logger, "[DESCONEXION]: FILESYSTEM");
@@ -260,6 +274,16 @@ void atender_cpu_dispatch(){
 		}
 	}
 }
+
+//void atender_motivo_block(t_pcb* pcb){
+////	transferir_from_actual_to_siguiente(lis)
+//	proximo_a_ejecutar();
+//}
+//
+//void atender_blockeados(){
+//
+//}
+
 void atender_cpu_interrupt(){
 	gestionar_handshake_como_cliente(fd_cpu_interrupt, "CPU_Interrupt", kernel_logger);
 	log_info(kernel_logger, "HANDSHAKE CON CPU_Interrupt [EXITOSO]");
@@ -292,12 +316,15 @@ void atender_cpu_interrupt(){
 
 void iniciar_semaforos(){
 	sem_init(&sem_init_pcb, 0, 1);
-	sem_init(&sem_grado_multiprogramacion, 0, 1);
+	sem_init(&sem_grado_multiprogramacion, 0, GRADO_MULTIPROGRAMACION_INI);
+	sem_init(&sem_list_ready, 0, 1);
+	sem_init(&sem_iniciar_estructuras_memoria, 0, 0);
 }
 
 void iniciar_pthread(){
 	pthread_mutex_init(&mutex_list_new, NULL);
 	pthread_mutex_init(&mutex_list_ready, NULL);
+	pthread_mutex_init(&mutex_list_exec, NULL);
 }
 
 void iniciar_listas(){
@@ -320,34 +347,166 @@ t_pcb* iniciar_pcb(int prioridad){
 	return new_pcb;
 }
 
-void agregar_pcb_lista(t_pcb* pcb, t_list* list_estado, pthread_mutex_t mutex_list_new){
-	pthread_mutex_lock(&mutex_list_new);
-	list_add(list_estado, pcb);
-	pthread_mutex_unlock(&mutex_list_new);
-}
-
 void transferir_from_new_to_ready(){
 //	sem_wait(&sem_grado_multiprogramacion);   // Queda comentado hasta que agreguemos el sem_post, porque todavia no esta hecho el finalizar proceso
 	t_pcb* pcb;
 
-	pthread_mutex_lock(&mutex_list_new);
-	pcb = list_remove(list_new, 0);
-	pthread_mutex_unlock(&mutex_list_new);
+	pcb = remover_proceso_lista(list_new, mutex_list_new);
+
+	char* estado_anterior = "NEW";
 
 	cambiar_estado_pcb(pcb, READY);
+
 	agregar_pcb_lista(pcb, list_ready, mutex_list_ready);
 
-	log_info(kernel_log_obligatorio, " PID: %d - Estado Anterior: NEW - Estado Actual: READY", pcb -> pid);
+	log_info(kernel_log_obligatorio, " PID: %d - Estado Anterior: %s - Estado Actual: %s", pcb -> pid, estado_anterior, estado_to_string(pcb -> estado));
+
+//	pcb_destroy(pcb);
+//	free(estado_anterior);
+	// No se si son necesarios
 }
 
 void inicializar_estructura(int fd_memoria, char* path, int size, t_pcb* pcb){
 	transferir_from_new_to_ready();
 
-	t_paquete* paquete = crear_super_paquete(INICIAR_ESTRUCTURA_KM);
-	cargar_string_al_super_paquete(paquete, path);
-	cargar_int_al_super_paquete(paquete, size);
-	cargar_int_al_super_paquete(paquete, pcb -> pid);
+	char* pids_en_ready = lista_pids_en_Ready();
+	log_info(kernel_log_obligatorio, "Cola Ready %s: %s",estado_to_string(pcb -> estado), pids_en_ready);
 
-	enviar_paquete(paquete, fd_memoria);
-	eliminar_paquete(paquete);
+	send_enviar_path_memoria(fd_memoria, path, size, pcb -> pid);
+	free(pids_en_ready);
+//	sem_wait(&sem_iniciar_estructuras_memoria);
+}
+
+// ------ PCB ------
+void agregar_pcb_lista(t_pcb* pcb, t_list* list_estado, pthread_mutex_t mutex_list){
+	pthread_mutex_lock(&mutex_list);
+	list_add(list_estado, pcb);
+	pthread_mutex_unlock(&mutex_list);
+}
+
+t_pcb* remover_proceso_lista(t_list* list_estado, pthread_mutex_t mutex){
+	t_pcb* pcb;
+	pthread_mutex_lock(&mutex);
+	pcb = list_remove(list_estado, pcb);
+	pthread_mutex_unlock(&mutex);
+	return pcb;
+}
+
+t_pcb* recv_pcb(t_buffer* paquete_pcb){
+	t_pcb* pcb = malloc(sizeof(t_pcb));
+
+	pcb -> pid = recibir_int_del_buffer(paquete_pcb);
+	pcb -> program_counter = recibir_int_del_buffer(paquete_pcb);
+	pcb -> prioridad = recibir_int_del_buffer(paquete_pcb);
+
+	return pcb;
+}
+
+//-----------Ejecutar procesos-------------
+//void proximo_a_ejecucion(){
+//
+//	while(1){
+//		sem_wait(&sem_list_ready);
+//		sem_wait(&sem_cpu_free_exec);  // Creo que deberia ir un semaforo de si el CPU esta libre para ejecutar?
+//
+//		t_pcb* pcb = elegir_proceso_segun_algoritmo();
+//		enviar_contexto_pcb(pcb);
+//	}
+//}
+
+void transferir_from_actual_to_siguiente(t_list* list_actual, pthread_mutex_t mutex_actual, t_list* list_siguiente, pthread_mutex_t mutex_siguiente, est_pcb estado_siguiente){
+	t_pcb* pcb;
+
+	pcb = remover_proceso_lista(list_actual, mutex_actual);
+
+	char* estado_anterior = estado_to_string(pcb -> estado);
+
+	cambiar_estado_pcb(pcb, estado_siguiente);
+
+	agregar_pcb_lista(pcb,  list_siguiente, mutex_siguiente);
+
+	log_info(kernel_log_obligatorio, " PID: %d - Estado Anterior: %s - Estado Actual: %s", pcb -> pid, estado_anterior, estado_to_string(pcb -> estado));
+
+}
+
+//t_pcb* elegir_proceso_segun_algoritmo(){
+//	switch(ALGORITMO_PLANIFICACION){
+//		case FIFO:
+//			return 1;
+//		case ROUNDROBIN:
+//			// return remover_proceso_lista(list_ready, mutex_list_ready);
+//		case PRIORIDADES:
+//			return obtener_proceso_segun_prioridad();
+//		default:
+//			log_error(kernel_logger, "No se reconocio el algoritmo de planificacion");
+//			exit(1);
+//	}
+//}
+/*
+t_pcb* obtener_proceso_segun_prioridad(){
+	pthread_mutex_lock(&mutex_list_ready);
+	list_sort(list_ready, maxima_prioridad);
+	t_pcb* pcb = list_remove(list_ready, 0);
+
+	log_info(kernel_logger, "Se eligio el proceso %d por Prioridades", pcb -> pid);
+	pthread_mutex_unlock(&mutex_list_ready);
+
+	return pcb;
+}
+
+bool maxima_prioridad(t_pcb* pcb1, t_pcb* pcb2){
+	return pcb1->prioridad <= pcb2->prioridad;
+}
+
+void ejecutar(t_pcb* pcb){
+	char* estado_anterior = estado_to_string(pcb -> estado);
+	cambiar_estado_pcb(pcb, EXEC);
+
+	log_info(kernel_log_obligatorio, " PID: %d - Estado Anterior: %s - Estado Actual: %s", pcb -> pid, estado_anterior, estado_to_string(pcb -> estado));
+
+	log_info(kernel_logger, "El proceso %d se pone en ejecucion", pcb -> pid);
+	//TODO: asignar un tiempo de ejecucion aca, investigar el temporal de las commons?
+	agregar_pcb_lista(pcb, list_execute, mutex_list_exec);
+//	enviar_contexto_de_ejecucion(pcb, fd_cpu_dispatcher);
+}
+*/
+
+char* estado_to_string(est_pcb estado){
+	switch(estado){
+	case NEW:
+		return "NEW";
+	case READY:
+		return "READY";
+	case EXEC:
+		return "EXEC";
+	case BLOCKED:
+		return "BLOCK";
+	case EXIT:
+		return "EXIT";
+	default:
+		return "ERROR";
+	}
+}
+
+char* lista_pids_en_Ready(){
+	int id_process;
+	char* pids_in_string = string_new();
+	string_append(&pids_in_string, "[");
+
+	for(int i = 0; i < list_size(list_ready); i++){
+		if(i == 0){
+			t_pcb* pcb = list_get(list_ready, i);
+			id_process = pcb -> pid;
+			string_append(&pids_in_string, string_itoa(id_process));
+		}else{
+			string_append(&pids_in_string, ", ");
+			t_pcb* pcb = list_get(list_ready, i);
+			id_process = pcb -> pid;
+			string_append(&pids_in_string, string_itoa(id_process));
+		}
+
+	}
+	string_append(&pids_in_string, "]");
+
+	return pids_in_string;
 }

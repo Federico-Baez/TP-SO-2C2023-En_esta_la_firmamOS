@@ -85,4 +85,8 @@ void cambiar_estado_pcb(t_pcb* pcb, est_pcb nuevo_estado){
 	pcb -> estado = nuevo_estado;
 }
 
+void pcb_destroy(t_pcb* pcb){
+	free(pcb);
+}
+
 

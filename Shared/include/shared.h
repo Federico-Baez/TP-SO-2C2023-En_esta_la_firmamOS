@@ -16,12 +16,17 @@
 #include <commons/config.h>
 #include <commons/string.h>
 #include <commons/collections/list.h>
-
+#include "protocolo.h"
 #include "socket.h"
 
-// Registros CPU
+//t_list* list_recursos;
 
-
+typedef struct{
+	char* nombre_recurso;
+	int instancias;
+	t_list* procesos_que_solicitan;
+	t_list* procesos_que__retienen;
+}t_recurso;
 
 typedef struct{
 	uint32_t AX;
@@ -40,7 +45,7 @@ typedef enum{
 	EXIT
 }est_pcb;
 
-// Morivos de vuelta al Kernel
+// Motivos de vuelta al Kernel
 typedef enum{
 	FINALIZACION,
 	PETICION,
@@ -103,6 +108,8 @@ void liberar_lista_instrucciones(t_list *lista);
 // ------ PCB ------
 t_pcb* crear_pcb(int pid, int prioridad);
 void cambiar_estado_pcb(t_pcb* pcb, est_pcb nuevo_estado);
+void pcb_destroy(t_pcb* pcb);
 
 
 #endif /* INCLUDE_SHARED_H_ */
+

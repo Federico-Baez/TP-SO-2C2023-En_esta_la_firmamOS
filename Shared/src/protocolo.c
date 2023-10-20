@@ -381,6 +381,17 @@ void send_path_memoria(int fd_modulo, char* path,int size){
 	eliminar_paquete(paquete);
 }
 
+void send_enviar_path_memoria(int fd_memoria, char* path, int size, int process_id){
+	t_paquete* paquete = crear_super_paquete(INICIAR_ESTRUCTURA_KM);
+	cargar_string_al_super_paquete(paquete, path);
+	cargar_int_al_super_paquete(paquete, size);
+	cargar_int_al_super_paquete(paquete, process_id);
+
+	enviar_paquete(paquete, fd_memoria);
+	eliminar_paquete(paquete);
+}
+
+
 void recv_inicializar_estructura(t_buffer* buffer, t_log* memoria_logger){
 	char* path = recibir_string_del_buffer(buffer);
 	int size = recibir_int_del_buffer(buffer);

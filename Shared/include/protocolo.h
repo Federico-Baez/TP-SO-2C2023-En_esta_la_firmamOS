@@ -49,8 +49,12 @@ typedef enum{
 	PROCESO_ESTADO_A,
 	//-----
 	INICIAR_ESTRUCTURA_KM,
-	ESTRUCTURA_INICIADA_KM_OK,
 	LIBERAR_ESTRUCTURA_KM,
+	//------- MEMORIA - KERNEL
+	ESTRUCTURA_INICIADA_KM_OK,
+	//------- CPU DISPACHT - KERNEL
+	FINALIZAR_PROCESO_CPK,
+	ATENDER_INSTRUCCION_CPK,
 	//-------
 	EJECUTAR_PROCESO_KC,
 	FORZAR_DESALOJO_KC,
@@ -103,6 +107,7 @@ typedef struct{
 
 
 /******************TODO: revisar los MENSAJES*************/
+void handhsake_modules(int conexion, char* mensaje);
 void enviar_mensaje(char* mensaje, int socket_cliente);
 int recibir_operacion(int socket_cliente);
 void* recibir_buffer(int* size, int socket_cliente);
@@ -126,7 +131,6 @@ void eliminar_paquete(t_paquete* paquete);
 
 /******************TODO: revisar los RECVS*************/
 
-
 /******************TODO: revisar los DESTROY*************/
 
 
@@ -149,7 +153,9 @@ void identificarme_con_memoria(int conexion, modulo_code modulo);
 
 /******************PROCESOS*************/
 // void send_path_memoria(int fd_modulo, char* path,int size); // Se usa dependiendo de como inicialicemos las estructuras
+void send_enviar_path_memoria(int fd_memoria, char* path, int size, int process_id);
 void recv_inicializar_estructura(t_buffer* buffer, t_log* memoria_logger);
 
 
 #endif /* INCLUDE_PROTOCOLO_H_ */
+
