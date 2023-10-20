@@ -74,7 +74,9 @@ void atender_cpu_dispatch(){
 		switch (cod_op) {
 		case EJECUTAR_PROCESO_KC:
 			unBuffer = recibiendo_super_paquete(fd_kernel_dispatch);
-			//
+			int pid = recibir_int_del_buffer(unBuffer);
+
+			log_info(cpu_log_disptach, "Me llego el pcb %d", pid);
 			break;
 		case MENSAJES_POR_CONSOLA:
 			unBuffer = recibiendo_super_paquete(fd_kernel_dispatch);

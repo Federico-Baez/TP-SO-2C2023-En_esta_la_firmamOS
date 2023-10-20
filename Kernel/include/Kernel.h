@@ -13,6 +13,7 @@
 #include <commons/collections/list.h>
 #include <commons/collections/queue.h>
 #include <commons/string.h>
+#include <commons/temporal.h>
 #include <shared.h>
 #include <pthread.h>
 #include <protocolo.h>
@@ -23,6 +24,8 @@
 #include <unistd.h>
 #include <semaphore.h>
 
+void enviar_pid_cpu(int fd_cpu_dispatcher, int pidd);
+
 typedef enum{
 	FIFO,
 	ROUNDROBIN,
@@ -32,16 +35,31 @@ typedef enum{
 // ------ Listas ------
 t_list* list_new;
 t_list* list_ready;
-t_list* list_execute;
+t_list* list_exec;
 t_list* list_blocked;
 t_list* list_recursos;
+
+// ------ SEMAFOROS ------
+sem_t sem_init_pcb;
+sem_t sem_grado_multiprogramacion;
+sem_t sem_list_ready;
+sem_t sem_iniciar_estructuras_memoria;
+sem_t sem_enviar_interrupcion;
+sem_t sem_pausar_panificacion;
+
+// ------ PTHREAD_MUTEX ------
+pthread_mutex_t mutex_list_new;
+pthread_mutex_t mutex_list_ready;
+pthread_mutex_t mutex_list_exec;
+pthread_mutex_t mutex_list_blocked;
 
 t_log* kernel_logger;
 t_log* kernel_log_obligatorio;
 t_config* kernel_config;
 
 int process_id = 1;
-
+int reinicio_quantum = 0;
+int detener_planificacion = 0;
 // ------ Direcciones Sockets ------
 int fd_filesystem;
 int fd_cpu_dispatcher;
@@ -61,21 +79,10 @@ char** RECURSOS;
 char** INSTANCIAS_RECURSOS;
 int GRADO_MULTIPROGRAMACION_INI;
 
-// ------ SEMAFOROS ------
-sem_t sem_init_pcb;
-sem_t sem_grado_multiprogramacion;
-sem_t sem_list_ready;
-sem_t sem_iniciar_estructuras_memoria;
-
-// ------ PTHREAD_MUTEX ------
-pthread_mutex_t mutex_list_new;
-pthread_mutex_t mutex_list_ready;
-pthread_mutex_t mutex_list_exec;
-pthread_mutex_t mutex_list_blocked;
-
 void leer_config(t_config* config);
 void finalizar_kernel();
 void asignar_planificador_cp(char* algoritmo_planificacion);
+char* algoritmo_to_string(t_algoritmo EL_algoritmo);
 
 void atender_esta_prueba(t_buffer* unBuffer);
 void atender_experimentos_xd(void);
@@ -92,8 +99,11 @@ void iniciar_semaforos();
 void iniciar_pthread();
 void iniciar_listas();
 
+// ------ RECURSOS ------
+void iniciar_recursos();
+
 // ------ Proceso ------
-void inicializar_ejecucion();
+void proximo_a_ejecucion();
 void inicializar_estructura(int fd_memoria, char* path, int size, t_pcb* pcb);
 void ejecutar_proceso();
 t_pcb* elegir_proceso_segun_algoritmo();
@@ -116,8 +126,9 @@ void agregar_pcb_lista(t_pcb* pcb, t_list* list_estados, pthread_mutex_t mutex_l
 char* estado_to_string(est_pcb estado);
 t_pcb* recv_pcb(t_buffer* paquete_pcb);
 
-// ------ RECURSOS ------
-void iniciar_recursos();
+// ------ ALGORITMOS ------
+void manejo_quantum_roundRobin();
+
 
 #endif /* KERNEL_H_ */
 

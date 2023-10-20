@@ -89,4 +89,13 @@ void pcb_destroy(t_pcb* pcb){
 	free(pcb);
 }
 
+void enviar_contexto_CPU(int fd_cpu_dispatcher ,t_pcb* pcb){
+	t_paquete* paquete = crear_super_paquete(EJECUTAR_PROCESO_KC);
+//	cargar_pcb_super_paquete(pcb);
+	int pidd = 2;
+	cargar_int_al_super_paquete(paquete, pidd);
+	enviar_paquete(paquete, fd_cpu_dispatcher);
+	eliminar_paquete(paquete);
+}
+
 

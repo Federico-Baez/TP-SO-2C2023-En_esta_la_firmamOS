@@ -6,6 +6,7 @@
 #include <commons/config.h>
 #include <commons/collections/list.h>
 #include <commons/string.h>
+#include <commons/temporal.h>
 #include <shared.h>
 #include <pthread.h>
 #include <protocolo.h>
@@ -13,7 +14,7 @@
 #include <stdlib.h>
 
 #define IP_CPU "127.0.0.1"
-
+t_temporal* sada;
 t_log* cpu_logger;
 t_log* cpu_log_disptach;
 t_log* cpu_log_interrupt;

@@ -16,6 +16,7 @@
 #include <commons/config.h>
 #include <commons/string.h>
 #include <commons/collections/list.h>
+#include <commons/temporal.h>
 #include "protocolo.h"
 #include "socket.h"
 
@@ -48,7 +49,7 @@ typedef enum{
 // Motivos de vuelta al Kernel
 typedef enum{
 	FINALIZACION,
-	PETICION,
+//	PETICION, -> esta seria por una instruccion, wait, sleep, etc.
 	BLOCK,
 	INTERRUPCION
 }t_vuelta;
@@ -109,7 +110,7 @@ void liberar_lista_instrucciones(t_list *lista);
 t_pcb* crear_pcb(int pid, int prioridad);
 void cambiar_estado_pcb(t_pcb* pcb, est_pcb nuevo_estado);
 void pcb_destroy(t_pcb* pcb);
-
+void enviar_contexto_CPU(int fd_cpu_dispatcher, t_pcb* pcb);
 
 #endif /* INCLUDE_SHARED_H_ */
 
