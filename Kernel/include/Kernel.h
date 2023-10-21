@@ -44,6 +44,7 @@ t_list* list_exit;
 sem_t sem_init_pcb;
 sem_t sem_grado_multiprogramacion;
 sem_t sem_list_ready;
+sem_t sem_list_exec;
 sem_t sem_iniciar_estructuras_memoria;
 sem_t sem_enviar_interrupcion;
 sem_t sem_pausar_planificacion;
@@ -112,9 +113,12 @@ void iniciar_listas();
 
 // ------ RECURSOS ------
 void iniciar_recursos();
+void atender_wait(t_pcb* pcb, char* recurso);
+t_recurso* buscar_recurso(char* recurso);
 
 // ------ Proceso ------
 void iniciar_planificacion();
+void planificador_largo_plazo();
 void planificador_corto_plazo();
 void proximo_a_ejecucion();
 void inicializar_estructura(int fd_memoria, char* path, int size, t_pcb* pcb);

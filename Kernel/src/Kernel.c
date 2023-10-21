@@ -98,24 +98,27 @@ void leer_consola(){
 			sem_getvalue(&sem_pausar_planificacion, &pausar_planificacion);
 			if(pausar_planificacion != 1){
 				log_info(kernel_logger, "LOGRE PASAR EL SEMAFORO %d", pausar_planificacion);
-				planificador_corto_plazo();
+				planificador_largo_plazo();
 				log_info(kernel_logger, "LOGRE SALIR DEL PLANIFICADOR");
 				send_enviar_path_memoria(fd_memoria, ingreso[1], atoi(ingreso[2]), pcb -> pid);
+				sem_wait(&sem_iniciar_estructuras_memoria);
+				log_info(kernel_logger, "SALI");
 
+//				planificador_corto_plazo();
 			}else{
 				log_info(kernel_logger, "NO LOGRE PASAR EL SEMAFORO");
 			}
 		}else if(string_equals_ignore_case(ingreso[0], "FINALIZAR_PROCESO")){
 			flag_finalizar_proceso = 0;
 		}else if(string_equals_ignore_case(ingreso[0], "DETENER_PLANIFICACION")){
-			log_info(kernel_logger, "Se DETIENE la PLANIFICACION");
+			log_info(kernel_log_obligatorio, "“PAUSA DE PLANIFICACIÓN”");
 			sem_post(&sem_pausar_planificacion);
 		}else if(string_equals_ignore_case(ingreso[0], "INICIAR_PLANIFICACION")){
 			sem_post(&sem_pausar_planificacion);
-			log_info(kernel_logger, "Se REINICIA la PLANIFICACION");
+			log_info(kernel_log_obligatorio, "INICIO DE PLANIFICACIÓN");
 			// PROVISORIO HASTA SOLUCIONAR INICICAR_PLANIFICACION:
-			planificador_corto_plazo();
-			send_enviar_path_memoria(fd_memoria, path, size_kernel, pid_kernel);
+			planificador_largo_plazo();
+//			send_enviar_path_memoria(fd_memoria, path, size_kernel, pid_kernel);  --> ESTO CLARAMENTE ESTA MAL.
 
 		}else if(string_equals_ignore_case(ingreso[0], "MULTIPROGRAMACION")){
 			//
@@ -149,10 +152,8 @@ void asignar_planificador_cp(char* algoritmo_planificacion){
 			ALGORITMO_PLANIFICACION = FIFO;
 		} else if (strcmp(algoritmo_planificacion, "ROUNDROBIN") == 0) {
 			ALGORITMO_PLANIFICACION = ROUNDROBIN;
-			manejo_quantum_roundRobin();
 		} else if (strcmp(algoritmo_planificacion, "PRIORIDADES") == 0) {
 			ALGORITMO_PLANIFICACION = PRIORIDADES;
-
 		} else {
 			log_error(kernel_logger, "No se encontro el algoritmo de planificacion de corto plazo");
 		}
@@ -190,8 +191,8 @@ void atender_memoria(){
 			unBuffer = recibiendo_super_paquete(fd_memoria);
 			char* mensaje = recibir_string_del_buffer(unBuffer);
 
-			log_info(kernel_logger, "Se recibio de memoria: %s ", mensaje);
-//			sem_post(&sem_iniciar_estructuras_memoria);
+			log_info(kernel_logger, "Se recibio de memoria: %s", mensaje);
+			sem_post(&sem_iniciar_estructuras_memoria);
 			free(mensaje);
 			break;
 		case LIBERAR_ESTRUCTURA_KM:
@@ -276,7 +277,10 @@ void atender_cpu_dispatch(){
 				log_info(kernel_log_obligatorio,"PID: %d  -  Bloqueado por: %s", pcb -> pid, instruccion_CPU);
 
 			}else if(strcmp(instruccion_CPU, "WAIT") == 0){
-
+				unBuffer = recibiendo_super_paquete(fd_cpu_dispatcher);
+				t_pcb* pcb = recv_pcb(unBuffer); // --> Deberia ir una que reciba el CONXTEXTO DE EJECUCCION
+				char* recurso = recibir_string_del_buffer(unBuffer);
+				atender_wait(pcb, recurso);
 			}else if(strcmp(instruccion_CPU, "SIGNAL") == 0){
 
 			}else if(strcmp(instruccion_CPU, "F_OPEN") == 0){
@@ -316,15 +320,6 @@ void atender_cpu_dispatch(){
 	}
 }
 
-//void atender_motivo_block(t_pcb* pcb){
-////	transferir_from_actual_to_siguiente(lis)
-//	proximo_a_ejecutar();
-//}
-//
-//void atender_blockeados(){
-//
-//}
-
 void atender_cpu_interrupt(){
 	gestionar_handshake_como_cliente(fd_cpu_interrupt, "CPU_Interrupt", kernel_logger);
 	log_info(kernel_logger, "HANDSHAKE CON CPU_Interrupt [EXITOSO]");
@@ -347,6 +342,7 @@ void iniciar_semaforos(){
 	sem_init(&sem_init_pcb, 0, 1);
 	sem_init(&sem_grado_multiprogramacion, 0, GRADO_MULTIPROGRAMACION_INI);
 	sem_init(&sem_list_ready, 0, 0);
+	sem_init(&sem_list_exec, 0, 0);
 	sem_init(&sem_iniciar_estructuras_memoria, 0, 0);
 	sem_init(&sem_enviar_interrupcion, 0, 0);
 	sem_init(&sem_pausar_planificacion, 0, 0);
@@ -405,7 +401,7 @@ t_pcb* iniciar_pcb(int prioridad){
 //	pthread_detach(hilo_corto_plazo);
 //}
 
-void planificador_corto_plazo(){
+void planificador_largo_plazo(){
 	log_info(kernel_logger, " Entre al PLANIFACDOR A CORTO PLAZO");
 	char* pids_en_ready;
 	while(1){
@@ -420,16 +416,12 @@ void planificador_corto_plazo(){
 		log_info(kernel_log_obligatorio, " PID: %d - Estado Anterior: %s - Estado Actual: %s", pcb -> pid, estado_anterior, estado_to_string(pcb -> estado));
 
 		pids_en_ready = lista_pids_en_Ready();
-		log_info(kernel_log_obligatorio, "Cola Ready %s: %s", algoritmo_to_string(ALGORITMO_PLANIFICACION), pids_en_ready);
-
-//		sem_wait(&sem_iniciar_estructuras_memoria);	  -->  Queda comentado hasta que se solucione la comunicacion con memoria
+		log_info(kernel_log_obligatorio, "Cola Ready FIFO: %s", pids_en_ready);
 
 		if(list_is_empty(list_new)){
 			log_info(kernel_logger, " LA LISTA ESTA VACIA");
 			break;
 		}
-
-
 //		if(flag_finalizar_proceso == 0){
 //			transferir_from_actual_to_siguiente(list_exec, mutex_list_exec, list_exit, mutex_list_exit, EXIT);
 //		}
@@ -491,6 +483,10 @@ t_pcb* recv_pcb(t_buffer* paquete_pcb){
 }
 
 //-----------Ejecutar procesos-------------
+void planificador_corto_plazo(){
+	proximo_a_ejecucion();
+}
+
 void proximo_a_ejecucion(){
 	while(1){
 		sem_wait(&sem_list_ready);
@@ -500,7 +496,7 @@ void proximo_a_ejecucion(){
 
 		log_info(kernel_logger, "VOY A MANDAR");
 		enviar_contexto_CPU(fd_cpu_dispatcher, pcb);
-		log_info(kernel_logger, "YA MANDE");
+		manejo_quantum_roundRobin();
 	}
 }
 
@@ -617,3 +613,36 @@ char* lista_pids_en_Ready(){
 
 	return pids_in_string;
 }
+
+//-----------ATENDER INSTRUCCIONES CPU-------------
+void atender_wait(t_pcb* pcb, char* recurso){
+	t_recurso* encontrar_recurso = buscar_recurso(recurso);
+	if(strcmp(recurso, encontrar_recurso->nombre_recurso) == 0){
+		if(encontrar_recurso->instancias < 0){
+			transferir_from_actual_to_siguiente(list_exec, mutex_list_exec, list_blocked, mutex_list_exec, BLOCKED);
+			log_info(kernel_log_obligatorio,"PID: %d  -  Bloqueado por: %s", pcb -> pid, encontrar_recurso->nombre_recurso);
+			list_add(encontrar_recurso->procesos_que_solicitan, pcb); // Creo que necesita mutex
+//			sem_wait(&sem_cpu_free_exec) --> Tendria que agregar el wait en proximo_a_ejecucion
+		}else{
+			encontrar_recurso->instancias--;
+			log_info(kernel_log_obligatorio, "PID: %d  -  Wait: %s  -  Instancias: %d", pcb->pid, encontrar_recurso->nombre_recurso, encontrar_recurso->instancias);
+			list_add(encontrar_recurso->procesos_que_retienen, pcb); // Creo que necesita mutex
+			enviar_contexto_CPU(fd_cpu_dispatcher, pcb);
+		}
+	}else{
+		agregar_pcb_lista(pcb, list_exit, mutex_list_exit);
+		// Llamar funcion finalziar proceso;
+	}
+}
+
+t_recurso* buscar_recurso(char* recurso){
+	t_recurso* recurso_encontrado;
+	for(int i; i < string_array_size(RECURSOS); i++){
+		recurso_encontrado->nombre_recurso = RECURSOS[i];
+		if(strcmp(recurso, recurso_encontrado->nombre_recurso) == 0)
+			return recurso_encontrado;
+	}
+	return recurso_encontrado;
+}
+
+

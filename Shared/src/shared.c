@@ -76,7 +76,7 @@ t_pcb* crear_pcb(int process_id, int prioridad){
 //	new_pcb->registros->CX = 0;
 //	new_pcb->registros->DX = 0;
 	new_pcb->estado = NEW;
-	new_pcb->motivo_vuelta = NULL;
+//	new_pcb->motivo_vuelta = NULL;
 
 	return new_pcb;
 }

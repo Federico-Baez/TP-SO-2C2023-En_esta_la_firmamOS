@@ -36,7 +36,6 @@ typedef struct{
 	uint32_t DX;
 }t_instruccion;
 
-
 //Estados del procesos en la planificacion
 typedef enum{
 	NEW,
@@ -53,6 +52,12 @@ typedef enum{
 	BLOCK,
 	INTERRUPCION
 }t_vuelta;
+
+typedef enum{
+	SUCCESS,
+	INVALID_RESOURCE,
+	INVALID_WRITE
+}t_motivo_exit;
 
 //Manejo de instrucciones del Kernel
 typedef enum{
@@ -83,7 +88,8 @@ typedef struct{
 	int prioridad;
 	t_instruccion* registros;
 	est_pcb estado;
-	t_vuelta* motivo_vuelta;
+//	t_vuelta* motivo_vuelta;
+	t_motivo_exit* motivo_exit;
 	//  <--- archivos_abiertos;
 	//  <--- abria que agregar las intruccioens enviadas por memoria?
 }t_pcb;
