@@ -91,9 +91,13 @@ void pcb_destroy(t_pcb* pcb){
 
 void enviar_contexto_CPU(int fd_cpu_dispatcher ,t_pcb* pcb){
 	t_paquete* paquete = crear_super_paquete(EJECUTAR_PROCESO_KC);
-//	cargar_pcb_super_paquete(pcb);
-	int pidd = 2;
-	cargar_int_al_super_paquete(paquete, pidd);
+
+	cargar_int_al_super_paquete(paquete, pcb->pid);
+	cargar_int_al_super_paquete(paquete, pcb->program_counter);
+	cargar_choclo_al_super_paquete(paquete, &(pcb->registros->AX), sizeof(uint32_t));
+	cargar_choclo_al_super_paquete(paquete, &(pcb->registros->BX), sizeof(uint32_t));
+	cargar_choclo_al_super_paquete(paquete, &(pcb->registros->CX), sizeof(uint32_t));
+	cargar_choclo_al_super_paquete(paquete, &(pcb->registros->DX), sizeof(uint32_t));
 	enviar_paquete(paquete, fd_cpu_dispatcher);
 	eliminar_paquete(paquete);
 }

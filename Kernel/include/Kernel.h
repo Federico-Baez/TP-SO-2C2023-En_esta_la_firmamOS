@@ -38,6 +38,7 @@ t_list* list_ready;
 t_list* list_exec;
 t_list* list_blocked;
 t_list* list_recursos;
+t_list* list_exit;
 
 // ------ SEMAFOROS ------
 sem_t sem_init_pcb;
@@ -45,13 +46,17 @@ sem_t sem_grado_multiprogramacion;
 sem_t sem_list_ready;
 sem_t sem_iniciar_estructuras_memoria;
 sem_t sem_enviar_interrupcion;
-sem_t sem_pausar_panificacion;
+sem_t sem_pausar_planificacion;
+sem_t sem_planificador_corto_plazo;
+sem_t sem_finalizar_proceso;
+sem_t sem_inicio_proceso;
 
 // ------ PTHREAD_MUTEX ------
 pthread_mutex_t mutex_list_new;
 pthread_mutex_t mutex_list_ready;
 pthread_mutex_t mutex_list_exec;
 pthread_mutex_t mutex_list_blocked;
+pthread_mutex_t mutex_list_exit;
 
 t_log* kernel_logger;
 t_log* kernel_log_obligatorio;
@@ -59,7 +64,13 @@ t_config* kernel_config;
 
 int process_id = 1;
 int reinicio_quantum = 0;
-int detener_planificacion = 0;
+int detener_planificacion = 1;
+int flag_finalizar_proceso = 1;
+// Provisorios hasta solucionar INICICAR_PLANIFICACION
+char* path;
+int size_kernel;
+int pid_kernel;
+
 // ------ Direcciones Sockets ------
 int fd_filesystem;
 int fd_cpu_dispatcher;
@@ -103,6 +114,8 @@ void iniciar_listas();
 void iniciar_recursos();
 
 // ------ Proceso ------
+void iniciar_planificacion();
+void planificador_corto_plazo();
 void proximo_a_ejecucion();
 void inicializar_estructura(int fd_memoria, char* path, int size, t_pcb* pcb);
 void ejecutar_proceso();
@@ -117,7 +130,6 @@ void atender_motivo_block(t_pcb* pcb);
 
 // ------ Cambios de ESTADO ------
 void transferir_from_new_to_ready();
-void transferir_from_ready_to_exec();
 void transferir_from_actual_to_siguiente(t_list* list_actual, pthread_mutex_t mutex_actual, t_list* list_siguiente, pthread_mutex_t mutex_siguiente, est_pcb estado_siguiente);
 
 // ------ PCB ------

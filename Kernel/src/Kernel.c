@@ -47,9 +47,6 @@ int main(int argc, char** argv){
 	pthread_create(&hilo_memoria, NULL, (void*)atender_memoria, NULL);
 	pthread_detach(hilo_memoria);
 
-//	pthread_create(&hilo_experimentos_xd, NULL, (void*)atender_experimentos_xd, NULL);
-//	pthread_detach(hilo_experimentos_xd);
-
 	pthread_create(&hilo_consola, NULL, (void*)leer_consola, NULL);
 	pthread_join(hilo_consola, NULL);
 
@@ -87,20 +84,39 @@ void leer_consola(){
 			log_info(kernel_logger, "Ingreso en: INICIAR_PROCESO");
 
 			pcb = iniciar_pcb(atoi(ingreso[3]));
+			// PROVISORIO HASTA SOLUCIONAR INICICAR_PLANIFICACION:
+			path = ingreso[1];
+			size_kernel = atoi(ingreso[2]);
+			pid_kernel = pcb -> pid;
+
 			log_info(kernel_log_obligatorio, "Se crea el proceso %d en %s", pcb -> pid, estado_to_string(pcb -> estado));
 
 			agregar_pcb_lista(pcb, list_new, mutex_list_new);
-			if(!list_is_empty(list_new)){
-				inicializar_estructura(fd_memoria, ingreso[1], atoi(ingreso[2]), pcb);
-				sem_post(&sem_list_ready);
-//				proximo_a_ejecucion();
+			sem_post(&sem_inicio_proceso);
+
+			int pausar_planificacion;
+			sem_getvalue(&sem_pausar_planificacion, &pausar_planificacion);
+			if(pausar_planificacion != 1){
+				log_info(kernel_logger, "LOGRE PASAR EL SEMAFORO %d", pausar_planificacion);
+				planificador_corto_plazo();
+				log_info(kernel_logger, "LOGRE SALIR DEL PLANIFICADOR");
+				send_enviar_path_memoria(fd_memoria, ingreso[1], atoi(ingreso[2]), pcb -> pid);
+
+			}else{
+				log_info(kernel_logger, "NO LOGRE PASAR EL SEMAFORO");
 			}
 		}else if(string_equals_ignore_case(ingreso[0], "FINALIZAR_PROCESO")){
-			//
+			flag_finalizar_proceso = 0;
 		}else if(string_equals_ignore_case(ingreso[0], "DETENER_PLANIFICACION")){
-			sem_init(&sem_pausar_panificacion, 0, 0);
+			log_info(kernel_logger, "Se DETIENE la PLANIFICACION");
+			sem_post(&sem_pausar_planificacion);
 		}else if(string_equals_ignore_case(ingreso[0], "INICIAR_PLANIFICACION")){
-			sem_post(&sem_pausar_panificacion);
+			sem_post(&sem_pausar_planificacion);
+			log_info(kernel_logger, "Se REINICIA la PLANIFICACION");
+			// PROVISORIO HASTA SOLUCIONAR INICICAR_PLANIFICACION:
+			planificador_corto_plazo();
+			send_enviar_path_memoria(fd_memoria, path, size_kernel, pid_kernel);
+
 		}else if(string_equals_ignore_case(ingreso[0], "MULTIPROGRAMACION")){
 			//
 		}else if(string_equals_ignore_case(ingreso[0], "PROCESO_ESTADO")){
@@ -113,7 +129,6 @@ void leer_consola(){
 		leido = readline("> ");
 		ingreso = string_split(leido, " ");
 	}
-
 	free(leido);
 }
 
@@ -134,7 +149,7 @@ void asignar_planificador_cp(char* algoritmo_planificacion){
 			ALGORITMO_PLANIFICACION = FIFO;
 		} else if (strcmp(algoritmo_planificacion, "ROUNDROBIN") == 0) {
 			ALGORITMO_PLANIFICACION = ROUNDROBIN;
-//			manejo_quantum_roundRobin();
+			manejo_quantum_roundRobin();
 		} else if (strcmp(algoritmo_planificacion, "PRIORIDADES") == 0) {
 			ALGORITMO_PLANIFICACION = PRIORIDADES;
 
@@ -171,12 +186,13 @@ void atender_memoria(){
 		log_info(kernel_logger, "Se recibio algo de MEMORIA");
 
 		switch (cod_op){
-		case ESTRUCTURA_INICIADA_KM_OK:
-//			unBuffer = recibiendo_super_paquete(fd_memoria);
-//			char* mensaje = recibir_string_del_buffer(unBuffer);
-//			log_info(kernel_logger, mensaje);
-//			free(mensaje);
+		case ESTRUCTURA_INICIADA_KM_OK: // Queda comentado porque algo no funciona
+			unBuffer = recibiendo_super_paquete(fd_memoria);
+			char* mensaje = recibir_string_del_buffer(unBuffer);
+
+			log_info(kernel_logger, "Se recibio de memoria: %s ", mensaje);
 //			sem_post(&sem_iniciar_estructuras_memoria);
+			free(mensaje);
 			break;
 		case LIBERAR_ESTRUCTURA_KM:
 			unBuffer = recibiendo_super_paquete(fd_memoria);
@@ -333,13 +349,16 @@ void iniciar_semaforos(){
 	sem_init(&sem_list_ready, 0, 0);
 	sem_init(&sem_iniciar_estructuras_memoria, 0, 0);
 	sem_init(&sem_enviar_interrupcion, 0, 0);
-	sem_init(&sem_pausar_panificacion, 0, 0);
+	sem_init(&sem_pausar_planificacion, 0, 0);
+	sem_init(&sem_planificador_corto_plazo, 0, 1);
+	sem_init(&sem_inicio_proceso, 0, 0);
 }
 
 void iniciar_pthread(){
 	pthread_mutex_init(&mutex_list_new, NULL);
 	pthread_mutex_init(&mutex_list_ready, NULL);
 	pthread_mutex_init(&mutex_list_exec, NULL);
+	pthread_mutex_init(&mutex_list_exit, NULL);
 }
 
 void iniciar_listas(){
@@ -348,6 +367,7 @@ void iniciar_listas(){
 	list_exec = list_create();
 	list_blocked = list_create();
 	list_recursos = list_create();
+	list_exit = list_create();
 }
 
 void iniciar_recursos(){
@@ -375,6 +395,48 @@ t_pcb* iniciar_pcb(int prioridad){
 	return new_pcb;
 }
 
+//void iniciar_planificacion(int fd_memoria, char* path, int size, t_pcb* pcb){
+//	pthread_t hilo_largo_plazo;
+//	pthread_create(&hilo_largo_plazo, NULL, (void*) planificador_corto_plazo, NULL);
+//	pthread_detach(hilo_largo_plazo);
+//
+//	pthread_t hilo_corto_plazo;
+//	pthread_create(&hilo_corto_plazo, NULL, (void*) proximo_a_ejecucion, NULL);
+//	pthread_detach(hilo_corto_plazo);
+//}
+
+void planificador_corto_plazo(){
+	log_info(kernel_logger, " Entre al PLANIFACDOR A CORTO PLAZO");
+	char* pids_en_ready;
+	while(1){
+		sem_wait(&sem_inicio_proceso);
+		sem_wait(&sem_grado_multiprogramacion);   // Queda comentado hasta que agreguemos el sem_post, porque todavia no esta hecho el finalizar proceso
+
+		t_pcb* pcb = remover_proceso_lista(list_new, mutex_list_new);
+		char* estado_anterior = "NEW";
+		cambiar_estado_pcb(pcb, READY);
+		agregar_pcb_lista(pcb, list_ready, mutex_list_ready);
+
+		log_info(kernel_log_obligatorio, " PID: %d - Estado Anterior: %s - Estado Actual: %s", pcb -> pid, estado_anterior, estado_to_string(pcb -> estado));
+
+		pids_en_ready = lista_pids_en_Ready();
+		log_info(kernel_log_obligatorio, "Cola Ready %s: %s", algoritmo_to_string(ALGORITMO_PLANIFICACION), pids_en_ready);
+
+//		sem_wait(&sem_iniciar_estructuras_memoria);	  -->  Queda comentado hasta que se solucione la comunicacion con memoria
+
+		if(list_is_empty(list_new)){
+			log_info(kernel_logger, " LA LISTA ESTA VACIA");
+			break;
+		}
+
+
+//		if(flag_finalizar_proceso == 0){
+//			transferir_from_actual_to_siguiente(list_exec, mutex_list_exec, list_exit, mutex_list_exit, EXIT);
+//		}
+	}
+	free(pids_en_ready);
+}
+
 void transferir_from_new_to_ready(){
 	sem_wait(&sem_grado_multiprogramacion);   // Queda comentado hasta que agreguemos el sem_post, porque todavia no esta hecho el finalizar proceso
 	t_pcb* pcb;
@@ -394,18 +456,16 @@ void transferir_from_new_to_ready(){
 	// No se si son necesarios
 }
 
-void inicializar_estructura(int fd_memoria, char* path, int size, t_pcb* pcb){
-	transferir_from_new_to_ready();
-
-	char* pids_en_ready = lista_pids_en_Ready();
-	log_info(kernel_log_obligatorio, "Cola Ready %s: %s", algoritmo_to_string(ALGORITMO_PLANIFICACION), pids_en_ready);
-
-	send_enviar_path_memoria(fd_memoria, path, size, pcb -> pid);
-	free(pids_en_ready);
-//	sem_wait(&sem_iniciar_estructuras_memoria);
-}
+//void inicializar_estructura(int fd_memoria, char* path, int size, t_pcb* pcb){
+//	char* pids_en_ready = lista_pids_en_Ready();
+//	log_info(kernel_log_obligatorio, "Cola Ready %s: %s", algoritmo_to_string(ALGORITMO_PLANIFICACION), pids_en_ready);
+//
+//	send_enviar_path_memoria(fd_memoria, path, size, pcb -> pid);
+//	free(pids_en_ready);
+//}
 
 // ------ PCB ------
+
 void agregar_pcb_lista(t_pcb* pcb, t_list* list_estado, pthread_mutex_t mutex_list){
 	pthread_mutex_lock(&mutex_list);
 	list_add(list_estado, pcb);
@@ -437,10 +497,9 @@ void proximo_a_ejecucion(){
 //		sem_wait(&sem_cpu_free_exec);  // Creo que deberia ir un semaforo de si el CPU esta libre para ejecutar?
 
 		t_pcb* pcb = elegir_proceso_segun_algoritmo();
-//		enviar_contexto_CPU(fd_cpu_dispatcher, pcb);
-		int pidd = pcb -> pid;
+
 		log_info(kernel_logger, "VOY A MANDAR");
-		enviar_pid_cpu(fd_cpu_dispatcher, pidd);
+		enviar_contexto_CPU(fd_cpu_dispatcher, pcb);
 		log_info(kernel_logger, "YA MANDE");
 	}
 }
@@ -453,9 +512,7 @@ void enviar_pid_cpu(int fd_cpu_dispatcher, int pidd){
 }
 
 void transferir_from_actual_to_siguiente(t_list* list_actual, pthread_mutex_t mutex_actual, t_list* list_siguiente, pthread_mutex_t mutex_siguiente, est_pcb estado_siguiente){
-	t_pcb* pcb;
-
-	pcb = remover_proceso_lista(list_actual, mutex_actual);
+	t_pcb* pcb  = remover_proceso_lista(list_actual, mutex_actual);
 
 	char* estado_anterior = estado_to_string(pcb -> estado);
 
@@ -475,8 +532,8 @@ t_pcb* elegir_proceso_segun_algoritmo(){
 		case ROUNDROBIN:
 			return remover_proceso_lista(list_ready, mutex_list_ready);;
 			break;
-//		case PRIORIDADES:
-//			return obtener_proceso_segun_prioridad();
+		case PRIORIDADES:
+			return obtener_proceso_segun_prioridad();
 		default:
 			log_error(kernel_logger, "No se reconocio el algoritmo de planificacion");
 			exit(1);
@@ -498,19 +555,8 @@ bool maxima_prioridad(t_pcb* pcb1, t_pcb* pcb2){
 	return pcb1->prioridad <= pcb2->prioridad;
 }
 
-//void ejecutar(t_pcb* pcb){
-//	char* estado_anterior = estado_to_string(pcb -> estado);
-//	cambiar_estado_pcb(pcb, EXEC);
-//
-//	log_info(kernel_log_obligatorio, " PID: %d - Estado Anterior: %s - Estado Actual: %s", pcb -> pid, estado_anterior, estado_to_string(pcb -> estado));
-//
-//	log_info(kernel_logger, "El proceso %d se pone en ejecucion", pcb -> pid);
-//	//TODO: asignar un tiempo de ejecucion aca, investigar el temporal de las commons?
-//	agregar_pcb_lista(pcb, list_exec, mutex_list_exec);
-////	enviar_contexto_de_ejecucion(pcb, fd_cpu_dispatcher);
-//}
-
 void manejo_quantum_roundRobin(){
+	sem_wait(&sem_planificador_corto_plazo);
 	log_info(kernel_logger, "Estoy en manejo_quantum_roundRobin");
 	t_temporal* quantum_clock;
 	while(1){

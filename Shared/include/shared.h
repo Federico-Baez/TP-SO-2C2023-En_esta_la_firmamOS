@@ -32,7 +32,7 @@ typedef struct{
 typedef struct{
 	uint32_t AX;
 	uint32_t BX;
-	uint32_t CD;
+	uint32_t CX;
 	uint32_t DX;
 }t_instruccion;
 
@@ -93,14 +93,6 @@ typedef struct{
     char* fst_param;
     char* snd_param;
 }t_instruccion_codigo;
-
-typedef struct{
-	uint32_t AX;
-	uint32_t BX;
-	uint32_t CX;
-	uint32_t DX;
-	int program_counter;
-}t_registros_CPU;
 
 t_list* lista_instrucciones(t_log* logger, char* dir);
 cod_instruccion convertir_string_a_instruccion(t_log* logger, const char *str_instruccion);
