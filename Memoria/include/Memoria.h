@@ -14,13 +14,11 @@
 
 
 typedef struct{
-	int base;
-	int pid;  //Pedirle el pid a Kernel
 	bool modificado;
 	bool presente;
-	int numero_pagina;
+	int marco;
 	int pos_en_swap;
-}Marco;
+}tabla_pagina;
 t_list* lst_marco;
 
 typedef struct{
@@ -36,7 +34,7 @@ typedef struct{
 	int tamamo_usado;
 	bool en_memoria;
 	int ultimo_uso;//Para el algoritmo LRU
-	Marco* puntero_marco;
+	tabla_pagina* puntero_marco;
 
 }Pagina;
 typedef struct{
@@ -120,6 +118,6 @@ void liberar_listado_procesos(t_list* lst_procesos);
 void enviar_instrucciones_a_cpu(int pid_buffer,int ip_buffer);
 /************TODO INICIAR LA TABLA DE PAGINAS***************/
 tabla_paginas* crear_tabla_paginas(int pid);
-Marco* crear_marco(int base, bool presente);
+tabla_pagina* crear_marco(int base, bool presente);
 
 #endif /* MEMORIA_H_ */

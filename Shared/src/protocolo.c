@@ -35,6 +35,7 @@ int recibir_operacion(int socket_cliente)
 		return cod_op;
 	else
 	{
+		printf("Error al recibir el codigo de operacion\n");
 		close(socket_cliente);
 		return -1;
 	}
@@ -342,6 +343,7 @@ void gestionar_handshake_como_cliente(int conexion, char* modulo_destino, t_log*
 
 void gestionar_handshake_como_server(int conexion, t_log* logger){
 	int code_op = recibir_operacion(conexion);
+	printf("codigo de operacion: %d \n", code_op);
 	switch (code_op) {
 		case HANDSHAKE:
 			void* coso_a_enviar = malloc(sizeof(int));
@@ -352,11 +354,11 @@ void gestionar_handshake_como_server(int conexion, t_log* logger){
 
 			break;
 		case -1:
-			log_error(logger, "Deseconexion en HANDSHAKE");
+			log_error(logger, "Desconexion en HANDSHAKE\n");
 			exit(EXIT_FAILURE);
 			break;
 		default:
-			log_error(logger, "ERROR EN HANDSHAKE: Operacion desconocida");
+			log_error(logger, "ERROR EN HANDSHAKE: Operacion desconocida\n");
 			exit(EXIT_FAILURE);
 			break;
 	}

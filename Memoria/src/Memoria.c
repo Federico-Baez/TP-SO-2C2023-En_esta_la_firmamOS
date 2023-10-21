@@ -33,12 +33,11 @@ int main(int argc, char** argv) {
 	//TODO: verificar como inicializar memoria
 	inicializar_memoria();
 	server_fd_memoria = iniciar_servidor(memoria_logger, IP_MEMORIA, PUERTO_ESCUCHA);
-	printf("%d \n",server_fd_memoria);
 	while(server_escucha())
 
 //	log_info(memoria_logger, "Finaliza servidor de Memoria");
-	instrucciones_para_cpu = leer_archivo_y_cargar_instrucciones(PATH_INSTRUCCIONES);
-	liberar_memoria_de_instrucciones(instrucciones_para_cpu);
+//	instrucciones_para_cpu = leer_archivo_y_cargar_instrucciones(PATH_INSTRUCCIONES);
+//	liberar_memoria_de_instrucciones(instrucciones_para_cpu);
 	finalizar_memoria();
 
 	return EXIT_SUCCESS;
@@ -68,27 +67,36 @@ void leer_log(){
 
 }
 void inicializar_memoria(){
-	log_info(memoria_logger, "Inicianlizando memoria");
-	espacio_usuario = malloc(TAM_MEMORIA);
-	lst_marco = list_create();
-	int cant_marcos = TAM_MEMORIA/TAM_PAGINA;
-
-
-	for(int i=0;i<= cant_marcos;i++){
-		Marco* nuevo_marco  = crear_marco(TAM_PAGINA*i, true);
-
-		list_add(lst_marco,nuevo_marco);
+//	log_info(memoria_logger, "Inicializando memoria");
+//	espacio_usuario = malloc(TAM_MEMORIA);
+//	if(espacio_usuario == NULL){
+//			log_error(memoria_logger, "Fallo Malloc");
+//	    	exit(1);
+//	    }
+//	lst_marco = list_create();
+//	int cant_marcos = TAM_MEMORIA/TAM_PAGINA;
+//	log_info(memoria_logger, "Tamanio de memoria %d y la cantidad de marcos %d", TAM_MEMORIA, cant_marcos);
+//
+//	for(int i=0;i<= cant_marcos;i++){
+//		tabla_pagina* nuevo_marco  = crear_marco(TAM_PAGINA*i, true);
+//
+//		list_add(lst_marco,nuevo_marco);
 
 	}
+//
+//}
+//
+//tabla_pagina* crear_marco(int base, bool presente){
+//	tabla_pagina *nuevo_marco = malloc(sizeof(tabla_pagina));
+//	nuevo_marco->marco = base;
+//	nuevo_marco->presente = presente;
+//	return nuevo_marco;
+//}
+//
+//void destruir_marco(tabla_pagina* marco) {
+//    free(marco);
+//}
 
-}
-
-Marco* crear_marco(int base, bool presente){
-	Marco *nuevo_marco = malloc(sizeof(Marco));
-	nuevo_marco->base = base;
-	nuevo_marco->presente = presente;
-	return nuevo_marco;
-}
 /*
 tabla_paginas* crear_tabla_paginas(int pid){
 	tabla_paginas* nueva_tabla = malloc(sizeof(tabla_paginas));
@@ -106,9 +114,17 @@ tabla_paginas* crear_tabla_paginas(int pid){
 }
 */
 void finalizar_memoria(){
+//	list_destroy_and_destroy_elements(lst_marco, (void*)destruir_marco);
+//	free(espacio_usuario);
 	log_destroy(memoria_logger);
 	log_destroy(memoria_log_obligatorio);
 	config_destroy(memoria_config);
+//    log_info(memoria_logger, "Memoria finalizada correctamente");
+
+
+//	liberar_conexion(fd_cpu);
+//	liberar_conexion(fd_filesystem);
+//	liberar_conexion(fd_kernel);
 }
 
 void atender_mensajes_kernel(t_buffer* buffer){
@@ -119,6 +135,20 @@ void atender_mensajes_kernel(t_buffer* buffer){
 	free(buffer);
 }
 
+//void atender_mensajes_filesystem(t_buffer* buffer){
+//	int tamanio = recibir_int_del_buffer(buffer);
+//	char* mensaje = recibir_string_del_buffer(buffer);
+//	log_info(memoria_logger, "[FILESYSTEM]> ");
+//	free(mensaje);
+//	free(buffer);
+//}
+//void atender_mensajes_cpu(t_buffer* buffer){
+//	int tamanio = recibir_int_del_buffer(buffer);
+//	char* mensaje = recibir_string_del_buffer(buffer);
+//	log_info(memoria_logger, "[CPU]> ");
+//	free(mensaje);
+//	free(buffer);
+//}
 /*----------------TODO COMUNICACION SOCKETS --------*/
 
 void identificar_modulo(t_buffer* unBuffer, int conexion){
@@ -262,7 +292,7 @@ void saludar_cliente(void *void_args){
 			procesar_conexion(conexion);
 			break;
 		case -1:
-			log_error(memoria_logger, "Deseconexion en HANDSHAKE");
+			log_error(memoria_logger, "Desconexion en HANDSHAKE");
 			break;
 		default:
 			log_error(memoria_logger, "ERROR EN HANDSHAKE: Operacion desconocida");
@@ -273,7 +303,6 @@ void saludar_cliente(void *void_args){
 
 int server_escucha(){
 	server_name = "Memoria";
-	printf("%d \n",server_fd_memoria);
 	int cliente_socket = esperar_cliente(memoria_logger, server_name, server_fd_memoria );
 	if(cliente_socket != -1){
 		pthread_t hilo_cliente;
@@ -286,7 +315,7 @@ int server_escucha(){
 		return 1;
 	}
 	log_info(memoria_logger, "Se activa el servidor %s ", server_name);
-	return 0;
+	return EXIT_SUCCESS;
 }
 
 
@@ -346,13 +375,6 @@ void liberar_memoria_de_instrucciones(t_list* instrucciones){
 	list_destroy_and_destroy_elements(instrucciones, free);
 }
 
-//TODO con el buffer desempaqueto busco el pId y el PC para poder enviar el char* del nro de instruccion
-//que indice que el PC por ejemplo  linea 5 MOV_IN DX 0
-//enviar a CPU solo la linea MOV_IN DX 0 (LISTO)
-//TODO: Obtener el proceso del kernel [int pid, int size, t_list* instrucciones] (LISTO)
-//TODO: crear una lista de procesos (LISTO)
-//TODO: buscar un proceso por medio de su pId (LISTO)
-
 char* obtener_instruccion_por_indice(int indice_instruccion, t_list* instrucciones){
 
 	char* instruccion_actual;
@@ -382,10 +404,11 @@ void agregar_proceso_a_listado(t_buffer* unBuffer, t_list* lst_procesos_recibido
 	un_proceso->pathInstrucciones = recibir_string_del_buffer(unBuffer);
 	un_proceso->size = recibir_int_del_buffer(unBuffer);
 	un_proceso->pid =recibir_int_del_buffer(unBuffer);
-
+	log_info(memoria_logger, "Recibi el proceso con los siguientes datos archivo: %s, el tamanio: %d y el pid: %d ",un_proceso->pathInstrucciones, un_proceso->size, un_proceso->pid);
 	list_add(lst_procesos_recibido, un_proceso);
 	free(unBuffer);
-//	handhsake_modules(fd_kernel,"PROCESO INICIALIZADO ESTRUCTURA KERNEL MEMORIA");
+	handhsake_modules(fd_kernel,"[MEMORIA]>Proceso cargado en Memoria OK");
+
 
 }
 
