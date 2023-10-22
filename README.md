@@ -13,12 +13,12 @@
 - INICIAR_PROCESO /home/utnso/tp-2023-2c-En_esta_la_firmamOS/prueba_instrucciones/psudocodigos.txt 12 1
 
 ## Para ejecutar con el archivo .sh
->kernel (cd /home/utnso/tp-2023-2c-En_esta_la_firmamOS/Kernel/ ):
-./run_kernel.sh
->cpu (/home/utnso/tp-2023-2c-En_esta_la_firmamOS/CPU/):
+- kernel (cd /home/utnso/tp-2023-2c-En_esta_la_firmamOS/Kernel/ ):
+ ./run_kernel.sh
+- cpu (/home/utnso/tp-2023-2c-En_esta_la_firmamOS/CPU/):
 ./run_cpu.sh
->filesystem (cd /home/utnso/tp-2023-2c-En_esta_la_firmamOS/FileSystem/):
+- filesystem (cd /home/utnso/tp-2023-2c-En_esta_la_firmamOS/FileSystem/):
 ./run_filesystem.sh
->memoria (cd /home/utnso/tp-2023-2c-En_esta_la_firmamOS/Memoria/)
+- memoria (cd /home/utnso/tp-2023-2c-En_esta_la_firmamOS/Memoria/)
 ./run_memoria.sh
 
