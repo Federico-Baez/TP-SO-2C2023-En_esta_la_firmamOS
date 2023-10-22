@@ -59,7 +59,8 @@ dkms.conf
 
 
 #carpeta Settings
-settings/
+/settings/
+.settings/language.settings.xml
 language.settings.xml
 *.settings.xml
 *.xml
