@@ -1,0 +1,7 @@
+LD_LIBRARY_PATH=/home/utnso/eclipse-workspace/tp-2023-2c-En_esta_la_firm\
+amOS/Shared/Debug/
+./Kernel ../kernel.config#!/bin/bash
+
+export LD_LIBRARY_PATH=/home/utnso/eclipse-workspace/tp-2023-2c-En_esta_la_firmamOS/Shared/Debug/
+./Kernel ../kernel.config
+
