@@ -1,2 +1,8 @@
 /Debug/
 *.cproject
+
+#carpeta Settings
+/settings/
+language.settings.xml
+*.settings.xml
+*.xml

@@ -55,3 +55,11 @@ dkms.conf
 *.settings.xml
 *.xml
 *.settings/language.settings.xml
+.settings/language.settings.xml
+*.sh
+
+#carpeta Settings
+/settings/
+language.settings.xml
+*.settings.xml
+*.xml
