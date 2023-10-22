@@ -64,3 +64,5 @@ dkms.conf
 language.settings.xml
 *.settings.xml
 *.xml
+
+**/.settings/language.settings.xml
