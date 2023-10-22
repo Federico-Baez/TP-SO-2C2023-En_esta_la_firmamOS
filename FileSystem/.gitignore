@@ -1,4 +1,8 @@
-/Debug/
+#carpeta Debug
+Debug/
+.Debug/
+Debug/
+./Debug/
 *.cproject
 #carpeta Settings
 /settings/
