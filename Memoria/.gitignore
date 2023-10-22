@@ -1,7 +1,6 @@
 /Debug/
 *.cproject
 
-
 #carpeta Settings
 /settings/
 .settings/language.settings.xml
