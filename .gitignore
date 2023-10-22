@@ -54,3 +54,4 @@ dkms.conf
 *.cproject
 *.settings.xml
 *.xml
+*.settings/language.settings.xml
