@@ -199,24 +199,29 @@ static void procesar_conexion(void *void_args){
 		case IDENTIFICACION:
 			unBuffer = recibiendo_super_paquete(cliente_socket);
 			identificar_modulo(unBuffer, cliente_socket);
+			free(unBuffer);
 			break;
 		//======= KERNEL ===========================
 		case INICIAR_ESTRUCTURA_KM:
 			unBuffer = recibiendo_super_paquete(fd_kernel);
 			//
 			agregar_proceso_a_listado(unBuffer, list_procss_recibidos);
+			free(unBuffer);
 			break;
 		case LIBERAR_ESTRUCTURA_KM:
 			unBuffer = recibiendo_super_paquete(fd_kernel);
+			free(unBuffer);
 			//
 			break;
 		case MENSAJES_POR_CONSOLA:
 			unBuffer = recibiendo_super_paquete(fd_kernel);
 			atender_mensajes_kernel(unBuffer);
+			free(unBuffer);
 			break;
 		//======= CPU ===========================
 		case PETICION_INFO_RELEVANTE_CM:
 			unBuffer = recibiendo_super_paquete(fd_cpu);
+			free(unBuffer);
 			//
 			break;
 		case PETICION_DE_INSTRUCCIONES_CM:
@@ -224,34 +229,42 @@ static void procesar_conexion(void *void_args){
 			int pid_buffer = recibir_int_del_buffer(unBuffer);
 			int ip_buffer = recibir_int_del_buffer(unBuffer);
 			enviar_instrucciones_a_cpu(pid_buffer,ip_buffer);
+			free(unBuffer);
 			break;
 		case PETICION_DE_EJECUCION_CM:
 			unBuffer = recibiendo_super_paquete(fd_cpu);
+			free(unBuffer);
 			//
 			break;
 		case CONSULTA_DE_PAGINA_CM:
 			unBuffer = recibiendo_super_paquete(fd_cpu);
+			free(unBuffer);
 			//
 			break;
 		//======= FILESYSTEM ===========================
 		case PETICION_ASIGNACION_BLOQUE_SWAP_FM:
 			unBuffer = recibiendo_super_paquete(fd_filesystem);
+			free(unBuffer);
 			//
 			break;
 		case LIBERAR_PAGINAS_FM:
 			unBuffer = recibiendo_super_paquete(fd_filesystem);
+			free(unBuffer);
 			//
 			break;
 		case PETICION_PAGE_FAULT_FM:
 			unBuffer = recibiendo_super_paquete(fd_filesystem);
+			free(unBuffer);
 			//
 			break;
 		case CARGAR_INFO_DE_LECTURA_FM:
 			unBuffer = recibiendo_super_paquete(fd_filesystem);
+			free(unBuffer);
 			//
 			break;
 		case GUARDAR_INFO_FM:
 			unBuffer = recibiendo_super_paquete(fd_filesystem);
+			free(unBuffer);
 			//
 			break;
 		//==================================================
@@ -260,8 +273,9 @@ static void procesar_conexion(void *void_args){
 			break;
 
 		case -1:
-			control_key = 0;
 			log_error(memoria_logger, "CLIENTE DESCONCETADO");
+			close(cliente_socket);
+			control_key = 0;
 			break;
 		default:
 			log_error(memoria_logger, "Operacion desconocida. No quieras meter la pata");
@@ -301,22 +315,38 @@ void saludar_cliente(void *void_args){
 }
 
 
+//int server_escucha(){
+//	server_name = "Memoria";
+//	int cliente_socket = esperar_cliente(memoria_logger, server_name, server_fd_memoria );
+//	if(cliente_socket != -1){
+//		pthread_t hilo_cliente;
+//		int *args = malloc(sizeof(int));
+////		args = &cliente_socket;
+//		*args = cliente_socket;
+//		pthread_create(&hilo_cliente, NULL, (void*) saludar_cliente, &args);
+//		log_info(memoria_logger, "[THREAD] Creo hilo para atender");
+//		pthread_detach(hilo_cliente);
+//		return 1;
+//	}
+//	log_info(memoria_logger, "Se activa el servidor %s ", server_name);
+//	return EXIT_SUCCESS;
+//}
 int server_escucha(){
 	server_name = "Memoria";
-	int cliente_socket = esperar_cliente(memoria_logger, server_name, server_fd_memoria );
-	if(cliente_socket != -1){
-		pthread_t hilo_cliente;
-		int *args = malloc(sizeof(int));
-		args = &cliente_socket;
-//		*args = cliente_socket;
-		pthread_create(&hilo_cliente, NULL, (void*) saludar_cliente, (void*)args);
-		log_info(memoria_logger, "[THREAD] Creo hilo para atender");
-		pthread_detach(hilo_cliente);
-		return 1;
+	while(1) {
+		int cliente_socket = esperar_cliente(memoria_logger, server_name, server_fd_memoria );
+		if(cliente_socket != -1){
+			pthread_t hilo_cliente;
+			int *args = malloc(sizeof(int));
+			*args = cliente_socket;
+			pthread_create(&hilo_cliente, NULL, (void*) saludar_cliente, args); // Pasamos args directamente
+			log_info(memoria_logger, "[THREAD] Creo hilo para atender");
+			pthread_detach(hilo_cliente);
+		}
 	}
-	log_info(memoria_logger, "Se activa el servidor %s ", server_name);
 	return EXIT_SUCCESS;
 }
+
 
 
 /******************************INSTRUCCIONES*****************************/
@@ -421,6 +451,7 @@ void liberar_proceso(proceso_recibido* proceso) {
     free(proceso->pathInstrucciones);
     free(proceso);
 }
+
 void liberar_listado_procesos(t_list* lst_procesos) {
     for (int i = 0; i < list_size(lst_procesos); i++) {
         proceso_recibido* proceso = list_get(lst_procesos, i);

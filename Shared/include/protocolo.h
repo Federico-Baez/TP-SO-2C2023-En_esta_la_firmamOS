@@ -78,7 +78,8 @@ typedef enum{
 	//-------
 	MENSAJES_POR_CONSOLA,
 	PRUEBAS,
-	IDENTIFICACION
+	IDENTIFICACION,
+	CONEXION
 }op_code;
 
 //typedef enum{
@@ -103,6 +104,16 @@ typedef struct{
 	op_code codigo_operacion;
 	t_buffer* buffer;
 } t_paquete;
+
+typedef struct {
+	modulo_code emisor;
+	op_code tipo_mensaje;
+	int payload_size;
+} __attribute__((packed)) t_header;
+typedef struct {
+	t_header* header;
+	void* payload;
+} t_msg;
 
 /**/
 

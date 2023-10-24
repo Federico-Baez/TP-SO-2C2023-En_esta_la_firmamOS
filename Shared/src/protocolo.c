@@ -28,17 +28,37 @@ void enviar_mensaje(char* mensaje, int socket_cliente)
 	eliminar_paquete(paquete);
 }
 
-int recibir_operacion(int socket_cliente)
+int recibir_operacion(int socket_cliente) // @suppress("No return")
 {
 	int cod_op;
-	if(recv(socket_cliente, &cod_op, sizeof(int), MSG_WAITALL) > 0)
-		return cod_op;
-	else
-	{
-		printf("Error al recibir el codigo de operacion\n");
+//	if(recv(socket_cliente, &cod_op, sizeof(int), MSG_WAITALL) > 0)
+//		return cod_op;
+//	else
+//	{
+//		printf("Error al recibir el codigo de operacion\n");
+//		close(socket_cliente);
+//		return -1;
+//	}
+
+	int bytesRecibidos = recv(socket_cliente, &cod_op, sizeof(int), MSG_WAITALL);
+
+	if(bytesRecibidos > 0) {
+	    if(bytesRecibidos != sizeof(int)) {
+	        printf("Recibidos %d bytes, esperaba %zu bytes\n", bytesRecibidos, sizeof(int));
+	    }
+	    return cod_op;
+	} else if (bytesRecibidos == 0) {
+		// El cliente cerró la conexión
+		printf("El cliente cerró la conexión.\n");
 		close(socket_cliente);
 		return -1;
+	} else {
+		// Ocurrió un error al recibir datos
+		printf("Error al recibir el codigo de operacion\n");
+		close(socket_cliente);
+		return -2;
 	}
+
 }
 
 void* recibir_buffer(int* size, int socket_cliente)
@@ -343,7 +363,7 @@ void gestionar_handshake_como_cliente(int conexion, char* modulo_destino, t_log*
 
 void gestionar_handshake_como_server(int conexion, t_log* logger){
 	int code_op = recibir_operacion(conexion);
-	printf("codigo de operacion: %d \n", code_op);
+	printf("codigo de operacion: %d como handhaske servidor \n", code_op);
 	switch (code_op) {
 		case HANDSHAKE:
 			void* coso_a_enviar = malloc(sizeof(int));

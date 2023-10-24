@@ -146,7 +146,8 @@ void atender_cpu_interrupt(){
 	fd_kernel_interrupt = esperar_cliente(cpu_logger, "Kernel por interrupt", server_fd_cpu_interrupt);
 	gestionar_handshake_como_server(fd_kernel_interrupt, cpu_logger);
 		log_info(cpu_logger, "::::::::::: KERNEL CONECTADO POR INTERRUPT ::::::::::::");
-		while(1){
+		int control_key = 1;
+		while(control_key){
 			int cod_op = recibir_operacion(fd_kernel_interrupt);
 			t_buffer* unBuffer;
 			//log_info(cpu_logger, "Se recibio algo de KERNEL");
@@ -162,6 +163,7 @@ void atender_cpu_interrupt(){
 				break;
 			case -1:
 				log_error(cpu_logger, "[DESCONEXION]: KERNEL_Interrupt");
+				control_key = 0;
 				exit(EXIT_FAILURE);
 				break;
 			default:
@@ -178,7 +180,8 @@ void atender_cpu_memoria(){
 	gestionar_handshake_como_cliente(fd_memoria, "MEMORIA", cpu_logger);
 	identificarme_con_memoria(fd_memoria, CPU);
 	log_info(cpu_logger, "HANDSHAKE CON MEMORIA [EXITOSO]");
-	while(1){
+	int seguir=1;
+	while(seguir){
 		int cod_op = recibir_operacion(fd_memoria);
 		t_buffer* unBuffer;
 		//log_info(cpu_logger, "Se recibio algo de KERNEL");
@@ -202,6 +205,7 @@ void atender_cpu_memoria(){
 			break;
 		case -1:
 			log_error(cpu_logger, "[DESCONEXION]: MEMORIA");
+			seguir = 0;
 			exit(EXIT_FAILURE);
 			break;
 		default:
