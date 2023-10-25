@@ -184,113 +184,25 @@ void identificar_modulo(t_buffer* unBuffer, int conexion){
 static void procesar_conexion(void *void_args){
 	int* args = (int*) void_args;
 	int cliente_socket = *args;
-//	int control_key = 1;
-//	while(control_key){
+
 		int cod_op = recibir_operacion(cliente_socket);
 		t_buffer* unBuffer;
 		switch(cod_op){
-		case MENSAJE:
-			recibir_mensaje(memoria_logger, cliente_socket);
-			break;
-		case PAQUETE:
-			//int* numero_xd = recibir_int(logger, coso)
-
-			t_list* paquete_recibido = recibir_paquete_int(cliente_socket);
-			//t_list* paquete_recibido = recibir_paquete(cliente_socket);
-			log_info(memoria_logger, "Se reciben los siguientes paquetes: ");
-			list_iterate(paquete_recibido, (void*)iterator);
-
-			break;
-		case ADMINISTRAR_PAGINA_MEMORIA:
-
-			break;
 		case IDENTIFICACION:
 			unBuffer = recibiendo_super_paquete(cliente_socket);
 			identificar_modulo(unBuffer, cliente_socket);
 			free(unBuffer);
 			break;
-		//======= KERNEL ===========================
-//		case INICIAR_ESTRUCTURA_KM:
-//			unBuffer = recibiendo_super_paquete(fd_kernel);
-//			//
-//			agregar_proceso_a_listado(unBuffer, list_procss_recibidos);
-//			free(unBuffer);
-//			break;
-//		case LIBERAR_ESTRUCTURA_KM:
-//			unBuffer = recibiendo_super_paquete(fd_kernel);
-//			free(unBuffer);
-//			//
-//			break;
-//		case MENSAJES_POR_CONSOLA:
-//			unBuffer = recibiendo_super_paquete(fd_kernel);
-//			atender_mensajes_kernel(unBuffer);
-//			free(unBuffer);
-//			break;
-//		//======= CPU ===========================
-//		case PETICION_INFO_RELEVANTE_CM:
-//			unBuffer = recibiendo_super_paquete(fd_cpu);
-//			free(unBuffer);
-//			//
-//			break;
-//		case PETICION_DE_INSTRUCCIONES_CM:
-//			unBuffer = recibiendo_super_paquete(fd_cpu); //recibo el [pId] y el [PC]
-//			int pid_buffer = recibir_int_del_buffer(unBuffer);
-//			int ip_buffer = recibir_int_del_buffer(unBuffer);
-//			enviar_instrucciones_a_cpu(pid_buffer,ip_buffer);
-//			free(unBuffer);
-//			break;
-//		case PETICION_DE_EJECUCION_CM:
-//			unBuffer = recibiendo_super_paquete(fd_cpu);
-//			free(unBuffer);
-//			//
-//			break;
-//		case CONSULTA_DE_PAGINA_CM:
-//			unBuffer = recibiendo_super_paquete(fd_cpu);
-//			free(unBuffer);
-//			//
-//			break;
-//		//======= FILESYSTEM ===========================
-//		case PETICION_ASIGNACION_BLOQUE_SWAP_FM:
-//			unBuffer = recibiendo_super_paquete(fd_filesystem);
-//			free(unBuffer);
-//			//
-//			break;
-//		case LIBERAR_PAGINAS_FM:
-//			unBuffer = recibiendo_super_paquete(fd_filesystem);
-//			free(unBuffer);
-//			//
-//			break;
-//		case PETICION_PAGE_FAULT_FM:
-//			unBuffer = recibiendo_super_paquete(fd_filesystem);
-//			free(unBuffer);
-//			//
-//			break;
-//		case CARGAR_INFO_DE_LECTURA_FM:
-//			unBuffer = recibiendo_super_paquete(fd_filesystem);
-//			free(unBuffer);
-//			//
-//			break;
-//		case GUARDAR_INFO_FM:
-//			unBuffer = recibiendo_super_paquete(fd_filesystem);
-//			free(unBuffer);
-//			//
-//			break;
-		//==================================================
-		case PRUEBAS:
-
-			break;
-
 		case -1:
 			log_error(memoria_logger, "CLIENTE DESCONCETADO");
 			close(cliente_socket);
-//			control_key = 0;
 			break;
 		default:
 			log_error(memoria_logger, "Operacion desconocida. No quieras meter la pata en [MEMORIA]");
 			break;
 		}
 
-//	}
+
 }
 
 void atender_kernel(int cliente_socket) {
@@ -302,13 +214,15 @@ void atender_kernel(int cliente_socket) {
 				case INICIAR_ESTRUCTURA_KM:
 					printf("Se recibe el proceso");
 					unBuffer = recibiendo_super_paquete(fd_kernel);
-					//
 					agregar_proceso_a_listado(unBuffer, list_procss_recibidos);
-	//    			free(unBuffer);
+	    			free(unBuffer);
 					printf("Se libera el buffer");
 					break;
 				case LIBERAR_ESTRUCTURA_KM:
 					unBuffer = recibiendo_super_paquete(fd_kernel);
+					int pid = recibir_int_del_buffer(unBuffer);
+					proceso_recibido* proceso_a_liberar = obtener_proceso_por_id(pid, list_procss_recibidos);
+					liberar_proceso(proceso_a_liberar);
 					free(unBuffer);
 					//
 					break;
@@ -353,7 +267,7 @@ void atender_cpu(int cliente_socket) {
 				case PETICION_DE_EJECUCION_CM:
 					unBuffer = recibiendo_super_paquete(fd_cpu);
 					free(unBuffer);
-					//
+
 					break;
 				case CONSULTA_DE_PAGINA_CM:
 					unBuffer = recibiendo_super_paquete(fd_cpu);
@@ -553,6 +467,7 @@ void agregar_proceso_a_listado(t_buffer* unBuffer, t_list* lst_procesos_recibido
 	un_proceso->pathInstrucciones = recibir_string_del_buffer(unBuffer);
 	un_proceso->size = recibir_int_del_buffer(unBuffer);
 	un_proceso->pid =recibir_int_del_buffer(unBuffer);
+	un_proceso->instrucciones= leer_archivo_y_cargar_instrucciones(un_proceso->pathInstrucciones);
 	log_info(memoria_logger, "Recibi el proceso con los siguientes datos archivo: %s, el tamanio: %d y el pid: %d ",un_proceso->pathInstrucciones, un_proceso->size, un_proceso->pid);
 	list_add(lst_procesos_recibido, un_proceso);
 	free(unBuffer);

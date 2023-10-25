@@ -277,35 +277,7 @@ int recibir_int_del_buffer(t_buffer* coso){
 }
 
 char* recibir_string_del_buffer(t_buffer* coso){
-//	int size_string;
-//	char* string;
-//	memcpy(&size_string, coso->stream, sizeof(int));
-//	//string = malloc(sizeof(size_string));
-//	string = malloc(size_string);
-//	memcpy(string, coso->stream + sizeof(int), size_string);
-//
-//	int nuevo_size = coso->size - sizeof(int) - size_string;
-//	if(nuevo_size == 0){
-//		free(coso->stream);
-//		coso->stream = NULL;
-//		coso->size = 0;
-//		return string;
-//	}
-//	if(nuevo_size < 0){
-//		printf("\n[ERROR]: BUFFER CON TAMAÑO NEGATIVO\n\n");
-//		free(string);
-//		//return "[ERROR]: BUFFER CON TAMAÑO NEGATIVO";
-//		exit(EXIT_FAILURE);
-//	}
-//	void* nuevo_coso = malloc(nuevo_size);
-//	memcpy(nuevo_coso, coso->stream + sizeof(int) + size_string, nuevo_size);
-//	free(coso->stream);
-//	coso->stream = nuevo_coso;
-//	coso->size = nuevo_size;
-//
-//	return string;
-    // Verifica que el buffer tiene al menos suficiente espacio para un int
-    if(coso->size < sizeof(int)) {
+ if(coso->size < sizeof(int)) {
         perror("[ERROR]: Buffer demasiado pequeño para contener el tamaño de la cadena");
         exit(EXIT_FAILURE);
     }
