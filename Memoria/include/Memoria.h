@@ -102,6 +102,9 @@ void inicializar_memoria();
 void iterator(int *value);
 void leer_log();
 int server_escucha();
+void atender_kernel(int cliente_socket);
+void atender_cpu(int cliente_socket) ;
+void atender_filesystem(int cliente_socket);
 
 
 /************TODO CARGAR LISTADO DE INSTRUCCIONES DEL PROCESO***************/

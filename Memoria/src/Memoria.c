@@ -157,14 +157,20 @@ void identificar_modulo(t_buffer* unBuffer, int conexion){
 		case KERNEL:
 			fd_kernel = conexion;
 			log_info(memoria_logger, "!!!!! KERNEL CONECTADO !!!!!");
+			atender_kernel(fd_kernel);
+
 			break;
 		case CPU:
 			fd_cpu = conexion;
 			log_info(memoria_logger, "!!!!! CPU CONECTADO !!!!!");
+			atender_cpu(fd_cpu);
+
 			break;
 		case FILESYSTEM:
 			fd_filesystem = conexion;
 			log_info(memoria_logger, "!!!!! FILESYSTEM CONECTADO !!!!!");
+			atender_filesystem(fd_filesystem);
+
 			break;
 		default:
 			log_error(memoria_logger, "[%d]Error al identificar modulo",modulo_id);
@@ -173,11 +179,13 @@ void identificar_modulo(t_buffer* unBuffer, int conexion){
 	}
 }
 
+
+
 static void procesar_conexion(void *void_args){
 	int* args = (int*) void_args;
 	int cliente_socket = *args;
-	int control_key = 1;
-	while(control_key){
+//	int control_key = 1;
+//	while(control_key){
 		int cod_op = recibir_operacion(cliente_socket);
 		t_buffer* unBuffer;
 		switch(cod_op){
@@ -202,71 +210,71 @@ static void procesar_conexion(void *void_args){
 			free(unBuffer);
 			break;
 		//======= KERNEL ===========================
-		case INICIAR_ESTRUCTURA_KM:
-			unBuffer = recibiendo_super_paquete(fd_kernel);
-			//
-			agregar_proceso_a_listado(unBuffer, list_procss_recibidos);
-			free(unBuffer);
-			break;
-		case LIBERAR_ESTRUCTURA_KM:
-			unBuffer = recibiendo_super_paquete(fd_kernel);
-			free(unBuffer);
-			//
-			break;
-		case MENSAJES_POR_CONSOLA:
-			unBuffer = recibiendo_super_paquete(fd_kernel);
-			atender_mensajes_kernel(unBuffer);
-			free(unBuffer);
-			break;
-		//======= CPU ===========================
-		case PETICION_INFO_RELEVANTE_CM:
-			unBuffer = recibiendo_super_paquete(fd_cpu);
-			free(unBuffer);
-			//
-			break;
-		case PETICION_DE_INSTRUCCIONES_CM:
-			unBuffer = recibiendo_super_paquete(fd_cpu); //recibo el [pId] y el [PC]
-			int pid_buffer = recibir_int_del_buffer(unBuffer);
-			int ip_buffer = recibir_int_del_buffer(unBuffer);
-			enviar_instrucciones_a_cpu(pid_buffer,ip_buffer);
-			free(unBuffer);
-			break;
-		case PETICION_DE_EJECUCION_CM:
-			unBuffer = recibiendo_super_paquete(fd_cpu);
-			free(unBuffer);
-			//
-			break;
-		case CONSULTA_DE_PAGINA_CM:
-			unBuffer = recibiendo_super_paquete(fd_cpu);
-			free(unBuffer);
-			//
-			break;
-		//======= FILESYSTEM ===========================
-		case PETICION_ASIGNACION_BLOQUE_SWAP_FM:
-			unBuffer = recibiendo_super_paquete(fd_filesystem);
-			free(unBuffer);
-			//
-			break;
-		case LIBERAR_PAGINAS_FM:
-			unBuffer = recibiendo_super_paquete(fd_filesystem);
-			free(unBuffer);
-			//
-			break;
-		case PETICION_PAGE_FAULT_FM:
-			unBuffer = recibiendo_super_paquete(fd_filesystem);
-			free(unBuffer);
-			//
-			break;
-		case CARGAR_INFO_DE_LECTURA_FM:
-			unBuffer = recibiendo_super_paquete(fd_filesystem);
-			free(unBuffer);
-			//
-			break;
-		case GUARDAR_INFO_FM:
-			unBuffer = recibiendo_super_paquete(fd_filesystem);
-			free(unBuffer);
-			//
-			break;
+//		case INICIAR_ESTRUCTURA_KM:
+//			unBuffer = recibiendo_super_paquete(fd_kernel);
+//			//
+//			agregar_proceso_a_listado(unBuffer, list_procss_recibidos);
+//			free(unBuffer);
+//			break;
+//		case LIBERAR_ESTRUCTURA_KM:
+//			unBuffer = recibiendo_super_paquete(fd_kernel);
+//			free(unBuffer);
+//			//
+//			break;
+//		case MENSAJES_POR_CONSOLA:
+//			unBuffer = recibiendo_super_paquete(fd_kernel);
+//			atender_mensajes_kernel(unBuffer);
+//			free(unBuffer);
+//			break;
+//		//======= CPU ===========================
+//		case PETICION_INFO_RELEVANTE_CM:
+//			unBuffer = recibiendo_super_paquete(fd_cpu);
+//			free(unBuffer);
+//			//
+//			break;
+//		case PETICION_DE_INSTRUCCIONES_CM:
+//			unBuffer = recibiendo_super_paquete(fd_cpu); //recibo el [pId] y el [PC]
+//			int pid_buffer = recibir_int_del_buffer(unBuffer);
+//			int ip_buffer = recibir_int_del_buffer(unBuffer);
+//			enviar_instrucciones_a_cpu(pid_buffer,ip_buffer);
+//			free(unBuffer);
+//			break;
+//		case PETICION_DE_EJECUCION_CM:
+//			unBuffer = recibiendo_super_paquete(fd_cpu);
+//			free(unBuffer);
+//			//
+//			break;
+//		case CONSULTA_DE_PAGINA_CM:
+//			unBuffer = recibiendo_super_paquete(fd_cpu);
+//			free(unBuffer);
+//			//
+//			break;
+//		//======= FILESYSTEM ===========================
+//		case PETICION_ASIGNACION_BLOQUE_SWAP_FM:
+//			unBuffer = recibiendo_super_paquete(fd_filesystem);
+//			free(unBuffer);
+//			//
+//			break;
+//		case LIBERAR_PAGINAS_FM:
+//			unBuffer = recibiendo_super_paquete(fd_filesystem);
+//			free(unBuffer);
+//			//
+//			break;
+//		case PETICION_PAGE_FAULT_FM:
+//			unBuffer = recibiendo_super_paquete(fd_filesystem);
+//			free(unBuffer);
+//			//
+//			break;
+//		case CARGAR_INFO_DE_LECTURA_FM:
+//			unBuffer = recibiendo_super_paquete(fd_filesystem);
+//			free(unBuffer);
+//			//
+//			break;
+//		case GUARDAR_INFO_FM:
+//			unBuffer = recibiendo_super_paquete(fd_filesystem);
+//			free(unBuffer);
+//			//
+//			break;
 		//==================================================
 		case PRUEBAS:
 
@@ -275,16 +283,142 @@ static void procesar_conexion(void *void_args){
 		case -1:
 			log_error(memoria_logger, "CLIENTE DESCONCETADO");
 			close(cliente_socket);
-			control_key = 0;
+//			control_key = 0;
 			break;
 		default:
-			log_error(memoria_logger, "Operacion desconocida. No quieras meter la pata");
+			log_error(memoria_logger, "Operacion desconocida. No quieras meter la pata en [MEMORIA]");
 			break;
 		}
 
+//	}
+}
+
+void atender_kernel(int cliente_socket) {
+    t_buffer* unBuffer;
+    int cod_op = recibir_operacion(cliente_socket);
+    int control_key = 1;
+    while(control_key){
+		switch(cod_op) {
+				case INICIAR_ESTRUCTURA_KM:
+					printf("Se recibe el proceso");
+					unBuffer = recibiendo_super_paquete(fd_kernel);
+					//
+					agregar_proceso_a_listado(unBuffer, list_procss_recibidos);
+	//    			free(unBuffer);
+					printf("Se libera el buffer");
+					break;
+				case LIBERAR_ESTRUCTURA_KM:
+					unBuffer = recibiendo_super_paquete(fd_kernel);
+					free(unBuffer);
+					//
+					break;
+				case MENSAJES_POR_CONSOLA:
+					unBuffer = recibiendo_super_paquete(fd_kernel);
+					atender_mensajes_kernel(unBuffer);
+					free(unBuffer);
+					break;
+			case -1:
+				log_error(memoria_logger, "[DESCONEXION]: KERNEL");
+				close(cliente_socket);
+				control_key = 0;
+	//            exit(EXIT_FAILURE);
+				// Otras acciones que quieras tomar en caso de desconexión
+				return;  // Salimos de la función
+
+			default:
+				log_error(memoria_logger, "Operacion desconocida KERNEL");
+				break;
+			}
+    }
+
+}
+void atender_cpu(int cliente_socket) {
+    t_buffer* unBuffer;
+    int cod_op = recibir_operacion(cliente_socket);
+    int control_key = 1;
+	while(control_key){
+		switch(cod_op) {
+				case PETICION_INFO_RELEVANTE_CM:
+					unBuffer = recibiendo_super_paquete(fd_cpu);
+					free(unBuffer);
+					//
+					break;
+				case PETICION_DE_INSTRUCCIONES_CM:
+					unBuffer = recibiendo_super_paquete(fd_cpu); //recibo el [pId] y el [PC]
+					int pid_buffer = recibir_int_del_buffer(unBuffer);
+					int ip_buffer = recibir_int_del_buffer(unBuffer);
+					enviar_instrucciones_a_cpu(pid_buffer,ip_buffer);
+					free(unBuffer);
+					break;
+				case PETICION_DE_EJECUCION_CM:
+					unBuffer = recibiendo_super_paquete(fd_cpu);
+					free(unBuffer);
+					//
+					break;
+				case CONSULTA_DE_PAGINA_CM:
+					unBuffer = recibiendo_super_paquete(fd_cpu);
+					free(unBuffer);
+					//
+					break;
+			case -1:
+				log_error(memoria_logger, "[DESCONEXION]: CPU");
+				close(cliente_socket);
+				control_key = 0;
+	//            exit(EXIT_FAILURE);
+				// Otras acciones que quieras tomar en caso de desconexión
+				return;  // Salimos de la función
+
+			default:
+				log_error(memoria_logger, "Operacion desconocida CPU");
+				break;
+			}
 	}
 }
 
+
+void atender_filesystem(int cliente_socket){
+	t_buffer* unBuffer;
+	int cod_op = recibir_operacion(cliente_socket);
+
+	switch(cod_op) {
+	case PETICION_ASIGNACION_BLOQUE_SWAP_FM:
+				unBuffer = recibiendo_super_paquete(fd_filesystem);
+				free(unBuffer);
+				//
+				break;
+			case LIBERAR_PAGINAS_FM:
+				unBuffer = recibiendo_super_paquete(fd_filesystem);
+				free(unBuffer);
+				//
+				break;
+			case PETICION_PAGE_FAULT_FM:
+				unBuffer = recibiendo_super_paquete(fd_filesystem);
+				free(unBuffer);
+				//
+				break;
+			case CARGAR_INFO_DE_LECTURA_FM:
+				unBuffer = recibiendo_super_paquete(fd_filesystem);
+				free(unBuffer);
+				//
+				break;
+			case GUARDAR_INFO_FM:
+				unBuffer = recibiendo_super_paquete(fd_filesystem);
+				free(unBuffer);
+				//
+				break;
+		case -1:
+			log_error(memoria_logger, "[DESCONEXION]: FILESYSTEM");
+			close(cliente_socket);
+
+//	            exit(EXIT_FAILURE);
+			// Otras acciones que quieras tomar en caso de desconexión
+			return;  // Salimos de la función
+
+		default:
+			log_error(memoria_logger, "Operacion desconocida FILESYSTEM");
+			break;
+		}
+}
 
 void iterator(int *value) {
 	log_info(memoria_logger, "%d", *value);
@@ -315,22 +449,7 @@ void saludar_cliente(void *void_args){
 }
 
 
-//int server_escucha(){
-//	server_name = "Memoria";
-//	int cliente_socket = esperar_cliente(memoria_logger, server_name, server_fd_memoria );
-//	if(cliente_socket != -1){
-//		pthread_t hilo_cliente;
-//		int *args = malloc(sizeof(int));
-////		args = &cliente_socket;
-//		*args = cliente_socket;
-//		pthread_create(&hilo_cliente, NULL, (void*) saludar_cliente, &args);
-//		log_info(memoria_logger, "[THREAD] Creo hilo para atender");
-//		pthread_detach(hilo_cliente);
-//		return 1;
-//	}
-//	log_info(memoria_logger, "Se activa el servidor %s ", server_name);
-//	return EXIT_SUCCESS;
-//}
+
 int server_escucha(){
 	server_name = "Memoria";
 	while(1) {
