@@ -27,7 +27,7 @@ int main(int argc, char** argv) {
 	}
 
 	leer_config(memoria_config);
-	leer_log();
+//	leer_log();
 
 	list_procss_recibidos = list_create();
 	//TODO: verificar como inicializar memoria
@@ -67,6 +67,9 @@ void leer_log(){
 
 }
 void inicializar_memoria(){
+//	int pid;
+//	tabla_pagina* tabla_pag = crear_tabla_paginas(pid);
+//
 //	log_info(memoria_logger, "Inicializando memoria");
 //	espacio_usuario = malloc(TAM_MEMORIA);
 //	if(espacio_usuario == NULL){
@@ -81,8 +84,28 @@ void inicializar_memoria(){
 //		tabla_pagina* nuevo_marco  = crear_marco(TAM_PAGINA*i, true);
 //
 //		list_add(lst_marco,nuevo_marco);
+//
+//	}
+}
 
-	}
+//tabla_paginas* crear_tabla_paginas(int pid) {
+//    tabla_paginas* nueva_tabla = malloc(sizeof(tabla_paginas));
+//    log_debug(memoria_logger, "[PAG]: Creo tabla de paginas PID %d", pid);
+//
+//    nueva_tabla->pid = pid;
+//    nueva_tabla->paginas = list_create();
+//    pthread_mutex_init(&(nueva_tabla->mutex), NULL);
+//
+//    char spid[10]; // Aumentamos el tamaño para prevenir desbordamiento
+//    sprintf(spid, "%d", pid);
+//
+////    bloquear_lista_tablas();
+//    dictionary_put(tablas, spid, nueva_tabla);
+////    desbloquear_lista_tablas();
+//
+//    return nueva_tabla;
+//}
+
 //
 //}
 //

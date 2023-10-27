@@ -30,16 +30,19 @@ typedef struct{
 
 t_list* list_procss_recibidos;
 
-typedef struct{
-	int tamamo_usado;
-	bool en_memoria;
-	int ultimo_uso;//Para el algoritmo LRU
-	tabla_pagina* puntero_marco;
+typedef struct {
+    bool presente;         // la página está en memoria o en disco
+    bool modificado;       // Bit de modificación
+    int marco;             // Si está presente, este es el número de marco en memoria
+    int pos_en_swap;       // No está presente, esta es la posición en el espacio de intercambio (swap)
+    int ultimo_uso;        // LRU
+} Pagina;
 
-}Pagina;
-typedef struct{
-	Pagina* page;
-}tabla_paginas;
+typedef struct {
+    int pid;                        // Identificador del proceso asociado a esta tabla
+    t_list* paginas;                // Lista de páginas
+    pthread_mutex_t mutex;          // Mutex para sincronización
+} tabla_paginas;
 
 
 t_list* list_pagina;
