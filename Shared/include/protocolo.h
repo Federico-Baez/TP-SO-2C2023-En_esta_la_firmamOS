@@ -105,15 +105,15 @@ typedef struct{
 	t_buffer* buffer;
 } t_paquete;
 
-typedef struct {
-	modulo_code emisor;
-	op_code tipo_mensaje;
-	int payload_size;
-} __attribute__((packed)) t_header;
-typedef struct {
-	t_header* header;
-	void* payload;
-} t_msg;
+//typedef struct {
+//	modulo_code emisor;
+//	op_code tipo_mensaje;
+//	int payload_size;
+//} __attribute__((packed)) t_header;
+//typedef struct {
+//	t_header* header;
+//	void* payload;
+//} t_msg;
 
 /**/
 

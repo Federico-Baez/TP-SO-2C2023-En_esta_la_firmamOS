@@ -65,41 +65,16 @@ cod_instruccion convertir_string_a_instruccion(t_log* logger, const char *str_in
     return -1;
 }
 
-t_pcb* crear_pcb(int process_id, int prioridad){
-	t_pcb* new_pcb = malloc(sizeof(t_pcb));
-
-	new_pcb->pid = process_id;
-	new_pcb->program_counter = 0;
-	new_pcb->prioridad = prioridad;
-//	new_pcb->registros->AX = 0;
-//	new_pcb->registros->BX = 0; // No se si hay que inicializarlas o modificarlas cuando memoria nos de las instrucciones.
-//	new_pcb->registros->CX = 0;
-//	new_pcb->registros->DX = 0;
-	new_pcb->estado = NEW;
-//	new_pcb->motivo_vuelta = NULL;
-
-	return new_pcb;
+void ejecutar_en_un_hilo_nuevo_detach(void (*f)(void*) ,void* struct_arg){
+	pthread_t thread;
+	pthread_create(&thread, NULL, (void*)f, struct_arg);
+	pthread_detach(thread);
 }
 
-void cambiar_estado_pcb(t_pcb* pcb, est_pcb nuevo_estado){
-	pcb -> estado = nuevo_estado;
-}
-
-void pcb_destroy(t_pcb* pcb){
-	free(pcb);
-}
-
-void enviar_contexto_CPU(int fd_cpu_dispatcher ,t_pcb* pcb){
-	t_paquete* paquete = crear_super_paquete(EJECUTAR_PROCESO_KC);
-
-	cargar_int_al_super_paquete(paquete, pcb->pid);
-	cargar_int_al_super_paquete(paquete, pcb->program_counter);
-	cargar_choclo_al_super_paquete(paquete, &(pcb->registros->AX), sizeof(uint32_t));
-	cargar_choclo_al_super_paquete(paquete, &(pcb->registros->BX), sizeof(uint32_t));
-	cargar_choclo_al_super_paquete(paquete, &(pcb->registros->CX), sizeof(uint32_t));
-	cargar_choclo_al_super_paquete(paquete, &(pcb->registros->DX), sizeof(uint32_t));
-	enviar_paquete(paquete, fd_cpu_dispatcher);
-	eliminar_paquete(paquete);
+void ejecutar_en_un_hilo_nuevo_join(void (*f)(void*) ,void* struct_arg){
+	pthread_t thread;
+	pthread_create(&thread, NULL, (void*)f, struct_arg);
+	pthread_join(thread, NULL);
 }
 
 

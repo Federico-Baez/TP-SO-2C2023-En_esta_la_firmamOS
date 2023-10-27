@@ -17,41 +17,10 @@
 #include <commons/string.h>
 #include <commons/collections/list.h>
 #include <commons/temporal.h>
+#include <pthread.h>
 #include "protocolo.h"
 #include "socket.h"
 
-
-
-typedef struct{
-	char* nombre_recurso;
-	int instancias;
-	t_list* procesos_que_solicitan;
-	t_list* procesos_que_retienen;
-}t_recurso;
-
-typedef struct{
-	uint32_t AX;
-	uint32_t BX;
-	uint32_t CX;
-	uint32_t DX;
-}t_instruccion;
-
-//Estados del procesos en la planificacion
-typedef enum{
-	NEW,
-	READY,
-	EXEC,
-	BLOCKED,
-	EXIT
-}est_pcb;
-
-// Motivos de vuelta al Kernel
-typedef enum{
-	FINALIZACION,
-//	PETICION, -> esta seria por una instruccion, wait, sleep, etc.
-	BLOCK,
-	INTERRUPCION
-}t_vuelta;
 
 typedef enum{
 	SUCCESS,
@@ -81,19 +50,6 @@ typedef enum{
 }cod_instruccion;
 
 
-//Contexto de ejecucion
-typedef struct{
-	int pid;
-	int program_counter;
-	int prioridad;
-	t_instruccion* registros;
-	est_pcb estado;
-//	t_vuelta* motivo_vuelta;
-	t_motivo_exit* motivo_exit;
-	//  <--- archivos_abiertos;
-	//  <--- abria que agregar las intruccioens enviadas por memoria?
-}t_pcb;
-
 typedef struct{
 	char* pseudo_c;
     char* fst_param;
@@ -103,12 +59,8 @@ typedef struct{
 t_list* lista_instrucciones(t_log* logger, char* dir);
 cod_instruccion convertir_string_a_instruccion(t_log* logger, const char *str_instruccion);
 void liberar_lista_instrucciones(t_list *lista);
-
-// ------ PCB ------
-t_pcb* crear_pcb(int pid, int prioridad);
-void cambiar_estado_pcb(t_pcb* pcb, est_pcb nuevo_estado);
-void pcb_destroy(t_pcb* pcb);
-void enviar_contexto_CPU(int fd_cpu_dispatcher, t_pcb* pcb);
+void ejecutar_en_un_hilo_nuevo_detach(void (*f)(void*) ,void* struct_arg);
+void ejecutar_en_un_hilo_nuevo_join(void (*f)(void*) ,void* struct_arg);
 
 #endif /* INCLUDE_SHARED_H_ */
 
