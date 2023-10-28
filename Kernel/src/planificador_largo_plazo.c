@@ -69,7 +69,7 @@ static void _plp_planifica(){
 
 /*Planificador a Largo Plazo para NEW -> READY*/
 void plp_planificar_proceso_nuevo(t_pcb* una_pcb){
-	pausador();
+//	pausador();
 
 	if(una_pcb != NULL){
 		//Asignando PCB al estado NEW
@@ -78,7 +78,7 @@ void plp_planificar_proceso_nuevo(t_pcb* una_pcb){
 		una_pcb->estado = NEW;
 		pthread_mutex_unlock(&mutex_lista_new);
 	}
-
+	pausador();
 	//Verificar si puedo pasar a READY segun el GMMP
 	_plp_planifica();
 

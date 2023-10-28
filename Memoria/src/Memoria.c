@@ -235,10 +235,10 @@ void atender_kernel(int cliente_socket) {
     int cod_op = recibir_operacion(cliente_socket);
 		switch(cod_op) {
 				case INICIAR_ESTRUCTURA_KM:
-					printf("Se recibe el proceso");
+					printf("Se un proceso nuevo\n");
 					unBuffer = recibiendo_super_paquete(fd_kernel);
 					agregar_proceso_a_listado(unBuffer, list_procss_recibidos);
-//	    			free(unBuffer);
+	    			free(unBuffer);
 					printf("Se libera el buffer\n");
 					break;
 				case LIBERAR_ESTRUCTURA_KM:
@@ -246,7 +246,7 @@ void atender_kernel(int cliente_socket) {
 					int pid = recibir_int_del_buffer(unBuffer);
 					proceso_recibido* proceso_a_liberar = obtener_proceso_por_id(pid, list_procss_recibidos);
 					liberar_proceso(proceso_a_liberar);
-					log_info(memoria_logger, "Se liberaron las estructuras del proceso: PID_%d", pid);
+					log_warning(memoria_logger, "Se liberaron las estructuras del proceso: PID_%d", pid);
 					free(unBuffer);
 					//
 					break;
@@ -423,7 +423,23 @@ t_list* leer_archivo_y_cargar_instrucciones(const char* path_archivo) {
 
     char* linea_instruccion = malloc(256 * sizeof(char));
     while (fgets(linea_instruccion, 256, archivo)) {
+    	//Comprobar si el ultimo caracter del string capturado tiene un salto delinea
+    	//Si lo tiene hay que sacarlo
+    	//[0][1][2][3][4]["\n"]["\0"] -> Size:6
+    	int size_linea_actual = strlen(linea_instruccion);
+    	if(size_linea_actual > 2){
+    		if(linea_instruccion[size_linea_actual - 1] == '\n'){
+				char* linea_limpia = string_new();
+				string_n_append(&linea_limpia, linea_instruccion, size_linea_actual - 1);
+				free(linea_instruccion);
+				linea_instruccion = linea_limpia;
+    		}
+    	}
+    	//-----------------------------------------------
+
         char** l_instrucciones = string_split(linea_instruccion, " ");
+
+        log_info(memoria_logger, "Intruccion: [%s]", linea_instruccion);
 
         while (l_instrucciones[i]) {
             i++;
@@ -442,7 +458,7 @@ t_list* leer_archivo_y_cargar_instrucciones(const char* path_archivo) {
             instruccion_formateada = strdup(pseudo_cod->pseudo_c);
         }
 
-        log_info(memoria_logger, "Se carga la instrucción %s", instruccion_formateada);
+//        log_info(memoria_logger, "Se carga la instrucción [%d] %s", (int)strlen(instruccion_formateada),instruccion_formateada);
         list_add(instrucciones, instruccion_formateada);
 
         for (int j = 0; j < i; j++) {
@@ -497,7 +513,6 @@ void agregar_proceso_a_listado(t_buffer* unBuffer, t_list* lst_procesos_recibido
 	un_proceso->instrucciones= leer_archivo_y_cargar_instrucciones(un_proceso->pathInstrucciones);
 	log_info(memoria_logger, "Recibi el proceso con los siguientes datos archivo: %s, el tamanio: %d y el pid: %d ",un_proceso->pathInstrucciones, un_proceso->size, un_proceso->pid);
 	list_add(lst_procesos_recibido, un_proceso);
-	free(unBuffer);
 	handhsake_modules(fd_kernel,"[MEMORIA]>Proceso cargado en Memoria OK");
 
 
