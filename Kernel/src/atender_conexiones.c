@@ -1,5 +1,13 @@
 #include "../include/atender_conexiones.h"
 
+static void estructuras_inciadas_en_memoria_rpta(t_buffer* unBuffer){
+	char* recibir_mensaje = (char*)recibir_choclo_del_buffer(unBuffer);
+	printf("[%d]> %s\n", (int)strlen(recibir_mensaje), recibir_mensaje);
+	free(recibir_mensaje);
+}
+
+
+
 static void _gestionar_peticiones_de_memoria(){
 	//int control_key = 1;
 	while(1){
@@ -11,6 +19,11 @@ static void _gestionar_peticiones_de_memoria(){
 		case INICIAR_ESTRUCTURA_KM:
 			unBuffer = recibiendo_super_paquete(fd_memoria);
 			//
+			break;
+		case ESTRUCTURA_INICIADA_KM_OK:
+			unBuffer = recibiendo_super_paquete(fd_memoria);
+			estructuras_inciadas_en_memoria_rpta(unBuffer);
+			free(unBuffer);
 			break;
 		case LIBERAR_ESTRUCTURA_KM:
 			unBuffer = recibiendo_super_paquete(fd_memoria);

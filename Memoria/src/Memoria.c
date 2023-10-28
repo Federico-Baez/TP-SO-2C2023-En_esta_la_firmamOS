@@ -229,23 +229,24 @@ static void procesar_conexion(void *void_args){
 }
 
 void atender_kernel(int cliente_socket) {
-    t_buffer* unBuffer;
-    int cod_op = recibir_operacion(cliente_socket);
     int control_key = 1;
     while(control_key){
+    t_buffer* unBuffer;
+    int cod_op = recibir_operacion(cliente_socket);
 		switch(cod_op) {
 				case INICIAR_ESTRUCTURA_KM:
 					printf("Se recibe el proceso");
 					unBuffer = recibiendo_super_paquete(fd_kernel);
 					agregar_proceso_a_listado(unBuffer, list_procss_recibidos);
-	    			free(unBuffer);
-					printf("Se libera el buffer");
+//	    			free(unBuffer);
+					printf("Se libera el buffer\n");
 					break;
 				case LIBERAR_ESTRUCTURA_KM:
 					unBuffer = recibiendo_super_paquete(fd_kernel);
 					int pid = recibir_int_del_buffer(unBuffer);
 					proceso_recibido* proceso_a_liberar = obtener_proceso_por_id(pid, list_procss_recibidos);
 					liberar_proceso(proceso_a_liberar);
+					log_info(memoria_logger, "Se liberaron las estructuras del proceso: PID_%d", pid);
 					free(unBuffer);
 					//
 					break;
@@ -270,10 +271,10 @@ void atender_kernel(int cliente_socket) {
 
 }
 void atender_cpu(int cliente_socket) {
-    t_buffer* unBuffer;
-    int cod_op = recibir_operacion(cliente_socket);
     int control_key = 1;
 	while(control_key){
+    t_buffer* unBuffer;
+    int cod_op = recibir_operacion(cliente_socket);
 		switch(cod_op) {
 				case PETICION_INFO_RELEVANTE_CM:
 					unBuffer = recibiendo_super_paquete(fd_cpu);
@@ -314,6 +315,8 @@ void atender_cpu(int cliente_socket) {
 
 
 void atender_filesystem(int cliente_socket){
+    int control_key = 1;
+	while(control_key){
 	t_buffer* unBuffer;
 	int cod_op = recibir_operacion(cliente_socket);
 
@@ -355,6 +358,7 @@ void atender_filesystem(int cliente_socket){
 			log_error(memoria_logger, "Operacion desconocida FILESYSTEM");
 			break;
 		}
+	}
 }
 
 void iterator(int *value) {

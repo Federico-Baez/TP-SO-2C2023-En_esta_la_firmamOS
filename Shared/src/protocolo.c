@@ -272,7 +272,7 @@ int recibir_int_del_buffer(t_buffer* coso){
 		return valor_a_devolver;
 	}
 	if(nuevo_size < 0){
-		printf("\n[ERROR]: BUFFER CON TAMAÑO NEGATIVO\n\n");
+		printf("\n[ERROR_INT]: BUFFER CON TAMAÑO NEGATIVO\n\n");
 		//free(valor_a_devolver);
 		//return 0;
 		exit(EXIT_FAILURE);
@@ -287,33 +287,73 @@ int recibir_int_del_buffer(t_buffer* coso){
 }
 
 char* recibir_string_del_buffer(t_buffer* coso){
- if(coso->size < sizeof(int)) {
-        perror("[ERROR]: Buffer demasiado pequeño para contener el tamaño de la cadena");
-        exit(EXIT_FAILURE);
-    }
+	//Fomrato de charGPT
+// if(coso->size < sizeof(int)) {
+//        perror("[ERROR]: Buffer demasiado pequeño para contener el tamaño de la cadena");
+//        exit(EXIT_FAILURE);
+//    }
+//
+//    int size_string;
+//    char* string;
+//    memcpy(&size_string, coso->stream, sizeof(int));
+//
+//    // Verifica que el tamaño de la cadena sea válido y que el buffer sea suficiente
+//    if(size_string <= 0 || coso->size < sizeof(int) + size_string) {
+//        perror("[ERROR]: Tamaño de cadena inválido o buffer demasiado pequeño para contener la cadena");
+//        exit(EXIT_FAILURE);
+//    }
+//
+//    string = malloc(size_string + 1);  // +1 para el '\0' al final
+//    if (!string) {
+//        perror("[ERROR]: No se pudo asignar memoria para la cadena");
+//        exit(EXIT_FAILURE);
+//    }
+//
+//    memcpy(string, coso->stream + sizeof(int), size_string);
+//    string[size_string] = '\0';  // Asegurarte de que la cadena esté terminada en null
+//
+//    // ... el resto del código para manejar la reducción del tamaño del buffer ...
+//
+//    return string;
 
-    int size_string;
-    char* string;
-    memcpy(&size_string, coso->stream, sizeof(int));
+    //----------------- Formato Inicial----------------------------
+	if(coso->size == 0){
+		printf("\n[ERROR] Al intentar extraer un contenido de un t_buffer vacio\n\n");
+		exit(EXIT_FAILURE);
+	}
 
-    // Verifica que el tamaño de la cadena sea válido y que el buffer sea suficiente
-    if(size_string <= 0 || coso->size < sizeof(int) + size_string) {
-        perror("[ERROR]: Tamaño de cadena inválido o buffer demasiado pequeño para contener la cadena");
-        exit(EXIT_FAILURE);
-    }
+	if(coso->size < 0){
+		printf("\n[ERROR] Esto es raro. El t_buffer contiene un size NEGATIVO \n\n");
+		exit(EXIT_FAILURE);
+	}
 
-    string = malloc(size_string + 1);  // +1 para el '\0' al final
-    if (!string) {
-        perror("[ERROR]: No se pudo asignar memoria para la cadena");
-        exit(EXIT_FAILURE);
-    }
+	int size_string;
+	char* string;
+	memcpy(&size_string, coso->stream, sizeof(int));
+	//string = malloc(sizeof(size_string));
+	string = malloc(size_string);
+	memcpy(string, coso->stream + sizeof(int), size_string);
 
-    memcpy(string, coso->stream + sizeof(int), size_string);
-    string[size_string] = '\0';  // Asegurarte de que la cadena esté terminada en null
+	int nuevo_size = coso->size - sizeof(int) - size_string;
+	if(nuevo_size == 0){
+		free(coso->stream);
+		coso->stream = NULL;
+		coso->size = 0;
+		return string;
+	}
+	if(nuevo_size < 0){
+		printf("\n[ERROR_STRING]: BUFFER CON TAMAÑO NEGATIVO\n\n");
+		free(string);
+		//return "[ERROR]: BUFFER CON TAMAÑO NEGATIVO";
+		exit(EXIT_FAILURE);
+	}
+	void* nuevo_coso = malloc(nuevo_size);
+	memcpy(nuevo_coso, coso->stream + sizeof(int) + size_string, nuevo_size);
+	free(coso->stream);
+	coso->stream = nuevo_coso;
+	coso->size = nuevo_size;
 
-    // ... el resto del código para manejar la reducción del tamaño del buffer ...
-
-    return string;
+	return string;
 }
 
 void* recibir_choclo_del_buffer(t_buffer* coso){
@@ -341,7 +381,7 @@ void* recibir_choclo_del_buffer(t_buffer* coso){
 		return choclo;
 	}
 	if(nuevo_size < 0){
-		printf("\n[ERROR]: BUFFER CON TAMAÑO NEGATIVO\n\n");
+		printf("\n[ERROR_CHICLO]: BUFFER CON TAMAÑO NEGATIVO\n\n");
 		//free(choclo);
 		//return "";
 		exit(EXIT_FAILURE);
