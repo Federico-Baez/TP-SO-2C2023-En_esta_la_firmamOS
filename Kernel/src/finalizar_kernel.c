@@ -40,6 +40,7 @@ static void _finalizar_pthread(){
 	pthread_mutex_destroy(&mutex_core);
 	pthread_mutex_destroy(&mutex_pausa);
 	pthread_mutex_destroy(&mutex_recurso);
+	pthread_mutex_destroy(&mutex_ticket);
 
 }
 

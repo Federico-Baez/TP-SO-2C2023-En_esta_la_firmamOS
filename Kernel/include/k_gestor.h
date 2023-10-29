@@ -40,6 +40,7 @@ typedef struct{
 
 typedef struct{
 	int pid;
+	int ticket;
 	int program_counter;
 	int prioridad;
 	int size;
@@ -89,6 +90,7 @@ extern int GRADO_MULTIPROGRAMACION_INI;
 extern int process_id;
 extern int procesos_en_core;
 extern int var_pausa;
+extern int var_ticket;
 
 // ------ Listas ------
 extern t_list* lista_new;
@@ -100,6 +102,10 @@ extern t_list* lista_exit;
 extern t_list* lista_instructions;
 extern t_list* lista_general;
 extern t_list* lista_recursos;
+
+//--Van juntos para controlar PIORIDADES
+extern bool hay_pcb_elegida;
+extern t_pcb* pcb_prioritaria;
 
 
 // ------ SEMAFOROS ------
@@ -118,6 +124,7 @@ extern pthread_mutex_t mutex_process_id;
 extern pthread_mutex_t mutex_core;
 extern pthread_mutex_t mutex_pausa;
 extern pthread_mutex_t mutex_recurso;
+extern pthread_mutex_t mutex_ticket;
 
 void public_imprimir_procesos_por_estado_v0();
 void public_imprimir_procesos_por_estado_v1();

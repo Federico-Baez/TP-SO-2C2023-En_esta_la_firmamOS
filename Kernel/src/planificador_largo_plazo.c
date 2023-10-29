@@ -23,6 +23,8 @@ static void _avisar_a_memoria_para_liberar_estructuras(t_pcb* una_pcb){
 }
 
 static void _plp_planifica(){
+	bool llamar_pcp = false;
+
 	//Fijarse si la lista NEW tiene elementos, Si tiene elementos, sacar al 1ro
 	pthread_mutex_lock(&mutex_core);
 	t_pcb* una_pcb = NULL;
@@ -55,12 +57,14 @@ static void _plp_planifica(){
 			log_info(kernel_logger, "Se aviso a Memoria del nuevo proceso");
 			eliminar_paquete(un_paquete);
 
-			//[FALTA] Decidir si llamamos en un hilo al PCP para que comience a interactuar con CPU
+			llamar_pcp = true;
 		}
 
 		pthread_mutex_unlock(&mutex_lista_new);
 	}
 	pthread_mutex_unlock(&mutex_core);
+
+	if(llamar_pcp) ejecutar_en_un_hilo_nuevo_detach((void*)pcp_planificar_corto_plazo, NULL);
 }
 
 
@@ -144,6 +148,8 @@ void plp_planificar_proceso_exit(t_pcb* una_pcb){
 			//2. Tendria que mandarse un interrup
 			t_paquete* un_paquete = crear_super_paquete(FORZAR_DESALOJO_KC);
 			cargar_int_al_super_paquete(un_paquete, una_pcb->pid);
+			cargar_int_al_super_paquete(un_paquete, 0);
+			cargar_string_al_super_paquete(un_paquete, "DESALOJO_POR_CONSOLA");
 			enviar_paquete(un_paquete, fd_cpu_interrupt);
 			eliminar_paquete(un_paquete);
 			log_info(kernel_logger, "Mensaje a CPU: FORZAR_DESALOJO_KC [PID: %d]", una_pcb->pid);

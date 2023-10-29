@@ -110,6 +110,27 @@ static void atender_mensajes_kernel_v2(t_buffer* buffer, char* tipo_de_hilo){
 	free(buffer);
 }
 
+/*No usar esta funcion - Solo es para prueba
+ * Si la usas, te vacia el buffer*/
+static void _print_proceso_recibido(t_buffer* un_buffer){
+	int temporal_pid = recibir_int_del_buffer(un_buffer);
+	int temporal_ticket = recibir_int_del_buffer(un_buffer);
+	int temporal_ip = recibir_int_del_buffer(un_buffer);
+	uint32_t* t_AX = (uint32_t*)recibir_choclo_del_buffer(un_buffer);
+	uint32_t* t_BX = (uint32_t*)recibir_choclo_del_buffer(un_buffer);
+	uint32_t* t_CX = (uint32_t*)recibir_choclo_del_buffer(un_buffer);
+	uint32_t* t_DX = (uint32_t*)recibir_choclo_del_buffer(un_buffer);
+
+	log_info(cpu_logger, "<PID:%d>[T:%d][IP:%d][%u|%u|%u|%u]",
+			temporal_pid,
+			temporal_ticket,
+			temporal_ip,
+			*t_AX,
+			*t_BX,
+			*t_CX,
+			*t_DX);
+	printf("------- <%d>\n", un_buffer->size);
+}
 
 void atender_cpu_dispatch(){
 	fd_kernel_dispatch = esperar_cliente(cpu_logger, "Kernel por dispatch", server_fd_cpu_dispatch);
@@ -121,9 +142,15 @@ void atender_cpu_dispatch(){
 		//log_info(cpu_logger, "Se recibio algo de KERNEL");
 
 		switch (cod_op) {
-		case EJECUTAR_PROCESO_KC: //Me debe llegar: [---][PID][PC_program_counter][AX][BX][CX][DX]
+		case EJECUTAR_PROCESO_KC: //Me debe llegar: [---][PID][Ticket][PC_program_counter][AX][BX][CX][DX]
 			unBuffer = recibiendo_super_paquete(fd_kernel_dispatch);
-			atender_proceso_del_kernel(unBuffer);
+//			atender_proceso_del_kernel(unBuffer);
+
+			//----- Solo para pruebas - Hay que boorar esta parte---
+			_print_proceso_recibido(unBuffer);
+			//-----------------------------
+
+			free(unBuffer);
 			break;
 		case MENSAJES_POR_CONSOLA:
 			unBuffer = recibiendo_super_paquete(fd_kernel_dispatch);
@@ -142,6 +169,18 @@ void atender_cpu_dispatch(){
 	log_info(cpu_logger, "Saliendo del hilo de CPU_DISPATCH - KERNEL");
 }
 
+
+static void _print_interrupcion(t_buffer* un_buffer){
+	int temporal_pid = recibir_int_del_buffer(un_buffer);
+	int temporal_ticket = recibir_int_del_buffer(un_buffer);
+	char* motivo_interrupcion = recibir_string_del_buffer(un_buffer);
+	log_warning(cpu_logger, "<PID:%d>[T:%d][%s]",
+							temporal_pid,
+							temporal_ticket,
+							motivo_interrupcion);
+	printf("------- <%d>\n", un_buffer->size);
+}
+
 void atender_cpu_interrupt(){
 	fd_kernel_interrupt = esperar_cliente(cpu_logger, "Kernel por interrupt", server_fd_cpu_interrupt);
 	gestionar_handshake_como_server(fd_kernel_interrupt, cpu_logger);
@@ -155,7 +194,12 @@ void atender_cpu_interrupt(){
 			switch (cod_op) {
 			case FORZAR_DESALOJO_KC:
 				unBuffer = recibiendo_super_paquete(fd_kernel_interrupt);
-				//
+
+				//------Prueba--
+				_print_interrupcion(unBuffer);
+				//----------
+
+				free(unBuffer);
 				break;
 			case MENSAJES_POR_CONSOLA:
 				unBuffer = recibiendo_super_paquete(fd_kernel_interrupt);
@@ -223,7 +267,7 @@ void atender_cpu_memoria(){
 //Me debe llegar: [---][PID][PC_program_counter][AX][BX][CX][DX]
 void atender_proceso_del_kernel(t_buffer* unBuffer){
 	iniciar_estructuras_para_atender_al_proceso(unBuffer);
-	free(unBuffer);
+
 	print_proceso();
 
 	//Inicicar ciclo de instruccion

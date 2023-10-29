@@ -49,6 +49,11 @@ t_list* lista_recursos;
 int process_id = 0;
 int procesos_en_core = 0;
 int var_pausa = 0;
+int var_ticket = 0;
+
+//--Van juntos para controlar PIORIDADES
+bool hay_pcb_elegida = false;
+t_pcb* pcb_prioritaria;
 
 // ------ SEMAFOROS ------
 sem_t sem_pausa;
@@ -66,6 +71,7 @@ pthread_mutex_t mutex_process_id;
 pthread_mutex_t mutex_core;
 pthread_mutex_t mutex_pausa;
 pthread_mutex_t mutex_recurso;
+pthread_mutex_t mutex_ticket;
 
 
 #endif /* KERNEL_H_ */

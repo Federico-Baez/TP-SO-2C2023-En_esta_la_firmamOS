@@ -39,6 +39,7 @@ t_pcb* crear_pcb(char* path, char* size, char* prioridad){
 	nueva_PCB->pid = process_id;
 	pthread_mutex_unlock(&mutex_process_id);
 	nueva_PCB->program_counter = 0;
+	nueva_PCB->ticket = 0;
 
 	nueva_PCB->size = atoi(size);
 	nueva_PCB->prioridad = atoi(prioridad);
