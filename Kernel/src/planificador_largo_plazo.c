@@ -15,11 +15,11 @@ static void _liberar_todos_los_recursos_de_una_pcb(t_pcb* una_pcb){
 }
 
 static void _avisar_a_memoria_para_liberar_estructuras(t_pcb* una_pcb){
-//	t_paquete* un_paquete = crear_super_paquete(LIBERAR_ESTRUCTURA_KM);
-//	cargar_int_al_super_paquete(un_paquete, una_pcb->pid);
-//	enviar_paquete(un_paquete, fd_memoria);
-//	eliminar_paquete(un_paquete);
-//	log_info(kernel_logger, "Mensaje a MEMORIA: LIBERAR_ESTRUCTURA_KM [PID: %d]", una_pcb->pid);
+	t_paquete* un_paquete = crear_super_paquete(LIBERAR_ESTRUCTURA_KM);
+	cargar_int_al_super_paquete(un_paquete, una_pcb->pid);
+	enviar_paquete(un_paquete, fd_memoria);
+	eliminar_paquete(un_paquete);
+	log_info(kernel_logger, "Mensaje a MEMORIA: LIBERAR_ESTRUCTURA_KM [PID: %d]", una_pcb->pid);
 }
 
 static void _plp_planifica(){
@@ -47,13 +47,13 @@ static void _plp_planifica(){
 			procesos_en_core++;
 
 			//Enviar Mensaje a memoria para q' inicialice estructuras
-//			t_paquete* un_paquete = crear_super_paquete(INICIAR_ESTRUCTURA_KM);
-//			cargar_string_al_super_paquete(un_paquete, una_pcb->path);
-//			cargar_int_al_super_paquete(un_paquete, una_pcb->size);
-//			cargar_int_al_super_paquete(un_paquete, una_pcb->pid);
-//			enviar_paquete(un_paquete, fd_memoria);
-//			log_info(kernel_logger, "Se aviso a Memoria del nuevo proceso");
-//			eliminar_paquete(un_paquete);
+			t_paquete* un_paquete = crear_super_paquete(INICIAR_ESTRUCTURA_KM);
+			cargar_string_al_super_paquete(un_paquete, una_pcb->path);
+			cargar_int_al_super_paquete(un_paquete, una_pcb->size);
+			cargar_int_al_super_paquete(un_paquete, una_pcb->pid);
+			enviar_paquete(un_paquete, fd_memoria);
+			log_info(kernel_logger, "Se aviso a Memoria del nuevo proceso");
+			eliminar_paquete(un_paquete);
 
 			//[FALTA] Decidir si llamamos en un hilo al PCP para que comience a interactuar con CPU
 		}
@@ -69,7 +69,7 @@ static void _plp_planifica(){
 
 /*Planificador a Largo Plazo para NEW -> READY*/
 void plp_planificar_proceso_nuevo(t_pcb* una_pcb){
-	pausador();
+//	pausador();
 
 	if(una_pcb != NULL){
 		//Asignando PCB al estado NEW
@@ -78,7 +78,7 @@ void plp_planificar_proceso_nuevo(t_pcb* una_pcb){
 		una_pcb->estado = NEW;
 		pthread_mutex_unlock(&mutex_lista_new);
 	}
-
+	pausador();
 	//Verificar si puedo pasar a READY segun el GMMP
 	_plp_planifica();
 
