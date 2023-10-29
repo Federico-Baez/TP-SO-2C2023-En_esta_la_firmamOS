@@ -17,14 +17,26 @@ static void _enviar_pcb_a_CPU_por_dispatch(t_pcb* una_pcb){
 
 
 static void _programar_interrupcion_por_quantum(t_pcb* una_pcb){
+	int ticket_referencia = una_pcb->ticket;
 	sleep(QUANTUM/1000);
-	if(una_pcb->ticket == var_ticket){
-		t_paquete* un_paquete = crear_super_paquete(FORZAR_DESALOJO_KC);
-		cargar_int_al_super_paquete(un_paquete, una_pcb->pid);
-		cargar_int_al_super_paquete(un_paquete, una_pcb->ticket);
-		cargar_string_al_super_paquete(un_paquete, "ALGORITMO_QUANTUM");
-		enviar_paquete(un_paquete, fd_cpu_interrupt);
-		eliminar_paquete(un_paquete);
+
+	/*Esta comprobacion de ticket es en caso de que la PCB haya salido de CPU,
+	 * Puesto en READY y por casulaidades de la vida haya vuelto a la CPU
+	 * Y al despertar este hilo, primero verifique que la PCB objetivo, no haya
+	 * salido de la CPU, y esto lo resolvemos con el ticket.
+	 * Porque si salio la misma PCB y volvio a entrar, significa que el proceso tiene
+	 * nuevo ticket*/
+	if(ticket_referencia == var_ticket){
+
+		if(!batisenal_exit){
+			t_paquete* un_paquete = crear_super_paquete(FORZAR_DESALOJO_KC);
+			cargar_int_al_super_paquete(un_paquete, una_pcb->pid);
+			cargar_int_al_super_paquete(un_paquete, ticket_referencia);
+			cargar_string_al_super_paquete(un_paquete, "ALGORITMO_QUANTUM");
+			enviar_paquete(un_paquete, fd_cpu_interrupt);
+			eliminar_paquete(un_paquete);
+		}
+
 	}
 
 }
@@ -127,15 +139,16 @@ static void _atender_PRIORIDADES(){
 					/*Significa que, aun no habia algun proceso elegido para la interrupcion*/
 					hay_pcb_elegida = true;
 					pcb_prioritaria = una_pcb;
+
+					//Enviar interrupcion por interrupt
+					t_paquete* un_paquete = crear_super_paquete(FORZAR_DESALOJO_KC);
+					cargar_int_al_super_paquete(un_paquete, pcb_execute->pid);
+					cargar_int_al_super_paquete(un_paquete, pcb_execute->ticket);
+					cargar_string_al_super_paquete(un_paquete, "ALGORITMO_PRIORIDAD");
+					enviar_paquete(un_paquete, fd_cpu_interrupt);
+					eliminar_paquete(un_paquete);
 				}
 
-				//Enviar interrupcion por interrupt
-				t_paquete* un_paquete = crear_super_paquete(FORZAR_DESALOJO_KC);
-				cargar_int_al_super_paquete(un_paquete, pcb_execute->pid);
-				cargar_int_al_super_paquete(un_paquete, pcb_execute->ticket);
-				cargar_string_al_super_paquete(un_paquete, "ALGORITMO_PRIORIDAD");
-				enviar_paquete(un_paquete, fd_cpu_interrupt);
-				eliminar_paquete(un_paquete);
 			}
 		}else {
 			if(list_remove_element(lista_ready, una_pcb)){

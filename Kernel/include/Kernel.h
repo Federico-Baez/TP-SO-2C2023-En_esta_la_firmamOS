@@ -51,6 +51,9 @@ int procesos_en_core = 0;
 int var_pausa = 0;
 int var_ticket = 0;
 
+//Para dar prioridad a la interrupcion por consola sobre la de quantum
+bool batisenal_exit = false;
+
 //--Van juntos para controlar PIORIDADES
 bool hay_pcb_elegida = false;
 t_pcb* pcb_prioritaria;

@@ -80,6 +80,16 @@ void iniciar_estructuras(){
 	string_array_push(&opcode_strings, "F_TRUNCATE");
 	string_array_push(&opcode_strings, "EXIT");
 
+	hay_que_desalojar = false;
+
+	motivo_desalojo = NULL;
+
+	interrupt_proceso_id = NULL;
+	interrupt_proceso_ticket = NULL;
+	interrupt_motivo = NULL;
+
+	mochila = NULL;
+
 }
 
 void iniciar_semaforos(){
@@ -112,25 +122,25 @@ static void atender_mensajes_kernel_v2(t_buffer* buffer, char* tipo_de_hilo){
 
 /*No usar esta funcion - Solo es para prueba
  * Si la usas, te vacia el buffer*/
-static void _print_proceso_recibido(t_buffer* un_buffer){
-	int temporal_pid = recibir_int_del_buffer(un_buffer);
-	int temporal_ticket = recibir_int_del_buffer(un_buffer);
-	int temporal_ip = recibir_int_del_buffer(un_buffer);
-	uint32_t* t_AX = (uint32_t*)recibir_choclo_del_buffer(un_buffer);
-	uint32_t* t_BX = (uint32_t*)recibir_choclo_del_buffer(un_buffer);
-	uint32_t* t_CX = (uint32_t*)recibir_choclo_del_buffer(un_buffer);
-	uint32_t* t_DX = (uint32_t*)recibir_choclo_del_buffer(un_buffer);
-
-	log_info(cpu_logger, "<PID:%d>[T:%d][IP:%d][%u|%u|%u|%u]",
-			temporal_pid,
-			temporal_ticket,
-			temporal_ip,
-			*t_AX,
-			*t_BX,
-			*t_CX,
-			*t_DX);
-	printf("------- <%d>\n", un_buffer->size);
-}
+//static void _print_proceso_recibido(t_buffer* un_buffer){
+//	int temporal_pid = recibir_int_del_buffer(un_buffer);
+//	int temporal_ticket = recibir_int_del_buffer(un_buffer);
+//	int temporal_ip = recibir_int_del_buffer(un_buffer);
+//	uint32_t* t_AX = (uint32_t*)recibir_choclo_del_buffer(un_buffer);
+//	uint32_t* t_BX = (uint32_t*)recibir_choclo_del_buffer(un_buffer);
+//	uint32_t* t_CX = (uint32_t*)recibir_choclo_del_buffer(un_buffer);
+//	uint32_t* t_DX = (uint32_t*)recibir_choclo_del_buffer(un_buffer);
+//
+//	log_info(cpu_logger, "<PID:%d>[T:%d][IP:%d][%u|%u|%u|%u]",
+//			temporal_pid,
+//			temporal_ticket,
+//			temporal_ip,
+//			*t_AX,
+//			*t_BX,
+//			*t_CX,
+//			*t_DX);
+//	printf("------- <%d>\n", un_buffer->size);
+//}
 
 void atender_cpu_dispatch(){
 	fd_kernel_dispatch = esperar_cliente(cpu_logger, "Kernel por dispatch", server_fd_cpu_dispatch);
@@ -144,12 +154,7 @@ void atender_cpu_dispatch(){
 		switch (cod_op) {
 		case EJECUTAR_PROCESO_KC: //Me debe llegar: [---][PID][Ticket][PC_program_counter][AX][BX][CX][DX]
 			unBuffer = recibiendo_super_paquete(fd_kernel_dispatch);
-//			atender_proceso_del_kernel(unBuffer);
-
-			//----- Solo para pruebas - Hay que boorar esta parte---
-			_print_proceso_recibido(unBuffer);
-			//-----------------------------
-
+			atender_proceso_del_kernel(unBuffer);
 			free(unBuffer);
 			break;
 		case MENSAJES_POR_CONSOLA:
@@ -170,53 +175,72 @@ void atender_cpu_dispatch(){
 }
 
 
-static void _print_interrupcion(t_buffer* un_buffer){
-	int temporal_pid = recibir_int_del_buffer(un_buffer);
-	int temporal_ticket = recibir_int_del_buffer(un_buffer);
-	char* motivo_interrupcion = recibir_string_del_buffer(un_buffer);
-	log_warning(cpu_logger, "<PID:%d>[T:%d][%s]",
-							temporal_pid,
-							temporal_ticket,
-							motivo_interrupcion);
-	printf("------- <%d>\n", un_buffer->size);
+static void _manejar_interrupcion(t_buffer* un_buffer){
+
+	int* punteros[2];
+	punteros[0] = malloc(sizeof(int));
+	punteros[1] = malloc(sizeof(int));
+	*punteros[0] = recibir_int_del_buffer(un_buffer);
+	*punteros[1] = recibir_int_del_buffer(un_buffer);
+	char* puntero_string = recibir_string_del_buffer(un_buffer);
+
+	if(interrupt_proceso_id == NULL){
+		//Esto es para atender una interrupcion para el contexto actual por primera vez
+		interrupt_proceso_id = punteros[0];
+		interrupt_proceso_ticket = punteros[1];
+		interrupt_motivo = puntero_string;
+		log_warning(cpu_logger, "INTERRUPCION RECIBIDA: <PID:%d>[T:%d][%s]",
+								*interrupt_proceso_id,
+								*interrupt_proceso_ticket,
+								interrupt_motivo);
+	}else{
+		//ESto es para dar prioridad la desalojo por consola, por que es de eliminacion de PCB
+		if(strcmp(puntero_string, "DESALOJO_POR_CONSOLA") == 0){
+			free(interrupt_motivo);
+			interrupt_motivo = puntero_string;
+			free(punteros[0]);
+			free(punteros[1]);
+			log_warning(cpu_logger, "BATISENAL DE DESALOJO RECIBIDA");
+		}else{
+			//Si es una interrupcion por otro motivo, basicamente la ignoramos porque ya hay una interrupcion vigente y de todas maneras va a desalojarse
+			free(punteros[0]);
+			free(punteros[1]);
+			free(puntero_string);
+			log_error(cpu_logger, "Ignnorar a esta interrupcion - atender esta advertencia porque se supone que el control de interrupcions va desde el kernel");
+		}
+	}
 }
 
 void atender_cpu_interrupt(){
 	fd_kernel_interrupt = esperar_cliente(cpu_logger, "Kernel por interrupt", server_fd_cpu_interrupt);
 	gestionar_handshake_como_server(fd_kernel_interrupt, cpu_logger);
-		log_info(cpu_logger, "::::::::::: KERNEL CONECTADO POR INTERRUPT ::::::::::::");
-		int control_key = 1;
-		while(control_key){
-			int cod_op = recibir_operacion(fd_kernel_interrupt);
-			t_buffer* unBuffer;
-			//log_info(cpu_logger, "Se recibio algo de KERNEL");
+	log_info(cpu_logger, "::::::::::: KERNEL CONECTADO POR INTERRUPT ::::::::::::");
+	while(1){
+		int cod_op = recibir_operacion(fd_kernel_interrupt);
+		t_buffer* unBuffer;
+		//log_info(cpu_logger, "Se recibio algo de KERNEL");
 
-			switch (cod_op) {
-			case FORZAR_DESALOJO_KC:
-				unBuffer = recibiendo_super_paquete(fd_kernel_interrupt);
-
-				//------Prueba--
-				_print_interrupcion(unBuffer);
-				//----------
-
-				free(unBuffer);
-				break;
-			case MENSAJES_POR_CONSOLA:
-				unBuffer = recibiendo_super_paquete(fd_kernel_interrupt);
-				atender_mensajes_kernel_v2(unBuffer, "Interrupt");
-				break;
-			case -1:
-				log_error(cpu_logger, "[DESCONEXION]: KERNEL_Interrupt");
-				control_key = 0;
-				exit(EXIT_FAILURE);
-				break;
-			default:
-				log_warning(cpu_logger, "Operacion desconocida KERNEL_Interrupt");
-				//free(unBuffer);
-				break;
-			}
+		switch (cod_op) {
+		case FORZAR_DESALOJO_KC:
+			unBuffer = recibiendo_super_paquete(fd_kernel_interrupt);
+			_manejar_interrupcion(unBuffer);
+			free(unBuffer);
+			break;
+		case MENSAJES_POR_CONSOLA:
+			unBuffer = recibiendo_super_paquete(fd_kernel_interrupt);
+			atender_mensajes_kernel_v2(unBuffer, "Interrupt");
+			break;
+		case -1:
+			log_error(cpu_logger, "[DESCONEXION]: KERNEL_Interrupt");
+			exit(EXIT_FAILURE);
+			break;
+		default:
+			log_warning(cpu_logger, "Operacion desconocida KERNEL_Interrupt");
+			//free(unBuffer);
+			break;
 		}
-		log_info(cpu_logger, "Saliendo del hilo de CPU_INTERRUPT - KERNEL");
+	}
+	log_info(cpu_logger, "Saliendo del hilo de CPU_INTERRUPT - KERNEL");
 }
 
 void atender_cpu_memoria(){
@@ -238,6 +262,7 @@ void atender_cpu_memoria(){
 		case PETICION_DE_INSTRUCCIONES_CM:
 			unBuffer = recibiendo_super_paquete(fd_memoria);
 			atender_recepcion_de_instruccion(unBuffer);
+			free(unBuffer);
 			break;
 		case PETICION_DE_EJECUCION_CM:
 			unBuffer = recibiendo_super_paquete(fd_memoria);
@@ -269,38 +294,99 @@ void atender_proceso_del_kernel(t_buffer* unBuffer){
 	iniciar_estructuras_para_atender_al_proceso(unBuffer);
 
 	print_proceso();
+	int contador_prueba = 0;
 
-	//Inicicar ciclo de instruccion
-	iniciar_ciclo_de_instruccion();
+	bool key_for_control = true;
+	while(key_for_control){
 
-	//Desalojar contexto de CPU / decidir el motivo de desalojo
-	//desalojar_proceso(); //[FALTA]Decidir como sumarle el motivo de desalojo
+		//Inicicar ciclo de instruccion
+//		iniciar_ciclo_de_instruccion();
 
+		printf(">>> Simulando que se ejecuto una instruccion [%d]\n", contador_prueba);
+		contador_prueba++;
+		sleep(4);
+
+		//Controlar si requiere un desalojo voluntario
+		if(hay_que_desalojar){
+			key_for_control = false;
+		}
+
+		//Controlar si hay interrupciones
+		if(preguntando_si_hay_interrupciones_vigentes()){
+			key_for_control = false;
+		}
+
+	}
+	printf("Saliste del while ---------------------\n");
+
+	/*Se reutilizo el mismo CODIGO de OPERACION con el que entro*/
+	t_paquete* un_paquete = alistar_paquete_de_desalojo(EJECUTAR_PROCESO_KC);
+	if(preguntando_si_hay_interrupciones_vigentes()){
+		if(hay_que_desalojar){
+			//La mochila debe incluir el motivo del desalojo
+			cargar_choclo_al_super_paquete(un_paquete, mochila->buffer->stream, mochila->buffer->size);
+			//En KERNEL vuelve a controlar la interrupcion
+
+		}else{
+			cargar_string_al_super_paquete(un_paquete, interrupt_motivo);
+		}
+	}else{
+		//La mochila debe incluir el motivo del desalojo
+		cargar_choclo_al_super_paquete(un_paquete, mochila->buffer->stream, mochila->buffer->size);
+
+//		cargar_string_al_super_paquete(un_paquete, motivo_desalojo);
+//		if(mochila != NULL){
+//			cargar_choclo_al_super_paquete(un_paquete, mochila->buffer->stream, mochila->buffer->size);
+//		}
+	}
+
+	enviar_paquete(un_paquete, fd_kernel_dispatch);
+	eliminar_paquete(un_paquete);
+
+	log_warning(cpu_logger, "Proceso_desalojado <PID:%d>", *proceso_pid);
 	destruir_estructuras_del_contexto_acttual();
+
+	log_info(cpu_logger, "Todo el contexto se elimino correctamente .....");
+
+}
+
+bool preguntando_si_hay_interrupciones_vigentes(){
+	bool respuesta = false;
+	if(interrupt_proceso_id != NULL){
+		if(strcmp(interrupt_motivo, "DESALOJO_POR_CONSOLA") == 0){
+			//validar solo PID
+			if(*interrupt_proceso_id == *proceso_pid) respuesta = true;
+		}else{
+			//validar por PID y TICKET
+			if(*interrupt_proceso_id == *proceso_pid &&
+				*interrupt_proceso_ticket == *proceso_ticket){
+				respuesta = true;
+			}
+		}
+	}
+
+	return respuesta;
 }
 
 
 
 void iniciar_ciclo_de_instruccion(){
 
-	bool key_for_control = true;
-	while(key_for_control){
-		//FETCH
-		ciclo_de_instruccion_fetch();
+	//FETCH
+	ciclo_de_instruccion_fetch();
 
-		//DECODE
-		sem_wait(&sem_control_fetch_decode);
-		log_info(cpu_logger, "Paso el semaforo de FETCH -> DECODE");
-		ciclo_de_instruccion_decode();
+	//DECODE
+	sem_wait(&sem_control_fetch_decode);
+	log_info(cpu_logger, "Paso el semaforo de FETCH -> DECODE");
+	ciclo_de_instruccion_decode();
 
-		//EXECUTE
-		sem_wait(&sem_control_decode_execute);
-		log_info(cpu_logger, "Paso el semaforo de DECODE -> EXECUTE");
-		ciclo_de_instruccion_execute();
+	//EXECUTE
+	sem_wait(&sem_control_decode_execute);
+	log_info(cpu_logger, "Paso el semaforo de DECODE -> EXECUTE");
+	ciclo_de_instruccion_execute();
 
-		//Pregunta si hay interrupciones
+	string_array_destroy(instruccion_split);
 
-	}
 }
 
 void ciclo_de_instruccion_fetch(){
@@ -472,11 +558,14 @@ void ciclo_de_instruccion_execute(){
 //	return respuesta;
 //}
 
+/*Descargando contenido del buffer y actualizando el contenido de los registros*/
 void iniciar_estructuras_para_atender_al_proceso(t_buffer*  unBuffer){
 	proceso_pid = malloc(sizeof(int));
 	proceso_ip = malloc(sizeof(int));
+	proceso_ticket = malloc(sizeof(int));
 
 	*proceso_pid = recibir_int_del_buffer(unBuffer);
+	*proceso_ticket = recibir_int_del_buffer(unBuffer);
 	*proceso_ip = recibir_int_del_buffer(unBuffer);
 	AX = (uint32_t*)recibir_choclo_del_buffer(unBuffer);
 	BX = (uint32_t*)recibir_choclo_del_buffer(unBuffer);
@@ -484,15 +573,32 @@ void iniciar_estructuras_para_atender_al_proceso(t_buffer*  unBuffer){
 	DX = (uint32_t*)recibir_choclo_del_buffer(unBuffer);
 }
 
+/*Libera memoria de las estructuras inciiadas para desalojar al proceso*/
 void destruir_estructuras_del_contexto_acttual(){
 	free(proceso_pid);
+	free(proceso_ticket);
 	free(proceso_ip);
 	free(AX);
 	free(BX);
 	free(CX);
 	free(DX);
 
-	string_array_destroy(instruccion_split);
+	if(interrupt_proceso_id != NULL){
+		free(interrupt_proceso_id);
+		free(interrupt_proceso_ticket);
+		free(interrupt_motivo);
+		interrupt_proceso_id = NULL;
+		interrupt_proceso_ticket = NULL;
+		interrupt_motivo = NULL;
+	}
+
+	if(mochila != NULL){
+		eliminar_paquete(mochila);
+		mochila = NULL;
+	}
+
+	hay_que_desalojar = false;
+
 }
 
 uint32_t* detectar_registro(char* RX){
@@ -512,7 +618,6 @@ uint32_t* detectar_registro(char* RX){
 
 void atender_recepcion_de_instruccion(t_buffer* unBuffer){
 	char* instruccion_actual_string = recibir_string_del_buffer(unBuffer);
-	free(unBuffer);
 	log_info(cpu_logger, "Instruccion recibida: [%s]", instruccion_actual_string);
 
 	instruccion_split = string_split(instruccion_actual_string, " ");
@@ -537,7 +642,7 @@ bool validador_de_header(char* header_string){
 
 t_paquete* alistar_paquete_de_desalojo(op_code code_op){
 	t_paquete* unPaquete = crear_super_paquete(code_op);
-//	cargar_int_al_super_paquete(unPaquete, *proceso_pid);
+	cargar_int_al_super_paquete(unPaquete, *proceso_pid);
 	cargar_int_al_super_paquete(unPaquete, *proceso_ip);
 	cargar_choclo_al_super_paquete(unPaquete, AX, sizeof(uint32_t));
 	cargar_choclo_al_super_paquete(unPaquete, BX, sizeof(uint32_t));

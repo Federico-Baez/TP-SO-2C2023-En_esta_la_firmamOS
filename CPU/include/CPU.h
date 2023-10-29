@@ -18,6 +18,8 @@
 
 #define IP_CPU "127.0.0.1"
 
+t_paquete* mochila;
+
 t_log* cpu_logger;
 //t_log* cpu_log_disptach;
 //t_log* cpu_log_interrupt;
@@ -30,6 +32,9 @@ int fd_memoria;
 int fd_kernel_dispatch;
 int fd_kernel_interrupt;
 
+int* interrupt_proceso_id;
+int* interrupt_proceso_ticket;
+char* interrupt_motivo;
 
 char* IP_MEMORIA;
 char* PUERTO_MEMORIA;
@@ -37,11 +42,16 @@ char* PUERTO_ESCUCHA_DISPATCH;
 char* PUERTO_ESCUCHA_INTERRUPT;
 
 int* proceso_pid;
+int* proceso_ticket;
 int* proceso_ip;
 uint32_t* AX;
 uint32_t* BX;
 uint32_t* CX;
 uint32_t* DX;
+char* motivo_desalojo;
+
+//ESta varaible sirve para cuando haya que desalojar voluntariamente por alguna instruccion
+bool hay_que_desalojar;
 
 char** opcode_strings; //Contiene todos los HEADER de las instruccinoes autorizadas
 char** instruccion_split;//Contiene el split de la instruccion de memoria
@@ -81,6 +91,8 @@ void print_proceso(void);
 void iniciar_ciclo_de_instruccion();
 void ciclo_de_instruccion_fetch();
 void ciclo_de_instruccion_decode();
+bool preguntando_si_hay_interrupciones_vigentes();
+
 void ciclo_de_instruccion_execute();
 bool validador_de_header(char* header_string);
 int MMU(int dir_logica, int* dir_fisica);

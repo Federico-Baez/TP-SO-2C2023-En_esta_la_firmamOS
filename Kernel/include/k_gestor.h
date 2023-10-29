@@ -103,6 +103,9 @@ extern t_list* lista_instructions;
 extern t_list* lista_general;
 extern t_list* lista_recursos;
 
+//Para dar prioridad a la interrupcion por consola sobre la de quantum
+extern bool batisenal_exit;
+
 //--Van juntos para controlar PIORIDADES
 extern bool hay_pcb_elegida;
 extern t_pcb* pcb_prioritaria;

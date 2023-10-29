@@ -2,6 +2,9 @@
 #define ATENDER_CONEXIONES_H_
 
 #include "k_gestor.h"
+#include "pcb.h"
+#include "planificador_largo_plazo.h"
+#include "planificador_corto_plazo.h"
 
 void iniciar_conexiones();
 void atender_memoria();
