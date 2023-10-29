@@ -1,67 +1,8 @@
 #ifndef MEMORIA_H_
 #define MEMORIA_H_
 
-#include <protocolo.h>
-#include <socket.h>
-#include <shared.h>
-#include <commons/log.h>
-#include <commons/config.h>
-#include <pthread.h>
-#include <protocolo.h>
-#include <stdlib.h>
+#include "m_gestor.h"
 
-#include <unistd.h>
-
-
-typedef struct{
-	bool modificado;
-	bool presente;
-	int marco;
-	int pos_en_swap;
-}tabla_pagina;
-t_list* lst_marco;
-
-typedef struct{
-	int pid;
-	int size;
-	char* pathInstrucciones;
-	t_list* instrucciones;
-}proceso_recibido;
-
-t_list* list_procss_recibidos;
-
-typedef struct {
-    bool presente;         // la página está en memoria o en disco
-    bool modificado;       // Bit de modificación
-    int marco;             // Si está presente, este es el número de marco en memoria
-    int pos_en_swap;       // No está presente, esta es la posición en el espacio de intercambio (swap)
-    int ultimo_uso;        // LRU
-} Pagina;
-
-typedef struct {
-    int pid;                        // Identificador del proceso asociado a esta tabla
-    t_list* paginas;                // Lista de páginas
-    pthread_mutex_t mutex;          // Mutex para sincronización
-} tabla_paginas;
-
-
-t_list* list_pagina;
-t_list* list_instruciones;
-
-typedef enum{
-	FIFO,
-	LRU
-}t_algoritmo;
-
-
-/*
- *
- * MEMORIA VIRTUAL
- */
-
-FILE* disco;
-
-//config
 char* IP_MEMORIA;
 char* PUERTO_ESCUCHA;
 char* IP_FILESYSTEM;
@@ -71,11 +12,7 @@ int TAM_PAGINA;
 char* PATH_INSTRUCCIONES;
 int RETARDO_RESPUESTA;
 char* ALGORITMO_REEMPLAZO;
-//¿no debería ser un string para leerlo en el config?
 
-t_log* memoria_logger;
-t_log* memoria_log_obligatorio;
-t_config* memoria_config;
 char* server_name;
 int socket_server;
 int fd_kernel;
@@ -83,9 +20,26 @@ int fd_cpu;
 int fd_filesystem;
 int server_fd_memoria;
 void* espacio_usuario;
+/*
+ * MEMORIA VIRTUAL
+ */
+FILE* disco;
 
+/********PAGINA*******/
 t_dictionary* tablas;
-t_list* instrucciones_para_cpu;
+t_list* lst_marco;
+
+/********LOG Y CONFIGS*******/
+t_log* memoria_logger;
+t_log* memoria_log_obligatorio;
+t_config* memoria_config;
+
+/********RECIBIR PROCESOS Y AGREGAR INSTRUCCIONES*******/
+t_list* list_procss_recibidos;
+t_list* list_instruciones;
+
+/********SEMAFORO GENERAL PARA LA TABLA*******/
+pthread_mutex_t m_tablas;
 
 
 /*----------------TODO INIT ------------------------*/
@@ -122,8 +76,10 @@ void liberar_proceso(proceso_recibido* proceso);
 void liberar_listado_procesos(t_list* lst_procesos);
 /************TODO MANEJO DE INSTRUCCIONES CON CPU***************/
 void enviar_instrucciones_a_cpu(int pid_buffer,int ip_buffer);
-/************TODO INICIAR LA TABLA DE PAGINAS***************/
-tabla_paginas* crear_tabla_paginas(int pid);
-tabla_pagina* crear_marco(int base, bool presente);
 
+
+/************TODO FUNCIONES PARA BLOQUEAR Y DEBLOQUEAR***************/
+
+void bloquear_lista_tablas();
+void desbloquear_lista_tablas();
 #endif /* MEMORIA_H_ */

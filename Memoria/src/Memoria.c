@@ -31,7 +31,7 @@ int main(int argc, char** argv) {
 
 	list_procss_recibidos = list_create();
 	//TODO: verificar como inicializar memoria
-	inicializar_memoria();
+//	inicializar_memoria();
 	server_fd_memoria = iniciar_servidor(memoria_logger, IP_MEMORIA, PUERTO_ESCUCHA);
 	while(server_escucha())
 
@@ -67,75 +67,37 @@ void leer_log(){
 
 }
 void inicializar_memoria(){
-//	int pid;
-//	tabla_pagina* tabla_pag = crear_tabla_paginas(pid);
-//
-//	log_info(memoria_logger, "Inicializando memoria");
-//	espacio_usuario = malloc(TAM_MEMORIA);
-//	if(espacio_usuario == NULL){
-//			log_error(memoria_logger, "Fallo Malloc");
-//	    	exit(1);
-//	    }
-//	lst_marco = list_create();
-//	int cant_marcos = TAM_MEMORIA/TAM_PAGINA;
-//	log_info(memoria_logger, "Tamanio de memoria %d y la cantidad de marcos %d", TAM_MEMORIA, cant_marcos);
-//
-//	for(int i=0;i<= cant_marcos;i++){
-//		tabla_pagina* nuevo_marco  = crear_marco(TAM_PAGINA*i, true);
-//
-//		list_add(lst_marco,nuevo_marco);
-//
-//	}
-}
 
-//tabla_paginas* crear_tabla_paginas(int pid) {
-//    tabla_paginas* nueva_tabla = malloc(sizeof(tabla_paginas));
-//    log_debug(memoria_logger, "[PAG]: Creo tabla de paginas PID %d", pid);
-//
-//    nueva_tabla->pid = pid;
-//    nueva_tabla->paginas = list_create();
-//    pthread_mutex_init(&(nueva_tabla->mutex), NULL);
-//
-//    char spid[10]; // Aumentamos el tamaño para prevenir desbordamiento
-//    sprintf(spid, "%d", pid);
-//
-////    bloquear_lista_tablas();
-//    dictionary_put(tablas, spid, nueva_tabla);
-////    desbloquear_lista_tablas();
-//
-//    return nueva_tabla;
-//}
+	espacio_usuario = malloc(TAM_MEMORIA);
+	memset(espacio_usuario,',',TAM_MEMORIA);
+	if(espacio_usuario == NULL){
+			log_error(memoria_logger, "Fallo Malloc");
+	    	exit(1);
+	    }
+	tablas = dictionary_create();
+	log_info(memoria_logger, "Se inicia memoria con esquema de Paginacion.\n");
+	log_info(memoria_logger, "Algoritmo de reemplazo a usar %s:\n", ALGORITMO_REEMPLAZO);
+	lst_marco = list_create();
+	int cant_marcos = TAM_MEMORIA/TAM_PAGINA;
 
-//
-//}
-//
-//tabla_pagina* crear_marco(int base, bool presente){
-//	tabla_pagina *nuevo_marco = malloc(sizeof(tabla_pagina));
-//	nuevo_marco->marco = base;
-//	nuevo_marco->presente = presente;
-//	return nuevo_marco;
-//}
-//
-//void destruir_marco(tabla_pagina* marco) {
-//    free(marco);
-//}
+	for(int i=0;i<= cant_marcos;i++){
+		marco* nuevo_marco  = crear_marco(TAM_PAGINA*i, true);
 
-/*
-tabla_paginas* crear_tabla_paginas(int pid){
-	tabla_paginas* nueva_tabla = malloc(sizeof(tabla_paginas));
-	log_debug(memoria_log_obligatorio,"[PAG]: Creo tabla de paginas PID %d", pid);
-	char* spid[4];
-	string_from_format(spid, "%d", pid);
-	nueva_tabla->page = list_create();
+		list_add(lst_marco,nuevo_marco);
 
-	//es una variable que deberia de bloquear
-	dictionary_put(tablas,spid, nueva_tabla);
-	// aca deberia de desbloquear este recurso
-	return nueva_tabla;
-
+	}
 
 }
-*/
+
+void* buscar_tabla(int pid){
+	char* spid = string_itoa(pid);
+	void* tabla = dictionary_get(tablas, spid);
+	free(spid);
+	return tabla;
+
+}
+
+
 void finalizar_memoria(){
 //	list_destroy_and_destroy_elements(lst_marco, (void*)destruir_marco);
 //	free(espacio_usuario);
@@ -528,3 +490,18 @@ void enviar_instrucciones_a_cpu(int pid_buffer,int ip_buffer){
 	enviar_paquete(paquete, fd_cpu);
 	eliminar_paquete(paquete);
 }
+
+
+
+
+/******************************FUNCIONES AUXILIARES*****************************/
+
+void bloquear_lista_tablas(){
+	pthread_mutex_lock(&m_tablas);
+	log_info(memoria_log_obligatorio, "[SEMAFORO]: Bloqueo lista de tabla \n");
+}
+void desbloquear_lista_tablas(){
+	log_info(memoria_log_obligatorio, "[SEMAFORO]: Desbloqueo lista de tabla \n");
+	pthread_mutex_unlock(&m_tablas);
+}
+
