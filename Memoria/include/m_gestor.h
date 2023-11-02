@@ -39,6 +39,7 @@ typedef struct {
     int marco;             // Si está presente, este es el número de marco en memoria
     int pos_en_swap;       // No está presente, esta es la posición en el espacio de intercambio (swap)
     int ultimo_uso;        // LRU
+	int orden_carga; // Para FIFO
     pthread_mutex_t mutex;
 } Pagina;
 

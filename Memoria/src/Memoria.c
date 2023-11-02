@@ -120,20 +120,6 @@ void atender_mensajes_kernel(t_buffer* buffer){
 	free(buffer);
 }
 
-//void atender_mensajes_filesystem(t_buffer* buffer){
-//	int tamanio = recibir_int_del_buffer(buffer);
-//	char* mensaje = recibir_string_del_buffer(buffer);
-//	log_info(memoria_logger, "[FILESYSTEM]> ");
-//	free(mensaje);
-//	free(buffer);
-//}
-//void atender_mensajes_cpu(t_buffer* buffer){
-//	int tamanio = recibir_int_del_buffer(buffer);
-//	char* mensaje = recibir_string_del_buffer(buffer);
-//	log_info(memoria_logger, "[CPU]> ");
-//	free(mensaje);
-//	free(buffer);
-//}
 /*----------------TODO COMUNICACION SOCKETS --------*/
 
 void identificar_modulo(t_buffer* unBuffer, int conexion){
