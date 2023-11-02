@@ -32,6 +32,7 @@ static void _desalojar_proceso(t_pcb* una_pcb){
 
 	log_info(kernel_logger, "plp_exit [PID: %d]", una_pcb->pid);
 
+	pcp_planificar_corto_plazo();
 	plp_planificar_proceso_nuevo(NULL);
 	pcp_planificar_corto_plazo();
 }
@@ -44,11 +45,13 @@ static void _reubicar_pcb_de_execute_a_ready(t_pcb* una_pcb){
 	}
 	pthread_mutex_unlock(&mutex_lista_exec);
 
+//	pcp_planificar_corto_plazo();
+
 	pthread_mutex_lock(&mutex_lista_ready);
 	list_add(lista_ready, una_pcb);
 	cambiar_estado(una_pcb, READY);
 	pthread_mutex_unlock(&mutex_lista_ready);
-
+	hay_pcb_elegida = false;
 
 //	plp_planificar_proceso_nuevo(NULL);
 	pcp_planificar_corto_plazo();
@@ -63,6 +66,7 @@ static void _atender_motivo_desalojo(char* motivo_desalojo, t_buffer* un_buffer,
 	}else if(strcmp(motivo_desalojo, "ALGORITMO_QUANTUM") == 0 ||
 			strcmp(motivo_desalojo, "ALGORITMO_PRIORIDAD") == 0){
 		if(batisenal_exit){
+			//Esto sirve para darle prioridad al desalojo por consola
 			_desalojar_proceso(una_pcb);
 			batisenal_exit = false;
 		}else{
@@ -175,7 +179,7 @@ static void _gestionar_peticiones_de_cpu_dispatch(){
 	while(1){
 		int cod_op = recibir_operacion(fd_cpu_dispatcher);
 		t_buffer* unBuffer;
-		log_info(kernel_logger, "Se recibio algo de FILESYSTEM");
+		log_info(kernel_logger, "Se recibio algo de CPU_Dispatch");
 
 		switch (cod_op) {
 		case EJECUTAR_PROCESO_KC:
@@ -204,7 +208,7 @@ static void _gestionar_peticiones_de_cpu_interrupt(){
 	while(1){
 		int cod_op = recibir_operacion(fd_cpu_interrupt);
 		t_buffer* unBuffer;
-		log_info(kernel_logger, "Se recibio algo de FILESYSTEM");
+		log_info(kernel_logger, "Se recibio algo de CPU_Interrupt");
 
 		switch (cod_op) {
 		case FORZAR_DESALOJO_KC:

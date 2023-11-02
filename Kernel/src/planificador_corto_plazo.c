@@ -123,7 +123,6 @@ static void _atender_PRIORIDADES(){
 		pthread_mutex_lock(&mutex_lista_exec);
 		//Antes pregunta si hay alguna PCB ejecutando
 		if(!list_is_empty(lista_execute)){
-
 			/*Si hay algun elemento ejecutando en EXEC, lo comparo con el
 			de mayor prioridad de la lista de READY*/
 			pcb_execute = list_get(lista_execute, 0);

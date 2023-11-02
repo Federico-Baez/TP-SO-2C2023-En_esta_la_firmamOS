@@ -120,28 +120,6 @@ static void atender_mensajes_kernel_v2(t_buffer* buffer, char* tipo_de_hilo){
 	free(buffer);
 }
 
-/*No usar esta funcion - Solo es para prueba
- * Si la usas, te vacia el buffer*/
-//static void _print_proceso_recibido(t_buffer* un_buffer){
-//	int temporal_pid = recibir_int_del_buffer(un_buffer);
-//	int temporal_ticket = recibir_int_del_buffer(un_buffer);
-//	int temporal_ip = recibir_int_del_buffer(un_buffer);
-//	uint32_t* t_AX = (uint32_t*)recibir_choclo_del_buffer(un_buffer);
-//	uint32_t* t_BX = (uint32_t*)recibir_choclo_del_buffer(un_buffer);
-//	uint32_t* t_CX = (uint32_t*)recibir_choclo_del_buffer(un_buffer);
-//	uint32_t* t_DX = (uint32_t*)recibir_choclo_del_buffer(un_buffer);
-//
-//	log_info(cpu_logger, "<PID:%d>[T:%d][IP:%d][%u|%u|%u|%u]",
-//			temporal_pid,
-//			temporal_ticket,
-//			temporal_ip,
-//			*t_AX,
-//			*t_BX,
-//			*t_CX,
-//			*t_DX);
-//	printf("------- <%d>\n", un_buffer->size);
-//}
-
 void atender_cpu_dispatch(){
 	fd_kernel_dispatch = esperar_cliente(cpu_logger, "Kernel por dispatch", server_fd_cpu_dispatch);
 	gestionar_handshake_como_server(fd_kernel_dispatch, cpu_logger);
@@ -184,30 +162,39 @@ static void _manejar_interrupcion(t_buffer* un_buffer){
 	*punteros[1] = recibir_int_del_buffer(un_buffer);
 	char* puntero_string = recibir_string_del_buffer(un_buffer);
 
-	if(interrupt_proceso_id == NULL){
-		//Esto es para atender una interrupcion para el contexto actual por primera vez
-		interrupt_proceso_id = punteros[0];
-		interrupt_proceso_ticket = punteros[1];
-		interrupt_motivo = puntero_string;
-		log_warning(cpu_logger, "INTERRUPCION RECIBIDA: <PID:%d>[T:%d][%s]",
-								*interrupt_proceso_id,
-								*interrupt_proceso_ticket,
-								interrupt_motivo);
-	}else{
-		//ESto es para dar prioridad la desalojo por consola, por que es de eliminacion de PCB
-		if(strcmp(puntero_string, "DESALOJO_POR_CONSOLA") == 0){
-			free(interrupt_motivo);
+	if(proceso_pid != NULL){
+
+		if(interrupt_proceso_id == NULL){
+			//Esto es para atender una interrupcion para el contexto actual por primera vez
+			interrupt_proceso_id = punteros[0];
+			interrupt_proceso_ticket = punteros[1];
 			interrupt_motivo = puntero_string;
-			free(punteros[0]);
-			free(punteros[1]);
-			log_warning(cpu_logger, "BATISENAL DE DESALOJO RECIBIDA");
+			log_warning(cpu_logger, "INTERRUPCION RECIBIDA: <PID:%d>[T:%d][%s]",
+									*interrupt_proceso_id,
+									*interrupt_proceso_ticket,
+									interrupt_motivo);
 		}else{
-			//Si es una interrupcion por otro motivo, basicamente la ignoramos porque ya hay una interrupcion vigente y de todas maneras va a desalojarse
-			free(punteros[0]);
-			free(punteros[1]);
-			free(puntero_string);
-			log_error(cpu_logger, "Ignnorar a esta interrupcion - atender esta advertencia porque se supone que el control de interrupcions va desde el kernel");
+			//ESto es para dar prioridad la desalojo por consola, por que es de eliminacion de PCB
+			if(strcmp(puntero_string, "DESALOJO_POR_CONSOLA") == 0){
+				free(interrupt_motivo);
+				interrupt_motivo = puntero_string;
+				free(punteros[0]);
+				free(punteros[1]);
+				log_warning(cpu_logger, "BATISENAL DE DESALOJO RECIBIDA");
+			}else{
+				//Si es una interrupcion por otro motivo, basicamente la ignoramos porque ya hay una interrupcion vigente y de todas maneras va a desalojarse
+				free(punteros[0]);
+				free(punteros[1]);
+				free(puntero_string);
+				log_error(cpu_logger, "Ignnorar a esta interrupcion - atender esta advertencia porque se supone que el control de interrupcions va desde el kernel");
+			}
 		}
+
+	}else{
+		printf("INTERRUPCION RECHAZADA XQ NO HAY PROCESOS CORRIENDO EN CPU ACTUALMENTE\n");
+		free(punteros[0]);
+		free(punteros[1]);
+		free(puntero_string);
 	}
 }
 
@@ -575,7 +562,7 @@ void iniciar_estructuras_para_atender_al_proceso(t_buffer*  unBuffer){
 
 /*Libera memoria de las estructuras inciiadas para desalojar al proceso*/
 void destruir_estructuras_del_contexto_acttual(){
-	free(proceso_pid);
+	free(proceso_pid); proceso_pid = NULL;
 	free(proceso_ticket);
 	free(proceso_ip);
 	free(AX);

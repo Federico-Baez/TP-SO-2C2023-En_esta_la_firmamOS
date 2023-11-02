@@ -71,7 +71,7 @@ void plp_planificar_proceso_nuevo(t_pcb* una_pcb){
 
 /*Planificador a Largo Plazo para [XX] -> EXIT */
 void plp_planificar_proceso_exit(t_pcb* una_pcb){
-	pausador();
+//	pausador();
 //	log_info(kernel_logger, "plp_exit [PID: %d]", una_pcb->pid);
 
 	//Considerar que al momento de sacar un estado a Exit
@@ -83,6 +83,7 @@ void plp_planificar_proceso_exit(t_pcb* una_pcb){
 //	t_pcb* tempora_pcb;
 	switch (una_pcb->estado) {
 		case NEW:
+			pausador();
 			pthread_mutex_lock(&mutex_lista_new);
 			//Esto control verifica que esa PCB siga en la lista
 			if(list_remove_element(lista_new, una_pcb)){
@@ -99,6 +100,7 @@ void plp_planificar_proceso_exit(t_pcb* una_pcb){
 			log_info(kernel_logger, "plp_exit [PID: %d]", una_pcb->pid);
 			break;
 		case READY:
+			pausador();
 			pthread_mutex_lock(&mutex_lista_ready);
 			//Esto control verifica que esa PCB siga en la lista
 			if(list_remove_element(lista_ready, una_pcb)){
@@ -149,6 +151,7 @@ void plp_planificar_proceso_exit(t_pcb* una_pcb){
 			//_plp_planifica();
 			break;
 		case EXIT:
+			pausador();
 			pthread_mutex_lock(&mutex_lista_exit);
 			//Esto control verifica que esa PCB siga en la lista
 			if(esta_pcb_en_una_lista_especifica(lista_exit, una_pcb)){

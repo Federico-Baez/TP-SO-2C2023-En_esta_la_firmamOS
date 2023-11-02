@@ -77,9 +77,10 @@ void imprimir_pcb(t_pcb* una_PCB){
 
 void imprimir_pcb_v2(t_pcb* una_pcb){
 	char* string_estado = _convertir_estado_pcb_a_texto(una_pcb->estado);
-	log_info(kernel_logger, "<PCB>[PID:%d][%s][]",
+	log_info(kernel_logger, "<PCB>[PID:%d][%s][%d]",
 							una_pcb->pid,
-							string_estado);
+							string_estado,
+							una_pcb->prioridad);
 	free(string_estado);
 }
 
