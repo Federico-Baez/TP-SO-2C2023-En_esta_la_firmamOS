@@ -34,7 +34,7 @@ static void _desalojar_proceso(t_pcb* una_pcb){
 
 	log_info(kernel_logger, "plp_exit [PID: %d]", una_pcb->pid);
 
-	hay_pcb_elegida = false; // <-------------
+//	hay_pcb_elegida = false; // <---------1111111
 
 	pcp_planificar_corto_plazo();
 	plp_planificar_proceso_nuevo(NULL);
@@ -47,7 +47,7 @@ static void _reubicar_pcb_de_execute_a_ready(t_pcb* una_pcb){
 		log_error(kernel_logger ,"PCB_%d No esta en EXECUTE - RArisimo", una_pcb->pid);
 		exit(EXIT_FAILURE);
 	}
-	hay_pcb_elegida = false; // <-------------
+//	hay_pcb_elegida = false; // <-------------11111
 	pthread_mutex_unlock(&mutex_lista_exec);
 
 //	pcp_planificar_corto_plazo();
@@ -189,7 +189,7 @@ static void _gestionar_peticiones_de_cpu_dispatch(){
 		switch (cod_op) {
 		case EJECUTAR_PROCESO_KC:
 			unBuffer = recibiendo_super_paquete(fd_cpu_dispatcher);
-			CPU_en_uso = false;
+//			CPU_en_uso = false; // <1111111111111111111
 			_recibir_proceso_desalojado(unBuffer);
 			free(unBuffer);
 			break;

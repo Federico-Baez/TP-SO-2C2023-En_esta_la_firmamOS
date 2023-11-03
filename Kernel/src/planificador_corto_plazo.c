@@ -128,32 +128,27 @@ static void _atender_PRIORIDADES(){
 			de mayor prioridad de la lista de READY*/
 			pcb_execute = list_get(lista_execute, 0);
 			if(una_pcb->prioridad > pcb_execute->prioridad){
+				//=====================
+				pthread_mutex_lock(&mutex_interrupcion_habilitada);
+				if(interrupcion_habilitada){
+					//Significa que se va a enviar la primera interrupcion
+					//Entonces hay que deshabilitarla para que no se envien mas interrupciones
+					interrupcion_habilitada = false;
 
-				//Controlo que la PCB elegida sea siempre la de maxima prioridad.
-				//Si es que viniera otra de mayor prioridad, haría el cambio
-				if(hay_pcb_elegida){
-					if(una_pcb->prioridad > pcb_prioritaria->prioridad){
-						pcb_prioritaria = una_pcb;
-					}
+					//Enviar interrupcion por interrupt
+					t_paquete* un_paquete = crear_super_paquete(FORZAR_DESALOJO_KC);
+					cargar_int_al_super_paquete(un_paquete, pcb_execute->pid);
+					cargar_int_al_super_paquete(un_paquete, pcb_execute->ticket);
+					cargar_string_al_super_paquete(un_paquete, "ALGORITMO_PRIORIDAD");
+					enviar_paquete(un_paquete, fd_cpu_interrupt);
+					eliminar_paquete(un_paquete);
+
 				}else{
-
-					//Control para enviar interrupcion solo cuando la CPU estea en uso
-					if(CPU_en_uso){
-						/*Significa que, aun no habia algun proceso elegido para la interrupcion*/
-						hay_pcb_elegida = true;
-						pcb_prioritaria = una_pcb;
-
-						//Enviar interrupcion por interrupt
-						t_paquete* un_paquete = crear_super_paquete(FORZAR_DESALOJO_KC);
-						cargar_int_al_super_paquete(un_paquete, pcb_execute->pid);
-						cargar_int_al_super_paquete(un_paquete, pcb_execute->ticket);
-						cargar_string_al_super_paquete(un_paquete, "ALGORITMO_PRIORIDAD");
-						enviar_paquete(un_paquete, fd_cpu_interrupt);
-						eliminar_paquete(un_paquete);
-					}
-
+					//Signfica que ya se envio alguna interrupcion
+					//Por lo tanto no se hace nada
 				}
-
+				pthread_mutex_unlock(&mutex_interrupcion_habilitada);
+				//========================
 			}
 		}else {
 			if(list_remove_element(lista_ready, una_pcb)){
@@ -161,7 +156,9 @@ static void _atender_PRIORIDADES(){
 				una_pcb->ticket = generar_ticket();
 				cambiar_estado(una_pcb, EXEC);
 				_enviar_pcb_a_CPU_por_dispatch(una_pcb);
-				CPU_en_uso = true;
+
+				interrupcion_habilitada = true; //Habilita solo 1 interrupcion
+//				CPU_en_uso = true;
 			}else{
 				log_error(kernel_logger, "[PCP_PRIORIDAD] Algo salio muy mal en la logica de sacar de READY");
 				exit(EXIT_FAILURE);

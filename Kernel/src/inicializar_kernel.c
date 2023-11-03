@@ -72,6 +72,7 @@ static void iniciar_pthread(){
 	pthread_mutex_init(&mutex_pausa, NULL);
 	pthread_mutex_init(&mutex_recurso, NULL);
 	pthread_mutex_init(&mutex_ticket, NULL);
+	pthread_mutex_init(&mutex_interrupcion_habilitada, NULL);
 
 }
 

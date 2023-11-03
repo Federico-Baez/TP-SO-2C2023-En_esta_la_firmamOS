@@ -83,6 +83,9 @@ static void _finalizar_proceso_por_PID(char* un_pid){
 	t_pcb* una_pcb = buscar_pcb_por_pid(atoi(un_pid));
 	if(una_pcb != NULL){
 		plp_planificar_proceso_exit(una_pcb);
+	}else{
+		log_error(kernel_logger, "CONSOLA - No se encontro el PID en ningun lado");
+		exit(EXIT_FAILURE);
 	}
 
 	//Se debe liberar essta parte o generar memory leaks

@@ -103,6 +103,10 @@ extern t_list* lista_instructions;
 extern t_list* lista_general;
 extern t_list* lista_recursos;
 
+
+//Para controlar la habilitacion de interrupciones - Algo. Prioridad
+extern bool interrupcion_habilitada;
+
 //Estado de CPU
 extern bool CPU_en_uso;
 
@@ -131,6 +135,7 @@ extern pthread_mutex_t mutex_core;
 extern pthread_mutex_t mutex_pausa;
 extern pthread_mutex_t mutex_recurso;
 extern pthread_mutex_t mutex_ticket;
+extern pthread_mutex_t mutex_interrupcion_habilitada;
 
 void public_imprimir_procesos_por_estado_v0();
 void public_imprimir_procesos_por_estado_v1();

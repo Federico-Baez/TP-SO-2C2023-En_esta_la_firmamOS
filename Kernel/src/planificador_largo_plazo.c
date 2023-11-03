@@ -44,6 +44,10 @@ static void _plp_planifica(){
 	}
 	pthread_mutex_unlock(&mutex_core);
 
+	//[FALTA] Solucionar el tema de cuando se pausa el planificador
+	//Equivale a que n PCBs entran en un momento especifico en bloque
+	//Lo que conlleva a dejarlos entrar todos los posibles a ready
+	//Y luego llamar al PCP para que elija al mas apropiado.
 	ejecutar_en_un_hilo_nuevo_detach((void*)pcp_planificar_corto_plazo, NULL);
 }
 
@@ -127,6 +131,20 @@ void plp_planificar_proceso_exit(t_pcb* una_pcb){
 		case EXEC://[FALTA] PLP_EXIT_EXECUTE
 			pthread_mutex_lock(&mutex_lista_exec);
 			batisenal_exit = true;
+
+			if(ALGORITMO_PLANIFICACION == PRIORIDADES){
+				//===============
+				pthread_mutex_lock(&mutex_interrupcion_habilitada);
+				if(interrupcion_habilitada){
+					interrupcion_habilitada = false;
+
+				}else{
+					//No hacer nada
+				}
+				pthread_mutex_unlock(&mutex_interrupcion_habilitada);
+				//=================
+			}
+
 			//Enviar un interrupt
 			t_paquete* un_paquete = crear_super_paquete(FORZAR_DESALOJO_KC);
 			cargar_int_al_super_paquete(un_paquete, una_pcb->pid);

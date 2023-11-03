@@ -51,6 +51,9 @@ int procesos_en_core = 0;
 int var_pausa = 0;
 int var_ticket = 0;
 
+//Para controlar la habilitacion de interrupciones - Algo. Prioridad
+bool interrupcion_habilitada = false;
+
 //Estado de CPU
 bool CPU_en_uso = false;
 
@@ -78,6 +81,7 @@ pthread_mutex_t mutex_core;
 pthread_mutex_t mutex_pausa;
 pthread_mutex_t mutex_recurso;
 pthread_mutex_t mutex_ticket;
+pthread_mutex_t mutex_interrupcion_habilitada;
 
 
 #endif /* KERNEL_H_ */
