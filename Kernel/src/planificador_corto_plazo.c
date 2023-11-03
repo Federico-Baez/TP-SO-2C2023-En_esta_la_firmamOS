@@ -109,6 +109,7 @@ static void _atender_PRIORIDADES(){
 	}
 
 	//Verificar que haya elementos en la lista de READY
+	pthread_mutex_lock(&mutex_lista_exec);
 	pthread_mutex_lock(&mutex_lista_ready);
 	if(!list_is_empty(lista_ready)){
 
@@ -120,7 +121,7 @@ static void _atender_PRIORIDADES(){
 		}
 
 		//Consulto si la prioridad le gana al que esta en EXECUTE
-		pthread_mutex_lock(&mutex_lista_exec);
+//		pthread_mutex_lock(&mutex_lista_exec); //<=========
 		//Antes pregunta si hay alguna PCB ejecutando
 		if(!list_is_empty(lista_execute)){
 			/*Si hay algun elemento ejecutando en EXEC, lo comparo con el
@@ -135,17 +136,22 @@ static void _atender_PRIORIDADES(){
 						pcb_prioritaria = una_pcb;
 					}
 				}else{
-					/*Significa que, aun no habia algun proceso elegido para la interrupcion*/
-					hay_pcb_elegida = true;
-					pcb_prioritaria = una_pcb;
 
-					//Enviar interrupcion por interrupt
-					t_paquete* un_paquete = crear_super_paquete(FORZAR_DESALOJO_KC);
-					cargar_int_al_super_paquete(un_paquete, pcb_execute->pid);
-					cargar_int_al_super_paquete(un_paquete, pcb_execute->ticket);
-					cargar_string_al_super_paquete(un_paquete, "ALGORITMO_PRIORIDAD");
-					enviar_paquete(un_paquete, fd_cpu_interrupt);
-					eliminar_paquete(un_paquete);
+					//Control para enviar interrupcion solo cuando la CPU estea en uso
+					if(CPU_en_uso){
+						/*Significa que, aun no habia algun proceso elegido para la interrupcion*/
+						hay_pcb_elegida = true;
+						pcb_prioritaria = una_pcb;
+
+						//Enviar interrupcion por interrupt
+						t_paquete* un_paquete = crear_super_paquete(FORZAR_DESALOJO_KC);
+						cargar_int_al_super_paquete(un_paquete, pcb_execute->pid);
+						cargar_int_al_super_paquete(un_paquete, pcb_execute->ticket);
+						cargar_string_al_super_paquete(un_paquete, "ALGORITMO_PRIORIDAD");
+						enviar_paquete(un_paquete, fd_cpu_interrupt);
+						eliminar_paquete(un_paquete);
+					}
+
 				}
 
 			}
@@ -155,17 +161,19 @@ static void _atender_PRIORIDADES(){
 				una_pcb->ticket = generar_ticket();
 				cambiar_estado(una_pcb, EXEC);
 				_enviar_pcb_a_CPU_por_dispatch(una_pcb);
+				CPU_en_uso = true;
 			}else{
 				log_error(kernel_logger, "[PCP_PRIORIDAD] Algo salio muy mal en la logica de sacar de READY");
 				exit(EXIT_FAILURE);
 			}
 		}
-		pthread_mutex_unlock(&mutex_lista_exec);
+//		pthread_mutex_unlock(&mutex_lista_exec); //<=========
 
 	}else{
 		log_warning(kernel_logger, "Lista de READY vacía");
 	}
 	pthread_mutex_unlock(&mutex_lista_ready);
+	pthread_mutex_unlock(&mutex_lista_exec);
 
 }
 

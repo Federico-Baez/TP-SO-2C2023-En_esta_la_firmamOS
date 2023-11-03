@@ -18,6 +18,8 @@ static void _desalojar_proceso(t_pcb* una_pcb){
 		liberar_todos_los_recursos_de_una_pcb(una_pcb);
 		avisar_a_memoria_para_liberar_estructuras(una_pcb);
 		pthread_mutex_unlock(&mutex_lista_exit);
+
+//		hay_pcb_elegida = false; // <---------------
 	}else{
 		log_error(kernel_logger, "PCB no encontradad en EXEC [Eliminacion por consola]");
 		exit(EXIT_FAILURE);
@@ -32,6 +34,8 @@ static void _desalojar_proceso(t_pcb* una_pcb){
 
 	log_info(kernel_logger, "plp_exit [PID: %d]", una_pcb->pid);
 
+	hay_pcb_elegida = false; // <-------------
+
 	pcp_planificar_corto_plazo();
 	plp_planificar_proceso_nuevo(NULL);
 	pcp_planificar_corto_plazo();
@@ -43,6 +47,7 @@ static void _reubicar_pcb_de_execute_a_ready(t_pcb* una_pcb){
 		log_error(kernel_logger ,"PCB_%d No esta en EXECUTE - RArisimo", una_pcb->pid);
 		exit(EXIT_FAILURE);
 	}
+	hay_pcb_elegida = false; // <-------------
 	pthread_mutex_unlock(&mutex_lista_exec);
 
 //	pcp_planificar_corto_plazo();
@@ -51,7 +56,7 @@ static void _reubicar_pcb_de_execute_a_ready(t_pcb* una_pcb){
 	list_add(lista_ready, una_pcb);
 	cambiar_estado(una_pcb, READY);
 	pthread_mutex_unlock(&mutex_lista_ready);
-	hay_pcb_elegida = false;
+//	hay_pcb_elegida = false;
 
 //	plp_planificar_proceso_nuevo(NULL);
 	pcp_planificar_corto_plazo();
@@ -184,6 +189,7 @@ static void _gestionar_peticiones_de_cpu_dispatch(){
 		switch (cod_op) {
 		case EJECUTAR_PROCESO_KC:
 			unBuffer = recibiendo_super_paquete(fd_cpu_dispatcher);
+			CPU_en_uso = false;
 			_recibir_proceso_desalojado(unBuffer);
 			free(unBuffer);
 			break;

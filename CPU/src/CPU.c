@@ -135,8 +135,9 @@ void atender_cpu_dispatch(){
 			atender_proceso_del_kernel(unBuffer);
 			free(unBuffer);
 			break;
-		case MENSAJES_POR_CONSOLA:
+		case MENSAJES_POR_CONSOLA: //POr aca contesta el kernel los pedido de SIGNAL/WAIT
 			unBuffer = recibiendo_super_paquete(fd_kernel_dispatch);
+			//post(sem)
 			//atender_mensajes_kernel_v2(unBuffer, "Dispatch");
 			break;
 		case -1:
@@ -191,7 +192,7 @@ static void _manejar_interrupcion(t_buffer* un_buffer){
 		}
 
 	}else{
-		printf("INTERRUPCION RECHAZADA XQ NO HAY PROCESOS CORRIENDO EN CPU ACTUALMENTE\n");
+		log_info(cpu_logger, "INTERRUPCION RECHAZADA XQ NO HAY PROCESOS CORRIENDO EN CPU ACTUALMENTE");
 		free(punteros[0]);
 		free(punteros[1]);
 		free(puntero_string);
@@ -308,9 +309,12 @@ void atender_proceso_del_kernel(t_buffer* unBuffer){
 
 	/*Se reutilizo el mismo CODIGO de OPERACION con el que entro*/
 	t_paquete* un_paquete = alistar_paquete_de_desalojo(EJECUTAR_PROCESO_KC);
+
+
 	if(preguntando_si_hay_interrupciones_vigentes()){
 		if(hay_que_desalojar){
 			//La mochila debe incluir el motivo del desalojo
+			cargar_string_al_super_paquete(un_paquete, motivo_desalojo);
 			cargar_choclo_al_super_paquete(un_paquete, mochila->buffer->stream, mochila->buffer->size);
 			//En KERNEL vuelve a controlar la interrupcion
 
@@ -438,31 +442,31 @@ void ciclo_de_instruccion_execute(){
 		 * junto a la cantidad de segundos que va a bloquearse el proceso.*/
 		//Enviar al KERNEL: [PID][IP][AX][BX][CX][DX]["SLEEP"]
 		*proceso_ip = *proceso_ip + 1;
-		t_paquete* unPaquete = alistar_paquete_de_desalojo(EJECUTAR_PROCESO_KC);
-		cargar_string_al_super_paquete(unPaquete, "SLEEP"); //Motivo del desalojo
-		cargar_int_al_super_paquete(unPaquete, atoi(instruccion_split[1])); //ALgun otro perametro necesario
-		enviar_paquete(unPaquete, fd_kernel_dispatch);
-		eliminar_paquete(unPaquete);
+		mochila = alistar_paquete_de_desalojo(100);
+
+		motivo_desalojo = "SLEEP"; //Motivo del desalojo
+		hay_que_desalojar = true;
+
+		cargar_int_al_super_paquete(mochila, atoi(instruccion_split[1])); //ALgun otro perametro necesario
+
 
 	}else if(strcmp(instruccion_split[0], "WAIT") == 0){// [WAIT][char* Recurso]
 		log_info(cpu_logger, "Ejecutando: <%s>", instruccion_split[0]);
 		/*Esta instrucción solicita al Kernel que se asigne una instancia del recurso indicado por parámetro.*/
 		*proceso_ip = *proceso_ip + 1;
-		t_paquete* unPaquete = alistar_paquete_de_desalojo(EJECUTAR_PROCESO_KC);
-		cargar_string_al_super_paquete(unPaquete, "WAIT"); //Motivo del desalojo
-		cargar_string_al_super_paquete(unPaquete, instruccion_split[1]); //ALgun otro perametro necesario
-		enviar_paquete(unPaquete, fd_kernel_dispatch);
-		eliminar_paquete(unPaquete);
+
+		//Envia a Kernel con motivo de WAIT de algun recurso
+
+		//Semaforo WAIT
+		//if
+
+
 
 	}else if(strcmp(instruccion_split[0], "SIGNAL") == 0){// [SIGNAL][char* Recurso]
 		log_info(cpu_logger, "Ejecutando: <%s>", instruccion_split[0]);
 		/*Esta instrucción solicita al Kernel que se libere una instancia del recurso indicado por parámetro.*/
 		*proceso_ip = *proceso_ip + 1;
-		t_paquete* unPaquete = alistar_paquete_de_desalojo(EJECUTAR_PROCESO_KC);
-		cargar_string_al_super_paquete(unPaquete, "SIGNAL"); //Motivo del desalojo
-		cargar_string_al_super_paquete(unPaquete, instruccion_split[1]); //ALgun otro perametro necesario
-		enviar_paquete(unPaquete, fd_kernel_dispatch);
-		eliminar_paquete(unPaquete);
+
 
 	}else if(strcmp(instruccion_split[0], "MOV_IN") == 0){// [MOV_IN][RX][Dir_logica]
 		log_info(cpu_logger, "Ejecutando: <%s>", instruccion_split[0]);

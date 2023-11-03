@@ -103,6 +103,9 @@ extern t_list* lista_instructions;
 extern t_list* lista_general;
 extern t_list* lista_recursos;
 
+//Estado de CPU
+extern bool CPU_en_uso;
+
 //Para dar prioridad a la interrupcion por consola sobre la de quantum
 extern bool batisenal_exit;
 

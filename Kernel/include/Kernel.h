@@ -51,6 +51,9 @@ int procesos_en_core = 0;
 int var_pausa = 0;
 int var_ticket = 0;
 
+//Estado de CPU
+bool CPU_en_uso = false;
+
 //Para dar prioridad a la interrupcion por consola sobre la de quantum
 bool batisenal_exit = false;
 
