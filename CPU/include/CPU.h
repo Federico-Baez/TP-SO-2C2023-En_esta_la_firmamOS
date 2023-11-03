@@ -48,13 +48,16 @@ uint32_t* AX;
 uint32_t* BX;
 uint32_t* CX;
 uint32_t* DX;
-char* motivo_desalojo;
+//char* motivo_desalojo;
 
-//ESta varaible sirve para cuando haya que desalojar voluntariamente por alguna instruccion
+//ESta varaible sirve para cuando haya que desalojar
+//voluntariamente por alguna instruccion
 bool hay_que_desalojar;
 
-char** opcode_strings; //Contiene todos los HEADER de las instruccinoes autorizadas
-char** instruccion_split;//Contiene el split de la instruccion de memoria
+//Contiene todos los HEADER de las instruccinoes autorizadas
+char** opcode_strings;
+//Contiene el split de la instruccion de memoria
+char** instruccion_split;
 
 char* s_registros[4] = {"AX", "BX", "CX", "DX"};
 int* numero_de_marco;

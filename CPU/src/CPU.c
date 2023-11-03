@@ -82,7 +82,7 @@ void iniciar_estructuras(){
 
 	hay_que_desalojar = false;
 
-	motivo_desalojo = NULL;
+//	motivo_desalojo = NULL;
 
 	interrupt_proceso_id = NULL;
 	interrupt_proceso_ticket = NULL;
@@ -314,7 +314,6 @@ void atender_proceso_del_kernel(t_buffer* unBuffer){
 	if(preguntando_si_hay_interrupciones_vigentes()){
 		if(hay_que_desalojar){
 			//La mochila debe incluir el motivo del desalojo
-			cargar_string_al_super_paquete(un_paquete, motivo_desalojo);
 			cargar_choclo_al_super_paquete(un_paquete, mochila->buffer->stream, mochila->buffer->size);
 			//En KERNEL vuelve a controlar la interrupcion
 
@@ -325,10 +324,6 @@ void atender_proceso_del_kernel(t_buffer* unBuffer){
 		//La mochila debe incluir el motivo del desalojo
 		cargar_choclo_al_super_paquete(un_paquete, mochila->buffer->stream, mochila->buffer->size);
 
-//		cargar_string_al_super_paquete(un_paquete, motivo_desalojo);
-//		if(mochila != NULL){
-//			cargar_choclo_al_super_paquete(un_paquete, mochila->buffer->stream, mochila->buffer->size);
-//		}
 	}
 
 	enviar_paquete(un_paquete, fd_kernel_dispatch);
@@ -440,14 +435,12 @@ void ciclo_de_instruccion_execute(){
 		 /* Esta instrucción representa una syscall bloqueante.
 		 * Se deberá devolver el Contexto de Ejecución actualizado al Kernel
 		 * junto a la cantidad de segundos que va a bloquearse el proceso.*/
-		//Enviar al KERNEL: [PID][IP][AX][BX][CX][DX]["SLEEP"]
+		//Enviar al KERNEL: [PID][IP][AX][BX][CX][DX]["SLEEP"][Tiempo]
 		*proceso_ip = *proceso_ip + 1;
-		mochila = alistar_paquete_de_desalojo(100);
-
-		motivo_desalojo = "SLEEP"; //Motivo del desalojo
-		hay_que_desalojar = true;
-
+		mochila = crear_super_paquete(100);
+		cargar_string_al_super_paquete(mochila, "SLEEP"); //Motivo del desalojo
 		cargar_int_al_super_paquete(mochila, atoi(instruccion_split[1])); //ALgun otro perametro necesario
+		hay_que_desalojar = true;
 
 
 	}else if(strcmp(instruccion_split[0], "WAIT") == 0){// [WAIT][char* Recurso]
