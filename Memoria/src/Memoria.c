@@ -162,7 +162,7 @@ static void procesar_conexion(void *void_args){
 		case IDENTIFICACION:
 			unBuffer = recibiendo_super_paquete(cliente_socket);
 			identificar_modulo(unBuffer, cliente_socket);
-			free(unBuffer);
+
 			break;
 		case -1:
 			log_error(memoria_logger, "CLIENTE DESCONCETADO");
@@ -172,6 +172,7 @@ static void procesar_conexion(void *void_args){
 			log_error(memoria_logger, "Operacion desconocida. No quieras meter la pata en [MEMORIA]");
 			break;
 		}
+		free(unBuffer);
 
 
 }
@@ -186,8 +187,8 @@ void atender_kernel(int cliente_socket) {
 					printf("Se un proceso nuevo\n");
 					unBuffer = recibiendo_super_paquete(fd_kernel);
 					agregar_proceso_a_listado(unBuffer, list_procss_recibidos);
-	    			free(unBuffer);
-					printf("Se libera el buffer\n");
+
+//					printf("Se libera el buffer\n");
 					break;
 				case LIBERAR_ESTRUCTURA_KM:
 					unBuffer = recibiendo_super_paquete(fd_kernel);
@@ -195,13 +196,13 @@ void atender_kernel(int cliente_socket) {
 					proceso_recibido* proceso_a_liberar = obtener_proceso_por_id(pid, list_procss_recibidos);
 					liberar_proceso(proceso_a_liberar);
 					log_warning(memoria_logger, "Se liberaron las estructuras del proceso: PID_%d", pid);
-					free(unBuffer);
+//					free(unBuffer);
 					//
 					break;
 				case MENSAJES_POR_CONSOLA:
 					unBuffer = recibiendo_super_paquete(fd_kernel);
 					atender_mensajes_kernel(unBuffer);
-					free(unBuffer);
+//					free(unBuffer);
 					break;
 			case -1:
 				log_error(memoria_logger, "[DESCONEXION]: KERNEL");
@@ -215,6 +216,7 @@ void atender_kernel(int cliente_socket) {
 				log_error(memoria_logger, "Operacion desconocida KERNEL");
 				break;
 			}
+		free(unBuffer);
     }
 
 }
@@ -226,7 +228,7 @@ void atender_cpu(int cliente_socket) {
 		switch(cod_op) {
 				case PETICION_INFO_RELEVANTE_CM:
 					unBuffer = recibiendo_super_paquete(fd_cpu);
-					free(unBuffer);
+//					free(unBuffer);
 					//
 					break;
 				case PETICION_DE_INSTRUCCIONES_CM:
@@ -234,16 +236,16 @@ void atender_cpu(int cliente_socket) {
 					int pid_buffer = recibir_int_del_buffer(unBuffer);
 					int ip_buffer = recibir_int_del_buffer(unBuffer);
 					enviar_instrucciones_a_cpu(pid_buffer,ip_buffer);
-					free(unBuffer);
+
 					break;
 				case PETICION_DE_EJECUCION_CM:
 					unBuffer = recibiendo_super_paquete(fd_cpu);
-					free(unBuffer);
+//					free(unBuffer);
 
 					break;
 				case CONSULTA_DE_PAGINA_CM:
 					unBuffer = recibiendo_super_paquete(fd_cpu);
-					free(unBuffer);
+//					free(unBuffer);
 					//
 					break;
 			case -1:
@@ -258,6 +260,7 @@ void atender_cpu(int cliente_socket) {
 				log_error(memoria_logger, "Operacion desconocida CPU");
 				break;
 			}
+		free(unBuffer);
 	}
 }
 
@@ -271,27 +274,27 @@ void atender_filesystem(int cliente_socket){
 	switch(cod_op) {
 	case PETICION_ASIGNACION_BLOQUE_SWAP_FM:
 				unBuffer = recibiendo_super_paquete(fd_filesystem);
-				free(unBuffer);
+//				free(unBuffer);
 				//
 				break;
 			case LIBERAR_PAGINAS_FM:
 				unBuffer = recibiendo_super_paquete(fd_filesystem);
-				free(unBuffer);
+//				free(unBuffer);
 				//
 				break;
 			case PETICION_PAGE_FAULT_FM:
 				unBuffer = recibiendo_super_paquete(fd_filesystem);
-				free(unBuffer);
+//				free(unBuffer);
 				//
 				break;
 			case CARGAR_INFO_DE_LECTURA_FM:
 				unBuffer = recibiendo_super_paquete(fd_filesystem);
-				free(unBuffer);
+//				free(unBuffer);
 				//
 				break;
 			case GUARDAR_INFO_FM:
 				unBuffer = recibiendo_super_paquete(fd_filesystem);
-				free(unBuffer);
+//				free(unBuffer);
 				//
 				break;
 		case -1:
@@ -306,6 +309,7 @@ void atender_filesystem(int cliente_socket){
 			log_error(memoria_logger, "Operacion desconocida FILESYSTEM");
 			break;
 		}
+	free(unBuffer);
 	}
 }
 
