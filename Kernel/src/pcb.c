@@ -39,6 +39,7 @@ t_pcb* crear_pcb(char* path, char* size, char* prioridad){
 	nueva_PCB->pid = process_id;
 	pthread_mutex_unlock(&mutex_process_id);
 	nueva_PCB->program_counter = 0;
+	nueva_PCB->ticket = 0;
 
 	nueva_PCB->size = atoi(size);
 	nueva_PCB->prioridad = atoi(prioridad);
@@ -76,9 +77,10 @@ void imprimir_pcb(t_pcb* una_PCB){
 
 void imprimir_pcb_v2(t_pcb* una_pcb){
 	char* string_estado = _convertir_estado_pcb_a_texto(una_pcb->estado);
-	log_info(kernel_logger, "<PCB>[PID:%d][%s][]",
+	log_info(kernel_logger, "<PCB>[PID:%d][%s][%d]",
 							una_pcb->pid,
-							string_estado);
+							string_estado,
+							una_pcb->prioridad);
 	free(string_estado);
 }
 
@@ -163,6 +165,34 @@ bool esta_pcb_en_una_lista_especifica(t_list* una_lista, t_pcb* una_pcb){
 
 
 }
+
+
+//Esto es para que se liberen todos los recursos asignados
+void liberar_todos_los_recursos_de_una_pcb(t_pcb* una_pcb){
+	while(!list_is_empty(una_pcb->lista_recursos_pcb)){
+		t_recurso* un_recurso = list_remove(una_pcb->lista_recursos_pcb, 0);
+
+		//Aumento el valor del recurso en +1
+		pthread_mutex_lock(&mutex_recurso);
+		un_recurso->recurso_valor = un_recurso->recurso_valor + 1;
+		pthread_mutex_unlock(&mutex_recurso);
+
+		//[FALTA] LLamar al gestor de recursos para que explore y libere a alguna PCB en espera
+	}
+}
+
+
+void avisar_a_memoria_para_liberar_estructuras(t_pcb* una_pcb){
+	t_paquete* un_paquete = crear_super_paquete(LIBERAR_ESTRUCTURA_KM);
+	cargar_int_al_super_paquete(un_paquete, una_pcb->pid);
+	enviar_paquete(un_paquete, fd_memoria);
+	eliminar_paquete(un_paquete);
+	log_info(kernel_logger, "Mensaje a MEMORIA: LIBERAR_ESTRUCTURA_KM [PID: %d]", una_pcb->pid);
+}
+
+
+
+
 
 
 
