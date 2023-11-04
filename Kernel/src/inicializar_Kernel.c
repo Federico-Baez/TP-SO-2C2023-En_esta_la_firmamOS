@@ -1,4 +1,5 @@
-#include "../include/Kernel.h"
+#include "../include/inicializar_Kernel.h"
+
 #include <termios.h>
 #include <ncurses.h>
 

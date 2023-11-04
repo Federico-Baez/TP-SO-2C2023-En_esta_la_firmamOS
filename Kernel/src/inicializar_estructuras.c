@@ -1,4 +1,4 @@
-#include "../include/inicializar_kernel.h"
+#include "../include/inicializar_estructuras.h"
 
 static void iniciar_logger(){
 	kernel_logger = log_create("kernel.log", "[Kernel]", 1, LOG_LEVEL_INFO);

@@ -1,10 +1,10 @@
-#ifndef KERNEL_H_
-#define KERNEL_H_
+#ifndef INICIALIZAR_KERNEL_H_
+#define INICIALIZAR_KERNEL_H_
 
-#include "inicializar_kernel.h"
 #include "finalizar_kernel.h"
 #include "atender_conexiones.h"
 #include "consola.h"
+#include "inicializar_estructuras.h"
 #include "k_gestor.h"
 
 t_log* kernel_logger;
@@ -84,4 +84,4 @@ pthread_mutex_t mutex_ticket;
 pthread_mutex_t mutex_interrupcion_habilitada;
 
 
-#endif /* KERNEL_H_ */
+#endif /* INICIALIZAR_KERNEL_H_ */
