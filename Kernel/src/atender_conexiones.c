@@ -193,6 +193,12 @@ static void _gestionar_peticiones_de_cpu_dispatch(){
 			_recibir_proceso_desalojado(unBuffer);
 			free(unBuffer);
 			break;
+		case MANEJO_RECURSOS_CPK: //recibe: [char* motivo]("SIGNAL/WAIT"),[char* recurso]("RECURSO_N")
+//			unBuffer = recibiendo_super_paquete(fd_cpu_dispatcher);
+//			CPU_en_uso = false; // <1111111111111111111
+//			_recibir_proceso_desalojado(unBuffer);
+//			free(unBuffer);
+			break;
 		case PRUEBAS:
 			unBuffer = recibiendo_super_paquete(fd_cpu_dispatcher);
 			//
