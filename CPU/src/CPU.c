@@ -2,6 +2,8 @@
 #include <stdlib.h>
 
 #include "../include/CPU.h"
+#include "../include/CPU.h"
+#include "../../Shared/include/protocolo.h"
 
 int main(int argc, char** argv) {
 	cpu_logger = log_create("cpu.log", "[CPU]", 1, LOG_LEVEL_INFO);
@@ -163,7 +165,7 @@ static void _manejar_interrupcion(t_buffer* un_buffer){
 	*punteros[1] = recibir_int_del_buffer(un_buffer);
 	char* puntero_string = recibir_string_del_buffer(un_buffer);
 
-	if(proceso_pid != NULL){
+	if(contexto != NULL){
 
 		if(interrupt_proceso_id == NULL){
 			//Esto es para atender una interrupcion para el contexto actual por primera vez
@@ -329,7 +331,7 @@ void atender_proceso_del_kernel(t_buffer* unBuffer){
 	enviar_paquete(un_paquete, fd_kernel_dispatch);
 	eliminar_paquete(un_paquete);
 
-	log_warning(cpu_logger, "Proceso_desalojado <PID:%d>", *proceso_pid);
+	log_warning(cpu_logger, "Proceso_desalojado <PID:%d>", contexto->proceso_pid);
 	destruir_estructuras_del_contexto_acttual();
 
 	log_info(cpu_logger, "Todo el contexto se elimino correctamente .....");
@@ -341,13 +343,13 @@ bool preguntando_si_hay_interrupciones_vigentes(){
 	if(interrupt_proceso_id != NULL){
 		if(strcmp(interrupt_motivo, "DESALOJO_POR_CONSOLA") == 0){
 			//validar solo PID
-			if(*interrupt_proceso_id == *proceso_pid) respuesta = true;
+			if(*interrupt_proceso_id == contexto->proceso_pid) respuesta = true;
 		}else{
 			//validar por PID y TICKET
-			if(*interrupt_proceso_id == *proceso_pid &&
-				*interrupt_proceso_ticket == *proceso_ticket){
-				respuesta = true;
-			}
+//			if(*interrupt_proceso_id == contexto->proceso_pid &&
+//				*interrupt_proceso_ticket == contexto->proceso_ticket){
+//				respuesta = true;
+//			}
 		}
 	}
 
@@ -377,8 +379,8 @@ void iniciar_ciclo_de_instruccion(){
 
 void ciclo_de_instruccion_fetch(){
 	t_paquete* un_paquete = crear_super_paquete(PETICION_DE_INSTRUCCIONES_CM);
-	cargar_int_al_super_paquete(un_paquete, *proceso_pid);
-	cargar_int_al_super_paquete(un_paquete, *proceso_ip);
+	cargar_int_al_super_paquete(un_paquete, contexto->proceso_pid);
+	cargar_int_al_super_paquete(un_paquete, contexto->proceso_ip);
 	enviar_paquete(un_paquete, fd_memoria);
 	eliminar_paquete(un_paquete);
 }
@@ -403,31 +405,31 @@ void ciclo_de_instruccion_decode(){
 void ciclo_de_instruccion_execute(){
 	if(strcmp(instruccion_split[0], "SET") == 0){//[SET][AX][22]
 		log_info(cpu_logger, "Ejecutando: <%s>", instruccion_split[0]);
-		*proceso_ip = *proceso_ip + 1;
+		contexto->proceso_ip = contexto->proceso_ip + 1;
 		uint32_t* registro_referido = detectar_registro(instruccion_split[1]);
 		*registro_referido = strtoul(instruccion_split[1], NULL, 10);
 
 	}else if(strcmp(instruccion_split[0], "SUM") == 0){//[SUM][destino:AX][origen:BX]
 		log_info(cpu_logger, "Ejecutando: <%s>", instruccion_split[0]);
-		*proceso_ip = *proceso_ip + 1;
+		contexto->proceso_ip = contexto->proceso_ip + 1;
 		uint32_t* registro_referido_destino = detectar_registro(instruccion_split[1]);
 		uint32_t* registro_referido_origen = detectar_registro(instruccion_split[2]);
 		*registro_referido_destino += *registro_referido_origen;
 
 	}else if(strcmp(instruccion_split[0], "SUB") == 0){//[SUB][destino:AX][origen:BX]
 		log_info(cpu_logger, "Ejecutando: <%s>", instruccion_split[0]);
-		*proceso_ip = *proceso_ip + 1;
+		contexto->proceso_ip = contexto->proceso_ip + 1;
 		uint32_t* registro_referido_destino = detectar_registro(instruccion_split[1]);
 		uint32_t* registro_referido_origen = detectar_registro(instruccion_split[2]);
 		*registro_referido_destino -= *registro_referido_origen;
 
 	}else if(strcmp(instruccion_split[0], "JNZ") == 0){// [JNZ][Registro][Instruccion]
 		log_info(cpu_logger, "Ejecutando: <%s>", instruccion_split[0]);
-		*proceso_ip = *proceso_ip + 1;
 		uint32_t* registro_referido = detectar_registro(instruccion_split[1]);
-		if(*registro_referido != 0) *proceso_ip = atoi(instruccion_split[2]);
-		else{
-			//[FALTA] Que hacer ?????
+		if(*registro_referido != 0) {
+			contexto->proceso_ip = atoi(instruccion_split[2]);
+		}else{
+			contexto->proceso_ip ++;
 		}
 
 	}else if(strcmp(instruccion_split[0], "SLEEP") == 0){// [SLEEP][tiempo]
@@ -436,7 +438,7 @@ void ciclo_de_instruccion_execute(){
 		 * Se deberá devolver el Contexto de Ejecución actualizado al Kernel
 		 * junto a la cantidad de segundos que va a bloquearse el proceso.*/
 		//Enviar al KERNEL: [PID][IP][AX][BX][CX][DX]["SLEEP"][Tiempo]
-		*proceso_ip = *proceso_ip + 1;
+		contexto->proceso_ip = contexto->proceso_ip + 1;
 		mochila = crear_super_paquete(100);
 		cargar_string_al_super_paquete(mochila, "SLEEP"); //Motivo del desalojo
 		cargar_int_al_super_paquete(mochila, atoi(instruccion_split[1])); //ALgun otro perametro necesario
@@ -444,22 +446,21 @@ void ciclo_de_instruccion_execute(){
 
 
 	}else if(strcmp(instruccion_split[0], "WAIT") == 0){// [WAIT][char* Recurso]
-		log_info(cpu_logger, "Ejecutando: <%s>", instruccion_split[0]);
 		/*Esta instrucción solicita al Kernel que se asigne una instancia del recurso indicado por parámetro.*/
-		*proceso_ip = *proceso_ip + 1;
-
+		log_info(cpu_logger, "Ejecutando: <%s>", instruccion_split[0]);
 		//Envia a Kernel con motivo de WAIT de algun recurso
+		enviarPaqueteManejoRecursosKernel("WAIT", instruccion_split[1]);
+		contexto->proceso_ip = contexto->proceso_ip + 1;
 
-		//Semaforo WAIT
-		//if
-
+		// Crear un protocolo diferente para enviar estos mensajes sin contexto, con el motivo wait o signal para que kernel lo maneje
 
 
 	}else if(strcmp(instruccion_split[0], "SIGNAL") == 0){// [SIGNAL][char* Recurso]
-		log_info(cpu_logger, "Ejecutando: <%s>", instruccion_split[0]);
 		/*Esta instrucción solicita al Kernel que se libere una instancia del recurso indicado por parámetro.*/
-		*proceso_ip = *proceso_ip + 1;
-
+		log_info(cpu_logger, "Ejecutando: <%s>", instruccion_split[0]);
+		//Envia a Kernel con motivo de SIGNAL de algun recurso
+		enviarPaqueteManejoRecursosKernel("SIGNAL", instruccion_split[1]);
+		contexto->proceso_ip = contexto->proceso_ip + 1;
 
 	}else if(strcmp(instruccion_split[0], "MOV_IN") == 0){// [MOV_IN][RX][Dir_logica]
 		log_info(cpu_logger, "Ejecutando: <%s>", instruccion_split[0]);
@@ -544,28 +545,21 @@ void ciclo_de_instruccion_execute(){
 
 /*Descargando contenido del buffer y actualizando el contenido de los registros*/
 void iniciar_estructuras_para_atender_al_proceso(t_buffer*  unBuffer){
-	proceso_pid = malloc(sizeof(int));
-	proceso_ip = malloc(sizeof(int));
-	proceso_ticket = malloc(sizeof(int));
+	contexto= (t_contexto*) malloc(sizeof(t_contexto));
 
-	*proceso_pid = recibir_int_del_buffer(unBuffer);
-	*proceso_ticket = recibir_int_del_buffer(unBuffer);
-	*proceso_ip = recibir_int_del_buffer(unBuffer);
-	AX = (uint32_t*)recibir_choclo_del_buffer(unBuffer);
-	BX = (uint32_t*)recibir_choclo_del_buffer(unBuffer);
-	CX = (uint32_t*)recibir_choclo_del_buffer(unBuffer);
-	DX = (uint32_t*)recibir_choclo_del_buffer(unBuffer);
+	contexto->proceso_pid = recibir_int_del_buffer(unBuffer);
+	contexto->proceso_ticket = recibir_int_del_buffer(unBuffer);
+	contexto->proceso_ip = recibir_int_del_buffer(unBuffer);
+	contexto->AX = (uint32_t)recibir_choclo_del_buffer(unBuffer);
+	contexto->BX = (uint32_t)recibir_choclo_del_buffer(unBuffer);
+	contexto->CX = (uint32_t)recibir_choclo_del_buffer(unBuffer);
+	contexto->DX = (uint32_t)recibir_choclo_del_buffer(unBuffer);
 }
 
 /*Libera memoria de las estructuras inciiadas para desalojar al proceso*/
 void destruir_estructuras_del_contexto_acttual(){
-	free(proceso_pid); proceso_pid = NULL;
-	free(proceso_ticket);
-	free(proceso_ip);
-	free(AX);
-	free(BX);
-	free(CX);
-	free(DX);
+	free(contexto);
+	contexto = NULL;
 
 	if(interrupt_proceso_id != NULL){
 		free(interrupt_proceso_id);
@@ -587,13 +581,13 @@ void destruir_estructuras_del_contexto_acttual(){
 
 uint32_t* detectar_registro(char* RX){
 	if(strcmp(RX, "AX") == 0){
-		return AX;
+		return contexto->AX;
 	}else if(strcmp(RX, "BX") == 0){
-		return BX;
+		return contexto->BX;
 	}else if(strcmp(RX, "CX") == 0){
-		return CX;
+		return contexto->CX;
 	}else if(strcmp(RX, "DX") == 0){
-		return DX;
+		return contexto->DX;
 	}else{
 		log_error(cpu_logger, "Registro desconocido: %s", RX);
 		exit(EXIT_FAILURE);
@@ -626,26 +620,34 @@ bool validador_de_header(char* header_string){
 
 t_paquete* alistar_paquete_de_desalojo(op_code code_op){
 	t_paquete* unPaquete = crear_super_paquete(code_op);
-	cargar_int_al_super_paquete(unPaquete, *proceso_pid);
-	cargar_int_al_super_paquete(unPaquete, *proceso_ip);
-	cargar_choclo_al_super_paquete(unPaquete, AX, sizeof(uint32_t));
-	cargar_choclo_al_super_paquete(unPaquete, BX, sizeof(uint32_t));
-	cargar_choclo_al_super_paquete(unPaquete, CX, sizeof(uint32_t));
-	cargar_choclo_al_super_paquete(unPaquete, DX, sizeof(uint32_t));
+	cargar_int_al_super_paquete(unPaquete, contexto->proceso_pid);
+	cargar_int_al_super_paquete(unPaquete, contexto->proceso_ip);
+	cargar_choclo_al_super_paquete(unPaquete, contexto->AX, sizeof(uint32_t));
+	cargar_choclo_al_super_paquete(unPaquete, contexto->BX, sizeof(uint32_t));
+	cargar_choclo_al_super_paquete(unPaquete, contexto->CX, sizeof(uint32_t));
+	cargar_choclo_al_super_paquete(unPaquete, contexto->DX, sizeof(uint32_t));
 
 	return unPaquete;
+}
+
+void enviarPaqueteManejoRecursosKernel(char* motivo,char* recurso){
+	t_paquete* paqueteManejoRecursos = crear_super_paquete(MANEJO_RECURSOS_CPK);
+	cargar_string_al_super_paquete(paqueteManejoRecursos, motivo);
+	cargar_string_al_super_paquete(paqueteManejoRecursos, recurso);
+	enviar_paquete(paqueteManejoRecursos, fd_kernel_dispatch);
+	eliminar_paquete(paqueteManejoRecursos);
 }
 
 
 
 void print_proceso(){
 	log_info(cpu_logger, "[PID: %d][PC: %d][Registros: %u|%u|%u|%u]",
-			*proceso_pid,
-			*proceso_ip,
-			*AX,
-			*BX,
-			*CX,
-			*DX);
+			contexto->proceso_pid,
+			contexto->proceso_ip,
+			contexto->AX,
+			contexto->BX,
+			contexto->CX,
+			contexto->DX);
 }
 
 

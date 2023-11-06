@@ -41,13 +41,26 @@ char* PUERTO_MEMORIA;
 char* PUERTO_ESCUCHA_DISPATCH;
 char* PUERTO_ESCUCHA_INTERRUPT;
 
-int* proceso_pid;
-int* proceso_ticket;
-int* proceso_ip;
-uint32_t* AX;
-uint32_t* BX;
-uint32_t* CX;
-uint32_t* DX;
+//int* proceso_pid;
+//int* proceso_ticket;
+//int* proceso_ip;
+//uint32_t* AX;
+//uint32_t* BX;
+//uint32_t* CX;
+//uint32_t* DX;
+
+typedef struct{
+	int proceso_pid;
+	int proceso_ticket;
+	int proceso_ip;
+	uint32_t AX;
+	uint32_t BX;
+	uint32_t CX;
+	uint32_t DX;
+}t_contexto;
+
+t_contexto* contexto;
+
 //char* motivo_desalojo;
 
 //ESta varaible sirve para cuando haya que desalojar
