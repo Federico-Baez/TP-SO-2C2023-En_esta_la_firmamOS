@@ -547,13 +547,35 @@ void ciclo_de_instruccion_execute(){
 void iniciar_estructuras_para_atender_al_proceso(t_buffer*  unBuffer){
 	contexto= (t_contexto*) malloc(sizeof(t_contexto));
 
-	contexto->proceso_pid = recibir_int_del_buffer(unBuffer);
-	contexto->proceso_ticket = recibir_int_del_buffer(unBuffer);
-	contexto->proceso_ip = recibir_int_del_buffer(unBuffer);
-	contexto->AX = (uint32_t)recibir_choclo_del_buffer(unBuffer);
-	contexto->BX = (uint32_t)recibir_choclo_del_buffer(unBuffer);
-	contexto->CX = (uint32_t)recibir_choclo_del_buffer(unBuffer);
-	contexto->DX = (uint32_t)recibir_choclo_del_buffer(unBuffer);
+	void* bufferRecibido = unBuffer->stream;
+
+	int offset = 0;
+
+	// TODO: Confirmar que kernel efectivamente mande el mensaje en este orden
+	memcpy(&(contexto -> proceso_pid), (bufferRecibido + offset), sizeof(int));
+	offset += sizeof(int);
+	memcpy(&(contexto -> proceso_ticket), (bufferRecibido + offset), sizeof(int));
+	offset += sizeof(int);
+	memcpy(&(contexto -> proceso_pid), (bufferRecibido + offset), sizeof(int));
+	offset += sizeof(int);
+	memcpy(&(contexto -> AX), (bufferRecibido + offset), sizeof(uint32_t));
+	offset += sizeof(uint32_t);
+	memcpy(&(contexto -> BX), (bufferRecibido + offset), sizeof(uint32_t));
+	offset += sizeof(uint32_t);
+	memcpy(&(contexto -> CX), (bufferRecibido + offset), sizeof(uint32_t));
+	offset += sizeof(uint32_t);
+	memcpy(&(contexto -> DX), (bufferRecibido + offset), sizeof(uint32_t));
+	offset += sizeof(uint32_t);
+
+
+
+//	contexto->proceso_pid = recibir_int_del_buffer(unBuffer);
+//	contexto->proceso_ticket = recibir_int_del_buffer(unBuffer);
+//	contexto->proceso_pid = recibir_int_del_buffer(unBuffer);
+//	contexto->AX = recibir_choclo_del_buffer(unBuffer);
+//	contexto->BX = (uint32_t)recibir_choclo_del_buffer(unBuffer);
+//	contexto->CX = (uint32_t)recibir_choclo_del_buffer(unBuffer);
+//	contexto->DX = (uint32_t)recibir_choclo_del_buffer(unBuffer);
 }
 
 /*Libera memoria de las estructuras inciiadas para desalojar al proceso*/
@@ -581,13 +603,13 @@ void destruir_estructuras_del_contexto_acttual(){
 
 uint32_t* detectar_registro(char* RX){
 	if(strcmp(RX, "AX") == 0){
-		return contexto->AX;
+		return &(contexto->AX);
 	}else if(strcmp(RX, "BX") == 0){
-		return contexto->BX;
+		return &(contexto->BX);
 	}else if(strcmp(RX, "CX") == 0){
-		return contexto->CX;
+		return &(contexto->CX);
 	}else if(strcmp(RX, "DX") == 0){
-		return contexto->DX;
+		return &(contexto->DX);
 	}else{
 		log_error(cpu_logger, "Registro desconocido: %s", RX);
 		exit(EXIT_FAILURE);
@@ -622,10 +644,10 @@ t_paquete* alistar_paquete_de_desalojo(op_code code_op){
 	t_paquete* unPaquete = crear_super_paquete(code_op);
 	cargar_int_al_super_paquete(unPaquete, contexto->proceso_pid);
 	cargar_int_al_super_paquete(unPaquete, contexto->proceso_ip);
-	cargar_choclo_al_super_paquete(unPaquete, contexto->AX, sizeof(uint32_t));
-	cargar_choclo_al_super_paquete(unPaquete, contexto->BX, sizeof(uint32_t));
-	cargar_choclo_al_super_paquete(unPaquete, contexto->CX, sizeof(uint32_t));
-	cargar_choclo_al_super_paquete(unPaquete, contexto->DX, sizeof(uint32_t));
+	cargar_choclo_al_super_paquete(unPaquete, &(contexto->AX), sizeof(uint32_t));
+	cargar_choclo_al_super_paquete(unPaquete, &(contexto->BX), sizeof(uint32_t));
+	cargar_choclo_al_super_paquete(unPaquete, &(contexto->CX), sizeof(uint32_t));
+	cargar_choclo_al_super_paquete(unPaquete, &(contexto->DX), sizeof(uint32_t));
 
 	return unPaquete;
 }

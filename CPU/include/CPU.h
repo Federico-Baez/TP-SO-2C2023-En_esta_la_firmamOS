@@ -114,6 +114,7 @@ bool validador_de_header(char* header_string);
 int MMU(int dir_logica, int* dir_fisica);
 uint32_t* detectar_registro(char* RX);
 t_paquete* alistar_paquete_de_desalojo(op_code code_op);
+void enviarPaqueteManejoRecursosKernel(char* motivo,char* recurso);
 
 void simulador_de_eventos(void); //Esto es solo para las pruebas
 
