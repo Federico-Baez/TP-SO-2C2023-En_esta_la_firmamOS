@@ -178,13 +178,15 @@ static void _manejar_interrupcion(t_buffer* un_buffer){
 									interrupt_motivo);
 		}else{
 			//ESto es para dar prioridad la desalojo por consola, por que es de eliminacion de PCB
-			if(strcmp(puntero_string, "DESALOJO_POR_CONSOLA") == 0){
+			if(strcmp(puntero_string, "DESALOJO_POR_CONSOLA") == 0 || strcmp(puntero_string, "ALGORITMO_PRIORIDADES") == 0 || strcmp(puntero_string, "ALGORITMO_QUANTUM") == 0){
 				free(interrupt_motivo);
 				interrupt_motivo = puntero_string;
 				free(punteros[0]);
 				free(punteros[1]);
 				log_warning(cpu_logger, "BATISENAL DE DESALOJO RECIBIDA");
-			}else{
+			}
+			// este else habria que sacarlo, consultarlo
+			else{
 				//Si es una interrupcion por otro motivo, basicamente la ignoramos porque ya hay una interrupcion vigente y de todas maneras va a desalojarse
 				free(punteros[0]);
 				free(punteros[1]);
@@ -341,9 +343,11 @@ void atender_proceso_del_kernel(t_buffer* unBuffer){
 bool preguntando_si_hay_interrupciones_vigentes(){
 	bool respuesta = false;
 	if(interrupt_proceso_id != NULL){
-		if(strcmp(interrupt_motivo, "DESALOJO_POR_CONSOLA") == 0){
+		if(strcmp(interrupt_motivo, "DESALOJO_POR_CONSOLA") == 0 || strcmp(interrupt_motivo, "ALGORITMO_PRIORIDADES") == 0 || strcmp(interrupt_motivo, "ALGORITMO_QUANTUM") == 0){
 			//validar solo PID
-			if(*interrupt_proceso_id == contexto->proceso_pid) respuesta = true;
+			if(*interrupt_proceso_id == contexto->proceso_pid){
+				respuesta = true;
+			}
 		}else{
 			//validar por PID y TICKET
 //			if(*interrupt_proceso_id == contexto->proceso_pid &&
@@ -653,7 +657,7 @@ t_paquete* alistar_paquete_de_desalojo(op_code code_op){
 }
 
 void enviarPaqueteManejoRecursosKernel(char* motivo,char* recurso){
-	t_paquete* paqueteManejoRecursos = crear_super_paquete(MANEJO_RECURSOS_CPK);
+	t_paquete* paqueteManejoRecursos = crear_super_paquete(ATENDER_INSTRUCCION_CPK);
 	cargar_string_al_super_paquete(paqueteManejoRecursos, motivo);
 	cargar_string_al_super_paquete(paqueteManejoRecursos, recurso);
 	enviar_paquete(paqueteManejoRecursos, fd_kernel_dispatch);
