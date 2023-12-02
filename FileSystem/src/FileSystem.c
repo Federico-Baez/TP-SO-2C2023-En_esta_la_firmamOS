@@ -51,6 +51,62 @@ void leer_config(t_config* config){
 	RETARDO_ACCESO_FAT = config_get_int_value(config,"RETARDO_ACCESO_FAT");
 }
 
+void inicializar_fcbs(){
+	DIR *directorio_archivos = opendir(PATH_FCB);
+	struct dirent *fcb;
+
+	if(directorio_archivos == NULL){
+		log_error(filesystem_logger, "No se pudo abrir el directorio de fcbs");
+		exit(1);
+	}
+
+	while((fcb = readdir(directorio_archivos)) != NULL){
+		if (strcmp(fcb->d_name, ".") == 0 || strcmp(fcb->d_name, "..") == 0){
+			continue;
+		}
+		log_info(filesystem_logger, "Lei esto del directorio: %s", fcb->d_name);
+
+		t_archivo *archivo = malloc(sizeof(t_archivo));
+		archivo->nombre = malloc(strlen(fcb->d_name));
+		strcpy(archivo->nombre, fcb->d_name);
+
+		char* path_archivo = malloc(strlen(PATH_FCB) + strlen(fcb->d_name));
+		strcpy(path_archivo, PATH_FCB);
+		strcat(path_archivo, fcb->d_name);
+		archivo->archivo_fcb = config_create(path_archivo);
+
+		list_add(lista_fcbs, archivo);
+	}
+
+	closedir(directorio_archivos);
+}
+
+void crear_archivo_de_bloques(){
+	int fd = open(PATH_BLOQUES, O_CREAT | O_RDWR);
+	tamanio_archivo_bloques = TAM_BLOQUE * CANT_BLOQUES_TOTAL;
+	buffer_bloques = mmap(NULL, tamanio_archivo_bloques, PROT_READ | PROT_WRITE, MAP_SHARED, fd, 0);
+
+	if(fd == -1){
+		log_error(filesystem_logger, "Hubo un problema creando el archivo de bloques");
+		exit(1);
+	}
+
+	close(fd);
+}
+
+void crear_fat(){
+	int fd = open(PATH_FAT, O_CREAT | O_RDWR);
+	tamanio_fat = (CANT_BLOQUES_TOTAL - CANT_BLOQUES_SWAP) * sizeof(uint32_t);
+	buffer_fat = mmap(NULL, tamanio_fat, PROT_READ | PROT_WRITE, MAP_SHARED, fd, 0);
+
+	if(fd == -1){
+		log_error(filesystem_logger, "Hubo un problema creando el archivo fat");
+		exit(1);
+	}
+
+	close(fd);
+}
+
 void finalizar_filesystem(){
 	log_destroy(filesystem_logger);
 	log_destroy(filesystem_log_obligatorio);

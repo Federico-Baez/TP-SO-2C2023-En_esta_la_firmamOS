@@ -11,6 +11,9 @@
 #include <protocolo.h>
 #include <socket.h>
 #include <stdlib.h>
+#include <dirent.h>
+#include <fcntl.h>
+#include <sys/mman.h>
 
 #define IP_FILESYSTEM "127.0.0.1"
 
@@ -33,6 +36,28 @@ int CANT_BLOQUES_SWAP;
 int TAM_BLOQUE;
 int RETARDO_ACCESO_BLOQUE;
 int RETARDO_ACCESO_FAT;
+
+typedef struct{
+	char* nombre;
+	t_config* archivo_fcb;
+}t_archivo;
+
+typedef struct{
+	char* nombre;
+	int tamano;
+	//t_bloque bloque_inicial;
+}t_fcb;
+
+typedef struct{
+    char *direccion;
+    uint32_t tamanio;
+}t_fat;
+
+int tamanio_archivo_bloques;
+int tamanio_fat;
+t_list* lista_fcbs;
+void* buffer_bloques;
+void* buffer_fat;
 
 void leer_config(t_config* config);
 void iterator(char* value);
