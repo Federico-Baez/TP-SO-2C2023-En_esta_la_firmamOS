@@ -90,6 +90,7 @@ extern void* espacio_usuario;
 extern t_dictionary* tablas;
 extern t_list* instrucciones_para_cpu;
 
+void* buscar_tabla(int pid);
 
 /******************MARCO********************/
 marco* crear_marco(int base, bool presente);
