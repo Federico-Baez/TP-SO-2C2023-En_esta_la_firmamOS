@@ -11,6 +11,7 @@
 
 #include "../include/Memoria.h"
 
+
 int main(int argc, char** argv) {
 	memoria_logger = log_create("Memoria.log", "[Memoria]", 1, LOG_LEVEL_INFO);
 	memoria_log_obligatorio = log_create("Memoria_log_obligatorio.log", "[Memoria- Log obligatorio]", 1, LOG_LEVEL_INFO);
@@ -27,17 +28,15 @@ int main(int argc, char** argv) {
 	}
 
 	leer_config(memoria_config);
+
 //	leer_log();
 
 	list_procss_recibidos = list_create();
 	//TODO: verificar como inicializar memoria
-//	inicializar_memoria();
+	inicializar_memoria();
 	server_fd_memoria = iniciar_servidor(memoria_logger, IP_MEMORIA, PUERTO_ESCUCHA);
 	while(server_escucha())
 
-//	log_info(memoria_logger, "Finaliza servidor de Memoria");
-//	instrucciones_para_cpu = leer_archivo_y_cargar_instrucciones(PATH_INSTRUCCIONES);
-//	liberar_memoria_de_instrucciones(instrucciones_para_cpu);
 	finalizar_memoria();
 
 	return EXIT_SUCCESS;
@@ -76,7 +75,7 @@ void inicializar_memoria(){
 	    }
 	tablas = dictionary_create();
 	log_info(memoria_logger, "Se inicia memoria con esquema de Paginacion.\n");
-	log_info(memoria_logger, "Algoritmo de reemplazo a usar %s:\n", ALGORITMO_REEMPLAZO);
+	log_info(memoria_logger, "Algoritmo de reemplazo a usar: %s\n", ALGORITMO_REEMPLAZO);
 	lst_marco = list_create();
 	int cant_marcos = TAM_MEMORIA/TAM_PAGINA;
 
@@ -345,6 +344,7 @@ void saludar_cliente(void *void_args){
 
 int server_escucha(){
 	server_name = "Memoria";
+	log_info(memoria_logger, "Iniciando servidor %s",server_name);
 	while(1) {
 		int cliente_socket = esperar_cliente(memoria_logger, server_name, server_fd_memoria );
 		if(cliente_socket != -1){

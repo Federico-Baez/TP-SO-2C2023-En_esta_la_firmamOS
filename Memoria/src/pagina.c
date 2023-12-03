@@ -52,7 +52,7 @@ int liberar_pagina(Pagina* una_pagina, int offset, int faltante){
 void liberar_paginas(tabla_paginas* una_tabla, int  dirLogica, int tamanio, int pid){
 //	/*****************PAGINACION SIMPLE**************************/
 
-	Pagina* pagina_a_eliminar;
+	t_list* pagina_a_eliminar = list_create();
 	int faltante = tamanio;
 	int num_pagina = dirLogica / TAM_PAGINA;
 	int offset = dirLogica % TAM_PAGINA;
@@ -76,6 +76,7 @@ void liberar_paginas(tabla_paginas* una_tabla, int  dirLogica, int tamanio, int 
 	for (int i = 0; i < list_size(pagina_a_eliminar); i++) {
 		Pagina* pagina_para_borrar = list_get(pagina_a_eliminar, i);
 		list_remove_and_destroy_element(una_tabla->paginas, num_pagina, (void*)destruir_pagina);
+		free(pagina_para_borrar);
 	}
 
 	list_destroy(pagina_a_eliminar);

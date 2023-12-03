@@ -63,7 +63,7 @@ void atender_kernel(int cliente_socket);
 void atender_cpu(int cliente_socket) ;
 void atender_filesystem(int cliente_socket);
 
-
+void* buscar_tabla(int pid);
 /************TODO CARGAR LISTADO DE INSTRUCCIONES DEL PROCESO***************/
 t_list* leer_archivo_y_cargar_instrucciones(const char* path_archivo);
 void liberar_memoria_de_instrucciones(t_list* instrucciones);
