@@ -312,7 +312,7 @@ void atender_proceso_del_kernel(t_buffer* unBuffer){
 	printf("Saliste del while ---------------------\n");
 
 	/*Se reutilizo el mismo CODIGO de OPERACION con el que entro*/
-	t_paquete* un_paquete = alistar_paquete_de_desalojo(EJECUTAR_PROCESO_KC);
+	t_paquete* un_paquete = alistar_paquete_de_desalojo(DESALOJO_PROCESO_CPK);
 
 
 	if(preguntando_si_hay_interrupciones_vigentes()){
@@ -560,7 +560,7 @@ void iniciar_estructuras_para_atender_al_proceso(t_buffer*  unBuffer){
 	offset += sizeof(int);
 	memcpy(&(contexto -> proceso_ticket), (bufferRecibido + offset), sizeof(int));
 	offset += sizeof(int);
-	memcpy(&(contexto -> proceso_pid), (bufferRecibido + offset), sizeof(int));
+	memcpy(&(contexto -> proceso_ip), (bufferRecibido + offset), sizeof(int));
 	offset += sizeof(int);
 	memcpy(&(contexto -> AX), (bufferRecibido + offset), sizeof(uint32_t));
 	offset += sizeof(uint32_t);

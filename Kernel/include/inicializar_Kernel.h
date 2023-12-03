@@ -40,6 +40,7 @@ t_list* lista_new;
 t_list* lista_ready;
 t_list* lista_execute;
 t_list* lista_blocked;
+t_list* lista_blocked_fs;
 t_list* lista_exit;
 
 t_list* lista_instructions;
@@ -50,6 +51,7 @@ int process_id = 0;
 int procesos_en_core = 0;
 int var_pausa = 0;
 int var_ticket = 0;
+int flag_finalizar_proceso = 0;
 
 //Para controlar la habilitacion de interrupciones - Algo. Prioridad
 bool interrupcion_habilitada = false;
@@ -58,7 +60,7 @@ bool interrupcion_habilitada = false;
 bool CPU_en_uso = false;
 
 //Para dar prioridad a la interrupcion por consola sobre la de quantum
-bool batisenal_exit = false;
+bool flag_exit = false;
 
 //--Van juntos para controlar PIORIDADES
 bool hay_pcb_elegida = false;
@@ -66,6 +68,8 @@ t_pcb* pcb_prioritaria;
 
 // ------ SEMAFOROS ------
 sem_t sem_pausa;
+sem_t sem_enviar_interrupcion;
+sem_t sem_estructura_iniciada;
 
 
 // ------ PTHREAD_MUTEX ------
@@ -81,7 +85,10 @@ pthread_mutex_t mutex_core;
 pthread_mutex_t mutex_pausa;
 pthread_mutex_t mutex_recurso;
 pthread_mutex_t mutex_ticket;
-pthread_mutex_t mutex_interrupcion_habilitada;
+pthread_mutex_t mutex_enviar_interrupcion;
+
+pthread_mutex_t mutex_flag_exit;
+pthread_mutex_t mutex_flag_finalizar_proceso;
 
 
 #endif /* INICIALIZAR_KERNEL_H_ */

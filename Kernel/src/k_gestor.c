@@ -60,9 +60,9 @@ void public_imprimir_procesos_por_estado_v1(){
 		char* aux_2;
 		char* ultimos_3;
 		string_append(&respuesta_char, " | PID: ");
-//		t_pcb* una_pcb = list_get(una_lista, elemento); //<
-		t_pcb* una_pcb = list_get(una_lista, size_r - (elemento + 1)); //<
-		aux_2 = string_itoa(una_pcb->pid);
+//		t_pcb* un_pcb = list_get(una_lista, elemento); //<
+		t_pcb* un_pcb = list_get(una_lista, size_r - (elemento + 1)); //<
+		aux_2 = string_itoa(un_pcb->pid);
 		string_append(&aux_1, "00");
 		string_append(&aux_1, aux_2); //[001|0032|00076|000981]
 		int size = strlen(aux_1);
@@ -75,7 +75,7 @@ void public_imprimir_procesos_por_estado_v1(){
 		}
 		string_append(&respuesta_char, ultimos_3);
 		string_append(&respuesta_char, " (");
-		char* otro_char = string_itoa(una_pcb->estado);
+		char* otro_char = string_itoa(un_pcb->prioridad);
 //		char* otro_char = " ";
 		string_append(&respuesta_char, otro_char);
 		string_append(&respuesta_char, ") ");
@@ -164,8 +164,8 @@ void public_imprimir_procesos_por_estado_v1(){
 }
 
 void public_imprimir_procesos_por_estado_v0(){
-	void __list_aux(t_pcb* una_pcb){
-		printf("PID: %d\n", una_pcb->pid);
+	void __list_aux(t_pcb* un_pcb){
+		printf("PID: %d\n", un_pcb->pid);
 	}
 
 	printf("===========================\n");
