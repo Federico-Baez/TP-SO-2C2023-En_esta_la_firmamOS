@@ -6,8 +6,8 @@
 #include "k_servicios_kernel.h"
 #include "planificador_corto_plazo.h"
 
-void plp_planificar_proceso_nuevo(t_pcb* una_pcb);
-void plp_planificar_proceso_exit(t_pcb* una_pcb);
-
+void plp_planificar_proceso_nuevo(t_pcb* un_pcb);
+void plp_planificar_proceso_exit(t_pcb* un_pcb);
+void plp_planifica();
 
 #endif /* PLANIFICADOR_LARGO_PLAZO_H_ */
