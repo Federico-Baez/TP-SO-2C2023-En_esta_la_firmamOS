@@ -7,6 +7,7 @@
 
 
 void pcp_planificar_corto_plazo();
+t_pcb* __maxima_prioridad(t_pcb* void_1, t_pcb* void_2);
 
 
 

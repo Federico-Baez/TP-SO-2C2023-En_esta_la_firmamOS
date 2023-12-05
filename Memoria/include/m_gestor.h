@@ -12,6 +12,7 @@
 #include <shared.h>
 #include <commons/log.h>
 #include <commons/config.h>
+#include <commons/collections/list.h>
 #include <pthread.h>
 #include <protocolo.h>
 #include <stdlib.h>
@@ -89,5 +90,13 @@ extern void* espacio_usuario;
 extern t_dictionary* tablas;
 extern t_list* instrucciones_para_cpu;
 
+void* buscar_tabla(int pid);
+
+/******************MARCO********************/
+marco* crear_marco(int base, bool presente);
+Pagina* obtener_pagina_por_marco(marco* un_marco);
+Pagina* obtener_pagina_por_marco(marco* un_marco);
+/******************************************/
+void liberar_paginas(tabla_paginas* una_tabla, int  dirLogica, int tamanio, int pid);
 
 #endif /* M_GESTOR_H_ */
