@@ -81,10 +81,22 @@ void inicializar_fcbs(){
 	closedir(directorio_archivos);
 }
 
+void destruir_lista_fcbs(){
+	list_destroy_and_destroy_elements(lista_fcbs, (void*) destruir_archivo);
+}
+
+void destruir_archivo(t_archivo* archivo_fcb){
+	config_destroy(archivo_fcb->archivo_fcb);
+	free(archivo_fcb);
+	archivo_fcb = NULL;
+}
+
 void crear_archivo_de_bloques(){
 	int fd = open(PATH_BLOQUES, O_CREAT | O_RDWR);
-	tamanio_archivo_bloques = TAM_BLOQUE * CANT_BLOQUES_TOTAL;
-	buffer_bloques = mmap(NULL, tamanio_archivo_bloques, PROT_READ | PROT_WRITE, MAP_SHARED, fd, 0);
+	tamanio_particion_swap = TAM_BLOQUE * CANT_BLOQUES_SWAP;
+	tamanio_particion_bloques = TAM_BLOQUE * (CANT_BLOQUES_TOTAL - CANT_BLOQUES_SWAP);
+	buffer_swap = mmap(NULL, tamanio_particion_swap, PROT_READ | PROT_WRITE, MAP_SHARED, fd, 0);
+	buffer_bloques = mmap(NULL, tamanio_particion_bloques, PROT_READ | PROT_WRITE, MAP_SHARED, fd, 0);
 
 	if(fd == -1){
 		log_error(filesystem_logger, "Hubo un problema creando el archivo de bloques");
@@ -94,7 +106,7 @@ void crear_archivo_de_bloques(){
 	close(fd);
 }
 
-void crear_fat(){
+/*void crear_fat(){
 	int fd = open(PATH_FAT, O_CREAT | O_RDWR);
 	tamanio_fat = (CANT_BLOQUES_TOTAL - CANT_BLOQUES_SWAP) * sizeof(uint32_t);
 	buffer_fat = mmap(NULL, tamanio_fat, PROT_READ | PROT_WRITE, MAP_SHARED, fd, 0);
@@ -105,7 +117,7 @@ void crear_fat(){
 	}
 
 	close(fd);
-}
+}*/
 
 void finalizar_filesystem(){
 	log_destroy(filesystem_logger);

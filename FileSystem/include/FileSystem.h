@@ -45,19 +45,21 @@ typedef struct{
 typedef struct{
 	char* nombre;
 	int tamano;
-	//t_bloque bloque_inicial;
+	int bloque_inicial;
 }t_fcb;
 
 typedef struct{
-    char *direccion;
+    char* direccion;
     uint32_t tamanio;
 }t_fat;
 
-int tamanio_archivo_bloques;
+int tamanio_particion_swap;
+int tamanio_particion_bloques;
 int tamanio_fat;
 t_list* lista_fcbs;
+void* buffer_swap;
 void* buffer_bloques;
-void* buffer_fat;
+//void* buffer_fat;
 
 void leer_config(t_config* config);
 void iterator(char* value);
