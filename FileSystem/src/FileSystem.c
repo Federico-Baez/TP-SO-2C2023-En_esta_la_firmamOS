@@ -223,10 +223,7 @@ void ejecutar_f_open(char* nombre_archivo){
 	t_archivo_fcb* archivo_fcb = buscar_fcb(nombre_archivo);
 	if(archivo_fcb != NULL){
 		int tamanio_fcb = config_get_int_value(archivo_fcb, "TAMANIO_ARCHIVO");
-		t_paquete* paquete_con_tamanio = crear_super_paquete(PAQUETE);
-		cargar_int_al_super_paquete(paquete_con_tamanio, tamanio_fcb);
-		enviar_paquete(paquete_con_tamanio, fd_kernel);
-		eliminar_paquete(paquete_con_tamanio);
+		enviar_tamanio_fcb(tamanio_fcb, fd_kernel);
 	}else{
 		enviar_mensaje("El archivo solicitado no existe", fd_kernel);
 	}
@@ -305,6 +302,29 @@ void manejar_f_truncate(char* nombre_archivo, int tamanio_nuevo){
 	} else{
 		log_info(filesystem_logger, "No hay que sacar ni agregar ningun bloque");
 	}
+}
+
+void ejecutar_f_read(char* nombre_archivo, int dir_fisica, int posicion_a_leer, int pid){
+	log_info(filesystem_log_obligatorio, "Leer Archivo: %s - Puntero: %d - Memoria: %d", nombre_archivo, posicion_a_leer, dir_fisica);
+	t_config* archivo_fcb = obtener_archivo(nombre_archivo);
+	//TODO: Leer la información correspondiente de los bloques a partir del puntero recibido
+	char* datos_leidos = leer_datos(archivo_fcb, posicion_a_leer);
+
+	//Esta información se deberá enviar a la Memoria para ser escrita a partir de la dirección física recibida por parámetro
+	enviar_para_escribir_valor_leido(datos_leidos, dir_fisica, pid, fd_memoria);
+	recv_fin_escritura(fd_memoria);
+}
+
+void ejecutar_f_write(char* nombre_archivo, int dir_fisica, int posicion_a_escribir, int pid){
+	log_info(filesystem_log_obligatorio, "Escribir Archivo: %s - Puntero: %d - Memoria: %d", nombre_archivo, posicion_a_escribir, dir_fisica);
+	t_config* archivo_fcb = obtener_archivo(nombre_archivo);
+
+	//Solicitar a Memoria la información que se encuentra a partir de la dirección física
+	enviar_para_leer_valor(dir_fisica, pid, fd_memoria);
+	char* datos_a_escribir = recibir_valor_leido(fd_memoria);
+
+	//TODO: Escribir los datos en los bloques correspondientes del archivo a partir del puntero recibido.
+	escribir_datos(archivo_fcb, posicion_a_escribir, datos_a_escribir);
 }
 
 void asignar_bloques(int cant_bloques, t_config* archivo){
