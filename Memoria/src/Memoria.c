@@ -272,31 +272,32 @@ void atender_filesystem(int cliente_socket){
 	int cod_op = recibir_operacion(cliente_socket);
 
 	switch(cod_op) {
-	case PETICION_ASIGNACION_BLOQUE_SWAP_FM:
-				unBuffer = recibiendo_super_paquete(fd_filesystem);
+		case PETICION_ASIGNACION_BLOQUE_SWAP_FM:
+			unBuffer = recibiendo_super_paquete(fd_filesystem);
+			asignar_posicions_de_SWAP_a_tabla_de_paginas(unBuffer);
+			free(unBuffer);
+			//
+			break;
+		case LIBERAR_PAGINAS_FM:
+			unBuffer = recibiendo_super_paquete(fd_filesystem);
 //				free(unBuffer);
-				//
-				break;
-			case LIBERAR_PAGINAS_FM:
-				unBuffer = recibiendo_super_paquete(fd_filesystem);
+			//
+			break;
+		case PETICION_PAGE_FAULT_FM:
+			unBuffer = recibiendo_super_paquete(fd_filesystem);
 //				free(unBuffer);
-				//
-				break;
-			case PETICION_PAGE_FAULT_FM:
-				unBuffer = recibiendo_super_paquete(fd_filesystem);
+			//
+			break;
+		case CARGAR_INFO_DE_LECTURA_FM:
+			unBuffer = recibiendo_super_paquete(fd_filesystem);
 //				free(unBuffer);
-				//
-				break;
-			case CARGAR_INFO_DE_LECTURA_FM:
-				unBuffer = recibiendo_super_paquete(fd_filesystem);
+			//
+			break;
+		case GUARDAR_INFO_FM:
+			unBuffer = recibiendo_super_paquete(fd_filesystem);
 //				free(unBuffer);
-				//
-				break;
-			case GUARDAR_INFO_FM:
-				unBuffer = recibiendo_super_paquete(fd_filesystem);
-//				free(unBuffer);
-				//
-				break;
+			//
+			break;
 		case -1:
 			log_error(memoria_logger, "[DESCONEXION]: FILESYSTEM");
 			close(cliente_socket);
@@ -363,131 +364,18 @@ int server_escucha(){
 
 
 /******************************INSTRUCCIONES*****************************/
-t_list* leer_archivo_y_cargar_instrucciones(const char* path_archivo) {
-    FILE* archivo = fopen(path_archivo, "rt");
-    t_list* instrucciones = list_create();
-    char* instruccion_formateada = NULL;
-    int i = 0;
+//Movido a su modulo proceso_recibido
 
-    if (archivo == NULL) {
-        perror("No se encontró el archivo");
-        return instrucciones;
-    }
 
-    char* linea_instruccion = malloc(256 * sizeof(char));
-    while (fgets(linea_instruccion, 256, archivo)) {
-    	//Comprobar si el ultimo caracter del string capturado tiene un salto delinea
-    	//Si lo tiene hay que sacarlo
-    	//[0][1][2][3][4]["\n"]["\0"] -> Size:6
-    	int size_linea_actual = strlen(linea_instruccion);
-    	if(size_linea_actual > 2){
-    		if(linea_instruccion[size_linea_actual - 1] == '\n'){
-				char* linea_limpia = string_new();
-				string_n_append(&linea_limpia, linea_instruccion, size_linea_actual - 1);
-				free(linea_instruccion);
-				linea_instruccion = linea_limpia;
-    		}
-    	}
-    	//-----------------------------------------------
-
-        char** l_instrucciones = string_split(linea_instruccion, " ");
-
-        log_info(memoria_logger, "Intruccion: [%s]", linea_instruccion);
-
-        while (l_instrucciones[i]) {
-            i++;
-        }
-
-        t_instruccion_codigo* pseudo_cod = malloc(sizeof(t_instruccion_codigo));
-        pseudo_cod->pseudo_c = strdup(l_instrucciones[0]);
-        pseudo_cod->fst_param = (i > 1) ? strdup(l_instrucciones[1]) : NULL;
-        pseudo_cod->snd_param = (i > 2) ? strdup(l_instrucciones[2]) : NULL;
-
-        if (i == 3) {
-            instruccion_formateada = string_from_format("%s %s %s", pseudo_cod->pseudo_c, pseudo_cod->fst_param, pseudo_cod->snd_param);
-        } else if (i == 2) {
-            instruccion_formateada = string_from_format("%s %s", pseudo_cod->pseudo_c, pseudo_cod->fst_param);
-        } else {
-            instruccion_formateada = strdup(pseudo_cod->pseudo_c);
-        }
-
-//        log_info(memoria_logger, "Se carga la instrucción [%d] %s", (int)strlen(instruccion_formateada),instruccion_formateada);
-        list_add(instrucciones, instruccion_formateada);
-
-        for (int j = 0; j < i; j++) {
-            free(l_instrucciones[j]);
-        }
-        free(l_instrucciones);
-        free(pseudo_cod->pseudo_c);
-		if(pseudo_cod->fst_param) free(pseudo_cod->fst_param);
-		if(pseudo_cod->snd_param) free(pseudo_cod->snd_param);
-		free(pseudo_cod);
-        i = 0; // Restablece la cuenta para la próxima iteración
-    }
-
-    fclose(archivo);
-    free(linea_instruccion);
-    return instrucciones;
-}
-
-void liberar_memoria_de_instrucciones(t_list* instrucciones){
-	list_destroy_and_destroy_elements(instrucciones, free);
-}
-
-char* obtener_instruccion_por_indice(int indice_instruccion, t_list* instrucciones){
-
-	char* instruccion_actual;
-	return (indice_instruccion >= 0 && indice_instruccion < list_size(instrucciones))
-			? instruccion_actual = list_get(instrucciones,indice_instruccion) : NULL;
-
-}
 /******************************CARGAR INSTRUCCIONES*****************************/
 
 /******************************FUNCIONES PARA PROCESOS*****************************/
 
-proceso_recibido* obtener_proceso_por_id(int pid, t_list* lst_procesos){
-	bool buscar_el_pid(void* proceso){
-		return ((proceso_recibido*)proceso)->pid == pid;
-	}
-	proceso_recibido* un_proceso = list_find(lst_procesos, buscar_el_pid);
-	return un_proceso;
-}
+//Movido a su modulo proceso_recibido
 
 
-void agregar_proceso_a_listado(t_buffer* unBuffer, t_list* lst_procesos_recibido){
-	proceso_recibido* un_proceso = malloc(sizeof(proceso_recibido));
-	if (un_proceso == NULL) {
-	        perror("Error al reservar memoria para el proceso");
-	        exit(EXIT_FAILURE);
-	}
-	un_proceso->pathInstrucciones = recibir_string_del_buffer(unBuffer);
-	un_proceso->size = recibir_int_del_buffer(unBuffer);
-	un_proceso->pid =recibir_int_del_buffer(unBuffer);
-	un_proceso->instrucciones= leer_archivo_y_cargar_instrucciones(un_proceso->pathInstrucciones);
-	log_info(memoria_logger, "Recibi el proceso con los siguientes datos archivo: %s, el tamanio: %d y el pid: %d ",un_proceso->pathInstrucciones, un_proceso->size, un_proceso->pid);
-	list_add(lst_procesos_recibido, un_proceso);
-	handhsake_modules(fd_kernel,"[MEMORIA]>Proceso cargado en Memoria OK");
 
 
-}
-
-void liberar_proceso(proceso_recibido* proceso) {
-    for (int i = 0; i < list_size(proceso->instrucciones); i++) {
-        char* instruccion = list_get(proceso->instrucciones, i);
-        free(instruccion);
-    }
-    list_destroy(proceso->instrucciones);
-    free(proceso->pathInstrucciones);
-    free(proceso);
-}
-
-void liberar_listado_procesos(t_list* lst_procesos) {
-    for (int i = 0; i < list_size(lst_procesos); i++) {
-        proceso_recibido* proceso = list_get(lst_procesos, i);
-        liberar_proceso(proceso);
-    }
-    list_destroy(lst_procesos);
-}
 
 /******************************FUNCIONES PARA CPU*****************************/
 

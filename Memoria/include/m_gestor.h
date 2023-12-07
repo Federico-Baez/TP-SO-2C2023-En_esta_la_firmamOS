@@ -50,6 +50,7 @@ typedef struct{
 	int size;
 	char* pathInstrucciones;
 	t_list* instrucciones;
+	t_list* tabla_paginas;
 }proceso_recibido;
 
 extern t_list* list_procss_recibidos;
