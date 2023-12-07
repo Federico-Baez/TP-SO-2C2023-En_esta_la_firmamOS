@@ -51,6 +51,12 @@ void leer_config(t_config* config){
 	RETARDO_ACCESO_FAT = config_get_int_value(config,"RETARDO_ACCESO_FAT");
 }
 
+void inicializar_archivos(){
+	crear_fat();
+	crear_archivo_de_bloques();
+	inicializar_fcbs();
+}
+
 void inicializar_fcbs(){
 	DIR *directorio_archivos = opendir(PATH_FCB);
 	struct dirent *fcb;
@@ -66,7 +72,7 @@ void inicializar_fcbs(){
 		}
 		log_info(filesystem_logger, "Lei esto del directorio: %s", fcb->d_name);
 
-		t_archivo *archivo = malloc(sizeof(t_archivo));
+		t_archivo_fcb *archivo = malloc(sizeof(t_archivo_fcb));
 		archivo->nombre = malloc(strlen(fcb->d_name));
 		strcpy(archivo->nombre, fcb->d_name);
 
@@ -85,39 +91,39 @@ void destruir_lista_fcbs(){
 	list_destroy_and_destroy_elements(lista_fcbs, (void*) destruir_archivo);
 }
 
-void destruir_archivo(t_archivo* archivo_fcb){
+void destruir_archivo(t_archivo_fcb* archivo_fcb){
 	config_destroy(archivo_fcb->archivo_fcb);
 	free(archivo_fcb);
 	archivo_fcb = NULL;
 }
 
 void crear_archivo_de_bloques(){
-	int fd = open(PATH_BLOQUES, O_CREAT | O_RDWR);
+	int fd_arch_bloques = open(PATH_BLOQUES, O_CREAT | O_RDWR);
 	tamanio_particion_swap = TAM_BLOQUE * CANT_BLOQUES_SWAP;
 	tamanio_particion_bloques = TAM_BLOQUE * (CANT_BLOQUES_TOTAL - CANT_BLOQUES_SWAP);
-	buffer_swap = mmap(NULL, tamanio_particion_swap, PROT_READ | PROT_WRITE, MAP_SHARED, fd, 0);
-	buffer_bloques = mmap(NULL, tamanio_particion_bloques, PROT_READ | PROT_WRITE, MAP_SHARED, fd, 0);
+	buffer_swap = mmap(NULL, tamanio_particion_swap, PROT_READ | PROT_WRITE, MAP_SHARED, fd_arch_bloques, 0);
+	buffer_bloques = mmap(NULL, tamanio_particion_bloques, PROT_READ | PROT_WRITE, MAP_SHARED, fd_arch_bloques, 0);
 
-	if(fd == -1){
-		log_error(filesystem_logger, "Hubo un problema creando el archivo de bloques");
+	if(fd_arch_bloques == -1){
+		log_error(filesystem_logger, "Error al crear el archivo de bloques");
 		exit(1);
 	}
 
-	close(fd);
+	close(fd_arch_bloques);
 }
 
-/*void crear_fat(){
-	int fd = open(PATH_FAT, O_CREAT | O_RDWR);
+void crear_fat(){
+	int fd_fat = open(PATH_FAT, O_CREAT | O_RDWR);
 	tamanio_fat = (CANT_BLOQUES_TOTAL - CANT_BLOQUES_SWAP) * sizeof(uint32_t);
-	buffer_fat = mmap(NULL, tamanio_fat, PROT_READ | PROT_WRITE, MAP_SHARED, fd, 0);
+	buffer_tabla_fat = mmap(NULL, tamanio_fat, PROT_READ | PROT_WRITE, MAP_SHARED, fd_fat, 0);
 
-	if(fd == -1){
-		log_error(filesystem_logger, "Hubo un problema creando el archivo fat");
+	if(fd_fat == -1){
+		log_error(filesystem_logger, "Error al crear el archivo FAT");
 		exit(1);
 	}
 
-	close(fd);
-}*/
+	close(fd_fat);
+}
 
 void finalizar_filesystem(){
 	log_destroy(filesystem_logger);
@@ -207,3 +213,167 @@ void atender_memoria(){
 	log_info(filesystem_logger, "Saliendo del hilo de FILESYSTEM - MEMORIA");
 }
 
+//--------------------OPERACIONES------------------------
+
+
+
+//ver como enviar mensajes debido a que FS no puede enviar mensajes a Kernel
+void ejecutar_f_open(char* nombre_archivo){
+	log_info(filesystem_log_obligatorio, "Abrir Archivo: %s", nombre_archivo);
+	t_archivo_fcb* archivo_fcb = buscar_fcb(nombre_archivo);
+	if(archivo_fcb != NULL){
+		int tamanio_fcb = config_get_int_value(archivo_fcb, "TAMANIO_ARCHIVO");
+		t_paquete* paquete_con_tamanio = crear_super_paquete(PAQUETE);
+		cargar_int_al_super_paquete(paquete_con_tamanio, tamanio_fcb);
+		enviar_paquete(paquete_con_tamanio, fd_kernel);
+		eliminar_paquete(paquete_con_tamanio);
+	}else{
+		enviar_mensaje("El archivo solicitado no existe", fd_kernel);
+	}
+}
+
+void ejecutar_f_create(char* nombre_archivo){
+	log_info(filesystem_log_obligatorio, "Crear Archivo: %s", nombre_archivo);
+	char* path_archivo = malloc(strlen(PATH_FCB) + strlen(nombre_archivo));
+	strcpy(path_archivo, PATH_FCB);
+	strcat(path_archivo, nombre_archivo);
+
+	t_fcb *nuevo_fcb = malloc(sizeof(t_fcb));
+	nuevo_fcb->nombre = malloc(strlen(nombre_archivo));
+	strcpy(nuevo_fcb->nombre, nombre_archivo);
+	nuevo_fcb->tamanio = 0;
+	char* text_tamanio_archivo = malloc(10);
+	sprintf(text_tamanio_archivo, "%d", nuevo_fcb->tamanio);
+
+	FILE* file_fcb = fopen(path_archivo, "a+");
+
+	t_archivo_fcb *archivo_fcb = malloc(sizeof(t_archivo_fcb));
+	archivo_fcb->nombre = malloc(strlen(nombre_archivo));
+	strcpy(archivo_fcb->nombre, nombre_archivo);
+	archivo_fcb->archivo_fcb = config_create(path_archivo);
+
+	config_set_value(archivo_fcb->archivo_fcb, "NOMBRE_ARCHIVO", nuevo_fcb->nombre);
+	config_set_value(archivo_fcb->archivo_fcb, "TAMANIO_ARCHIVO", text_tamanio_archivo);
+
+	config_save(archivo_fcb->archivo_fcb);
+
+	list_add(lista_fcbs, archivo_fcb);
+	fclose(file_fcb);
+
+	enviar_mensaje("OK", fd_kernel);
+}
+
+void manejar_f_truncate(char* nombre_archivo, int tamanio_nuevo){
+	log_info(filesystem_log_obligatorio, "Truncar Archivo: %s - Tamaño: %d", nombre_archivo, tamanio_nuevo);
+	t_config* archivo_fcb = obtener_archivo(nombre_archivo);
+	int tamanio_viejo = config_get_int_value(archivo_fcb, "TAMANIO_ARCHIVO");
+	char* texto_tamanio_nuevo_archivo = malloc(10);
+	sprintf(texto_tamanio_nuevo_archivo, "%d", tamanio_nuevo);
+
+	int tamanio_restante = tamanio_nuevo;
+	if(tamanio_viejo == 0){
+		asignar_bloque_primer_truncate(archivo_fcb);
+		tamanio_restante = tamanio_nuevo - TAM_BLOQUE;
+	}
+
+	log_info(filesystem_logger, "El tamanio nuevo es %s", texto_tamanio_nuevo_archivo);
+
+	config_set_value(archivo_fcb, "TAMANIO_ARCHIVO", texto_tamanio_nuevo_archivo);
+	config_save(archivo_fcb);
+
+	log_info(filesystem_logger, "El tamanio viejo era %d", tamanio_viejo);
+
+	if(tamanio_restante > tamanio_viejo){
+		// AMPLIAR
+		div_t cuenta_bloques_agregar = div((tamanio_restante - tamanio_viejo), TAM_BLOQUE);
+		int cantidad_bloques_a_agregar = cuenta_bloques_agregar.quot;
+		if(cuenta_bloques_agregar.rem != 0){
+			cantidad_bloques_a_agregar++;
+		}
+
+		log_info(filesystem_logger, "La cantidad de bloques a agregar en %s es %d", nombre_archivo, cantidad_bloques_a_agregar);
+		asignar_bloques(cantidad_bloques_a_agregar, archivo_fcb);
+
+	} else if(tamanio_restante < tamanio_viejo){
+		// REDUCIR
+		div_t cuenta_bloque_viejo = div(tamanio_viejo - 1, TAM_BLOQUE);
+		div_t cuenta_bloque_nuevo = div(tamanio_restante - 1, TAM_BLOQUE);
+		int cantidad_bloques_a_sacar = cuenta_bloque_viejo.quot - cuenta_bloque_nuevo.quot;
+
+		log_info(filesystem_logger, "La cantidad de bloques a sacar en %s es %d", nombre_archivo, cantidad_bloques_a_sacar);
+		sacar_bloques(cantidad_bloques_a_sacar, archivo_fcb);
+	} else{
+		log_info(filesystem_logger, "No hay que sacar ni agregar ningun bloque");
+	}
+}
+
+void asignar_bloques(int cant_bloques, t_config* archivo){
+	uint32_t bloque_inicial = config_get_int_value(archivo, "BLOQUE_INICIAL");
+	char* nombre_archivo = config_get_string_value(archivo, "NOMBRE_ARCHIVO");
+
+	uint32_t bloque_actual = bloque_inicial;
+
+	for(int i=1; list_get(buffer_tabla_fat, bloque_actual) != UINT32_MAX; i++){
+		log_info(filesystem_log_obligatorio, "Acceso Bloque - Archivo: %s - Bloque Archivo: %d - Bloque FS: %d", nombre_archivo, i, bloque_actual);
+		usleep(RETARDO_ACCESO_BLOQUE*1000);
+		bloque_actual = list_get(buffer_tabla_fat, bloque_actual);
+	}
+
+	for(int i = cant_bloques; i > 0; i--){
+		//usleep(RETARDO_ACCESO_BLOQUE*1000);
+		uint32_t bloque_nuevo = buscar_bloque_libre();
+		list_replace(buffer_tabla_fat, bloque_actual, bloque_nuevo);
+
+		log_info(filesystem_logger, "El nuevo bloque asignado es %d", bloque_nuevo);
+
+		bloque_actual = bloque_nuevo;
+	}
+}
+
+void sacar_bloques(int cant_bloques, t_config* archivo){
+
+}
+
+t_archivo_fcb* buscar_fcb(char* nombre_archivo){
+	for(int i = 0; i < list_size(lista_fcbs); i++){
+		t_archivo_fcb* archivo_buscado = list_get(lista_fcbs, i);
+
+		if(strcmp(archivo_buscado->nombre, nombre_archivo) == 0){
+			return archivo_buscado;
+		}
+	}
+	return NULL;
+}
+
+t_config* obtener_archivo(char* nombre_archivo){
+	for(int i = 0; i < list_size(lista_fcbs); i++){
+		t_archivo_fcb* archivo_buscado = list_get(lista_fcbs, i);
+
+		if(strcmp(archivo_buscado->nombre, nombre_archivo) == 0){
+			return archivo_buscado->archivo_fcb;
+		}
+	}
+	return NULL;
+}
+
+void asignar_bloque_primer_truncate(t_config* archivo_fcb){
+	int bloque_inicial = buscar_bloque_libre();
+	char* text_bloque_inicial = malloc(10);
+	sprintf(text_bloque_inicial, "%d", bloque_inicial);
+	config_set_value(archivo_fcb, "BLOQUE_INICIAL", bloque_inicial);
+	config_save(archivo_fcb);
+}
+
+uint32_t buscar_bloque_libre(){ //busca un bloque libre y lo ocupa
+	for(int i = 0; i < tamanio_fat; i++){
+		if(!list_get(buffer_tabla_fat, i)){
+			list_replace(buffer_tabla_fat, i, UINT32_MAX);
+			//valor_entrada_fat, le asignaria UINT32_MAX de momento
+			log_info(filesystem_log_obligatorio, "Acceso FAT - Entrada: %d - Valor: %d", i, UINT32_MAX);
+			return i;
+		}
+	}
+
+	log_error(filesystem_logger, "No hay bloques libres");
+	return 0;
+}

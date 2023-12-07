@@ -40,11 +40,11 @@ int RETARDO_ACCESO_FAT;
 typedef struct{
 	char* nombre;
 	t_config* archivo_fcb;
-}t_archivo;
+}t_archivo_fcb;
 
 typedef struct{
 	char* nombre;
-	int tamano;
+	int tamanio;
 	int bloque_inicial;
 }t_fcb;
 
@@ -53,16 +53,29 @@ typedef struct{
     uint32_t tamanio;
 }t_fat;
 
+typedef struct{
+	uint32_t tamanio;
+	int eof;
+}t_bloque;
+
 int tamanio_particion_swap;
 int tamanio_particion_bloques;
 int tamanio_fat;
 t_list* lista_fcbs;
+t_list* lista_bloques;
 void* buffer_swap;
-void* buffer_bloques;
-//void* buffer_fat;
+uint32_t* buffer_bloques;
+uint32_t* buffer_tabla_fat;
 
 void leer_config(t_config* config);
 void iterator(char* value);
+
+void inicializar_fcbs();
+void destruir_lista_fcbs();
+void destruir_archivo(t_archivo_fcb* archivo_fcb);
+void crear_archivo_de_bloques();
+void crear_fat();
+void finalizar_filesystem();
 
 void atender_filesystem_kernel(void);
 void atender_memoria(void);
