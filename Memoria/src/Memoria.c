@@ -221,9 +221,10 @@ void atender_kernel(int cliente_socket) {
 }
 void atender_cpu(int cliente_socket) {
     int control_key = 1;
+    //[FALTA]Enviar tamaño de pagina a CPU
 	while(control_key){
-    t_buffer* unBuffer;
-    int cod_op = recibir_operacion(cliente_socket);
+		t_buffer* unBuffer;
+		int cod_op = recibir_operacion(cliente_socket);
 		switch(cod_op) {
 				case PETICION_INFO_RELEVANTE_CM:
 					unBuffer = recibiendo_super_paquete(fd_cpu);

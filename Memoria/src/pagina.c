@@ -168,19 +168,25 @@ void cargar_pagina_en_memoria(tabla_paginas* tabla, Pagina* pagina) {
         pagina->orden_carga = ordenCargaGlobal++;
     }
 }
-bool comparar_acceso_LRU(Pagina* pagina1, Pagina* pagina2) {
-    return temporal_diff(pagina1->ultimo_uso, pagina2->ultimo_uso) < 0;
+Pagina* comparar_acceso_LRU(Pagina* pagina1, Pagina* pagina2) {
+    if (temporal_gettime(pagina1->ultimo_uso)>temporal_gettime(pagina2->ultimo_uso)){
+    	return pagina1;
+    }
+    else return pagina2;
 }
 
 // Comparador para FIFO
-bool comparar_orden_carga(Pagina* pagina1, Pagina* pagina2) {
-    return pagina1->orden_carga < pagina2->orden_carga;
+Pagina* comparar_orden_carga(Pagina* pagina1, Pagina* pagina2) {
+    if (pagina1->orden_carga < pagina2->orden_carga){
+    	return pagina1;
+    }
+    else return pagina2;
 }
-Pagina* reemplazar_pagina_LRU(tabla_paginas* tabla) {
-    Pagina* pagina_a_reemplazar = list_get_minimum(tabla->paginas, (void*) comparar_acceso_LRU);
+Pagina* victima_pagina_LRU(tabla_paginas* tabla) {
+    Pagina* pagina_a_reemplazar = list_get_maximum(tabla->paginas, (void*) comparar_acceso_LRU);
     return pagina_a_reemplazar;
 }
-Pagina* reemplazar_pagina_FIFO(tabla_paginas* tabla) {
+Pagina* victima_pagina_FIFO(tabla_paginas* tabla) {
     Pagina* pagina_a_reemplazar = list_get_minimum(tabla->paginas, (void*) comparar_orden_carga);
     return pagina_a_reemplazar;
 }
