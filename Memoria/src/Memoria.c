@@ -74,7 +74,7 @@ void inicializar_memoria(){
 	    	exit(1);
 	    }
 	tablas = dictionary_create();
-	log_info(memoria_logger, "Se inicia memoria con esquema de Paginacion.\n");
+	log_info(memoria_logger, "Se inicia memoria con Paginacion.\n");
 	log_info(memoria_logger, "Algoritmo de reemplazo a usar: %s\n", ALGORITMO_REEMPLAZO);
 	lst_marco = list_create();
 	int cant_marcos = TAM_MEMORIA/TAM_PAGINA;

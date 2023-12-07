@@ -13,6 +13,7 @@
 #include <commons/log.h>
 #include <commons/config.h>
 #include <commons/collections/list.h>
+#include <commons/temporal.h>
 #include <pthread.h>
 #include <protocolo.h>
 #include <stdlib.h>
@@ -39,7 +40,7 @@ typedef struct {
     marco* ptr_marco;// Bit de modificación
     int marco;             // Si está presente, este es el número de marco en memoria
     int pos_en_swap;       // No está presente, esta es la posición en el espacio de intercambio (swap)
-    int ultimo_uso;        // LRU
+    t_temporal* ultimo_uso;        // LRU
 	int orden_carga; // Para FIFO
     pthread_mutex_t mutex;
 } Pagina;
@@ -98,5 +99,6 @@ Pagina* obtener_pagina_por_marco(marco* un_marco);
 Pagina* obtener_pagina_por_marco(marco* un_marco);
 /******************************************/
 void liberar_paginas(tabla_paginas* una_tabla, int  dirLogica, int tamanio, int pid);
+void* buscar_tabla(int pid);
 
 #endif /* M_GESTOR_H_ */

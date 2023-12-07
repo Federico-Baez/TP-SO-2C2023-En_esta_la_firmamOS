@@ -131,19 +131,35 @@ void eliminar_pagina(tabla_paginas* tabla, int num) {
  *
  */
 void acceder_pagina(tabla_paginas* tabla, int numero_pagina) {
-    contador_accesos++;
+//    contador_accesos++;
 
     Pagina* pagina = list_get(tabla->paginas, numero_pagina);
     pthread_mutex_lock(&(pagina->mutex));
 
     if (strcmp(ALGORITMO_REEMPLAZO, "LRU") == 0) {
-        pagina->ultimo_uso = contador_accesos;
+    	temporal_destroy(pagina->ultimo_uso);
+        pagina->ultimo_uso = temporal_create();
     }
 
     pthread_mutex_unlock(&(pagina->mutex));
 
     // Aquí iría el código para leer o escribir en la página
 }
+
+void actualizar_tiempo(Pagina* pagina,t_temporal* tiempo){
+	pthread_mutex_lock(&(pagina->mutex));
+	if (strcmp(ALGORITMO_REEMPLAZO, "LRU") == 0) {
+	        temporal_destroy(tiempo);  // Liberar el tiempo antiguo
+	        pagina->ultimo_uso = temporal_create();  // Crear un nuevo temporizador
+	    }
+	 pthread_mutex_unlock(&(pagina->mutex));
+
+}
+/*
+ * Pagina* pagina = list_get(tabla->paginas, numero_pagina);
+ * actualizar_tiempo(pagina, pagina->ultimo_uso);
+ *
+ */
 void cargar_pagina_en_memoria(tabla_paginas* tabla, Pagina* pagina) {
     // Aquí iría el código para cargar la página en memoria
 
@@ -153,7 +169,7 @@ void cargar_pagina_en_memoria(tabla_paginas* tabla, Pagina* pagina) {
     }
 }
 bool comparar_acceso_LRU(Pagina* pagina1, Pagina* pagina2) {
-    return pagina1->ultimo_uso < pagina2->ultimo_uso;
+    return temporal_diff(pagina1->ultimo_uso, pagina2->ultimo_uso) < 0;
 }
 
 // Comparador para FIFO
