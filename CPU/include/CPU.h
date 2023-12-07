@@ -19,6 +19,11 @@
 #define IP_CPU "127.0.0.1"
 
 t_paquete* mochila;
+int tam_pagina;
+int marco;
+int valorMarco;
+bool interruptFlag = false;
+bool mensajeKernelFlag = false;
 
 t_log* cpu_logger;
 //t_log* cpu_log_disptach;
@@ -79,6 +84,8 @@ int* numero_de_marco;
 sem_t sem_control_fetch_decode;
 sem_t sem_control_decode_execute;
 sem_t sem_control_peticion_marco_a_memoria;
+sem_t sem_control_peticion_lectura_a_memoria;
+sem_t sem_control_peticion_escritura_a_memoria;
 
 /*==================================*/
 
@@ -111,10 +118,12 @@ bool preguntando_si_hay_interrupciones_vigentes();
 
 void ciclo_de_instruccion_execute();
 bool validador_de_header(char* header_string);
-int MMU(int dir_logica, int* dir_fisica);
+int MMU(int dir_logica);
+int solicitar_valor_memoria(int direccion_logica);
 uint32_t* detectar_registro(char* RX);
 t_paquete* alistar_paquete_de_desalojo(op_code code_op);
-void enviarPaqueteManejoRecursosKernel(char* motivo,char* recurso);
+void enviarPaqueteKernel(char* motivo);
+void enviarPaqueteKernelConInfoExtra(char* motivo, t_paquete* infoExtra);
 
 void simulador_de_eventos(void); //Esto es solo para las pruebas
 

@@ -98,12 +98,16 @@ void iniciar_semaforos(){
 	sem_init(&sem_control_fetch_decode, 0, 0);
 	sem_init(&sem_control_decode_execute, 0, 0);
 	sem_init(&sem_control_peticion_marco_a_memoria, 0, 0);
+	sem_init(&sem_control_peticion_lectura_a_memoria, 0, 0);
+	sem_init(&sem_control_peticion_escritura_a_memoria, 0, 0);
 }
 
 void destruir_semaforos(){
 	sem_destroy(&sem_control_fetch_decode);
 	sem_destroy(&sem_control_decode_execute);
 	sem_destroy(&sem_control_peticion_marco_a_memoria);
+	sem_destroy(&sem_control_peticion_lectura_a_memoria);
+	sem_destroy(&sem_control_peticion_escritura_a_memoria);
 	log_info(cpu_logger, "Semaforos destruidos");
 }
 
@@ -134,10 +138,55 @@ void atender_cpu_dispatch(){
 		switch (cod_op) {
 		case EJECUTAR_PROCESO_KC: //Me debe llegar: [---][PID][Ticket][PC_program_counter][AX][BX][CX][DX]
 			unBuffer = recibiendo_super_paquete(fd_kernel_dispatch);
-			atender_proceso_del_kernel(unBuffer);
-			free(unBuffer);
+			ejecutar_en_un_hilo_nuevo_detach((void*)atender_proceso_del_kernel, unBuffer);
+
 			break;
-		case MENSAJES_POR_CONSOLA: //POr aca contesta el kernel los pedido de SIGNAL/WAIT
+		case RESPUESTA_INSTRUCCION_KC: //POr aca contesta el kernel los pedido de SIGNAL/WAIT
+			unBuffer = recibiendo_super_paquete(fd_kernel_dispatch);
+			//TODO: completar todos los caminos posibles de las respuestas a las instrucciones
+
+			// recibo motivo[string] , estado[int]
+			char* instruccion = recibir_string_del_buffer(unBuffer);
+			int estadoInstruccion = recibir_int_del_buffer(unBuffer);
+			if(strcmp(instruccion, "SLEEP") == 0){
+				if(estadoInstruccion == -1){
+					hay_que_desalojar = true;
+				}else{
+					sem_post();
+				}
+			}else if(strcmp(instruccion, "WAIT") == 0){
+				if(estadoInstruccion == -1){
+					hay_que_desalojar = true;
+				}else{
+					sem_post();
+				}
+			}else if(strcmp(instruccion, "SIGNAL") == 0){
+				if(estadoInstruccion == -1){
+					hay_que_desalojar = true;
+				}else{
+					sem_post();
+				}
+			}else if(strcmp(instruccion, "F_OPEN") == 0){
+				if(estadoInstruccion == -1){
+					hay_que_desalojar = true;
+				}else{
+					sem_post();
+				}
+			}else if(strcmp(instruccion, "F_CLOSE") == 0){
+				if(estadoInstruccion == -1){
+					hay_que_desalojar = true;
+				}else{
+					sem_post();
+				}
+			}else if(strcmp(instruccion, "F_SEEK") == 0){
+				if(estadoInstruccion == -1){
+					hay_que_desalojar = true;
+				}else{
+					sem_post();
+				}
+			}
+			break;
+		case MENSAJES_POR_CONSOLA: //Por aca contesta el kernel los pedido de SIGNAL/WAIT
 			unBuffer = recibiendo_super_paquete(fd_kernel_dispatch);
 			//post(sem)
 			//atender_mensajes_kernel_v2(unBuffer, "Dispatch");
@@ -216,6 +265,7 @@ void atender_cpu_interrupt(){
 		case FORZAR_DESALOJO_KC:
 			unBuffer = recibiendo_super_paquete(fd_kernel_interrupt);
 			_manejar_interrupcion(unBuffer);
+			interruptFlag = preguntando_si_hay_interrupciones_vigentes();
 			free(unBuffer);
 			break;
 		case MENSAJES_POR_CONSOLA:
@@ -249,6 +299,7 @@ void atender_cpu_memoria(){
 		switch (cod_op) {
 		case PETICION_INFO_RELEVANTE_CM:
 			unBuffer = recibiendo_super_paquete(fd_memoria);
+			tam_pagina = recibir_int_del_buffer(unBuffer);
 			//
 			break;
 		case PETICION_DE_INSTRUCCIONES_CM:
@@ -262,6 +313,19 @@ void atender_cpu_memoria(){
 			break;
 		case CONSULTA_DE_PAGINA_CM:
 			unBuffer = recibiendo_super_paquete(fd_memoria);
+			marco =  recibir_int_del_buffer(unBuffer);
+			sem_post(&sem_control_peticion_marco_a_memoria);
+			//
+			break;
+		case LECTURA_BLOQUE_CM:
+			unBuffer = recibiendo_super_paquete(fd_memoria);
+			valorMarco = recibir_int_del_buffer(unBuffer);
+			sem_post(&sem_control_peticion_lectura_a_memoria);
+			//
+			break;
+		case ESCRITURA_BLOQUE_CM:
+			unBuffer = recibiendo_super_paquete(fd_memoria);
+			sem_post(&sem_control_peticion_escritura_a_memoria);
 			//
 			break;
 		case -1:
@@ -288,44 +352,41 @@ void atender_proceso_del_kernel(t_buffer* unBuffer){
 	print_proceso();
 	int contador_prueba = 0;
 
-	bool key_for_control = true;
-	while(key_for_control){
+	log_info(cpu_logger, "pid proceso pre while 1: %d", contexto -> proceso_pid);
+	while(1){
 
 		//Inicicar ciclo de instruccion
-//		iniciar_ciclo_de_instruccion();
+//		iniciar_ciclo_de_instruccion(); TODO: descomentar y probar
 
 		printf(">>> Simulando que se ejecuto una instruccion [%d]\n", contador_prueba);
 		contador_prueba++;
 		sleep(4);
 
+		// check interrupt
+
 		//Controlar si requiere un desalojo voluntario
 		if(hay_que_desalojar){
-			key_for_control = false;
+			break;
 		}
-
 		//Controlar si hay interrupciones
-		if(preguntando_si_hay_interrupciones_vigentes()){
-			key_for_control = false;
+		if(interruptFlag){
+			break;
 		}
 
 	}
 	printf("Saliste del while ---------------------\n");
 
 	/*Se reutilizo el mismo CODIGO de OPERACION con el que entro*/
-	t_paquete* un_paquete = alistar_paquete_de_desalojo(DESALOJO_PROCESO_CPK);
+	t_paquete* un_paquete = alistar_paquete_de_desalojo(ATENDER_INSTRUCCION_CPK);
 
+	if(interruptFlag){
+		cargar_string_al_super_paquete(un_paquete, interrupt_motivo);
 
-	if(preguntando_si_hay_interrupciones_vigentes()){
-		if(hay_que_desalojar){
-			//La mochila debe incluir el motivo del desalojo
-			cargar_choclo_al_super_paquete(un_paquete, mochila->buffer->stream, mochila->buffer->size);
-			//En KERNEL vuelve a controlar la interrupcion
-
-		}else{
-			cargar_string_al_super_paquete(un_paquete, interrupt_motivo);
-		}
 	}else{
-		//La mochila debe incluir el motivo del desalojo
+		//La mochila debe incluir el motivo del desalojo}
+		if(strcmp(instruccion_split[0], "SLEEP") == 0){
+			contexto->proceso_ip = contexto->proceso_ip + 1;
+		}
 		cargar_choclo_al_super_paquete(un_paquete, mochila->buffer->stream, mochila->buffer->size);
 
 	}
@@ -348,15 +409,8 @@ bool preguntando_si_hay_interrupciones_vigentes(){
 			if(*interrupt_proceso_id == contexto->proceso_pid){
 				respuesta = true;
 			}
-		}else{
-			//validar por PID y TICKET
-//			if(*interrupt_proceso_id == contexto->proceso_pid &&
-//				*interrupt_proceso_ticket == contexto->proceso_ticket){
-//				respuesta = true;
-//			}
 		}
 	}
-
 	return respuesta;
 }
 
@@ -382,6 +436,7 @@ void iniciar_ciclo_de_instruccion(){
 }
 
 void ciclo_de_instruccion_fetch(){
+	log_info(cpu_logger, "PID: <%d> - FETCH - Program Counter: <%d>", contexto->proceso_pid, contexto->proceso_ip);
 	t_paquete* un_paquete = crear_super_paquete(PETICION_DE_INSTRUCCIONES_CM);
 	cargar_int_al_super_paquete(un_paquete, contexto->proceso_pid);
 	cargar_int_al_super_paquete(un_paquete, contexto->proceso_ip);
@@ -408,27 +463,27 @@ void ciclo_de_instruccion_decode(){
 
 void ciclo_de_instruccion_execute(){
 	if(strcmp(instruccion_split[0], "SET") == 0){//[SET][AX][22]
-		log_info(cpu_logger, "Ejecutando: <%s>", instruccion_split[0]);
+		log_info(cpu_logger, "PID: <%d> - Ejecutando: <%s> - <%s> - <%s>", contexto->proceso_pid, instruccion_split[0], instruccion_split[1], instruccion_split[2]);
 		contexto->proceso_ip = contexto->proceso_ip + 1;
 		uint32_t* registro_referido = detectar_registro(instruccion_split[1]);
 		*registro_referido = strtoul(instruccion_split[1], NULL, 10);
 
 	}else if(strcmp(instruccion_split[0], "SUM") == 0){//[SUM][destino:AX][origen:BX]
-		log_info(cpu_logger, "Ejecutando: <%s>", instruccion_split[0]);
+		log_info(cpu_logger, "PID: <%d> - Ejecutando: <%s> - <%s> - <%s>", contexto->proceso_pid, instruccion_split[0], instruccion_split[1], instruccion_split[2]);
 		contexto->proceso_ip = contexto->proceso_ip + 1;
 		uint32_t* registro_referido_destino = detectar_registro(instruccion_split[1]);
 		uint32_t* registro_referido_origen = detectar_registro(instruccion_split[2]);
 		*registro_referido_destino += *registro_referido_origen;
 
 	}else if(strcmp(instruccion_split[0], "SUB") == 0){//[SUB][destino:AX][origen:BX]
-		log_info(cpu_logger, "Ejecutando: <%s>", instruccion_split[0]);
+		log_info(cpu_logger, "PID: <%d> - Ejecutando: <%s> - <%s> - <%s>", contexto->proceso_pid, instruccion_split[0], instruccion_split[1], instruccion_split[2]);
 		contexto->proceso_ip = contexto->proceso_ip + 1;
 		uint32_t* registro_referido_destino = detectar_registro(instruccion_split[1]);
 		uint32_t* registro_referido_origen = detectar_registro(instruccion_split[2]);
 		*registro_referido_destino -= *registro_referido_origen;
 
 	}else if(strcmp(instruccion_split[0], "JNZ") == 0){// [JNZ][Registro][Instruccion]
-		log_info(cpu_logger, "Ejecutando: <%s>", instruccion_split[0]);
+		log_info(cpu_logger, "PID: <%d> - Ejecutando: <%s> - <%s> - <%s>", contexto->proceso_pid, instruccion_split[0], instruccion_split[1], instruccion_split[2]);
 		uint32_t* registro_referido = detectar_registro(instruccion_split[1]);
 		if(*registro_referido != 0) {
 			contexto->proceso_ip = atoi(instruccion_split[2]);
@@ -437,58 +492,66 @@ void ciclo_de_instruccion_execute(){
 		}
 
 	}else if(strcmp(instruccion_split[0], "SLEEP") == 0){// [SLEEP][tiempo]
-		log_info(cpu_logger, "Ejecutando: <%s>", instruccion_split[0]);
+		log_info(cpu_logger, "PID: <%d> - Ejecutando: <%s> - <%s>", contexto->proceso_pid, instruccion_split[0], instruccion_split[1]);
 		 /* Esta instrucción representa una syscall bloqueante.
 		 * Se deberá devolver el Contexto de Ejecución actualizado al Kernel
 		 * junto a la cantidad de segundos que va a bloquearse el proceso.*/
 		//Enviar al KERNEL: [PID][IP][AX][BX][CX][DX]["SLEEP"][Tiempo]
-		contexto->proceso_ip = contexto->proceso_ip + 1;
 		mochila = crear_super_paquete(100);
 		cargar_string_al_super_paquete(mochila, "SLEEP"); //Motivo del desalojo
-		cargar_int_al_super_paquete(mochila, atoi(instruccion_split[1])); //ALgun otro perametro necesario
+		cargar_int_al_super_paquete(mochila, atoi(instruccion_split[1])); //otros perametros necesarios, en este caso el tiempo
+
 		hay_que_desalojar = true;
 
+	}else if(strcmp(instruccion_split[0], "WAIT") == 0){// [WAIT][char* Recurso] /*Esta instrucción solicita al Kernel que se asigne una instancia del recurso indicado por parámetro.*/
+		log_info(cpu_logger, "PID: <%d> - Ejecutando: <%s> - <%s>", contexto->proceso_pid, instruccion_split[0], instruccion_split[1]);
 
-	}else if(strcmp(instruccion_split[0], "WAIT") == 0){// [WAIT][char* Recurso]
-		/*Esta instrucción solicita al Kernel que se asigne una instancia del recurso indicado por parámetro.*/
-		log_info(cpu_logger, "Ejecutando: <%s>", instruccion_split[0]);
+		contexto->proceso_ip = contexto->proceso_ip + 1;
+
+		t_paquete* infoExtra = crear_super_paquete(100);
+		cargar_string_al_super_paquete(mochila, instruccion_split[1]);
+
 		//Envia a Kernel con motivo de WAIT de algun recurso
-		enviarPaqueteManejoRecursosKernel("WAIT", instruccion_split[1]);
+		enviarPaqueteKernelConInfoExtra("WAIT", infoExtra); // instruccion_split[1] es el recurso
+
+
+
+		eliminar_paquete(infoExtra);
+
+	}else if(strcmp(instruccion_split[0], "SIGNAL") == 0){// [SIGNAL][char* Recurso] /*Esta instrucción solicita al Kernel que se libere una instancia del recurso indicado por parámetro.*/
+		log_info(cpu_logger, "PID: <%d> - Ejecutando: <%s> - <%s>", contexto->proceso_pid, instruccion_split[0], instruccion_split[1]);
+
 		contexto->proceso_ip = contexto->proceso_ip + 1;
 
-		// Crear un protocolo diferente para enviar estos mensajes sin contexto, con el motivo wait o signal para que kernel lo maneje
+		t_paquete* infoExtra = crear_super_paquete(100);
+		cargar_string_al_super_paquete(mochila, instruccion_split[1]);
 
-
-	}else if(strcmp(instruccion_split[0], "SIGNAL") == 0){// [SIGNAL][char* Recurso]
-		/*Esta instrucción solicita al Kernel que se libere una instancia del recurso indicado por parámetro.*/
-		log_info(cpu_logger, "Ejecutando: <%s>", instruccion_split[0]);
 		//Envia a Kernel con motivo de SIGNAL de algun recurso
-		enviarPaqueteManejoRecursosKernel("SIGNAL", instruccion_split[1]);
-		contexto->proceso_ip = contexto->proceso_ip + 1;
+		enviarPaqueteKernelConInfoExtra("SIGNAL", infoExtra); // instruccion_split[1] es el recurso
+		eliminar_paquete(infoExtra);
 
-	}else if(strcmp(instruccion_split[0], "MOV_IN") == 0){// [MOV_IN][RX][Dir_logica]
-		log_info(cpu_logger, "Ejecutando: <%s>", instruccion_split[0]);
-		/*Lee el valor de memoria correspondiente a la Dirección Lógica y lo almacena en el Registro.*/
+	}else if(strcmp(instruccion_split[0], "MOV_IN") == 0){// [MOV_IN][Registro][Direccion Logica]
+		log_info(cpu_logger, "PID: <%d> - Ejecutando: <%s> - <%s> - <%s>", contexto->proceso_pid, instruccion_split[0], instruccion_split[1], instruccion_split[2]);
 
-		/*
-		 * 1.Deberia llamar a la MMU(La MMU hace una peticion para recibir el nuemero de marco)
-		 * para que traduzca la direccion logica a dir. fisica.
-		 * 2. Una vez obtenida la direccion fisica, pedirle a memoria la info relevante correspondiente
-		 * a la direccion fisica.
-		 * 3. Aca hay que evaluar si retorna PAGEFAULT.
-		 * 4. Asumiendo que no haya PAGEFAULT, memoria devolveria el dato requerido y se almacenaria
-		 * en el registro respectivo.
-		*/
-
-		//No DESCOMENTAR HASTA QUE ESTA TERMINADO LO QUE FALTA:
-//		int direccion_fisica = MMU(atoi(instruccion_split[2]));
-//		//[FALTA] Pedir valor a memoria correspondiente a la direccion fisica
-//		//Verificar que no sea PAGEFAULT
-//		uint32_t* registro_referido = detectar_registro(instruccion_split[1]);
-//		//Guardar el valor de memoria en el registro;
+	    uint32_t* registro_destino = detectar_registro(instruccion_split[1]);
+	    int direccion_logica = atoi(instruccion_split[2]);
+	    uint32_t valor = solicitar_valor_memoria(direccion_logica); //implementar solicitar_valor_memoria con mmu en su interior
+	    if(valor == -1){ // hubo PF
+	    	hay_que_desalojar = true;
+	    }else{
+			*registro_destino = valor;
+		}
 
 	}else if(strcmp(instruccion_split[0], "MOV_OUT") == 0){// [MOV_OUT][Dir_logica][RX]
-		log_info(cpu_logger, "Ejecutando: <%s>", instruccion_split[0]);
+		log_info(cpu_logger, "PID: <%d> - Ejecutando: <%s> - <%s> - <%s>", contexto->proceso_pid, instruccion_split[0], instruccion_split[1], instruccion_split[2]);
+
+		int direccion_logica = atoi(instruccion_split[1]);
+		uint32_t* registro_partida = detectar_registro(instruccion_split[2]);
+		uint32_t valorAEscribir = *registro_partida;
+
+		if(escribir_valor_memoria(direccion_logica, valorAEscribir) == -1){ // hubo PF
+			hay_que_desalojar = true;
+		}
 		/*Lee el valor del Registro y lo escribe en la dirección física de memoria obtenida
 		 * a partir de la Dirección Lógica.*/
 
@@ -502,50 +565,114 @@ void ciclo_de_instruccion_execute(){
 
 
 	}else if(strcmp(instruccion_split[0], "F_OPEN") == 0){
-		log_info(cpu_logger, "Ejecutando: <%s>", instruccion_split[0]);
-	}else if(strcmp(instruccion_split[0], "F_CLOSE") == 0){
-		log_info(cpu_logger, "Ejecutando: <%s>", instruccion_split[0]);
-	}else if(strcmp(instruccion_split[0], "F_SEEK") == 0){
-		log_info(cpu_logger, "Ejecutando: <%s>", instruccion_split[0]);
-	}else if(strcmp(instruccion_split[0], "F_READ") == 0){
-		log_info(cpu_logger, "Ejecutando: <%s>", instruccion_split[0]);
-	}else if(strcmp(instruccion_split[0], "F_WRITE") == 0){
-		log_info(cpu_logger, "Ejecutando: <%s>", instruccion_split[0]);
-	}else if(strcmp(instruccion_split[0], "F_TRUNCATE") == 0){
-		log_info(cpu_logger, "Ejecutando: <%s>", instruccion_split[0]);
-	}else if(strcmp(instruccion_split[0], "EXIT") == 0){// [EXIT]
-		log_info(cpu_logger, "Ejecutando: <%s>", instruccion_split[0]);
-		t_paquete* unPaquete = alistar_paquete_de_desalojo(EJECUTAR_PROCESO_KC);
-		cargar_string_al_super_paquete(unPaquete, "EXIT"); //Motivo del desalojo
-		enviar_paquete(unPaquete, fd_kernel_dispatch);
-		eliminar_paquete(unPaquete);
+		log_info(cpu_logger, "PID: <%d> - Ejecutando: <%s> - <%s> - <%s>", contexto->proceso_pid, instruccion_split[0], instruccion_split[1], instruccion_split[2]);
 
+
+	}else if(strcmp(instruccion_split[0], "F_CLOSE") == 0){
+		log_info(cpu_logger, "PID: <%d> - Ejecutando: <%s> - <%s>", contexto->proceso_pid, instruccion_split[0], instruccion_split[1]);
+
+
+	}else if(strcmp(instruccion_split[0], "F_SEEK") == 0){
+		log_info(cpu_logger, "PID: <%d> - Ejecutando: <%s> - <%s> - <%s>", contexto->proceso_pid, instruccion_split[0], instruccion_split[1], instruccion_split[2]);
+
+
+	}else if(strcmp(instruccion_split[0], "F_READ") == 0){
+		log_info(cpu_logger, "PID: <%d> - Ejecutando: <%s> - <%s> - <%s>", contexto->proceso_pid, instruccion_split[0], instruccion_split[1], instruccion_split[2]);
+
+
+	}else if(strcmp(instruccion_split[0], "F_WRITE") == 0){
+		log_info(cpu_logger, "PID: <%d> - Ejecutando: <%s> - <%s> - <%s>", contexto->proceso_pid, instruccion_split[0], instruccion_split[1], instruccion_split[2]);
+
+
+	}else if(strcmp(instruccion_split[0], "F_TRUNCATE") == 0){
+		log_info(cpu_logger, "PID: <%d> - Ejecutando: <%s> - <%s> - <%s>", contexto->proceso_pid, instruccion_split[0], instruccion_split[1], instruccion_split[2]);
+
+
+	}else if(strcmp(instruccion_split[0], "EXIT") == 0){// [EXIT]
+		log_info(cpu_logger, "PID: <%d> - Ejecutando: <%s>", contexto->proceso_pid, instruccion_split[0]);
+//		t_paquete* unPaquete = alistar_paquete_de_desalojo(ATENDER_INSTRUCCION_CPK);
+//		cargar_string_al_super_paquete(unPaquete, "EXIT"); //Motivo del desalojo
+//		enviar_paquete(unPaquete, fd_kernel_dispatch);
+//		eliminar_paquete(unPaquete);
+//		enviarPaqueteKernel("EXIT");
+		mochila = crear_super_paquete(100);
+		cargar_string_al_super_paquete(mochila, "EXIT"); //Motivo del desalojo
+		hay_que_desalojar = true;
 	}else{
 		log_error(cpu_logger, "Nunca se deberia llegar aqui :(");
 	}
 }
 
-//int MMU(int dir_logica, int* dir_fisica){ //[FALTA] Consolidar ideas
-//	bool respuesta = true;
-//	int tamanio_pagina; //[FALTA] De donde obtengo este dato?
-//	int desplazamiento;//Sera este la Direccion Fisica??
-//	int numero_pagina; //[FALTA] Aparentemente se lo tiene que pedir a MEMORIA
-//
-//	//Pidiendo numero de pagina a MEMORIA
-//	t_paquete* unPaquete = crear_super_paquete(CONSULTA_DE_PAGINA_CM);
-//	cargar_int_al_super_paquete(unPaquete, proceso_pid);
-//	cargar_int_al_super_paquete(unPaquete, dir_logica);
-//
-//
-//	sem_wait(&sem_control_peticion_marco_a_memoria);
-//
-//	numero_pagina = floor(dir_logica / tamanio_pagina);
-//	desplazamiento = dir_logica - numero_pagina * tamanio_pagina;
-//
-//	*dir_fisica = desplazamiento; //Asumiendo que esto sea la direccion fisica
-//
-//	return respuesta;
-//}
+//----------MMU------------//devuelve la direccion fisica o un -1 si hubo PF
+int MMU(int dir_logica){
+
+	int num_pagina = floor(dir_logica / tam_pagina); //[TODO] obtener el tam de pag en el mensaje de conexion con memoria
+	int desplazamiento = dir_logica - num_pagina * tam_pagina;
+
+	//Pidiendo pagina a MEMORIA, si la tiene, devuelve su marco, de lo contrario devuelve page fault
+	t_paquete* paqueteMemoria = crear_super_paquete(CONSULTA_DE_PAGINA_CM);
+	cargar_int_al_super_paquete(paqueteMemoria, contexto->proceso_pid);
+	cargar_int_al_super_paquete(paqueteMemoria, num_pagina);
+
+	enviar_paquete(paqueteMemoria, fd_memoria);
+	eliminar_paquete(paqueteMemoria);
+
+	sem_wait(&sem_control_peticion_marco_a_memoria);
+
+	if(marco >= 0){
+		log_info(cpu_log_obligatorio, "PID: <%d> - OBTENER MARCO - Página: <%d> - Marco: <%d>", contexto->proceso_pid, num_pagina, marco);
+		int dir_fisica = marco + desplazamiento;
+		contexto->proceso_ip = contexto->proceso_ip + 1;
+		return dir_fisica;
+	}else{
+		log_info(cpu_log_obligatorio, "Page Fault PID: <%d> - Página: <%d>", contexto->proceso_pid, num_pagina);
+		mochila = crear_super_paquete(100);
+		cargar_string_al_super_paquete(mochila, "PAGE_FAULT"); //Motivo del desalojo
+		cargar_int_al_super_paquete(mochila, num_pagina); //Pagina que hizo PF
+
+		return -1;
+	}
+
+}
+
+int solicitar_valor_memoria(int dir_logica){
+	int dir_fisica = MMU(dir_logica);
+
+	if(dir_fisica == -1){
+		return -1;
+	}else{
+		//Le pido a memoria el contenido del marco
+		t_paquete* paqueteLecturaMemoria = crear_super_paquete(LECTURA_BLOQUE_CM);
+		cargar_int_al_super_paquete(paqueteLecturaMemoria, dir_fisica);
+
+		sem_wait(&sem_control_peticion_lectura_a_memoria);
+
+		log_info(cpu_logger, "PID: <%d> - Acción: <LEER> - Dirección Física: <%d> - Valor: <%d>", contexto->proceso_pid, dir_fisica, valorMarco);
+
+		return valorMarco;
+	}
+}
+
+// TODO: completar esta funcion
+int escribir_valor_memoria(uint32_t dir_logica, uint32_t valorAEscribir){
+	long int dir_fisica = MMU(dir_logica);
+
+	if(dir_logica == -1){
+		return -1;
+	}else{
+		//Le pido a memoria escribir el contenido del registro en la direccion fisica
+		t_paquete* paqueteEscrituraMemoria = crear_super_paquete(ESCRITURA_BLOQUE_CM);
+		cargar_int_al_super_paquete(paqueteEscrituraMemoria, dir_fisica);
+		cargar_int_al_super_paquete(paqueteEscrituraMemoria, valorAEscribir);
+
+		sem_wait(&sem_control_peticion_escritura_a_memoria);
+
+		log_info(cpu_logger, "PID: <%d> - Acción: <ESCRIBIR> - Dirección Física: <%d> - Valor: <%d>", contexto->proceso_pid, dir_fisica, valorAEscribir);
+
+		return 0;
+	}
+}
+
 
 /*Descargando contenido del buffer y actualizando el contenido de los registros*/
 void iniciar_estructuras_para_atender_al_proceso(t_buffer*  unBuffer){
@@ -571,7 +698,7 @@ void iniciar_estructuras_para_atender_al_proceso(t_buffer*  unBuffer){
 	memcpy(&(contexto -> DX), (bufferRecibido + offset), sizeof(uint32_t));
 	offset += sizeof(uint32_t);
 
-
+	free(unBuffer);
 
 //	contexto->proceso_pid = recibir_int_del_buffer(unBuffer);
 //	contexto->proceso_ticket = recibir_int_del_buffer(unBuffer);
@@ -656,13 +783,21 @@ t_paquete* alistar_paquete_de_desalojo(op_code code_op){
 	return unPaquete;
 }
 
-void enviarPaqueteManejoRecursosKernel(char* motivo,char* recurso){
-	t_paquete* paqueteManejoRecursos = crear_super_paquete(ATENDER_INSTRUCCION_CPK);
-	// chequear orden con lucas, depende como recibe el kernel
-	cargar_string_al_super_paquete(paqueteManejoRecursos, recurso);
+void enviarPaqueteKernel(char* motivo){
+	t_paquete* paqueteManejoRecursos = alistar_paquete_de_desalojo(ATENDER_INSTRUCCION_CPK);
+	// luego de enviar el contexto, envio el motivo(que instruccion es la que le manda)
 	cargar_string_al_super_paquete(paqueteManejoRecursos, motivo);
 	enviar_paquete(paqueteManejoRecursos, fd_kernel_dispatch);
 	eliminar_paquete(paqueteManejoRecursos);
+}
+
+void enviarPaqueteKernelConInfoExtra(char* motivo, t_paquete* infoExtra){
+	t_paquete* paqueteInstruccionKernel = alistar_paquete_de_desalojo(ATENDER_INSTRUCCION_CPK);
+	// luego de enviar el contexto, envio el motivo(que instruccion es la que le manda), y la mochila con toda la info extra
+	cargar_string_al_super_paquete(paqueteInstruccionKernel, motivo);
+	cargar_choclo_al_super_paquete(paqueteInstruccionKernel, infoExtra->buffer->stream, infoExtra->buffer->size);
+	enviar_paquete(paqueteInstruccionKernel, fd_kernel_dispatch);
+	eliminar_paquete(paqueteInstruccionKernel);
 }
 
 
