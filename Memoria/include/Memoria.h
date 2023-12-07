@@ -4,6 +4,7 @@
 #include "m_gestor.h"
 #include "proceso_recibido.h"
 #include "swap.h"
+#include "pagina.h"
 
 char* IP_MEMORIA;
 char* PUERTO_ESCUCHA;
@@ -22,6 +23,8 @@ int fd_cpu;
 int fd_filesystem;
 int server_fd_memoria;
 void* espacio_usuario;
+
+int ordenCargaGlobal = 0;
 /*
  * MEMORIA VIRTUAL
  */
@@ -42,6 +45,7 @@ t_list* list_instruciones;
 
 /********SEMAFORO GENERAL PARA LA TABLA*******/
 pthread_mutex_t m_tablas;
+pthread_mutex_t mutex_lst_marco;
 
 
 /*----------------TODO INIT ------------------------*/

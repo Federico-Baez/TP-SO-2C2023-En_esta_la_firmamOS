@@ -7,7 +7,7 @@
 #include "../include/pagina.h"
 
 int contador_accesos = 0;    // Para LRU
-int ordenCargaGlobal = 0;    // Para FIFO
+//int ordenCargaGlobal = 0;    // Para FIFO - Fue puesto como GLOBAL en m_gestor.h
 tabla_paginas* crear_tabla_paginas(int pid) {
 	tabla_paginas* nueva_tabla = malloc(sizeof(tabla_paginas));
 
@@ -85,10 +85,11 @@ void liberar_paginas(tabla_paginas* una_tabla, int  dirLogica, int tamanio, int 
 void destruir_pagina(Pagina* pagina) {
     free(pagina);
 }
-marco* crear_marco(int base, bool presente){
+marco* crear_marco(int base, bool presente, int index){
 	marco *nuevo_marco = malloc(sizeof(marco));
 	nuevo_marco->base = base;
 	nuevo_marco->libre = presente;
+	nuevo_marco->pid = index;
 	pthread_mutex_init(&(nuevo_marco->mutex), NULL);
 	return nuevo_marco;
 }

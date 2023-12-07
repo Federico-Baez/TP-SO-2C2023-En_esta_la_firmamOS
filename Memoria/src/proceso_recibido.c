@@ -10,18 +10,51 @@ void agregar_proceso_a_listado(t_buffer* unBuffer, t_list* lst_procesos_recibido
 	un_proceso->size = recibir_int_del_buffer(unBuffer);
 	un_proceso->pid =recibir_int_del_buffer(unBuffer);
 	un_proceso->instrucciones= leer_archivo_y_cargar_instrucciones(un_proceso->pathInstrucciones);
+	un_proceso->tabla_paginas = list_create();
 	log_info(memoria_logger, "Recibi el proceso con los siguientes datos archivo: %s, el tamanio: %d y el pid: %d ",un_proceso->pathInstrucciones, un_proceso->size, un_proceso->pid);
 	list_add(lst_procesos_recibido, un_proceso);
-//	handhsake_modules(fd_kernel,"[MEMORIA]>Proceso cargado en Memoria OK");
+
+	//Logica para descubrir la cantidad de paginas necesarias
+	int cantidad_paginas_necesarias = (int)ceil(un_proceso->size / TAM_PAGINA);
+
+	//Luego agrego una Pagina a la lista de TABLA Paginas segun la cantidad
+	for(int i=0; i<cantidad_paginas_necesarias; i++){
+		Pagina* una_pagina = malloc(sizeof(Pagina));
+		list_add(un_proceso->tabla_paginas, una_pagina);
+	}
+
+	// Asignarle la data a cada Pagina
+	asignar_marcos_a_cada_pagina(un_proceso);
+
+	//Avisarle a FILESYSTEM que separa cierta cantidad de bloques
+	solicitar_asignacion_bloques_SWAP_a_FS(un_proceso->pid, cantidad_paginas_necesarias);
+
+	handhsake_modules(fd_kernel,"[MEMORIA]>Proceso cargado en Memoria OK");
 }
 
 void liberar_proceso(proceso_recibido* proceso) {
+	t_list* lista_bloques = list_create();
+
     for (int i = 0; i < list_size(proceso->instrucciones); i++) {
         char* instruccion = list_get(proceso->instrucciones, i);
         free(instruccion);
     }
     list_destroy(proceso->instrucciones);
     free(proceso->pathInstrucciones);
+
+	pthread_mutex_lock(&mutex_lst_marco);
+    for(int i=0; i<list_size(proceso->tabla_paginas); i++){
+    	Pagina* una_pagina = list_get(proceso->instrucciones, i);
+    	una_pagina->ptr_marco->libre = true;
+
+    	free(una_pagina);
+    }
+	pthread_mutex_unlock(&mutex_lst_marco);
+    list_destroy(proceso->tabla_paginas);
+
+    //Enviar Lista de bloques a FS para que marco como libre a ciertos bloques
+
+
     free(proceso);
 }
 

@@ -2,6 +2,8 @@
 #define PROCESO_RECIBIDO_H_
 
 #include "m_gestor.h"
+#include "swap.h"
+#include "marcos.h"
 
 void agregar_proceso_a_listado(t_buffer* unBuffer, t_list* lst_procesos_recibido);
 void liberar_proceso(proceso_recibido* proceso);

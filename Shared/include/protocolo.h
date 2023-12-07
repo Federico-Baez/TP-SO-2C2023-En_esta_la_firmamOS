@@ -86,6 +86,7 @@ typedef enum{
 	PETICION_PAGE_FAULT_FM,
 	CARGAR_INFO_DE_LECTURA_FM,
 	GUARDAR_INFO_FM,
+	GUARDAR_MARCO_EN_SWAP_FM,
 	//------- CPU - MEMORIA
 	PETICION_INFO_RELEVANTE_CM,
 	PETICION_DE_INSTRUCCIONES_CM,
@@ -140,7 +141,7 @@ typedef struct{
 
 
 /******************TODO: revisar los MENSAJES*************/
-//void handhsake_modules(int conexion, char* mensaje);
+void handhsake_modules(int conexion, char* mensaje);
 void enviar_mensaje(char* mensaje, int socket_cliente);
 int recibir_operacion(int socket_cliente);
 void* recibir_buffer(int* size, int socket_cliente);
