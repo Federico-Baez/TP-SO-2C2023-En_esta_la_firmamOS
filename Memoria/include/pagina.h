@@ -28,6 +28,8 @@ Pagina* victima_pagina_LRU(tabla_paginas* tabla);
 Pagina* victima_pagina_FIFO(tabla_paginas* tabla);
 /************TODO INICIAR LOS MARCOS***************/
 
-marco* crear_marco(int base, bool presente);
+marco* crear_marco(int base, bool presente, int index);
 Pagina* obtener_pagina_por_marco(marco* un_marco);
+
+
 #endif /* PAGINA_H_ */

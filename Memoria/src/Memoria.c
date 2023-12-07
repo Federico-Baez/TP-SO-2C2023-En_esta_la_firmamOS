@@ -68,7 +68,7 @@ void leer_log(){
 void inicializar_memoria(){
 
 	espacio_usuario = malloc(TAM_MEMORIA);
-	memset(espacio_usuario,',',TAM_MEMORIA);
+//	memset(espacio_usuario,',',TAM_MEMORIA);
 	if(espacio_usuario == NULL){
 			log_error(memoria_logger, "Fallo Malloc");
 	    	exit(1);
@@ -79,8 +79,8 @@ void inicializar_memoria(){
 	lst_marco = list_create();
 	int cant_marcos = TAM_MEMORIA/TAM_PAGINA;
 
-	for(int i=0;i<= cant_marcos;i++){
-		marco* nuevo_marco  = crear_marco(TAM_PAGINA*i, true);
+	for(int i=0;i< cant_marcos;i++){
+		marco* nuevo_marco  = crear_marco(TAM_PAGINA*i, true, i);
 
 		list_add(lst_marco,nuevo_marco);
 
