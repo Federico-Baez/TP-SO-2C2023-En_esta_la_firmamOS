@@ -8,6 +8,7 @@
 #ifndef PAGINA_H_
 #define PAGINA_H_
 #include "m_gestor.h"
+#include "proceso_recibido.h"
 
 
 
@@ -21,10 +22,10 @@ void destruir_pagina(Pagina* pagina);
 void eliminar_pagina(tabla_paginas* tabla, int num);
 void acceder_pagina(tabla_paginas* tabla, int numero_pagina);
 void cargar_pagina_en_memoria(tabla_paginas* tabla, Pagina* pagina);
-bool comparar_acceso_LRU(Pagina* pagina1, Pagina* pagina2);
-bool comparar_orden_carga(Pagina* pagina1, Pagina* pagina2);
-Pagina* reemplazar_pagina_LRU(tabla_paginas* tabla);
-Pagina* reemplazar_pagina_FIFO(tabla_paginas* tabla);
+Pagina* comparar_acceso_LRU(Pagina* pagina1, Pagina* pagina2);
+Pagina* comparar_orden_carga(Pagina* pagina1, Pagina* pagina2);
+Pagina* victima_pagina_LRU(tabla_paginas* tabla);
+Pagina* victima_pagina_FIFO(tabla_paginas* tabla);
 /************TODO INICIAR LOS MARCOS***************/
 
 marco* crear_marco(int base, bool presente);

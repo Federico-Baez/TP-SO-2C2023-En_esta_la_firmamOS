@@ -142,7 +142,7 @@ typedef struct{
 
 
 /******************TODO: revisar los MENSAJES*************/
-void handhsake_modules(int conexion, char* mensaje);
+//void handhsake_modules(int conexion, char* mensaje);
 void enviar_mensaje(char* mensaje, int socket_cliente);
 int recibir_operacion(int socket_cliente);
 void* recibir_buffer(int* size, int socket_cliente);
