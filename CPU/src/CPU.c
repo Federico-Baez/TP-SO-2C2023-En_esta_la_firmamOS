@@ -152,37 +152,37 @@ void atender_cpu_dispatch(){
 				if(estadoInstruccion == -1){
 					hay_que_desalojar = true;
 				}else{
-					sem_post();
+//					sem_post();
 				}
 			}else if(strcmp(instruccion, "WAIT") == 0){
 				if(estadoInstruccion == -1){
 					hay_que_desalojar = true;
 				}else{
-					sem_post();
+//					sem_post();
 				}
 			}else if(strcmp(instruccion, "SIGNAL") == 0){
 				if(estadoInstruccion == -1){
 					hay_que_desalojar = true;
 				}else{
-					sem_post();
+//					sem_post();
 				}
 			}else if(strcmp(instruccion, "F_OPEN") == 0){
 				if(estadoInstruccion == -1){
 					hay_que_desalojar = true;
 				}else{
-					sem_post();
+//					sem_post();
 				}
 			}else if(strcmp(instruccion, "F_CLOSE") == 0){
 				if(estadoInstruccion == -1){
 					hay_que_desalojar = true;
 				}else{
-					sem_post();
+//					sem_post();
 				}
 			}else if(strcmp(instruccion, "F_SEEK") == 0){
 				if(estadoInstruccion == -1){
 					hay_que_desalojar = true;
 				}else{
-					sem_post();
+//					sem_post();
 				}
 			}
 			break;
