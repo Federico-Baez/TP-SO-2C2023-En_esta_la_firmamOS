@@ -658,6 +658,7 @@ t_paquete* alistar_paquete_de_desalojo(op_code code_op){
 
 void enviarPaqueteManejoRecursosKernel(char* motivo,char* recurso){
 	t_paquete* paqueteManejoRecursos = crear_super_paquete(ATENDER_INSTRUCCION_CPK);
+	// chequear orden con lucas, depende como recibe el kernel
 	cargar_string_al_super_paquete(paqueteManejoRecursos, recurso);
 	cargar_string_al_super_paquete(paqueteManejoRecursos, motivo);
 	enviar_paquete(paqueteManejoRecursos, fd_kernel_dispatch);
