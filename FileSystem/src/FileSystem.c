@@ -311,13 +311,7 @@ void asignar_bloques(int cant_bloques, t_config* archivo){
 	uint32_t bloque_inicial = config_get_int_value(archivo, "BLOQUE_INICIAL");
 	char* nombre_archivo = config_get_string_value(archivo, "NOMBRE_ARCHIVO");
 
-	uint32_t bloque_actual = bloque_inicial;
-
-	for(int i=1; list_get(buffer_tabla_fat, bloque_actual) != UINT32_MAX; i++){
-		log_info(filesystem_log_obligatorio, "Acceso Bloque - Archivo: %s - Bloque Archivo: %d - Bloque FS: %d", nombre_archivo, i, bloque_actual);
-		usleep(RETARDO_ACCESO_BLOQUE*1000);
-		bloque_actual = list_get(buffer_tabla_fat, bloque_actual);
-	}
+	uint32_t bloque_actual = ultimo_bloque_archivo(bloque_inicial, nombre_archivo);
 
 	for(int i = cant_bloques; i > 0; i--){
 		//usleep(RETARDO_ACCESO_BLOQUE*1000);
@@ -331,7 +325,47 @@ void asignar_bloques(int cant_bloques, t_config* archivo){
 }
 
 void sacar_bloques(int cant_bloques, t_config* archivo){
+	uint32_t bloque_inicial = config_get_int_value(archivo, "BLOQUE_INICIAL");
+	char* nombre_archivo = config_get_string_value(archivo, "NOMBRE_ARCHIVO");
 
+	uint32_t bloque_actual = ultimo_bloque_archivo(bloque_inicial, nombre_archivo);
+
+	//uint32_t* array_bloques_de_archivo = malloc(TAM_BLOQUE);
+
+	uint32_t* array_bloques_de_archivo = obtener_bloques_de_archivo(bloque_inicial, nombre_archivo);
+
+	for(int i = cant_bloques; i > 0; i--){
+		bloque_actual = list_remove(array_bloques_de_archivo, list_size(array_bloques_de_archivo)-1);
+		list_replace(buffer_tabla_fat, bloque_actual, 0);
+	}
+
+	bloque_actual = list_get(array_bloques_de_archivo, list_size(array_bloques_de_archivo)-1);
+	list_replace(buffer_tabla_fat, bloque_actual, UINT32_MAX);
+}
+
+uint32_t* obtener_bloques_de_archivo(uint32_t bloque_actual, char* nombre_archivo){
+	uint32_t* bloques_de_archivo;
+
+	for(int i=1; list_get(buffer_tabla_fat, bloque_actual) != UINT32_MAX; i++){
+		log_info(filesystem_log_obligatorio, "Acceso Bloque - Archivo: %s - Bloque Archivo: %d - Bloque FS: %d", nombre_archivo, i, bloque_actual);
+		usleep(RETARDO_ACCESO_BLOQUE*1000);
+		list_add(bloques_de_archivo, bloque_actual);
+		bloque_actual = list_get(buffer_tabla_fat, bloque_actual);
+	}
+
+	return bloques_de_archivo;
+}
+
+uint32_t ultimo_bloque_archivo(uint32_t bloque_inicial, char* nombre_archivo){
+	uint32_t bloque_actual = bloque_inicial;
+
+	for(int i=1; list_get(buffer_tabla_fat, bloque_actual) != UINT32_MAX; i++){
+		log_info(filesystem_log_obligatorio, "Acceso Bloque - Archivo: %s - Bloque Archivo: %d - Bloque FS: %d", nombre_archivo, i, bloque_actual);
+		usleep(RETARDO_ACCESO_BLOQUE*1000);
+		bloque_actual = list_get(buffer_tabla_fat, bloque_actual);
+	}
+
+	return bloque_actual;
 }
 
 t_archivo_fcb* buscar_fcb(char* nombre_archivo){
