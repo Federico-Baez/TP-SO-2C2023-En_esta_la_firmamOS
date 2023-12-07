@@ -45,6 +45,7 @@ t_list* list_instruciones;
 
 /********SEMAFORO GENERAL PARA LA TABLA*******/
 pthread_mutex_t m_tablas;
+pthread_mutex_t mutex_lst_marco;
 
 
 /*----------------TODO INIT ------------------------*/

@@ -76,6 +76,7 @@ void inicializar_memoria(){
 	tablas = dictionary_create();
 	log_info(memoria_logger, "Se inicia memoria con Paginacion.\n");
 	log_info(memoria_logger, "Algoritmo de reemplazo a usar: %s\n", ALGORITMO_REEMPLAZO);
+
 	lst_marco = list_create();
 	int cant_marcos = TAM_MEMORIA/TAM_PAGINA;
 
@@ -85,6 +86,8 @@ void inicializar_memoria(){
 		list_add(lst_marco,nuevo_marco);
 
 	}
+
+	pthread_mutex_init(&mutex_lst_marco, NULL);
 
 }
 

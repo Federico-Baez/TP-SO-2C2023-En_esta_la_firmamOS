@@ -33,12 +33,28 @@ void agregar_proceso_a_listado(t_buffer* unBuffer, t_list* lst_procesos_recibido
 }
 
 void liberar_proceso(proceso_recibido* proceso) {
+	t_list* lista_bloques = list_create();
+
     for (int i = 0; i < list_size(proceso->instrucciones); i++) {
         char* instruccion = list_get(proceso->instrucciones, i);
         free(instruccion);
     }
     list_destroy(proceso->instrucciones);
     free(proceso->pathInstrucciones);
+
+	pthread_mutex_lock(&mutex_lst_marco);
+    for(int i=0; i<list_size(proceso->tabla_paginas); i++){
+    	Pagina* una_pagina = list_get(proceso->instrucciones, i);
+    	una_pagina->ptr_marco->libre = true;
+
+    	free(una_pagina);
+    }
+	pthread_mutex_unlock(&mutex_lst_marco);
+    list_destroy(proceso->tabla_paginas);
+
+    //Enviar Lista de bloques a FS para que marco como libre a ciertos bloques
+
+
     free(proceso);
 }
 

@@ -100,6 +100,8 @@ extern int ordenCargaGlobal;
 extern t_dictionary* tablas;
 extern t_list* instrucciones_para_cpu;
 
+extern pthread_mutex_t mutex_lst_marco;
+
 void* buscar_tabla(int pid);
 
 /******************MARCO********************/
