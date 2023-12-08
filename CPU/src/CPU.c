@@ -560,7 +560,7 @@ void ciclo_de_instruccion_execute(){
 
 		int direccion_logica = atoi(instruccion_split[1]);
 		uint32_t* registro_partida = detectar_registro(instruccion_split[2]);
-		uint32_t valorAEscribir = *registro_partida;
+		int valorAEscribir = *registro_partida;
 		// el chequeo del page fault lo hace mmu dentro de esta funcion, de lo contrario envia el mensaje a memoria para la escritura
 		escribir_valor_memoria(direccion_logica, valorAEscribir);
 
@@ -690,6 +690,7 @@ int solicitar_valor_memoria(int dir_logica){
 	}else{
 		//Le pido a memoria el contenido del marco
 		t_paquete* paqueteLecturaMemoria = crear_super_paquete(LECTURA_BLOQUE_CM);
+		cargar_int_al_super_paquete(paqueteLecturaMemoria, contexto->proceso_pid);
 		cargar_int_al_super_paquete(paqueteLecturaMemoria, dir_fisica);
 		enviar_paquete(paqueteLecturaMemoria, fd_memoria);
 		eliminar_paquete(paqueteLecturaMemoria);
@@ -702,13 +703,14 @@ int solicitar_valor_memoria(int dir_logica){
 	}
 }
 
-// TODO: completar esta funcion
-void escribir_valor_memoria(uint32_t dir_logica, uint32_t valorAEscribir){
-	long int dir_fisica = MMU(dir_logica);
+
+void escribir_valor_memoria(int dir_logica, int valorAEscribir){
+	int dir_fisica = MMU(dir_logica);
 
 	if(dir_logica != -1){
 		//Le pido a memoria escribir el contenido del registro en la direccion fisica
 		t_paquete* paqueteEscrituraMemoria = crear_super_paquete(ESCRITURA_BLOQUE_CM);
+		cargar_int_al_super_paquete(paqueteEscrituraMemoria, contexto->proceso_pid);
 		cargar_int_al_super_paquete(paqueteEscrituraMemoria, dir_fisica);
 		cargar_int_al_super_paquete(paqueteEscrituraMemoria, valorAEscribir);
 		enviar_paquete(paqueteEscrituraMemoria, fd_memoria);

@@ -125,6 +125,7 @@ void ciclo_de_instruccion_execute();
 bool validador_de_header(char* header_string);
 int MMU(int dir_logica);
 int solicitar_valor_memoria(int direccion_logica);
+void escribir_valor_memoria(int dir_logica, int valorAEscribir);
 uint32_t* detectar_registro(char* RX);
 t_paquete* alistar_paquete_de_desalojo(op_code code_op);
 void enviarPaqueteKernel(char* motivo);
