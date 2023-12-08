@@ -49,14 +49,12 @@ typedef struct{
 }t_fcb;
 
 typedef struct{
-    char* direccion;
-    uint32_t tamanio;
-}t_fat;
-
-typedef struct{
-	uint32_t tamanio;
+	int id_bloque;
+	uint32_t puntero_siguiente;
 	int eof;
 }t_bloque;
+
+t_list* tabla_fat;
 
 int tamanio_particion_swap;
 int tamanio_particion_bloques;
@@ -76,6 +74,11 @@ void destruir_archivo(t_archivo_fcb* archivo_fcb);
 void crear_archivo_de_bloques();
 void crear_fat();
 void finalizar_filesystem();
+
+t_archivo_fcb* buscar_fcb(char* nombre_archivo);
+t_config* obtener_archivo(char* nombre_archivo);
+
+uint32_t buscar_bloque_libre();
 
 void atender_filesystem_kernel(void);
 void atender_memoria(void);
