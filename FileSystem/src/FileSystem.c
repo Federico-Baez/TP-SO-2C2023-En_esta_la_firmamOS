@@ -98,7 +98,27 @@ void destruir_archivo(t_archivo_fcb* archivo_fcb){
 }
 
 void crear_archivo_de_bloques(){
-	int fd_arch_bloques = open(PATH_BLOQUES, O_CREAT | O_RDWR);
+	for(int i=1; i <= CANT_BLOQUES_TOTAL; i++){
+		t_bloque* bloque = malloc(sizeof(t_bloque));
+		bloque->id_bloque = i;
+		bloque->esta_libre = 1;
+		bloque->contenido = NULL;
+		list_add(lista_bloques, bloque);
+	}
+
+	FILE* archivo_bloques = fopen(PATH_BLOQUES, "a+b");
+
+	if(archivo_bloques != NULL){
+		for(int i=1; i <= CANT_BLOQUES_TOTAL; i++){
+			t_bloque* bloque_a_persistir = list_get(tabla_fat, i);
+			fwrite(bloque_a_persistir->contenido, TAM_BLOQUE, 1, archivo_bloques);
+		}
+
+		fclose(archivo_bloques);
+	}
+
+
+	/*int fd_arch_bloques = open(PATH_BLOQUES, O_CREAT | O_RDWR);
 	tamanio_particion_swap = TAM_BLOQUE * CANT_BLOQUES_SWAP;
 	tamanio_particion_bloques = TAM_BLOQUE * (CANT_BLOQUES_TOTAL - CANT_BLOQUES_SWAP);
 	buffer_swap = mmap(NULL, tamanio_particion_swap, PROT_READ | PROT_WRITE, MAP_SHARED, fd_arch_bloques, 0);
@@ -109,30 +129,37 @@ void crear_archivo_de_bloques(){
 		exit(1);
 	}
 
-	close(fd_arch_bloques);
+	close(fd_arch_bloques);*/
 }
 
 void crear_fat(){
-	FILE* f = fopen(PATH_FAT, "a+b");
-	tamanio_fat = (CANT_BLOQUES_TOTAL - CANT_BLOQUES_SWAP) * sizeof(uint32_t);
+	//PRIMER BLOQUE FAT
+	t_bloque_fat* bloque = malloc(sizeof(t_bloque_fat));
+	bloque->id_bloque = 0;
+	bloque->puntero_siguiente = UINT32_MAX;
+	bloque->esta_libre = 0;
+	bloque->eof = NULL;
+	list_add(tabla_fat, bloque);
 
-	if(f != NULL){
-		fwrite(&UINT32_MAX, sizeof(uint32_t), 1, f); //primer bloque FAT
-
-		for(int i=1; i <= tamanio_fat; i++){
-			fwrite(0, sizeof(uint32_t), 1, f);
-		}
-	}
-
-	for(int i=1; i <= tamanio_fat; i++){
-		t_bloque* bloque = malloc(sizeof(t_bloque));
+	for(int i=1; i <= (CANT_BLOQUES_TOTAL - CANT_BLOQUES_SWAP); i++){
+		t_bloque_fat* bloque = malloc(sizeof(t_bloque_fat));
 		bloque->id_bloque = i;
-		bloque->puntero_siguiente = NULL;
+		bloque->puntero_siguiente = 0;
+		bloque->esta_libre = 1;
 		bloque->eof = NULL;
 		list_add(tabla_fat, bloque);
 	}
 
+	FILE* archivo_fat = fopen(PATH_FAT, "a+b");
 
+	if(archivo_fat != NULL){
+		for(int i=0; i < (CANT_BLOQUES_TOTAL - CANT_BLOQUES_SWAP); i++){
+			t_bloque_fat* bloque_a_persistir = list_get(tabla_fat, i);
+			fwrite(bloque_a_persistir->puntero_siguiente, sizeof(uint32_t), 1, archivo_fat);
+		}
+
+		fclose(archivo_fat);
+	}
 
 	/*int fd_fat = open(PATH_FAT, O_CREAT | O_RDWR);
 	tamanio_fat = (CANT_BLOQUES_TOTAL - CANT_BLOQUES_SWAP) * sizeof(uint32_t);
@@ -236,9 +263,6 @@ void atender_memoria(){
 
 //--------------------OPERACIONES------------------------
 
-
-
-//ver como enviar mensajes debido a que FS no puede enviar mensajes a Kernel
 void ejecutar_f_open(char* nombre_archivo){
 	log_info(filesystem_log_obligatorio, "Abrir Archivo: %s", nombre_archivo);
 	t_archivo_fcb* archivo_fcb = buscar_fcb(nombre_archivo);
@@ -281,7 +305,7 @@ void ejecutar_f_create(char* nombre_archivo){
 	enviar_mensaje("OK", fd_kernel);
 }
 
-void manejar_f_truncate(char* nombre_archivo, int tamanio_nuevo){
+void ejecutar_f_truncate(char* nombre_archivo, int tamanio_nuevo){
 	log_info(filesystem_log_obligatorio, "Truncar Archivo: %s - Tamaño: %d", nombre_archivo, tamanio_nuevo);
 	t_config* archivo_fcb = obtener_archivo(nombre_archivo);
 	int tamanio_viejo = config_get_int_value(archivo_fcb, "TAMANIO_ARCHIVO");
@@ -328,12 +352,13 @@ void manejar_f_truncate(char* nombre_archivo, int tamanio_nuevo){
 void ejecutar_f_read(char* nombre_archivo, int dir_fisica, int posicion_a_leer, int pid){
 	log_info(filesystem_log_obligatorio, "Leer Archivo: %s - Puntero: %d - Memoria: %d", nombre_archivo, posicion_a_leer, dir_fisica);
 	t_config* archivo_fcb = obtener_archivo(nombre_archivo);
+
 	//TODO: Leer la información correspondiente de los bloques a partir del puntero recibido
 	char* datos_leidos = leer_datos(archivo_fcb, posicion_a_leer);
 
 	//Esta información se deberá enviar a la Memoria para ser escrita a partir de la dirección física recibida por parámetro
 	enviar_para_escribir_valor_leido(datos_leidos, dir_fisica, pid, fd_memoria);
-	recv_fin_escritura(fd_memoria);
+	recibir_fin_de_escritura(fd_memoria);
 }
 
 void ejecutar_f_write(char* nombre_archivo, int dir_fisica, int posicion_a_escribir, int pid){
@@ -389,24 +414,24 @@ void sacar_bloques(int cant_bloques, t_config* archivo){
 	list_replace(buffer_tabla_fat, bloque_actual, UINT32_MAX);
 }
 
-uint32_t* obtener_bloques_de_archivo(uint32_t bloque_actual, t_archivo_fcb* fcb){
-	int fd_fat = open(PATH_FAT, O_RDWR);
+/*uint32_t* obtener_bloques_de_archivo(uint32_t bloque_actual, t_archivo_fcb* fcb){
+	//int fd_fat = open(PATH_FAT, O_RDWR);
 	uint32_t* bloques_de_archivo;
 
-	uint32_t* bloque_actual = mmap(NULL, tamanio_fat, PROT_READ, MAP_SHARED, fd_fat, config_get_int_value(fcb->archivo_fcb, "BLOQUE_INICIAL"));
+	uint32_t bloque_actual = mmap(NULL, tamanio_fat, PROT_READ, MAP_SHARED, fd_fat, config_get_int_value(fcb->archivo_fcb, "BLOQUE_INICIAL"));
 
 	for(uint32_t i=0; i < tamanio_fat; i++){
 		log_info(filesystem_log_obligatorio, "Acceso Bloque - Archivo: %s - Bloque Archivo: %d - Bloque FS: %d", config_get_int_value(fcb->archivo_fcb, "NOMBRE_ARCHIVO"), i, bloque_actual);
 		usleep(RETARDO_ACCESO_BLOQUE*1000);
 		//list_add(bloques_de_archivo, bloque_actual);
 		bloque_actual[i];
-		bloque_actual = /*list_get(buffer_tabla_fat, bloque_actual)*/ *(buffer_tabla_fat + bloque_actual);
+		bloque_actual = /*list_get(buffer_tabla_fat, bloque_actual)*/ /*(buffer_tabla_fat + bloque_actual);
 	}
 
 	return bloques_de_archivo;
-}
+}*/
 
-int ultimo_bloque_archivo(uint32_t bloque_inicial, char* nombre_archivo){
+uint32_t ultimo_bloque_archivo(uint32_t bloque_inicial, char* nombre_archivo){
 	uint32_t bloque_actual = bloque_inicial;
 
 	for(int i=1; /*list_get(buffer_tabla_fat, bloque_actual)*/ *(buffer_tabla_fat + bloque_actual) != UINT32_MAX; i++){
