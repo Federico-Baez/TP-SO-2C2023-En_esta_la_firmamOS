@@ -5,8 +5,6 @@
 #include "pcb.h"
 
 
-
-
 void pausador();
 int generar_ticket();
 char* algoritmo_to_string(t_algoritmo algoritmo);

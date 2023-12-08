@@ -83,10 +83,6 @@ void atender_filesystem_kernel(){
 		//log_info(filesystem_logger, "Se recibio algo de KERNEL");
 
 		switch (cod_op) {
-		case SYSCALL_KF:
-			unBuffer = recibiendo_super_paquete(fd_kernel);
-			//
-			break;
 		case MENSAJES_POR_CONSOLA:
 			unBuffer = recibiendo_super_paquete(fd_kernel);
 			atender_mensajes_kernel(unBuffer);
@@ -117,10 +113,6 @@ void atender_memoria(){
 		log_info(filesystem_logger, "Se recibio algo de MEMORIA");
 
 		switch (cod_op) {
-		case SYSCALL_KF:
-			unBuffer = recibiendo_super_paquete(fd_memoria);
-			//
-			break;
 		case MENSAJES_POR_CONSOLA:
 			unBuffer = recibiendo_super_paquete(fd_memoria);
 			atender_mensajes_kernel(unBuffer);
