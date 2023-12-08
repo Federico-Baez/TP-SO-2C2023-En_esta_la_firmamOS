@@ -68,9 +68,13 @@ t_contexto* contexto;
 
 //char* motivo_desalojo;
 
-//ESta varaible sirve para cuando haya que desalojar
+//Esta varaible sirve para cuando haya que desalojar
 //voluntariamente por alguna instruccion
 bool hay_que_desalojar;
+
+//Esta varaible sirve para cuando haya que desalojar
+//pero kernel ya posee el contexto
+bool hay_que_desalojar_sin_mensaje = true;
 
 //Contiene todos los HEADER de las instruccinoes autorizadas
 char** opcode_strings;
@@ -86,6 +90,7 @@ sem_t sem_control_decode_execute;
 sem_t sem_control_peticion_marco_a_memoria;
 sem_t sem_control_peticion_lectura_a_memoria;
 sem_t sem_control_peticion_escritura_a_memoria;
+sem_t sem_control_respuesta_kernel;
 
 /*==================================*/
 
