@@ -243,11 +243,12 @@ void pagefault_respuesta_cpu(){
 }
 
 void lectura_pagina_bloque_cpu(int pid, int dir_fisica){
+	char* accion = "leer";
 	void* un_valor = malloc(sizeof(uint32_t));
 
 	pthread_mutex_lock(&mutex_espacio_usuario);
 	memcpy(un_valor,espacio_usuario + dir_fisica,sizeof(uint32_t));
-	logg_acceso_a_espacio_de_usuario(pid, 0, dir_fisica);
+	logg_acceso_a_espacio_de_usuario(pid, accion, dir_fisica);
 	pthread_mutex_unlock(&mutex_espacio_usuario);
 
 	t_paquete* un_paquete = crear_super_paquete(LECTURA_BLOQUE_CM);
@@ -258,10 +259,10 @@ void lectura_pagina_bloque_cpu(int pid, int dir_fisica){
 }
 
 void escritura_pagina_bloque_cpu(int pid, int dir_fisica, uint32_t valor_uint32){
-
+	char* accion = "escribir";
 	pthread_mutex_lock(&mutex_espacio_usuario);
 	memcpy(espacio_usuario + dir_fisica, &valor_uint32, sizeof(uint32_t));
-	logg_acceso_a_espacio_de_usuario(pid, 1, dir_fisica);
+	logg_acceso_a_espacio_de_usuario(pid, accion, dir_fisica);
 	pthread_mutex_unlock(&mutex_espacio_usuario);
 
 	t_paquete* un_paquete = crear_super_paquete(ESCRITURA_BLOQUE_CM);
@@ -306,6 +307,7 @@ void pedir_a_FS_la_pagina(Pagina* una_pagina, int pid, int nro_pagina){
 
 }
 void recibir_la_pagina_desde_FS(int pid, void* pagina_swap, int nro_pagina){
+	char* accion = "escribir";
 	proceso_recibido* un_proceso = obtener_proceso_por_id(pid, list_procss_recibidos);
 	Pagina* una_pagina = list_get(un_proceso->tabla_paginas,nro_pagina);
 
@@ -313,7 +315,7 @@ void recibir_la_pagina_desde_FS(int pid, void* pagina_swap, int nro_pagina){
 	memcpy(espacio_usuario + una_pagina->ptr_marco->base, pagina_swap, TAM_PAGINA);
 	pthread_mutex_unlock(&mutex_espacio_usuario);
 
-	logg_acceso_a_espacio_de_usuario(pid, 1, una_pagina->ptr_marco->base);
+	logg_acceso_a_espacio_de_usuario(pid, accion, una_pagina->ptr_marco->base);
 	logg_lectura_pagina_swap(pid, una_pagina->marco, nro_pagina);
 
 	responder_pagefault_a_kernel(un_proceso->pid);

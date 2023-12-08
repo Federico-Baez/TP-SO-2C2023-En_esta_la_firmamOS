@@ -4,17 +4,20 @@ void logg_crear_destruir_tabla_de_paginas(int pid, int cant_paginas){
 	//PID: <PID> - Tamaño: <CANTIDAD_PAGINAS>
 	log_info(memoria_log_obligatorio, "PID: <%d> - Tamaño: <%d>", pid, cant_paginas);
 }
+void logg_destruir_tabla_de_paginas(int pid, int cant_paginas){
+	log_info(memoria_log_obligatorio, "PID: <%d> - Tamaño: <%d>", pid, cant_paginas);
+}
 
 void logg_acceso_a_tabla_de_paginas(int pid, int nro_pagina, int nro_marco){
 	//PID: <PID> - Pagina: <PAGINA> - Marco: <MARCO>
 	log_info(memoria_log_obligatorio, "PID: <%d> - Pagina: <%d> - Marco: <%d>", pid, nro_pagina, nro_marco);
 }
 
-void logg_acceso_a_espacio_de_usuario(int pid, int leer_0_y_escribir_1, int dir_fisica){
+void logg_acceso_a_espacio_de_usuario(int pid, char* accion, int dir_fisica){
 	//PID: <PID> - Accion: <LEER / ESCRIBIR> - Direccion fisica: <DIRECCION_FISICA>
-	if(leer_0_y_escribir_1 == 0){
+	if (strcmp(accion, "leer") == 0){
 		log_info(memoria_log_obligatorio, "PID: <%d> - Accion: <%s> - Direccion fisica: <%d>", pid, "LEER", dir_fisica);
-	}else if(leer_0_y_escribir_1 == 1){
+	}else if(strcmp(accion, "escribir") == 0){
 		log_info(memoria_log_obligatorio, "PID: <%d> - Accion: <%s> - Direccion fisica: <%d>", pid, "ESCRIBIR", dir_fisica);
 	}else{
 		log_error(memoria_logger, "logg_acceso_a_espacio_de_usuario, con parametro incorrecto, tiene que ser 0-lectura 1-escritura");
