@@ -25,6 +25,7 @@ void agregar_proceso_a_listado(t_buffer* unBuffer, t_list* lst_procesos_recibido
 		una_pagina->pid_proceso = un_proceso->pid;
 		list_add(un_proceso->tabla_paginas, una_pagina);
 	}
+	logg_crear_destruir_tabla_de_paginas(un_proceso->pid, cantidad_paginas_necesarias);
 
 	// Asignarle la data a cada Pagina
 	asignar_marcos_a_cada_pagina(un_proceso);
@@ -48,8 +49,9 @@ void liberar_proceso(proceso_recibido* proceso) {
     free(proceso->pathInstrucciones);
 
 	pthread_mutex_lock(&mutex_lst_marco);
+	logg_crear_destruir_tabla_de_paginas(proceso->pid, cant_paginas);
     for(int i=0; i<cant_paginas; i++){
-    	Pagina* una_pagina = list_get(proceso->instrucciones, i);
+    	Pagina* una_pagina = list_get(proceso->tabla_paginas, i);
     	una_pagina->ptr_marco->libre = true;
     	cargar_int_al_super_paquete(un_paquete, una_pagina->pos_en_swap);
     	free(una_pagina);
