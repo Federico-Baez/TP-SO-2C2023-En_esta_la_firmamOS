@@ -253,7 +253,7 @@ void lectura_pagina_bloque_cpu(int dir_fisica){
 }
 
 void escritura_pagina_bloque_cpu(int dir_fisica, uint32_t valor_uint32){
-	memcpy(valor_uint32, espacio_usuario + dir_fisica, sizeof(uint32_t));
+	memcpy(espacio_usuario + dir_fisica, &valor_uint32, sizeof(uint32_t));
 	t_paquete* un_paquete = crear_super_paquete(ESCRITURA_BLOQUE_CM);
 	char* mensaje = "OK";
 	cargar_string_al_super_paquete(un_paquete, mensaje);
