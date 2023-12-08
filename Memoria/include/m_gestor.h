@@ -18,22 +18,31 @@
 #include <protocolo.h>
 #include <stdlib.h>
 #include <unistd.h>
+
+#include <math.h>
+
+//TODO DEPRECAR se usa tabla_paginas del proceso_recibido
 typedef struct {
     int pid;                        // Identificador del proceso asociado a esta tabla
     t_list* paginas;                // Lista de páginas
     pthread_mutex_t mutex;          // Mutex para sincronización
 } tabla_paginas;
 
+typedef struct Pagina Pagina;
+
 typedef struct {
     int base;
     bool libre;
-    int pid;
+    int pid; //Nro de marco
     int nro_pagina;
+    Pagina* ptr_pagina;
     pthread_mutex_t mutex;
 } marco;
 
 
-typedef struct {
+struct Pagina{
+	int pid_proceso;
+	int nro_pagina;
     bool presente;         // la página está en memoria o en disco
     bool modificado;
     int tamanio_ocupado;
@@ -43,7 +52,7 @@ typedef struct {
     t_temporal* ultimo_uso;        // LRU
 	int orden_carga; // Para FIFO
     pthread_mutex_t mutex;
-} Pagina;
+};
 
 typedef struct{
 	int pid;
@@ -51,6 +60,7 @@ typedef struct{
 	char* pathInstrucciones;
 	t_list* instrucciones;
 	t_list* tabla_paginas;
+	pthread_mutex_t mutex_TP;
 }proceso_recibido;
 
 extern t_list* list_procss_recibidos;
@@ -89,13 +99,18 @@ extern int fd_filesystem;
 extern int server_fd_memoria;
 extern void* espacio_usuario;
 
+extern int ordenCargaGlobal;
+
 extern t_dictionary* tablas;
 extern t_list* instrucciones_para_cpu;
+
+extern pthread_mutex_t mutex_lst_marco;
+extern pthread_mutex_t mutex_espacio_usuario;
 
 void* buscar_tabla(int pid);
 
 /******************MARCO********************/
-marco* crear_marco(int base, bool presente);
+
 Pagina* obtener_pagina_por_marco(marco* un_marco);
 Pagina* obtener_pagina_por_marco(marco* un_marco);
 /******************************************/

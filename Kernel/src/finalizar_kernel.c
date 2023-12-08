@@ -16,11 +16,10 @@ static void _finalizar_listas(){
 	list_destroy(lista_ready);
 	list_destroy(lista_execute);
 	list_destroy(lista_blocked);
-	list_destroy(lista_blocked_fs);
 	list_destroy(lista_exit);
-
 	list_destroy(lista_general);
 	list_destroy(lista_recursos);
+	list_destroy(cola_blocked_fs);
 }
 
 
@@ -28,6 +27,8 @@ static void _finalizar_semaforos(){
 	sem_destroy(&sem_pausa);
 	sem_destroy(&sem_estructura_iniciada);
 	sem_destroy(&sem_enviar_interrupcion);
+	sem_destroy(&sem_estructura_iniciada);
+	sem_destroy(&sem_estructura_liberada);
 }
 
 static void _finalizar_pthread(){
@@ -37,6 +38,7 @@ static void _finalizar_pthread(){
 	pthread_mutex_destroy(&mutex_lista_blocked);
 	pthread_mutex_destroy(&mutex_lista_exit);
 	pthread_mutex_destroy(&mutex_lista_general);
+	pthread_mutex_destroy(&mutex_cola_blocked_fs);
 
 	pthread_mutex_destroy(&mutex_process_id);
 	pthread_mutex_destroy(&mutex_core);
@@ -45,7 +47,6 @@ static void _finalizar_pthread(){
 	pthread_mutex_destroy(&mutex_ticket);
 	pthread_mutex_destroy(&mutex_enviar_interrupcion);
 
-	pthread_mutex_destroy(&mutex_flag_exit);
 	pthread_mutex_destroy(&mutex_flag_finalizar_proceso);
 }
 
@@ -80,10 +81,6 @@ static void _eliminar_pcbs(){
 	}
 	while(!list_is_empty(lista_blocked)){
 		list_clean_and_destroy_elements(lista_blocked, (void*)destruir_pcb);
-	}
-	// La agrego, pero quzias no es necesaria
-	while(!list_is_empty(lista_blocked_fs)){
-		list_clean_and_destroy_elements(lista_blocked_fs, (void*)destruir_pcb);
 	}
 	while(!list_is_empty(lista_exit)){
 		list_clean_and_destroy_elements(lista_exit, (void*)destruir_pcb);

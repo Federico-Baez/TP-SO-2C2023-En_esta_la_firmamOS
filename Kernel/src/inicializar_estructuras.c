@@ -48,7 +48,6 @@ static void iniciar_listas(){
 	lista_ready = list_create();
 	lista_execute = list_create();
 	lista_blocked = list_create();
-	lista_blocked_fs = list_create();
 	lista_exit = list_create();
 
 	lista_general = list_create();
@@ -57,8 +56,9 @@ static void iniciar_listas(){
 
 static void iniciar_semaforos(){
 	sem_init(&sem_pausa, 0, 0);
-	sem_init(&sem_estructura_iniciada, 0, 0);
 	sem_init(&sem_enviar_interrupcion, 0, 0);
+	sem_init(&sem_estructura_iniciada, 0, 0);
+	sem_init(&sem_estructura_liberada, 0, 0);
 }
 
 static void iniciar_pthread(){
@@ -76,8 +76,10 @@ static void iniciar_pthread(){
 	pthread_mutex_init(&mutex_ticket, NULL);
 	pthread_mutex_init(&mutex_enviar_interrupcion, NULL);
 
-	pthread_mutex_init(&mutex_flag_exit, NULL);
 	pthread_mutex_init(&mutex_flag_finalizar_proceso, NULL);
+	pthread_mutex_init(&mutex_manejo_page_fault, NULL);
+	pthread_mutex_init(&mutex_existe_archivo, NULL);
+	pthread_mutex_init(&mutex_flag_proceso_desalojado, NULL);
 }
 
 static void _iniciar_recursos(){

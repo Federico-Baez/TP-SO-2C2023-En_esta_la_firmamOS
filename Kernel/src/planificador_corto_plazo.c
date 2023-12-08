@@ -1,21 +1,5 @@
 #include "../include/planificador_corto_plazo.h"
 
-
-static void _enviar_pcb_a_CPU_por_dispatch(t_pcb* una_pcb){
-	t_paquete* un_paquete = crear_super_paquete(EJECUTAR_PROCESO_KC);
-	cargar_int_al_super_paquete(un_paquete, una_pcb->pid);
-	cargar_int_al_super_paquete(un_paquete, una_pcb->ticket);
-	cargar_int_al_super_paquete(un_paquete, una_pcb->program_counter);
-	cargar_choclo_al_super_paquete(un_paquete, &(una_pcb->registros_CPU->AX), sizeof(uint32_t));
-	cargar_choclo_al_super_paquete(un_paquete, &(una_pcb->registros_CPU->BX), sizeof(uint32_t));
-	cargar_choclo_al_super_paquete(un_paquete, &(una_pcb->registros_CPU->CX), sizeof(uint32_t));
-	cargar_choclo_al_super_paquete(un_paquete, &(una_pcb->registros_CPU->DX), sizeof(uint32_t));
-
-	enviar_paquete(un_paquete, fd_cpu_dispatcher);
-	eliminar_paquete(un_paquete);
-}
-
-
 static void _programar_interrupcion_por_quantum(t_pcb* un_pcb){
 	int ticket_referencia = un_pcb->ticket;
 	sleep(QUANTUM/1000);
@@ -26,17 +10,19 @@ static void _programar_interrupcion_por_quantum(t_pcb* un_pcb){
 	 * salido de la CPU, y esto lo resolvemos con el ticket.
 	 * Porque si salio la misma PCB y volvio a entrar, significa que el proceso tiene
 	 * nuevo ticket*/
+	log_info(kernel_logger, "Me desperte");
 	pthread_mutex_lock(&mutex_ticket);
 	if(ticket_referencia == var_ticket){
 		pthread_mutex_lock(&mutex_flag_exit);
 		if(!flag_exit){
+
 			sem_post(&sem_enviar_interrupcion);
 		}
+//		flag_exit = false;
 		pthread_mutex_unlock(&mutex_flag_exit);
 	}
 	pthread_mutex_unlock(&mutex_ticket);
 }
-
 
 static void _atender_RR_FIFO(){
 	//Verificar que la lista de EXECUTE esté vacía
@@ -52,16 +38,19 @@ static void _atender_RR_FIFO(){
 		pthread_mutex_unlock(&mutex_lista_ready);
 
 		if(un_pcb != NULL){
-	//		transferir_from_actual_to_siguiente(un_pcb, lista_execute, mutex_lista_exec, EXEC);
+
 			list_add(lista_execute, un_pcb);
 			cambiar_estado(un_pcb, EXEC);
 			log_info(kernel_log_obligatorio, " PID: %d - Estado Anterior: READY - Estado Actual: EXEC", un_pcb -> pid);
-
 			un_pcb->ticket = generar_ticket();
+
 			_enviar_pcb_a_CPU_por_dispatch(un_pcb);
+
 			if(strcmp(algoritmo_to_string(ALGORITMO_PLANIFICACION), "RR") == 0){
+				pthread_mutex_lock(&mutex_flag_exit);
+				flag_exit = false;
+				pthread_mutex_unlock(&mutex_flag_exit);
 				ejecutar_en_un_hilo_nuevo_detach((void*)_programar_interrupcion_por_quantum, un_pcb);
-//				sem_post(&sem_habilitar_quantum);
 			}
 		}else{
 			log_warning(kernel_logger, "Lista de READY vacía");
@@ -93,11 +82,13 @@ static void _atender_PRIORIDADES(){
 		}
 	}else if(!list_is_empty(lista_ready)){
 			if(list_remove_element(lista_ready, un_pcb)){
-			list_add(lista_execute, un_pcb);
-			un_pcb->ticket = generar_ticket();
-			cambiar_estado(un_pcb, EXEC);
-			log_info(kernel_log_obligatorio, " PID: %d - Estado Anterior: READY - Estado Actual: EXEC", un_pcb -> pid);
-			_enviar_pcb_a_CPU_por_dispatch(un_pcb);
+
+				list_add(lista_execute, un_pcb);
+				un_pcb->ticket = generar_ticket();
+				cambiar_estado(un_pcb, EXEC);
+				log_info(kernel_log_obligatorio, " PID: %d - Estado Anterior: READY - Estado Actual: EXEC", un_pcb -> pid);
+
+				_enviar_pcb_a_CPU_por_dispatch(un_pcb);
 
 			}else{
 				log_error(kernel_logger, "No se encontro el PCB con mayor PRIORIDAD");
@@ -113,23 +104,30 @@ t_pcb* __maxima_prioridad(t_pcb* void_1, t_pcb* void_2){
 		else return void_2;
 }
 
-
 void pcp_planificar_corto_plazo(){
 	pausador();
+	int flag_lista_ready_vacia = 0;
 
-	switch (ALGORITMO_PLANIFICACION) {
-		case FIFO:
-			_atender_RR_FIFO();
-			break;
-		case ROUNDROBIN:
-			_atender_RR_FIFO();
-			break;
-		case PRIORIDADES:
-			_atender_PRIORIDADES();
-			break;
-		default:
-			log_error(kernel_logger, "ALGORITMO DE CORTO PLAZO DESCONOCIDO");
-			exit(EXIT_FAILURE);
-			break;
+	pthread_mutex_lock(&mutex_lista_ready);
+	if(list_is_empty(lista_ready))
+		flag_lista_ready_vacia = 1;
+	pthread_mutex_unlock(&mutex_lista_ready);
+
+	if(flag_lista_ready_vacia == 0){
+		switch (ALGORITMO_PLANIFICACION) {
+			case FIFO:
+				_atender_RR_FIFO();
+				break;
+			case ROUNDROBIN:
+				_atender_RR_FIFO();
+				break;
+			case PRIORIDADES:
+				_atender_PRIORIDADES();
+				break;
+			default:
+				log_error(kernel_logger, "ALGORITMO DE CORTO PLAZO DESCONOCIDO");
+				exit(EXIT_FAILURE);
+				break;
+		}
 	}
 }

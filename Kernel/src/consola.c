@@ -78,20 +78,31 @@ static bool validar_instruccion(char* leido){
 
 	return resultado;
 }
-
+/*
 static void _finalizar_proceso_por_PID(char* un_pid){
 	t_pcb* un_pcb = buscar_pcb_por_pid(atoi(un_pid));
 	if(un_pcb != NULL){
-		pthread_mutex_lock(&mutex_flag_finalizar_proceso);
-		flag_finalizar_proceso = 1;
-		pthread_mutex_unlock(&mutex_flag_finalizar_proceso);
+		pthread_mutex_lock(&mutex_lista_exec);
+		if(esta_pcb_en_una_lista_especifica(lista_execute, un_pcb)){
+			pthread_mutex_lock(&mutex_flag_finalizar_proceso);
+			flag_finalizar_proceso = true;
+			pthread_mutex_unlock(&mutex_flag_finalizar_proceso);
+		}
+		pthread_mutex_unlock(&mutex_lista_exec);
 		plp_planificar_proceso_exit(un_pcb);
 	}else{
 		log_error(kernel_logger, "CONSOLA - No se encontro el PID en ningun lado");
 		exit(EXIT_FAILURE);
 	}
-
 	//Se debe liberar essta parte o generar memory leaks
+	free(un_pid);
+}
+*/
+
+static void _finalizar_proceso_por_PID(char* un_pid){
+	int pid = atoi(un_pid);
+	plp_planificar_proceso_exit(pid);
+//	ejecutar_en_un_hilo_nuevo_detach(plp_planificar_proceso_exit, pid);
 	free(un_pid);
 }
 
@@ -111,7 +122,7 @@ static void _iniciar_planificadores(){
 //		log_info(kernel_logger, "");
 	}else{
 		var_pausa = 0;
-		log_warning(kernel_log_obligatorio, "INICIO DE PLANIFICACION");  // --> Tiene que ser log_info, por ahora lo dejamos asi para que se note
+		log_warning(kernel_log_obligatorio, "INICIO DE PLANIFICACIÓN");  // --> Tiene que ser log_info, por ahora lo dejamos asi para que se note
 		sem_post(&sem_pausa);
 	}
 }

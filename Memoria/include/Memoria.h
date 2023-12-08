@@ -4,6 +4,8 @@
 #include "m_gestor.h"
 #include "proceso_recibido.h"
 #include "swap.h"
+#include "pagina.h"
+#include "marcos.h"
 
 char* IP_MEMORIA;
 char* PUERTO_ESCUCHA;
@@ -22,6 +24,8 @@ int fd_cpu;
 int fd_filesystem;
 int server_fd_memoria;
 void* espacio_usuario;
+
+int ordenCargaGlobal = 0;
 /*
  * MEMORIA VIRTUAL
  */
@@ -42,6 +46,8 @@ t_list* list_instruciones;
 
 /********SEMAFORO GENERAL PARA LA TABLA*******/
 pthread_mutex_t m_tablas;
+pthread_mutex_t mutex_lst_marco;
+pthread_mutex_t mutex_espacio_usuario;
 
 
 /*----------------TODO INIT ------------------------*/
@@ -66,6 +72,8 @@ void atender_cpu(int cliente_socket) ;
 void atender_filesystem(int cliente_socket);
 
 void* buscar_tabla(int pid);
+void retardo_respuesta_cpu_fs();
+
 /************TODO CARGAR LISTADO DE INSTRUCCIONES DEL PROCESO***************/
 //t_list* leer_archivo_y_cargar_instrucciones(const char* path_archivo);
 //void liberar_memoria_de_instrucciones(t_list* instrucciones);
