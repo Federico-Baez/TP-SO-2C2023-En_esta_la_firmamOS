@@ -206,6 +206,15 @@ void atender_kernel(int cliente_socket) {
 					atender_mensajes_kernel(unBuffer);
 //					free(unBuffer);
 					break;
+				case PETICION_PAGE_FAULT_KM:
+					unBuffer = recibiendo_super_paquete(fd_kernel);
+					int pid_peticion = recibir_int_del_buffer(unBuffer);
+					int nro_pagina = recibir_int_del_buffer(unBuffer);
+					atender_pagefault_kernel(pid_peticion, nro_pagina);
+					break;
+				case RESPUESTA_PAGE_FAULT_MK:
+					pagefault_respuesta_kernel(pid, nro_pagina);
+					break;
 			case -1:
 				log_error(memoria_logger, "[DESCONEXION]: KERNEL");
 				close(cliente_socket);
@@ -231,25 +240,39 @@ void atender_cpu(int cliente_socket) {
 		switch(cod_op) {
 				case PETICION_INFO_RELEVANTE_CM:
 					unBuffer = recibiendo_super_paquete(fd_cpu);
-//					free(unBuffer);
-					//
+
 					break;
 				case PETICION_DE_INSTRUCCIONES_CM:
 					unBuffer = recibiendo_super_paquete(fd_cpu); //recibo el [pId] y el [PC]
 					int pid_buffer = recibir_int_del_buffer(unBuffer);
 					int ip_buffer = recibir_int_del_buffer(unBuffer);
+					retardo_respuesta_cpu_fs();
 					enviar_instrucciones_a_cpu(pid_buffer,ip_buffer);
 
 					break;
 				case PETICION_DE_EJECUCION_CM:
 					unBuffer = recibiendo_super_paquete(fd_cpu);
-//					free(unBuffer);
 
 					break;
 				case CONSULTA_DE_PAGINA_CM:
 					unBuffer = recibiendo_super_paquete(fd_cpu);
-//					free(unBuffer);
-					//
+					int pid_consulta = recibir_int_del_buffer(unBuffer);
+					int nro_pagina = recibir_int_del_buffer(unBuffer);
+					retardo_respuesta_cpu_fs();
+					devolver_marco_o_pagefault_cpu(pid_consulta, nro_pagina);
+					break;
+				case LECTURA_BLOQUE_CM:
+					unBuffer = recibiendo_super_paquete(fd_cpu);
+					int dir_fisica_lect = recibir_int_del_buffer(unBuffer);
+					retardo_respuesta_cpu_fs();
+					lectura_pagina_bloque_cpu(dir_fisica_lect);
+					break;
+				case ESCRITURA_BLOQUE_CM:
+					unBuffer = recibiendo_super_paquete(fd_cpu);
+					int dir_fisica_escr =recibir_int_del_buffer(unBuffer);
+					uint32_t valor_uint32 = (uint32_t)recibir_int_del_buffer(unBuffer);
+					retardo_respuesta_cpu_fs();
+					escritura_pagina_bloque_cpu(dir_fisica_escr, valor_uint32);
 					break;
 			case -1:
 				log_error(memoria_logger, "[DESCONEXION]: CPU");
@@ -277,27 +300,32 @@ void atender_filesystem(int cliente_socket){
 	switch(cod_op) {
 		case PETICION_ASIGNACION_BLOQUE_SWAP_FM:
 			unBuffer = recibiendo_super_paquete(fd_filesystem);
+			retardo_respuesta_cpu_fs();
 			asignar_posicions_de_SWAP_a_tabla_de_paginas(unBuffer);
 			free(unBuffer);
 			//
 			break;
 		case LIBERAR_PAGINAS_FM:
 			unBuffer = recibiendo_super_paquete(fd_filesystem);
+			retardo_respuesta_cpu_fs();
 //				free(unBuffer);
 			//
 			break;
 		case PETICION_PAGE_FAULT_FM:
 			unBuffer = recibiendo_super_paquete(fd_filesystem);
+			retardo_respuesta_cpu_fs();
 //				free(unBuffer);
 			//
 			break;
 		case CARGAR_INFO_DE_LECTURA_FM:
 			unBuffer = recibiendo_super_paquete(fd_filesystem);
+			retardo_respuesta_cpu_fs();
 //				free(unBuffer);
 			//
 			break;
 		case GUARDAR_INFO_FM:
 			unBuffer = recibiendo_super_paquete(fd_filesystem);
+			retardo_respuesta_cpu_fs();
 //				free(unBuffer);
 			//
 			break;
@@ -404,5 +432,8 @@ void bloquear_lista_tablas(){
 void desbloquear_lista_tablas(){
 	log_info(memoria_log_obligatorio, "[SEMAFORO]: Desbloqueo lista de tabla \n");
 	pthread_mutex_unlock(&m_tablas);
+}
+void retardo_respuesta_cpu_fs(){
+	usleep(RETARDO_RESPUESTA*1000);
 }
 

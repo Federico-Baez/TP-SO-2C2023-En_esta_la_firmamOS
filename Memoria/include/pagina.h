@@ -26,11 +26,15 @@ Pagina* comparar_acceso_LRU(Pagina* pagina1, Pagina* pagina2);
 Pagina* comparar_orden_carga(Pagina* pagina1, Pagina* pagina2);
 Pagina* victima_pagina_LRU(tabla_paginas* tabla);
 Pagina* victima_pagina_FIFO(tabla_paginas* tabla);
+/************************COMUNICACION*CON*CPU*******************************/
+void devolver_marco_o_pagefault_cpu(int pid, int nro_pagina);
+void pagefault_respuesta_cpu();
+void atender_pagefault_kernel(int pid, int nro_pagina);
+void pagefault_respuesta_kernel(int pid, int nro_pagina);
+void lectura_pagina_bloque_cpu(int dir_fisica);
+void escritura_pagina_bloque_cpu(int dir_fisica, uint32_t valor_uint32);
+
 /************TODO INICIAR LOS MARCOS***************/
-/************************PAGEFAULT*******************************/
-
-
-
 marco* crear_marco(int base, bool presente, int index);
 Pagina* obtener_pagina_por_marco(marco* un_marco);
 

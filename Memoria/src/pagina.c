@@ -218,7 +218,55 @@ Pagina* obtener_pagina_por_marco(marco* un_marco){
 	return list_get(una_tabla->paginas, nro_pagina-1);
 }
 /************************PAGEFAULT*******************************/
+void devolver_marco_o_pagefault_cpu(int pid, int nro_pagina){
+	int valor_lectura = 0;
+	proceso_recibido* un_proceso = obtener_proceso_por_id(pid, list_procss_recibidos);
+	Pagina* una_pagina = list_get(un_proceso->tabla_paginas,nro_pagina);
+	if(una_pagina->presente){
+		t_paquete* un_paquete = crear_super_paquete(CONSULTA_DE_PAGINA_CM);
+		valor_lectura = una_pagina->marco;
+		cargar_int_al_super_paquete(un_paquete, valor_lectura);
+		enviar_paquete(un_paquete, fd_cpu);
+		eliminar_paquete(un_paquete);
+	}else{
+		pagefault_respuesta_cpu();
+	}
 
+}
+
+void pagefault_respuesta_cpu(){
+	int respuesta = -1;
+	t_paquete* un_paquete = crear_super_paquete(CONSULTA_DE_PAGINA_CM);
+	cargar_int_al_super_paquete(un_paquete, respuesta);
+	enviar_paquete(un_paquete, fd_cpu);
+	eliminar_paquete(un_paquete);
+}
+
+void lectura_pagina_bloque_cpu(int dir_fisica){
+	void* un_valor = malloc(sizeof(uint32_t));
+	memcpy(un_valor,espacio_usuario + dir_fisica,sizeof(uint32_t));
+	t_paquete* un_paquete = crear_super_paquete(LECTURA_BLOQUE_CM);
+	cargar_choclo_al_super_paquete(un_paquete, un_valor, sizeof(uint32_t));
+	enviar_paquete(un_paquete, fd_cpu);
+	eliminar_paquete(un_paquete);
+
+}
+
+void escritura_pagina_bloque_cpu(int dir_fisica, uint32_t valor_uint32){
+	memcpy(valor_uint32, espacio_usuario + dir_fisica, sizeof(uint32_t));
+	t_paquete* un_paquete = crear_super_paquete(ESCRITURA_BLOQUE_CM);
+	char* mensaje = "OK";
+	cargar_string_al_super_paquete(un_paquete, mensaje);
+	enviar_paquete(un_paquete, fd_cpu);
+	eliminar_paquete(un_paquete);
+}
+
+void atender_pagefault_kernel(int pid, int nro_pagina){
+
+}
+void pagefault_respuesta_kernel(int pid, int nro_pagina){
+
+}
 
 
 

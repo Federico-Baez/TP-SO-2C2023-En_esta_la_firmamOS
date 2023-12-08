@@ -21,6 +21,7 @@
 
 #include <math.h>
 
+//TODO DEPRECAR se usa tabla_paginas del proceso_recibido
 typedef struct {
     int pid;                        // Identificador del proceso asociado a esta tabla
     t_list* paginas;                // Lista de páginas
