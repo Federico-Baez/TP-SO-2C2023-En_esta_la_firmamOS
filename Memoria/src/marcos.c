@@ -97,9 +97,18 @@ marco* elegir_victima_LRU(){
 void leer_archivo_de_FS_y_cargarlo_en_memoria(void* un_buffer){
 	int dir_fisica = recibir_int_del_buffer(un_buffer);
 	void* info_recibida = recibir_choclo_del_buffer(un_buffer);
-	//[FALTA] LOG_Obligatorio - ESCRITURA
+
+	pthread_mutex_lock(&mutex_lst_marco);
+	marco* un_marco = buscar_marco_por_direccion_fisica(dir_fisica);
+	pthread_mutex_unlock(&mutex_lst_marco);
+
+	pthread_mutex_lock(&mutex_espacio_usuario);
 	memcpy(espacio_usuario + dir_fisica, info_recibida, TAM_PAGINA);
+	logg_acceso_a_espacio_de_usuario(un_marco->ptr_pagina->pid_proceso, 1, dir_fisica);
+	pthread_mutex_unlock(&mutex_espacio_usuario);
 	free(info_recibida);
+
+	//[FALTA] Hay que actualizar la referencia a la pagina FIFO y LRU
 
 	//Avisar a FileSystem que la carga fue exitosa
 	t_paquete* un_paquete = crear_super_paquete(RPTA_CARGAR_INFO_DE_LECTURA_MF);
@@ -111,8 +120,26 @@ void leer_archivo_de_FS_y_cargarlo_en_memoria(void* un_buffer){
 void leer_todo_el_marco_de_la_dir_fisica_y_enviarlo_a_FS(void* un_buffer){
 	int dir_fisica = recibir_int_del_buffer(un_buffer);
 	void* un_marco = malloc(TAM_PAGINA);
-	//[FALTA] LOG_Obligatorio - LECTURA
+
+	pthread_mutex_lock(&mutex_lst_marco);
+	marco* marco_info = buscar_marco_por_direccion_fisica(dir_fisica);
+	pthread_mutex_unlock(&mutex_lst_marco);
+
+	pthread_mutex_lock(&mutex_espacio_usuario);
 	memcpy(un_marco, espacio_usuario + dir_fisica, TAM_PAGINA);
+	logg_acceso_a_espacio_de_usuario(marco_info->ptr_pagina->pid_proceso, 0, dir_fisica);
+	pthread_mutex_unlock(&mutex_espacio_usuario);
+
+	//Se accede a la tabla de paginas para modificar el estado de la pagina
+//	Pagina* un_paguina = marco_info->ptr_pagina;
+	proceso_recibido* un_proceso = obtener_proceso_por_id(marco_info->ptr_pagina->pid_proceso, list_procss_recibidos);
+	pthread_mutex_lock(&(un_proceso->mutex_TP));
+	if(strcmp(ALGORITMO_REEMPLAZO, "LRU") == 0){
+		temporal_destroy(marco_info->ptr_pagina->ultimo_uso);
+		marco_info->ptr_pagina->ultimo_uso = temporal_create();
+	}
+	logg_acceso_a_tabla_de_paginas(un_proceso->pid, marco_info->ptr_pagina->nro_pagina, marco_info->pid);
+	pthread_mutex_unlock(&(un_proceso->mutex_TP));
 
 	//Enviar a FS
 	t_paquete* un_paquete = crear_super_paquete(GUARDAR_INFO_FM);
@@ -123,7 +150,10 @@ void leer_todo_el_marco_de_la_dir_fisica_y_enviarlo_a_FS(void* un_buffer){
 	free(un_marco);
 }
 
-
+marco* buscar_marco_por_direccion_fisica(int dir_fisica){
+	int nro_marco = (int)floor(dir_fisica / TAM_PAGINA);
+	return list_get(lst_marco, nro_marco);
+}
 
 
 

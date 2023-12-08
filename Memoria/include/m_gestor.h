@@ -60,6 +60,7 @@ typedef struct{
 	char* pathInstrucciones;
 	t_list* instrucciones;
 	t_list* tabla_paginas;
+	pthread_mutex_t mutex_TP;
 }proceso_recibido;
 
 extern t_list* list_procss_recibidos;

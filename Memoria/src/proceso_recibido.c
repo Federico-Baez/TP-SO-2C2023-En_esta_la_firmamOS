@@ -10,6 +10,7 @@ void agregar_proceso_a_listado(t_buffer* unBuffer, t_list* lst_procesos_recibido
 	un_proceso->size = recibir_int_del_buffer(unBuffer);
 	un_proceso->pid =recibir_int_del_buffer(unBuffer);
 	un_proceso->instrucciones= leer_archivo_y_cargar_instrucciones(un_proceso->pathInstrucciones);
+	pthread_mutex_init(&(un_proceso->mutex_TP), NULL);
 	un_proceso->tabla_paginas = list_create();
 	log_info(memoria_logger, "Recibi el proceso con los siguientes datos archivo: %s, el tamanio: %d y el pid: %d ",un_proceso->pathInstrucciones, un_proceso->size, un_proceso->pid);
 	list_add(lst_procesos_recibido, un_proceso);
