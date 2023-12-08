@@ -27,6 +27,9 @@ Pagina* comparar_orden_carga(Pagina* pagina1, Pagina* pagina2);
 Pagina* victima_pagina_LRU(tabla_paginas* tabla);
 Pagina* victima_pagina_FIFO(tabla_paginas* tabla);
 /************TODO INICIAR LOS MARCOS***************/
+/************************PAGEFAULT*******************************/
+
+
 
 marco* crear_marco(int base, bool presente, int index);
 Pagina* obtener_pagina_por_marco(marco* un_marco);

@@ -217,6 +217,18 @@ Pagina* obtener_pagina_por_marco(marco* un_marco){
 	}
 	return list_get(una_tabla->paginas, nro_pagina-1);
 }
+/************************PAGEFAULT*******************************/
+
+
+
+
+
+
+
+
+
+
+
 
 /************************SEMAFOROS*******************************/
 void bloquear_pagina(Pagina* pagina){

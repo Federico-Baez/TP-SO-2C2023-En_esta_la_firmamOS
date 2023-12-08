@@ -33,7 +33,7 @@ marco* pedir_un_marco_de_la_lista_de_marcos(){
 	if(el_marco == NULL){
 		//Desplegar el algoritmo de eliminacion
 		if(strcmp(ALGORITMO_REEMPLAZO, "FIFO") == 0){
-			el_marco = elegir_vcitima_FIFO();
+			el_marco = elegir_victima_FIFO();
 		}
 		else {
 			el_marco = elegir_victima_LRU();
@@ -65,7 +65,7 @@ void guardar_marco_en_swap(marco* un_marco){
 }
 
 
-marco* elegir_vcitima_FIFO(){
+marco* elegir_victima_FIFO(){
 	marco* _comparar_orden_carga(marco* marco1, marco* marco2) {
 	    if (marco1->ptr_pagina->orden_carga < marco2->ptr_pagina->orden_carga){
 	    	return marco1;
