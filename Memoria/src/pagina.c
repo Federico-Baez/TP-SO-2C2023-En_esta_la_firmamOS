@@ -262,13 +262,46 @@ void escritura_pagina_bloque_cpu(int dir_fisica, uint32_t valor_uint32){
 }
 
 void atender_pagefault_kernel(int pid, int nro_pagina){
+	//Se asume que la pagina pedido esta en pagefault
+	proceso_recibido* un_proceso = obtener_proceso_por_id(pid, list_procss_recibidos);
+	Pagina* una_pagina = list_get(un_proceso->tabla_paginas,nro_pagina);
+	marco* un_marco = pedir_un_marco_de_la_lista_de_marcos();
+	//elegir un marco objetivo
+	una_pagina->ptr_marco = un_marco;
+	una_pagina->marco = un_marco->pid;
+	pedir_a_FS_la_pagina(una_pagina,un_proceso->pid,nro_pagina);
+
+	//
+
+
 
 }
-void pagefault_respuesta_kernel(int pid, int nro_pagina){
-
+void responder_pagefault_a_kernel(int pid){
+	//TODO LOGICA DE LA RESPUESTA DE KERNEL
+	t_paquete* un_paquete = crear_super_paquete(RESPUESTA_PAGE_FAULT_MK);
+	//TODO devolver el pid a kernel, setearlo en pid_respuesta
+	int pid_respuesta = pid;
+	cargar_int_al_super_paquete(un_paquete, pid_respuesta);
+	enviar_paquete(un_paquete, fd_kernel);
+	eliminar_paquete(un_paquete);
 }
 
+void pedir_a_FS_la_pagina(Pagina* una_pagina, int pid, int nro_pagina){
+	t_paquete* un_paquete = crear_super_paquete(PETICION_PAGE_FAULT_FM);
+	cargar_int_al_super_paquete(un_paquete, una_pagina->pos_en_swap);
+	cargar_int_al_super_paquete(un_paquete, pid);
+	cargar_int_al_super_paquete(un_paquete, nro_pagina);
+	enviar_paquete(un_paquete, fd_filesystem);
+	eliminar_paquete(un_paquete);
 
+}
+void recibir_la_pagina_desde_FS(int pid, void* pagina_swap, int nro_pagina){
+	proceso_recibido* un_proceso = obtener_proceso_por_id(pid, list_procss_recibidos);
+	Pagina* una_pagina = list_get(un_proceso->tabla_paginas,nro_pagina);
+	memcpy(espacio_usuario + una_pagina->ptr_marco->base, pagina_swap, TAM_PAGINA);
+	responder_pagefault_a_kernel(un_proceso->pid);
+
+}
 
 
 

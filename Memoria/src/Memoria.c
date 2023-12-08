@@ -212,9 +212,7 @@ void atender_kernel(int cliente_socket) {
 					int nro_pagina = recibir_int_del_buffer(unBuffer);
 					atender_pagefault_kernel(pid_peticion, nro_pagina);
 					break;
-				case RESPUESTA_PAGE_FAULT_MK:
-					pagefault_respuesta_kernel(pid, nro_pagina);
-					break;
+
 			case -1:
 				log_error(memoria_logger, "[DESCONEXION]: KERNEL");
 				close(cliente_socket);
@@ -317,7 +315,12 @@ void atender_filesystem(int cliente_socket){
 			break;
 		case PETICION_PAGE_FAULT_FM:
 			unBuffer = recibiendo_super_paquete(fd_filesystem);
+			int pid_pagina_swap = recibir_int_del_buffer(unBuffer);
+			void* pos_pagina_swap = recibir_choclo_del_buffer(unBuffer);
+			int nro_pagina_swap = recibir_int_del_buffer(unBuffer);
 			retardo_respuesta_cpu_fs();
+			recibir_la_pagina_desde_FS( pid_pagina_swap,pos_pagina_swap,nro_pagina_swap);
+
 //				free(unBuffer);
 			//
 			break;

@@ -29,10 +29,16 @@ Pagina* victima_pagina_FIFO(tabla_paginas* tabla);
 /************************COMUNICACION*CON*CPU*******************************/
 void devolver_marco_o_pagefault_cpu(int pid, int nro_pagina);
 void pagefault_respuesta_cpu();
-void atender_pagefault_kernel(int pid, int nro_pagina);
-void pagefault_respuesta_kernel(int pid, int nro_pagina);
 void lectura_pagina_bloque_cpu(int dir_fisica);
 void escritura_pagina_bloque_cpu(int dir_fisica, uint32_t valor_uint32);
+
+/************************COMUNICACION*CON*KERNEL*******************************/
+void atender_pagefault_kernel(int pid, int nro_pagina);
+void responder_pagefault_a_kernel(int pid);
+/************************COMUNICACION*CON*FILESYSTEM*******************************/
+void pedir_a_FS_la_pagina(Pagina* una_pagina, int pid, int nro_pagina);
+void recibir_la_pagina_desde_FS(int pid, void* pagina_swap, int nro_pagina);
+
 
 /************TODO INICIAR LOS MARCOS***************/
 marco* crear_marco(int base, bool presente, int index);
