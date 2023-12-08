@@ -68,7 +68,7 @@ void leer_log(){
 void inicializar_memoria(){
 
 	espacio_usuario = malloc(TAM_MEMORIA);
-	memset(espacio_usuario,',',TAM_MEMORIA);
+//	memset(espacio_usuario,',',TAM_MEMORIA);
 	if(espacio_usuario == NULL){
 			log_error(memoria_logger, "Fallo Malloc");
 	    	exit(1);
@@ -76,15 +76,19 @@ void inicializar_memoria(){
 	tablas = dictionary_create();
 	log_info(memoria_logger, "Se inicia memoria con Paginacion.\n");
 	log_info(memoria_logger, "Algoritmo de reemplazo a usar: %s\n", ALGORITMO_REEMPLAZO);
+
 	lst_marco = list_create();
 	int cant_marcos = TAM_MEMORIA/TAM_PAGINA;
 
-	for(int i=0;i<= cant_marcos;i++){
-		marco* nuevo_marco  = crear_marco(TAM_PAGINA*i, true);
+	for(int i=0;i< cant_marcos;i++){
+		marco* nuevo_marco  = crear_marco(TAM_PAGINA*i, true, i);
 
 		list_add(lst_marco,nuevo_marco);
 
 	}
+
+	pthread_mutex_init(&mutex_lst_marco, NULL);
+	pthread_mutex_init(&mutex_espacio_usuario, NULL);
 
 }
 
@@ -203,6 +207,13 @@ void atender_kernel(int cliente_socket) {
 					atender_mensajes_kernel(unBuffer);
 //					free(unBuffer);
 					break;
+				case PETICION_PAGE_FAULT_KM:
+					unBuffer = recibiendo_super_paquete(fd_kernel);
+					int pid_peticion = recibir_int_del_buffer(unBuffer);
+					int nro_pagina = recibir_int_del_buffer(unBuffer);
+					atender_pagefault_kernel(pid_peticion, nro_pagina);
+					break;
+
 			case -1:
 				log_error(memoria_logger, "[DESCONEXION]: KERNEL");
 				close(cliente_socket);
@@ -221,32 +232,52 @@ void atender_kernel(int cliente_socket) {
 }
 void atender_cpu(int cliente_socket) {
     int control_key = 1;
-    //[FALTA]Enviar tamaño de pagina a CPU
+    //Enviar tamaño de pagina a CPU _
+    t_paquete* un_paquete = crear_super_paquete(PETICION_INFO_RELEVANTE_CM);
+    cargar_int_al_super_paquete(un_paquete, TAM_PAGINA);
+    enviar_paquete(un_paquete, fd_cpu);
+    eliminar_paquete(un_paquete);
 	while(control_key){
 		t_buffer* unBuffer;
 		int cod_op = recibir_operacion(cliente_socket);
 		switch(cod_op) {
 				case PETICION_INFO_RELEVANTE_CM:
 					unBuffer = recibiendo_super_paquete(fd_cpu);
-//					free(unBuffer);
-					//
+
 					break;
 				case PETICION_DE_INSTRUCCIONES_CM:
 					unBuffer = recibiendo_super_paquete(fd_cpu); //recibo el [pId] y el [PC]
 					int pid_buffer = recibir_int_del_buffer(unBuffer);
 					int ip_buffer = recibir_int_del_buffer(unBuffer);
+					retardo_respuesta_cpu_fs();
 					enviar_instrucciones_a_cpu(pid_buffer,ip_buffer);
 
 					break;
 				case PETICION_DE_EJECUCION_CM:
 					unBuffer = recibiendo_super_paquete(fd_cpu);
-//					free(unBuffer);
 
 					break;
 				case CONSULTA_DE_PAGINA_CM:
 					unBuffer = recibiendo_super_paquete(fd_cpu);
-//					free(unBuffer);
-					//
+					int pid_consulta = recibir_int_del_buffer(unBuffer);
+					int nro_pagina = recibir_int_del_buffer(unBuffer);
+					retardo_respuesta_cpu_fs();
+					devolver_marco_o_pagefault_cpu(pid_consulta, nro_pagina);
+					break;
+				case LECTURA_BLOQUE_CM: //[int pid][int dir_fisica]
+					unBuffer = recibiendo_super_paquete(fd_cpu);
+					int pid_lectura = recibir_int_del_buffer(unBuffer);
+					int dir_fisica_lect = recibir_int_del_buffer(unBuffer);
+					retardo_respuesta_cpu_fs();
+					lectura_pagina_bloque_cpu(pid_lectura, dir_fisica_lect);
+					break;
+				case ESCRITURA_BLOQUE_CM: ////[int pid][int dir_fisica][uint32_t info]
+					unBuffer = recibiendo_super_paquete(fd_cpu);
+					int pid_proceso_escritura = recibir_int_del_buffer(unBuffer);
+					int dir_fisica_escr = recibir_int_del_buffer(unBuffer);
+					uint32_t valor_uint32 = (uint32_t)recibir_int_del_buffer(unBuffer);
+					retardo_respuesta_cpu_fs();
+					escritura_pagina_bloque_cpu(pid_proceso_escritura, dir_fisica_escr, valor_uint32);
 					break;
 			case -1:
 				log_error(memoria_logger, "[DESCONEXION]: CPU");
@@ -274,27 +305,41 @@ void atender_filesystem(int cliente_socket){
 	switch(cod_op) {
 		case PETICION_ASIGNACION_BLOQUE_SWAP_FM:
 			unBuffer = recibiendo_super_paquete(fd_filesystem);
+			retardo_respuesta_cpu_fs();
 			asignar_posicions_de_SWAP_a_tabla_de_paginas(unBuffer);
 			free(unBuffer);
 			//
 			break;
 		case LIBERAR_PAGINAS_FM:
 			unBuffer = recibiendo_super_paquete(fd_filesystem);
+			retardo_respuesta_cpu_fs();
 //				free(unBuffer);
 			//
 			break;
 		case PETICION_PAGE_FAULT_FM:
 			unBuffer = recibiendo_super_paquete(fd_filesystem);
+			int pid_pagina_swap = recibir_int_del_buffer(unBuffer);
+			void* pos_pagina_swap = recibir_choclo_del_buffer(unBuffer);
+			int nro_pagina_swap = recibir_int_del_buffer(unBuffer);
+			retardo_respuesta_cpu_fs();
+			recibir_la_pagina_desde_FS( pid_pagina_swap,pos_pagina_swap,nro_pagina_swap);
+
 //				free(unBuffer);
 			//
 			break;
-		case CARGAR_INFO_DE_LECTURA_FM:
+		case CARGAR_INFO_DE_LECTURA_FM: // Cargar info del FS a la Memoria
+			//[int dir_fisica | uint32_t info]
 			unBuffer = recibiendo_super_paquete(fd_filesystem);
-//				free(unBuffer);
+			retardo_respuesta_cpu_fs();
+			leer_archivo_de_FS_y_cargarlo_en_memoria(unBuffer);
+//			free(unBuffer);
 			//
 			break;
-		case GUARDAR_INFO_FM:
+		case GUARDAR_INFO_FM: // Guardar info de Memoria a FS
+			//[int dir_fisica]
 			unBuffer = recibiendo_super_paquete(fd_filesystem);
+			retardo_respuesta_cpu_fs();
+			leer_todo_el_marco_de_la_dir_fisica_y_enviarlo_a_FS(unBuffer);
 //				free(unBuffer);
 			//
 			break;
@@ -401,5 +446,8 @@ void bloquear_lista_tablas(){
 void desbloquear_lista_tablas(){
 	log_info(memoria_log_obligatorio, "[SEMAFORO]: Desbloqueo lista de tabla \n");
 	pthread_mutex_unlock(&m_tablas);
+}
+void retardo_respuesta_cpu_fs(){
+	usleep(RETARDO_RESPUESTA*1000);
 }
 

@@ -7,7 +7,7 @@
 #include "../include/pagina.h"
 
 int contador_accesos = 0;    // Para LRU
-int ordenCargaGlobal = 0;    // Para FIFO
+//int ordenCargaGlobal = 0;    // Para FIFO - Fue puesto como GLOBAL en m_gestor.h
 tabla_paginas* crear_tabla_paginas(int pid) {
 	tabla_paginas* nueva_tabla = malloc(sizeof(tabla_paginas));
 
@@ -85,10 +85,11 @@ void liberar_paginas(tabla_paginas* una_tabla, int  dirLogica, int tamanio, int 
 void destruir_pagina(Pagina* pagina) {
     free(pagina);
 }
-marco* crear_marco(int base, bool presente){
+marco* crear_marco(int base, bool presente, int index){
 	marco *nuevo_marco = malloc(sizeof(marco));
 	nuevo_marco->base = base;
 	nuevo_marco->libre = presente;
+	nuevo_marco->pid = index;
 	pthread_mutex_init(&(nuevo_marco->mutex), NULL);
 	return nuevo_marco;
 }
@@ -216,6 +217,115 @@ Pagina* obtener_pagina_por_marco(marco* un_marco){
 	}
 	return list_get(una_tabla->paginas, nro_pagina-1);
 }
+/************************PAGEFAULT*******************************/
+void devolver_marco_o_pagefault_cpu(int pid, int nro_pagina){
+	int valor_lectura = 0;
+	proceso_recibido* un_proceso = obtener_proceso_por_id(pid, list_procss_recibidos);
+	Pagina* una_pagina = list_get(un_proceso->tabla_paginas,nro_pagina);
+	if(una_pagina->presente){
+		t_paquete* un_paquete = crear_super_paquete(CONSULTA_DE_PAGINA_CM);
+		valor_lectura = una_pagina->marco;
+		cargar_int_al_super_paquete(un_paquete, valor_lectura);
+		enviar_paquete(un_paquete, fd_cpu);
+		eliminar_paquete(un_paquete);
+	}else{
+		pagefault_respuesta_cpu();
+	}
+
+}
+
+void pagefault_respuesta_cpu(){
+	int respuesta = -1;
+	t_paquete* un_paquete = crear_super_paquete(CONSULTA_DE_PAGINA_CM);
+	cargar_int_al_super_paquete(un_paquete, respuesta);
+	enviar_paquete(un_paquete, fd_cpu);
+	eliminar_paquete(un_paquete);
+}
+
+void lectura_pagina_bloque_cpu(int pid, int dir_fisica){
+	void* un_valor = malloc(sizeof(uint32_t));
+
+	pthread_mutex_lock(&mutex_espacio_usuario);
+	memcpy(un_valor,espacio_usuario + dir_fisica,sizeof(uint32_t));
+	logg_acceso_a_espacio_de_usuario(pid, 0, dir_fisica);
+	pthread_mutex_unlock(&mutex_espacio_usuario);
+
+	t_paquete* un_paquete = crear_super_paquete(LECTURA_BLOQUE_CM);
+	cargar_choclo_al_super_paquete(un_paquete, un_valor, sizeof(uint32_t));
+	enviar_paquete(un_paquete, fd_cpu);
+	eliminar_paquete(un_paquete);
+
+}
+
+void escritura_pagina_bloque_cpu(int pid, int dir_fisica, uint32_t valor_uint32){
+
+	pthread_mutex_lock(&mutex_espacio_usuario);
+	memcpy(espacio_usuario + dir_fisica, &valor_uint32, sizeof(uint32_t));
+	logg_acceso_a_espacio_de_usuario(pid, 1, dir_fisica);
+	pthread_mutex_unlock(&mutex_espacio_usuario);
+
+	t_paquete* un_paquete = crear_super_paquete(ESCRITURA_BLOQUE_CM);
+	char* mensaje = "OK";
+	cargar_string_al_super_paquete(un_paquete, mensaje);
+	enviar_paquete(un_paquete, fd_cpu);
+	eliminar_paquete(un_paquete);
+}
+
+void atender_pagefault_kernel(int pid, int nro_pagina){
+	//Se asume que la pagina pedido esta en pagefault
+	proceso_recibido* un_proceso = obtener_proceso_por_id(pid, list_procss_recibidos);
+	Pagina* una_pagina = list_get(un_proceso->tabla_paginas,nro_pagina);
+	marco* un_marco = pedir_un_marco_de_la_lista_de_marcos();
+	//elegir un marco objetivo
+	una_pagina->ptr_marco = un_marco;
+	una_pagina->marco = un_marco->pid;
+	pedir_a_FS_la_pagina(una_pagina,un_proceso->pid,nro_pagina);
+
+	//
+
+
+
+}
+void responder_pagefault_a_kernel(int pid){
+	//TODO LOGICA DE LA RESPUESTA DE KERNEL
+	t_paquete* un_paquete = crear_super_paquete(RESPUESTA_PAGE_FAULT_MK);
+	//TODO devolver el pid a kernel, setearlo en pid_respuesta
+	int pid_respuesta = pid;
+	cargar_int_al_super_paquete(un_paquete, pid_respuesta);
+	enviar_paquete(un_paquete, fd_kernel);
+	eliminar_paquete(un_paquete);
+}
+
+void pedir_a_FS_la_pagina(Pagina* una_pagina, int pid, int nro_pagina){
+	t_paquete* un_paquete = crear_super_paquete(PETICION_PAGE_FAULT_FM);
+	cargar_int_al_super_paquete(un_paquete, una_pagina->pos_en_swap);
+	cargar_int_al_super_paquete(un_paquete, pid);
+	cargar_int_al_super_paquete(un_paquete, nro_pagina);
+	enviar_paquete(un_paquete, fd_filesystem);
+	eliminar_paquete(un_paquete);
+
+}
+void recibir_la_pagina_desde_FS(int pid, void* pagina_swap, int nro_pagina){
+	proceso_recibido* un_proceso = obtener_proceso_por_id(pid, list_procss_recibidos);
+	Pagina* una_pagina = list_get(un_proceso->tabla_paginas,nro_pagina);
+
+	pthread_mutex_lock(&mutex_espacio_usuario);
+	memcpy(espacio_usuario + una_pagina->ptr_marco->base, pagina_swap, TAM_PAGINA);
+	pthread_mutex_unlock(&mutex_espacio_usuario);
+
+	logg_acceso_a_espacio_de_usuario(pid, 1, una_pagina->ptr_marco->base);
+	logg_lectura_pagina_swap(pid, una_pagina->marco, nro_pagina);
+
+	responder_pagefault_a_kernel(un_proceso->pid);
+}
+
+
+
+
+
+
+
+
 
 /************************SEMAFOROS*******************************/
 void bloquear_pagina(Pagina* pagina){
