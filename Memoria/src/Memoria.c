@@ -88,6 +88,7 @@ void inicializar_memoria(){
 	}
 
 	pthread_mutex_init(&mutex_lst_marco, NULL);
+	pthread_mutex_init(&mutex_espacio_usuario, NULL);
 
 }
 
@@ -263,18 +264,20 @@ void atender_cpu(int cliente_socket) {
 					retardo_respuesta_cpu_fs();
 					devolver_marco_o_pagefault_cpu(pid_consulta, nro_pagina);
 					break;
-				case LECTURA_BLOQUE_CM:
+				case LECTURA_BLOQUE_CM: //[int pid][int dir_fisica]
 					unBuffer = recibiendo_super_paquete(fd_cpu);
+					int pid_lectura = recibir_int_del_buffer(unBuffer);
 					int dir_fisica_lect = recibir_int_del_buffer(unBuffer);
 					retardo_respuesta_cpu_fs();
-					lectura_pagina_bloque_cpu(dir_fisica_lect);
+					lectura_pagina_bloque_cpu(pid_lectura, dir_fisica_lect);
 					break;
-				case ESCRITURA_BLOQUE_CM:
+				case ESCRITURA_BLOQUE_CM: ////[int pid][int dir_fisica][uint32_t info]
 					unBuffer = recibiendo_super_paquete(fd_cpu);
-					int dir_fisica_escr =recibir_int_del_buffer(unBuffer);
+					int pid_proceso_escritura = recibir_int_del_buffer(unBuffer);
+					int dir_fisica_escr = recibir_int_del_buffer(unBuffer);
 					uint32_t valor_uint32 = (uint32_t)recibir_int_del_buffer(unBuffer);
 					retardo_respuesta_cpu_fs();
-					escritura_pagina_bloque_cpu(dir_fisica_escr, valor_uint32);
+					escritura_pagina_bloque_cpu(pid_proceso_escritura, dir_fisica_escr, valor_uint32);
 					break;
 			case -1:
 				log_error(memoria_logger, "[DESCONEXION]: CPU");
@@ -324,15 +327,19 @@ void atender_filesystem(int cliente_socket){
 //				free(unBuffer);
 			//
 			break;
-		case CARGAR_INFO_DE_LECTURA_FM:
+		case CARGAR_INFO_DE_LECTURA_FM: // Cargar info del FS a la Memoria
+			//[int dir_fisica | uint32_t info]
 			unBuffer = recibiendo_super_paquete(fd_filesystem);
 			retardo_respuesta_cpu_fs();
-//				free(unBuffer);
+			leer_archivo_de_FS_y_cargarlo_en_memoria(unBuffer);
+//			free(unBuffer);
 			//
 			break;
-		case GUARDAR_INFO_FM:
+		case GUARDAR_INFO_FM: // Guardar info de Memoria a FS
+			//[int dir_fisica]
 			unBuffer = recibiendo_super_paquete(fd_filesystem);
 			retardo_respuesta_cpu_fs();
+			leer_todo_el_marco_de_la_dir_fisica_y_enviarlo_a_FS(unBuffer);
 //				free(unBuffer);
 			//
 			break;

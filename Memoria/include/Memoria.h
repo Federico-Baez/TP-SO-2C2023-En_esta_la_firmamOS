@@ -5,6 +5,7 @@
 #include "proceso_recibido.h"
 #include "swap.h"
 #include "pagina.h"
+#include "marcos.h"
 
 char* IP_MEMORIA;
 char* PUERTO_ESCUCHA;
@@ -46,6 +47,7 @@ t_list* list_instruciones;
 /********SEMAFORO GENERAL PARA LA TABLA*******/
 pthread_mutex_t m_tablas;
 pthread_mutex_t mutex_lst_marco;
+pthread_mutex_t mutex_espacio_usuario;
 
 
 /*----------------TODO INIT ------------------------*/

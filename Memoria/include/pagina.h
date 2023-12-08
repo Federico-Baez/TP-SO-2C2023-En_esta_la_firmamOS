@@ -9,7 +9,7 @@
 #define PAGINA_H_
 #include "m_gestor.h"
 #include "proceso_recibido.h"
-
+#include "servicios_memoria.h"
 
 
 
@@ -29,8 +29,8 @@ Pagina* victima_pagina_FIFO(tabla_paginas* tabla);
 /************************COMUNICACION*CON*CPU*******************************/
 void devolver_marco_o_pagefault_cpu(int pid, int nro_pagina);
 void pagefault_respuesta_cpu();
-void lectura_pagina_bloque_cpu(int dir_fisica);
-void escritura_pagina_bloque_cpu(int dir_fisica, uint32_t valor_uint32);
+void lectura_pagina_bloque_cpu(int pid, int dir_fisica);
+void escritura_pagina_bloque_cpu(int pid, int dir_fisica, uint32_t valor_uint32);
 
 /************************COMUNICACION*CON*KERNEL*******************************/
 void atender_pagefault_kernel(int pid, int nro_pagina);

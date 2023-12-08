@@ -20,6 +20,8 @@ void agregar_proceso_a_listado(t_buffer* unBuffer, t_list* lst_procesos_recibido
 	//Luego agrego una Pagina a la lista de TABLA Paginas segun la cantidad
 	for(int i=0; i<cantidad_paginas_necesarias; i++){
 		Pagina* una_pagina = malloc(sizeof(Pagina));
+		una_pagina->nro_pagina = i;
+		una_pagina->pid_proceso = un_proceso->pid;
 		list_add(un_proceso->tabla_paginas, una_pagina);
 	}
 

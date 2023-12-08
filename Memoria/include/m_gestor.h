@@ -33,7 +33,7 @@ typedef struct Pagina Pagina;
 typedef struct {
     int base;
     bool libre;
-    int pid;
+    int pid; //Nro de marco
     int nro_pagina;
     Pagina* ptr_pagina;
     pthread_mutex_t mutex;
@@ -41,6 +41,8 @@ typedef struct {
 
 
 struct Pagina{
+	int pid_proceso;
+	int nro_pagina;
     bool presente;         // la página está en memoria o en disco
     bool modificado;
     int tamanio_ocupado;
@@ -102,6 +104,7 @@ extern t_dictionary* tablas;
 extern t_list* instrucciones_para_cpu;
 
 extern pthread_mutex_t mutex_lst_marco;
+extern pthread_mutex_t mutex_espacio_usuario;
 
 void* buscar_tabla(int pid);
 

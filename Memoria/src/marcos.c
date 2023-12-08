@@ -55,13 +55,19 @@ marco* pedir_un_marco_de_la_lista_de_marcos(){
 
 void guardar_marco_en_swap(marco* un_marco){
 	void* contenido_del_marco = malloc(TAM_PAGINA);
+
+	pthread_mutex_lock(&mutex_espacio_usuario);
 	memcpy(contenido_del_marco, espacio_usuario + un_marco->base, TAM_PAGINA);
+	logg_acceso_a_espacio_de_usuario(un_marco->ptr_pagina->pid_proceso, 0, un_marco->base);
+	pthread_mutex_unlock(&mutex_espacio_usuario);
 
 	t_paquete* un_paquete = crear_super_paquete(GUARDAR_MARCO_EN_SWAP_FM);
 	cargar_int_al_super_paquete(un_paquete, un_marco->ptr_pagina->pos_en_swap);
 	cargar_choclo_al_super_paquete(un_paquete, contenido_del_marco, TAM_PAGINA);
 	enviar_paquete(un_paquete, fd_filesystem);
 	eliminar_paquete(un_paquete);
+
+	logg_escritura_pagina_en_swap(un_marco->ptr_pagina->pid_proceso, un_marco->pid, un_marco->ptr_pagina->nro_pagina);
 }
 
 
@@ -88,7 +94,34 @@ marco* elegir_victima_LRU(){
 }
 
 
+void leer_archivo_de_FS_y_cargarlo_en_memoria(void* un_buffer){
+	int dir_fisica = recibir_int_del_buffer(un_buffer);
+	void* info_recibida = recibir_choclo_del_buffer(un_buffer);
+	//[FALTA] LOG_Obligatorio - ESCRITURA
+	memcpy(espacio_usuario + dir_fisica, info_recibida, TAM_PAGINA);
+	free(info_recibida);
 
+	//Avisar a FileSystem que la carga fue exitosa
+	t_paquete* un_paquete = crear_super_paquete(RPTA_CARGAR_INFO_DE_LECTURA_MF);
+	cargar_string_al_super_paquete(un_paquete, "OK");
+	enviar_paquete(un_paquete, fd_filesystem);
+	eliminar_paquete(un_paquete);
+}
+
+void leer_todo_el_marco_de_la_dir_fisica_y_enviarlo_a_FS(void* un_buffer){
+	int dir_fisica = recibir_int_del_buffer(un_buffer);
+	void* un_marco = malloc(TAM_PAGINA);
+	//[FALTA] LOG_Obligatorio - LECTURA
+	memcpy(un_marco, espacio_usuario + dir_fisica, TAM_PAGINA);
+
+	//Enviar a FS
+	t_paquete* un_paquete = crear_super_paquete(GUARDAR_INFO_FM);
+	cargar_choclo_al_super_paquete(un_paquete, un_marco, TAM_PAGINA);
+	enviar_paquete(un_paquete, fd_filesystem);
+	eliminar_paquete(un_paquete);
+
+	free(un_marco);
+}
 
 
 
