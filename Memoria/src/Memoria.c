@@ -233,7 +233,7 @@ void atender_kernel(int cliente_socket) {
 }
 void atender_cpu(int cliente_socket) {
     int control_key = 1;
-    //Enviar tamaño de pagina a CPU
+    //Enviar tamaño de pagina a CPU _
     t_paquete* un_paquete = crear_super_paquete(PETICION_INFO_RELEVANTE_CM);
     cargar_int_al_super_paquete(un_paquete, TAM_PAGINA);
     enviar_paquete(un_paquete, fd_cpu);
