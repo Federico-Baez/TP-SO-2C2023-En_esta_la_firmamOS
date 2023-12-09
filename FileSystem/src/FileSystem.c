@@ -307,21 +307,21 @@ void ejecutar_f_create(char* nombre_archivo){
 
 void ejecutar_f_truncate(char* nombre_archivo, int tamanio_nuevo){
 	log_info(filesystem_log_obligatorio, "Truncar Archivo: %s - Tamaño: %d", nombre_archivo, tamanio_nuevo);
-	t_config* archivo_fcb = obtener_archivo(nombre_archivo);
-	int tamanio_viejo = config_get_int_value(archivo_fcb, "TAMANIO_ARCHIVO");
+	t_archivo_fcb* fcb = obtener_archivo(nombre_archivo);
+	int tamanio_viejo = config_get_int_value(fcb->archivo_fcb, "TAMANIO_ARCHIVO");
 	char* texto_tamanio_nuevo_archivo = malloc(10);
 	sprintf(texto_tamanio_nuevo_archivo, "%d", tamanio_nuevo);
 
 	int tamanio_restante = tamanio_nuevo;
 	if(tamanio_viejo == 0){
-		asignar_bloque_primer_truncate(archivo_fcb);
+		asignar_bloque_primer_truncate(fcb);
 		tamanio_restante = tamanio_nuevo - TAM_BLOQUE;
 	}
 
 	log_info(filesystem_logger, "El tamanio nuevo es %s", texto_tamanio_nuevo_archivo);
 
-	config_set_value(archivo_fcb, "TAMANIO_ARCHIVO", texto_tamanio_nuevo_archivo);
-	config_save(archivo_fcb);
+	config_set_value(fcb->archivo_fcb, "TAMANIO_ARCHIVO", texto_tamanio_nuevo_archivo);
+	config_save(fcb->archivo_fcb);
 
 	log_info(filesystem_logger, "El tamanio viejo era %d", tamanio_viejo);
 
@@ -334,7 +334,7 @@ void ejecutar_f_truncate(char* nombre_archivo, int tamanio_nuevo){
 		}
 
 		log_info(filesystem_logger, "La cantidad de bloques a agregar en %s es %d", nombre_archivo, cantidad_bloques_a_agregar);
-		asignar_bloques(cantidad_bloques_a_agregar, archivo_fcb);
+		asignar_bloques(cantidad_bloques_a_agregar, fcb);
 
 	} else if(tamanio_restante < tamanio_viejo){
 		// REDUCIR
@@ -343,18 +343,20 @@ void ejecutar_f_truncate(char* nombre_archivo, int tamanio_nuevo){
 		int cantidad_bloques_a_sacar = cuenta_bloque_viejo.quot - cuenta_bloque_nuevo.quot;
 
 		log_info(filesystem_logger, "La cantidad de bloques a sacar en %s es %d", nombre_archivo, cantidad_bloques_a_sacar);
-		sacar_bloques(cantidad_bloques_a_sacar, archivo_fcb);
+		sacar_bloques(cantidad_bloques_a_sacar, fcb);
 	} else{
 		log_info(filesystem_logger, "No hay que sacar ni agregar ningun bloque");
 	}
+
+	//TODO: modificar tabla fat
 }
 
 void ejecutar_f_read(char* nombre_archivo, int dir_fisica, int posicion_a_leer, int pid){
 	log_info(filesystem_log_obligatorio, "Leer Archivo: %s - Puntero: %d - Memoria: %d", nombre_archivo, posicion_a_leer, dir_fisica);
-	t_config* archivo_fcb = obtener_archivo(nombre_archivo);
+	t_archivo_fcb* archivo_fcb = obtener_archivo(nombre_archivo);
 
 	//TODO: Leer la información correspondiente de los bloques a partir del puntero recibido
-	char* datos_leidos = leer_datos(archivo_fcb, posicion_a_leer);
+	char* datos_leidos = "Datos leidos"/*leer_datos(archivo_fcb, posicion_a_leer)*/;
 
 	//Esta información se deberá enviar a la Memoria para ser escrita a partir de la dirección física recibida por parámetro
 	enviar_para_escribir_valor_leido(datos_leidos, dir_fisica, pid, fd_memoria);
@@ -363,84 +365,70 @@ void ejecutar_f_read(char* nombre_archivo, int dir_fisica, int posicion_a_leer, 
 
 void ejecutar_f_write(char* nombre_archivo, int dir_fisica, int posicion_a_escribir, int pid){
 	log_info(filesystem_log_obligatorio, "Escribir Archivo: %s - Puntero: %d - Memoria: %d", nombre_archivo, posicion_a_escribir, dir_fisica);
-	t_config* archivo_fcb = obtener_archivo(nombre_archivo);
+	t_archivo_fcb* archivo_fcb = obtener_archivo(nombre_archivo);
 
 	//Solicitar a Memoria la información que se encuentra a partir de la dirección física
 	enviar_para_leer_valor(dir_fisica, pid, fd_memoria);
 	char* datos_a_escribir = recibir_valor_leido(fd_memoria);
 
 	//TODO: Escribir los datos en los bloques correspondientes del archivo a partir del puntero recibido.
-	escribir_datos(archivo_fcb, posicion_a_escribir, datos_a_escribir);
+	//escribir_datos(archivo_fcb, posicion_a_escribir, datos_a_escribir);
 }
 
-void asignar_bloques(int cant_bloques, t_config* archivo){
-	uint32_t bloque_inicial = config_get_int_value(archivo, "BLOQUE_INICIAL");
-	char* nombre_archivo = config_get_string_value(archivo, "NOMBRE_ARCHIVO");
+void asignar_bloques(int cant_bloques, t_archivo_fcb* fcb){
+	uint32_t bloque_inicial = config_get_int_value(fcb->archivo_fcb, "BLOQUE_INICIAL");
+	//char* nombre_archivo = config_get_string_value(fcb->archivo_fcb, "NOMBRE_ARCHIVO");
 
-	uint32_t bloque_actual = ultimo_bloque_archivo(bloque_inicial, nombre_archivo);
+	t_bloque_fat* bloque_actual = ultimo_bloque_archivo(bloque_inicial, fcb);
 
 	for(int i = cant_bloques; i > 0; i--){
-		uint32_t bloque_libre = buscar_bloque_libre();
-		uint32_t *nuevo_bloque_libre = malloc(sizeof(uint32_t));
-		*nuevo_bloque_libre = bloque_libre;
-		list_replace(buffer_tabla_fat, bloque_actual, *nuevo_bloque_libre);
+		t_bloque_fat* nuevo_bloque_libre = buscar_bloque_libre();
+		bloque_actual->puntero_siguiente = nuevo_bloque_libre->id_bloque;
+		list_replace(tabla_fat, bloque_actual->puntero_siguiente, nuevo_bloque_libre);
 
-		log_info(filesystem_logger, "El nuevo bloque asignado es %d", bloque_libre);
+		log_info(filesystem_logger, "El nuevo bloque asignado es %d", nuevo_bloque_libre->id_bloque);
 
-		bloque_actual = *nuevo_bloque_libre;
+		bloque_actual = nuevo_bloque_libre;
 	}
 
-	list_replace(buffer_tabla_fat, bloque_actual, UINT32_MAX);
+	//TODO: modificar archivo fat
 }
 
-void sacar_bloques(int cant_bloques, t_config* archivo){
-	uint32_t bloque_inicial = config_get_int_value(archivo, "BLOQUE_INICIAL");
-	char* nombre_archivo = config_get_string_value(archivo, "NOMBRE_ARCHIVO");
+void sacar_bloques(int cant_bloques, t_archivo_fcb* fcb){
+	uint32_t bloque_inicial = config_get_int_value(fcb->archivo_fcb, "BLOQUE_INICIAL");
+	//char* nombre_archivo = config_get_string_value(fcb->archivo_fcb, "NOMBRE_ARCHIVO");
 
-	uint32_t bloque_actual = (uint32_t)ultimo_bloque_archivo(bloque_inicial, nombre_archivo);
-
-	uint32_t* array_bloques_de_archivo = obtener_bloques_de_archivo(bloque_inicial, nombre_archivo);
-
-	uint32_t* bloque_a_eliminar = malloc(sizeof(uint32_t));
+	t_bloque_fat* bloque_a_sacar = malloc(sizeof(uint32_t));
 
 	for(int i = cant_bloques; i > 0; i--){
-		int posicion_ultimo_bloque = 0;
-
-		bloque_actual = list_remove(array_bloques_de_archivo, list_size(array_bloques_de_archivo)-1);
-		list_replace(buffer_tabla_fat, bloque_actual, 0);
+		bloque_a_sacar = ultimo_bloque_archivo(bloque_inicial, fcb);
+		bloque_a_sacar->puntero_siguiente = 0;
+		bloque_a_sacar->esta_libre = 1;
+		list_replace(tabla_fat, bloque_a_sacar->id_bloque, bloque_a_sacar);
+		//TODO: modificar archivo fat
 	}
-
-	bloque_actual = list_get(array_bloques_de_archivo, list_size(array_bloques_de_archivo)-1);
-	list_replace(buffer_tabla_fat, bloque_actual, UINT32_MAX);
 }
 
-/*uint32_t* obtener_bloques_de_archivo(uint32_t bloque_actual, t_archivo_fcb* fcb){
-	//int fd_fat = open(PATH_FAT, O_RDWR);
-	uint32_t* bloques_de_archivo;
+t_list* obtener_bloques_de_archivo(uint32_t bloque_inicial, t_archivo_fcb* fcb){
+	char* nombre_archivo = config_get_string_value(fcb->archivo_fcb, "NOMBRE_ARCHIVO");
+	t_bloque_fat* bloque_actual = list_get(tabla_fat, bloque_inicial);
+	t_list* bloques_de_archivo = list_create();
 
-	uint32_t bloque_actual = mmap(NULL, tamanio_fat, PROT_READ, MAP_SHARED, fd_fat, config_get_int_value(fcb->archivo_fcb, "BLOQUE_INICIAL"));
+	list_add(bloques_de_archivo, bloque_actual);
 
-	for(uint32_t i=0; i < tamanio_fat; i++){
-		log_info(filesystem_log_obligatorio, "Acceso Bloque - Archivo: %s - Bloque Archivo: %d - Bloque FS: %d", config_get_int_value(fcb->archivo_fcb, "NOMBRE_ARCHIVO"), i, bloque_actual);
-		usleep(RETARDO_ACCESO_BLOQUE*1000);
-		//list_add(bloques_de_archivo, bloque_actual);
-		bloque_actual[i];
-		bloque_actual = /*list_get(buffer_tabla_fat, bloque_actual)*/ /*(buffer_tabla_fat + bloque_actual);
+	for(int i=1; bloque_actual->puntero_siguiente != UINT32_MAX; i++){
+		log_info(filesystem_log_obligatorio, "Acceso Bloque - Archivo: %s - Bloque Archivo: %d - Bloque FS: %d", nombre_archivo, i, bloque_inicial);
+		usleep(RETARDO_ACCESO_BLOQUE);
+		bloque_actual = list_get(tabla_fat, bloque_actual->puntero_siguiente);
+		list_add(bloques_de_archivo, bloque_actual);
 	}
 
 	return bloques_de_archivo;
-}*/
+}
 
-uint32_t ultimo_bloque_archivo(uint32_t bloque_inicial, char* nombre_archivo){
-	uint32_t bloque_actual = bloque_inicial;
-
-	for(int i=1; /*list_get(buffer_tabla_fat, bloque_actual)*/ *(buffer_tabla_fat + bloque_actual) != UINT32_MAX; i++){
-		log_info(filesystem_log_obligatorio, "Acceso Bloque - Archivo: %s - Bloque Archivo: %d - Bloque FS: %d", nombre_archivo, i, bloque_actual);
-		usleep(RETARDO_ACCESO_BLOQUE*1000);
-		bloque_actual = /*list_get(buffer_tabla_fat, bloque_actual)*/ *(buffer_tabla_fat + bloque_actual);
-	}
-
-	return bloque_actual;
+t_bloque_fat* ultimo_bloque_archivo(uint32_t bloque_inicial, t_archivo_fcb* fcb){
+	t_list* bloques_de_archivo = obtener_bloques_de_archivo(bloque_inicial, fcb);
+	return list_get(bloques_de_archivo, list_size(bloques_de_archivo)-1);
 }
 
 t_archivo_fcb* buscar_fcb(char* nombre_archivo){
@@ -454,35 +442,39 @@ t_archivo_fcb* buscar_fcb(char* nombre_archivo){
 	return NULL;
 }
 
-t_config* obtener_archivo(char* nombre_archivo){
+t_archivo_fcb* obtener_archivo(char* nombre_archivo){
 	for(int i = 0; i < list_size(lista_fcbs); i++){
 		t_archivo_fcb* archivo_buscado = list_get(lista_fcbs, i);
 
 		if(strcmp(archivo_buscado->nombre, nombre_archivo) == 0){
-			return archivo_buscado->archivo_fcb;
+			return archivo_buscado;
 		}
 	}
 	return NULL;
 }
 
-void asignar_bloque_primer_truncate(t_config* archivo_fcb){
-	int bloque_inicial = buscar_bloque_libre();
+void asignar_bloque_primer_truncate(t_archivo_fcb* fcb){
+	t_bloque_fat* bloque_inicial = buscar_bloque_libre();
 	char* text_bloque_inicial = malloc(10);
-	sprintf(text_bloque_inicial, "%d", bloque_inicial);
-	config_set_value(archivo_fcb, "BLOQUE_INICIAL", bloque_inicial);
-	config_save(archivo_fcb);
+	sprintf(text_bloque_inicial, "%d", bloque_inicial->id_bloque);
+	config_set_value(fcb->archivo_fcb, "BLOQUE_INICIAL", text_bloque_inicial);
+	config_save(fcb->archivo_fcb);
 }
 
-uint32_t buscar_bloque_libre(){ //busca un bloque libre y lo ocupa
-	for(int i = 0; i < tamanio_fat; i++){
-		if(list_get(buffer_tabla_fat, i) == NULL){
-			list_replace(buffer_tabla_fat, i, UINT32_MAX);
-			//valor_entrada_fat, le asignaria UINT32_MAX de momento
+t_bloque_fat* buscar_bloque_libre(){ //busca un bloque libre y lo ocupa
+	for(int i = 0; i < (CANT_BLOQUES_TOTAL - CANT_BLOQUES_SWAP); i++){
+		t_bloque_fat* bloque = list_get(tabla_fat, i);
+		if(bloque->esta_libre){
+			bloque->puntero_siguiente = UINT32_MAX;
+			bloque->esta_libre = 0;
+			list_replace(tabla_fat, bloque->id_bloque, bloque);
+			//TODO: modificar archivo fat, el TODO va aca?
+
 			log_info(filesystem_log_obligatorio, "Acceso FAT - Entrada: %d - Valor: %d", i, UINT32_MAX);
-			return i;
+			return bloque;
 		}
 	}
 
 	log_error(filesystem_logger, "No hay bloques libres");
-	return 0;
+	return NULL;
 }

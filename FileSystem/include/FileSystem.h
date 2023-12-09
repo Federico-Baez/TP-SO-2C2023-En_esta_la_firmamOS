@@ -52,7 +52,7 @@ typedef struct{
 	int id_bloque;
 	int esta_libre;
 	uint32_t puntero_siguiente;
-	int eof;
+	int eof; //es necesario esto?
 }t_bloque_fat;
 
 /*typedef struct{
@@ -100,13 +100,13 @@ void ejecutar_f_create(char* nombre_archivo);
 void ejecutar_f_truncate(char* nombre_archivo, int tamanio_nuevo);
 void ejecutar_f_read(char* nombre_archivo, int dir_fisica, int posicion_a_leer, int pid);
 void ejecutar_f_write(char* nombre_archivo, int dir_fisica, int posicion_a_escribir, int pid);
-void asignar_bloques(int cant_bloques, t_config* archivo);
-void sacar_bloques(int cant_bloques, t_config* archivo);
-uint32_t* obtener_bloques_de_archivo(uint32_t bloque_actual, t_archivo_fcb* fcb);
-uint32_t ultimo_bloque_archivo(uint32_t bloque_inicial, char* nombre_archivo);
+void asignar_bloques(int cant_bloques, t_archivo_fcb* fcb);
+void sacar_bloques(int cant_bloques, t_archivo_fcb* fcb);
+t_list* obtener_bloques_de_archivo(uint32_t bloque_actual, t_archivo_fcb* fcb);
+t_bloque_fat* ultimo_bloque_archivo(uint32_t bloque_inicial, t_archivo_fcb* fcb);
 t_archivo_fcb* buscar_fcb(char* nombre_archivo);
-t_config* obtener_archivo(char* nombre_archivo);
-void asignar_bloque_primer_truncate(t_config* archivo_fcb);
-uint32_t buscar_bloque_libre();
+t_archivo_fcb* obtener_archivo(char* nombre_archivo);
+void asignar_bloque_primer_truncate(t_archivo_fcb* fcb);
+t_bloque_fat* buscar_bloque_libre();
 
 #endif /* CPU_H_ */
