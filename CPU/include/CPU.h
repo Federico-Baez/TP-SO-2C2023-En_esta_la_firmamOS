@@ -23,7 +23,6 @@ int tam_pagina;
 int marco;
 int valorMarco;
 bool interruptFlag = false;
-bool mensajeKernelFlag = false;
 
 t_log* cpu_logger;
 //t_log* cpu_log_disptach;
@@ -91,6 +90,8 @@ sem_t sem_control_peticion_marco_a_memoria;
 sem_t sem_control_peticion_lectura_a_memoria;
 sem_t sem_control_peticion_escritura_a_memoria;
 sem_t sem_control_respuesta_kernel;
+
+pthread_mutex_t mutex_interruptFlag;
 
 /*==================================*/
 

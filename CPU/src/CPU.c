@@ -102,6 +102,8 @@ void iniciar_semaforos(){
 	sem_init(&sem_control_peticion_lectura_a_memoria, 0, 0);
 	sem_init(&sem_control_peticion_escritura_a_memoria, 0, 0);
 	sem_init(&sem_control_respuesta_kernel, 0, 0);
+
+	pthread_mutex_init(&mutex_interruptFlag, NULL);
 }
 
 void destruir_semaforos(){
@@ -111,6 +113,9 @@ void destruir_semaforos(){
 	sem_destroy(&sem_control_peticion_lectura_a_memoria);
 	sem_destroy(&sem_control_peticion_escritura_a_memoria);
 	sem_destroy(&sem_control_respuesta_kernel);
+
+	pthread_mutex_destroy(&mutex_interruptFlag);
+
 	log_info(cpu_logger, "Semaforos destruidos");
 }
 
@@ -266,9 +271,11 @@ void atender_cpu_interrupt(){
 		case FORZAR_DESALOJO_KC:
 			unBuffer = recibiendo_super_paquete(fd_kernel_interrupt);
 			_manejar_interrupcion(unBuffer);
+			pthread_mutex_lock(&mutex_interruptFlag);
 			if(*interrupt_proceso_id == contexto->proceso_pid){
 				interruptFlag = true;
 			}
+			pthread_mutex_unlock(&mutex_interruptFlag);
 			free(unBuffer);
 			break;
 		case MENSAJES_POR_CONSOLA:
@@ -379,15 +386,18 @@ void atender_proceso_del_kernel(t_buffer* unBuffer){
 			break;
 		}
 		//Controlar si hay interrupciones
+		pthread_mutex_lock(&mutex_interruptFlag);
 		if(interruptFlag){
 			break;
 		}
+		pthread_mutex_unlock(&mutex_interruptFlag);
 
 	}
 	printf("Saliste del while ---------------------\n");
 
 	t_paquete* un_paquete = alistar_paquete_de_desalojo(DESALOJO_PROCESO_CPK);
 
+	pthread_mutex_lock(&mutex_interruptFlag);
 	if(interruptFlag){
 		cargar_string_al_super_paquete(un_paquete, interrupt_motivo);
 
@@ -397,8 +407,8 @@ void atender_proceso_del_kernel(t_buffer* unBuffer){
 			contexto->proceso_ip = contexto->proceso_ip + 1;
 		}
 		cargar_choclo_al_super_paquete(un_paquete, mochila->buffer->stream, mochila->buffer->size);
-
 	}
+	pthread_mutex_unlock(&mutex_interruptFlag);
 
 	if(!hay_que_desalojar_sin_mensaje){
 		enviar_paquete(un_paquete, fd_kernel_dispatch);
@@ -776,8 +786,9 @@ void destruir_estructuras_del_contexto_acttual(){
 		eliminar_paquete(mochila);
 		mochila = NULL;
 	}
-
+	pthread_mutex_lock(&mutex_interruptFlag);
 	interruptFlag = false;
+	pthread_mutex_unlock(&mutex_interruptFlag);
 	hay_que_desalojar = false;
 	hay_que_desalojar_sin_mensaje = false;
 
