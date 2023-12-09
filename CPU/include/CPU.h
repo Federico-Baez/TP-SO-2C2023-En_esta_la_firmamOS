@@ -130,7 +130,7 @@ void escribir_valor_memoria(int dir_logica, int valorAEscribir);
 uint32_t* detectar_registro(char* RX);
 t_paquete* alistar_paquete_de_desalojo(op_code code_op);
 void enviarPaqueteKernel(char* motivo);
-void enviarPaqueteKernelConInfoExtra(char* motivo, t_paquete* infoExtra);
+void enviarPaqueteKernelConInfoExtra(t_paquete* infoExtra);
 
 void simulador_de_eventos(void); //Esto es solo para las pruebas
 

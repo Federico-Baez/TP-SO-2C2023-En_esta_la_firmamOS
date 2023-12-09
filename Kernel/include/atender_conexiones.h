@@ -22,6 +22,7 @@ t_pcb* _recibir_proceso_desalojado(t_buffer* un_buffer);
 void _atender_motivo_desalojo(char* motivo_desalojo, t_buffer* un_buffer, t_pcb* un_pcb);
 void _desalojar_proceso(t_pcb* un_pcb);
 void _reubicar_pcb_de_execute_a_ready(t_pcb* un_pcb);
+t_buffer* recibir_mochila_del_buffer(t_buffer* buffer);
 
 // PAGE FAULT
 void _atender_page_fault(t_page_fault* un_page_fault);
@@ -74,5 +75,7 @@ void validar_respuesta_F_open(char* operacion, char* mensaje, t_buffer* unBuffer
 t_archivo* obtener_archivo_global(char* nombre_archivo);
 t_archivo* crear_archivo(char* nombre_archivo);
 
+
+void plp_exit(t_pcb* pcb);
 
 #endif /* ATENDER_CONEXIONES_H_ */

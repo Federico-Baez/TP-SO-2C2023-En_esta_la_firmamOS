@@ -6,7 +6,7 @@
 void deteccion_deadlock(){
 	while(1){
 //		sem_wait(&sem_nuevo_en_block);
-		pthread_mutex_lock(&mutex_lista_blocked);
+//		pthread_mutex_lock(&mutex_lista_blocked);
 		t_list* lista_posibles_deadlocks_recurso = obtener_lista_pcbs_block_recursos();
 		t_list* lista_pcbs_en_deadlock = list_create();
 
@@ -44,7 +44,7 @@ void deteccion_deadlock(){
 		}else
 			log_info(kernel_logger, "No hay procesos en DEADLOCK");
 
-		pthread_mutex_unlock(&mutex_lista_blocked);
+//		pthread_mutex_unlock(&mutex_lista_blocked);
 	}
 }
 

@@ -157,6 +157,8 @@ void atender_cpu_dispatch(){
 			//char* instruccion = recibir_string_del_buffer(unBuffer);  por ahora no es necesario, si se agrega avisar a luca
 			int estadoInstruccion = recibir_int_del_buffer(unBuffer);
 			if(estadoInstruccion == -1){
+				log_info(cpu_logger, "PID: <%d> - Voy a tener que desaloajr %d",contexto->proceso_pid,  hay_que_desalojar_sin_mensaje);
+
 				hay_que_desalojar_sin_mensaje = true;
 			}
 			sem_post(&sem_control_respuesta_kernel);
@@ -407,17 +409,25 @@ void atender_proceso_del_kernel(t_buffer* unBuffer){
 
 	}else{
 		//La mochila debe incluir el motivo del desalojo}
-		un_paquete = alistar_paquete_de_desalojo(ATENDER_INSTRUCCION_CPK);
+		log_info(cpu_logger, "Entre al ELSE");
 		if(strcmp(instruccion_split[0], "SLEEP") == 0){
 			contexto->proceso_ip = contexto->proceso_ip + 1;
 		}
-		cargar_choclo_al_super_paquete(un_paquete, mochila->buffer->stream, mochila->buffer->size);
+		log_info(cpu_logger, "Voy a alistar paquete");
+		un_paquete = alistar_paquete_de_desalojo(ATENDER_INSTRUCCION_CPK);
+		log_info(cpu_logger, "Voy a caragr mochila");
+		if(!hay_que_desalojar_sin_mensaje){
+			cargar_choclo_al_super_paquete(un_paquete, mochila->buffer->stream, mochila->buffer->size);
+		}
+		log_info(cpu_logger, "CARGUE TODO");
 	}
 	pthread_mutex_unlock(&mutex_interruptFlag);
 
 	if(!hay_que_desalojar_sin_mensaje){
+		log_info(cpu_logger, "Entre al if de hay que desalojar");
 		enviar_paquete(un_paquete, fd_kernel_dispatch);
 	}
+	log_info(cpu_logger, "Elimino paquete");
 
 	eliminar_paquete(un_paquete);
 
@@ -457,9 +467,6 @@ void iniciar_ciclo_de_instruccion(){
 	sem_wait(&sem_control_decode_execute);
 	// log_info(cpu_logger, "Paso el semaforo de DECODE -> EXECUTE");
 	ciclo_de_instruccion_execute();
-
-	string_array_destroy(instruccion_split);
-
 }
 
 void ciclo_de_instruccion_fetch(){
@@ -512,15 +519,17 @@ void ciclo_de_instruccion_execute(){
 	}else if(strcmp(instruccion_split[0], "JNZ") == 0){// [JNZ][Registro][Instruccion]
 		log_info(cpu_logger, "PID: <%d> - Ejecutando: <%s> - <%s> - <%s>", contexto->proceso_pid, instruccion_split[0], instruccion_split[1], instruccion_split[2]);
 		uint32_t* registro_referido = detectar_registro(instruccion_split[1]);
-		if(*registro_referido != 0) {
-			contexto->proceso_ip = atoi(instruccion_split[2]);
-		}else{
-			contexto->proceso_ip ++;
-		}
+//		if(*registro_referido != 0) {
+//			contexto->proceso_ip = atoi(instruccion_split[2]);
+//		}else{
+//			contexto->proceso_ip ++;
+//		}
+		contexto->proceso_ip ++;
 
 	}else if(strcmp(instruccion_split[0], "SLEEP") == 0){// [SLEEP][tiempo]
 		log_info(cpu_logger, "PID: <%d> - Ejecutando: <%s> - <%s>", contexto->proceso_pid, instruccion_split[0], instruccion_split[1]);
-		 /* Esta instrucción representa una syscall bloqueante.
+
+		/* Esta instrucción representa una syscall bloqueante.
 		 * Se deberá devolver el Contexto de Ejecución actualizado al Kernel
 		 * junto a la cantidad de segundos que va a bloquearse el proceso.*/
 		//Enviar al KERNEL: [PID][IP][AX][BX][CX][DX]["SLEEP"][Tiempo]
@@ -536,12 +545,16 @@ void ciclo_de_instruccion_execute(){
 		contexto->proceso_ip = contexto->proceso_ip + 1;
 
 		t_paquete* infoExtra = crear_super_paquete(100);
+		cargar_string_al_super_paquete(infoExtra, instruccion_split[0]);// instruccion_split[0]: instruccion
 		cargar_string_al_super_paquete(infoExtra, instruccion_split[1]);// instruccion_split[1]: recurso
 
 		//Envia a Kernel con motivo de WAIT de algun recurso
-		enviarPaqueteKernelConInfoExtra("WAIT", infoExtra);
+		enviarPaqueteKernelConInfoExtra(infoExtra);
+
+		log_info(cpu_logger, "PID: <%d> - Me voy a esperar el WAIT");
 
 		sem_wait(&sem_control_respuesta_kernel);
+		log_info(cpu_logger, "PID: <%d> - Sali de la espera del WAIT");
 
 		eliminar_paquete(infoExtra);
 
@@ -551,10 +564,11 @@ void ciclo_de_instruccion_execute(){
 		contexto->proceso_ip = contexto->proceso_ip + 1;
 
 		t_paquete* infoExtra = crear_super_paquete(100);
+		cargar_string_al_super_paquete(infoExtra, instruccion_split[0]);// instruccion_split[0]: instruccion
 		cargar_string_al_super_paquete(infoExtra, instruccion_split[1]);// instruccion_split[1]: recurso
 
 		//Envia a Kernel con motivo de SIGNAL de algun recurso
-		enviarPaqueteKernelConInfoExtra("SIGNAL", infoExtra);
+		enviarPaqueteKernelConInfoExtra(infoExtra);
 
 		sem_wait(&sem_control_respuesta_kernel);
 
@@ -586,9 +600,10 @@ void ciclo_de_instruccion_execute(){
 		contexto->proceso_ip = contexto->proceso_ip + 1;
 
 		t_paquete* infoExtra = crear_super_paquete(100);
+		cargar_string_al_super_paquete(infoExtra, instruccion_split[0]); // instruccion_split[0]: instruccion
 		cargar_string_al_super_paquete(infoExtra, instruccion_split[1]);// instruccion_split[1]: nombre archivo
 		cargar_string_al_super_paquete(infoExtra, instruccion_split[2]);// instruccion_split[2]: modo apertura
-		enviarPaqueteKernelConInfoExtra("F_OPEN", infoExtra);
+		enviarPaqueteKernelConInfoExtra(infoExtra);
 
 		sem_wait(&sem_control_respuesta_kernel);
 
@@ -597,8 +612,9 @@ void ciclo_de_instruccion_execute(){
 		contexto->proceso_ip = contexto->proceso_ip + 1;
 
 		t_paquete* infoExtra = crear_super_paquete(100);
+		cargar_string_al_super_paquete(infoExtra, instruccion_split[0]); // instruccion_split[0]: instruccion
 		cargar_string_al_super_paquete(infoExtra, instruccion_split[1]);// instruccion_split[1]: nombre archivo
-		enviarPaqueteKernelConInfoExtra("F_CLOSE", infoExtra);
+		enviarPaqueteKernelConInfoExtra(infoExtra);
 
 		sem_wait(&sem_control_respuesta_kernel);
 
@@ -607,9 +623,10 @@ void ciclo_de_instruccion_execute(){
 		contexto->proceso_ip = contexto->proceso_ip + 1;
 
 		t_paquete* infoExtra = crear_super_paquete(100);
+		cargar_string_al_super_paquete(infoExtra, instruccion_split[0]); // instruccion_split[0]: instruccion
 		cargar_string_al_super_paquete(infoExtra, instruccion_split[1]);// instruccion_split[1]: nombre archivo
 		cargar_int_al_super_paquete(infoExtra, atoi(instruccion_split[2]));// instruccion_split[2]: posicion
-		enviarPaqueteKernelConInfoExtra("F_SEEK", infoExtra);
+		enviarPaqueteKernelConInfoExtra(infoExtra);
 
 		sem_wait(&sem_control_respuesta_kernel);
 
@@ -799,6 +816,7 @@ void destruir_estructuras_del_contexto_acttual(){
 	hay_que_desalojar = false;
 	hay_que_desalojar_sin_mensaje = false;
 
+	string_array_destroy(instruccion_split);
 }
 
 uint32_t* detectar_registro(char* RX){
@@ -860,10 +878,9 @@ void enviarPaqueteKernel(char* motivo){
 	eliminar_paquete(paqueteManejoRecursos);
 }
 
-void enviarPaqueteKernelConInfoExtra(char* motivo, t_paquete* infoExtra){
+void enviarPaqueteKernelConInfoExtra(t_paquete* infoExtra){
 	t_paquete* paqueteInstruccionKernel = alistar_paquete_de_desalojo(ATENDER_INSTRUCCION_CPK);
 	// luego de enviar el contexto, envio el motivo(que instruccion es la que le manda), y la mochila con toda la info extra
-	cargar_string_al_super_paquete(paqueteInstruccionKernel, motivo);
 	cargar_choclo_al_super_paquete(paqueteInstruccionKernel, infoExtra->buffer->stream, infoExtra->buffer->size);
 	enviar_paquete(paqueteInstruccionKernel, fd_kernel_dispatch);
 	eliminar_paquete(paqueteInstruccionKernel);

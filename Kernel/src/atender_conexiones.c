@@ -95,59 +95,61 @@ void _gestionar_peticiones_de_cpu_dispatch(){
 			log_error(kernel_logger, "ENtre a atender instruccion");
 
 			pcb = _recibir_proceso_desalojado(unBuffer);
-			char* instruccion = recibir_string_del_buffer(unBuffer);
+			t_buffer* mochila = recibir_mochila_del_buffer(unBuffer);
+			char* instruccion = recibir_string_del_buffer(mochila);
 			pausador();
 
 			if(strcmp(instruccion, "SLEEP") == 0){
-				int seconds_blocked = recibir_int_del_buffer(unBuffer);
+				int seconds_blocked = recibir_int_del_buffer(mochila);
 				atender_sleep(pcb, seconds_blocked, instruccion);
 
 			}else if(strcmp(instruccion, "WAIT") == 0){
-				char* recurso_solicitado = recibir_string_del_buffer(unBuffer);
+				char* recurso_solicitado = recibir_string_del_buffer(mochila);
+				log_info(kernel_logger, " If del WAIT %s", recurso_solicitado);
 				atender_wait(pcb,recurso_solicitado);
 				free(recurso_solicitado);
 
 			}else if(strcmp(instruccion, "SIGNAL") == 0){
-				char* recurso_a_liberar = recibir_string_del_buffer(unBuffer);
+				char* recurso_a_liberar = recibir_string_del_buffer(mochila);
 				atender_signal(pcb, recurso_a_liberar);
 				free(recurso_a_liberar);
 
 			}else if(strcmp(instruccion, "F_OPEN") == 0){
-				char* nombre_archivo = recibir_string_del_buffer(unBuffer);
+				char* nombre_archivo = recibir_string_del_buffer(mochila);
 				log_info(kernel_log_obligatorio, "PID: %d - Abrir Archivo: %s", pcb->pid, nombre_archivo);
-				char* tipo_apertura = recibir_string_del_buffer(unBuffer); // Puede ser 'r' para lectura, o 'w' para escritura
+				char* tipo_apertura = recibir_string_del_buffer(mochila); // Puede ser 'r' para lectura, o 'w' para escritura
 				atender_F_open(pcb, nombre_archivo, tipo_apertura);
 
 				free(nombre_archivo);
 				free(tipo_apertura);
 			}else if(strcmp(instruccion, "F_CLOSE") == 0){
-				char* nombre_archivo = recibir_string_del_buffer(unBuffer);
+				char* nombre_archivo = recibir_string_del_buffer(mochila);
 				log_info(kernel_log_obligatorio, "PID: %d - Cerrar Archivo: %s", pcb->pid, nombre_archivo);
 				atender_F_close(nombre_archivo , pcb);
 
 				free(nombre_archivo);
 			}else if(strcmp(instruccion, "F_SEEK") == 0){
-				char* nombre_archivo = recibir_string_del_buffer(unBuffer);
-				int nuevo_puntero_archivo = recibir_int_del_buffer(unBuffer);
+				char* nombre_archivo = recibir_string_del_buffer(mochila);
+				int nuevo_puntero_archivo = recibir_int_del_buffer(mochila);
 				atender_F_seek(nombre_archivo , nuevo_puntero_archivo, pcb);
 
 				free(nombre_archivo);
 			}else if(strcmp(instruccion, "F_TRUNCATE") == 0){
-				char* nombre_archivo = recibir_string_del_buffer(unBuffer);
-				int nuevo_size_archivo = recibir_int_del_buffer(unBuffer);
+				char* nombre_archivo = recibir_string_del_buffer(mochila);
+				int nuevo_size_archivo = recibir_int_del_buffer(mochila);
 				atender_F_truncate(nombre_archivo , nuevo_size_archivo, pcb);
 				log_info(kernel_log_obligatorio,"PID: %d - Archivo: %s - Tamaño: %d", pcb->pid, nombre_archivo, nuevo_size_archivo);
 
 				free(nombre_archivo);
 			}else if(strcmp(instruccion, "F_READ") == 0){
-				char* nombre_archivo = recibir_string_del_buffer(unBuffer);
-				int dir_fisica = recibir_int_del_buffer(unBuffer);
+				char* nombre_archivo = recibir_string_del_buffer(mochila);
+				int dir_fisica = recibir_int_del_buffer(mochila);
 				atender_F_read(nombre_archivo , dir_fisica, pcb);
 
 				free(nombre_archivo);
 			}else if(strcmp(instruccion, "F_WRITE") == 0){
-				char* nombre_archivo = recibir_string_del_buffer(unBuffer);
-				int dir_fisica = recibir_int_del_buffer(unBuffer);
+				char* nombre_archivo = recibir_string_del_buffer(mochila);
+				int dir_fisica = recibir_int_del_buffer(mochila);
 				atender_F_write(nombre_archivo , dir_fisica, pcb);
 
 				free(nombre_archivo);
@@ -167,7 +169,7 @@ void _gestionar_peticiones_de_cpu_dispatch(){
 				pthread_mutex_unlock(&mutex_lista_exec);
 
 			}else if(strcmp(instruccion, "PAGE_FAULT") == 0){
-				int pagina = recibir_int_del_buffer(unBuffer);
+				int pagina = recibir_int_del_buffer(mochila);
 				pthread_mutex_lock(&mutex_lista_exec);
 				if(list_remove_element(lista_execute,pcb)){
 					t_page_fault* un_page_fault = malloc(sizeof(t_page_fault));
@@ -180,9 +182,11 @@ void _gestionar_peticiones_de_cpu_dispatch(){
 					ejecutar_en_un_hilo_nuevo_detach((void*)_atender_page_fault, un_page_fault);
 				}
 				pthread_mutex_unlock(&mutex_lista_exec);
+			}else{
+				log_info(kernel_logger, "Entre al if vacio");
 			}
 			free(instruccion);
-			free(unBuffer);
+			free(mochila);
 			break;
 		case DESALOJO_PROCESO_CPK:
 
@@ -214,6 +218,13 @@ void _gestionar_peticiones_de_cpu_dispatch(){
 			break;
 		}
 	}
+}
+
+t_buffer* recibir_mochila_del_buffer(t_buffer* buffer){
+	t_buffer* mochila = malloc(sizeof(t_buffer));
+	mochila->size = buffer->size;
+	mochila->stream = recibir_choclo_del_buffer(buffer);
+	return mochila;
 }
 
 void _gestionar_interrupt(){
@@ -528,6 +539,7 @@ void atender_sleep(t_pcb* pcb, int seconds_blocked, char* motivo_block){
 		transferir_from_actual_to_siguiente(pcb, lista_blocked, mutex_lista_blocked, BLOCKED);
 		log_blocked_proceso(pcb->pid, motivo_block);
 		ejecutar_en_un_hilo_nuevo_detach((void*) manejar_tiempo_sleep, pcb_sleep);
+		pcp_planificar_corto_plazo();
 	}else
 		log_error(kernel_logger,"No se puedo remeover el proceso de EXECUTE al ejecutar la intrusccion SLEEP");
 }
@@ -537,13 +549,14 @@ void manejar_tiempo_sleep(t_sleep* pcb_sleep){
 
 	sleep(pcb_sleep->tiempo_en_block);
 	transferir_from_actual_to_siguiente(pcb_sleep->pcb_a_sleep, lista_ready, mutex_lista_ready, READY);
+	pcp_planificar_corto_plazo();
 	free(pcb_sleep);
 }
 
 // ----- WAIT  -----
 void atender_wait(t_pcb* pcb,char* recurso_solicitado){
 	t_recurso* recurso_buscado = buscar_recurso(recurso_solicitado);
-
+	log_warning(kernel_logger, " El recurso buscado es: %s", recurso_buscado->recurso_name);
 	// Verifico que exista el recurso, en caso de no hacerlo el proceso se envia a EXIT
 	if(recurso_buscado != NULL){
 		if(recurso_buscado->instancias >= 0){
@@ -558,7 +571,6 @@ void atender_wait(t_pcb* pcb,char* recurso_solicitado){
 			list_remove(lista_execute,0);
 			pthread_mutex_unlock(&mutex_lista_exec);
 
-
 			transferir_from_actual_to_siguiente(pcb, lista_blocked, mutex_lista_blocked, BLOCKED);
 			pcb->motivo_block = RECURSO;
 			agregar_pcb_a_lista_recurso(pcb ,recurso_buscado->lista_bloqueados, recurso_buscado->mutex_bloqueados);
@@ -568,8 +580,9 @@ void atender_wait(t_pcb* pcb,char* recurso_solicitado){
 	}else{
 		_enviar_respuesta_instruccion_CPU_por_dispatch(-1);
 		pcb->motivo_exit = INVALID_RESOURCE;
-		log_info(kernel_log_obligatorio,"PID: %d - Bloqueado por: %s", pcb->pid, motivo_to_string(pcb->motivo_exit));
-		plp_planificar_proceso_exit(pcb->pid);
+		log_info(kernel_log_obligatorio,"Finaliza el proceso %d - Motivo: %s", pcb->pid, motivo_to_string(pcb->motivo_exit));
+//		plp_planificar_proceso_exit(pcb->pid);
+		plp_exit(pcb);
 	}
 }
 
@@ -580,31 +593,33 @@ void atender_signal(t_pcb* pcb,char* recurso_a_liberar){
 
 	if(recurso_buscado != NULL  && list_remove_element(pcb->lista_recursos_pcb, recurso_buscado)){
 		recurso_buscado->instancias ++;
+		log_info(kernel_log_obligatorio, "PID: %d - Signal: %s - Instancias: %d", pcb->pid, recurso_buscado->recurso_name, recurso_buscado->instancias);
+		_enviar_respuesta_instruccion_CPU_por_dispatch(1);
 		if(!list_is_empty(recurso_buscado->lista_bloqueados)){
 			asignar_recurso_liberado_pcb(recurso_buscado);
-			log_info(kernel_log_obligatorio, "PID: %d - Wait: %s - Instancias: %d", pcb->pid, recurso_buscado->recurso_name, recurso_buscado->instancias);
-			_enviar_respuesta_instruccion_CPU_por_dispatch(1);
 		}
 	}else{
 		_enviar_respuesta_instruccion_CPU_por_dispatch(-1);
 		pcb->motivo_exit = INVALID_RESOURCE;
-		log_warning(kernel_logger,"El recurso no existe, se procede a finalizar el PID: %d", pcb->pid);
-		plp_planificar_proceso_exit(pcb->pid);
+//		log_info(kernel_log_obligatorio,"Finaliza el proceso %d - Motivo: %s", pcb->pid, motivo_to_string(pcb->motivo_exit));
+//		plp_planificar_proceso_exit(pcb->pid);
+		plp_exit(pcb);
 	}
 }
 
 t_recurso* buscar_recurso(char* recurso_solicitado){
-
-	t_recurso* recurso_encontrado = NULL;
 // Capaz es necesario utilziar mutex de la lista de recursos, veremos cuando se haga DEADLOCKS
+	log_warning(kernel_logger, " Entre a buscar recurso");
+
 	for(int i = 0; i<list_size(lista_recursos); i++){
+		log_warning(kernel_logger, " Empiezo a recorrer lista: %d", i);
 		t_recurso* r_buscado = list_get(lista_recursos,i);
-		if(recurso_solicitado == r_buscado->recurso_name){
-			recurso_encontrado = r_buscado;
-			break;
+		if(strcmp(recurso_solicitado, r_buscado->recurso_name) == 0){
+			log_warning(kernel_logger, " Encontre el recurso: %s", r_buscado->recurso_name);
+			return r_buscado;
 		}
 	}
-	return recurso_encontrado;
+	return NULL;
 }
 
 void agregar_pcb_a_lista_recurso(t_pcb* pcb, t_list* lista_recurso, pthread_mutex_t mutex_recurso){
@@ -809,7 +824,8 @@ void atender_F_write(char* nombre_archivo , int dir_fisica, t_pcb* pcb){
 
 	}else{
 		pcb->motivo_exit = INVALID_WRITE;
-		plp_planificar_proceso_exit(pcb->pid);
+//		plp_planificar_proceso_exit(pcb->pid);
+		plp_exit(pcb);
 	}
 
 	// Llamo al planificador para que envie un nuevo preceso a CPU.
@@ -862,5 +878,19 @@ void validar_respuesta_F_open(char* operacion, char* mensaje, t_buffer* unBuffer
 }
 
 
-
+void plp_exit(t_pcb* pcb){
+	pthread_mutex_lock(&mutex_lista_exec);
+	//Este control verifica que esa PCB siga en la lista
+	if(list_remove_element(lista_execute, pcb)){
+		liberar_recursos_pcb(pcb);
+		avisar_a_memoria_para_liberar_estructuras(pcb);
+//		sem_wait(&sem_estructura_liberada);
+		transferir_from_actual_to_siguiente(pcb, lista_exit, mutex_lista_exit, EXIT);
+		log_info(kernel_log_obligatorio, "Finaliza el proceso [PID: %d] - Motivo: %s", pcb->pid, motivo_to_string(pcb->motivo_exit));
+	}else{
+		log_error(kernel_logger, "PCB no encontrada en EXEC [Eliminacion por consola]");
+		exit(EXIT_FAILURE);
+	}
+	pthread_mutex_unlock(&mutex_lista_exec);
+}
 
