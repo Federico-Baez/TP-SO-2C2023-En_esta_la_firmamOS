@@ -28,7 +28,10 @@ void logg_acceso_a_espacio_de_usuario(int pid, char* accion, int dir_fisica){
 void logg_reemplazar_pagina(int nro_marco, int out_pid, int out_nro_pag, int in_pid, int in_nro_pag){
 	//REEMPLAZO - Marco: <NRO_MARCO> - Page Out: <PID>-<NRO_PAGINA> - Page In: <PID>-<NRO_PAGINA>
 	log_info(memoria_log_obligatorio, "REEMPLAZO - Marco: <%d> - Page Out: <%d>-<%d> - Page In: <%d>-<%d>", nro_marco, out_pid, out_nro_pag, in_pid, in_nro_pag);
+	free(pag_auxiliar_in);
+	free(pag_auxiliar_out);
 }
+
 
 void logg_lectura_pagina_swap(int pid, int nro_marco, int nro_pagina){
 	//SWAP IN -  PID: <PID> - Marco: <MARCO> - Page In: <PID>-<NRO_PAGINA>

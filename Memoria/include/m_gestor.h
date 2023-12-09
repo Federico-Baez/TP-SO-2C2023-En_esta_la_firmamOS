@@ -22,11 +22,11 @@
 #include <math.h>
 
 //TODO DEPRECAR se usa tabla_paginas del proceso_recibido
-typedef struct {
-    int pid;                        // Identificador del proceso asociado a esta tabla
-    t_list* paginas;                // Lista de páginas
-    pthread_mutex_t mutex;          // Mutex para sincronización
-} tabla_paginas;
+//typedef struct {
+//    int pid;                        // Identificador del proceso asociado a esta tabla
+//    t_list* paginas;                // Lista de páginas
+//    pthread_mutex_t mutex;          // Mutex para sincronización
+//} tabla_paginas;
 
 typedef struct Pagina Pagina;
 
@@ -107,6 +107,9 @@ extern t_list* instrucciones_para_cpu;
 extern pthread_mutex_t mutex_lst_marco;
 extern pthread_mutex_t mutex_espacio_usuario;
 
+extern Pagina* pag_auxiliar_in;
+extern Pagina* pag_auxiliar_out;
+
 void* buscar_tabla(int pid);
 
 /******************MARCO********************/
@@ -114,7 +117,7 @@ void* buscar_tabla(int pid);
 Pagina* obtener_pagina_por_marco(marco* un_marco);
 Pagina* obtener_pagina_por_marco(marco* un_marco);
 /******************************************/
-void liberar_paginas(tabla_paginas* una_tabla, int  dirLogica, int tamanio, int pid);
+//void liberar_paginas(tabla_paginas* una_tabla, int  dirLogica, int tamanio, int pid);
 void* buscar_tabla(int pid);
 
 #endif /* M_GESTOR_H_ */
