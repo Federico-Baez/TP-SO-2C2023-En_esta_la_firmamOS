@@ -169,28 +169,29 @@ void cargar_pagina_en_memoria(tabla_paginas* tabla, Pagina* pagina) {
         pagina->orden_carga = ordenCargaGlobal++;
     }
 }
-Pagina* comparar_acceso_LRU(Pagina* pagina1, Pagina* pagina2) {
-    if (temporal_gettime(pagina1->ultimo_uso)>temporal_gettime(pagina2->ultimo_uso)){
-    	return pagina1;
-    }
-    else return pagina2;
-}
-
-// Comparador para FIFO
-Pagina* comparar_orden_carga(Pagina* pagina1, Pagina* pagina2) {
-    if (pagina1->orden_carga < pagina2->orden_carga){
-    	return pagina1;
-    }
-    else return pagina2;
-}
-Pagina* victima_pagina_LRU(tabla_paginas* tabla) {
-    Pagina* pagina_a_reemplazar = list_get_maximum(tabla->paginas, (void*) comparar_acceso_LRU);
-    return pagina_a_reemplazar;
-}
-Pagina* victima_pagina_FIFO(tabla_paginas* tabla) {
-    Pagina* pagina_a_reemplazar = list_get_minimum(tabla->paginas, (void*) comparar_orden_carga);
-    return pagina_a_reemplazar;
-}
+//Deprecadp
+//Pagina* comparar_acceso_LRU(Pagina* pagina1, Pagina* pagina2) {
+//    if (temporal_gettime(pagina1->ultimo_uso)>temporal_gettime(pagina2->ultimo_uso)){
+//    	return pagina1;
+//    }
+//    else return pagina2;
+//}
+//
+//// Comparador para FIFO
+//Pagina* comparar_orden_carga(Pagina* pagina1, Pagina* pagina2) {
+//    if (pagina1->orden_carga < pagina2->orden_carga){
+//    	return pagina1;
+//    }
+//    else return pagina2;
+//}
+//Pagina* victima_pagina_LRU(tabla_paginas* tabla) {
+//    Pagina* pagina_a_reemplazar = list_get_maximum(tabla->paginas, (void*) comparar_acceso_LRU);
+//    return pagina_a_reemplazar;
+//}
+//Pagina* victima_pagina_FIFO(tabla_paginas* tabla) {
+//    Pagina* pagina_a_reemplazar = list_get_minimum(tabla->paginas, (void*) comparar_orden_carga);
+//    return pagina_a_reemplazar;
+//}
 
 
 // Comparador para LRU
