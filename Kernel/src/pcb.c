@@ -362,9 +362,7 @@ void asignar_recurso_liberado_pcb(t_recurso* un_recurso){
 	if(!list_is_empty(un_recurso->lista_bloqueados)){
 		t_pcb* pcb_liberado = list_remove(un_recurso->lista_bloqueados,0);
 
-		pthread_mutex_lock(&un_recurso->mutex_asignados);
-		list_add(un_recurso->lista_asignados, pcb_liberado);
-		pthread_mutex_unlock(&un_recurso->mutex_asignados);
+		un_recurso->pcb_asignado = pcb_liberado;
 
 		transferir_from_actual_to_siguiente(pcb_liberado, lista_ready, mutex_lista_ready, READY);
 
@@ -387,7 +385,6 @@ void desbloquear_proceso_por_pid(int pid_process){
 }
 
 void bloquear_proceso_cola_fs(t_pcb* pcb, t_archivo* archivo){
-	// Quizas hay que agregarlo tambien a lista_blocked_fs o lista_blocked, hay que revisar, esto es para los DEADLOCKS y encontrarlo para finalizarlo
 	pthread_mutex_lock(&archivo->mutex_cola_block);
 	list_add(archivo->cola_block_procesos, pcb);
 	pthread_mutex_unlock(&archivo->mutex_cola_block);

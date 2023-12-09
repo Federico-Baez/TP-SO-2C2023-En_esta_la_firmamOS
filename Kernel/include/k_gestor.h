@@ -69,11 +69,10 @@ typedef struct{
 
 typedef struct{
 	char* recurso_name;
-	int instancias;
-	t_list* lista_bloqueados;
-	t_list* lista_asignados;
+	int instancias;  // Instancias del recurso
+	t_list* lista_bloqueados;   // Procesos a la espera de una instancia
+	t_pcb* pcb_asignado;	// Procesos con isntancias asignadas
 	pthread_mutex_t mutex_bloqueados;
-	pthread_mutex_t mutex_asignados;
 }t_recurso;
 
 typedef struct{

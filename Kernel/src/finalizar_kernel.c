@@ -52,10 +52,8 @@ static void _finalizar_pthread(){
 
 static void _finalizar_recursos(){
 	void __eliminar_nodo_recurso(t_recurso* un_recurso){
-		list_destroy(un_recurso->lista_asignados);
 		list_destroy(un_recurso->lista_bloqueados);
 		pthread_mutex_destroy(&un_recurso->mutex_bloqueados);
-		pthread_mutex_destroy(&un_recurso->mutex_asignados);
 		free(un_recurso);
 	}
 

@@ -23,8 +23,7 @@ void plp_planifica(){
 			enviar_paquete(un_paquete, fd_memoria);
 
 			// 	Lo comento hasta que hagan la funcion.
-//			sem_wait(&sem_estructura_iniciada);
-			sleep(1);
+			sem_wait(&sem_estructura_iniciada);
 
 			//Agregando PCB a READY
 //			transferir_from_actual_to_siguiente(un_pcb, lista_ready, mutex_lista_ready, READY);
