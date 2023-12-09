@@ -470,7 +470,7 @@ void iniciar_ciclo_de_instruccion(){
 }
 
 void ciclo_de_instruccion_fetch(){
-	log_info(cpu_logger, "PID: <%d> - FETCH - Program Counter: <%d>", contexto->proceso_pid, contexto->proceso_ip);
+	log_info(cpu_log_obligatorio, "PID: <%d> - FETCH - Program Counter: <%d>", contexto->proceso_pid, contexto->proceso_ip);
 	t_paquete* un_paquete = crear_super_paquete(PETICION_DE_INSTRUCCIONES_CM);
 	cargar_int_al_super_paquete(un_paquete, contexto->proceso_pid);
 	cargar_int_al_super_paquete(un_paquete, contexto->proceso_ip);
@@ -485,39 +485,35 @@ void ciclo_de_instruccion_decode(){
 		// log_info(cpu_logger, "Instruccion Validada: [%s] -> OK", instruccion_split[0]);
 		sem_post(&sem_control_decode_execute);
 	}else{
-//		log_error(cpu_logger, "Instruccion no encontrada: [PC: %d][Instruc_Header: %s]", *proceso_ip, instruccion_split[0]);
-		// printf("Instruccion no encontrada: [[%s]]\n", instruccion_split[0]);
+		log_error(cpu_logger, "Instruccion no encontrada: [PC: %d][Instruc_Header: %s]", contexto->proceso_ip, instruccion_split[0]);
 		exit(EXIT_FAILURE); //[FALTA] Repensar como terminar el programa y destruir estructuras
 	}
-
-	//[FALTA] Solo atender esta parte las instrucciones Que requieran traduccion de direccion logica a fisica?
-	//F_READ y F_WRITE
 
 }
 
 void ciclo_de_instruccion_execute(){
 	if(strcmp(instruccion_split[0], "SET") == 0){//[SET][AX][22]
-		log_info(cpu_logger, "PID: <%d> - Ejecutando: <%s> - <%s> - <%s>", contexto->proceso_pid, instruccion_split[0], instruccion_split[1], instruccion_split[2]);
+		log_info(cpu_log_obligatorio, "PID: <%d> - Ejecutando: <%s> - <%s> - <%s>", contexto->proceso_pid, instruccion_split[0], instruccion_split[1], instruccion_split[2]);
 		contexto->proceso_ip = contexto->proceso_ip + 1;
 		uint32_t* registro_referido = detectar_registro(instruccion_split[1]);
 		*registro_referido = strtoul(instruccion_split[1], NULL, 10);
 
 	}else if(strcmp(instruccion_split[0], "SUM") == 0){//[SUM][destino:AX][origen:BX]
-		log_info(cpu_logger, "PID: <%d> - Ejecutando: <%s> - <%s> - <%s>", contexto->proceso_pid, instruccion_split[0], instruccion_split[1], instruccion_split[2]);
+		log_info(cpu_log_obligatorio, "PID: <%d> - Ejecutando: <%s> - <%s> - <%s>", contexto->proceso_pid, instruccion_split[0], instruccion_split[1], instruccion_split[2]);
 		contexto->proceso_ip = contexto->proceso_ip + 1;
 		uint32_t* registro_referido_destino = detectar_registro(instruccion_split[1]);
 		uint32_t* registro_referido_origen = detectar_registro(instruccion_split[2]);
 		*registro_referido_destino += *registro_referido_origen;
 
 	}else if(strcmp(instruccion_split[0], "SUB") == 0){//[SUB][destino:AX][origen:BX]
-		log_info(cpu_logger, "PID: <%d> - Ejecutando: <%s> - <%s> - <%s>", contexto->proceso_pid, instruccion_split[0], instruccion_split[1], instruccion_split[2]);
+		log_info(cpu_log_obligatorio, "PID: <%d> - Ejecutando: <%s> - <%s> - <%s>", contexto->proceso_pid, instruccion_split[0], instruccion_split[1], instruccion_split[2]);
 		contexto->proceso_ip = contexto->proceso_ip + 1;
 		uint32_t* registro_referido_destino = detectar_registro(instruccion_split[1]);
 		uint32_t* registro_referido_origen = detectar_registro(instruccion_split[2]);
 		*registro_referido_destino -= *registro_referido_origen;
 
 	}else if(strcmp(instruccion_split[0], "JNZ") == 0){// [JNZ][Registro][Instruccion]
-		log_info(cpu_logger, "PID: <%d> - Ejecutando: <%s> - <%s> - <%s>", contexto->proceso_pid, instruccion_split[0], instruccion_split[1], instruccion_split[2]);
+		log_info(cpu_log_obligatorio, "PID: <%d> - Ejecutando: <%s> - <%s> - <%s>", contexto->proceso_pid, instruccion_split[0], instruccion_split[1], instruccion_split[2]);
 		uint32_t* registro_referido = detectar_registro(instruccion_split[1]);
 //		if(*registro_referido != 0) {
 //			contexto->proceso_ip = atoi(instruccion_split[2]);
@@ -527,7 +523,7 @@ void ciclo_de_instruccion_execute(){
 		contexto->proceso_ip ++;
 
 	}else if(strcmp(instruccion_split[0], "SLEEP") == 0){// [SLEEP][tiempo]
-		log_info(cpu_logger, "PID: <%d> - Ejecutando: <%s> - <%s>", contexto->proceso_pid, instruccion_split[0], instruccion_split[1]);
+		log_info(cpu_log_obligatorio, "PID: <%d> - Ejecutando: <%s> - <%s>", contexto->proceso_pid, instruccion_split[0], instruccion_split[1]);
 
 		/* Esta instrucción representa una syscall bloqueante.
 		 * Se deberá devolver el Contexto de Ejecución actualizado al Kernel
@@ -540,7 +536,7 @@ void ciclo_de_instruccion_execute(){
 		hay_que_desalojar = true;
 
 	}else if(strcmp(instruccion_split[0], "WAIT") == 0){// [WAIT][char* Recurso] /*Esta instrucción solicita al Kernel que se asigne una instancia del recurso indicado por parámetro.*/
-		log_info(cpu_logger, "PID: <%d> - Ejecutando: <%s> - <%s>", contexto->proceso_pid, instruccion_split[0], instruccion_split[1]);
+		log_info(cpu_log_obligatorio, "PID: <%d> - Ejecutando: <%s> - <%s>", contexto->proceso_pid, instruccion_split[0], instruccion_split[1]);
 
 		contexto->proceso_ip = contexto->proceso_ip + 1;
 
@@ -551,15 +547,15 @@ void ciclo_de_instruccion_execute(){
 		//Envia a Kernel con motivo de WAIT de algun recurso
 		enviarPaqueteKernelConInfoExtra(infoExtra);
 
-		log_info(cpu_logger, "PID: <%d> - Me voy a esperar el WAIT");
+		log_info(cpu_log_obligatorio, "PID: <%d> - Me voy a esperar el WAIT");
 
 		sem_wait(&sem_control_respuesta_kernel);
-		log_info(cpu_logger, "PID: <%d> - Sali de la espera del WAIT");
+		log_info(cpu_log_obligatorio, "PID: <%d> - Sali de la espera del WAIT");
 
 		eliminar_paquete(infoExtra);
 
 	}else if(strcmp(instruccion_split[0], "SIGNAL") == 0){// [SIGNAL][char* Recurso] /*Esta instrucción solicita al Kernel que se libere una instancia del recurso indicado por parámetro.*/
-		log_info(cpu_logger, "PID: <%d> - Ejecutando: <%s> - <%s>", contexto->proceso_pid, instruccion_split[0], instruccion_split[1]);
+		log_info(cpu_log_obligatorio, "PID: <%d> - Ejecutando: <%s> - <%s>", contexto->proceso_pid, instruccion_split[0], instruccion_split[1]);
 
 		contexto->proceso_ip = contexto->proceso_ip + 1;
 
@@ -575,7 +571,7 @@ void ciclo_de_instruccion_execute(){
 		eliminar_paquete(infoExtra);
 
 	}else if(strcmp(instruccion_split[0], "MOV_IN") == 0){// [MOV_IN][Registro][Direccion Logica]
-		log_info(cpu_logger, "PID: <%d> - Ejecutando: <%s> - <%s> - <%s>", contexto->proceso_pid, instruccion_split[0], instruccion_split[1], instruccion_split[2]);
+		log_info(cpu_log_obligatorio, "PID: <%d> - Ejecutando: <%s> - <%s> - <%s>", contexto->proceso_pid, instruccion_split[0], instruccion_split[1], instruccion_split[2]);
 
 	    uint32_t* registro_destino = detectar_registro(instruccion_split[1]);
 	    int direccion_logica = atoi(instruccion_split[2]);
@@ -586,7 +582,7 @@ void ciclo_de_instruccion_execute(){
 	    contexto->proceso_ip = contexto->proceso_ip + 1; //EVER - eliminar
 
 	}else if(strcmp(instruccion_split[0], "MOV_OUT") == 0){// [MOV_OUT][Dir_logica][RX]
-		log_info(cpu_logger, "PID: <%d> - Ejecutando: <%s> - <%s> - <%s>", contexto->proceso_pid, instruccion_split[0], instruccion_split[1], instruccion_split[2]);
+		log_info(cpu_log_obligatorio, "PID: <%d> - Ejecutando: <%s> - <%s> - <%s>", contexto->proceso_pid, instruccion_split[0], instruccion_split[1], instruccion_split[2]);
 
 		int direccion_logica = atoi(instruccion_split[1]);
 		uint32_t* registro_partida = detectar_registro(instruccion_split[2]);
@@ -596,7 +592,7 @@ void ciclo_de_instruccion_execute(){
 		contexto->proceso_ip = contexto->proceso_ip + 1; //EVER - eliminar
 
 	}else if(strcmp(instruccion_split[0], "F_OPEN") == 0){
-		log_info(cpu_logger, "PID: <%d> - Ejecutando: <%s> - <%s> - <%s>", contexto->proceso_pid, instruccion_split[0], instruccion_split[1], instruccion_split[2]);
+		log_info(cpu_log_obligatorio, "PID: <%d> - Ejecutando: <%s> - <%s> - <%s>", contexto->proceso_pid, instruccion_split[0], instruccion_split[1], instruccion_split[2]);
 		contexto->proceso_ip = contexto->proceso_ip + 1;
 
 		t_paquete* infoExtra = crear_super_paquete(100);
@@ -608,7 +604,7 @@ void ciclo_de_instruccion_execute(){
 		sem_wait(&sem_control_respuesta_kernel);
 
 	}else if(strcmp(instruccion_split[0], "F_CLOSE") == 0){
-		log_info(cpu_logger, "PID: <%d> - Ejecutando: <%s> - <%s>", contexto->proceso_pid, instruccion_split[0], instruccion_split[1]);
+		log_info(cpu_log_obligatorio, "PID: <%d> - Ejecutando: <%s> - <%s>", contexto->proceso_pid, instruccion_split[0], instruccion_split[1]);
 		contexto->proceso_ip = contexto->proceso_ip + 1;
 
 		t_paquete* infoExtra = crear_super_paquete(100);
@@ -619,7 +615,7 @@ void ciclo_de_instruccion_execute(){
 		sem_wait(&sem_control_respuesta_kernel);
 
 	}else if(strcmp(instruccion_split[0], "F_SEEK") == 0){
-		log_info(cpu_logger, "PID: <%d> - Ejecutando: <%s> - <%s> - <%s>", contexto->proceso_pid, instruccion_split[0], instruccion_split[1], instruccion_split[2]);
+		log_info(cpu_log_obligatorio, "PID: <%d> - Ejecutando: <%s> - <%s> - <%s>", contexto->proceso_pid, instruccion_split[0], instruccion_split[1], instruccion_split[2]);
 		contexto->proceso_ip = contexto->proceso_ip + 1;
 
 		t_paquete* infoExtra = crear_super_paquete(100);
@@ -631,7 +627,7 @@ void ciclo_de_instruccion_execute(){
 		sem_wait(&sem_control_respuesta_kernel);
 
 	}else if(strcmp(instruccion_split[0], "F_READ") == 0){
-		log_info(cpu_logger, "PID: <%d> - Ejecutando: <%s> - <%s> - <%s>", contexto->proceso_pid, instruccion_split[0], instruccion_split[1], instruccion_split[2]);
+		log_info(cpu_log_obligatorio, "PID: <%d> - Ejecutando: <%s> - <%s> - <%s>", contexto->proceso_pid, instruccion_split[0], instruccion_split[1], instruccion_split[2]);
 
 		int direccion_logica = atoi(instruccion_split[2]);
 		int dir_fisica = MMU(direccion_logica);
@@ -647,7 +643,7 @@ void ciclo_de_instruccion_execute(){
 		}
 
 	}else if(strcmp(instruccion_split[0], "F_WRITE") == 0){
-		log_info(cpu_logger, "PID: <%d> - Ejecutando: <%s> - <%s> - <%s>", contexto->proceso_pid, instruccion_split[0], instruccion_split[1], instruccion_split[2]);
+		log_info(cpu_log_obligatorio, "PID: <%d> - Ejecutando: <%s> - <%s> - <%s>", contexto->proceso_pid, instruccion_split[0], instruccion_split[1], instruccion_split[2]);
 
 		int direccion_logica = atoi(instruccion_split[2]);
 		int dir_fisica = MMU(direccion_logica);
@@ -662,7 +658,7 @@ void ciclo_de_instruccion_execute(){
 		}
 
 	}else if(strcmp(instruccion_split[0], "F_TRUNCATE") == 0){
-		log_info(cpu_logger, "PID: <%d> - Ejecutando: <%s> - <%s> - <%s>", contexto->proceso_pid, instruccion_split[0], instruccion_split[1], instruccion_split[2]);
+		log_info(cpu_log_obligatorio, "PID: <%d> - Ejecutando: <%s> - <%s> - <%s>", contexto->proceso_pid, instruccion_split[0], instruccion_split[1], instruccion_split[2]);
 		contexto->proceso_ip = contexto->proceso_ip + 1;
 
 		mochila = crear_super_paquete(100);
@@ -673,7 +669,7 @@ void ciclo_de_instruccion_execute(){
 		hay_que_desalojar = true;
 
 	}else if(strcmp(instruccion_split[0], "EXIT") == 0){// [EXIT]
-		log_info(cpu_logger, "PID: <%d> - Ejecutando: <%s>", contexto->proceso_pid, instruccion_split[0]);
+		log_info(cpu_log_obligatorio, "PID: <%d> - Ejecutando: <%s>", contexto->proceso_pid, instruccion_split[0]);
 
 		mochila = crear_super_paquete(100);
 		cargar_string_al_super_paquete(mochila, "EXIT"); //Motivo del desalojo
@@ -731,7 +727,7 @@ int solicitar_valor_memoria(int dir_logica){
 
 		sem_wait(&sem_control_peticion_lectura_a_memoria);
 
-		log_info(cpu_logger, "PID: <%d> - Acción: <LEER> - Dirección Física: <%d> - Valor: <%d>", contexto->proceso_pid, dir_fisica, valorMarco);
+		log_info(cpu_log_obligatorio, "PID: <%d> - Acción: <LEER> - Dirección Física: <%d> - Valor: <%d>", contexto->proceso_pid, dir_fisica, valorMarco);
 
 		return valorMarco;
 	}
@@ -752,7 +748,7 @@ void escribir_valor_memoria(int dir_logica, int valorAEscribir){
 
 		sem_wait(&sem_control_peticion_escritura_a_memoria);
 
-		log_info(cpu_logger, "PID: <%d> - Acción: <ESCRIBIR> - Dirección Física: <%d> - Valor: <%d>", contexto->proceso_pid, dir_fisica, valorAEscribir);
+		log_info(cpu_log_obligatorio, "PID: <%d> - Acción: <ESCRIBIR> - Dirección Física: <%d> - Valor: <%d>", contexto->proceso_pid, dir_fisica, valorAEscribir);
 	}
 }
 
