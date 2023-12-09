@@ -362,15 +362,15 @@ void atender_proceso_del_kernel(t_buffer* unBuffer){
 	print_proceso();
 	int contador_prueba = 0;
 
-	log_info(cpu_logger, "pid proceso pre while 1: %d", contexto -> proceso_pid);
+	// log_info(cpu_logger, "pid proceso pre while 1: %d", contexto -> proceso_pid);
 	while(1){
 
 		//Inicicar ciclo de instruccion
-//		iniciar_ciclo_de_instruccion(); TODO: descomentar y probar
+		iniciar_ciclo_de_instruccion(); //TODO: descomentar y probar
 
-		printf(">>> Simulando que se ejecuto una instruccion [%d]\n", contador_prueba);
-		contador_prueba++;
-		sleep(4);
+//		printf(">>> Simulando que se ejecuto una instruccion [%d]\n", contador_prueba);
+//		contador_prueba++;
+//		sleep(4);
 
 
 
@@ -385,24 +385,29 @@ void atender_proceso_del_kernel(t_buffer* unBuffer){
 		if(hay_que_desalojar){
 			break;
 		}
-		//Controlar si hay interrupciones
+
 		pthread_mutex_lock(&mutex_interruptFlag);
-		if(interruptFlag){
+		bool bool_interrupt = interruptFlag;
+		pthread_mutex_unlock(&mutex_interruptFlag);
+
+		//Controlar si hay interrupciones
+		if(bool_interrupt){
 			break;
 		}
-		pthread_mutex_unlock(&mutex_interruptFlag);
 
 	}
 	printf("Saliste del while ---------------------\n");
 
-	t_paquete* un_paquete = alistar_paquete_de_desalojo(DESALOJO_PROCESO_CPK);
+	t_paquete* un_paquete;
 
 	pthread_mutex_lock(&mutex_interruptFlag);
 	if(interruptFlag){
+		un_paquete = alistar_paquete_de_desalojo(DESALOJO_PROCESO_CPK);
 		cargar_string_al_super_paquete(un_paquete, interrupt_motivo);
 
 	}else{
 		//La mochila debe incluir el motivo del desalojo}
+		un_paquete = alistar_paquete_de_desalojo(ATENDER_INSTRUCCION_CPK);
 		if(strcmp(instruccion_split[0], "SLEEP") == 0){
 			contexto->proceso_ip = contexto->proceso_ip + 1;
 		}
@@ -445,12 +450,12 @@ void iniciar_ciclo_de_instruccion(){
 
 	//DECODE
 	sem_wait(&sem_control_fetch_decode);
-	log_info(cpu_logger, "Paso el semaforo de FETCH -> DECODE");
+	// log_info(cpu_logger, "Paso el semaforo de FETCH -> DECODE");
 	ciclo_de_instruccion_decode();
 
 	//EXECUTE
 	sem_wait(&sem_control_decode_execute);
-	log_info(cpu_logger, "Paso el semaforo de DECODE -> EXECUTE");
+	// log_info(cpu_logger, "Paso el semaforo de DECODE -> EXECUTE");
 	ciclo_de_instruccion_execute();
 
 	string_array_destroy(instruccion_split);
@@ -470,11 +475,11 @@ void ciclo_de_instruccion_decode(){
 
 	//Validando que exista el header de la instruccion
 	if(validador_de_header(instruccion_split[0])){
-		log_info(cpu_logger, "Instruccion Validada: [%s] -> OK", instruccion_split[0]);
+		// log_info(cpu_logger, "Instruccion Validada: [%s] -> OK", instruccion_split[0]);
 		sem_post(&sem_control_decode_execute);
 	}else{
 //		log_error(cpu_logger, "Instruccion no encontrada: [PC: %d][Instruc_Header: %s]", *proceso_ip, instruccion_split[0]);
-		printf("Instruccion no encontrada: [[%s]]\n", instruccion_split[0]);
+		// printf("Instruccion no encontrada: [[%s]]\n", instruccion_split[0]);
 		exit(EXIT_FAILURE); //[FALTA] Repensar como terminar el programa y destruir estructuras
 	}
 
@@ -560,10 +565,11 @@ void ciclo_de_instruccion_execute(){
 
 	    uint32_t* registro_destino = detectar_registro(instruccion_split[1]);
 	    int direccion_logica = atoi(instruccion_split[2]);
-	    uint32_t valor = solicitar_valor_memoria(direccion_logica);
-	    if(valor != -1){ // NO hubo PF
-			*registro_destino = valor;
-	    }
+//EVER - descomentar		uint32_t valor = solicitar_valor_memoria(direccion_logica);
+//EVER - descomentar	    if(valor != -1){ // NO hubo PF
+//EVER - descomentar			*registro_destino = valor;
+//EVER - descomentar	    }
+	    contexto->proceso_ip = contexto->proceso_ip + 1; //EVER - eliminar
 
 	}else if(strcmp(instruccion_split[0], "MOV_OUT") == 0){// [MOV_OUT][Dir_logica][RX]
 		log_info(cpu_logger, "PID: <%d> - Ejecutando: <%s> - <%s> - <%s>", contexto->proceso_pid, instruccion_split[0], instruccion_split[1], instruccion_split[2]);
@@ -572,7 +578,8 @@ void ciclo_de_instruccion_execute(){
 		uint32_t* registro_partida = detectar_registro(instruccion_split[2]);
 		int valorAEscribir = *registro_partida;
 		// el chequeo del page fault lo hace mmu dentro de esta funcion, de lo contrario envia el mensaje a memoria para la escritura
-		escribir_valor_memoria(direccion_logica, valorAEscribir);
+//EVER - descomentar  escribir_valor_memoria(direccion_logica, valorAEscribir);
+		contexto->proceso_ip = contexto->proceso_ip + 1; //EVER - eliminar
 
 	}else if(strcmp(instruccion_split[0], "F_OPEN") == 0){
 		log_info(cpu_logger, "PID: <%d> - Ejecutando: <%s> - <%s> - <%s>", contexto->proceso_pid, instruccion_split[0], instruccion_split[1], instruccion_split[2]);
@@ -821,14 +828,14 @@ void atender_recepcion_de_instruccion(t_buffer* unBuffer){
 }
 
 bool validador_de_header(char* header_string){
-	log_info(cpu_logger, "String a evaluar: %s", header_string);
+	// log_info(cpu_logger, "String a evaluar: %s", header_string);
 	bool respuesta = false;
 	int i = 0;
 	while(opcode_strings[i] != NULL){
 		if(strcmp(opcode_strings[i], header_string) == 0) respuesta = true;
 		i++;
 	}
-	log_info(cpu_logger, "Valor del bool: %d", respuesta);
+	// log_info(cpu_logger, "Valor del bool: %d", respuesta);
 	return respuesta;
 }
 
