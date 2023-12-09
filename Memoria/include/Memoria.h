@@ -35,6 +35,9 @@ FILE* disco;
 t_dictionary* tablas;
 t_list* lst_marco;
 
+Pagina* pag_auxiliar_in;
+Pagina* pag_auxiliar_out;
+
 /********LOG Y CONFIGS*******/
 t_log* memoria_logger;
 t_log* memoria_log_obligatorio;

@@ -7,9 +7,15 @@ void asignar_marcos_a_cada_pagina(proceso_recibido* un_proceso){
 	for(int i=0; i<cant_paginas; i++){
 		Pagina* una_pagina = list_get(un_proceso->tabla_paginas, i);
 		marco* un_marco = pedir_un_marco_de_la_lista_de_marcos();
+
+		//Esto no debe ir porque no todos los marcos son victimas, puede haber marcos libres.
+//		logg_reemplazar_pagina(el_marco->pid, el_marco->ptr_pagina->pid_proceso, out_nro_pag, in_pid, in_nro_pag);
+//		logg_reemplazar_pagina(un_marco->pid, un_marco->ptr_pagina->pid_proceso, un_marco->ptr_pagina->nro_pagina, una_pagina->pid_proceso, una_pagina->nro_pagina);
+
 		una_pagina->ptr_marco = un_marco;
 		una_pagina->marco = un_marco->pid;
-		una_pagina->orden_carga = ordenCargaGlobal; ordenCargaGlobal++;
+		una_pagina->orden_carga = ordenCargaGlobal;
+		ordenCargaGlobal++;
 		una_pagina->presente = true;
 		una_pagina->modificado = false;
 
@@ -40,6 +46,9 @@ marco* pedir_un_marco_de_la_lista_de_marcos(){
 		}
 
 		el_marco->ptr_pagina->presente = false;
+
+		//Reemplao
+//		logg_reemplazar_pagina(el_marco->pid, el_marco->ptr_pagina->pid_proceso, out_nro_pag, in_pid, in_nro_pag);
 
 		//Compruebo si fue modificado y guardo los cambios en SWAP
 		if(el_marco->ptr_pagina->modificado){
@@ -104,7 +113,7 @@ void leer_archivo_de_FS_y_cargarlo_en_memoria(void* un_buffer){
 
 	pthread_mutex_lock(&mutex_espacio_usuario);
 	memcpy(espacio_usuario + dir_fisica, info_recibida, TAM_PAGINA);
-	logg_acceso_a_espacio_de_usuario(un_marco->ptr_pagina->pid_proceso, 1, dir_fisica);
+	logg_acceso_a_espacio_de_usuario(un_marco->ptr_pagina->pid_proceso, "escribir", dir_fisica);
 	pthread_mutex_unlock(&mutex_espacio_usuario);
 	free(info_recibida);
 
@@ -127,7 +136,7 @@ void leer_todo_el_marco_de_la_dir_fisica_y_enviarlo_a_FS(void* un_buffer){
 
 	pthread_mutex_lock(&mutex_espacio_usuario);
 	memcpy(un_marco, espacio_usuario + dir_fisica, TAM_PAGINA);
-	logg_acceso_a_espacio_de_usuario(marco_info->ptr_pagina->pid_proceso, 0, dir_fisica);
+	logg_acceso_a_espacio_de_usuario(marco_info->ptr_pagina->pid_proceso, "leer", dir_fisica);
 	pthread_mutex_unlock(&mutex_espacio_usuario);
 
 	//Se accede a la tabla de paginas para modificar el estado de la pagina
