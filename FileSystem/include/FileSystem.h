@@ -109,4 +109,6 @@ t_archivo_fcb* obtener_archivo(char* nombre_archivo);
 void asignar_bloque_primer_truncate(t_archivo_fcb* fcb);
 t_bloque_fat* buscar_bloque_libre();
 
+void actualizar_archivo_fat(t_list* tabla_fat);
+
 #endif /* CPU_H_ */

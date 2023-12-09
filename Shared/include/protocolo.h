@@ -172,6 +172,12 @@ void identificarme_con_memoria(int conexion, modulo_code modulo);
 // void send_path_memoria(int fd_modulo, char* path,int size); // Se usa dependiendo de como inicialicemos las estructuras
 void send_enviar_path_memoria(int fd_memoria, char* path, int size, int process_id);
 
+/*************FILESYSTEM****************/
+void enviar_tamanio_fcb(int tamanio_fcb, int fd_modulo);
+void enviar_para_escribir_valor_leido(char* valor, int dir_fisica, int pid, int fd_modulo);
+void recibir_fin_de_escritura(int fd_modulo);
+void enviar_para_leer_valor(int dir_fisica, int pid, int fd_modulo);
+char* recibir_valor_leido(int fd_modulo);
 
 #endif /* INCLUDE_PROTOCOLO_H_ */
 

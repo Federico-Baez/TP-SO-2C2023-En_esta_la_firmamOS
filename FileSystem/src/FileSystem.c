@@ -155,7 +155,7 @@ void crear_fat(){
 	if(archivo_fat != NULL){
 		for(int i=0; i < (CANT_BLOQUES_TOTAL - CANT_BLOQUES_SWAP); i++){
 			t_bloque_fat* bloque_a_persistir = list_get(tabla_fat, i);
-			fwrite(bloque_a_persistir->puntero_siguiente, sizeof(uint32_t), 1, archivo_fat);
+			fwrite(&bloque_a_persistir->puntero_siguiente, sizeof(uint32_t), 1, archivo_fat);
 		}
 
 		fclose(archivo_fat);
@@ -265,9 +265,9 @@ void atender_memoria(){
 
 void ejecutar_f_open(char* nombre_archivo){
 	log_info(filesystem_log_obligatorio, "Abrir Archivo: %s", nombre_archivo);
-	t_archivo_fcb* archivo_fcb = buscar_fcb(nombre_archivo);
-	if(archivo_fcb != NULL){
-		int tamanio_fcb = config_get_int_value(archivo_fcb, "TAMANIO_ARCHIVO");
+	t_archivo_fcb* fcb = buscar_fcb(nombre_archivo);
+	if(fcb != NULL){
+		int tamanio_fcb = config_get_int_value(fcb->archivo_fcb, "TAMANIO_ARCHIVO");
 		enviar_tamanio_fcb(tamanio_fcb, fd_kernel);
 	}else{
 		enviar_mensaje("El archivo solicitado no existe", fd_kernel);
@@ -302,7 +302,7 @@ void ejecutar_f_create(char* nombre_archivo){
 	list_add(lista_fcbs, archivo_fcb);
 	fclose(file_fcb);
 
-	enviar_mensaje("OK", fd_kernel);
+	enviar_mensaje("CREACIÓN DE ARCHIVO OK", fd_kernel);
 }
 
 void ejecutar_f_truncate(char* nombre_archivo, int tamanio_nuevo){
@@ -337,7 +337,6 @@ void ejecutar_f_truncate(char* nombre_archivo, int tamanio_nuevo){
 		asignar_bloques(cantidad_bloques_a_agregar, fcb);
 
 	} else if(tamanio_restante < tamanio_viejo){
-		// REDUCIR
 		div_t cuenta_bloque_viejo = div(tamanio_viejo - 1, TAM_BLOQUE);
 		div_t cuenta_bloque_nuevo = div(tamanio_restante - 1, TAM_BLOQUE);
 		int cantidad_bloques_a_sacar = cuenta_bloque_viejo.quot - cuenta_bloque_nuevo.quot;
@@ -348,7 +347,7 @@ void ejecutar_f_truncate(char* nombre_archivo, int tamanio_nuevo){
 		log_info(filesystem_logger, "No hay que sacar ni agregar ningun bloque");
 	}
 
-	//TODO: modificar tabla fat
+	actualizar_archivo_fat(tabla_fat);
 }
 
 void ejecutar_f_read(char* nombre_archivo, int dir_fisica, int posicion_a_leer, int pid){
@@ -377,7 +376,6 @@ void ejecutar_f_write(char* nombre_archivo, int dir_fisica, int posicion_a_escri
 
 void asignar_bloques(int cant_bloques, t_archivo_fcb* fcb){
 	uint32_t bloque_inicial = config_get_int_value(fcb->archivo_fcb, "BLOQUE_INICIAL");
-	//char* nombre_archivo = config_get_string_value(fcb->archivo_fcb, "NOMBRE_ARCHIVO");
 
 	t_bloque_fat* bloque_actual = ultimo_bloque_archivo(bloque_inicial, fcb);
 
@@ -390,13 +388,10 @@ void asignar_bloques(int cant_bloques, t_archivo_fcb* fcb){
 
 		bloque_actual = nuevo_bloque_libre;
 	}
-
-	//TODO: modificar archivo fat
 }
 
 void sacar_bloques(int cant_bloques, t_archivo_fcb* fcb){
 	uint32_t bloque_inicial = config_get_int_value(fcb->archivo_fcb, "BLOQUE_INICIAL");
-	//char* nombre_archivo = config_get_string_value(fcb->archivo_fcb, "NOMBRE_ARCHIVO");
 
 	t_bloque_fat* bloque_a_sacar = malloc(sizeof(uint32_t));
 
@@ -405,7 +400,6 @@ void sacar_bloques(int cant_bloques, t_archivo_fcb* fcb){
 		bloque_a_sacar->puntero_siguiente = 0;
 		bloque_a_sacar->esta_libre = 1;
 		list_replace(tabla_fat, bloque_a_sacar->id_bloque, bloque_a_sacar);
-		//TODO: modificar archivo fat
 	}
 }
 
@@ -468,7 +462,6 @@ t_bloque_fat* buscar_bloque_libre(){ //busca un bloque libre y lo ocupa
 			bloque->puntero_siguiente = UINT32_MAX;
 			bloque->esta_libre = 0;
 			list_replace(tabla_fat, bloque->id_bloque, bloque);
-			//TODO: modificar archivo fat, el TODO va aca?
 
 			log_info(filesystem_log_obligatorio, "Acceso FAT - Entrada: %d - Valor: %d", i, UINT32_MAX);
 			return bloque;
@@ -477,4 +470,18 @@ t_bloque_fat* buscar_bloque_libre(){ //busca un bloque libre y lo ocupa
 
 	log_error(filesystem_logger, "No hay bloques libres");
 	return NULL;
+}
+
+void actualizar_archivo_fat(t_list* tabla_fat){
+	FILE* archivo_fat = fopen(PATH_FAT, "r+b");
+
+	if(archivo_fat != NULL){
+		for(int i=0; i < list_size(tabla_fat); i++){
+			t_bloque_fat* bloque_a_persistir = list_get(tabla_fat, i);
+			fseek(archivo_fat, i*sizeof(uint32_t), SEEK_SET);
+			fwrite(&bloque_a_persistir->puntero_siguiente, sizeof(uint32_t), 1, archivo_fat);
+		}
+
+		fclose(archivo_fat);
+	}
 }
