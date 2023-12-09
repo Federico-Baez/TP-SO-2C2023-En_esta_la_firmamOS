@@ -48,7 +48,7 @@ void _gestionar_peticiones_de_memoria(){
 		case ESTRUCTURA_INICIADA_MK:
 			unBuffer = recibiendo_super_paquete(fd_memoria);
 			recibir_confirmacion_de_memoria(unBuffer);
-//			sem_post(&sem_estructura_iniciada);
+			sem_post(&sem_estructura_iniciada);
 			free(unBuffer);
 			break;
 		case ESTRUCTURA_LIBERADA_MK:
@@ -92,6 +92,8 @@ void _gestionar_peticiones_de_cpu_dispatch(){
 
 		switch (cod_op) {
 		case ATENDER_INSTRUCCION_CPK:
+			log_error(kernel_logger, "ENtre a atender instruccion");
+
 			pcb = _recibir_proceso_desalojado(unBuffer);
 			char* instruccion = recibir_string_del_buffer(unBuffer);
 			pausador();
@@ -150,12 +152,40 @@ void _gestionar_peticiones_de_cpu_dispatch(){
 
 				free(nombre_archivo);
 			}else if(strcmp(instruccion, "EXIT") == 0){
+				pthread_mutex_lock(&mutex_lista_exec);
+				//Este control verifica que esa PCB siga en la lista
+				if(list_remove_element(lista_execute, pcb)){
+					liberar_recursos_pcb(pcb);
+					avisar_a_memoria_para_liberar_estructuras(pcb);
+			//		sem_wait(&sem_estructura_liberada);
+					transferir_from_actual_to_siguiente(pcb, lista_exit, mutex_lista_exit, EXIT);
+					log_info(kernel_log_obligatorio, "Finaliza el proceso [PID: %d] - Motivo: SUCCESS", pcb->pid);
+				}else{
+					log_error(kernel_logger, "PCB no encontrada en EXEC [Eliminacion por consola]");
+					exit(EXIT_FAILURE);
+				}
+				pthread_mutex_unlock(&mutex_lista_exec);
 
+			}else if(strcmp(instruccion, "PAGE_FAULT") == 0){
+				int pagina = recibir_int_del_buffer(unBuffer);
+				pthread_mutex_lock(&mutex_lista_exec);
+				if(list_remove_element(lista_execute,pcb)){
+					t_page_fault* un_page_fault = malloc(sizeof(t_page_fault));
+					un_page_fault->pid_process = pcb->pid;
+					un_page_fault->numero_pagina = pagina;
+
+					log_info(kernel_log_obligatorio, "Page Fault PID: %d - Pagina: %d", pcb->pid, pagina);
+					transferir_from_actual_to_siguiente(pcb, lista_blocked, mutex_lista_blocked, BLOCKED);
+
+					ejecutar_en_un_hilo_nuevo_detach((void*)_atender_page_fault, un_page_fault);
+				}
+				pthread_mutex_unlock(&mutex_lista_exec);
 			}
 			free(instruccion);
 			free(unBuffer);
 			break;
 		case DESALOJO_PROCESO_CPK:
+
 			pcb = _recibir_proceso_desalojado(unBuffer);
 
 			pthread_mutex_lock(&mutex_flag_proceso_desalojado);
@@ -300,6 +330,7 @@ void _gestionar_peticiones_de_filesystem(){
 t_pcb* _recibir_proceso_desalojado(t_buffer* un_buffer){
 
 	int recibe_pid = recibir_int_del_buffer(un_buffer);
+
 	pthread_mutex_lock(&mutex_lista_exec);
 	t_pcb* un_pcb = buscar_pcb_por_pid_en(recibe_pid, lista_execute, mutex_lista_exec);
 	pthread_mutex_unlock(&mutex_lista_exec);
@@ -518,7 +549,7 @@ void atender_wait(t_pcb* pcb,char* recurso_solicitado){
 		if(recurso_buscado->instancias >= 0){
 			recurso_buscado->instancias --;
 			list_add(pcb->lista_recursos_pcb, recurso_buscado);
-			list_add(recurso_buscado->lista_asignados, pcb);
+			recurso_buscado->pcb_asignado = pcb;
 			log_info(kernel_log_obligatorio, "PID: %d - Wait: %s - Instancias: %d", pcb->pid, recurso_buscado->recurso_name, recurso_buscado->instancias);
 			_enviar_respuesta_instruccion_CPU_por_dispatch(1);
 		}else{
@@ -545,7 +576,9 @@ void atender_wait(t_pcb* pcb,char* recurso_solicitado){
 // ----- SIGNAL -----
 void atender_signal(t_pcb* pcb,char* recurso_a_liberar){
 	t_recurso* recurso_buscado = buscar_recurso(recurso_a_liberar);
-	if(recurso_buscado != NULL && list_remove_element(recurso_buscado->lista_asignados, pcb) && list_remove_element(pcb->lista_recursos_pcb, recurso_buscado)){
+	recurso_buscado->pcb_asignado = NULL;
+
+	if(recurso_buscado != NULL  && list_remove_element(pcb->lista_recursos_pcb, recurso_buscado)){
 		recurso_buscado->instancias ++;
 		if(!list_is_empty(recurso_buscado->lista_bloqueados)){
 			asignar_recurso_liberado_pcb(recurso_buscado);
@@ -571,7 +604,6 @@ t_recurso* buscar_recurso(char* recurso_solicitado){
 			break;
 		}
 	}
-
 	return recurso_encontrado;
 }
 
@@ -624,6 +656,7 @@ void atender_F_open(t_pcb* pcb, char* nombre_archivo, char* tipo_apertura){
 		pthread_mutex_lock(&mutex_lista_exec);
 		list_remove(lista_execute, 0);
 		pthread_mutex_unlock(&mutex_lista_exec);
+
 		pcb->motivo_block = RECURSO;
 		transferir_from_actual_to_siguiente(pcb, cola_blocked_fs, mutex_cola_blocked_fs, BLOCKED);
 		log_blocked_proceso(pcb->pid, nombre_archivo);
@@ -709,7 +742,7 @@ void atender_F_close(char* close_nombre_archivo, t_pcb* pcb){
 void atender_F_seek(char* nombre_archivo , int nuevo_puntero_archivo, t_pcb* pcb){
 	t_archivo_abierto_pcb* archivo_pcb = obtener_archivo_pcb(pcb, nombre_archivo);
 
-	if(archivo_pcb != NULL){
+	if(archivo_pcb!= NULL){
 		archivo_pcb->puntero = nuevo_puntero_archivo;
 		log_info(kernel_log_obligatorio, "PID: %d - Actualizar puntero Archivo: %s - Puntero %d", pcb->pid, nombre_archivo, archivo_pcb->puntero);
 	}else
@@ -773,6 +806,7 @@ void atender_F_write(char* nombre_archivo , int dir_fisica, t_pcb* pcb){
 
 		transferir_from_actual_to_siguiente(pcb, lista_blocked, mutex_lista_blocked, BLOCKED);
 		log_blocked_proceso(pcb->pid, nombre_archivo);
+
 	}else{
 		pcb->motivo_exit = INVALID_WRITE;
 		plp_planificar_proceso_exit(pcb->pid);

@@ -88,13 +88,12 @@ static void _iniciar_recursos(){
 		t_recurso* recurso = malloc(sizeof(t_recurso));
 		recurso->recurso_name = RECURSOS[i];
 		recurso->instancias = atoi(INSTANCIAS_RECURSOS[i]);
-		recurso->lista_asignados = list_create();
+		recurso->pcb_asignado = NULL;
 		recurso->lista_bloqueados = list_create();
 		list_add(lista_recursos, recurso);
 		i++;
 
 		pthread_mutex_init(&recurso->mutex_bloqueados, NULL);
-		pthread_mutex_init(&recurso->mutex_asignados, NULL);
 
 		log_info(kernel_logger, "[%s | %d]", recurso->recurso_name, recurso->instancias);
 	}
