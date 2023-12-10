@@ -392,7 +392,7 @@ void atender_proceso_del_kernel(t_buffer* unBuffer){
 		bool bool_interrupt = interruptFlag;
 		pthread_mutex_unlock(&mutex_interruptFlag);
 
-		//Controlar si hay interrupciones
+		//Controlar si hay interrupciones provenientes de kernel
 		if(bool_interrupt){
 			break;
 		}
@@ -403,32 +403,22 @@ void atender_proceso_del_kernel(t_buffer* unBuffer){
 	t_paquete* un_paquete;
 
 	pthread_mutex_lock(&mutex_interruptFlag);
-	if(interruptFlag){
+	if(hay_que_desalojar){
+		//La mochila debe incluir el motivo del desalojo
+		un_paquete = alistar_paquete_de_desalojo(ATENDER_INSTRUCCION_CPK);
+
+		cargar_choclo_al_super_paquete(un_paquete, mochila->buffer->stream, mochila->buffer->size);
+	}else if(interruptFlag){
 		un_paquete = alistar_paquete_de_desalojo(DESALOJO_PROCESO_CPK);
 		cargar_string_al_super_paquete(un_paquete, interrupt_motivo);
-
-	}else{
-		//La mochila debe incluir el motivo del desalojo}
-		log_info(cpu_logger, "Entre al ELSE");
-		if(strcmp(instruccion_split[0], "SLEEP") == 0){
-			contexto->proceso_ip = contexto->proceso_ip + 1;
-		}
-		log_info(cpu_logger, "Voy a alistar paquete");
-		un_paquete = alistar_paquete_de_desalojo(ATENDER_INSTRUCCION_CPK);
-		log_info(cpu_logger, "Voy a caragr mochila");
-		if(!hay_que_desalojar_sin_mensaje){
-			cargar_choclo_al_super_paquete(un_paquete, mochila->buffer->stream, mochila->buffer->size);
-		}
-		log_info(cpu_logger, "CARGUE TODO");
 	}
 	pthread_mutex_unlock(&mutex_interruptFlag);
 
 	if(!hay_que_desalojar_sin_mensaje){
-		log_info(cpu_logger, "Entre al if de hay que desalojar");
 		enviar_paquete(un_paquete, fd_kernel_dispatch);
 	}
-	log_info(cpu_logger, "Elimino paquete");
 
+	log_info(cpu_logger, "Elimino paquete");
 	eliminar_paquete(un_paquete);
 
 	log_warning(cpu_logger, "Proceso_desalojado <PID:%d>", contexto->proceso_pid);
@@ -524,13 +514,11 @@ void ciclo_de_instruccion_execute(){
 
 	}else if(strcmp(instruccion_split[0], "SLEEP") == 0){// [SLEEP][tiempo]
 		log_info(cpu_log_obligatorio, "PID: <%d> - Ejecutando: <%s> - <%s>", contexto->proceso_pid, instruccion_split[0], instruccion_split[1]);
+		contexto->proceso_ip = contexto->proceso_ip + 1;
 
-		/* Esta instrucción representa una syscall bloqueante.
-		 * Se deberá devolver el Contexto de Ejecución actualizado al Kernel
-		 * junto a la cantidad de segundos que va a bloquearse el proceso.*/
-		//Enviar al KERNEL: [PID][IP][AX][BX][CX][DX]["SLEEP"][Tiempo]
+		//Enviar al KERNEL: [contexto]["SLEEP"][Tiempo]
 		mochila = crear_super_paquete(100);
-		cargar_string_al_super_paquete(mochila, "SLEEP"); //Motivo del desalojo
+		cargar_string_al_super_paquete(mochila, instruccion_split[0]); // instruccion_split[0]: instruccion
 		cargar_int_al_super_paquete(mochila, atoi(instruccion_split[1])); //otros perametros necesarios, en este caso el tiempo
 
 		hay_que_desalojar = true;
