@@ -1,6 +1,8 @@
 #include "../include/servicios_memoria.h"
 
-void logg_crear_destruir_tabla_de_paginas(int pid, int cant_paginas){
+
+//-------------------------------------------------------
+void logg_crear_tabla_de_paginas(int pid, int cant_paginas){
 	//PID: <PID> - Tamaño: <CANTIDAD_PAGINAS>
 	log_info(memoria_log_obligatorio, "PID: <%d> - Tamaño: <%d>", pid, cant_paginas);
 }
@@ -28,10 +30,7 @@ void logg_acceso_a_espacio_de_usuario(int pid, char* accion, int dir_fisica){
 void logg_reemplazar_pagina(int nro_marco, int out_pid, int out_nro_pag, int in_pid, int in_nro_pag){
 	//REEMPLAZO - Marco: <NRO_MARCO> - Page Out: <PID>-<NRO_PAGINA> - Page In: <PID>-<NRO_PAGINA>
 	log_info(memoria_log_obligatorio, "REEMPLAZO - Marco: <%d> - Page Out: <%d>-<%d> - Page In: <%d>-<%d>", nro_marco, out_pid, out_nro_pag, in_pid, in_nro_pag);
-	free(pag_auxiliar_in);
-	free(pag_auxiliar_out);
 }
-
 
 void logg_lectura_pagina_swap(int pid, int nro_marco, int nro_pagina){
 	//SWAP IN -  PID: <PID> - Marco: <MARCO> - Page In: <PID>-<NRO_PAGINA>
@@ -42,3 +41,46 @@ void logg_escritura_pagina_en_swap(int pid, int nro_marco, int nro_pagina){
 	//SWAP OUT -  PID: <PID> - Marco: <MARCO> - Page Out: <PID>-<NRO_PAGINA>
 	log_info(memoria_log_obligatorio, "SWAP OUT - PID: <%d> - Marco: <%d> - Page Out: <%d>-<%d>", pid, nro_marco, pid, nro_pagina);
 }
+
+//=====================================
+
+void retardo_respuesta_cpu_fs(){
+	usleep(RETARDO_RESPUESTA*1000);
+}
+
+int asignar_orden_carga_global(){
+	int valor;
+	pthread_mutex_lock(&mutex_ord_carga_global);
+	valor = ordenCargaGlobal;
+	ordenCargaGlobal++;
+	pthread_mutex_unlock(&mutex_ord_carga_global);
+
+	return valor;
+}
+
+void setear_config_del_marco_segun_algoritmo(t_marco* un_marco){
+	if(strcmp(ALGORITMO_REEMPLAZO, "FIFO") == 0){
+		un_marco->orden_carga = asignar_orden_carga_global();
+	}else if(strcmp(ALGORITMO_REEMPLAZO, "LRU") == 0){
+		if(un_marco->ultimo_uso != NULL){
+			temporal_destroy(un_marco->ultimo_uso);
+			un_marco->ultimo_uso = temporal_create();
+		}else{
+			un_marco->ultimo_uso = temporal_create();
+		}
+	}else{
+		log_error(memoria_logger, "[servicios_memoria.c] Algoritmo no coincide a la hora de setear config de marco");
+		exit(EXIT_FAILURE);
+	}
+}
+
+
+
+
+
+
+
+
+
+
+

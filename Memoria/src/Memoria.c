@@ -81,14 +81,14 @@ void inicializar_memoria(){
 	int cant_marcos = TAM_MEMORIA/TAM_PAGINA;
 
 	for(int i=0;i< cant_marcos;i++){
-		marco* nuevo_marco  = crear_marco(TAM_PAGINA*i, true, i);
+		t_marco* nuevo_marco  = crear_marco(TAM_PAGINA*i, true, i);
 
 		list_add(lst_marco,nuevo_marco);
-
 	}
 
 	pthread_mutex_init(&mutex_lst_marco, NULL);
 	pthread_mutex_init(&mutex_espacio_usuario, NULL);
+	pthread_mutex_init(&mutex_ord_carga_global, NULL);
 
 }
 
@@ -186,32 +186,26 @@ void atender_kernel(int cliente_socket) {
     t_buffer* unBuffer;
     int cod_op = recibir_operacion(cliente_socket);
 		switch(cod_op) {
-				case INICIAR_ESTRUCTURA_KM:
-					printf("Se un proceso nuevo\n");
+				case INICIAR_ESTRUCTURA_KM://[char* path][int size][int pid]
+					log_info(memoria_logger, "[Kernel] -> Peticion de creacion de proceso nuevo");
 					unBuffer = recibiendo_super_paquete(fd_kernel);
-					agregar_proceso_a_listado(unBuffer, list_procss_recibidos);
-
-//					printf("Se libera el buffer\n");
+					iniciar_estructura_para_un_proceso_nuevo(unBuffer);
+					free(unBuffer);
 					break;
-				case LIBERAR_ESTRUCTURA_KM:
+				case LIBERAR_ESTRUCTURA_KM: //[int pid]
 					unBuffer = recibiendo_super_paquete(fd_kernel);
-					int pid = recibir_int_del_buffer(unBuffer);
-					proceso_recibido* proceso_a_liberar = obtener_proceso_por_id(pid, list_procss_recibidos);
-					liberar_proceso(proceso_a_liberar);
-					log_warning(memoria_logger, "Se liberaron las estructuras del proceso: PID_%d", pid);
-//					free(unBuffer);
-					//
+					eliminar_proceso_y_liberar_estructuras(unBuffer);
+					free(unBuffer);
 					break;
 				case MENSAJES_POR_CONSOLA:
 					unBuffer = recibiendo_super_paquete(fd_kernel);
 					atender_mensajes_kernel(unBuffer);
 //					free(unBuffer);
 					break;
-				case PETICION_PAGE_FAULT_KM:
+				case PETICION_PAGE_FAULT_KM: //[int pid][int nro_pagina]
 					unBuffer = recibiendo_super_paquete(fd_kernel);
-					int pid_peticion = recibir_int_del_buffer(unBuffer);
-					int nro_pagina = recibir_int_del_buffer(unBuffer);
-					atender_pagefault_kernel(pid_peticion, nro_pagina);
+					atender_pagefault_kernel(unBuffer);
+					free(unBuffer);
 					break;
 
 			case -1:
@@ -245,39 +239,34 @@ void atender_cpu(int cliente_socket) {
 					unBuffer = recibiendo_super_paquete(fd_cpu);
 
 					break;
-				case PETICION_DE_INSTRUCCIONES_CM:
-					unBuffer = recibiendo_super_paquete(fd_cpu); //recibo el [pId] y el [PC]
-					int pid_buffer = recibir_int_del_buffer(unBuffer);
-					int ip_buffer = recibir_int_del_buffer(unBuffer);
-					retardo_respuesta_cpu_fs();
-					enviar_instrucciones_a_cpu(pid_buffer,ip_buffer);
-
+				case PETICION_DE_INSTRUCCIONES_CM: //[int pid][int ip]
+					unBuffer = recibiendo_super_paquete(fd_cpu);
+					atender_peticion_de_instruccion(unBuffer);
+//					retardo_respuesta_cpu_fs();
+					free(unBuffer);
 					break;
 				case PETICION_DE_EJECUCION_CM:
 					unBuffer = recibiendo_super_paquete(fd_cpu);
 
 					break;
-				case CONSULTA_DE_PAGINA_CM:
+				case CONSULTA_DE_PAGINA_CM: //[int pid][int nro_pagina]
+					//Se respondera con el nro_marco o page_fault(-1)
 					unBuffer = recibiendo_super_paquete(fd_cpu);
-					int pid_consulta = recibir_int_del_buffer(unBuffer);
-					int nro_pagina = recibir_int_del_buffer(unBuffer);
-					retardo_respuesta_cpu_fs();
-					devolver_marco_o_pagefault_cpu(pid_consulta, nro_pagina);
+					atender_consulta_de_pagina(unBuffer);
+//					retardo_respuesta_cpu_fs();
+					free(unBuffer);
 					break;
 				case LECTURA_BLOQUE_CM: //[int pid][int dir_fisica]
 					unBuffer = recibiendo_super_paquete(fd_cpu);
-					int pid_lectura = recibir_int_del_buffer(unBuffer);
-					int dir_fisica_lect = recibir_int_del_buffer(unBuffer);
-					retardo_respuesta_cpu_fs();
-					lectura_pagina_bloque_cpu(pid_lectura, dir_fisica_lect);
+					atender_consulta_de_pagina(unBuffer);
+//					retardo_respuesta_cpu_fs();
+					free(unBuffer);
 					break;
 				case ESCRITURA_BLOQUE_CM: ////[int pid][int dir_fisica][uint32_t info]
 					unBuffer = recibiendo_super_paquete(fd_cpu);
-					int pid_proceso_escritura = recibir_int_del_buffer(unBuffer);
-					int dir_fisica_escr = recibir_int_del_buffer(unBuffer);
-					uint32_t valor_uint32 = (uint32_t)recibir_int_del_buffer(unBuffer);
-					retardo_respuesta_cpu_fs();
-					escritura_pagina_bloque_cpu(pid_proceso_escritura, dir_fisica_escr, valor_uint32);
+//					retardo_respuesta_cpu_fs();
+					escritura_pagina_bloque_cpu(unBuffer);
+					free(unBuffer);
 					break;
 			case -1:
 				log_error(memoria_logger, "[DESCONEXION]: CPU");
@@ -303,44 +292,38 @@ void atender_filesystem(int cliente_socket){
 	int cod_op = recibir_operacion(cliente_socket);
 
 	switch(cod_op) {
-		case PETICION_ASIGNACION_BLOQUE_SWAP_FM:
+		case PETICION_ASIGNACION_BLOQUE_SWAP_FM://[int pid][int cant_bloques][int][int][int]..[int]
 			unBuffer = recibiendo_super_paquete(fd_filesystem);
-			retardo_respuesta_cpu_fs();
-			asignar_posicions_de_SWAP_a_tabla_de_paginas(unBuffer);
+//			retardo_respuesta_cpu_fs();
+			asignar_posicions_de_SWAP_a_tabla_de_paginas_de_un_proceso(unBuffer);
 			free(unBuffer);
 			//
 			break;
-		case LIBERAR_PAGINAS_FM:
+		case LIBERAR_PAGINAS_FM: //[FALTA] Coordinarlo y leer TP
 			unBuffer = recibiendo_super_paquete(fd_filesystem);
-			retardo_respuesta_cpu_fs();
+//			retardo_respuesta_cpu_fs();
 //				free(unBuffer);
 			//
 			break;
-		case PETICION_PAGE_FAULT_FM:
+		case RPTA_LECTURA_MARCO_DE_SWAP_FM: //[int pid][int nro_pag][void* pagina]
 			unBuffer = recibiendo_super_paquete(fd_filesystem);
-			int pid_pagina_swap = recibir_int_del_buffer(unBuffer);
-			void* pos_pagina_swap = recibir_choclo_del_buffer(unBuffer);
-			int nro_pagina_swap = recibir_int_del_buffer(unBuffer);
-			retardo_respuesta_cpu_fs();
-			recibir_la_pagina_desde_FS( pid_pagina_swap,pos_pagina_swap,nro_pagina_swap);
-
-//				free(unBuffer);
+			atender_lectura_de_pagina_de_swap_a_memoria(unBuffer);
+//			retardo_respuesta_cpu_fs();
+			free(unBuffer);
 			//
 			break;
-		case CARGAR_INFO_DE_LECTURA_FM: // Cargar info del FS a la Memoria
-			//[int dir_fisica | uint32_t info]
+		case BLOQUE_DE_MEMORIA_A_FILESYSTEM_FM: //[int pid][int dir_fisica]
 			unBuffer = recibiendo_super_paquete(fd_filesystem);
-			retardo_respuesta_cpu_fs();
-			leer_archivo_de_FS_y_cargarlo_en_memoria(unBuffer);
-//			free(unBuffer);
+			atender_bloque_de_memoria_y_llevarlos_a_fylesystem(unBuffer);
+//			retardo_respuesta_cpu_fs();
+			free(unBuffer);
 			//
 			break;
-		case GUARDAR_INFO_FM: // Guardar info de Memoria a FS
-			//[int dir_fisica]
+		case BLOQUE_DE_FILESYSTEM_A_MEMORIA_FM: //[int pid][int dir_fisica][void* marco]
 			unBuffer = recibiendo_super_paquete(fd_filesystem);
-			retardo_respuesta_cpu_fs();
-			leer_todo_el_marco_de_la_dir_fisica_y_enviarlo_a_FS(unBuffer);
-//				free(unBuffer);
+//			retardo_respuesta_cpu_fs();
+			atender_bloque_de_fs_a_memoria(unBuffer);
+			free(unBuffer);
 			//
 			break;
 		case -1:
@@ -408,46 +391,5 @@ int server_escucha(){
 
 
 
-/******************************INSTRUCCIONES*****************************/
-//Movido a su modulo proceso_recibido
 
-
-/******************************CARGAR INSTRUCCIONES*****************************/
-
-/******************************FUNCIONES PARA PROCESOS*****************************/
-
-//Movido a su modulo proceso_recibido
-
-
-
-
-
-/******************************FUNCIONES PARA CPU*****************************/
-
-void enviar_instrucciones_a_cpu(int pid_buffer,int ip_buffer){
-	t_paquete* paquete = crear_super_paquete(PETICION_DE_INSTRUCCIONES_CM);
-
-	proceso_recibido* un_proceso = obtener_proceso_por_id(pid_buffer, list_procss_recibidos);
-	char* instruccion = obtener_instruccion_por_indice(ip_buffer, un_proceso->instrucciones);
-	cargar_string_al_super_paquete(paquete, instruccion);
-	enviar_paquete(paquete, fd_cpu);
-	eliminar_paquete(paquete);
-}
-
-
-
-
-/******************************FUNCIONES AUXILIARES*****************************/
-
-void bloquear_lista_tablas(){
-	pthread_mutex_lock(&m_tablas);
-	log_info(memoria_log_obligatorio, "[SEMAFORO]: Bloqueo lista de tabla \n");
-}
-void desbloquear_lista_tablas(){
-	log_info(memoria_log_obligatorio, "[SEMAFORO]: Desbloqueo lista de tabla \n");
-	pthread_mutex_unlock(&m_tablas);
-}
-void retardo_respuesta_cpu_fs(){
-	usleep(RETARDO_RESPUESTA*1000);
-}
 
