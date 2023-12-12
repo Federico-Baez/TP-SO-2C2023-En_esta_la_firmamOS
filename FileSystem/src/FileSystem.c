@@ -202,17 +202,62 @@ void atender_filesystem_kernel(){
 	while(1){
 		int cod_op = recibir_operacion(fd_kernel);
 		t_buffer* unBuffer;
+		unBuffer = recibiendo_super_paquete(fd_kernel);
+		char* nombre_archivo = recibir_string_del_buffer(unBuffer);
 		//log_info(filesystem_logger, "Se recibio algo de KERNEL");
 
 		switch (cod_op) {
-		case SYSCALL_KF:
-			unBuffer = recibiendo_super_paquete(fd_kernel);
-			//
+		case MANEJAR_F_OPEN_KF:
+			char* operacion = recibir_string_del_buffer(unBuffer);
+
+			t_paquete* paquete = crear_super_paquete(RESPUESTA_F_OPEN_FK);
+			if(strcmp(operacion , "ABRIR_ARCHIVO") == 0){
+				cargar_string_al_super_paquete(paquete, "ABRIR_ARCHIVO");
+				cargar_int_al_super_paquete(paquete, 1);
+				cargar_string_al_super_paquete(paquete,nombre_archivo);
+				cargar_int_al_super_paquete(paquete, 10);
+			}else{
+				cargar_string_al_super_paquete(paquete, "CERRAR_ARCHIVO");
+				cargar_int_al_super_paquete(paquete, -1);
+			}
+			enviar_paquete(paquete, fd_kernel);
+			eliminar_paquete(paquete);
+
+			break;
+		case MANEJAR_F_TRUNCATE_KF:
+			int tamanio = recibir_int_del_buffer(unBuffer);
+			int pid1 = recibir_int_del_buffer(unBuffer);
+
+			t_paquete* paquete1 = crear_super_paquete(RESPUESTA_F_TRUNCATE_FK);
+			cargar_int_al_super_paquete(paquete1, 0);
+			cargar_int_al_super_paquete(paquete1, pid1);
+			enviar_paquete(paquete1, fd_kernel);
+			eliminar_paquete(paquete1);
+			break;
+		case MANEJAR_F_READ_KF:
+			int dir = recibir_int_del_buffer(unBuffer);
+			int pid2 = recibir_int_del_buffer(unBuffer);
+
+			t_paquete* paquete2 = crear_super_paquete(RESPUESTA_F_READ_FK);
+			cargar_int_al_super_paquete(paquete2, 0);
+			cargar_int_al_super_paquete(paquete2, pid2);
+			enviar_paquete(paquete2, fd_kernel);
+			eliminar_paquete(paquete2);
+			break;
+		case MANEJAR_F_WRITE_KF:
+			int dir2 = recibir_int_del_buffer(unBuffer);
+			int pid3 = recibir_int_del_buffer(unBuffer);
+
+			t_paquete* paquete3 = crear_super_paquete(RESPUESTA_F_WRITE_FK);
+			cargar_int_al_super_paquete(paquete3, 0);
+			cargar_int_al_super_paquete(paquete3, pid3);
+			enviar_paquete(paquete3, fd_kernel);
+			eliminar_paquete(paquete3);
 			break;
 		case MENSAJES_POR_CONSOLA:
-			unBuffer = recibiendo_super_paquete(fd_kernel);
-			atender_mensajes_kernel(unBuffer);
-			break;
+		    unBuffer = recibiendo_super_paquete(fd_kernel);
+		    atender_mensajes_kernel(unBuffer);
+		    break;
 		case -1:
 			log_error(filesystem_logger, "[DESCONEXION]: KERNEL");
 			//control_key = 0;
