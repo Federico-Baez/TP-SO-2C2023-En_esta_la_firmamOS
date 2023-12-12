@@ -258,14 +258,14 @@ void atender_cpu(int cliente_socket) {
 					break;
 				case LECTURA_BLOQUE_CM: //[int pid][int dir_fisica]
 					unBuffer = recibiendo_super_paquete(fd_cpu);
-					atender_consulta_de_pagina(unBuffer);
+					leer_valor_de_dir_fisica_y_devolver_a_cpu(unBuffer);
 //					retardo_respuesta_cpu_fs();
 					free(unBuffer);
 					break;
 				case ESCRITURA_BLOQUE_CM: ////[int pid][int dir_fisica][uint32_t info]
 					unBuffer = recibiendo_super_paquete(fd_cpu);
 //					retardo_respuesta_cpu_fs();
-					escritura_pagina_bloque_cpu(unBuffer);
+					escribir_valor_en_dir_fisica(unBuffer);
 					free(unBuffer);
 					break;
 			case -1:
