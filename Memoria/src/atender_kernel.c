@@ -15,6 +15,9 @@ void iniciar_estructura_para_un_proceso_nuevo(t_buffer* un_Buffer){
 
 	//Enviar a FS la cant_marcos para swap
 	enviar_a_fs_peticion_de_asignacion_de_bloques(un_proceso->pid, list_size(un_proceso->tabla_paginas));
+
+	//REsponder a Kernel
+	responder_a_kernel_confirmacion_del_proceso_creado();
 }
 
 void eliminar_proceso_y_liberar_estructuras(t_buffer* unBuffer){
@@ -79,6 +82,13 @@ void atender_pagefault_kernel(t_buffer* un_buffer){
 }
 
 //============ENVIOS A KERNEL=======================
+
+void responder_a_kernel_confirmacion_del_proceso_creado(){
+	t_paquete* un_paquete = crear_super_paquete(ESTRUCTURA_INICIADA_MK);
+	cargar_string_al_super_paquete(un_paquete, "OK");
+	enviar_paquete(un_paquete, fd_kernel);
+	eliminar_paquete(un_paquete);
+}
 
 void enviar_a_kernel_rpta_del_pedido_de_carga_de_pagina(int pid){
 	//M -> K : [int pid]

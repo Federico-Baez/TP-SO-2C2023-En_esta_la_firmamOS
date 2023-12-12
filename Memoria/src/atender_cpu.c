@@ -89,9 +89,9 @@ void enviar_valor_a_cpu(uint32_t valor){
 }
 
 void enviar_a_CPU_respuesta_por_pedido_de_escritura_en_memoria(int pid){
-	//M -> CPU : [int pid][char* OK]
+	//M -> CPU : [char* OK]
 	t_paquete* un_paquete = crear_super_paquete(ESCRITURA_BLOQUE_CM);
-	cargar_int_al_super_paquete(un_paquete, pid);
+//	cargar_int_al_super_paquete(un_paquete, pid);
 	cargar_string_al_super_paquete(un_paquete, "OK");
 	enviar_paquete(un_paquete, fd_cpu);
 	eliminar_paquete(un_paquete);
