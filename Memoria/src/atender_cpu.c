@@ -32,8 +32,29 @@ void atender_consulta_de_pagina(t_buffer* unBuffer){
 	enviar_a_CPU_respuesta_por_consulta_de_pagina(respuesta_a_cpu);
 }
 
-void escritura_pagina_bloque_cpu(t_buffer* un_buffer){
-	//[FALTA Hacer la logica]
+void leer_valor_de_dir_fisica_y_devolver_a_cpu(t_buffer* un_buffer){
+	int pid = recibir_int_del_buffer(un_buffer);
+	int dir_fisica = recibir_int_del_buffer(un_buffer);
+
+	//Copiar dato de uint32_t
+	uint32_t valor = leer_data_de_dir_fisica(pid, dir_fisica);
+
+	//Enviar valor a CPU
+	enviar_valor_a_cpu(valor);
+}
+
+void escribir_valor_en_dir_fisica(t_buffer* un_buffer){
+	int pid = recibir_int_del_buffer(un_buffer);
+	int dir_fisica = recibir_int_del_buffer(un_buffer);
+
+	void* choclito = recibir_choclo_del_buffer(un_buffer);
+	uint32_t* valor = (uint32_t*)choclito;
+
+//	uint32_t* valor = (uint32_t*)recibir_choclo_del_buffer(un_buffer);
+
+	escribir_data_en_dir_fisica(pid, dir_fisica, valor);
+	enviar_a_CPU_respuesta_por_pedido_de_escritura_en_memoria(pid);
+
 }
 
 
@@ -54,4 +75,28 @@ void enviar_a_CPU_respuesta_por_consulta_de_pagina(int respuesta_a_cpu){
 	enviar_paquete(un_paquete, fd_cpu);
 	eliminar_paquete(un_paquete);
 }
+
+void enviar_valor_a_cpu(uint32_t valor){
+	//M -> CPU : [void* valor]
+	uint32_t* un_valor = malloc(sizeof(uint32_t));
+	*un_valor = valor;
+	t_paquete* un_paquete = crear_super_paquete(LECTURA_BLOQUE_CM);
+	cargar_choclo_al_super_paquete(un_paquete, un_valor, sizeof(uint32_t));
+	enviar_paquete(un_paquete, fd_cpu);
+	eliminar_paquete(un_paquete);
+	free(un_valor);
+}
+
+void enviar_a_CPU_respuesta_por_pedido_de_escritura_en_memoria(int pid){
+	//M -> CPU : [int pid][char* OK]
+	t_paquete* un_paquete = crear_super_paquete(ESCRITURA_BLOQUE_CM);
+	cargar_int_al_super_paquete(un_paquete, pid);
+	cargar_string_al_super_paquete(un_paquete, "OK");
+	enviar_paquete(un_paquete, fd_cpu);
+	eliminar_paquete(un_paquete);
+}
+
+
+
+
 
