@@ -474,6 +474,50 @@ void send_enviar_path_memoria(int fd_memoria, char* path, int size, int process_
 }
 
 
+void enviar_tamanio_fcb(int tamanio_fcb, int fd_modulo){
+	t_paquete* paquete_con_tamanio = crear_super_paquete(PAQUETE);
+	cargar_int_al_super_paquete(paquete_con_tamanio, tamanio_fcb);
+	enviar_paquete(paquete_con_tamanio, fd_modulo);
+	eliminar_paquete(paquete_con_tamanio);
+}
+
+void enviar_para_escribir_valor_leido(char* valor, int dir_fisica, int pid, int fd_modulo){
+	t_paquete* paquete = crear_super_paquete(CARGAR_INFO_DE_LECTURA_FM); //TODO: Supongo que el op code es el de PEDIDO_ESCRITURA_FM
+	cargar_string_al_super_paquete(paquete, valor);
+	cargar_int_al_super_paquete(paquete, dir_fisica);
+	cargar_int_al_super_paquete(paquete, pid);
+	enviar_paquete(paquete, fd_modulo);
+}
+
+void recibir_fin_de_escritura(int fd_modulo){
+	op_code cop = recibir_operacion(fd_modulo);
+	if(cop != MENSAJE/*RPTA_CARGAR_INFO_DE_LECTURA_MF*/){ //TODO: El op code deberia ser algo así como FIN_ESCRITURA_MF
+		return;
+	}
+	t_list* paquete = recibir_paquete(fd_modulo);
+	op_code* cop_paquete = list_get(paquete, 0);
+	free(cop_paquete);
+	list_destroy(paquete);
+}
+
+void enviar_para_leer_valor(int dir_fisica, int pid, int fd_modulo){
+	t_paquete* paquete = crear_super_paquete(GUARDAR_INFO_FM); //TODO: Supongo que el op code es el de PEDIDO_LECTURA_FM
+	cargar_int_al_super_paquete(paquete, dir_fisica);
+	cargar_int_al_super_paquete(paquete, pid);
+	enviar_paquete(paquete, fd_modulo);
+}
+
+char* recibir_valor_leido(int fd_modulo){
+	op_code cop = recibir_operacion(fd_modulo);
+
+	if(cop != MENSAJE){ //TODO: El op code deberia ser algo así como FIN_LECTURA_MF
+		return NULL;
+	}
+
+	t_list* paquete = recibir_paquete(fd_modulo);
+	char* valor = list_get(paquete, 0);
+	return valor;
+}
 
 
 
