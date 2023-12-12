@@ -21,7 +21,7 @@
 t_paquete* mochila;
 int tam_pagina;
 int marco;
-int valorMarco;
+uint32_t* valorMarco;
 bool interruptFlag = false;
 
 t_log* cpu_logger;
@@ -92,6 +92,7 @@ sem_t sem_control_peticion_escritura_a_memoria;
 sem_t sem_control_respuesta_kernel;
 
 pthread_mutex_t mutex_interruptFlag;
+pthread_mutex_t mutex_manejo_contexto;
 
 /*==================================*/
 

@@ -104,6 +104,7 @@ void iniciar_semaforos(){
 	sem_init(&sem_control_respuesta_kernel, 0, 0);
 
 	pthread_mutex_init(&mutex_interruptFlag, NULL);
+	pthread_mutex_init(&mutex_manejo_contexto, NULL);
 }
 
 void destruir_semaforos(){
@@ -115,6 +116,7 @@ void destruir_semaforos(){
 	sem_destroy(&sem_control_respuesta_kernel);
 
 	pthread_mutex_destroy(&mutex_interruptFlag);
+	pthread_mutex_destroy(&mutex_manejo_contexto);
 
 	log_info(cpu_logger, "Semaforos destruidos");
 }
@@ -331,7 +333,7 @@ void atender_cpu_memoria(){
 			break;
 		case LECTURA_BLOQUE_CM:
 			unBuffer = recibiendo_super_paquete(fd_memoria);
-			valorMarco = recibir_int_del_buffer(unBuffer);
+			valorMarco = (uint32_t*)recibir_choclo_del_buffer(unBuffer);
 			sem_post(&sem_control_peticion_lectura_a_memoria);
 			//
 			break;
@@ -359,7 +361,9 @@ void atender_cpu_memoria(){
 
 //Me debe llegar: [---][PID][PC_program_counter][AX][BX][CX][DX]
 void atender_proceso_del_kernel(t_buffer* unBuffer){
+	pthread_mutex_lock(&mutex_manejo_contexto);
 	iniciar_estructuras_para_atender_al_proceso(unBuffer);
+	pthread_mutex_unlock(&mutex_manejo_contexto);
 
 	print_proceso();
 	int contador_prueba = 0;
@@ -416,16 +420,16 @@ void atender_proceso_del_kernel(t_buffer* unBuffer){
 
 	if(!hay_que_desalojar_sin_mensaje){
 		enviar_paquete(un_paquete, fd_kernel_dispatch);
+		log_info(cpu_logger, "Elimino paquete");
+		eliminar_paquete(un_paquete);
 	}
 
-	log_info(cpu_logger, "Elimino paquete");
-	eliminar_paquete(un_paquete);
-
 	log_warning(cpu_logger, "Proceso_desalojado <PID:%d>", contexto->proceso_pid);
+	pthread_mutex_lock(&mutex_manejo_contexto);
 	destruir_estructuras_del_contexto_acttual();
+	pthread_mutex_unlock(&mutex_manejo_contexto);
 
 	log_info(cpu_logger, "Todo el contexto se elimino correctamente .....");
-
 }
 
 //bool preguntando_si_hay_interrupciones_vigentes(){
@@ -563,21 +567,19 @@ void ciclo_de_instruccion_execute(){
 
 	    uint32_t* registro_destino = detectar_registro(instruccion_split[1]);
 	    int direccion_logica = atoi(instruccion_split[2]);
-//EVER - descomentar		uint32_t valor = solicitar_valor_memoria(direccion_logica);
-//EVER - descomentar	    if(valor != -1){ // NO hubo PF
-//EVER - descomentar			*registro_destino = valor;
-//EVER - descomentar	    }
-	    contexto->proceso_ip = contexto->proceso_ip + 1; //EVER - eliminar
+	    uint32_t valor = solicitar_valor_memoria(direccion_logica);
+	    if(valor != -1){ // NO hubo PF
+	    	*registro_destino = valor;
+	    }
 
 	}else if(strcmp(instruccion_split[0], "MOV_OUT") == 0){// [MOV_OUT][Dir_logica][RX]
 		log_info(cpu_log_obligatorio, "PID: <%d> - Ejecutando: <%s> - <%s> - <%s>", contexto->proceso_pid, instruccion_split[0], instruccion_split[1], instruccion_split[2]);
 
 		int direccion_logica = atoi(instruccion_split[1]);
 		uint32_t* registro_partida = detectar_registro(instruccion_split[2]);
-		int valorAEscribir = *registro_partida;
+		uint32_t valorAEscribir = *registro_partida;
 		// el chequeo del page fault lo hace mmu dentro de esta funcion, de lo contrario envia el mensaje a memoria para la escritura
-//EVER - descomentar  escribir_valor_memoria(direccion_logica, valorAEscribir);
-		contexto->proceso_ip = contexto->proceso_ip + 1; //EVER - eliminar
+		escribir_valor_memoria(direccion_logica, *valorAEscribir);
 
 	}else if(strcmp(instruccion_split[0], "F_OPEN") == 0){
 		log_info(cpu_log_obligatorio, "PID: <%d> - Ejecutando: <%s> - <%s> - <%s>", contexto->proceso_pid, instruccion_split[0], instruccion_split[1], instruccion_split[2]);
@@ -717,12 +719,12 @@ int solicitar_valor_memoria(int dir_logica){
 
 		log_info(cpu_log_obligatorio, "PID: <%d> - Acción: <LEER> - Dirección Física: <%d> - Valor: <%d>", contexto->proceso_pid, dir_fisica, valorMarco);
 
-		return valorMarco;
+		return *valorMarco;
 	}
 }
 
 
-void escribir_valor_memoria(int dir_logica, int valorAEscribir){
+void escribir_valor_memoria(int dir_logica, uint32_t valorAEscribir){
 	int dir_fisica = MMU(dir_logica);
 
 	if(dir_logica != -1){
@@ -730,7 +732,7 @@ void escribir_valor_memoria(int dir_logica, int valorAEscribir){
 		t_paquete* paqueteEscrituraMemoria = crear_super_paquete(ESCRITURA_BLOQUE_CM);
 		cargar_int_al_super_paquete(paqueteEscrituraMemoria, contexto->proceso_pid);
 		cargar_int_al_super_paquete(paqueteEscrituraMemoria, dir_fisica);
-		cargar_int_al_super_paquete(paqueteEscrituraMemoria, valorAEscribir);
+		cargar_choclo_al_super_paquete(paqueteEscrituraMemoria, valorAEscribir);
 		enviar_paquete(paqueteEscrituraMemoria, fd_memoria);
 		eliminar_paquete(paqueteEscrituraMemoria);
 
