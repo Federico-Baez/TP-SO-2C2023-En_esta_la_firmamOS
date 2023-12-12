@@ -2,6 +2,11 @@
 #define MEMORIA_H_
 
 #include "m_gestor.h"
+#include "servicios_memoria.h"
+#include "marcos.h"
+#include "atender_cpu.h"
+#include "atender_kernel.h"
+#include "atender_fs.h"
 
 char* IP_MEMORIA;
 char* PUERTO_ESCUCHA;
@@ -12,6 +17,7 @@ int TAM_PAGINA;
 char* PATH_INSTRUCCIONES;
 int RETARDO_RESPUESTA;
 char* ALGORITMO_REEMPLAZO;
+int INICIAR_PAGINAS_EN_MEMORIA;
 
 char* server_name;
 int socket_server;
@@ -20,6 +26,8 @@ int fd_cpu;
 int fd_filesystem;
 int server_fd_memoria;
 void* espacio_usuario;
+
+int ordenCargaGlobal = 1;
 /*
  * MEMORIA VIRTUAL
  */
@@ -40,7 +48,9 @@ t_list* list_instruciones;
 
 /********SEMAFORO GENERAL PARA LA TABLA*******/
 pthread_mutex_t m_tablas;
-
+pthread_mutex_t mutex_lst_marco;
+pthread_mutex_t mutex_espacio_usuario;
+pthread_mutex_t mutex_ord_carga_global;
 
 /*----------------TODO INIT ------------------------*/
 void leer_config();
@@ -64,22 +74,5 @@ void atender_cpu(int cliente_socket) ;
 void atender_filesystem(int cliente_socket);
 
 
-/************TODO CARGAR LISTADO DE INSTRUCCIONES DEL PROCESO***************/
-t_list* leer_archivo_y_cargar_instrucciones(const char* path_archivo);
-void liberar_memoria_de_instrucciones(t_list* instrucciones);
-char* obtener_instruccion_por_indice(int indice_instruccion, t_list* instrucciones);
 
-/******************************FUNCIONES PARA PROCESOS*****************************/
-proceso_recibido* obtener_proceso_por_id(int pid, t_list* lst_procesos);
-void agregar_proceso_a_listado(t_buffer* unBuffer, t_list* lst_procesos_recibido);
-void liberar_proceso(proceso_recibido* proceso);
-void liberar_listado_procesos(t_list* lst_procesos);
-/************TODO MANEJO DE INSTRUCCIONES CON CPU***************/
-void enviar_instrucciones_a_cpu(int pid_buffer,int ip_buffer);
-
-
-/************TODO FUNCIONES PARA BLOQUEAR Y DEBLOQUEAR***************/
-
-void bloquear_lista_tablas();
-void desbloquear_lista_tablas();
 #endif /* MEMORIA_H_ */

@@ -21,13 +21,6 @@
 #include "protocolo.h"
 #include "socket.h"
 
-
-typedef enum{
-	SUCCESS,
-	INVALID_RESOURCE,
-	INVALID_WRITE
-}t_motivo_exit;
-
 //Manejo de instrucciones del Kernel
 typedef enum{
 	SET,

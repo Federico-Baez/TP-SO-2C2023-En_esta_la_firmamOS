@@ -207,6 +207,7 @@ void atender_filesystem_kernel(){
 		//log_info(filesystem_logger, "Se recibio algo de KERNEL");
 
 		switch (cod_op) {
+
 		case MANEJAR_F_OPEN_KF:
 			char* operacion = recibir_string_del_buffer(unBuffer);
 
@@ -233,7 +234,6 @@ void atender_filesystem_kernel(){
 			cargar_int_al_super_paquete(paquete1, pid1);
 			enviar_paquete(paquete1, fd_kernel);
 			eliminar_paquete(paquete1);
-			break;
 		case MANEJAR_F_READ_KF:
 			int dir = recibir_int_del_buffer(unBuffer);
 			int pid2 = recibir_int_del_buffer(unBuffer);
@@ -284,10 +284,6 @@ void atender_memoria(){
 		log_info(filesystem_logger, "Se recibio algo de MEMORIA");
 
 		switch (cod_op) {
-		case SYSCALL_KF:
-			unBuffer = recibiendo_super_paquete(fd_memoria);
-			//
-			break;
 		case MENSAJES_POR_CONSOLA:
 			unBuffer = recibiendo_super_paquete(fd_memoria);
 			atender_mensajes_kernel(unBuffer);

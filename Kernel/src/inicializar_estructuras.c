@@ -56,7 +56,9 @@ static void iniciar_listas(){
 
 static void iniciar_semaforos(){
 	sem_init(&sem_pausa, 0, 0);
-
+	sem_init(&sem_enviar_interrupcion, 0, 0);
+	sem_init(&sem_estructura_iniciada, 0, 0);
+	sem_init(&sem_estructura_liberada, 0, 0);
 }
 
 static void iniciar_pthread(){
@@ -72,22 +74,28 @@ static void iniciar_pthread(){
 	pthread_mutex_init(&mutex_pausa, NULL);
 	pthread_mutex_init(&mutex_recurso, NULL);
 	pthread_mutex_init(&mutex_ticket, NULL);
-	pthread_mutex_init(&mutex_interrupcion_habilitada, NULL);
+	pthread_mutex_init(&mutex_enviar_interrupcion, NULL);
 
+	pthread_mutex_init(&mutex_flag_finalizar_proceso, NULL);
+	pthread_mutex_init(&mutex_manejo_page_fault, NULL);
+	pthread_mutex_init(&mutex_existe_archivo, NULL);
+	pthread_mutex_init(&mutex_flag_proceso_desalojado, NULL);
 }
 
 static void _iniciar_recursos(){
 	int i = 0;
 	while(RECURSOS[i] != NULL){
-		t_recurso* un_recurso = malloc(sizeof(t_recurso));
-		un_recurso->recurso_name = RECURSOS[i];
-		un_recurso->recurso_valor = atoi(INSTANCIAS_RECURSOS[i]);
-		un_recurso->lista_asignados = list_create();
-		un_recurso->lista_bloqueados = list_create();
-		list_add(lista_recursos, un_recurso);
+		t_recurso* recurso = malloc(sizeof(t_recurso));
+		recurso->recurso_name = RECURSOS[i];
+		recurso->instancias = atoi(INSTANCIAS_RECURSOS[i]);
+		recurso->pcb_asignado = NULL;
+		recurso->lista_bloqueados = list_create();
+		list_add(lista_recursos, recurso);
 		i++;
 
-		log_info(kernel_logger, "[%s | %d]", un_recurso->recurso_name, un_recurso->recurso_valor);
+		pthread_mutex_init(&recurso->mutex_bloqueados, NULL);
+
+		log_info(kernel_logger, "[%s | %d]", recurso->recurso_name, recurso->instancias);
 	}
 }
 
@@ -102,7 +110,6 @@ void inicializar_kernel(char* config_path){
 	iniciar_pthread();
 
 	_iniciar_recursos();
-
 
 }
 

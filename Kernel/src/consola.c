@@ -78,17 +78,31 @@ static bool validar_instruccion(char* leido){
 
 	return resultado;
 }
-
+/*
 static void _finalizar_proceso_por_PID(char* un_pid){
-	t_pcb* una_pcb = buscar_pcb_por_pid(atoi(un_pid));
-	if(una_pcb != NULL){
-		plp_planificar_proceso_exit(una_pcb);
+	t_pcb* un_pcb = buscar_pcb_por_pid(atoi(un_pid));
+	if(un_pcb != NULL){
+		pthread_mutex_lock(&mutex_lista_exec);
+		if(esta_pcb_en_una_lista_especifica(lista_execute, un_pcb)){
+			pthread_mutex_lock(&mutex_flag_finalizar_proceso);
+			flag_finalizar_proceso = true;
+			pthread_mutex_unlock(&mutex_flag_finalizar_proceso);
+		}
+		pthread_mutex_unlock(&mutex_lista_exec);
+		plp_planificar_proceso_exit(un_pcb);
 	}else{
 		log_error(kernel_logger, "CONSOLA - No se encontro el PID en ningun lado");
 		exit(EXIT_FAILURE);
 	}
-
 	//Se debe liberar essta parte o generar memory leaks
+	free(un_pid);
+}
+*/
+
+static void _finalizar_proceso_por_PID(char* un_pid){
+	int pid = atoi(un_pid);
+	plp_planificar_proceso_exit(pid);
+//	ejecutar_en_un_hilo_nuevo_detach(plp_planificar_proceso_exit, pid);
 	free(un_pid);
 }
 
@@ -108,19 +122,20 @@ static void _iniciar_planificadores(){
 //		log_info(kernel_logger, "");
 	}else{
 		var_pausa = 0;
+		log_warning(kernel_log_obligatorio, "INICIO DE PLANIFICACIÓN");  // --> Tiene que ser log_info, por ahora lo dejamos asi para que se note
 		sem_post(&sem_pausa);
-		log_warning(kernel_logger, "Planificadores INICIADOS");
 	}
 }
 
 static void _cambiar_grado_de_multiprogramacion(char* un_valor){
 	int nuevo_valor = atoi(un_valor);
-	int before_value = GRADO_MULTIPROGRAMACION_INI;
+	int valor_anterior = GRADO_MULTIPROGRAMACION_INI;
 	int diferencia;
 
 	if(nuevo_valor >= 1){
 		GRADO_MULTIPROGRAMACION_INI = nuevo_valor;
-		diferencia = nuevo_valor - before_value;
+		log_info(kernel_log_obligatorio, "Grado Anterior: %d - Grado Actual: %d" ,valor_anterior ,nuevo_valor);
+		diferencia = nuevo_valor - valor_anterior;
 		if(diferencia > 0){
 			while(diferencia > 0){
 				plp_planificar_proceso_nuevo(NULL);
@@ -161,10 +176,10 @@ static void atender_instruccion_validada(char* leido){
 	//Evaluar en el SWITCH CASE
 	switch (instruction->op_instruction) {
 		case INICIAR_PROCESO: //[PATH][SIZE][PRIORIDAD]
-			t_pcb* una_pcb = crear_pcb(comando_consola[1], comando_consola[2], comando_consola[3]);
+			t_pcb* un_pcb = crear_pcb(comando_consola[1], comando_consola[2], comando_consola[3]);
 			//[FALTA]Verificar que la URL exista
-			imprimir_pcb(una_pcb);
-			ejecutar_en_un_hilo_nuevo_detach((void*)plp_planificar_proceso_nuevo, una_pcb);
+//			imprimir_pcb(un_pcb);
+			ejecutar_en_un_hilo_nuevo_detach((void*)plp_planificar_proceso_nuevo, un_pcb);
 			break;
 		case FINALIZAR_PROCESO: //[PID]
 			char* copia_del_pid = string_duplicate(comando_consola[1]);
@@ -181,8 +196,6 @@ static void atender_instruccion_validada(char* leido){
 			ejecutar_en_un_hilo_nuevo_detach((void*)_cambiar_grado_de_multiprogramacion, copia_del_GMMP);
 			break;
 		case PROCESO_ESTADO: //_none
-//			ejecutar_en_un_hilo_nuevo_detach((void*)public_imprimir_procesos_por_estado_v0, NULL);
-//			public_imprimir_procesos_por_estado_v0();
 			public_imprimir_procesos_por_estado_v1();
 			break;
 		case HELP: //_none

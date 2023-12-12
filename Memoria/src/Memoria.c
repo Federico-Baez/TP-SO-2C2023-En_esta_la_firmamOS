@@ -11,6 +11,7 @@
 
 #include "../include/Memoria.h"
 
+
 int main(int argc, char** argv) {
 	memoria_logger = log_create("Memoria.log", "[Memoria]", 1, LOG_LEVEL_INFO);
 	memoria_log_obligatorio = log_create("Memoria_log_obligatorio.log", "[Memoria- Log obligatorio]", 1, LOG_LEVEL_INFO);
@@ -27,17 +28,15 @@ int main(int argc, char** argv) {
 	}
 
 	leer_config(memoria_config);
+
 //	leer_log();
 
 	list_procss_recibidos = list_create();
 	//TODO: verificar como inicializar memoria
-//	inicializar_memoria();
+	inicializar_memoria();
 	server_fd_memoria = iniciar_servidor(memoria_logger, IP_MEMORIA, PUERTO_ESCUCHA);
 	while(server_escucha())
 
-//	log_info(memoria_logger, "Finaliza servidor de Memoria");
-//	instrucciones_para_cpu = leer_archivo_y_cargar_instrucciones(PATH_INSTRUCCIONES);
-//	liberar_memoria_de_instrucciones(instrucciones_para_cpu);
 	finalizar_memoria();
 
 	return EXIT_SUCCESS;
@@ -69,23 +68,27 @@ void leer_log(){
 void inicializar_memoria(){
 
 	espacio_usuario = malloc(TAM_MEMORIA);
-	memset(espacio_usuario,',',TAM_MEMORIA);
+//	memset(espacio_usuario,',',TAM_MEMORIA);
 	if(espacio_usuario == NULL){
 			log_error(memoria_logger, "Fallo Malloc");
 	    	exit(1);
 	    }
 	tablas = dictionary_create();
-	log_info(memoria_logger, "Se inicia memoria con esquema de Paginacion.\n");
-	log_info(memoria_logger, "Algoritmo de reemplazo a usar %s:\n", ALGORITMO_REEMPLAZO);
+	log_info(memoria_logger, "Se inicia memoria con Paginacion.\n");
+	log_info(memoria_logger, "Algoritmo de reemplazo a usar: %s\n", ALGORITMO_REEMPLAZO);
+
 	lst_marco = list_create();
 	int cant_marcos = TAM_MEMORIA/TAM_PAGINA;
 
-	for(int i=0;i<= cant_marcos;i++){
-		marco* nuevo_marco  = crear_marco(TAM_PAGINA*i, true);
+	for(int i=0;i< cant_marcos;i++){
+		t_marco* nuevo_marco  = crear_marco(TAM_PAGINA*i, true, i);
 
 		list_add(lst_marco,nuevo_marco);
-
 	}
+
+	pthread_mutex_init(&mutex_lst_marco, NULL);
+	pthread_mutex_init(&mutex_espacio_usuario, NULL);
+	pthread_mutex_init(&mutex_ord_carga_global, NULL);
 
 }
 
@@ -183,27 +186,28 @@ void atender_kernel(int cliente_socket) {
     t_buffer* unBuffer;
     int cod_op = recibir_operacion(cliente_socket);
 		switch(cod_op) {
-				case INICIAR_ESTRUCTURA_KM:
-					printf("Se un proceso nuevo\n");
+				case INICIAR_ESTRUCTURA_KM://[char* path][int size][int pid]
+					log_info(memoria_logger, "[Kernel] -> Peticion de creacion de proceso nuevo");
 					unBuffer = recibiendo_super_paquete(fd_kernel);
-					agregar_proceso_a_listado(unBuffer, list_procss_recibidos);
-
-//					printf("Se libera el buffer\n");
+					iniciar_estructura_para_un_proceso_nuevo(unBuffer);
+					free(unBuffer);
 					break;
-				case LIBERAR_ESTRUCTURA_KM:
+				case LIBERAR_ESTRUCTURA_KM: //[int pid]
 					unBuffer = recibiendo_super_paquete(fd_kernel);
-					int pid = recibir_int_del_buffer(unBuffer);
-					proceso_recibido* proceso_a_liberar = obtener_proceso_por_id(pid, list_procss_recibidos);
-					liberar_proceso(proceso_a_liberar);
-					log_warning(memoria_logger, "Se liberaron las estructuras del proceso: PID_%d", pid);
-//					free(unBuffer);
-					//
+					eliminar_proceso_y_liberar_estructuras(unBuffer);
+					free(unBuffer);
 					break;
 				case MENSAJES_POR_CONSOLA:
 					unBuffer = recibiendo_super_paquete(fd_kernel);
 					atender_mensajes_kernel(unBuffer);
 //					free(unBuffer);
 					break;
+				case PETICION_PAGE_FAULT_KM: //[int pid][int nro_pagina]
+					unBuffer = recibiendo_super_paquete(fd_kernel);
+					atender_pagefault_kernel(unBuffer);
+					free(unBuffer);
+					break;
+
 			case -1:
 				log_error(memoria_logger, "[DESCONEXION]: KERNEL");
 				close(cliente_socket);
@@ -222,31 +226,47 @@ void atender_kernel(int cliente_socket) {
 }
 void atender_cpu(int cliente_socket) {
     int control_key = 1;
+    //Enviar tamaño de pagina a CPU _
+    t_paquete* un_paquete = crear_super_paquete(PETICION_INFO_RELEVANTE_CM);
+    cargar_int_al_super_paquete(un_paquete, TAM_PAGINA);
+    enviar_paquete(un_paquete, fd_cpu);
+    eliminar_paquete(un_paquete);
 	while(control_key){
-    t_buffer* unBuffer;
-    int cod_op = recibir_operacion(cliente_socket);
+		t_buffer* unBuffer;
+		int cod_op = recibir_operacion(cliente_socket);
 		switch(cod_op) {
 				case PETICION_INFO_RELEVANTE_CM:
 					unBuffer = recibiendo_super_paquete(fd_cpu);
-//					free(unBuffer);
-					//
-					break;
-				case PETICION_DE_INSTRUCCIONES_CM:
-					unBuffer = recibiendo_super_paquete(fd_cpu); //recibo el [pId] y el [PC]
-					int pid_buffer = recibir_int_del_buffer(unBuffer);
-					int ip_buffer = recibir_int_del_buffer(unBuffer);
-					enviar_instrucciones_a_cpu(pid_buffer,ip_buffer);
 
+					break;
+				case PETICION_DE_INSTRUCCIONES_CM: //[int pid][int ip]
+					unBuffer = recibiendo_super_paquete(fd_cpu);
+					atender_peticion_de_instruccion(unBuffer);
+//					retardo_respuesta_cpu_fs();
+					free(unBuffer);
 					break;
 				case PETICION_DE_EJECUCION_CM:
 					unBuffer = recibiendo_super_paquete(fd_cpu);
-//					free(unBuffer);
 
 					break;
-				case CONSULTA_DE_PAGINA_CM:
+				case CONSULTA_DE_PAGINA_CM: //[int pid][int nro_pagina]
+					//Se respondera con el nro_marco o page_fault(-1)
 					unBuffer = recibiendo_super_paquete(fd_cpu);
-//					free(unBuffer);
-					//
+					atender_consulta_de_pagina(unBuffer);
+//					retardo_respuesta_cpu_fs();
+					free(unBuffer);
+					break;
+				case LECTURA_BLOQUE_CM: //[int pid][int dir_fisica]
+					unBuffer = recibiendo_super_paquete(fd_cpu);
+					leer_valor_de_dir_fisica_y_devolver_a_cpu(unBuffer);
+//					retardo_respuesta_cpu_fs();
+					free(unBuffer);
+					break;
+				case ESCRITURA_BLOQUE_CM: ////[int pid][int dir_fisica][uint32_t info]
+					unBuffer = recibiendo_super_paquete(fd_cpu);
+//					retardo_respuesta_cpu_fs();
+					escribir_valor_en_dir_fisica(unBuffer);
+					free(unBuffer);
 					break;
 			case -1:
 				log_error(memoria_logger, "[DESCONEXION]: CPU");
@@ -272,31 +292,40 @@ void atender_filesystem(int cliente_socket){
 	int cod_op = recibir_operacion(cliente_socket);
 
 	switch(cod_op) {
-	case PETICION_ASIGNACION_BLOQUE_SWAP_FM:
-				unBuffer = recibiendo_super_paquete(fd_filesystem);
+		case PETICION_ASIGNACION_BLOQUE_SWAP_FM://[int pid][int cant_bloques][int][int][int]..[int]
+			unBuffer = recibiendo_super_paquete(fd_filesystem);
+//			retardo_respuesta_cpu_fs();
+			asignar_posicions_de_SWAP_a_tabla_de_paginas_de_un_proceso(unBuffer);
+			free(unBuffer);
+			//
+			break;
+		case LIBERAR_PAGINAS_FM: //[FALTA] Coordinarlo y leer TP
+			unBuffer = recibiendo_super_paquete(fd_filesystem);
+//			retardo_respuesta_cpu_fs();
 //				free(unBuffer);
-				//
-				break;
-			case LIBERAR_PAGINAS_FM:
-				unBuffer = recibiendo_super_paquete(fd_filesystem);
-//				free(unBuffer);
-				//
-				break;
-			case PETICION_PAGE_FAULT_FM:
-				unBuffer = recibiendo_super_paquete(fd_filesystem);
-//				free(unBuffer);
-				//
-				break;
-			case CARGAR_INFO_DE_LECTURA_FM:
-				unBuffer = recibiendo_super_paquete(fd_filesystem);
-//				free(unBuffer);
-				//
-				break;
-			case GUARDAR_INFO_FM:
-				unBuffer = recibiendo_super_paquete(fd_filesystem);
-//				free(unBuffer);
-				//
-				break;
+			//
+			break;
+		case RPTA_LECTURA_MARCO_DE_SWAP_FM: //[int pid][int nro_pag][void* pagina]
+			unBuffer = recibiendo_super_paquete(fd_filesystem);
+			atender_lectura_de_pagina_de_swap_a_memoria(unBuffer);
+//			retardo_respuesta_cpu_fs();
+			free(unBuffer);
+			//
+			break;
+		case BLOQUE_DE_MEMORIA_A_FILESYSTEM_FM: //[int pid][int dir_fisica]
+			unBuffer = recibiendo_super_paquete(fd_filesystem);
+			atender_bloque_de_memoria_y_llevarlos_a_fylesystem(unBuffer);
+//			retardo_respuesta_cpu_fs();
+			free(unBuffer);
+			//
+			break;
+		case BLOQUE_DE_FILESYSTEM_A_MEMORIA_FM: //[int pid][int dir_fisica][void* marco]
+			unBuffer = recibiendo_super_paquete(fd_filesystem);
+//			retardo_respuesta_cpu_fs();
+			atender_bloque_de_fs_a_memoria(unBuffer);
+			free(unBuffer);
+			//
+			break;
 		case -1:
 			log_error(memoria_logger, "[DESCONEXION]: FILESYSTEM");
 			close(cliente_socket);
@@ -345,6 +374,7 @@ void saludar_cliente(void *void_args){
 
 int server_escucha(){
 	server_name = "Memoria";
+	log_info(memoria_logger, "Iniciando servidor %s",server_name);
 	while(1) {
 		int cliente_socket = esperar_cliente(memoria_logger, server_name, server_fd_memoria );
 		if(cliente_socket != -1){
@@ -361,156 +391,5 @@ int server_escucha(){
 
 
 
-/******************************INSTRUCCIONES*****************************/
-t_list* leer_archivo_y_cargar_instrucciones(const char* path_archivo) {
-    FILE* archivo = fopen(path_archivo, "rt");
-    t_list* instrucciones = list_create();
-    char* instruccion_formateada = NULL;
-    int i = 0;
 
-    if (archivo == NULL) {
-        perror("No se encontró el archivo");
-        return instrucciones;
-    }
-
-    char* linea_instruccion = malloc(256 * sizeof(char));
-    while (fgets(linea_instruccion, 256, archivo)) {
-    	//Comprobar si el ultimo caracter del string capturado tiene un salto delinea
-    	//Si lo tiene hay que sacarlo
-    	//[0][1][2][3][4]["\n"]["\0"] -> Size:6
-    	int size_linea_actual = strlen(linea_instruccion);
-    	if(size_linea_actual > 2){
-    		if(linea_instruccion[size_linea_actual - 1] == '\n'){
-				char* linea_limpia = string_new();
-				string_n_append(&linea_limpia, linea_instruccion, size_linea_actual - 1);
-				free(linea_instruccion);
-				linea_instruccion = linea_limpia;
-    		}
-    	}
-    	//-----------------------------------------------
-
-        char** l_instrucciones = string_split(linea_instruccion, " ");
-
-        log_info(memoria_logger, "Intruccion: [%s]", linea_instruccion);
-
-        while (l_instrucciones[i]) {
-            i++;
-        }
-
-        t_instruccion_codigo* pseudo_cod = malloc(sizeof(t_instruccion_codigo));
-        pseudo_cod->pseudo_c = strdup(l_instrucciones[0]);
-        pseudo_cod->fst_param = (i > 1) ? strdup(l_instrucciones[1]) : NULL;
-        pseudo_cod->snd_param = (i > 2) ? strdup(l_instrucciones[2]) : NULL;
-
-        if (i == 3) {
-            instruccion_formateada = string_from_format("%s %s %s", pseudo_cod->pseudo_c, pseudo_cod->fst_param, pseudo_cod->snd_param);
-        } else if (i == 2) {
-            instruccion_formateada = string_from_format("%s %s", pseudo_cod->pseudo_c, pseudo_cod->fst_param);
-        } else {
-            instruccion_formateada = strdup(pseudo_cod->pseudo_c);
-        }
-
-//        log_info(memoria_logger, "Se carga la instrucción [%d] %s", (int)strlen(instruccion_formateada),instruccion_formateada);
-        list_add(instrucciones, instruccion_formateada);
-
-        for (int j = 0; j < i; j++) {
-            free(l_instrucciones[j]);
-        }
-        free(l_instrucciones);
-        free(pseudo_cod->pseudo_c);
-		if(pseudo_cod->fst_param) free(pseudo_cod->fst_param);
-		if(pseudo_cod->snd_param) free(pseudo_cod->snd_param);
-		free(pseudo_cod);
-        i = 0; // Restablece la cuenta para la próxima iteración
-    }
-
-    fclose(archivo);
-    free(linea_instruccion);
-    return instrucciones;
-}
-
-void liberar_memoria_de_instrucciones(t_list* instrucciones){
-	list_destroy_and_destroy_elements(instrucciones, free);
-}
-
-char* obtener_instruccion_por_indice(int indice_instruccion, t_list* instrucciones){
-
-	char* instruccion_actual;
-	return (indice_instruccion >= 0 && indice_instruccion < list_size(instrucciones))
-			? instruccion_actual = list_get(instrucciones,indice_instruccion) : NULL;
-
-}
-/******************************CARGAR INSTRUCCIONES*****************************/
-
-/******************************FUNCIONES PARA PROCESOS*****************************/
-
-proceso_recibido* obtener_proceso_por_id(int pid, t_list* lst_procesos){
-	bool buscar_el_pid(void* proceso){
-		return ((proceso_recibido*)proceso)->pid == pid;
-	}
-	proceso_recibido* un_proceso = list_find(lst_procesos, buscar_el_pid);
-	return un_proceso;
-}
-
-
-void agregar_proceso_a_listado(t_buffer* unBuffer, t_list* lst_procesos_recibido){
-	proceso_recibido* un_proceso = malloc(sizeof(proceso_recibido));
-	if (un_proceso == NULL) {
-	        perror("Error al reservar memoria para el proceso");
-	        exit(EXIT_FAILURE);
-	}
-	un_proceso->pathInstrucciones = recibir_string_del_buffer(unBuffer);
-	un_proceso->size = recibir_int_del_buffer(unBuffer);
-	un_proceso->pid =recibir_int_del_buffer(unBuffer);
-	un_proceso->instrucciones= leer_archivo_y_cargar_instrucciones(un_proceso->pathInstrucciones);
-	log_info(memoria_logger, "Recibi el proceso con los siguientes datos archivo: %s, el tamanio: %d y el pid: %d ",un_proceso->pathInstrucciones, un_proceso->size, un_proceso->pid);
-	list_add(lst_procesos_recibido, un_proceso);
-	handhsake_modules(fd_kernel,"[MEMORIA]>Proceso cargado en Memoria OK");
-
-
-}
-
-void liberar_proceso(proceso_recibido* proceso) {
-    for (int i = 0; i < list_size(proceso->instrucciones); i++) {
-        char* instruccion = list_get(proceso->instrucciones, i);
-        free(instruccion);
-    }
-    list_destroy(proceso->instrucciones);
-    free(proceso->pathInstrucciones);
-    free(proceso);
-}
-
-void liberar_listado_procesos(t_list* lst_procesos) {
-    for (int i = 0; i < list_size(lst_procesos); i++) {
-        proceso_recibido* proceso = list_get(lst_procesos, i);
-        liberar_proceso(proceso);
-    }
-    list_destroy(lst_procesos);
-}
-
-/******************************FUNCIONES PARA CPU*****************************/
-
-void enviar_instrucciones_a_cpu(int pid_buffer,int ip_buffer){
-	t_paquete* paquete = crear_super_paquete(PETICION_DE_INSTRUCCIONES_CM);
-
-	proceso_recibido* un_proceso = obtener_proceso_por_id(pid_buffer, list_procss_recibidos);
-	char* instruccion = obtener_instruccion_por_indice(ip_buffer, un_proceso->instrucciones);
-	cargar_string_al_super_paquete(paquete, instruccion);
-	enviar_paquete(paquete, fd_cpu);
-	eliminar_paquete(paquete);
-}
-
-
-
-
-/******************************FUNCIONES AUXILIARES*****************************/
-
-void bloquear_lista_tablas(){
-	pthread_mutex_lock(&m_tablas);
-	log_info(memoria_log_obligatorio, "[SEMAFORO]: Bloqueo lista de tabla \n");
-}
-void desbloquear_lista_tablas(){
-	log_info(memoria_log_obligatorio, "[SEMAFORO]: Desbloqueo lista de tabla \n");
-	pthread_mutex_unlock(&m_tablas);
-}
 

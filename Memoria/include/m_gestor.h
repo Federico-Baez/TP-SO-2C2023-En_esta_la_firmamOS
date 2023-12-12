@@ -12,43 +12,60 @@
 #include <shared.h>
 #include <commons/log.h>
 #include <commons/config.h>
+#include <commons/collections/list.h>
+#include <commons/temporal.h>
 #include <pthread.h>
 #include <protocolo.h>
 #include <stdlib.h>
 #include <unistd.h>
-typedef struct {
-    int pid;                        // Identificador del proceso asociado a esta tabla
-    t_list* paginas;                // Lista de páginas
-    pthread_mutex_t mutex;          // Mutex para sincronización
-} tabla_paginas;
 
-typedef struct {
-    int base;
-    bool libre;
-    int pid;
-    int nro_pagina;
-    pthread_mutex_t mutex;
-} marco;
+#include <math.h>
 
-
-typedef struct {
-    bool presente;         // la página está en memoria o en disco
-    bool modificado;
-    int tamanio_ocupado;
-    marco* ptr_marco;// Bit de modificación
-    int marco;             // Si está presente, este es el número de marco en memoria
-    int pos_en_swap;       // No está presente, esta es la posición en el espacio de intercambio (swap)
-    int ultimo_uso;        // LRU
-	int orden_carga; // Para FIFO
-    pthread_mutex_t mutex;
-} Pagina;
+typedef enum {
+	MARCO_LIMPIO,
+	MARCO_VICTIMA
+}tipo_marco;
 
 typedef struct{
 	int pid;
 	int size;
 	char* pathInstrucciones;
 	t_list* instrucciones;
-}proceso_recibido;
+	t_list* tabla_paginas;
+	pthread_mutex_t mutex_TP;
+}t_proceso;
+
+typedef struct {
+	t_proceso* proceso;
+	int nro_pagina;
+}frame_info;
+
+typedef struct {
+    int nro_marco;
+    int base;
+    bool libre;
+    frame_info* info_new;
+    frame_info* info_old;
+
+    int orden_carga;
+    t_temporal* ultimo_uso;
+} t_marco;
+
+typedef struct {
+	int nro_pagina; //Set al inicio
+	int nro_marco;
+	bool presente;	//Set al inicio
+	bool modificado;//Set al inicio
+	int pos_en_swap;
+} t_pagina;
+
+extern pthread_mutex_t mutex_lst_marco;
+extern pthread_mutex_t mutex_espacio_usuario;
+extern pthread_mutex_t mutex_ord_carga_global;
+extern int ordenCargaGlobal;
+//-------------------
+
+
 
 extern t_list* list_procss_recibidos;
 extern t_list* list_instruciones;
@@ -86,8 +103,10 @@ extern int fd_filesystem;
 extern int server_fd_memoria;
 extern void* espacio_usuario;
 
+
 extern t_dictionary* tablas;
-extern t_list* instrucciones_para_cpu;
+//extern t_list* instrucciones_para_cpu;
+
 
 
 #endif /* M_GESTOR_H_ */

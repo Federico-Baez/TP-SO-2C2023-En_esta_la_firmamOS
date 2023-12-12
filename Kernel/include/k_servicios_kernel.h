@@ -2,12 +2,11 @@
 #define K_SERVICIOS_KERNEL_H_
 
 #include "k_gestor.h"
-
-
+#include "pcb.h"
 
 
 void pausador();
-void cambiar_estado(t_pcb* una_pcb, est_pcb nex_state);
 int generar_ticket();
+char* algoritmo_to_string(t_algoritmo algoritmo);
 
 #endif /* K_SERVICIOS_KERNEL_H_ */

@@ -17,15 +17,18 @@ static void _finalizar_listas(){
 	list_destroy(lista_execute);
 	list_destroy(lista_blocked);
 	list_destroy(lista_exit);
-
 	list_destroy(lista_general);
 	list_destroy(lista_recursos);
+	list_destroy(cola_blocked_fs);
 }
 
 
 static void _finalizar_semaforos(){
 	sem_destroy(&sem_pausa);
-
+	sem_destroy(&sem_estructura_iniciada);
+	sem_destroy(&sem_enviar_interrupcion);
+	sem_destroy(&sem_estructura_iniciada);
+	sem_destroy(&sem_estructura_liberada);
 }
 
 static void _finalizar_pthread(){
@@ -35,20 +38,22 @@ static void _finalizar_pthread(){
 	pthread_mutex_destroy(&mutex_lista_blocked);
 	pthread_mutex_destroy(&mutex_lista_exit);
 	pthread_mutex_destroy(&mutex_lista_general);
+	pthread_mutex_destroy(&mutex_cola_blocked_fs);
 
 	pthread_mutex_destroy(&mutex_process_id);
 	pthread_mutex_destroy(&mutex_core);
 	pthread_mutex_destroy(&mutex_pausa);
 	pthread_mutex_destroy(&mutex_recurso);
 	pthread_mutex_destroy(&mutex_ticket);
-	pthread_mutex_destroy(&mutex_interrupcion_habilitada);
+	pthread_mutex_destroy(&mutex_enviar_interrupcion);
 
+	pthread_mutex_destroy(&mutex_flag_finalizar_proceso);
 }
 
 static void _finalizar_recursos(){
 	void __eliminar_nodo_recurso(t_recurso* un_recurso){
-		list_destroy(un_recurso->lista_asignados);
 		list_destroy(un_recurso->lista_bloqueados);
+		pthread_mutex_destroy(&un_recurso->mutex_bloqueados);
 		free(un_recurso);
 	}
 

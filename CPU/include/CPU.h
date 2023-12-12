@@ -19,6 +19,10 @@
 #define IP_CPU "127.0.0.1"
 
 t_paquete* mochila;
+int tam_pagina;
+int marco;
+uint32_t* valorMarco;
+bool interruptFlag = false;
 
 t_log* cpu_logger;
 //t_log* cpu_log_disptach;
@@ -63,9 +67,13 @@ t_contexto* contexto;
 
 //char* motivo_desalojo;
 
-//ESta varaible sirve para cuando haya que desalojar
+//Esta varaible sirve para cuando haya que desalojar
 //voluntariamente por alguna instruccion
 bool hay_que_desalojar;
+
+//Esta varaible sirve para cuando haya que desalojar
+//pero kernel ya posee el contexto
+bool hay_que_desalojar_sin_mensaje = true;
 
 //Contiene todos los HEADER de las instruccinoes autorizadas
 char** opcode_strings;
@@ -79,6 +87,12 @@ int* numero_de_marco;
 sem_t sem_control_fetch_decode;
 sem_t sem_control_decode_execute;
 sem_t sem_control_peticion_marco_a_memoria;
+sem_t sem_control_peticion_lectura_a_memoria;
+sem_t sem_control_peticion_escritura_a_memoria;
+sem_t sem_control_respuesta_kernel;
+
+pthread_mutex_t mutex_interruptFlag;
+pthread_mutex_t mutex_manejo_contexto;
 
 /*==================================*/
 
@@ -111,10 +125,13 @@ bool preguntando_si_hay_interrupciones_vigentes();
 
 void ciclo_de_instruccion_execute();
 bool validador_de_header(char* header_string);
-int MMU(int dir_logica, int* dir_fisica);
+int MMU(int dir_logica);
+int solicitar_valor_memoria(int direccion_logica);
+void escribir_valor_memoria(int dir_logica, uint32_t valorAEscribir);
 uint32_t* detectar_registro(char* RX);
 t_paquete* alistar_paquete_de_desalojo(op_code code_op);
-void enviarPaqueteManejoRecursosKernel(char* motivo,char* recurso);
+void enviarPaqueteKernel(char* motivo);
+void enviarPaqueteKernelConInfoExtra(t_paquete* infoExtra);
 
 void simulador_de_eventos(void); //Esto es solo para las pruebas
 
