@@ -366,7 +366,6 @@ void atender_proceso_del_kernel(t_buffer* unBuffer){
 	pthread_mutex_unlock(&mutex_manejo_contexto);
 
 	print_proceso();
-	int contador_prueba = 0;
 
 	// log_info(cpu_logger, "pid proceso pre while 1: %d", contexto -> proceso_pid);
 	while(1){
@@ -509,12 +508,11 @@ void ciclo_de_instruccion_execute(){
 	}else if(strcmp(instruccion_split[0], "JNZ") == 0){// [JNZ][Registro][Instruccion]
 		log_info(cpu_log_obligatorio, "PID: <%d> - Ejecutando: <%s> - <%s> - <%s>", contexto->proceso_pid, instruccion_split[0], instruccion_split[1], instruccion_split[2]);
 		uint32_t* registro_referido = detectar_registro(instruccion_split[1]);
-//		if(*registro_referido != 0) {
-//			contexto->proceso_ip = atoi(instruccion_split[2]);
-//		}else{
-//			contexto->proceso_ip ++;
-//		}
-		contexto->proceso_ip ++;
+		if(*registro_referido != 0) {
+			contexto->proceso_ip = atoi(instruccion_split[2]);
+		}else{
+			contexto->proceso_ip ++;
+		}
 
 	}else if(strcmp(instruccion_split[0], "SLEEP") == 0){// [SLEEP][tiempo]
 		log_info(cpu_log_obligatorio, "PID: <%d> - Ejecutando: <%s> - <%s>", contexto->proceso_pid, instruccion_split[0], instruccion_split[1]);
@@ -539,10 +537,7 @@ void ciclo_de_instruccion_execute(){
 		//Envia a Kernel con motivo de WAIT de algun recurso
 		enviarPaqueteKernelConInfoExtra(infoExtra);
 
-		log_info(cpu_log_obligatorio, "PID: <%d> - Me voy a esperar el WAIT");
-
 		sem_wait(&sem_control_respuesta_kernel);
-		log_info(cpu_log_obligatorio, "PID: <%d> - Sali de la espera del WAIT");
 
 		eliminar_paquete(infoExtra);
 
@@ -579,7 +574,7 @@ void ciclo_de_instruccion_execute(){
 		uint32_t* registro_partida = detectar_registro(instruccion_split[2]);
 		uint32_t valorAEscribir = *registro_partida;
 		// el chequeo del page fault lo hace mmu dentro de esta funcion, de lo contrario envia el mensaje a memoria para la escritura
-		escribir_valor_memoria(direccion_logica, *valorAEscribir);
+		escribir_valor_memoria(direccion_logica, valorAEscribir);
 
 	}else if(strcmp(instruccion_split[0], "F_OPEN") == 0){
 		log_info(cpu_log_obligatorio, "PID: <%d> - Ejecutando: <%s> - <%s> - <%s>", contexto->proceso_pid, instruccion_split[0], instruccion_split[1], instruccion_split[2]);
@@ -717,7 +712,7 @@ int solicitar_valor_memoria(int dir_logica){
 
 		sem_wait(&sem_control_peticion_lectura_a_memoria);
 
-		log_info(cpu_log_obligatorio, "PID: <%d> - Acción: <LEER> - Dirección Física: <%d> - Valor: <%d>", contexto->proceso_pid, dir_fisica, valorMarco);
+		log_info(cpu_log_obligatorio, "PID: <%d> - Acción: <LEER> - Dirección Física: <%d> - Valor: <%d>", contexto->proceso_pid, dir_fisica, *valorMarco);
 
 		return *valorMarco;
 	}
@@ -732,7 +727,7 @@ void escribir_valor_memoria(int dir_logica, uint32_t valorAEscribir){
 		t_paquete* paqueteEscrituraMemoria = crear_super_paquete(ESCRITURA_BLOQUE_CM);
 		cargar_int_al_super_paquete(paqueteEscrituraMemoria, contexto->proceso_pid);
 		cargar_int_al_super_paquete(paqueteEscrituraMemoria, dir_fisica);
-		cargar_choclo_al_super_paquete(paqueteEscrituraMemoria, valorAEscribir);
+		cargar_choclo_al_super_paquete(paqueteEscrituraMemoria, &valorAEscribir, sizeof(uint32_t));
 		enviar_paquete(paqueteEscrituraMemoria, fd_memoria);
 		eliminar_paquete(paqueteEscrituraMemoria);
 
