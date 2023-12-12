@@ -58,6 +58,7 @@ void escribir_valor_en_dir_fisica(t_buffer* un_buffer){
 }
 
 
+
 //============ENVIOS A CPU=======================
 
 void enviar_una_instruccion_a_cpu(char* instruccion){
