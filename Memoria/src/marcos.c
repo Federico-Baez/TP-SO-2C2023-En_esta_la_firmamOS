@@ -1,168 +1,157 @@
 #include "../include/marcos.h"
 
-/*Esto ocurre durante la creacion de algun proceso,
- * se le asignan un marco para cada pagina*/
-void asignar_marcos_a_cada_pagina(proceso_recibido* un_proceso){
-	int cant_paginas = list_size(un_proceso->tabla_paginas);
-	for(int i=0; i<cant_paginas; i++){
-		Pagina* una_pagina = list_get(un_proceso->tabla_paginas, i);
-		marco* un_marco = pedir_un_marco_de_la_lista_de_marcos();
+t_marco* crear_marco(int base, bool libre, int index){
+	t_marco *nuevo_marco = malloc(sizeof(t_marco));
+	nuevo_marco->nro_marco = index;
+	nuevo_marco->base = base;
+	nuevo_marco->libre = libre;
+	nuevo_marco->info_new = NULL;
+	nuevo_marco->info_old = NULL;
 
-		//Esto no debe ir porque no todos los marcos son victimas, puede haber marcos libres.
-//		logg_reemplazar_pagina(el_marco->pid, el_marco->ptr_pagina->pid_proceso, out_nro_pag, in_pid, in_nro_pag);
-//		logg_reemplazar_pagina(un_marco->pid, un_marco->ptr_pagina->pid_proceso, un_marco->ptr_pagina->nro_pagina, una_pagina->pid_proceso, una_pagina->nro_pagina);
+	nuevo_marco->orden_carga = 0;
+	nuevo_marco->ultimo_uso = NULL;
 
-		una_pagina->ptr_marco = un_marco;
-		una_pagina->marco = un_marco->pid;
-		una_pagina->orden_carga = ordenCargaGlobal;
-		ordenCargaGlobal++;
-		una_pagina->presente = true;
-		una_pagina->modificado = false;
+	return nuevo_marco;
+}
 
-		if (strcmp(ALGORITMO_REEMPLAZO, "LRU") == 0) {
-			una_pagina->ultimo_uso = temporal_create();
-		}
-
+void liberar_marco(t_marco* un_marco){
+	un_marco->libre = true;
+	un_marco->orden_carga = 0;
+	if(un_marco->info_new != NULL){
+		free(un_marco->info_new);
+		un_marco->info_new = NULL;
+	}
+	if(un_marco->info_old != NULL){
+		free(un_marco->info_old);
+		un_marco->info_old = NULL;
+	}
+	if(un_marco->ultimo_uso != NULL){
+		temporal_destroy(un_marco->ultimo_uso);
+		un_marco->ultimo_uso = NULL;
 	}
 }
 
-/*Te devuelve un Marco disponible y si ya no hay llama
- * al algoritmo para elegir una victima y reemplazarla*/
-marco* pedir_un_marco_de_la_lista_de_marcos(){
-	//
-	bool _marco_libre(marco* un_marco){
+t_marco* obtener_marco_por_nro_marco(int nro_marco){
+	t_marco* un_marco;
+//	pthread_mutex_lock(&mutex_lst_marco);
+	un_marco = list_get(lst_marco, nro_marco);
+//	pthread_mutex_unlock(&mutex_lst_marco);
+
+	return un_marco;
+}
+
+void destruir_list_marcos_y_todos_los_marcos(){
+	void _destruir_un_marco(t_marco* un_marco){
+		if(un_marco->info_new != NULL){
+			free(un_marco->info_new);
+		}
+		if(un_marco->info_old != NULL){
+			free(un_marco->info_old);
+		}
+		if(un_marco->ultimo_uso != NULL){
+			temporal_destroy(un_marco->ultimo_uso);
+		}
+		free(un_marco);
+	}
+	list_destroy_and_destroy_elements(lst_marco, (void*)_destruir_un_marco);
+}
+
+
+/*Devuelve:
+ * false: marco limpio sin asignar de la lista
+ * true: marco victima*/
+t_marco* obtener_un_marco_de_la_lista_de_marcos(int* tipo_de_marco){
+	t_marco* un_marco = NULL;
+
+	bool _marco_libre(t_marco* un_marco){
 		return un_marco->libre;
 	}
-	marco* el_marco = list_find(lst_marco, (void*)_marco_libre);
+//	pthread_mutex_lock(&mutex_lst_marco);
+	un_marco = list_find(lst_marco, (void*)_marco_libre);
 
-	//Asumo que si no encuentra ninguno libre, retorna NULL (Lo vi en las commons)
-	if(el_marco == NULL){
-		//Desplegar el algoritmo de eliminacion
-		if(strcmp(ALGORITMO_REEMPLAZO, "FIFO") == 0){
-			el_marco = elegir_victima_FIFO();
+	//Asumiendo que retorne NULL por no encontrar marcos vacios disponibles
+	if(un_marco == NULL){
+		un_marco = elegir_victima_segun_algoritmo();
+		*tipo_de_marco = MARCO_VICTIMA;
+
+		//Si es pagina victima, preguntar si la pagina correspondiente tiene bit de modificado y actuar en conescueencia
+		evaluar_si_esta_o_no_el_bit_modificado_del_marco(un_marco);
+
+	}
+	else{
+		*tipo_de_marco = MARCO_LIMPIO;
+	}
+	un_marco->libre = false;
+//	pthread_mutex_unlock(&mutex_lst_marco);
+
+	return un_marco;
+}
+
+/*Si llamaas esta funcion es que todos los marcos estan ocupados (asignados a alguna pagina)*/
+t_marco* elegir_victima_segun_algoritmo(){
+	t_marco* un_marco;
+
+	t_marco* _comparar_orden_carga(t_marco* marco1, t_marco* marco2) {
+		if (marco1->orden_carga < marco2->orden_carga){
+			if(marco1->orden_carga == 0 || marco2->orden_carga == 0){
+				log_error(memoria_logger, "SE SUPONE QUE TODAS LOS MARCOS ESTAN OCUPADOS Y NINGUNO DEBERIA ESTAR SETEADO CON ORDEN DE CARGA = 0");
+				exit(EXIT_FAILURE);
+			}
+			return marco1;
 		}
-		else {
-			el_marco = elegir_victima_LRU();
+		else return marco2;
+	}
+
+	t_marco* _comparar_acceso_LRU(t_marco* marco1, t_marco* marco2) {
+		if (temporal_gettime(marco1->ultimo_uso) > temporal_gettime(marco2->ultimo_uso)){
+			return marco1;
 		}
-
-		el_marco->ptr_pagina->presente = false;
-
-		//Reemplao
-//		logg_reemplazar_pagina(el_marco->pid, el_marco->ptr_pagina->pid_proceso, out_nro_pag, in_pid, in_nro_pag);
-
-		//Compruebo si fue modificado y guardo los cambios en SWAP
-		if(el_marco->ptr_pagina->modificado){
-			guardar_marco_en_swap(el_marco);
-			el_marco->ptr_pagina->modificado = false;
-		}
+		else return marco2;
 	}
 
-	el_marco->libre = false;
-	return el_marco;
-
-}
-
-void guardar_marco_en_swap(marco* un_marco){
-	void* contenido_del_marco = malloc(TAM_PAGINA);
-
-	pthread_mutex_lock(&mutex_espacio_usuario);
-	memcpy(contenido_del_marco, espacio_usuario + un_marco->base, TAM_PAGINA);
-	logg_acceso_a_espacio_de_usuario(un_marco->ptr_pagina->pid_proceso, 0, un_marco->base);
-	pthread_mutex_unlock(&mutex_espacio_usuario);
-
-	t_paquete* un_paquete = crear_super_paquete(GUARDAR_MARCO_EN_SWAP_FM);
-	cargar_int_al_super_paquete(un_paquete, un_marco->ptr_pagina->pos_en_swap);
-	cargar_choclo_al_super_paquete(un_paquete, contenido_del_marco, TAM_PAGINA);
-	enviar_paquete(un_paquete, fd_filesystem);
-	eliminar_paquete(un_paquete);
-
-	logg_escritura_pagina_en_swap(un_marco->ptr_pagina->pid_proceso, un_marco->pid, un_marco->ptr_pagina->nro_pagina);
-}
-
-
-marco* elegir_victima_FIFO(){
-	marco* _comparar_orden_carga(marco* marco1, marco* marco2) {
-	    if (marco1->ptr_pagina->orden_carga < marco2->ptr_pagina->orden_carga){
-	    	return marco1;
-	    }
-	    else return marco2;
+	if(strcmp(ALGORITMO_REEMPLAZO, "FIFO")){
+		un_marco = list_get_minimum(lst_marco, (void*)_comparar_orden_carga);
+	}else if(strcmp(ALGORITMO_REEMPLAZO, "LRU")){
+		un_marco = list_get_maximum(lst_marco, (void*)_comparar_acceso_LRU);
+	}else{
+		log_error(memoria_logger, "Algoritmo de Reemplazo NO VALIDO");
+		exit(EXIT_FAILURE);
 	}
-	marco* marco_a_reemplazar = list_get_minimum(lst_marco, (void*)_comparar_orden_carga);
-	return marco_a_reemplazar;
+
+	return un_marco;
 }
 
-marco* elegir_victima_LRU(){
-	marco* _comparar_acceso_LRU(marco* marco1, marco* marco2) {
-		if (temporal_gettime(marco1->ptr_pagina->ultimo_uso) > temporal_gettime(marco2->ptr_pagina->ultimo_uso)){
-	    	return marco1;
-	    }
-	    else return marco2;
+
+void evaluar_si_esta_o_no_el_bit_modificado_del_marco(t_marco* un_marco){
+	t_pagina* una_pagina = pag_obtener_pagina_completa(un_marco->info_new->proceso, un_marco->info_new->nro_pagina);
+	if(una_pagina->modificado){
+		//Guardar pagina en FS
+		user_escribir_pagina_en_swap(un_marco);
+//		user_escribir_pagina_en_swap(un_marco->base, una_pagina->pos_en_swap);
+
+		//Log obligatorio por escritura de pagina en swap
+		logg_escritura_pagina_en_swap(un_marco->info_new->proceso->pid, un_marco->nro_marco, un_marco->info_new->nro_pagina);
+
+		//Setear pagina con bit de modificado 0
+		una_pagina->modificado = false;
 	}
-	marco* marco_a_reemplazar = list_get_maximum(lst_marco, (void*)_comparar_acceso_LRU);
-	return marco_a_reemplazar;
+
+	//Setear pagina con bit de presencia 0
+	una_pagina->presente = false;
+}
+
+void user_escribir_pagina_en_swap(t_marco* un_marco){
+	//Se copia el marco correspondiente
+	void* pagina_copy = copiar_marco_desde_una_dir_fisica(un_marco->info_new->proceso->pid, un_marco->base);
+
+	int pos_swap = pag_obtener_pos_en_swap(un_marco->info_new->proceso, un_marco->info_new->nro_pagina);
+	//Se envia a FS
+	evniar_pagina_a_fs_area_swap(pos_swap, pagina_copy);
+	free(pagina_copy);
 }
 
 
-void leer_archivo_de_FS_y_cargarlo_en_memoria(void* un_buffer){
-	int dir_fisica = recibir_int_del_buffer(un_buffer);
-	void* info_recibida = recibir_choclo_del_buffer(un_buffer);
-
-	pthread_mutex_lock(&mutex_lst_marco);
-	marco* un_marco = buscar_marco_por_direccion_fisica(dir_fisica);
-	pthread_mutex_unlock(&mutex_lst_marco);
-
-	pthread_mutex_lock(&mutex_espacio_usuario);
-	memcpy(espacio_usuario + dir_fisica, info_recibida, TAM_PAGINA);
-	logg_acceso_a_espacio_de_usuario(un_marco->ptr_pagina->pid_proceso, "escribir", dir_fisica);
-	pthread_mutex_unlock(&mutex_espacio_usuario);
-	free(info_recibida);
-
-	//[FALTA] Hay que actualizar la referencia a la pagina FIFO y LRU
-
-	//Avisar a FileSystem que la carga fue exitosa
-	t_paquete* un_paquete = crear_super_paquete(RPTA_CARGAR_INFO_DE_LECTURA_MF);
-	cargar_string_al_super_paquete(un_paquete, "OK");
-	enviar_paquete(un_paquete, fd_filesystem);
-	eliminar_paquete(un_paquete);
-}
-
-void leer_todo_el_marco_de_la_dir_fisica_y_enviarlo_a_FS(void* un_buffer){
-	int dir_fisica = recibir_int_del_buffer(un_buffer);
-	void* un_marco = malloc(TAM_PAGINA);
-
-	pthread_mutex_lock(&mutex_lst_marco);
-	marco* marco_info = buscar_marco_por_direccion_fisica(dir_fisica);
-	pthread_mutex_unlock(&mutex_lst_marco);
-
-	pthread_mutex_lock(&mutex_espacio_usuario);
-	memcpy(un_marco, espacio_usuario + dir_fisica, TAM_PAGINA);
-	logg_acceso_a_espacio_de_usuario(marco_info->ptr_pagina->pid_proceso, "leer", dir_fisica);
-	pthread_mutex_unlock(&mutex_espacio_usuario);
-
-	//Se accede a la tabla de paginas para modificar el estado de la pagina
-//	Pagina* un_paguina = marco_info->ptr_pagina;
-	proceso_recibido* un_proceso = obtener_proceso_por_id(marco_info->ptr_pagina->pid_proceso, list_procss_recibidos);
-	pthread_mutex_lock(&(un_proceso->mutex_TP));
-	if(strcmp(ALGORITMO_REEMPLAZO, "LRU") == 0){
-		temporal_destroy(marco_info->ptr_pagina->ultimo_uso);
-		marco_info->ptr_pagina->ultimo_uso = temporal_create();
-	}
-	logg_acceso_a_tabla_de_paginas(un_proceso->pid, marco_info->ptr_pagina->nro_pagina, marco_info->pid);
-	pthread_mutex_unlock(&(un_proceso->mutex_TP));
-
-	//Enviar a FS
-	t_paquete* un_paquete = crear_super_paquete(GUARDAR_INFO_FM);
-	cargar_choclo_al_super_paquete(un_paquete, un_marco, TAM_PAGINA);
-	enviar_paquete(un_paquete, fd_filesystem);
-	eliminar_paquete(un_paquete);
-
-	free(un_marco);
-}
-
-marco* buscar_marco_por_direccion_fisica(int dir_fisica){
-	int nro_marco = (int)floor(dir_fisica / TAM_PAGINA);
-	return list_get(lst_marco, nro_marco);
-}
+// ========================================
 
 
 

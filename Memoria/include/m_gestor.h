@@ -21,38 +21,10 @@
 
 #include <math.h>
 
-//TODO DEPRECAR se usa tabla_paginas del proceso_recibido
-//typedef struct {
-//    int pid;                        // Identificador del proceso asociado a esta tabla
-//    t_list* paginas;                // Lista de páginas
-//    pthread_mutex_t mutex;          // Mutex para sincronización
-//} tabla_paginas;
-
-typedef struct Pagina Pagina;
-
-typedef struct {
-    int base;
-    bool libre;
-    int pid; //Nro de marco
-    int nro_pagina;
-    Pagina* ptr_pagina;
-    pthread_mutex_t mutex;
-} marco;
-
-
-struct Pagina{
-	int pid_proceso;
-	int nro_pagina;
-    bool presente;         // la página está en memoria o en disco
-    bool modificado;
-    int tamanio_ocupado;
-    marco* ptr_marco;// Bit de modificación
-    int marco;             // Si está presente, este es el número de marco en memoria
-    int pos_en_swap;       // No está presente, esta es la posición en el espacio de intercambio (swap)
-    t_temporal* ultimo_uso;        // LRU
-	int orden_carga; // Para FIFO
-    pthread_mutex_t mutex;
-};
+typedef enum {
+	MARCO_LIMPIO,
+	MARCO_VICTIMA
+}tipo_marco;
 
 typedef struct{
 	int pid;
@@ -61,7 +33,39 @@ typedef struct{
 	t_list* instrucciones;
 	t_list* tabla_paginas;
 	pthread_mutex_t mutex_TP;
-}proceso_recibido;
+}t_proceso;
+
+typedef struct {
+	t_proceso* proceso;
+	int nro_pagina;
+}frame_info;
+
+typedef struct {
+    int nro_marco;
+    int base;
+    bool libre;
+    frame_info* info_new;
+    frame_info* info_old;
+
+    int orden_carga;
+    t_temporal* ultimo_uso;
+} t_marco;
+
+typedef struct {
+	int nro_pagina; //Set al inicio
+	int nro_marco;
+	bool presente;	//Set al inicio
+	bool modificado;//Set al inicio
+	int pos_en_swap;
+} t_pagina;
+
+extern pthread_mutex_t mutex_lst_marco;
+extern pthread_mutex_t mutex_espacio_usuario;
+extern pthread_mutex_t mutex_ord_carga_global;
+extern int ordenCargaGlobal;
+//-------------------
+
+
 
 extern t_list* list_procss_recibidos;
 extern t_list* list_instruciones;
@@ -99,25 +103,10 @@ extern int fd_filesystem;
 extern int server_fd_memoria;
 extern void* espacio_usuario;
 
-extern int ordenCargaGlobal;
 
 extern t_dictionary* tablas;
-extern t_list* instrucciones_para_cpu;
+//extern t_list* instrucciones_para_cpu;
 
-extern pthread_mutex_t mutex_lst_marco;
-extern pthread_mutex_t mutex_espacio_usuario;
 
-extern Pagina* pag_auxiliar_in;
-extern Pagina* pag_auxiliar_out;
-
-void* buscar_tabla(int pid);
-
-/******************MARCO********************/
-
-Pagina* obtener_pagina_por_marco(marco* un_marco);
-Pagina* obtener_pagina_por_marco(marco* un_marco);
-/******************************************/
-//void liberar_paginas(tabla_paginas* una_tabla, int  dirLogica, int tamanio, int pid);
-void* buscar_tabla(int pid);
 
 #endif /* M_GESTOR_H_ */
