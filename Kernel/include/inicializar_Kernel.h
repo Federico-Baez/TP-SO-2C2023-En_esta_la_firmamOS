@@ -6,6 +6,8 @@
 #include "consola.h"
 #include "inicializar_estructuras.h"
 #include "k_gestor.h"
+#include "manejo_deadblocks.h"
+
 
 t_log* kernel_logger;
 t_log* kernel_log_obligatorio;
@@ -81,6 +83,7 @@ sem_t sem_estructura_iniciada;
 sem_t sem_estructura_liberada;
 
 sem_t sem_f_open_FS;
+sem_t  sem_nuevo_en_block;
 
 // ------ PTHREAD_MUTEX ------
 pthread_mutex_t mutex_lista_new;
@@ -108,5 +111,7 @@ pthread_mutex_t mutex_flag_proceso_desalojado;
  pthread_mutex_t mutex_manejo_page_fault;
 
  pthread_mutex_t mutex_existe_archivo;
+
+ pthread_mutex_t mutex_peticion_fs;
 
 #endif /* INICIALIZAR_KERNEL_H_ */

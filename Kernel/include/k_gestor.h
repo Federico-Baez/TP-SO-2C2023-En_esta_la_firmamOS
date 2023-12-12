@@ -106,7 +106,7 @@ typedef struct{
 }t_archivo;
 
 typedef struct{
-	t_archivo* archivo_abierto;
+//	t_archivo* archivo_abierto;
 	char* nombre_archivo; // Creo que voy a usar esto para que no haya tantos punteros
 	char* modo_apertura;  // Puede ser 'r' para lectura, o 'w' para escritura
 	int lock_otorgado; // 1 en caso de true, 0 en caso de false.
@@ -191,6 +191,7 @@ extern sem_t sem_estructura_iniciada;
 extern sem_t sem_estructura_liberada;
 
 extern sem_t sem_f_open_FS;
+extern sem_t sem_nuevo_en_block;
 
 // ------ PTHREAD_MUTEX ------
 extern pthread_mutex_t mutex_lista_new;
@@ -219,6 +220,9 @@ extern pthread_mutex_t mutex_flag_finalizar_proceso;
 extern pthread_mutex_t mutex_manejo_page_fault;
 
 extern pthread_mutex_t mutex_existe_archivo;
+
+extern pthread_mutex_t mutex_peticion_fs;
+
 
 void public_imprimir_procesos_por_estado_v0();
 void public_imprimir_procesos_por_estado_v1();

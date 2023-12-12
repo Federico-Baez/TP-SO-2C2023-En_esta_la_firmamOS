@@ -67,13 +67,13 @@ void atender_F_read(char* nombre_archivo , int dir_fisica, t_pcb* pcb);
 void atender_F_write(char* nombre_archivo , int dir_fisica, t_pcb* pcb);
 
 // ----- Funciones para archivos
-void send_atender_F_instruccion_fs(char* nombre_archivo, char* operacion ,int valor_entero, op_code cod);
-void send_atender_F_read_write(char* nombre_archivo, int dir_fisica, op_code cod);
+void send_atender_F_instruccion_fs(char* nombre_archivo, char* operacion ,int valor_entero, int pid_process, op_code cod);
+void send_atender_F_read_write(char* nombre_archivo, int dir_fisica, int pid_process, op_code cod);
 
-void validar_respuesta_F_open(char* operacion, char* mensaje, t_buffer* unBuffer);
+void validar_respuesta_F_open(char* operacion, int confirmacion, t_buffer* unBuffer);
 
 t_archivo* obtener_archivo_global(char* nombre_archivo);
-t_archivo* crear_archivo(char* nombre_archivo);
+t_archivo* crear_archivo(char* nombre_archivo, int size_archivo);
 
 
 void plp_exit(t_pcb* pcb);

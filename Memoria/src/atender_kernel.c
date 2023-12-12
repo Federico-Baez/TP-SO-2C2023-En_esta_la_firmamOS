@@ -30,6 +30,7 @@ void eliminar_proceso_y_liberar_estructuras(t_buffer* unBuffer){
 		log_error(memoria_logger, "Proceso no encontrado en la lista de procesos para ser eliminados");
 		exit(EXIT_FAILURE);
 	}
+	enviar_a_kernel_rpta_de_eliminacion_de_proceso(pid);
 }
 
 /*Se asume que la pagina por la que se pregunta es poque CPU ya confirmo Page Fault*/
@@ -84,6 +85,7 @@ void atender_pagefault_kernel(t_buffer* un_buffer){
 //============ENVIOS A KERNEL=======================
 
 void responder_a_kernel_confirmacion_del_proceso_creado(){
+	retardo_respuesta_cpu_fs();
 	t_paquete* un_paquete = crear_super_paquete(ESTRUCTURA_INICIADA_MK);
 	cargar_string_al_super_paquete(un_paquete, "OK");
 	enviar_paquete(un_paquete, fd_kernel);
@@ -92,12 +94,21 @@ void responder_a_kernel_confirmacion_del_proceso_creado(){
 
 void enviar_a_kernel_rpta_del_pedido_de_carga_de_pagina(int pid){
 	//M -> K : [int pid]
+	retardo_respuesta_cpu_fs();
 	t_paquete* un_paquete = crear_super_paquete(RESPUESTA_PAGE_FAULT_MK);
 	cargar_int_al_super_paquete(un_paquete, pid);
 	enviar_paquete(un_paquete, fd_kernel);
 	eliminar_paquete(un_paquete);
 }
 
+void enviar_a_kernel_rpta_de_eliminacion_de_proceso(int pid){
+	//M -> K : [int pid]
+	retardo_respuesta_cpu_fs();
+	t_paquete* un_paquete = crear_super_paquete(ESTRUCTURA_LIBERADA_MK);
+	cargar_string_al_super_paquete(un_paquete, "Estructura liberada");
+	enviar_paquete(un_paquete, fd_kernel);
+	eliminar_paquete(un_paquete);
+}
 
 
 

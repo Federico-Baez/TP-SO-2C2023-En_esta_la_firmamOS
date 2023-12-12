@@ -88,6 +88,7 @@ void atender_bloque_de_fs_a_memoria(t_buffer* un_buffer){
 
 void enviar_a_fs_peticion_de_asignacion_de_bloques(int pid, int cantidad_de_paginas){
 	//[int pid][int cant_bloq_swap]
+	retardo_respuesta_cpu_fs();
 	t_paquete* un_paquete = crear_super_paquete(PETICION_ASIGNACION_BLOQUE_SWAP_FM);
 	cargar_int_al_super_paquete(un_paquete, pid);
 	cargar_int_al_super_paquete(un_paquete, cantidad_de_paginas);
@@ -97,6 +98,7 @@ void enviar_a_fs_peticion_de_asignacion_de_bloques(int pid, int cantidad_de_pagi
 
 void enviar_a_fs_orden_de_liberacion_de_posiciones_swap(t_proceso* un_proceso){
 	//[int cant_bloq_swap][int][int]...[int]
+	retardo_respuesta_cpu_fs();
 	int cant_elementos = list_size(un_proceso->tabla_paginas);
 	t_paquete* un_paquete = crear_super_paquete(LIBERAR_PAGINAS_FM);
 	cargar_int_al_super_paquete(un_paquete, cant_elementos);
@@ -111,6 +113,7 @@ void enviar_a_fs_orden_de_liberacion_de_posiciones_swap(t_proceso* un_proceso){
 
 void evniar_pagina_a_fs_area_swap(int pos_swap, void* coso_marco){
 	//[int pos_swap][void* choclo]
+	retardo_respuesta_cpu_fs();
 	t_paquete* un_paquete = crear_super_paquete(GUARDAR_MARCO_EN_SWAP_FM);
 	cargar_int_al_super_paquete(un_paquete, pos_swap);
 	cargar_choclo_al_super_paquete(un_paquete, coso_marco, TAM_PAGINA);
@@ -121,6 +124,7 @@ void evniar_pagina_a_fs_area_swap(int pos_swap, void* coso_marco){
 
 void pedir_lectura_de_pag_swap_a_fs(int pid, int nro_pagina, int pos_en_swap){
 	//[int pid][int nro_pag][int pos_swap]
+	retardo_respuesta_cpu_fs();
 	t_paquete* un_paquete = crear_super_paquete(LECTURA_MARCO_DE_SWAP_MF);
 	cargar_int_al_super_paquete(un_paquete, pid);
 	cargar_int_al_super_paquete(un_paquete, nro_pagina);
@@ -131,6 +135,7 @@ void pedir_lectura_de_pag_swap_a_fs(int pid, int nro_pagina, int pos_en_swap){
 
 void enviar_marco_a_fs(int pid, void* un_marco){
 	//[int pid][void* marco_bloque]
+	retardo_respuesta_cpu_fs();
 	t_paquete* un_paquete = crear_super_paquete(BLOQUE_DE_MEMORIA_A_FILESYSTEM_FM);
 	cargar_int_al_super_paquete(un_paquete, pid);
 	cargar_choclo_al_super_paquete(un_paquete, un_marco, TAM_PAGINA);
@@ -140,6 +145,7 @@ void enviar_marco_a_fs(int pid, void* un_marco){
 
 void enviar_rpta_por_pedido_de_escritura_en_memoria(int pid){
 	//[int pid][char* rpta]
+	retardo_respuesta_cpu_fs();
 	t_paquete* un_paquete = crear_super_paquete(RPTA_BLOQUE_DE_FILESYSTEM_A_MEMORIA_FM);
 	cargar_int_al_super_paquete(un_paquete, pid);
 	cargar_string_al_super_paquete(un_paquete, "OK");

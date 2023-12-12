@@ -63,6 +63,7 @@ void escribir_valor_en_dir_fisica(t_buffer* un_buffer){
 
 void enviar_una_instruccion_a_cpu(char* instruccion){
 	// M -> CPU : [char* ]
+	retardo_respuesta_cpu_fs();
 	t_paquete* paquete = crear_super_paquete(PETICION_DE_INSTRUCCIONES_CM);
 	cargar_string_al_super_paquete(paquete, instruccion);
 	enviar_paquete(paquete, fd_cpu);
@@ -71,6 +72,7 @@ void enviar_una_instruccion_a_cpu(char* instruccion){
 
 void enviar_a_CPU_respuesta_por_consulta_de_pagina(int respuesta_a_cpu){
 	// M -> CPU : [int nro_bloque_o_(-1)_pagefault]
+	retardo_respuesta_cpu_fs();
 	t_paquete* un_paquete = crear_super_paquete(CONSULTA_DE_PAGINA_CM);
 	cargar_int_al_super_paquete(un_paquete, respuesta_a_cpu);
 	enviar_paquete(un_paquete, fd_cpu);
@@ -79,6 +81,7 @@ void enviar_a_CPU_respuesta_por_consulta_de_pagina(int respuesta_a_cpu){
 
 void enviar_valor_a_cpu(uint32_t valor){
 	//M -> CPU : [void* valor]
+	retardo_respuesta_cpu_fs();
 	uint32_t* un_valor = malloc(sizeof(uint32_t));
 	*un_valor = valor;
 	t_paquete* un_paquete = crear_super_paquete(LECTURA_BLOQUE_CM);
@@ -90,6 +93,7 @@ void enviar_valor_a_cpu(uint32_t valor){
 
 void enviar_a_CPU_respuesta_por_pedido_de_escritura_en_memoria(int pid){
 	//M -> CPU : [char* OK]
+	retardo_respuesta_cpu_fs();
 	t_paquete* un_paquete = crear_super_paquete(ESCRITURA_BLOQUE_CM);
 //	cargar_int_al_super_paquete(un_paquete, pid);
 	cargar_string_al_super_paquete(un_paquete, "OK");

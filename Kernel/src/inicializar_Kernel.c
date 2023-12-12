@@ -13,6 +13,8 @@ int main(int argc, char** argv) {
 	atender_filesystem();
 	atender_cpu_dispatch();
 	atender_cpu_interrupt();
+	ejecutar_en_un_hilo_nuevo_detach(deteccion_deadlock, NULL);
+
 
 	leer_consola();
 

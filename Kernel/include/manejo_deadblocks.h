@@ -8,9 +8,9 @@
 
 
 void deteccion_deadlock();
-t_list* obtener_lista_pcbs_block_recursos();
+void obtener_lista_pcbs_block_recursos(t_list** lista_posibles_deadlocks_recurso );
 t_list* obtener_lista_pcbs_block_archivos();
-void logear_proceso_en_deadlock(char* log_proceso, t_pcb* pcb);
+void logear_proceso_en_deadlock(t_pcb* pcb);
 
 
 #endif /* MANEJO_DEADBLOCKS_H_ */

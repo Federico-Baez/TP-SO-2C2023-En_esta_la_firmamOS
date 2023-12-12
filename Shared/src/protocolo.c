@@ -483,7 +483,7 @@ void enviar_tamanio_fcb(int tamanio_fcb, int fd_modulo){
 
 void enviar_para_escribir_valor_leido(char* valor, int dir_fisica, int pid, int fd_modulo){
 	t_paquete* paquete = crear_super_paquete(BLOQUE_DE_FILESYSTEM_A_MEMORIA_FM);
-	cargar_choclo_al_super_paquete(paquete, valor);
+	cargar_string_al_super_paquete(paquete, valor);
 	cargar_int_al_super_paquete(paquete, dir_fisica);
 	cargar_int_al_super_paquete(paquete, pid);
 	enviar_paquete(paquete, fd_modulo);

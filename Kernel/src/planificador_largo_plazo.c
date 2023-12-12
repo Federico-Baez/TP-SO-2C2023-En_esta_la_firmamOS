@@ -25,6 +25,7 @@ void plp_planifica(){
 			// 	Lo comento hasta que hagan la funcion.
 			sem_wait(&sem_estructura_iniciada);
 
+
 			//Agregando PCB a READY
 //			transferir_from_actual_to_siguiente(un_pcb, lista_ready, mutex_lista_ready, READY);
 			pthread_mutex_lock(&mutex_lista_ready);
@@ -94,7 +95,7 @@ void plp_planificar_proceso_exit(int pid){
 			pthread_mutex_lock(&mutex_lista_new);
 			// Quizas hay que agregar un semaforo que este a la espera de que se liberen las estructuras, para que no se genere condicion de carrera
 			avisar_a_memoria_para_liberar_estructuras(un_pcb);
-//			sem_wait(&sem_estructura_liberada);
+			sem_wait(&sem_estructura_liberada);
 			transferir_from_actual_to_siguiente(un_pcb, lista_exit, mutex_lista_exit, EXIT);
 			log_info(kernel_log_obligatorio, "Finaliza el proceso [PID: %d] - Motivo: %s", un_pcb->pid, motivo_to_string(un_pcb->motivo_exit));
 			pthread_mutex_unlock(&mutex_lista_new);
@@ -106,7 +107,7 @@ void plp_planificar_proceso_exit(int pid){
 			liberar_recursos_pcb(un_pcb);
 			// Quizas hay que agregar un semaforo que este a la espera de que se liberen las estructuras, para que no se genere condicion de carrera
 			avisar_a_memoria_para_liberar_estructuras(un_pcb);
-//			sem_wait(&sem_estructura_liberada);
+			sem_wait(&sem_estructura_liberada);
 			transferir_from_actual_to_siguiente(un_pcb, lista_exit, mutex_lista_exit, EXIT);
 			log_info(kernel_log_obligatorio, "Finaliza el proceso [PID: %d] - Motivo: %s", un_pcb->pid, motivo_to_string(un_pcb->motivo_exit));
 			pthread_mutex_unlock(&mutex_lista_ready);
@@ -143,7 +144,7 @@ void plp_planificar_proceso_exit(int pid){
 			pthread_mutex_lock(&mutex_lista_blocked);
 			liberar_recursos_pcb(un_pcb);
 			avisar_a_memoria_para_liberar_estructuras(un_pcb);
-//			sem_wait(&sem_estructura_liberada);
+			sem_wait(&sem_estructura_liberada);
 			transferir_from_actual_to_siguiente(un_pcb, lista_exit, mutex_lista_exit, EXIT);
 
 			log_info(kernel_log_obligatorio, "Finaliza el proceso [PID: %d] - Motivo: %s", un_pcb->pid, motivo_to_string(un_pcb->motivo_exit));

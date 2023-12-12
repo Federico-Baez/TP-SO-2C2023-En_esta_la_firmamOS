@@ -402,6 +402,7 @@ void atender_proceso_del_kernel(t_buffer* unBuffer){
 
 	}
 	printf("Saliste del while ---------------------\n");
+	pthread_mutex_lock(&mutex_manejo_contexto);
 
 	t_paquete* un_paquete;
 
@@ -424,11 +425,11 @@ void atender_proceso_del_kernel(t_buffer* unBuffer){
 	}
 
 	log_warning(cpu_logger, "Proceso_desalojado <PID:%d>", contexto->proceso_pid);
-	pthread_mutex_lock(&mutex_manejo_contexto);
+
 	destruir_estructuras_del_contexto_acttual();
-	pthread_mutex_unlock(&mutex_manejo_contexto);
 
 	log_info(cpu_logger, "Todo el contexto se elimino correctamente .....");
+	pthread_mutex_unlock(&mutex_manejo_contexto);
 }
 
 //bool preguntando_si_hay_interrupciones_vigentes(){

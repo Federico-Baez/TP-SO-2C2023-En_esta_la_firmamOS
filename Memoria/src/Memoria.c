@@ -190,24 +190,19 @@ void atender_kernel(int cliente_socket) {
 					log_info(memoria_logger, "[Kernel] -> Peticion de creacion de proceso nuevo");
 					unBuffer = recibiendo_super_paquete(fd_kernel);
 					iniciar_estructura_para_un_proceso_nuevo(unBuffer);
-					free(unBuffer);
 					break;
 				case LIBERAR_ESTRUCTURA_KM: //[int pid]
 					unBuffer = recibiendo_super_paquete(fd_kernel);
 					eliminar_proceso_y_liberar_estructuras(unBuffer);
-					free(unBuffer);
 					break;
 				case MENSAJES_POR_CONSOLA:
 					unBuffer = recibiendo_super_paquete(fd_kernel);
 					atender_mensajes_kernel(unBuffer);
-//					free(unBuffer);
 					break;
 				case PETICION_PAGE_FAULT_KM: //[int pid][int nro_pagina]
 					unBuffer = recibiendo_super_paquete(fd_kernel);
 					atender_pagefault_kernel(unBuffer);
-					free(unBuffer);
 					break;
-
 			case -1:
 				log_error(memoria_logger, "[DESCONEXION]: KERNEL");
 				close(cliente_socket);
@@ -243,7 +238,6 @@ void atender_cpu(int cliente_socket) {
 					unBuffer = recibiendo_super_paquete(fd_cpu);
 					atender_peticion_de_instruccion(unBuffer);
 //					retardo_respuesta_cpu_fs();
-					free(unBuffer);
 					break;
 				case PETICION_DE_EJECUCION_CM:
 					unBuffer = recibiendo_super_paquete(fd_cpu);
@@ -254,19 +248,16 @@ void atender_cpu(int cliente_socket) {
 					unBuffer = recibiendo_super_paquete(fd_cpu);
 					atender_consulta_de_pagina(unBuffer);
 //					retardo_respuesta_cpu_fs();
-					free(unBuffer);
 					break;
 				case LECTURA_BLOQUE_CM: //[int pid][int dir_fisica]
 					unBuffer = recibiendo_super_paquete(fd_cpu);
 					leer_valor_de_dir_fisica_y_devolver_a_cpu(unBuffer);
 //					retardo_respuesta_cpu_fs();
-					free(unBuffer);
 					break;
 				case ESCRITURA_BLOQUE_CM: ////[int pid][int dir_fisica][uint32_t info]
 					unBuffer = recibiendo_super_paquete(fd_cpu);
 //					retardo_respuesta_cpu_fs();
 					escribir_valor_en_dir_fisica(unBuffer);
-					free(unBuffer);
 					break;
 			case -1:
 				log_error(memoria_logger, "[DESCONEXION]: CPU");
@@ -296,34 +287,29 @@ void atender_filesystem(int cliente_socket){
 			unBuffer = recibiendo_super_paquete(fd_filesystem);
 //			retardo_respuesta_cpu_fs();
 			asignar_posicions_de_SWAP_a_tabla_de_paginas_de_un_proceso(unBuffer);
-			free(unBuffer);
 			//
 			break;
 		case LIBERAR_PAGINAS_FM: //[FALTA] Coordinarlo y leer TP
 			unBuffer = recibiendo_super_paquete(fd_filesystem);
 //			retardo_respuesta_cpu_fs();
-//				free(unBuffer);
 			//
 			break;
 		case RPTA_LECTURA_MARCO_DE_SWAP_FM: //[int pid][int nro_pag][void* pagina]
 			unBuffer = recibiendo_super_paquete(fd_filesystem);
 			atender_lectura_de_pagina_de_swap_a_memoria(unBuffer);
 //			retardo_respuesta_cpu_fs();
-			free(unBuffer);
 			//
 			break;
 		case BLOQUE_DE_MEMORIA_A_FILESYSTEM_FM: //[int pid][int dir_fisica]
 			unBuffer = recibiendo_super_paquete(fd_filesystem);
 			atender_bloque_de_memoria_y_llevarlos_a_fylesystem(unBuffer);
 //			retardo_respuesta_cpu_fs();
-			free(unBuffer);
 			//
 			break;
 		case BLOQUE_DE_FILESYSTEM_A_MEMORIA_FM: //[int pid][int dir_fisica][void* marco]
 			unBuffer = recibiendo_super_paquete(fd_filesystem);
 //			retardo_respuesta_cpu_fs();
 			atender_bloque_de_fs_a_memoria(unBuffer);
-			free(unBuffer);
 			//
 			break;
 		case -1:

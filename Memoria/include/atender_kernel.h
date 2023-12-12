@@ -20,5 +20,7 @@ void atender_pagefault_kernel(t_buffer* un_buffer);
 
 void responder_a_kernel_confirmacion_del_proceso_creado();
 void enviar_a_kernel_rpta_del_pedido_de_carga_de_pagina(int pid);
+void enviar_a_kernel_rpta_de_eliminacion_de_proceso(int pid);
+
 
 #endif /* ATENDER_KERNEL_H_ */

@@ -29,6 +29,7 @@ static void _finalizar_semaforos(){
 	sem_destroy(&sem_enviar_interrupcion);
 	sem_destroy(&sem_estructura_iniciada);
 	sem_destroy(&sem_estructura_liberada);
+	sem_destroy(&sem_nuevo_en_block);
 }
 
 static void _finalizar_pthread(){
@@ -48,6 +49,11 @@ static void _finalizar_pthread(){
 	pthread_mutex_destroy(&mutex_enviar_interrupcion);
 
 	pthread_mutex_destroy(&mutex_flag_finalizar_proceso);
+	pthread_mutex_destroy(&mutex_manejo_page_fault);
+	pthread_mutex_destroy(&mutex_flag_proceso_desalojado);
+	pthread_mutex_destroy(&mutex_peticion_fs);
+	pthread_mutex_destroy(&mutex_existe_archivo);
+
 }
 
 static void _finalizar_recursos(){
@@ -58,6 +64,19 @@ static void _finalizar_recursos(){
 	}
 
 	list_clean_and_destroy_elements(lista_recursos, (void*)__eliminar_nodo_recurso);
+}
+
+//typedef struct{
+//	char* nombre_archivo;
+//	t_lock_escritura* lock_escritura; // 'w' para escritura
+//	t_lock_lectura* lock_lectura;  // 'r' para lectura
+//	t_list* cola_block_procesos; // Procesos en espera para acceder al archivo
+//	pthread_mutex_t mutex_cola_block;
+//	int size; // tamaño del archivo
+//}t_archivo;
+
+static void _finalizar_archivos(){
+
 }
 
 static void _destruir_conexiones(){
@@ -92,6 +111,7 @@ void finalizar_kernel(){
 	_finalizar_config();
 	_eliminar_pcbs();
 	_finalizar_recursos();
+	_finalizar_archivos();
 
 	_finalizar_listas();
 	_finalizar_semaforos();

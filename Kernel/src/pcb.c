@@ -71,6 +71,8 @@ t_pcb* crear_pcb(char* path, char* size, char* prioridad){
 	nuevo_PCB->registros_CPU->CX = 0;
 	nuevo_PCB->registros_CPU->DX = 0;
 
+	nuevo_PCB->archivos_abiertos = list_create();
+
 	return nuevo_PCB;
 }
 
@@ -341,13 +343,16 @@ void liberar_recursos_pcb(t_pcb* pcb){
 		if(un_recurso != NULL){
 			pthread_mutex_lock(&un_recurso->mutex_bloqueados);
 			if(list_remove_element(un_recurso->lista_bloqueados, pcb)){
+				if(list_remove_element(pcb->lista_recursos_pcb, un_recurso)){
 
+				}
+			}else{
+				un_recurso->instancias++;
+				// Se manda como un hilo, para que cuando se detiene la planificacion, se pause la asignacion de recursos para los demas PCBs y no entren a READY.
+				// Tambien agiliza eliminar +1 proceso a la vez.
+				ejecutar_en_un_hilo_nuevo_detach((void*)asignar_recurso_liberado_pcb, un_recurso);
 			}
 			pthread_mutex_unlock(&un_recurso->mutex_bloqueados);
-			un_recurso->instancias++;
-			// Se manda como un hilo, para que cuando se detiene la planificacion, se pause la asignacion de recursos para los demas PCBs y no entren a READY.
-			// Tambien agiliza eliminar +1 proceso a la vez.
-			ejecutar_en_un_hilo_nuevo_detach((void*)asignar_recurso_liberado_pcb, un_recurso);
 		}
 		pthread_mutex_unlock(&pcb->mutex_lista_recursos);
 	}
@@ -363,10 +368,9 @@ void asignar_recurso_liberado_pcb(t_recurso* un_recurso){
 		t_pcb* pcb_liberado = list_remove(un_recurso->lista_bloqueados,0);
 
 		un_recurso->pcb_asignado = pcb_liberado;
-
-		transferir_from_actual_to_siguiente(pcb_liberado, lista_ready, mutex_lista_ready, READY);
-
 		un_recurso->instancias--;
+		desbloquear_proceso_por_pid(pcb_liberado->pid);
+		log_info(kernel_log_obligatorio, "PID: %d - Wait: %s - Instancias: %d", pcb_liberado->pid, un_recurso->recurso_name, un_recurso->instancias);
 	}else
 		log_warning(kernel_logger, "La lista de BLOQUEADOS del RECURSO esta vacia");
 
@@ -382,6 +386,7 @@ void desbloquear_proceso_por_pid(int pid_process){
 
 //	El pcb pasa a la lista de READY
 	transferir_from_actual_to_siguiente(pcb, lista_ready, mutex_lista_ready, READY);
+	pcp_planificar_corto_plazo();
 }
 
 void bloquear_proceso_cola_fs(t_pcb* pcb, t_archivo* archivo){
@@ -410,14 +415,14 @@ void asignar_lock_pcb(t_archivo* archivo){
 	// Busco el strcut del archivo dentro del pcb
 	t_archivo_abierto_pcb* archivo_pcb = obtener_archivo_pcb(pcb, archivo->nombre_archivo);
 	// Consulto si su solicitud de apertura es "r" o "w"
-	if(strcmp(archivo_pcb->modo_apertura , "r") == 0){
+	if(strcmp(archivo_pcb->modo_apertura , "R") == 0){
 		archivo->lock_lectura->locked = 1;
 		list_add(archivo->lock_lectura->lista_participantes, pcb);
 		archivo_pcb->lock_otorgado = 1;
 
 		pcb = list_get(archivo->cola_block_procesos,0);
 		archivo_pcb = obtener_archivo_pcb(pcb, archivo->nombre_archivo);
-		while(strcmp(archivo_pcb->modo_apertura , "r") == 0 && pcb != NULL){
+		while(strcmp(archivo_pcb->modo_apertura , "R") == 0 && pcb != NULL){
 			archivo->lock_lectura->locked = 1;
 			list_add(archivo->lock_lectura->lista_participantes, pcb);
 			archivo_pcb->lock_otorgado = 1;
@@ -434,18 +439,23 @@ void asignar_lock_pcb(t_archivo* archivo){
 
 void asignar_archivo_pcb(t_pcb* pcb, t_archivo* archivo, char* tipo_apertura){
 	t_archivo_abierto_pcb* archivo_pcb = malloc(sizeof(t_archivo_abierto_pcb));
-	archivo_pcb->archivo_abierto = archivo;
-	archivo_pcb->modo_apertura = tipo_apertura;
+//	archivo_pcb->archivo_abierto = archivo;
+	archivo_pcb->nombre_archivo = archivo->nombre_archivo;
+	archivo_pcb->modo_apertura = strdup(tipo_apertura);
+	archivo_pcb->lock_otorgado = 1;
 	archivo_pcb->puntero = 0;
 	list_add(pcb->archivos_abiertos, archivo_pcb);
 }
 
 t_archivo_abierto_pcb* obtener_archivo_pcb(t_pcb* pcb, char* nombre_archivo_pcb){
 	t_archivo_abierto_pcb* archivo_pcb;
-	for(int i = 0; i < list_size(pcb->archivos_abiertos); i++){
-		archivo_pcb = list_get(pcb->archivos_abiertos, i);
-		if(strcmp(nombre_archivo_pcb , archivo_pcb->nombre_archivo) == 0){
-			 return archivo_pcb;
+
+	if(!list_is_empty(pcb->archivos_abiertos)){
+		for(int i = 0; i < list_size(pcb->archivos_abiertos); i++){
+			archivo_pcb = list_get(pcb->archivos_abiertos, i);
+			if(strcmp(nombre_archivo_pcb , archivo_pcb->nombre_archivo) == 0){
+				 return archivo_pcb;
+			}
 		}
 	}
 	return NULL;

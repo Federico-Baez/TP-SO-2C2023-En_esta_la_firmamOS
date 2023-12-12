@@ -7,15 +7,13 @@ t_proceso* crear_proceso(int pid, int size, char* path_instruc){
 	proceso_nuevo->size = size;
 	proceso_nuevo->pathInstrucciones = path_instruc;
 	proceso_nuevo->instrucciones = NULL;
-	proceso_nuevo->tabla_paginas = NULL;
+	proceso_nuevo->tabla_paginas = list_create();
 	pthread_mutex_init(&(proceso_nuevo->mutex_TP), NULL);
 
 	//Cargando instrucciones
 	proceso_nuevo->instrucciones = leer_archivo_y_cargar_instrucciones(proceso_nuevo->pathInstrucciones);
-
 	//Creando Paginas necesarias y Asignar marcos
 	crear_paginas_y_asignar_marcos_para_un_proceso_nuevo(proceso_nuevo);
-
 	//Logg Obligatorio
 	logg_crear_tabla_de_paginas(proceso_nuevo->pid, list_size(proceso_nuevo->tabla_paginas));
 
@@ -78,7 +76,6 @@ void crear_paginas_y_asignar_marcos_para_un_proceso_nuevo(t_proceso* un_proceso)
 			}
 			un_marco->info_old = un_marco->info_new;
 		}
-
 		un_marco->info_new = malloc(sizeof(frame_info));
 		un_marco->info_new->proceso = un_proceso;
 		un_marco->info_new->nro_pagina = una_pagina->nro_pagina;
