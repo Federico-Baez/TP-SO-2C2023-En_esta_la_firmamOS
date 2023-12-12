@@ -234,6 +234,7 @@ void atender_filesystem_kernel(){
 			cargar_int_al_super_paquete(paquete1, pid1);
 			enviar_paquete(paquete1, fd_kernel);
 			eliminar_paquete(paquete1);
+			break;
 		case MANEJAR_F_READ_KF:
 			int dir = recibir_int_del_buffer(unBuffer);
 			int pid2 = recibir_int_del_buffer(unBuffer);
@@ -278,12 +279,70 @@ void atender_memoria(){
 	log_info(filesystem_logger, "HANDSHAKE CON MEMORIA [EXITOSO]");
 
 	int control_key = 1;
+
 	while(control_key){
 		int cod_op = recibir_operacion(fd_memoria);
 		t_buffer* unBuffer;
 		log_info(filesystem_logger, "Se recibio algo de MEMORIA");
+		unBuffer = recibiendo_super_paquete(fd_memoria);
 
 		switch (cod_op) {
+		case PETICION_ASIGNACION_BLOQUE_SWAP_FM:
+			int pid1 = recibir_int_del_buffer(unBuffer);
+			int cant_paginas = recibir_int_del_buffer(unBuffer);
+
+			log_info(filesystem_logger, "Proceso %d - Cant pags: %d", pid1, cant_paginas);
+			//recibir_fin_de_escritura(fd_memoria);
+
+			break;
+		case LIBERAR_PAGINAS_FM:
+			int cant_elementos = recibir_int_del_buffer(unBuffer);
+
+			log_info(filesystem_logger, "Cant elementos %d", cant_elementos);
+
+			int pos_swap1;
+			for(int i=0; i<cant_elementos; i++){
+				pos_swap1 = recibir_int_del_buffer(unBuffer);
+				log_info(filesystem_logger, "Posicion en SWAP %d", pos_swap1);
+			}
+
+			break;
+		case GUARDAR_MARCO_EN_SWAP_FM:
+			int pid2 = recibir_int_del_buffer(unBuffer);
+			void* coso_marco = recibir_string_del_buffer(unBuffer);
+
+			log_info(filesystem_logger, "Proceso %d - Coso marco recibido", pid2);
+			//recibir_fin_de_escritura(fd_memoria);
+
+			free(coso_marco);
+			break;
+		case LECTURA_MARCO_DE_SWAP_MF:
+			int pid3 = recibir_int_del_buffer(unBuffer);
+			int nro_pagina = recibir_int_del_buffer(unBuffer);
+			int pos_swap2 = recibir_int_del_buffer(unBuffer);
+
+			log_info(filesystem_logger, "Proceso %d - Página: %s - Pos SWAP: %d", pid3, nro_pagina, pos_swap2);
+			//recibir_fin_de_escritura(fd_memoria);
+
+			break;
+		case BLOQUE_DE_MEMORIA_A_FILESYSTEM_FM:
+			int pid4 = recibir_int_del_buffer(unBuffer);
+			void* choclo = recibir_choclo_del_buffer(unBuffer);
+
+			log_info(filesystem_logger, "Proceso %d - Marco recibido", pid4);
+			//recibir_fin_de_escritura(fd_memoria);
+
+			free(choclo);
+			break;
+		case RPTA_BLOQUE_DE_FILESYSTEM_A_MEMORIA_FM:
+			int pid5 = recibir_int_del_buffer(unBuffer);
+			char* mensaje = recibir_string_del_buffer(unBuffer);
+
+			log_info(filesystem_logger, "Proceso %d - %s", pid5, mensaje);
+			//recibir_fin_de_escritura(fd_memoria);
+
+			free(mensaje);
+			break;
 		case MENSAJES_POR_CONSOLA:
 			unBuffer = recibiendo_super_paquete(fd_memoria);
 			atender_mensajes_kernel(unBuffer);

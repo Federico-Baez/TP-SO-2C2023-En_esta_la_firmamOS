@@ -482,16 +482,17 @@ void enviar_tamanio_fcb(int tamanio_fcb, int fd_modulo){
 }
 
 void enviar_para_escribir_valor_leido(char* valor, int dir_fisica, int pid, int fd_modulo){
-	t_paquete* paquete = crear_super_paquete(CARGAR_INFO_DE_LECTURA_FM); //TODO: Supongo que el op code es el de PEDIDO_ESCRITURA_FM
-	cargar_string_al_super_paquete(paquete, valor);
+	t_paquete* paquete = crear_super_paquete(BLOQUE_DE_FILESYSTEM_A_MEMORIA_FM);
+	cargar_choclo_al_super_paquete(paquete, valor);
 	cargar_int_al_super_paquete(paquete, dir_fisica);
 	cargar_int_al_super_paquete(paquete, pid);
 	enviar_paquete(paquete, fd_modulo);
+	eliminar_paquete(paquete);
 }
 
 void recibir_fin_de_escritura(int fd_modulo){
 	op_code cop = recibir_operacion(fd_modulo);
-	if(cop != MENSAJE/*RPTA_CARGAR_INFO_DE_LECTURA_MF*/){ //TODO: El op code deberia ser algo así como FIN_ESCRITURA_MF
+	if(cop != RPTA_BLOQUE_DE_FILESYSTEM_A_MEMORIA_FM){
 		return;
 	}
 	t_list* paquete = recibir_paquete(fd_modulo);
