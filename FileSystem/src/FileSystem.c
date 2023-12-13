@@ -217,6 +217,9 @@ void atender_filesystem_kernel(){
 
 			break;
 		case MANEJAR_F_READ_KF:
+			unBuffer = recibiendo_super_paquete(fd_kernel);
+
+
 			int dir = recibir_int_del_buffer(unBuffer);
 			int pid2 = recibir_int_del_buffer(unBuffer);
 
