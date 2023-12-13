@@ -1,19 +1,9 @@
 #ifndef FILESYSTEM_H_
 #define FILESYSTEM_H_
 
-#include <protocolo.h>
-#include <commons/log.h>
-#include <commons/config.h>
-#include <commons/collections/list.h>
-#include <commons/string.h>
-#include <shared.h>
-#include <pthread.h>
-#include <protocolo.h>
-#include <socket.h>
-#include <stdlib.h>
-#include <dirent.h>
-#include <fcntl.h>
-#include <sys/mman.h>
+#include "m_gestor.h"
+#include "fs_memoria.h"
+#include "fs_kernel.h"
 
 #define IP_FILESYSTEM "127.0.0.1"
 
@@ -36,37 +26,6 @@ int CANT_BLOQUES_SWAP;
 int TAM_BLOQUE;
 int RETARDO_ACCESO_BLOQUE;
 int RETARDO_ACCESO_FAT;
-
-typedef struct{
-	char* nombre;
-	t_config* archivo_fcb;
-}t_archivo_fcb;
-
-typedef struct{
-	char* nombre;
-	int tamanio;
-	int bloque_inicial;
-}t_fcb;
-
-typedef struct{
-	int id_bloque;
-	int esta_libre;
-	uint32_t puntero_siguiente;
-	int eof; //es necesario esto?
-}t_bloque_fat;
-
-/*typedef struct{
-	int id_bloque;
-	int pid;
-	int esta_libre;
-	int nro_pagina;
-}t_bloque;*/
-
-typedef struct{
-	int id_bloque;
-	int esta_libre;
-	void* contenido; //pid con pagina o contenido de archivo
-}t_bloque;
 
 t_list* tabla_fat;
 t_list* lista_bloques;

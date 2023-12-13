@@ -200,40 +200,21 @@ void atender_filesystem_kernel(){
 	log_info(filesystem_logger, "::::::::::: KERNEL CONECTADO ::::::::::::");
 	//int control_key = 1;
 	while(1){
-		int cod_op = recibir_operacion(fd_kernel);
 		t_buffer* unBuffer;
-		unBuffer = recibiendo_super_paquete(fd_kernel);
-		char* nombre_archivo = recibir_string_del_buffer(unBuffer);
+		int cod_op = recibir_operacion(fd_kernel);
 		//log_info(filesystem_logger, "Se recibio algo de KERNEL");
 
 		switch (cod_op) {
 
 		case MANEJAR_F_OPEN_KF:
-			char* operacion = recibir_string_del_buffer(unBuffer);
-
-			t_paquete* paquete = crear_super_paquete(RESPUESTA_F_OPEN_FK);
-			if(strcmp(operacion , "ABRIR_ARCHIVO") == 0){
-				cargar_string_al_super_paquete(paquete, "ABRIR_ARCHIVO");
-				cargar_int_al_super_paquete(paquete, 1);
-				cargar_string_al_super_paquete(paquete,nombre_archivo);
-				cargar_int_al_super_paquete(paquete, 10);
-			}else{
-				cargar_string_al_super_paquete(paquete, "CERRAR_ARCHIVO");
-				cargar_int_al_super_paquete(paquete, -1);
-			}
-			enviar_paquete(paquete, fd_kernel);
-			eliminar_paquete(paquete);
+			unBuffer = recibiendo_super_paquete(fd_kernel);
+			atender_f_open_de_kernel(unBuffer);
 
 			break;
 		case MANEJAR_F_TRUNCATE_KF:
-			int tamanio = recibir_int_del_buffer(unBuffer);
-			int pid1 = recibir_int_del_buffer(unBuffer);
+			unBuffer = recibiendo_super_paquete(fd_kernel);
+			atender_f_truncate_de_kernel(unBuffer);
 
-			t_paquete* paquete1 = crear_super_paquete(RESPUESTA_F_TRUNCATE_FK);
-			cargar_int_al_super_paquete(paquete1, 0);
-			cargar_int_al_super_paquete(paquete1, pid1);
-			enviar_paquete(paquete1, fd_kernel);
-			eliminar_paquete(paquete1);
 			break;
 		case MANEJAR_F_READ_KF:
 			int dir = recibir_int_del_buffer(unBuffer);
@@ -269,6 +250,8 @@ void atender_filesystem_kernel(){
 			//free(unBuffer);
 			break;
 		}
+
+		free(unBuffer); // [Ojo] controlar esto porque puede romper si libero antes
 	}
 	log_info(filesystem_logger, "Saliendo del hilo de FILESYSTEM - KERNEL");
 }
