@@ -33,7 +33,8 @@ t_list* lista_bloques;
 int tamanio_particion_swap;
 int tamanio_particion_bloques;
 int tamanio_fat;
-t_list* lista_fcbs;
+t_list* lista_struct_fcbs;
+t_list* lista_configs_fcbs;
 
 void* buffer_swap;
 uint32_t* buffer_bloques;

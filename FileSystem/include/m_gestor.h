@@ -60,7 +60,8 @@ extern t_list* lista_bloques;
 extern int tamanio_particion_swap;
 extern int tamanio_particion_bloques;
 extern int tamanio_fat;
-extern t_list* lista_fcbs;
+extern t_list* lista_struct_fcbs;
+extern t_list* lista_configs_fcbs;
 
 extern void* buffer_swap;
 extern uint32_t* buffer_bloques;
