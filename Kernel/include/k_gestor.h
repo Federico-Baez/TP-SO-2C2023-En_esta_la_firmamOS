@@ -39,7 +39,8 @@ typedef enum{
 
 typedef enum{
 	RECURSO,
-	ARCHIVO
+	ARCHIVO,
+	OTRO
 }t_motivo_block;
 
 

@@ -63,6 +63,7 @@ void obtener_lista_pcbs_block_recursos(t_list** lista_posibles_deadlocks_recurso
 	for(int i = 0; i < list_size(lista_blocked); i++){
 		t_pcb* pcb = list_get(lista_blocked, i);
 		if(pcb->motivo_block == 0){
+			log_info(kernel_logger, "AÑADO PID_%d", pcb->pid);
 			list_add(*lista_posibles_deadlocks_recurso, pcb);
 		}
 	}

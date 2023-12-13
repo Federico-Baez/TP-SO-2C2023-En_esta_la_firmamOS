@@ -3,6 +3,7 @@
 
 #include "k_gestor.h"
 #include "k_servicios_kernel.h"
+#include "planificador_corto_plazo.h"
 
 
 char* estado_to_string(int valor_estado);
