@@ -31,6 +31,11 @@ void atender_f_truncate_de_kernel(t_buffer* un_buffer){
 
 }
 
+void atender_fread_de_kernel(t_buffer* un_buffer){
+	//Extraes la info del buffer
+
+	//
+}
 
 
 

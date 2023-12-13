@@ -270,18 +270,18 @@ void atender_memoria(){
 		int cod_op = recibir_operacion(fd_memoria);
 		t_buffer* unBuffer;
 		log_info(filesystem_logger, "Se recibio algo de MEMORIA");
-		unBuffer = recibiendo_super_paquete(fd_memoria);
 
 		switch (cod_op) {
 		case PETICION_ASIGNACION_BLOQUE_SWAP_FM:
-			int pid1 = recibir_int_del_buffer(unBuffer);
-			int cant_paginas = recibir_int_del_buffer(unBuffer);
-
-			log_info(filesystem_logger, "Proceso %d - Cant pags: %d", pid1, cant_paginas);
-			//recibir_fin_de_escritura(fd_memoria);
+			//[int pid][int catn_bloques]
+			unBuffer = recibiendo_super_paquete(fd_memoria);
+			atender_asignacion_de_bloques_por_creacion_de_proceso(unBuffer);
 
 			break;
 		case LIBERAR_PAGINAS_FM:
+			//[int cant_bloq_swap][int][int]...[int]
+
+
 			int cant_elementos = recibir_int_del_buffer(unBuffer);
 
 			log_info(filesystem_logger, "Cant elementos %d", cant_elementos);
@@ -343,6 +343,8 @@ void atender_memoria(){
 			free(unBuffer);
 			break;
 		}
+
+		free(unBuffer);
 	}
 	log_info(filesystem_logger, "Saliendo del hilo de FILESYSTEM - MEMORIA");
 }
