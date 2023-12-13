@@ -1,5 +1,5 @@
-#ifndef CPU_H_
-#define CPU_H_
+#ifndef FILESYSTEM_H_
+#define FILESYSTEM_H_
 
 #include <protocolo.h>
 #include <commons/log.h>
@@ -111,4 +111,4 @@ t_bloque_fat* buscar_bloque_libre();
 
 void actualizar_archivo_fat(t_list* tabla_fat);
 
-#endif /* CPU_H_ */
+#endif /* FILESYSTEM_H_ */
