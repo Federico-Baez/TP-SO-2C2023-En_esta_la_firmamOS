@@ -168,6 +168,10 @@ void _gestionar_peticiones_de_cpu_dispatch(){
 
 				free(nombre_archivo);
 			}else if(strcmp(instruccion, "EXIT") == 0){
+				pthread_mutex_lock(&mutex_flag_exit);
+				flag_exit = true;
+				pthread_mutex_unlock(&mutex_flag_exit);
+
 				plp_exit(pcb);
 
 			}else if(strcmp(instruccion, "PAGE_FAULT") == 0){
@@ -224,7 +228,7 @@ void _gestionar_peticiones_de_cpu_dispatch(){
 		}
 	}
 }
-
+// ----- PARA RECIBIR INSTRUCIONES y PAGE FAULT DE CPU -----
 t_buffer* recibir_mochila_del_buffer(t_buffer* buffer){
 	t_buffer* mochila = malloc(sizeof(t_buffer));
 	mochila->size = buffer->size;
@@ -490,12 +494,14 @@ void _reubicar_pcb_de_execute_a_ready(t_pcb* un_pcb){
 	pcp_planificar_corto_plazo();
 }
 
+// ----- RECIBIR MENSAJES DE MEMORIA -----
 void recibir_confirmacion_de_memoria(t_buffer* unBuffer){
 	char* recibir_mensaje = (char*)recibir_choclo_del_buffer(unBuffer);
 	printf("[%d]> %s\n", (int)strlen(recibir_mensaje), recibir_mensaje);
 	free(recibir_mensaje);
 }
 
+// ----- LOG PROCESOS BLOQUEADOS -----
 void log_blocked_proceso(int pid_process, char* motivo_block){
 	log_info(kernel_log_obligatorio, "PID: %d - Bloqueado por: %s", pid_process, motivo_block);
 }
@@ -524,6 +530,7 @@ void atender_sleep(t_pcb* pcb, int seconds_blocked, char* motivo_block){
 		t_sleep* pcb_sleep = malloc(sizeof(t_sleep));
 		pcb_sleep->pcb_a_sleep = pcb;
 		pcb_sleep->tiempo_en_block = seconds_blocked;
+		pcb->motivo_block = OTRO;
 		transferir_from_actual_to_siguiente(pcb, lista_blocked, mutex_lista_blocked, BLOCKED);
 		log_blocked_proceso(pcb->pid, motivo_block);
 		ejecutar_en_un_hilo_nuevo_detach((void*) manejar_tiempo_sleep, pcb_sleep);
@@ -887,6 +894,7 @@ void plp_exit(t_pcb* pcb){
 		avisar_a_memoria_para_liberar_estructuras(pcb);
 		sem_wait(&sem_estructura_liberada);
 		transferir_from_actual_to_siguiente(pcb, lista_exit, mutex_lista_exit, EXIT);
+		pcb->motivo_exit = SUCCESS;
 		log_info(kernel_log_obligatorio, "Finaliza el proceso [PID: %d] - Motivo: %s", pcb->pid, motivo_to_string(pcb->motivo_exit));
 	}else{
 		log_error(kernel_logger, "PCB no encontrada en EXEC [Eliminacion por consola]");
