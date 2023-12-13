@@ -150,6 +150,10 @@ void user_escribir_pagina_en_swap(t_marco* un_marco){
 	free(pagina_copy);
 }
 
+int obtener_nro_marco_a_partir_de_una_dir_fisica(int dir_fisica){
+	int nro_marco = floor(dir_fisica / TAM_PAGINA);
+	return nro_marco;
+}
 
 // ========================================
 

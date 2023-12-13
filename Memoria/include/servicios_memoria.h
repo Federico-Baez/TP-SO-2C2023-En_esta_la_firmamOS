@@ -17,6 +17,6 @@ void logg_escritura_pagina_en_swap(int pid, int nro_marco, int nro_pagina);
 void retardo_respuesta_cpu_fs();
 int asignar_orden_carga_global();
 void setear_config_del_marco_segun_algoritmo(t_marco* un_marco);
-
+void setear_config_por_ultima_referencia(t_marco* un_marco);
 
 #endif /* SERVICIOS_MEMORIA_H_ */

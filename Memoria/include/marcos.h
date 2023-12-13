@@ -22,7 +22,7 @@ t_marco* obtener_un_marco_de_la_lista_de_marcos(int* tipo_de_marco);
 t_marco* elegir_victima_segun_algoritmo();
 void evaluar_si_esta_o_no_el_bit_modificado_del_marco(t_marco* un_marco);
 void user_escribir_pagina_en_swap(t_marco* un_marco);
-
+int obtener_nro_marco_a_partir_de_una_dir_fisica(int dir_fisica);
 
 //---------------------
 

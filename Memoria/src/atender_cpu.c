@@ -39,6 +39,11 @@ void leer_valor_de_dir_fisica_y_devolver_a_cpu(t_buffer* un_buffer){
 	//Copiar dato de uint32_t
 	uint32_t valor = leer_data_de_dir_fisica(pid, dir_fisica);
 
+	//Setear config del marco segun algoritmo
+	int nro_marco = obtener_nro_marco_a_partir_de_una_dir_fisica(dir_fisica);
+	t_marco* un_marco = obtener_marco_por_nro_marco(nro_marco);
+	setear_config_por_ultima_referencia(un_marco);
+
 	//Enviar valor a CPU
 	enviar_valor_a_cpu(valor);
 }
@@ -52,6 +57,12 @@ void escribir_valor_en_dir_fisica(t_buffer* un_buffer){
 
 //	uint32_t* valor = (uint32_t*)recibir_choclo_del_buffer(un_buffer);
 
+	//Setear config del marco segun algoritmo
+	int nro_marco = obtener_nro_marco_a_partir_de_una_dir_fisica(dir_fisica);
+	t_marco* un_marco = obtener_marco_por_nro_marco(nro_marco);
+	setear_config_por_ultima_referencia(un_marco);
+
+	//Enviar valor a CPU
 	escribir_data_en_dir_fisica(pid, dir_fisica, valor);
 	enviar_a_CPU_respuesta_por_pedido_de_escritura_en_memoria(pid);
 
