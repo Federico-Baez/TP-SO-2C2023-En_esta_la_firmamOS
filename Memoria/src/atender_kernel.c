@@ -62,6 +62,8 @@ void atender_pagefault_kernel(t_buffer* un_buffer){
 	//Enviar a FileSystem peticion de lectura de pagina SWAP
 	//M -> FS: [PID][pos_swap]
 	pedir_lectura_de_pag_swap_a_fs(pid, nro_pagina, una_pagina->pos_en_swap);
+	log_info(memoria_logger, "PAG_SWAP <PID:%d> <Pag:%d> <Pos_SWAP:%d>", pid, nro_pagina, una_pagina->pos_en_swap);
+
 	//Log de lectura obligatorio
 	logg_lectura_pagina_swap(pid, un_marco->nro_marco, nro_pagina);
 
