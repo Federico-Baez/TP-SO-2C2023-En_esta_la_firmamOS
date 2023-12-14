@@ -28,7 +28,7 @@ void ejecutar_f_open(t_buffer* un_buffer){
 		log_info(filesystem_log_obligatorio, "Crear Archivo: %s", nombre_archivo);
 		cargar_int_al_super_paquete(paquete, 0);
 	}
-	enviar_rpta_f_open_a_kernel(paquete);
+	enviar_rta_f_open_a_kernel(paquete);
 	free(un_buffer);
 }
 
@@ -61,7 +61,7 @@ void atender_f_truncate_de_kernel(t_buffer* un_buffer){
 	}
 
 	log_info(filesystem_log_obligatorio, "Truncar Archivo: %s - Tamaño: %d", nombre_archivo, tamanio_nuevo);
-	enviar_rpta_f_truncate_a_kernel(pid_process);
+	enviar_rta_f_truncate_a_kernel(pid_process);
 	free(un_buffer);
 }
 
@@ -77,7 +77,7 @@ void atender_f_read_de_kernel(t_buffer* un_buffer){
 	void* bloque_a_leer = obtener_bloque_especifico_para_lectura(nombre_archivo, bloque_a_leer_fat);
 
 	// Se supone que si usamos mmap ya me da el bloque y puedo mandarselo a memoria.
-	enviar_contenido_a_memoria(dir_fisica, bloque_a_leer);
+	enviar_contenido_a_memoria(pid_process,dir_fisica, bloque_a_leer);
 
 	// Ahora queda esperar la respuesta de memoria en atender_memoria
 	free(un_buffer);
@@ -110,7 +110,7 @@ void enviar_rta_f_open_a_kernel(t_paquete* un_paquete){
 	enviar_paquete(un_paquete, fd_kernel);
 }
 
-void enviar_rta_f_generica_a_kernel(int pid_process, char* mensaje_respuesta){
+void 	enviar_rta_f_truncate_a_kernel(int pid_process){
 	t_paquete* paquete = crear_super_paquete(RESPUESTA_F_TRUNCATE_FK);
 	cargar_string_al_super_paquete(paquete, "Truncate realizado");
 	cargar_int_al_super_paquete(paquete, pid_process);
@@ -121,8 +121,9 @@ void enviar_rta_f_generica_a_kernel(int pid_process, char* mensaje_respuesta){
 
 // =========== ENVIAR A MEMORIA ===============
 
-void enviar_contenido_a_memoria(dir_fisica, contenido_leido){
+void enviar_contenido_a_memoria(int pid_process ,int dir_fisica, void* contenido_leido){
 	t_paquete* paquete = crear_super_paquete(CARGAR_INFO_DE_LECTURA_FM);
+	cargar_int_al_super_paquete(paquete,pid_process);
 	cargar_int_al_super_paquete(paquete,dir_fisica);
 	cargar_choclo_al_super_paquete(paquete, contenido_leido, TAM_BLOQUE);
 	enviar_paquete(paquete, fd_memoria);
