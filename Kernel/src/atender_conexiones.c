@@ -802,7 +802,7 @@ void atender_F_read(char* nombre_archivo , int dir_fisica, t_pcb* pcb){
 	pcp_planificar_corto_plazo();
 
 	// Le envio a File System  la solicitud de READ
-	send_atender_F_read_write(nombre_archivo, dir_fisica, pcb->pid, MANEJAR_F_WRITE_KF);
+	send_atender_F_read_write(nombre_archivo,archivo_pcb->puntero ,dir_fisica,pcb->pid ,MANEJAR_F_WRITE_KF);
 }
 
 // ----- F_WRITE -----
@@ -825,7 +825,7 @@ void atender_F_write(char* nombre_archivo , int dir_fisica, t_pcb* pcb){
 		pcp_planificar_corto_plazo();
 
 		// Le envio a File System  la solicitud de WRITE
-		send_atender_F_read_write(nombre_archivo, dir_fisica, pcb->pid, MANEJAR_F_WRITE_KF);
+		send_atender_F_read_write(nombre_archivo,archivo_pcb->puntero ,dir_fisica, pcb->pid, MANEJAR_F_WRITE_KF);
 	}else{
 		pcb->motivo_exit = INVALID_WRITE;
 //		plp_planificar_proceso_exit(pcb->pid);
@@ -836,12 +836,13 @@ void atender_F_write(char* nombre_archivo , int dir_fisica, t_pcb* pcb){
 }
 
 // ----- Para enviar a FS, de instruccion: F_READ-F_WRITE
-void send_atender_F_read_write(char* nombre_archivo, int dir_fisica, int pid_process, op_code code){
+void send_atender_F_read_write(char* nombre_archivo, int puntero_pcb, int dir_fisica, int pid_process, op_code code){
 	pthread_mutex_lock(&mutex_peticion_fs);
 	t_paquete* un_paquete = crear_super_paquete(MANEJAR_F_READ_KF);
 	cargar_string_al_super_paquete(un_paquete, nombre_archivo);
-	cargar_int_al_super_paquete(un_paquete, dir_fisica);
 	cargar_int_al_super_paquete(un_paquete, pid_process);
+	cargar_int_al_super_paquete(un_paquete, puntero_pcb);
+	cargar_int_al_super_paquete(un_paquete, dir_fisica);
 	enviar_paquete(un_paquete, fd_filesystem);
 	eliminar_paquete(un_paquete);
 }

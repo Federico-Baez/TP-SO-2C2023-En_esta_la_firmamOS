@@ -68,7 +68,7 @@ void atender_F_write(char* nombre_archivo , int dir_fisica, t_pcb* pcb);
 
 // ----- Funciones para archivos
 void send_atender_F_instruccion_fs(char* nombre_archivo, char* operacion ,int valor_entero, int pid_process, op_code cod);
-void send_atender_F_read_write(char* nombre_archivo, int dir_fisica, int pid_process, op_code cod);
+void send_atender_F_read_write(char* nombre_archivo, int puntero_pcb, int dir_fisica, int pid_process, op_code code);
 
 void validar_respuesta_F_open(char* operacion, int confirmacion, t_buffer* unBuffer);
 
