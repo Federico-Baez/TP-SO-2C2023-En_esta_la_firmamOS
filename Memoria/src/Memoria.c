@@ -300,7 +300,8 @@ void atender_filesystem(int cliente_socket){
 //			retardo_respuesta_cpu_fs();
 			//
 			break;
-		case BLOQUE_DE_MEMORIA_A_FILESYSTEM_FM: //[int pid][int dir_fisica]
+		case BLOQUE_DE_MEMORIA_A_FILESYSTEM_FM:
+			//[int pid][int dir_fisica][int nro_bloque][char* nombre_archivo]
 			unBuffer = recibiendo_super_paquete(fd_filesystem);
 			atender_bloque_de_memoria_y_llevarlos_a_fylesystem(unBuffer);
 //			retardo_respuesta_cpu_fs();
