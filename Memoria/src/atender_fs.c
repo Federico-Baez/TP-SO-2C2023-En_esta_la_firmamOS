@@ -60,12 +60,14 @@ void atender_lectura_de_pagina_de_swap_a_memoria(t_buffer* un_buffer){
 void atender_bloque_de_memoria_y_llevarlos_a_fylesystem(t_buffer* un_buffer){
 	int pid = recibir_int_del_buffer(un_buffer);
 	int dir_fisica = recibir_int_del_buffer(un_buffer);
+	int nro_bloque = recibir_int_del_buffer(un_buffer);
+	char* nombre_archivo = recibir_string_del_buffer(un_buffer);
 
 	//Extraer el marco completo en un void*
 	void* un_marco = copiar_marco_desde_una_dir_fisica(pid, dir_fisica);
 
 	//Enviar marco a FS
-	enviar_marco_a_fs(pid, un_marco);
+	enviar_marco_a_fs(pid, nro_bloque, un_marco, nombre_archivo);
 
 	free(un_marco);
 
@@ -133,12 +135,14 @@ void pedir_lectura_de_pag_swap_a_fs(int pid, int nro_pagina, int pos_en_swap){
 	eliminar_paquete(un_paquete);
 }
 
-void enviar_marco_a_fs(int pid, void* un_marco){
-	//[int pid][void* marco_bloque]
+void enviar_marco_a_fs(int pid, int nro_bloque, void* un_marco, char* nombre_archivo){
+	//[int pid][int nro_bloque][void* marco_bloque][char* nombre_archivo]
 	retardo_respuesta_cpu_fs();
 	t_paquete* un_paquete = crear_super_paquete(BLOQUE_DE_MEMORIA_A_FILESYSTEM_FM);
 	cargar_int_al_super_paquete(un_paquete, pid);
+	cargar_int_al_super_paquete(un_paquete, nro_bloque);
 	cargar_choclo_al_super_paquete(un_paquete, un_marco, TAM_PAGINA);
+	cargar_string_al_super_paquete(un_paquete, nombre_archivo);
 	enviar_paquete(un_paquete, fd_filesystem);
 	eliminar_paquete(un_paquete);
 }

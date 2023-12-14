@@ -16,10 +16,14 @@ void swap_actualizar_pagina_bloque_swap(int pos_swap, void* pagina){
 	//Acceso SWAP: <NRO_BLOQUE>
 }
 
+void setear_bloque_de_swap_como_libre(int nro_bloque_swap){
+	//LOG Obligatorio
+	//Acceso SWAP: <NRO_BLOQUE>
+}
 
-//=========== TABLA FAT =============================
+//=========== BLOQUES DE PARTICION FAT =============================
 
-void* obtener_bloque_especifico_para_lectura(char* nombre_archivo, int puntero_de_kernel, uint32_t nro_bloque){
+void* obtener_bloque_especifico_para_lectura(char* nombre_archivo, int nro_bloque){
 	//LA info de nombre de archivo y puntero_de_kernel son para el log obligatorio
 	//Acceso Bloque - Archivo: <NOMBRE_ARCHIVO> - Bloque Archivo: <NUMERO_BLOQUE_ARCHIVO> - Bloque FS: <NUMERO_BLOQUE_FS>
 
@@ -27,7 +31,7 @@ void* obtener_bloque_especifico_para_lectura(char* nombre_archivo, int puntero_d
 
 }
 
-void guardar_info_pagina_en_un_bloque_especifico(char* nombre_archivo, int puntero_de_kernel, uint32_t nro_bloque, void* info){
+void guardar_info_pagina_en_un_bloque_especifico(char* nombre_archivo, int nro_bloque, void* info){
 	//LA info de nombre de archivo y puntero_de_kernel son para el log obligatorio
 	//Acceso Bloque - Archivo: <NOMBRE_ARCHIVO> - Bloque Archivo: <NUMERO_BLOQUE_ARCHIVO> - Bloque FS: <NUMERO_BLOQUE_FS>
 
