@@ -44,7 +44,7 @@ t_list* lista_configs_fcbs;
 void* bitmap_swap;
 t_bitarray* bitmapSWAP;
 
-void* tablaFatEnMemoria;
+uint32_t* tablaFatEnMemoria;
 void* archivoBloquesEnMemoria;
 void* bloquesFATEnMemoria;
 void* bloquesSwapEnMemoria;

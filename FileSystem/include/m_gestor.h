@@ -70,7 +70,7 @@ extern t_list* lista_configs_fcbs;
 extern void* bitmap_swap;
 extern t_bitarray* bitmapSWAP;
 
-extern void* tablaFatEnMemoria;
+extern uint32_t* tablaFatEnMemoria;
 extern void* archivoBloquesEnMemoria;
 extern void* bloquesFATEnMemoria;
 extern void* bloquesSwapEnMemoria;
