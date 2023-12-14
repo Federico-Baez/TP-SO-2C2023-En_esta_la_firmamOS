@@ -127,8 +127,8 @@ void inicializar_fcbs(){
 
 		t_fcb* struct_fcb = malloc(sizeof(t_fcb));
 		struct_fcb->nombre = malloc(strlen(fcb->d_name));
-		struct_fcb->tamanio = config_get_int_value(config_fcb, "TAMANIO_ARCHIVO");
-		struct_fcb->bloque_inicial = config_get_int_value(config_fcb, "BLOQUE_INICIAL");
+		struct_fcb->tamanio = config_get_int_value(config_fcb->archivo_fcb, "TAMANIO_ARCHIVO");
+		struct_fcb->bloque_inicial = config_get_int_value(config_fcb->archivo_fcb, "BLOQUE_INICIAL");
 
 		list_add(lista_struct_fcbs, config_fcb);
 	}

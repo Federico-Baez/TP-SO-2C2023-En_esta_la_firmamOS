@@ -42,7 +42,7 @@ void atender_f_truncate_de_kernel(t_buffer* un_buffer){
 	fcb->tamanio = tamanio_nuevo;
 
 	setear_size_de_una_fcb(fcb, tamanio_nuevo);
-	int diferencia_tamaño;
+	int diferencia_tamaño = 0;
 	int cantidad_bloques_viejos = tamanio_viejo / TAM_BLOQUE;
 	int cantidad_bloques_nuevos = tamanio_nuevo / TAM_BLOQUE;
 
@@ -52,7 +52,7 @@ void atender_f_truncate_de_kernel(t_buffer* un_buffer){
 			int agrear_nro_bloques = cantidad_bloques_nuevos - cantidad_bloques_viejos;
 			asignar_mas_nro_de_bloque_a_la_secuencia_de_tabla_fat(fcb->bloque_inicial, agrear_nro_bloques);
 		}
-	}else if(tamanio_nuevo < tamanio_viejo){
+	}else{
 		diferencia_tamaño = tamanio_viejo - tamanio_nuevo;
 		if(cantidad_bloques_viejos != cantidad_bloques_nuevos){
 			int reducir_nro_bloques = cantidad_bloques_viejos - cantidad_bloques_nuevos;
