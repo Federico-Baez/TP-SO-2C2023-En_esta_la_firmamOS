@@ -1,40 +1,96 @@
 #include "../include/bloques.h"
 
+//========== BLOQUES =====================
+
+void* obtener_bloque(char* nombre_archivo, int nro_bloque){
+    //LA info de nombre de archivo y puntero_de_kernel son para el log obligatorio
+    //Acceso Bloque - Archivo: <NOMBRE_ARCHIVO> - Bloque Archivo: <NUMERO_BLOQUE_ARCHIVO> - Bloque FS: <NUMERO_BLOQUE_FS>
+
+    //LOG Obligatorio para acceso a SWAP
+    //Acceso SWAP: <NRO_BLOQUE>
+
+	void* bloque_a_obtener = malloc(TAM_BLOQUE);
+
+	if(nombre_archivo == NULL){
+		//Para obtener bloque SWAP
+		memcpy(bloque_a_obtener, bloquesSwapEnMemoria + nro_bloque, TAM_BLOQUE);
+		log_info(filesystem_log_obligatorio, "Acceso SWAP: <%d>", nro_bloque);
+		usleep(RETARDO_ACCESO_BLOQUE*1000);
+	}else{
+		//Para obtener bloque de archivo
+		memcpy(bloque_a_obtener, bloquesFATEnMemoria + nro_bloque, TAM_BLOQUE);
+		int nro_bloque_fs = nro_bloque + CANT_BLOQUES_SWAP + 1;
+		log_info(filesystem_log_obligatorio, "Acceso Bloque - Archivo: <%s> - Bloque Archivo: <%d> - Bloque FS: <%d>", nombre_archivo, nro_bloque, nro_bloque_fs);
+		usleep(RETARDO_ACCESO_BLOQUE*1000);
+	}
+
+	return bloque_a_obtener;
+}
+
+void modificar_bloque(char* nombre_archivo, int nro_bloque, void* contenido_bloque){
+    //LA info de nombre de archivo y puntero_de_kernel son para el log obligatorio
+    //Acceso Bloque - Archivo: <NOMBRE_ARCHIVO> - Bloque Archivo: <NUMERO_BLOQUE_ARCHIVO> - Bloque FS: <NUMERO_BLOQUE_FS>
+
+    //LOG Obligatorio para acceso a SWAP
+    //Acceso SWAP: <NRO_BLOQUE>
+
+	if(nombre_archivo == NULL){
+		//Para obtener bloque SWAP
+		memcpy(bloquesSwapEnMemoria + nro_bloque, contenido_bloque, TAM_BLOQUE);
+		log_info(filesystem_log_obligatorio, "Acceso SWAP: <%d>", nro_bloque);
+		usleep(RETARDO_ACCESO_BLOQUE*1000);
+	}else{
+		//Para obtener bloque de archivo
+		memcpy(bloquesFATEnMemoria + nro_bloque, contenido_bloque, TAM_BLOQUE);
+		int nro_bloque_fs = nro_bloque + CANT_BLOQUES_SWAP + 1;
+		log_info(filesystem_log_obligatorio, "Acceso Bloque - Archivo: <%s> - Bloque Archivo: <%d> - Bloque FS: <%d>", nombre_archivo, nro_bloque, nro_bloque_fs);
+		usleep(RETARDO_ACCESO_BLOQUE*1000);
+	}
+}
+
 //========== SWAP =====================
 
 t_list* swap_obtener_n_cantidad_de_bloques(int cant_bloques){
+	t_list* bloques_a_obtener = list_create();
 
-}
+	int contador = 0;
 
-void* swap_obtener_bloque_pagina_de_pos_swap(int pos_swap){
-	//LOG Obligatorio
-	//Acceso SWAP: <NRO_BLOQUE>
-}
+	for (int i = 0; i < bitarray_get_max_bit(bitmapSWAP); i++) {
+		if (bitarray_test_bit(bitmapSWAP, i)) {
+			int* ptr_contador = malloc(sizeof(int));
+			*ptr_contador = contador;
+			list_add(bloques_a_obtener, ptr_contador);
+			contador++;
+			if (contador == cant_bloques) {
+				break;
+			}
+		} else {
+			contador = 0;
+			list_clean(bloques_a_obtener);
+		}
+	}
 
-void swap_actualizar_pagina_bloque_swap(int pos_swap, void* pagina){
-	//LOG Obligatorio
-	//Acceso SWAP: <NRO_BLOQUE>
+	for(int i=0; i < list_size(bloques_a_obtener); i++){
+		//si sale mal, asignar el list_get a un int
+		bitarray_set_bit(bitmapSWAP, *((int*)list_get(bloques_a_obtener, i)));
+		log_info(filesystem_log_obligatorio, "Acceso SWAP: <%d>", *((int*)list_get(bloques_a_obtener, i)));
+		usleep(RETARDO_ACCESO_BLOQUE*1000);
+	}
+
+	return bloques_a_obtener;
 }
 
 void setear_bloque_de_swap_como_libre(int nro_bloque_swap){
-	//LOG Obligatorio
-	//Acceso SWAP: <NRO_BLOQUE>
-}
+    //LOG Obligatorio
+    //Acceso SWAP: <NRO_BLOQUE>
 
-//=========== BLOQUES DE PARTICION FAT =============================
+	char* barra_cero = malloc(sizeof(char));
+	*barra_cero = '\0';
 
-void* obtener_bloque_especifico_para_lectura(char* nombre_archivo, int nro_bloque){
-	//LA info de nombre de archivo y puntero_de_kernel son para el log obligatorio
-	//Acceso Bloque - Archivo: <NOMBRE_ARCHIVO> - Bloque Archivo: <NUMERO_BLOQUE_ARCHIVO> - Bloque FS: <NUMERO_BLOQUE_FS>
+	memcpy(bloquesSwapEnMemoria + nro_bloque_swap, barra_cero, TAM_BLOQUE);
+	log_info(filesystem_log_obligatorio, "Acceso SWAP: <%d>", nro_bloque_swap);
+	usleep(RETARDO_ACCESO_BLOQUE*1000);
 
-	//Para hacer la logica de la funcion solo se necesitaria en nro bloque
-
-}
-
-void guardar_info_pagina_en_un_bloque_especifico(char* nombre_archivo, int nro_bloque, void* info){
-	//LA info de nombre de archivo y puntero_de_kernel son para el log obligatorio
-	//Acceso Bloque - Archivo: <NOMBRE_ARCHIVO> - Bloque Archivo: <NUMERO_BLOQUE_ARCHIVO> - Bloque FS: <NUMERO_BLOQUE_FS>
-
-	//Para hacer la logica de la funcion solo se necesitaria en nro bloque y el void* info
+	free(barra_cero);
 }
 

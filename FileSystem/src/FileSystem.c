@@ -61,12 +61,16 @@ void crear_fat(){
 	int fd_archivoTablaFAT = open(PATH_FAT, O_CREAT | O_RDWR);
 	tamanio_fat = (CANT_BLOQUES_TOTAL - CANT_BLOQUES_SWAP) * sizeof(uint32_t);
 
+	ftruncate(fd_archivoTablaFAT, tamanio_fat);
+
 	tablaFatEnMemoria = mmap(NULL, tamanio_fat, PROT_READ | PROT_WRITE, MAP_SHARED, fd_archivoTablaFAT, 0);
 
 	if (fd_archivoTablaFAT == -1 || tablaFatEnMemoria == MAP_FAILED) {
 		log_error(filesystem_logger, "Error al mapear el archivo FAT");
 		exit(1);
 	}
+
+	tablaFatEnMemoria[0] = EOF_FS;
 }
 
 void inicializar_archivo_de_bloques(){

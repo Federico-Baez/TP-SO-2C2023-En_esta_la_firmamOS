@@ -35,7 +35,7 @@ void atender_peticion_de_guardar_marco_en_swap(t_buffer* un_buffer){
 	int pos_swap = recibir_int_del_buffer(un_buffer);
 	void* un_marco = recibir_choclo_del_buffer(un_buffer);
 
-	swap_actualizar_pagina_bloque_swap(pos_swap, un_marco);
+	modificar_bloque(NULL, pos_swap, un_marco);
 }
 
 void atender_pedido_de_lectura_de_pag_swap(t_buffer* un_buffer){
@@ -44,7 +44,7 @@ void atender_pedido_de_lectura_de_pag_swap(t_buffer* un_buffer){
 	int pos_swap = recibir_int_del_buffer(un_buffer);
 
 	log_warning(filesystem_logger, "SWAP_PAGEFAULT: <PID:%d> <Nro_PAG:%d> <POS_SWAP:%d>", pid, nro_pagina, pos_swap);
-	void* un_bloque = swap_obtener_bloque_pagina_de_pos_swap(pos_swap);
+	void* un_bloque = obtener_bloque(NULL, pos_swap);
 
 	//Enviar bloque_pagina a Memoria
 	enviar_bloque_pagina_a_memoria(pid, nro_pagina, un_bloque);
@@ -57,7 +57,7 @@ void atender_recepcion_de_marco_bloque_de_memoria_por_f_write_de_kernel(t_buffer
 	char* nombre_archivo = recibir_string_del_buffer(un_buffer);
 
 	//Guardar en un nro de marco especifico
-	guardar_info_pagina_en_un_bloque_especifico(nombre_archivo, nro_bloque, marco_bloque);
+	modificar_bloque(nombre_archivo, nro_bloque, marco_bloque);
 
 	//Enviar rpta a kernel
 	//RESPUESTA_F_WRITE_FK

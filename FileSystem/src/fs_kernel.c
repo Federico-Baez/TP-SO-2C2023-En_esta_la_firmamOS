@@ -42,18 +42,18 @@ void atender_f_truncate_de_kernel(t_buffer* un_buffer){
 	fcb->tamanio = tamanio_nuevo;
 
 	setear_size_de_una_fcb(fcb, tamanio_nuevo);
-	int diferencia_tamaño = 0;
+	int diferencia_tamanio = 0;
 	int cantidad_bloques_viejos = tamanio_viejo / TAM_BLOQUE;
 	int cantidad_bloques_nuevos = tamanio_nuevo / TAM_BLOQUE;
 
 	if(tamanio_nuevo > tamanio_viejo){
-		diferencia_tamaño = tamanio_nuevo - tamanio_viejo;
+		diferencia_tamanio = tamanio_nuevo - tamanio_viejo;
 		if(cantidad_bloques_viejos != cantidad_bloques_nuevos){
 			int agrear_nro_bloques = cantidad_bloques_nuevos - cantidad_bloques_viejos;
 			asignar_mas_nro_de_bloque_a_la_secuencia_de_tabla_fat(fcb->bloque_inicial, agrear_nro_bloques);
 		}
 	}else{
-		diferencia_tamaño = tamanio_viejo - tamanio_nuevo;
+		diferencia_tamanio = tamanio_viejo - tamanio_nuevo;
 		if(cantidad_bloques_viejos != cantidad_bloques_nuevos){
 			int reducir_nro_bloques = cantidad_bloques_viejos - cantidad_bloques_nuevos;
 			reducir_nro_de_bloques_de_la_secuencia_de_la_tabla_fat(fcb->bloque_inicial, reducir_nro_bloques);
@@ -74,7 +74,7 @@ void atender_f_read_de_kernel(t_buffer* un_buffer){
 	t_fcb* fcb = obtener_fcb(nombre_archivo);
 
 	uint32_t bloque_a_leer_fat = obtener_el_nro_bloque_segun_el_la_posicion_del_seek(fcb->bloque_inicial, puntero);
-	void* bloque_a_leer = obtener_bloque_especifico_para_lectura(nombre_archivo, bloque_a_leer_fat);
+	void* bloque_a_leer = obtener_bloque(nombre_archivo, bloque_a_leer_fat);
 
 	// Se supone que si usamos mmap ya me da el bloque y puedo mandarselo a memoria.
 	enviar_contenido_a_memoria(pid_process,dir_fisica, bloque_a_leer);
