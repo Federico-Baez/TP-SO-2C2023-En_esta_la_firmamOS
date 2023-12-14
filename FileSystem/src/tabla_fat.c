@@ -4,19 +4,7 @@
 t_list* obtener_n_cantidad_de_bloques_libres_de_tabla_fat(int cant_bloques){
 	t_list* una_lista = list_create();
 
-	//====Inicio MMAP====
-	int fd_archivoTablaFAT = open(PATH_FAT, O_RDWR);
-	tamanio_fat = (CANT_BLOQUES_TOTAL - CANT_BLOQUES_SWAP) * sizeof(uint32_t);
-
-	uint32_t* tablaFatEnMemoria = mmap(NULL, tamanio_fat, PROT_READ | PROT_WRITE, MAP_SHARED, fd_archivoTablaFAT, 0);
-
-	if (fd_archivoTablaFAT == -1 || tablaFatEnMemoria == MAP_FAILED) {
-		log_error(filesystem_logger, "Error al mapear el archivo FAT");
-		exit(1);
-	}
-
 	size_t sizeArrayFat = tamanio_fat/sizeof(uint32_t);
-	//====Fin MMAP====
 
 	uint32_t i = 0;
 
@@ -31,11 +19,6 @@ t_list* obtener_n_cantidad_de_bloques_libres_de_tabla_fat(int cant_bloques){
 		i++;
 	}
 
-    // Desmapeo de fd_archivoTablaFAT
-    munmap(tablaFatEnMemoria, tamanio_fat);
-
-	close(fd_archivoTablaFAT);
-
 	if(list_size(una_lista)<cant_bloques){
 		return NULL;
 	}
@@ -45,18 +28,6 @@ t_list* obtener_n_cantidad_de_bloques_libres_de_tabla_fat(int cant_bloques){
 
 t_list* obtener_secuencia_de_bloques_de_archivo(int nro_bloque_inicial){
 	t_list* lista_a_devolver = list_create();
-
-	//====Inicio MMAP====
-	int fd_archivoTablaFAT = open(PATH_FAT, O_RDWR);
-	tamanio_fat = (CANT_BLOQUES_TOTAL - CANT_BLOQUES_SWAP) * sizeof(uint32_t);
-
-	uint32_t* tablaFatEnMemoria = mmap(NULL, tamanio_fat, PROT_READ | PROT_WRITE, MAP_SHARED, fd_archivoTablaFAT, 0);
-
-	if (fd_archivoTablaFAT == -1 || tablaFatEnMemoria == MAP_FAILED) {
-		log_error(filesystem_logger, "Error al mapear el archivo FAT");
-		exit(1);
-	}
-	//====Fin MMAP====
 
 	uint32_t i = nro_bloque_inicial;
 	uint32_t* aux = malloc(sizeof(uint32_t));
@@ -73,29 +44,12 @@ t_list* obtener_secuencia_de_bloques_de_archivo(int nro_bloque_inicial){
 	log_info(filesystem_log_obligatorio, "Acceso FAT - Entrada: <%d> - Valor: EOF", i);
 	usleep(RETARDO_ACCESO_FAT);
 
-	// Desmapeo de fd_archivoTablaFAT
-	munmap(tablaFatEnMemoria, tamanio_fat);
-
-	close(fd_archivoTablaFAT);
-
 	return lista_a_devolver;
 }
 
 
 void cargar_secuencia_de_bloques_asignados_a_tabla_fat(t_list* una_lista){
 	//Lista [uint32_t*]
-
-	//====Inicio MMAP====while(una_lista)
-	int fd_archivoTablaFAT = open(PATH_FAT, O_RDWR);
-	tamanio_fat = (CANT_BLOQUES_TOTAL - CANT_BLOQUES_SWAP) * sizeof(uint32_t);
-
-	uint32_t* tablaFatEnMemoria = mmap(NULL, tamanio_fat, PROT_READ | PROT_WRITE, MAP_SHARED, fd_archivoTablaFAT, 0);
-
-	if (fd_archivoTablaFAT == -1 || tablaFatEnMemoria == MAP_FAILED) {
-		log_error(filesystem_logger, "Error al mapear el archivo FAT");
-		exit(1);
-	}
-	//====Fin MMAP====
 
 	int i;
 
@@ -108,27 +62,9 @@ void cargar_secuencia_de_bloques_asignados_a_tabla_fat(t_list* una_lista){
 		log_info(filesystem_log_obligatorio, "Acceso FAT - Entrada: <%d> - Valor: <%d>", i, tablaFatEnMemoria[i]);
 		usleep(RETARDO_ACCESO_FAT);
 	}
-
-	// Desmapeo de fd_archivoTablaFAT
-	munmap(tablaFatEnMemoria, tamanio_fat);
-
-	close(fd_archivoTablaFAT);
 }
 
 uint32_t obtener_el_nro_bloque_segun_el_la_posicion_del_seek(int nro_bloque_inicial, int index_seek){
-
-	//====Inicio MMAP====
-	int fd_archivoTablaFAT = open(PATH_FAT, O_RDWR);
-	tamanio_fat = (CANT_BLOQUES_TOTAL - CANT_BLOQUES_SWAP) * sizeof(uint32_t);
-
-	uint32_t* tablaFatEnMemoria = mmap(NULL, tamanio_fat, PROT_READ | PROT_WRITE, MAP_SHARED, fd_archivoTablaFAT, 0);
-
-	if (fd_archivoTablaFAT == -1 || tablaFatEnMemoria == MAP_FAILED) {
-		log_error(filesystem_logger, "Error al mapear el archivo FAT");
-		exit(1);
-	}
-	//====Fin MMAP====
-
 	uint32_t bloque_desplazado = index_seek/TAM_BLOQUE;
 	uint32_t i = nro_bloque_inicial;
 
@@ -138,29 +74,12 @@ uint32_t obtener_el_nro_bloque_segun_el_la_posicion_del_seek(int nro_bloque_inic
 		i = tablaFatEnMemoria[i];
 	}
 
-	// Desmapeo de fd_archivoTablaFAT
-	munmap(tablaFatEnMemoria, tamanio_fat);
-
-	close(fd_archivoTablaFAT);
-
 	return i;
 }
 
 void asignar_mas_nro_de_bloque_a_la_secuencia_de_tabla_fat(int nro_bloque_inicial, int cant_bloques_adicionales){
 	t_list* bloques_de_archivo = obtener_secuencia_de_bloques_de_archivo(nro_bloque_inicial);
 	t_list* bloques_a_agregar = obtener_n_cantidad_de_bloques_libres_de_tabla_fat(cant_bloques_adicionales);
-
-	//====Inicio MMAP====
-	int fd_archivoTablaFAT = open(PATH_FAT, O_RDWR);
-	tamanio_fat = (CANT_BLOQUES_TOTAL - CANT_BLOQUES_SWAP) * sizeof(uint32_t);
-
-	uint32_t* tablaFatEnMemoria = mmap(NULL, tamanio_fat, PROT_READ | PROT_WRITE, MAP_SHARED, fd_archivoTablaFAT, 0);
-
-	if (fd_archivoTablaFAT == -1 || tablaFatEnMemoria == MAP_FAILED) {
-		log_error(filesystem_logger, "Error al mapear el archivo FAT");
-		exit(1);
-	}
-	//====Fin MMAP====
 
 	uint32_t bloque_final = *((uint32_t*)list_get(bloques_de_archivo, list_size(bloques_de_archivo)-1));
 	tablaFatEnMemoria[bloque_final] = *((uint32_t*)list_get(bloques_a_agregar, 0));
@@ -176,27 +95,10 @@ void asignar_mas_nro_de_bloque_a_la_secuencia_de_tabla_fat(int nro_bloque_inicia
 		log_info(filesystem_log_obligatorio, "Acceso FAT - Entrada: <%d> - Valor: <%d>", bloque_final, tablaFatEnMemoria[bloque_final]);
 		usleep(RETARDO_ACCESO_FAT);
 	}
-
-	//Desmapeo de fd_archivoTablaFAT
-	munmap(tablaFatEnMemoria, tamanio_fat);
-
-	close(fd_archivoTablaFAT);
 }
 
 void reducir_nro_de_bloques_de_la_secuencia_de_la_tabla_fat(int nro_bloque_inicial, int cant_bloques_a_reducir){
 	t_list* bloques_de_archivo = obtener_secuencia_de_bloques_de_archivo(nro_bloque_inicial);
-
-	//====Inicio MMAP====
-	int fd_archivoTablaFAT = open(PATH_FAT, O_RDWR);
-	tamanio_fat = (CANT_BLOQUES_TOTAL - CANT_BLOQUES_SWAP) * sizeof(uint32_t);
-
-	uint32_t* tablaFatEnMemoria = mmap(NULL, tamanio_fat, PROT_READ | PROT_WRITE, MAP_SHARED, fd_archivoTablaFAT, 0);
-
-	if (fd_archivoTablaFAT == -1 || tablaFatEnMemoria == MAP_FAILED) {
-		log_error(filesystem_logger, "Error al mapear el archivo FAT");
-		exit(1);
-	}
-	//====Fin MMAP====
 
 	int posicion = list_size(bloques_de_archivo)-1;
 	uint32_t bloque_final = *((uint32_t*)list_get(bloques_de_archivo, posicion));
@@ -209,10 +111,5 @@ void reducir_nro_de_bloques_de_la_secuencia_de_la_tabla_fat(int nro_bloque_inici
 	}
 
 	tablaFatEnMemoria[bloque_final] = EOF_FS;
-
-	//Desmapeo de fd_archivoTablaFAT
-	munmap(tablaFatEnMemoria, tamanio_fat);
-
-	close(fd_archivoTablaFAT);
 }
 

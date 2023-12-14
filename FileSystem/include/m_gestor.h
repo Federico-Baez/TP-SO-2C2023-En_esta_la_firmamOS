@@ -8,6 +8,7 @@
 #include <commons/log.h>
 #include <commons/config.h>
 #include <commons/collections/list.h>
+#include <commons/bitarray.h>
 #include <commons/temporal.h>
 #include <commons/string.h>
 
@@ -61,13 +62,18 @@ extern t_list* lista_bloques;
 
 extern int tamanio_particion_swap;
 extern int tamanio_particion_bloques;
+extern int tamanio_archivo_bloques;
 extern int tamanio_fat;
 extern t_list* lista_struct_fcbs;
 extern t_list* lista_configs_fcbs;
 
-extern void* buffer_swap;
-extern uint32_t* buffer_bloques;
-extern uint32_t* buffer_tabla_fat;
+extern void* bitmap_swap;
+extern t_bitarray* bitmapSWAP;
+
+extern void* tablaFatEnMemoria;
+extern void* archivoBloquesEnMemoria;
+extern void* bloquesFATEnMemoria;
+extern void* bloquesSwapEnMemoria;
 
 //=============================================
 

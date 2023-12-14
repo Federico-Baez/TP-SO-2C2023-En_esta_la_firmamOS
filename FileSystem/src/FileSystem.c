@@ -53,8 +53,50 @@ void leer_config(t_config* config){
 
 void inicializar_archivos(){
 	crear_fat();
-	crear_archivo_de_bloques();
+	inicializar_archivo_de_bloques();
 	inicializar_fcbs();
+}
+
+void crear_fat(){
+	int fd_archivoTablaFAT = open(PATH_FAT, O_CREAT | O_RDWR);
+	tamanio_fat = (CANT_BLOQUES_TOTAL - CANT_BLOQUES_SWAP) * sizeof(uint32_t);
+
+	tablaFatEnMemoria = mmap(NULL, tamanio_fat, PROT_READ | PROT_WRITE, MAP_SHARED, fd_archivoTablaFAT, 0);
+
+	if (fd_archivoTablaFAT == -1 || tablaFatEnMemoria == MAP_FAILED) {
+		log_error(filesystem_logger, "Error al mapear el archivo FAT");
+		exit(1);
+	}
+}
+
+void inicializar_archivo_de_bloques(){
+	int fd_archivoBloques = open(PATH_BLOQUES, O_RDWR);
+	tamanio_archivo_bloques = CANT_BLOQUES_TOTAL * TAM_BLOQUE;
+
+	ftruncate(fd_archivoBloques, tamanio_archivo_bloques);
+
+	mapear_bloques_swap(fd_archivoBloques);
+	mapear_bloques_de_archivo(fd_archivoBloques);
+}
+
+void mapear_bloques_swap(int fd){
+	bitmapSWAP = bitarray_create_with_mode(bitmap_swap, CANT_BLOQUES_SWAP/8, LSB_FIRST);
+
+	bloquesSwapEnMemoria = mmap(NULL, CANT_BLOQUES_SWAP*TAM_BLOQUE, PROT_READ | PROT_WRITE, MAP_SHARED, fd, 0);
+
+	if (fd == -1 || bloquesSwapEnMemoria == MAP_FAILED) {
+		log_error(filesystem_logger, "Error al mapear los bloques SWAP");
+		exit(1);
+	}
+}
+
+void mapear_bloques_de_archivo(int fd){
+	bloquesFATEnMemoria = mmap(NULL, (CANT_BLOQUES_TOTAL - CANT_BLOQUES_SWAP)*TAM_BLOQUE, PROT_READ | PROT_WRITE, MAP_SHARED, fd, CANT_BLOQUES_SWAP*TAM_BLOQUE);
+
+	if (fd == -1 || bloquesFATEnMemoria == MAP_FAILED) {
+		log_error(filesystem_logger, "Error al mapear los bloques de archivo");
+		exit(1);
+	}
 }
 
 void inicializar_fcbs(){
@@ -108,82 +150,6 @@ void destruir_archivo_fcb(t_archivo_fcb* archivo_fcb){
 void destruir_listas_fcbs(){
 	list_destroy_and_destroy_elements(lista_struct_fcbs, (void*) destruir_fcb);
 	list_destroy_and_destroy_elements(lista_configs_fcbs, (void*) destruir_archivo_fcb);
-}
-
-void crear_archivo_de_bloques(){
-	for(int i=1; i <= CANT_BLOQUES_TOTAL; i++){
-		t_bloque* bloque = malloc(sizeof(t_bloque));
-		bloque->id_bloque = i;
-		bloque->esta_libre = 1;
-		bloque->contenido = NULL;
-		list_add(lista_bloques, bloque);
-	}
-
-	FILE* archivo_bloques = fopen(PATH_BLOQUES, "a+b");
-
-	if(archivo_bloques != NULL){
-		for(int i=1; i <= CANT_BLOQUES_TOTAL; i++){
-			t_bloque* bloque_a_persistir = list_get(tabla_fat, i);
-			fwrite(bloque_a_persistir->contenido, TAM_BLOQUE, 1, archivo_bloques);
-		}
-
-		fclose(archivo_bloques);
-	}
-
-
-	/*int fd_arch_bloques = open(PATH_BLOQUES, O_CREAT | O_RDWR);
-	tamanio_particion_swap = TAM_BLOQUE * CANT_BLOQUES_SWAP;
-	tamanio_particion_bloques = TAM_BLOQUE * (CANT_BLOQUES_TOTAL - CANT_BLOQUES_SWAP);
-	buffer_swap = mmap(NULL, tamanio_particion_swap, PROT_READ | PROT_WRITE, MAP_SHARED, fd_arch_bloques, 0);
-	buffer_bloques = mmap(NULL, tamanio_particion_bloques, PROT_READ | PROT_WRITE, MAP_SHARED, fd_arch_bloques, 0);
-
-	if(fd_arch_bloques == -1){
-		log_error(filesystem_logger, "Error al crear el archivo de bloques");
-		exit(1);
-	}
-
-	close(fd_arch_bloques);*/
-}
-
-void crear_fat(){
-	//PRIMER BLOQUE FAT
-	t_bloque_fat* bloque = malloc(sizeof(t_bloque_fat));
-	bloque->id_bloque = 0;
-	bloque->puntero_siguiente = UINT32_MAX;
-	bloque->esta_libre = 0;
-	bloque->eof = NULL;
-	list_add(tabla_fat, bloque);
-
-	for(int i=1; i <= (CANT_BLOQUES_TOTAL - CANT_BLOQUES_SWAP); i++){
-		t_bloque_fat* bloque = malloc(sizeof(t_bloque_fat));
-		bloque->id_bloque = i;
-		bloque->puntero_siguiente = 0;
-		bloque->esta_libre = 1;
-		bloque->eof = NULL;
-		list_add(tabla_fat, bloque);
-	}
-
-	FILE* archivo_fat = fopen(PATH_FAT, "a+b");
-
-	if(archivo_fat != NULL){
-		for(int i=0; i < (CANT_BLOQUES_TOTAL - CANT_BLOQUES_SWAP); i++){
-			t_bloque_fat* bloque_a_persistir = list_get(tabla_fat, i);
-			fwrite(&bloque_a_persistir->puntero_siguiente, sizeof(uint32_t), 1, archivo_fat);
-		}
-
-		fclose(archivo_fat);
-	}
-
-	/*int fd_fat = open(PATH_FAT, O_CREAT | O_RDWR);
-	tamanio_fat = (CANT_BLOQUES_TOTAL - CANT_BLOQUES_SWAP) * sizeof(uint32_t);
-	buffer_tabla_fat = mmap(NULL, tamanio_fat, PROT_READ | PROT_WRITE, MAP_SHARED, fd_fat, 0);
-
-	if(fd_fat == -1){
-		log_error(filesystem_logger, "Error al crear el archivo FAT");
-		exit(1);
-	}
-
-	close(fd_fat);*/
 }
 
 void finalizar_filesystem(){
@@ -342,36 +308,6 @@ void atender_memoria(){
 }
 
 //--------------------OPERACIONES------------------------
-
-
-void asignar_bloques(int cant_bloques, t_archivo_fcb* fcb){
-	uint32_t bloque_inicial = config_get_int_value(fcb->archivo_fcb, "BLOQUE_INICIAL");
-
-	t_bloque_fat* bloque_actual = ultimo_bloque_archivo(bloque_inicial, fcb);
-
-	for(int i = cant_bloques; i > 0; i--){
-		t_bloque_fat* nuevo_bloque_libre = buscar_bloque_libre();
-		bloque_actual->puntero_siguiente = nuevo_bloque_libre->id_bloque;
-		list_replace(tabla_fat, bloque_actual->puntero_siguiente, nuevo_bloque_libre);
-
-		log_info(filesystem_logger, "El nuevo bloque asignado es %d", nuevo_bloque_libre->id_bloque);
-
-		bloque_actual = nuevo_bloque_libre;
-	}
-}
-
-void sacar_bloques(int cant_bloques, t_archivo_fcb* fcb){
-	uint32_t bloque_inicial = config_get_int_value(fcb->archivo_fcb, "BLOQUE_INICIAL");
-
-	t_bloque_fat* bloque_a_sacar = malloc(sizeof(uint32_t));
-
-	for(int i = cant_bloques; i > 0; i--){
-		bloque_a_sacar = ultimo_bloque_archivo(bloque_inicial, fcb);
-		bloque_a_sacar->puntero_siguiente = 0;
-		bloque_a_sacar->esta_libre = 1;
-		list_replace(tabla_fat, bloque_a_sacar->id_bloque, bloque_a_sacar);
-	}
-}
 
 t_list* obtener_bloques_de_archivo(uint32_t bloque_inicial, t_archivo_fcb* fcb){
 	char* nombre_archivo = config_get_string_value(fcb->archivo_fcb, "NOMBRE_ARCHIVO");
