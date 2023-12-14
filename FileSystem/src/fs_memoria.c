@@ -65,10 +65,14 @@ void atender_recepcion_de_marco_bloque_de_memoria_por_f_write_de_kernel(t_buffer
 }
 
 void atender_rpta_de_memoria_a_fs_por_lectura_de_marco_por_dir_fisica(t_buffer* un_buffer){
-	int nro_bloque = recibir_int_del_buffer(un_buffer);
-	void* marco_bloque = recibir_choclo_del_buffer(un_buffer);
+	int pid = recibir_int_del_buffer(un_buffer);
+	char* rpta_de_memoria = recibir_string_del_buffer(un_buffer);
 
-
+	if(strcmp(rpta_de_memoria, "OK") == 0){
+		enviar_confirmacion_de_lectura_a_kernel(pid);
+	}else{
+		log_error(filesystem_logger, "RPTA de Memoria a FileSystem por el fread");
+	}
 }
 
 
@@ -111,7 +115,13 @@ void enviar_rpta_a_kernel_del_f_write(int pid){
 	eliminar_paquete(un_paquete);
 }
 
-
+void enviar_confirmacion_de_lectura_a_kernel(pid){
+	t_paquete* un_paquete = crear_super_paquete(RESPUESTA_F_READ_FK);
+	cargar_string_al_super_paquete(un_paquete, "OK");
+	cargar_int_al_super_paquete(un_paquete, pid);
+	enviar_paquete(un_paquete, fd_kernel);
+	eliminar_paquete(un_paquete);
+}
 
 
 

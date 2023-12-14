@@ -303,10 +303,7 @@ void atender_memoria(){
 
 			break;
 		case RPTA_BLOQUE_DE_FILESYSTEM_A_MEMORIA_FM:
-			//Opcion 1: RESPUESTA_F_READ_FK [char* ][int pid]
-			//Opcion 2: MEMORIA recibe [nro_bloque][void*]
-
-			//Se elijio la opcion 2
+			//[int pid][char* rpta]
 			unBuffer = recibiendo_super_paquete(fd_memoria);
 			atender_rpta_de_memoria_a_fs_por_lectura_de_marco_por_dir_fisica(unBuffer);
 
