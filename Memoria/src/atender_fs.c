@@ -53,6 +53,12 @@ void atender_lectura_de_pagina_de_swap_a_memoria(t_buffer* un_buffer){
 	//Guardar en el espacio_usuario el choclo
 	escribir_pagina_en_una_dir_fisica_especifica(pid, un_marco->base, pagina);
 
+	//Setear config por ultima referencia
+	setear_config_del_marco_segun_algoritmo(un_marco);
+
+	//Setear pagina
+	una_pagina->presente = true;
+
 	//Avisar a KERNEL el exito de la operacion
 	enviar_a_kernel_rpta_del_pedido_de_carga_de_pagina(pid);
 }
@@ -65,6 +71,9 @@ void atender_bloque_de_memoria_y_llevarlos_a_fylesystem(t_buffer* un_buffer){
 
 	//Extraer el marco completo en un void*
 	void* un_marco = copiar_marco_desde_una_dir_fisica(pid, dir_fisica);
+
+	//Setear referencia al marco
+	setear_config_por_ultima_referencia(un_marco);
 
 	//Enviar marco a FS
 	enviar_marco_a_fs(pid, nro_bloque, un_marco, nombre_archivo);
@@ -80,6 +89,11 @@ void atender_bloque_de_fs_a_memoria(t_buffer* un_buffer){
 
 	//Guardar bloque en memoria
 	escribir_pagina_en_una_dir_fisica_especifica(pid, dir_fisica, choclito_bloque);
+
+	//Setear referencia al marco
+	int nro_marco = obtener_nro_marco_a_partir_de_una_dir_fisica(dir_fisica);
+	t_marco* un_marco = obtener_marco_por_nro_marco(nro_marco);
+	setear_config_del_marco_segun_algoritmo(un_marco);
 
 	//Responder a FS el exito de la operacion
 	enviar_rpta_por_pedido_de_escritura_en_memoria(pid);
