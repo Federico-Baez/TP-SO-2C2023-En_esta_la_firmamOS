@@ -54,18 +54,20 @@ void leer_config(t_config* config){
 void inicializar_archivos(){
 	crear_fat();
 	inicializar_archivo_de_bloques();
-	inicializar_fcbs();
 }
 
 void crear_fat(){
-	fd_archivoTablaFAT = open(PATH_FAT, O_CREAT | O_RDWR);
+	fd_archivoTablaFAT = open(PATH_FAT, O_RDWR);
 	tamanio_fat = (CANT_BLOQUES_TOTAL - CANT_BLOQUES_SWAP) * sizeof(uint32_t);
 
-	ftruncate(fd_archivoTablaFAT, tamanio_fat);
+	if (fd_archivoTablaFAT == -1) {
+		fd_archivoTablaFAT = open(PATH_FAT, O_CREAT | O_RDWR);
+		ftruncate(fd_archivoTablaFAT, tamanio_fat);
+	}
 
 	tablaFatEnMemoria = mmap(NULL, tamanio_fat, PROT_READ | PROT_WRITE, MAP_SHARED, fd_archivoTablaFAT, 0);
 
-	if (fd_archivoTablaFAT == -1 || tablaFatEnMemoria == MAP_FAILED) {
+	if (tablaFatEnMemoria == MAP_FAILED) {
 		log_error(filesystem_logger, "Error al mapear el archivo FAT");
 		exit(1);
 	}
@@ -77,7 +79,10 @@ void inicializar_archivo_de_bloques(){
 	fd_archivoBloques = open(PATH_BLOQUES, O_RDWR);
 	tamanio_archivo_bloques = CANT_BLOQUES_TOTAL * TAM_BLOQUE;
 
-	ftruncate(fd_archivoBloques, tamanio_archivo_bloques);
+	if(fd_archivoBloques == -1){
+		fd_archivoBloques = open(PATH_BLOQUES, O_CREAT | O_RDWR);
+		ftruncate(fd_archivoBloques, tamanio_archivo_bloques);
+	}
 
 	mapear_bloques_swap(fd_archivoBloques);
 	mapear_bloques_de_archivo(fd_archivoBloques);
@@ -88,7 +93,7 @@ void mapear_bloques_swap(int fd){
 
 	bloquesSwapEnMemoria = mmap(NULL, CANT_BLOQUES_SWAP*TAM_BLOQUE, PROT_READ | PROT_WRITE, MAP_SHARED, fd, 0);
 
-	if (fd == -1 || bloquesSwapEnMemoria == MAP_FAILED) {
+	if (bloquesSwapEnMemoria == MAP_FAILED) {
 		log_error(filesystem_logger, "Error al mapear los bloques SWAP");
 		exit(1);
 	}
@@ -97,47 +102,10 @@ void mapear_bloques_swap(int fd){
 void mapear_bloques_de_archivo(int fd){
 	bloquesFATEnMemoria = mmap(NULL, (CANT_BLOQUES_TOTAL - CANT_BLOQUES_SWAP)*TAM_BLOQUE, PROT_READ | PROT_WRITE, MAP_SHARED, fd, CANT_BLOQUES_SWAP*TAM_BLOQUE);
 
-	if (fd == -1 || bloquesFATEnMemoria == MAP_FAILED) {
+	if (bloquesFATEnMemoria == MAP_FAILED) {
 		log_error(filesystem_logger, "Error al mapear los bloques de archivo");
 		exit(1);
 	}
-}
-
-void inicializar_fcbs(){
-	DIR *directorio_archivos = opendir(PATH_FCB);
-	struct dirent *fcb;
-
-	if(directorio_archivos == NULL){
-		log_error(filesystem_logger, "No se pudo abrir el directorio de fcbs");
-		exit(1);
-	}
-
-	while((fcb = readdir(directorio_archivos)) != NULL){
-		if (strcmp(fcb->d_name, ".") == 0 || strcmp(fcb->d_name, "..") == 0){
-			continue;
-		}
-		log_info(filesystem_logger, "Lei esto del directorio: %s", fcb->d_name);
-
-		t_archivo_fcb* config_fcb = malloc(sizeof(t_archivo_fcb));
-		config_fcb->nombre = malloc(strlen(fcb->d_name));
-		strcpy(config_fcb->nombre, fcb->d_name);
-
-		char* path_archivo = malloc(strlen(PATH_FCB) + strlen(fcb->d_name));
-		strcpy(path_archivo, PATH_FCB);
-		strcat(path_archivo, fcb->d_name);
-		config_fcb->archivo_fcb = config_create(path_archivo);
-
-		list_add(lista_configs_fcbs, config_fcb);
-
-		t_fcb* struct_fcb = malloc(sizeof(t_fcb));
-		struct_fcb->nombre = malloc(strlen(fcb->d_name));
-		struct_fcb->tamanio = config_get_int_value(config_fcb->archivo_fcb, "TAMANIO_ARCHIVO");
-		struct_fcb->bloque_inicial = config_get_int_value(config_fcb->archivo_fcb, "BLOQUE_INICIAL");
-
-		list_add(lista_struct_fcbs, config_fcb);
-	}
-
-	closedir(directorio_archivos);
 }
 
 void destruir_fcb(t_fcb* fcb){
