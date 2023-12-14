@@ -58,7 +58,7 @@ void inicializar_archivos(){
 }
 
 void crear_fat(){
-	int fd_archivoTablaFAT = open(PATH_FAT, O_CREAT | O_RDWR);
+	fd_archivoTablaFAT = open(PATH_FAT, O_CREAT | O_RDWR);
 	tamanio_fat = (CANT_BLOQUES_TOTAL - CANT_BLOQUES_SWAP) * sizeof(uint32_t);
 
 	ftruncate(fd_archivoTablaFAT, tamanio_fat);
@@ -74,7 +74,7 @@ void crear_fat(){
 }
 
 void inicializar_archivo_de_bloques(){
-	int fd_archivoBloques = open(PATH_BLOQUES, O_RDWR);
+	fd_archivoBloques = open(PATH_BLOQUES, O_RDWR);
 	tamanio_archivo_bloques = CANT_BLOQUES_TOTAL * TAM_BLOQUE;
 
 	ftruncate(fd_archivoBloques, tamanio_archivo_bloques);
@@ -157,10 +157,21 @@ void destruir_listas_fcbs(){
 }
 
 void finalizar_filesystem(){
+	destruir_listas_fcbs();
+
+	close(fd_archivoTablaFAT);
+	close(fd_archivoBloques);
+
+	list_destroy(lista_struct_fcbs);
+	list_destroy(lista_configs_fcbs);
+	bitarray_destroy(bitmapSWAP);
+
 	log_destroy(filesystem_logger);
 	log_destroy(filesystem_log_obligatorio);
 	config_destroy(filesystem_config);
+
 	liberar_conexion(fd_kernel);
+	liberar_conexion(fd_memoria);
 }
 
 void iterator(char* value) {
@@ -181,7 +192,7 @@ void atender_filesystem_kernel(){
 	fd_kernel = esperar_cliente(filesystem_logger, "Kernel", server_fd_filesystem);
 	gestionar_handshake_como_server(fd_kernel, filesystem_logger);
 	log_info(filesystem_logger, "::::::::::: KERNEL CONECTADO ::::::::::::");
-	//int control_key = 1;
+
 	while(1){
 		t_buffer* unBuffer;
 		int cod_op = recibir_operacion(fd_kernel);
@@ -191,36 +202,19 @@ void atender_filesystem_kernel(){
 
 		case MANEJAR_F_OPEN_KF:
 			unBuffer = recibiendo_super_paquete(fd_kernel);
-			atender_f_open_de_kernel(unBuffer);
-
+			ejecutar_en_un_hilo_nuevo_detach(atender_f_open_de_kernel, unBuffer);
 			break;
 		case MANEJAR_F_TRUNCATE_KF:
 			unBuffer = recibiendo_super_paquete(fd_kernel);
-			atender_f_truncate_de_kernel(unBuffer);
-
+			ejecutar_en_un_hilo_nuevo_detach(atender_f_truncate_de_kernel, unBuffer);
 			break;
 		case MANEJAR_F_READ_KF:
 			unBuffer = recibiendo_super_paquete(fd_kernel);
-
-
-			int dir = recibir_int_del_buffer(unBuffer);
-			int pid2 = recibir_int_del_buffer(unBuffer);
-
-			t_paquete* paquete2 = crear_super_paquete(RESPUESTA_F_READ_FK);
-			cargar_int_al_super_paquete(paquete2, 0);
-			cargar_int_al_super_paquete(paquete2, pid2);
-			enviar_paquete(paquete2, fd_kernel);
-			eliminar_paquete(paquete2);
+			ejecutar_en_un_hilo_nuevo_detach(atender_f_read_de_kernel, unBuffer);
 			break;
 		case MANEJAR_F_WRITE_KF:
-			int dir2 = recibir_int_del_buffer(unBuffer);
-			int pid3 = recibir_int_del_buffer(unBuffer);
-
-			t_paquete* paquete3 = crear_super_paquete(RESPUESTA_F_WRITE_FK);
-			cargar_int_al_super_paquete(paquete3, 0);
-			cargar_int_al_super_paquete(paquete3, pid3);
-			enviar_paquete(paquete3, fd_kernel);
-			eliminar_paquete(paquete3);
+			unBuffer = recibiendo_super_paquete(fd_kernel);
+			ejecutar_en_un_hilo_nuevo_detach(atender_f_write_de_kernel, unBuffer);
 			break;
 		case MENSAJES_POR_CONSOLA:
 		    unBuffer = recibiendo_super_paquete(fd_kernel);
@@ -228,7 +222,6 @@ void atender_filesystem_kernel(){
 		    break;
 		case -1:
 			log_error(filesystem_logger, "[DESCONEXION]: KERNEL");
-			//control_key = 0;
 			exit(EXIT_FAILURE);
 			break;
 		default:
@@ -309,67 +302,4 @@ void atender_memoria(){
 		free(unBuffer);
 	}
 	log_info(filesystem_logger, "Saliendo del hilo de FILESYSTEM - MEMORIA");
-}
-
-//--------------------OPERACIONES------------------------
-
-t_list* obtener_bloques_de_archivo(uint32_t bloque_inicial, t_archivo_fcb* fcb){
-	char* nombre_archivo = config_get_string_value(fcb->archivo_fcb, "NOMBRE_ARCHIVO");
-	t_bloque_fat* bloque_actual = list_get(tabla_fat, bloque_inicial);
-	t_list* bloques_de_archivo = list_create();
-
-	list_add(bloques_de_archivo, bloque_actual);
-
-	for(int i=1; bloque_actual->puntero_siguiente != UINT32_MAX; i++){
-		log_info(filesystem_log_obligatorio, "Acceso Bloque - Archivo: %s - Bloque Archivo: %d - Bloque FS: %d", nombre_archivo, i, bloque_inicial);
-		usleep(RETARDO_ACCESO_BLOQUE);
-		bloque_actual = list_get(tabla_fat, bloque_actual->puntero_siguiente);
-		list_add(bloques_de_archivo, bloque_actual);
-	}
-
-	return bloques_de_archivo;
-}
-
-t_bloque_fat* ultimo_bloque_archivo(uint32_t bloque_inicial, t_archivo_fcb* fcb){
-	t_list* bloques_de_archivo = obtener_bloques_de_archivo(bloque_inicial, fcb);
-	return list_get(bloques_de_archivo, list_size(bloques_de_archivo)-1);
-}
-
-void asignar_bloque_primer_truncate(t_archivo_fcb* fcb){
-	t_bloque_fat* bloque_inicial = buscar_bloque_libre();
-	char* text_bloque_inicial = malloc(10);
-	sprintf(text_bloque_inicial, "%d", bloque_inicial->id_bloque);
-	config_set_value(fcb->archivo_fcb, "BLOQUE_INICIAL", text_bloque_inicial);
-	config_save(fcb->archivo_fcb);
-}
-
-t_bloque_fat* buscar_bloque_libre(){ //busca un bloque libre y lo ocupa
-	for(int i = 0; i < (CANT_BLOQUES_TOTAL - CANT_BLOQUES_SWAP); i++){
-		t_bloque_fat* bloque = list_get(tabla_fat, i);
-		if(bloque->esta_libre){
-			bloque->puntero_siguiente = UINT32_MAX;
-			bloque->esta_libre = 0;
-			list_replace(tabla_fat, bloque->id_bloque, bloque);
-
-			log_info(filesystem_log_obligatorio, "Acceso FAT - Entrada: %d - Valor: %d", i, UINT32_MAX);
-			return bloque;
-		}
-	}
-
-	log_error(filesystem_logger, "No hay bloques libres");
-	return NULL;
-}
-
-void actualizar_archivo_fat(t_list* tabla_fat){
-	FILE* archivo_fat = fopen(PATH_FAT, "r+b");
-
-	if(archivo_fat != NULL){
-		for(int i=0; i < list_size(tabla_fat); i++){
-			t_bloque_fat* bloque_a_persistir = list_get(tabla_fat, i);
-			fseek(archivo_fat, i*sizeof(uint32_t), SEEK_SET);
-			fwrite(&bloque_a_persistir->puntero_siguiente, sizeof(uint32_t), 1, archivo_fat);
-		}
-
-		fclose(archivo_fat);
-	}
 }

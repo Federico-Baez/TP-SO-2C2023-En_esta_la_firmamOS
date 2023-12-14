@@ -22,9 +22,7 @@
 
 #include <math.h>
 
-
 extern const uint32_t EOF_FS;
-
 
 typedef struct{
 	char* nombre;
@@ -37,35 +35,26 @@ typedef struct{
 	int bloque_inicial;
 }t_fcb;
 
-typedef struct{
-	int id_bloque;
-	int esta_libre;
-	uint32_t puntero_siguiente;
-	int eof; //es necesario esto?
-}t_bloque_fat;
+//typedef struct{
+//	int id_bloque;
+//	int esta_libre;
+//	uint32_t puntero_siguiente;
+//	int eof; //es necesario esto?
+//}t_bloque_fat;
+//
+//typedef struct{
+//	int id_bloque;
+//	int esta_libre;
+//	void* contenido; //pid con pagina o contenido de archivo
+//}t_bloque;
 
-/*typedef struct{
-	int id_bloque;
-	int pid;
-	int esta_libre;
-	int nro_pagina;
-}t_bloque;*/
-
-typedef struct{
-	int id_bloque;
-	int esta_libre;
-	void* contenido; //pid con pagina o contenido de archivo
-}t_bloque;
-
-extern t_list* tabla_fat;
-extern t_list* lista_bloques;
-
-extern int tamanio_particion_swap;
-extern int tamanio_particion_bloques;
 extern int tamanio_archivo_bloques;
 extern int tamanio_fat;
 extern t_list* lista_struct_fcbs;
 extern t_list* lista_configs_fcbs;
+
+extern int fd_archivoTablaFAT;
+extern int fd_archivoBloques;
 
 extern void* bitmap_swap;
 extern t_bitarray* bitmapSWAP;
@@ -96,11 +85,5 @@ extern int CANT_BLOQUES_SWAP;
 extern int TAM_BLOQUE;
 extern int RETARDO_ACCESO_BLOQUE;
 extern int RETARDO_ACCESO_FAT;
-
-
-
-
-
-
 
 #endif /* M_GESTOR_H_ */

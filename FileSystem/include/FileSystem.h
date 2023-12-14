@@ -29,17 +29,13 @@ int TAM_BLOQUE;
 int RETARDO_ACCESO_BLOQUE;
 int RETARDO_ACCESO_FAT;
 
-
-
-t_list* tabla_fat;
-t_list* lista_bloques;
-
-int tamanio_particion_swap;
-int tamanio_particion_bloques;
 int tamanio_archivo_bloques;
 int tamanio_fat;
 t_list* lista_struct_fcbs;
 t_list* lista_configs_fcbs;
+
+int fd_archivoTablaFAT;
+int fd_archivoBloques;
 
 void* bitmap_swap;
 t_bitarray* bitmapSWAP;
@@ -66,18 +62,5 @@ void finalizar_filesystem();
 void atender_filesystem_kernel(void);
 void atender_memoria(void);
 void atender_mensajes_kernel(t_buffer* buffer);
-
-void ejecutar_f_open(char* nombre_archivo);
-void ejecutar_f_create(char* nombre_archivo);
-void ejecutar_f_truncate(char* nombre_archivo, int tamanio_nuevo);
-void ejecutar_f_read(char* nombre_archivo, int dir_fisica, int posicion_a_leer, int pid);
-void ejecutar_f_write(char* nombre_archivo, int dir_fisica, int posicion_a_escribir, int pid);
-
-t_list* obtener_bloques_de_archivo(uint32_t bloque_actual, t_archivo_fcb* fcb);
-t_bloque_fat* ultimo_bloque_archivo(uint32_t bloque_inicial, t_archivo_fcb* fcb);
-void asignar_bloque_primer_truncate(t_archivo_fcb* fcb);
-t_bloque_fat* buscar_bloque_libre();
-
-void actualizar_archivo_fat(t_list* tabla_fat);
 
 #endif /* FILESYSTEM_H_ */
