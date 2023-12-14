@@ -43,7 +43,7 @@ void atender_pedido_de_lectura_de_pag_swap(t_buffer* un_buffer){
 	int nro_pagina = recibir_int_del_buffer(un_buffer);
 	int pos_swap = recibir_int_del_buffer(un_buffer);
 
-	log_warning(filesystem_logger, "SWAP_PAGEFAULT: <PID:%d> <Nro_PAG:%d> <POS_SWAP>", pid, nro_pagina, pos_swap);
+	log_warning(filesystem_logger, "SWAP_PAGEFAULT: <PID:%d> <Nro_PAG:%d> <POS_SWAP:%d>", pid, nro_pagina, pos_swap);
 	void* un_bloque = swap_obtener_bloque_pagina_de_pos_swap(pos_swap);
 
 	//Enviar bloque_pagina a Memoria
@@ -115,7 +115,7 @@ void enviar_rpta_a_kernel_del_f_write(int pid){
 	eliminar_paquete(un_paquete);
 }
 
-void enviar_confirmacion_de_lectura_a_kernel(pid){
+void enviar_confirmacion_de_lectura_a_kernel(int pid){
 	t_paquete* un_paquete = crear_super_paquete(RESPUESTA_F_READ_FK);
 	cargar_string_al_super_paquete(un_paquete, "OK");
 	cargar_int_al_super_paquete(un_paquete, pid);
