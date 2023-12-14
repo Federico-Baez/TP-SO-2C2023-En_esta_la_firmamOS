@@ -72,29 +72,42 @@ void inicializar_fcbs(){
 		}
 		log_info(filesystem_logger, "Lei esto del directorio: %s", fcb->d_name);
 
-		t_archivo_fcb *archivo = malloc(sizeof(t_archivo_fcb));
-		archivo->nombre = malloc(strlen(fcb->d_name));
-		strcpy(archivo->nombre, fcb->d_name);
+		t_archivo_fcb* config_fcb = malloc(sizeof(t_archivo_fcb));
+		config_fcb->nombre = malloc(strlen(fcb->d_name));
+		strcpy(config_fcb->nombre, fcb->d_name);
 
 		char* path_archivo = malloc(strlen(PATH_FCB) + strlen(fcb->d_name));
 		strcpy(path_archivo, PATH_FCB);
 		strcat(path_archivo, fcb->d_name);
-		archivo->archivo_fcb = config_create(path_archivo);
+		config_fcb->archivo_fcb = config_create(path_archivo);
 
-		list_add(lista_fcbs, archivo);
+		list_add(lista_configs_fcbs, config_fcb);
+
+		t_fcb* struct_fcb = malloc(sizeof(t_fcb));
+		struct_fcb->nombre = malloc(strlen(fcb->d_name));
+		struct_fcb->tamanio = config_get_int_value(config_fcb, "TAMANIO_ARCHIVO");
+		struct_fcb->bloque_inicial = config_get_int_value(config_fcb, "BLOQUE_INICIAL");
+
+		list_add(lista_struct_fcbs, config_fcb);
 	}
 
 	closedir(directorio_archivos);
 }
 
-void destruir_lista_fcbs(){
-	list_destroy_and_destroy_elements(lista_fcbs, (void*) destruir_archivo);
+void destruir_fcb(t_fcb* fcb){
+	free(fcb);
+	fcb = NULL;
 }
 
-void destruir_archivo(t_archivo_fcb* archivo_fcb){
+void destruir_archivo_fcb(t_archivo_fcb* archivo_fcb){
 	config_destroy(archivo_fcb->archivo_fcb);
 	free(archivo_fcb);
 	archivo_fcb = NULL;
+}
+
+void destruir_listas_fcbs(){
+	list_destroy_and_destroy_elements(lista_struct_fcbs, (void*) destruir_fcb);
+	list_destroy_and_destroy_elements(lista_configs_fcbs, (void*) destruir_archivo_fcb);
 }
 
 void crear_archivo_de_bloques(){
@@ -343,7 +356,9 @@ void ejecutar_f_open(char* nombre_archivo){
 
 void ejecutar_f_create(char* nombre_archivo){
 	log_info(filesystem_log_obligatorio, "Crear Archivo: %s", nombre_archivo);
-	char* path_archivo = malloc(strlen(PATH_FCB) + strlen(nombre_archivo));
+
+	//FUNCIONALIDAD QUE YA ESTÁ EN fcb.c
+	/*char* path_archivo = malloc(strlen(PATH_FCB) + strlen(nombre_archivo));
 	strcpy(path_archivo, PATH_FCB);
 	strcat(path_archivo, nombre_archivo);
 
@@ -367,7 +382,7 @@ void ejecutar_f_create(char* nombre_archivo){
 	config_save(archivo_fcb->archivo_fcb);
 
 	list_add(lista_fcbs, archivo_fcb);
-	fclose(file_fcb);
+	fclose(file_fcb);*/
 
 	enviar_mensaje("CREACIÓN DE ARCHIVO OK", fd_kernel);
 }
@@ -492,7 +507,8 @@ t_bloque_fat* ultimo_bloque_archivo(uint32_t bloque_inicial, t_archivo_fcb* fcb)
 	return list_get(bloques_de_archivo, list_size(bloques_de_archivo)-1);
 }
 
-t_archivo_fcb* buscar_fcb(char* nombre_archivo){
+//FUNCIONALIDADES QUE YA ESTÁN EN fcb.c
+/*t_archivo_fcb* buscar_fcb(char* nombre_archivo){
 	for(int i = 0; i < list_size(lista_fcbs); i++){
 		t_archivo_fcb* archivo_buscado = list_get(lista_fcbs, i);
 
@@ -512,7 +528,7 @@ t_archivo_fcb* obtener_archivo(char* nombre_archivo){
 		}
 	}
 	return NULL;
-}
+}*/
 
 void asignar_bloque_primer_truncate(t_archivo_fcb* fcb){
 	t_bloque_fat* bloque_inicial = buscar_bloque_libre();
