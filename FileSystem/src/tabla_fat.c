@@ -21,11 +21,14 @@ t_list* obtener_n_cantidad_de_bloques_libres_de_tabla_fat(int cant_bloques){
 
 
 	uint32_t i = 0;
+
 	while(i<sizeArrayFat && list_size(una_lista)<cant_bloques){
 		log_info(filesystem_log_obligatorio, "Acceso FAT - Entrada: <%d> - Valor: <%d>", i, tablaFatEnMemoria[i]);
 		usleep(RETARDO_ACCESO_FAT);
 		if(tablaFatEnMemoria[i]==0){
-			list_add(una_lista, i);
+			uint32_t* aux = malloc(sizeof(uint32_t));
+			*aux = i;
+			list_add(una_lista, aux);
 		}
 		i++;
 	}
@@ -58,7 +61,6 @@ t_list* obtener_secuencia_de_bloques_de_archivo(int nro_bloque_inicial){
 	}
 	close(fd_archivoTablaFAT);
 
-	size_t sizeArrayFat = tamanio_fat/sizeof(uint32_t);
 	//====Fin MMAP====
 
 	//busco el primero
@@ -77,13 +79,16 @@ t_list* obtener_secuencia_de_bloques_de_archivo(int nro_bloque_inicial){
 //	}
 
 	uint32_t i = nro_bloque_inicial;
-	list_add(lista_a_devolver, i);
+	uint32_t* aux = malloc(sizeof(uint32_t));
+	*aux = i;
+	list_add(lista_a_devolver, aux);
 
 	while(tablaFatEnMemoria[i] != EOF_FS){
 		log_info(filesystem_log_obligatorio, "Acceso FAT - Entrada: <%d> - Valor: <%d>", i, tablaFatEnMemoria[i]);
 		usleep(RETARDO_ACCESO_FAT);
 		i = tablaFatEnMemoria[i];
-		list_add(lista_a_devolver, i);
+		*aux = i;
+		list_add(lista_a_devolver, aux);
 	}
 	log_info(filesystem_log_obligatorio, "Acceso FAT - Entrada: <%d> - Valor: EOF", i);
 	usleep(RETARDO_ACCESO_FAT);
@@ -109,27 +114,26 @@ void cargar_secuencia_de_bloques_asignados_a_tabla_fat(t_list* una_lista){
 		exit(1);
 	}
 
-
-	size_t sizeArrayFat = tamanio_fat/sizeof(uint32_t);
 	//====Fin MMAP====
 
 
 	int i;
+
 	for(i = 0; i< list_size(una_lista); i++){
 		if(i == list_size(una_lista)-1){
-			tablaFatEnMemoria[list_get(una_lista, i)] = EOF_FS;
+			tablaFatEnMemoria[*((uint32_t*)list_get(una_lista, i))] = EOF_FS;
 		}else{
-			tablaFatEnMemoria[list_get(una_lista, i)] = list_get(una_lista, i+1);
+			tablaFatEnMemoria[*((uint32_t*)list_get(una_lista, i))] =  *((uint32_t*)list_get(una_lista, i+1));
 		}
 		log_info(filesystem_log_obligatorio, "Acceso FAT - Entrada: <%d> - Valor: <%d>", i, tablaFatEnMemoria[i]);
 		usleep(RETARDO_ACCESO_FAT);
 	}
 
-	// TODO: actualizar el binario
-	close(fd_archivoTablaFAT);
 
 	// Desmapeo de fd_archivoTablaFAT
 	munmap(tablaFatEnMemoria, tamanio_fat);
+
+	close(fd_archivoTablaFAT);
 }
 
 uint32_t obtener_el_nro_bloque_segun_el_la_posicion_del_seek(int nro_bloque_inicial, int index_seek){
@@ -146,7 +150,6 @@ uint32_t obtener_el_nro_bloque_segun_el_la_posicion_del_seek(int nro_bloque_inic
 	}
 	close(fd_archivoTablaFAT);
 
-	size_t sizeArrayFat = tamanio_fat/sizeof(uint32_t);
 	//====Fin MMAP====
 
 	uint32_t i = nro_bloque_inicial;
