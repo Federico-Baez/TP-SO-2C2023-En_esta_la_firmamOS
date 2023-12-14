@@ -22,7 +22,7 @@
 #include <math.h>
 
 
-const uint32_t EOF_FS = UINT32_MAX;
+extern const uint32_t EOF_FS;
 
 
 typedef struct{

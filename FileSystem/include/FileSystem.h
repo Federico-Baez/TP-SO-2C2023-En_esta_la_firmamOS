@@ -7,6 +7,7 @@
 
 #define IP_FILESYSTEM "127.0.0.1"
 
+const uint32_t EOF_FS = UINT32_MAX;
 
 t_log* filesystem_logger;
 t_log* filesystem_log_obligatorio;

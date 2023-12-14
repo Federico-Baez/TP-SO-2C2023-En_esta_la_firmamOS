@@ -3,7 +3,7 @@
 // =========== ATENDER KERNEL ===============
 
 
-void ejecutar_f_open(t_buffer* un_buffer){
+void atender_f_open_de_kernel(t_buffer* un_buffer){
 	char* nombre_archivo = recibir_string_del_buffer(un_buffer);
 	char* operacion = recibir_string_del_buffer(un_buffer);
 
