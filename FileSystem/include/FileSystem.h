@@ -48,8 +48,9 @@ void iterator(char* value);
 
 void inicializar_archivos();
 void inicializar_fcbs();
-void destruir_lista_fcbs();
-void destruir_archivo(t_archivo_fcb* archivo_fcb);
+void destruir_fcb(t_fcb* fcb);
+void destruir_archivo_fcb(t_archivo_fcb* archivo_fcb);
+void destruir_listas_fcbs();
 void crear_archivo_de_bloques();
 void crear_fat();
 void finalizar_filesystem();
