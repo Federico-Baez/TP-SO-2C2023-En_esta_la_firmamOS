@@ -2,6 +2,9 @@
 #define FS_KERNEL_H_
 
 #include "m_gestor.h"
+#include "fcb.h"
+#include "tabla_fat.h"
+#include "bloques.h"
 
 
 // =========== ATENDER KERNEL ===============

@@ -309,13 +309,13 @@ void atender_memoria(){
 			atender_pedido_de_lectura_de_pag_swap(unBuffer);
 
 			break;
-		case BLOQUE_DE_MEMORIA_A_FILESYSTEM_FM:
+		case BLOQUE_DE_MEMORIA_A_FILESYSTEM_FM: //F_WRITE
 			//[int pid][int nro_bloque][void* marco_bloque][char* nombre_archivo]
 			unBuffer = recibiendo_super_paquete(fd_memoria);
 			atender_recepcion_de_marco_bloque_de_memoria_por_f_write_de_kernel(unBuffer);
 
 			break;
-		case RPTA_BLOQUE_DE_FILESYSTEM_A_MEMORIA_FM:
+		case RPTA_BLOQUE_DE_FILESYSTEM_A_MEMORIA_FM: //F_READ
 			//[int pid][char* rpta]
 			unBuffer = recibiendo_super_paquete(fd_memoria);
 			atender_rpta_de_memoria_a_fs_por_lectura_de_marco_por_dir_fisica(unBuffer);
