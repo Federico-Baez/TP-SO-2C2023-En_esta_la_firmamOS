@@ -160,12 +160,10 @@ void asignar_mas_nro_de_bloque_a_la_secuencia_de_tabla_fat(int nro_bloque_inicia
 		log_error(filesystem_logger, "Error al mapear el archivo FAT");
 		exit(1);
 	}
-
-	size_t sizeArrayFat = tamanio_fat/sizeof(uint32_t);
 	//====Fin MMAP====
 
-	uint32_t bloque_final = list_get(bloques_de_archivo, list_size(bloques_de_archivo)-1);
-	tablaFatEnMemoria[bloque_final] = list_get(bloques_a_agregar, 0);
+	uint32_t bloque_final = *((uint32_t*)list_get(bloques_de_archivo, list_size(bloques_de_archivo)-1));
+	tablaFatEnMemoria[bloque_final] = *((uint32_t*)list_get(bloques_a_agregar, 0));
 
 	for(int i=0; i < list_size(bloques_a_agregar); i++){
 
@@ -198,16 +196,14 @@ void reducir_nro_de_bloques_de_la_secuencia_de_la_tabla_fat(int nro_bloque_inici
 		log_error(filesystem_logger, "Error al mapear el archivo FAT");
 		exit(1);
 	}
-
-	size_t sizeArrayFat = tamanio_fat/sizeof(uint32_t);
 	//====Fin MMAP====
 
 	int posicion = list_size(bloques_de_archivo)-1;
-	uint32_t bloque_final = list_get(bloques_de_archivo, posicion);
+	uint32_t bloque_final = *((uint32_t*)list_get(bloques_de_archivo, posicion));
 
 	for(int i = cant_bloques_a_reducir; i > 0 ; i--){
 		tablaFatEnMemoria[bloque_final] = 0;
-		bloque_final = list_get(bloques_de_archivo, posicion-1);
+		bloque_final = *((uint32_t*)list_get(bloques_de_archivo, posicion-1));
 		log_info(filesystem_log_obligatorio, "Acceso FAT - Entrada: <%d> - Valor: <%d>", bloque_final, tablaFatEnMemoria[bloque_final]);
 		usleep(RETARDO_ACCESO_FAT);
 	}
