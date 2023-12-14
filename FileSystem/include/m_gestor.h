@@ -16,7 +16,6 @@
 
 #include <stdlib.h>
 #include <unistd.h>
-#include <dirent.h>
 #include <fcntl.h>
 #include <sys/mman.h>
 
@@ -34,19 +33,6 @@ typedef struct{
 	int tamanio;
 	int bloque_inicial;
 }t_fcb;
-
-//typedef struct{
-//	int id_bloque;
-//	int esta_libre;
-//	uint32_t puntero_siguiente;
-//	int eof; //es necesario esto?
-//}t_bloque_fat;
-//
-//typedef struct{
-//	int id_bloque;
-//	int esta_libre;
-//	void* contenido; //pid con pagina o contenido de archivo
-//}t_bloque;
 
 extern int tamanio_archivo_bloques;
 extern int tamanio_fat;

@@ -53,7 +53,6 @@ void crear_fat();
 void inicializar_archivo_de_bloques();
 void mapear_bloques_swap(int fd);
 void mapear_bloques_de_archivo(int fd);
-void inicializar_fcbs();
 void destruir_fcb(t_fcb* fcb);
 void destruir_archivo_fcb(t_archivo_fcb* archivo_fcb);
 void destruir_listas_fcbs();
