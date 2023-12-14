@@ -7,6 +7,7 @@
 
 #define IP_FILESYSTEM "127.0.0.1"
 
+
 t_log* filesystem_logger;
 t_log* filesystem_log_obligatorio;
 t_config* filesystem_config;
@@ -26,6 +27,8 @@ int CANT_BLOQUES_SWAP;
 int TAM_BLOQUE;
 int RETARDO_ACCESO_BLOQUE;
 int RETARDO_ACCESO_FAT;
+
+
 
 t_list* tabla_fat;
 t_list* lista_bloques;

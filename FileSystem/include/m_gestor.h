@@ -22,6 +22,8 @@
 #include <math.h>
 
 
+const uint32_t EOF_FS = UINT32_MAX;
+
 
 typedef struct{
 	char* nombre;
