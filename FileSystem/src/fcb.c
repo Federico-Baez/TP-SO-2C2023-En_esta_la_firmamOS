@@ -1,6 +1,7 @@
 #include "../include/fcb.h"
 
 void crear_fcb(char* nombre_archivo){
+	log_warning(filesystem_logger, "inicio crear_fcb");
 	char* path_archivo = malloc(strlen(PATH_FCB) + strlen(nombre_archivo));
 	strcpy(path_archivo, PATH_FCB);
 	strcat(path_archivo, nombre_archivo);
@@ -31,20 +32,25 @@ void crear_fcb(char* nombre_archivo){
 	list_add(lista_configs_fcbs, archivo_fcb);
 
 	fclose(file_fcb);
+	log_warning(filesystem_logger, "fin crear_fcb");
 }
 
 t_fcb* obtener_fcb(char* nombre_archivo){
+	log_warning(filesystem_logger, "inicio obtener_fcb");
 	for(int i = 0; i < list_size(lista_struct_fcbs); i++){
 		t_fcb* fcb_buscado = list_get(lista_struct_fcbs, i);
 
 		if(strcmp(fcb_buscado->nombre, nombre_archivo) == 0){
+			log_warning(filesystem_logger, "fin obtener_fcb");
 			return fcb_buscado;
 		}
 	}
+	log_warning(filesystem_logger, "fin obtener_fcb");
 	return NULL;
 }
 
 void setear_size_de_una_fcb(t_fcb* una_fcb, int nuevo_size){
+	log_warning(filesystem_logger, "inicio setear_size_de_una_fcb");
 	//nomrbe_De_archivo.fcb <- Setear en el archivo concreto
 	//Se puede setear el size de la lista de fcbs aca o afuera en la logica general
 
@@ -59,6 +65,7 @@ void setear_size_de_una_fcb(t_fcb* una_fcb, int nuevo_size){
 			config_save(archivo_buscado->archivo_fcb);
 		}
 	}
+	log_warning(filesystem_logger, "fin setear_size_de_una_fcb");
 }
 
 //TODO: fletar de Filesystem.c buscar_fcb, obtener_archivo, logica de ejecutar_f_create

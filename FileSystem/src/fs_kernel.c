@@ -4,6 +4,7 @@
 
 
 void atender_f_open_de_kernel(t_buffer* un_buffer){
+	log_warning(filesystem_logger, "inicio atender_f_open_de_kernel");
 	char* nombre_archivo = recibir_string_del_buffer(un_buffer);
 	char* operacion = recibir_string_del_buffer(un_buffer);
 
@@ -30,9 +31,11 @@ void atender_f_open_de_kernel(t_buffer* un_buffer){
 	}
 	enviar_rta_f_open_a_kernel(paquete);
 	free(un_buffer);
+	log_warning(filesystem_logger, "fin atender_f_open_de_kernel");
 }
 
 void atender_f_truncate_de_kernel(t_buffer* un_buffer){
+	log_warning(filesystem_logger, "inicio atender_f_truncate_de_kernel");
 	char* nombre_archivo = recibir_string_del_buffer(un_buffer);
 	int tamanio_nuevo = recibir_int_del_buffer(un_buffer);
 	int pid_process = recibir_int_del_buffer(un_buffer);
@@ -63,9 +66,11 @@ void atender_f_truncate_de_kernel(t_buffer* un_buffer){
 	log_info(filesystem_log_obligatorio, "Truncar Archivo: %s - Tamaño: %d", nombre_archivo, tamanio_nuevo);
 	enviar_rta_f_truncate_a_kernel(pid_process);
 	free(un_buffer);
+	log_warning(filesystem_logger, "fin atender_f_truncate_de_kernel");
 }
 
 void atender_f_read_de_kernel(t_buffer* un_buffer){
+	log_warning(filesystem_logger, "inicio atender_f_read_de_kernel");
 	char* nombre_archivo = recibir_string_del_buffer(un_buffer);
 	int pid_process = recibir_int_del_buffer(un_buffer);
 	int puntero = recibir_int_del_buffer(un_buffer);
@@ -81,9 +86,11 @@ void atender_f_read_de_kernel(t_buffer* un_buffer){
 
 	// Ahora queda esperar la respuesta de memoria en atender_memoria
 	free(un_buffer);
+	log_warning(filesystem_logger, "fin atender_f_read_de_kernel");
 }
 
 void atender_f_write_de_kernel(t_buffer* un_buffer){
+	log_warning(filesystem_logger, "inicio atender_f_write_de_kernel");
 //	[PID][DIR_FISICA][NRO_BLOQUE]
 	char* nombre_archivo = recibir_string_del_buffer(un_buffer);
 	int pid_process = recibir_int_del_buffer(un_buffer);
@@ -99,6 +106,7 @@ void atender_f_write_de_kernel(t_buffer* un_buffer){
 	// Ahora queda esperar la respuesta de memoria en atender_memoria
 	// y desde fs_memoria se sigue con el procedimiento
 	free(un_buffer);
+	log_warning(filesystem_logger, "fin atender_f_write_de_kernel");
 }
 
 
@@ -106,37 +114,45 @@ void atender_f_write_de_kernel(t_buffer* un_buffer){
 // =========== ENVIAR A KERNEL ===============
 
 void enviar_rta_f_open_a_kernel(t_paquete* un_paquete){
+	log_warning(filesystem_logger, "inicio enviar_rta_f_open_a_kernel");
 	// Se carga todo en la funcion de f_open porque tiene distintos criterios para hacerlo
 	enviar_paquete(un_paquete, fd_kernel);
+	log_warning(filesystem_logger, "fin enviar_rta_f_open_a_kernel");
 }
 
-void 	enviar_rta_f_truncate_a_kernel(int pid_process){
+void enviar_rta_f_truncate_a_kernel(int pid_process){
+	log_warning(filesystem_logger, "inicio enviar_rta_f_truncate_a_kernel");
 	t_paquete* paquete = crear_super_paquete(RESPUESTA_F_TRUNCATE_FK);
 	cargar_string_al_super_paquete(paquete, "Truncate realizado");
 	cargar_int_al_super_paquete(paquete, pid_process);
 	enviar_paquete(paquete, fd_kernel);
 	eliminar_paquete(paquete);
+	log_warning(filesystem_logger, "fin enviar_rta_f_truncate_a_kernel");
 }
 
 
 // =========== ENVIAR A MEMORIA ===============
 
 void enviar_contenido_a_memoria(int pid_process ,int dir_fisica, void* contenido_leido){
+	log_warning(filesystem_logger, "inicio enviar_contenido_a_memoria");
 	t_paquete* paquete = crear_super_paquete(CARGAR_INFO_DE_LECTURA_FM);
 	cargar_int_al_super_paquete(paquete,pid_process);
 	cargar_int_al_super_paquete(paquete,dir_fisica);
 	cargar_choclo_al_super_paquete(paquete, contenido_leido, TAM_BLOQUE);
 	enviar_paquete(paquete, fd_memoria);
 	eliminar_paquete(paquete);
+	log_warning(filesystem_logger, "fin enviar_contenido_a_memoria");
 }
 
 void enviar_solicitud_de_escritura_a_memoria(int pid_process, int dir_fisica, uint32_t bloque_a_escribir_fat){
+	log_warning(filesystem_logger, "inicio enviar_solicitud_de_escritura_a_memoria");
 	t_paquete* paquete = crear_super_paquete(BLOQUE_DE_MEMORIA_A_FILESYSTEM_FM);
 	cargar_int_al_super_paquete(paquete,pid_process);
 	cargar_int_al_super_paquete(paquete,dir_fisica);
 	cargar_int_al_super_paquete(paquete, (int)bloque_a_escribir_fat);
 	enviar_paquete(paquete, fd_memoria);
 	eliminar_paquete(paquete);
+	log_warning(filesystem_logger, "fin enviar_solicitud_de_escritura_a_memoria");
 }
 
 

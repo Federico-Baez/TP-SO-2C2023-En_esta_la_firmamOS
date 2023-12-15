@@ -1382,3 +1382,2117 @@
 [ERROR] 23:09:18:586 [Memoria]/(6319:6330): [DESCONEXION]: KERNEL
 [ERROR] 23:11:26:243 [Memoria]/(6387:6387): No se encontro el path 
 .
+[INFO] 01:11:14:950 [Memoria]/(13341:13341): Se inicia memoria con Paginacion.
+
+[INFO] 01:11:14:950 [Memoria]/(13341:13341): Algoritmo de reemplazo a usar: FIFO
+
+[INFO] 01:11:14:951 [Memoria]/(13341:13341): Iniciando servidor Memoria
+[INFO] 01:11:34:702 [Memoria]/(13341:13341): Cliente conectado a Memoria
+[INFO] 01:11:34:702 [Memoria]/(13341:13341): [THREAD] Creo hilo para atender
+[INFO] 01:11:34:702 [Memoria]/(13341:13353): !!!!! FILESYSTEM CONECTADO !!!!!
+[INFO] 01:11:57:350 [Memoria]/(13341:13341): Cliente conectado a Memoria
+[INFO] 01:11:57:351 [Memoria]/(13341:13341): [THREAD] Creo hilo para atender
+[INFO] 01:11:57:351 [Memoria]/(13341:13366): !!!!! CPU CONECTADO !!!!!
+[INFO] 01:12:09:426 [Memoria]/(13341:13341): Cliente conectado a Memoria
+[INFO] 01:12:09:426 [Memoria]/(13341:13341): [THREAD] Creo hilo para atender
+[INFO] 01:12:09:427 [Memoria]/(13341:13374): !!!!! KERNEL CONECTADO !!!!!
+[INFO] 01:12:31:169 [Memoria]/(13341:13374): [Kernel] -> Peticion de creacion de proceso nuevo
+[INFO] 01:12:31:169 [Memoria]/(13341:13374): Intruccion: [SET AX 1]
+[INFO] 01:12:31:169 [Memoria]/(13341:13374): Intruccion: [SET BX 1]
+[INFO] 01:12:31:169 [Memoria]/(13341:13374): Intruccion: [SLEEP 10]
+[INFO] 01:12:31:169 [Memoria]/(13341:13374): Intruccion: [SUM AX BX]
+[INFO] 01:12:31:169 [Memoria]/(13341:13374): Intruccion: [SUB AX BX]
+[INFO] 01:12:31:169 [Memoria]/(13341:13374): Intruccion: [EXIT]
+[INFO] 01:12:31:169 [Memoria]/(13341:13374): Intruccion: [WAIT RECURSO_1]
+[INFO] 01:12:31:169 [Memoria]/(13341:13374): Intruccion: [SIGNAL RECURSO_1]
+[INFO] 01:12:31:169 [Memoria]/(13341:13374): Intruccion: [F_OPEN ARCHIVO W]
+[INFO] 01:12:31:169 [Memoria]/(13341:13374): Intruccion: [F_TRUNCATE ARCHIVO 64]
+[INFO] 01:12:31:169 [Memoria]/(13341:13374): Intruccion: [F_SEEK ARCHIVO 8]
+[INFO] 01:12:31:169 [Memoria]/(13341:13374): Intruccion: [F_WRITE ARCHIVO 0]
+[INFO] 01:12:31:169 [Memoria]/(13341:13374): Intruccion: [F_READ ARCHIVO 0]
+[INFO] 01:12:31:169 [Memoria]/(13341:13374): Intruccion: [F_CLOSE ARCHIVO]
+[INFO] 01:12:32:184 [Memoria]/(13341:13353): FILESYSTEM => <PID:1> <cant_pag:0> - <cant_bloques:0>
+[WARNING] 01:12:32:184 [Memoria]/(13341:13353): Se Cargaron pos_SWAP en proceso <PID:1>
+[ERROR] 01:12:37:328 [Memoria]/(13341:13374): [DESCONEXION]: KERNEL
+[ERROR] 01:12:37:329 [Memoria]/(13341:13353): [DESCONEXION]: FILESYSTEM
+[ERROR] 01:12:37:329 [Memoria]/(13341:13366): [DESCONEXION]: CPU
+[INFO] 02:05:49:707 [Memoria]/(15456:15456): Se inicia memoria con Paginacion.
+
+[INFO] 02:05:49:707 [Memoria]/(15456:15456): Algoritmo de reemplazo a usar: FIFO
+
+[INFO] 02:05:49:708 [Memoria]/(15456:15456): Iniciando servidor Memoria
+[INFO] 02:05:52:690 [Memoria]/(15456:15456): Cliente conectado a Memoria
+[INFO] 02:05:52:690 [Memoria]/(15456:15456): [THREAD] Creo hilo para atender
+[INFO] 02:05:52:690 [Memoria]/(15456:15458): !!!!! FILESYSTEM CONECTADO !!!!!
+[INFO] 02:05:54:131 [Memoria]/(15456:15456): Cliente conectado a Memoria
+[INFO] 02:05:54:131 [Memoria]/(15456:15456): [THREAD] Creo hilo para atender
+[INFO] 02:05:54:131 [Memoria]/(15456:15465): !!!!! CPU CONECTADO !!!!!
+[INFO] 02:05:55:287 [Memoria]/(15456:15456): Cliente conectado a Memoria
+[INFO] 02:05:55:287 [Memoria]/(15456:15456): [THREAD] Creo hilo para atender
+[INFO] 02:05:55:288 [Memoria]/(15456:15467): !!!!! KERNEL CONECTADO !!!!!
+[INFO] 02:06:03:504 [Memoria]/(15456:15467): [Kernel] -> Peticion de creacion de proceso nuevo
+[INFO] 02:06:03:505 [Memoria]/(15456:15467): Intruccion: [SET AX 1]
+[INFO] 02:06:03:505 [Memoria]/(15456:15467): Intruccion: [SET BX 1]
+[INFO] 02:06:03:505 [Memoria]/(15456:15467): Intruccion: [SLEEP 10]
+[INFO] 02:06:03:505 [Memoria]/(15456:15467): Intruccion: [SUM AX BX]
+[INFO] 02:06:03:505 [Memoria]/(15456:15467): Intruccion: [SUB AX BX]
+[INFO] 02:06:03:505 [Memoria]/(15456:15467): Intruccion: [EXIT]
+[INFO] 02:06:03:505 [Memoria]/(15456:15467): Intruccion: [WAIT RECURSO_1]
+[INFO] 02:06:03:505 [Memoria]/(15456:15467): Intruccion: [SIGNAL RECURSO_1]
+[INFO] 02:06:03:505 [Memoria]/(15456:15467): Intruccion: [F_OPEN ARCHIVO W]
+[INFO] 02:06:03:505 [Memoria]/(15456:15467): Intruccion: [F_TRUNCATE ARCHIVO 64]
+[INFO] 02:06:03:505 [Memoria]/(15456:15467): Intruccion: [F_SEEK ARCHIVO 8]
+[INFO] 02:06:03:505 [Memoria]/(15456:15467): Intruccion: [F_WRITE ARCHIVO 0]
+[INFO] 02:06:03:505 [Memoria]/(15456:15467): Intruccion: [F_READ ARCHIVO 0]
+[INFO] 02:06:03:505 [Memoria]/(15456:15467): Intruccion: [F_CLOSE ARCHIVO]
+[INFO] 02:06:04:547 [Memoria]/(15456:15458): FILESYSTEM => <PID:1> <cant_pag:0> - <cant_bloques:0>
+[WARNING] 02:06:04:547 [Memoria]/(15456:15458): Se Cargaron pos_SWAP en proceso <PID:1>
+[ERROR] 02:06:09:661 [Memoria]/(15456:15467): [DESCONEXION]: KERNEL
+[ERROR] 02:06:09:663 [Memoria]/(15456:15458): [DESCONEXION]: FILESYSTEM
+[ERROR] 02:06:09:663 [Memoria]/(15456:15465): [DESCONEXION]: CPU
+[INFO] 02:10:50:281 [Memoria]/(15889:15889): Se inicia memoria con Paginacion.
+
+[INFO] 02:10:50:282 [Memoria]/(15889:15889): Algoritmo de reemplazo a usar: FIFO
+
+[INFO] 02:10:50:282 [Memoria]/(15889:15889): Iniciando servidor Memoria
+[INFO] 02:10:52:549 [Memoria]/(15889:15889): Cliente conectado a Memoria
+[INFO] 02:10:52:549 [Memoria]/(15889:15889): [THREAD] Creo hilo para atender
+[INFO] 02:10:52:549 [Memoria]/(15889:15893): !!!!! FILESYSTEM CONECTADO !!!!!
+[INFO] 02:10:57:591 [Memoria]/(15889:15889): Cliente conectado a Memoria
+[INFO] 02:10:57:591 [Memoria]/(15889:15889): [THREAD] Creo hilo para atender
+[INFO] 02:10:57:592 [Memoria]/(15889:15898): !!!!! CPU CONECTADO !!!!!
+[INFO] 02:11:01:751 [Memoria]/(15889:15889): Cliente conectado a Memoria
+[INFO] 02:11:01:754 [Memoria]/(15889:15889): [THREAD] Creo hilo para atender
+[INFO] 02:11:01:755 [Memoria]/(15889:15900): !!!!! KERNEL CONECTADO !!!!!
+[INFO] 02:11:23:202 [Memoria]/(15889:15900): [Kernel] -> Peticion de creacion de proceso nuevo
+[INFO] 02:11:23:202 [Memoria]/(15889:15900): Intruccion: [SET AX 1]
+[INFO] 02:11:23:202 [Memoria]/(15889:15900): Intruccion: [SET BX 1]
+[INFO] 02:11:23:202 [Memoria]/(15889:15900): Intruccion: [SLEEP 10]
+[INFO] 02:11:23:202 [Memoria]/(15889:15900): Intruccion: [SUM AX BX]
+[INFO] 02:11:23:202 [Memoria]/(15889:15900): Intruccion: [SUB AX BX]
+[INFO] 02:11:23:202 [Memoria]/(15889:15900): Intruccion: [EXIT]
+[INFO] 02:11:23:202 [Memoria]/(15889:15900): Intruccion: [WAIT RECURSO_1]
+[INFO] 02:11:23:202 [Memoria]/(15889:15900): Intruccion: [SIGNAL RECURSO_1]
+[INFO] 02:11:23:202 [Memoria]/(15889:15900): Intruccion: [F_OPEN ARCHIVO W]
+[INFO] 02:11:23:202 [Memoria]/(15889:15900): Intruccion: [F_TRUNCATE ARCHIVO 64]
+[INFO] 02:11:23:202 [Memoria]/(15889:15900): Intruccion: [F_SEEK ARCHIVO 8]
+[INFO] 02:11:23:202 [Memoria]/(15889:15900): Intruccion: [F_WRITE ARCHIVO 0]
+[INFO] 02:11:23:202 [Memoria]/(15889:15900): Intruccion: [F_READ ARCHIVO 0]
+[INFO] 02:11:23:202 [Memoria]/(15889:15900): Intruccion: [F_CLOSE ARCHIVO]
+[INFO] 02:11:24:211 [Memoria]/(15889:15893): FILESYSTEM => <PID:1> <cant_pag:0> - <cant_bloques:0>
+[WARNING] 02:11:24:211 [Memoria]/(15889:15893): Se Cargaron pos_SWAP en proceso <PID:1>
+[ERROR] 02:11:29:328 [Memoria]/(15889:15900): [DESCONEXION]: KERNEL
+[ERROR] 02:11:29:328 [Memoria]/(15889:15893): [DESCONEXION]: FILESYSTEM
+[ERROR] 02:11:29:329 [Memoria]/(15889:15898): [DESCONEXION]: CPU
+[INFO] 02:13:16:358 [Memoria]/(15889:15889): Cliente conectado a Memoria
+[INFO] 02:13:16:358 [Memoria]/(15889:15889): [THREAD] Creo hilo para atender
+[INFO] 02:13:16:359 [Memoria]/(15889:15930): !!!!! FILESYSTEM CONECTADO !!!!!
+[INFO] 02:13:18:390 [Memoria]/(15889:15889): Cliente conectado a Memoria
+[INFO] 02:13:18:390 [Memoria]/(15889:15889): [THREAD] Creo hilo para atender
+[INFO] 02:13:18:390 [Memoria]/(15889:15937): !!!!! CPU CONECTADO !!!!!
+[INFO] 02:13:19:750 [Memoria]/(15889:15889): Cliente conectado a Memoria
+[INFO] 02:13:19:750 [Memoria]/(15889:15889): [THREAD] Creo hilo para atender
+[INFO] 02:13:19:750 [Memoria]/(15889:15939): !!!!! KERNEL CONECTADO !!!!!
+[INFO] 02:13:29:128 [Memoria]/(15889:15939): [Kernel] -> Peticion de creacion de proceso nuevo
+[INFO] 02:13:29:128 [Memoria]/(15889:15939): Intruccion: [SET AX 1]
+[INFO] 02:13:29:128 [Memoria]/(15889:15939): Intruccion: [SET BX 1]
+[INFO] 02:13:29:128 [Memoria]/(15889:15939): Intruccion: [SLEEP 10]
+[INFO] 02:13:29:128 [Memoria]/(15889:15939): Intruccion: [SUM AX BX]
+[INFO] 02:13:29:128 [Memoria]/(15889:15939): Intruccion: [SUB AX BX]
+[INFO] 02:13:29:128 [Memoria]/(15889:15939): Intruccion: [EXIT]
+[INFO] 02:13:29:128 [Memoria]/(15889:15939): Intruccion: [WAIT RECURSO_1]
+[INFO] 02:13:29:128 [Memoria]/(15889:15939): Intruccion: [SIGNAL RECURSO_1]
+[INFO] 02:13:29:128 [Memoria]/(15889:15939): Intruccion: [F_OPEN ARCHIVO W]
+[INFO] 02:13:29:128 [Memoria]/(15889:15939): Intruccion: [F_TRUNCATE ARCHIVO 64]
+[INFO] 02:13:29:128 [Memoria]/(15889:15939): Intruccion: [F_SEEK ARCHIVO 8]
+[INFO] 02:13:29:128 [Memoria]/(15889:15939): Intruccion: [F_WRITE ARCHIVO 0]
+[INFO] 02:13:29:128 [Memoria]/(15889:15939): Intruccion: [F_READ ARCHIVO 0]
+[INFO] 02:13:29:129 [Memoria]/(15889:15939): Intruccion: [F_CLOSE ARCHIVO]
+[INFO] 02:13:30:136 [Memoria]/(15889:15930): FILESYSTEM => <PID:1> <cant_pag:0> - <cant_bloques:0>
+[WARNING] 02:13:30:137 [Memoria]/(15889:15930): Se Cargaron pos_SWAP en proceso <PID:1>
+[INFO] 02:13:31:135 [Memoria]/(15889:15939): [Kernel] -> Peticion de creacion de proceso nuevo
+[INFO] 02:13:31:135 [Memoria]/(15889:15939): Intruccion: [SET AX 1]
+[INFO] 02:13:31:135 [Memoria]/(15889:15939): Intruccion: [SET BX 1]
+[INFO] 02:13:31:135 [Memoria]/(15889:15939): Intruccion: [SLEEP 10]
+[INFO] 02:13:31:135 [Memoria]/(15889:15939): Intruccion: [SUM AX BX]
+[INFO] 02:13:31:135 [Memoria]/(15889:15939): Intruccion: [SUB AX BX]
+[INFO] 02:13:31:135 [Memoria]/(15889:15939): Intruccion: [EXIT]
+[INFO] 02:13:31:135 [Memoria]/(15889:15939): Intruccion: [WAIT RECURSO_1]
+[INFO] 02:13:31:135 [Memoria]/(15889:15939): Intruccion: [SIGNAL RECURSO_1]
+[INFO] 02:13:31:135 [Memoria]/(15889:15939): Intruccion: [F_OPEN ARCHIVO W]
+[INFO] 02:13:31:135 [Memoria]/(15889:15939): Intruccion: [F_TRUNCATE ARCHIVO 64]
+[INFO] 02:13:31:135 [Memoria]/(15889:15939): Intruccion: [F_SEEK ARCHIVO 8]
+[INFO] 02:13:31:135 [Memoria]/(15889:15939): Intruccion: [F_WRITE ARCHIVO 0]
+[INFO] 02:13:31:135 [Memoria]/(15889:15939): Intruccion: [F_READ ARCHIVO 0]
+[INFO] 02:13:31:135 [Memoria]/(15889:15939): Intruccion: [F_CLOSE ARCHIVO]
+[INFO] 02:13:32:152 [Memoria]/(15889:15930): FILESYSTEM => <PID:2> <cant_pag:0> - <cant_bloques:0>
+[WARNING] 02:13:32:152 [Memoria]/(15889:15930): Se Cargaron pos_SWAP en proceso <PID:2>
+[ERROR] 02:13:38:375 [Memoria]/(15889:15939): [DESCONEXION]: KERNEL
+[ERROR] 02:13:38:376 [Memoria]/(15889:15937): [DESCONEXION]: CPU
+[ERROR] 02:13:38:376 [Memoria]/(15889:15930): [DESCONEXION]: FILESYSTEM
+[INFO] 02:17:00:610 [Memoria]/(16104:16104): Se inicia memoria con Paginacion.
+
+[INFO] 02:17:00:611 [Memoria]/(16104:16104): Algoritmo de reemplazo a usar: FIFO
+
+[INFO] 02:17:00:611 [Memoria]/(16104:16104): Iniciando servidor Memoria
+[INFO] 02:17:02:084 [Memoria]/(16104:16104): Cliente conectado a Memoria
+[INFO] 02:17:02:085 [Memoria]/(16104:16104): [THREAD] Creo hilo para atender
+[INFO] 02:17:02:087 [Memoria]/(16104:16109): !!!!! FILESYSTEM CONECTADO !!!!!
+[INFO] 02:17:04:575 [Memoria]/(16104:16104): Cliente conectado a Memoria
+[INFO] 02:17:04:575 [Memoria]/(16104:16104): [THREAD] Creo hilo para atender
+[INFO] 02:17:04:576 [Memoria]/(16104:16116): !!!!! CPU CONECTADO !!!!!
+[INFO] 02:17:05:586 [Memoria]/(16104:16104): Cliente conectado a Memoria
+[INFO] 02:17:05:586 [Memoria]/(16104:16104): [THREAD] Creo hilo para atender
+[INFO] 02:17:05:587 [Memoria]/(16104:16118): !!!!! KERNEL CONECTADO !!!!!
+[INFO] 02:17:10:939 [Memoria]/(16104:16118): [Kernel] -> Peticion de creacion de proceso nuevo
+[INFO] 02:17:10:939 [Memoria]/(16104:16118): Intruccion: [SET AX 1]
+[INFO] 02:17:10:939 [Memoria]/(16104:16118): Intruccion: [SET BX 1]
+[INFO] 02:17:10:939 [Memoria]/(16104:16118): Intruccion: [SLEEP 10]
+[INFO] 02:17:10:939 [Memoria]/(16104:16118): Intruccion: [SUM AX BX]
+[INFO] 02:17:10:939 [Memoria]/(16104:16118): Intruccion: [SUB AX BX]
+[INFO] 02:17:10:939 [Memoria]/(16104:16118): Intruccion: [EXIT]
+[INFO] 02:17:10:939 [Memoria]/(16104:16118): Intruccion: [WAIT RECURSO_1]
+[INFO] 02:17:10:939 [Memoria]/(16104:16118): Intruccion: [SIGNAL RECURSO_1]
+[INFO] 02:17:10:939 [Memoria]/(16104:16118): Intruccion: [F_OPEN ARCHIVO W]
+[INFO] 02:17:10:939 [Memoria]/(16104:16118): Intruccion: [F_TRUNCATE ARCHIVO 64]
+[INFO] 02:17:10:939 [Memoria]/(16104:16118): Intruccion: [F_SEEK ARCHIVO 8]
+[INFO] 02:17:10:939 [Memoria]/(16104:16118): Intruccion: [F_WRITE ARCHIVO 0]
+[INFO] 02:17:10:939 [Memoria]/(16104:16118): Intruccion: [F_READ ARCHIVO 0]
+[INFO] 02:17:10:939 [Memoria]/(16104:16118): Intruccion: [F_CLOSE ARCHIVO]
+[INFO] 02:17:11:949 [Memoria]/(16104:16109): FILESYSTEM => <PID:1> <cant_pag:0> - <cant_bloques:0>
+[WARNING] 02:17:11:949 [Memoria]/(16104:16109): Se Cargaron pos_SWAP en proceso <PID:1>
+[ERROR] 02:17:17:070 [Memoria]/(16104:16118): [DESCONEXION]: KERNEL
+[ERROR] 02:17:17:071 [Memoria]/(16104:16109): [DESCONEXION]: FILESYSTEM
+[ERROR] 02:17:17:071 [Memoria]/(16104:16116): [DESCONEXION]: CPU
+[INFO] 02:20:07:236 [Memoria]/(16104:16104): Cliente conectado a Memoria
+[INFO] 02:20:07:236 [Memoria]/(16104:16104): [THREAD] Creo hilo para atender
+[INFO] 02:20:07:236 [Memoria]/(16104:16309): !!!!! FILESYSTEM CONECTADO !!!!!
+[INFO] 02:20:14:781 [Memoria]/(16104:16104): Cliente conectado a Memoria
+[INFO] 02:20:14:781 [Memoria]/(16104:16104): [THREAD] Creo hilo para atender
+[INFO] 02:20:14:782 [Memoria]/(16104:16316): !!!!! CPU CONECTADO !!!!!
+[INFO] 02:20:18:158 [Memoria]/(16104:16104): Cliente conectado a Memoria
+[INFO] 02:20:18:158 [Memoria]/(16104:16104): [THREAD] Creo hilo para atender
+[INFO] 02:20:18:159 [Memoria]/(16104:16318): !!!!! KERNEL CONECTADO !!!!!
+[INFO] 02:20:28:936 [Memoria]/(16104:16318): [Kernel] -> Peticion de creacion de proceso nuevo
+[INFO] 02:20:28:936 [Memoria]/(16104:16318): Intruccion: [SET AX 1]
+[INFO] 02:20:28:936 [Memoria]/(16104:16318): Intruccion: [SET BX 1]
+[INFO] 02:20:28:936 [Memoria]/(16104:16318): Intruccion: [SLEEP 10]
+[INFO] 02:20:28:936 [Memoria]/(16104:16318): Intruccion: [SUM AX BX]
+[INFO] 02:20:28:936 [Memoria]/(16104:16318): Intruccion: [SUB AX BX]
+[INFO] 02:20:28:936 [Memoria]/(16104:16318): Intruccion: [EXIT]
+[INFO] 02:20:28:936 [Memoria]/(16104:16318): Intruccion: [WAIT RECURSO_1]
+[INFO] 02:20:28:936 [Memoria]/(16104:16318): Intruccion: [SIGNAL RECURSO_1]
+[INFO] 02:20:28:936 [Memoria]/(16104:16318): Intruccion: [F_OPEN ARCHIVO W]
+[INFO] 02:20:28:936 [Memoria]/(16104:16318): Intruccion: [F_TRUNCATE ARCHIVO 64]
+[INFO] 02:20:28:936 [Memoria]/(16104:16318): Intruccion: [F_SEEK ARCHIVO 8]
+[INFO] 02:20:28:936 [Memoria]/(16104:16318): Intruccion: [F_WRITE ARCHIVO 0]
+[INFO] 02:20:28:936 [Memoria]/(16104:16318): Intruccion: [F_READ ARCHIVO 0]
+[INFO] 02:20:28:936 [Memoria]/(16104:16318): Intruccion: [F_CLOSE ARCHIVO]
+[INFO] 02:20:29:946 [Memoria]/(16104:16309): FILESYSTEM => <PID:1> <cant_pag:0> - <cant_bloques:0>
+[WARNING] 02:20:29:946 [Memoria]/(16104:16309): Se Cargaron pos_SWAP en proceso <PID:1>
+[ERROR] 02:20:35:053 [Memoria]/(16104:16318): [DESCONEXION]: KERNEL
+[ERROR] 02:20:35:056 [Memoria]/(16104:16316): [DESCONEXION]: CPU
+[ERROR] 02:20:35:057 [Memoria]/(16104:16309): [DESCONEXION]: FILESYSTEM
+[INFO] 02:23:12:825 [Memoria]/(16104:16104): Cliente conectado a Memoria
+[INFO] 02:23:12:826 [Memoria]/(16104:16104): [THREAD] Creo hilo para atender
+[INFO] 02:23:12:827 [Memoria]/(16104:16406): !!!!! FILESYSTEM CONECTADO !!!!!
+[INFO] 02:23:14:133 [Memoria]/(16104:16104): Cliente conectado a Memoria
+[INFO] 02:23:14:133 [Memoria]/(16104:16104): [THREAD] Creo hilo para atender
+[INFO] 02:23:14:134 [Memoria]/(16104:16413): !!!!! CPU CONECTADO !!!!!
+[INFO] 02:23:15:543 [Memoria]/(16104:16104): Cliente conectado a Memoria
+[INFO] 02:23:15:543 [Memoria]/(16104:16104): [THREAD] Creo hilo para atender
+[INFO] 02:23:15:544 [Memoria]/(16104:16415): !!!!! KERNEL CONECTADO !!!!!
+[INFO] 02:23:19:686 [Memoria]/(16104:16415): [Kernel] -> Peticion de creacion de proceso nuevo
+[INFO] 02:23:19:686 [Memoria]/(16104:16415): Intruccion: [SET AX 1]
+[INFO] 02:23:19:686 [Memoria]/(16104:16415): Intruccion: [SET BX 1]
+[INFO] 02:23:19:686 [Memoria]/(16104:16415): Intruccion: [SLEEP 10]
+[INFO] 02:23:19:686 [Memoria]/(16104:16415): Intruccion: [SUM AX BX]
+[INFO] 02:23:19:686 [Memoria]/(16104:16415): Intruccion: [SUB AX BX]
+[INFO] 02:23:19:686 [Memoria]/(16104:16415): Intruccion: [EXIT]
+[INFO] 02:23:19:686 [Memoria]/(16104:16415): Intruccion: [WAIT RECURSO_1]
+[INFO] 02:23:19:686 [Memoria]/(16104:16415): Intruccion: [SIGNAL RECURSO_1]
+[INFO] 02:23:19:686 [Memoria]/(16104:16415): Intruccion: [F_OPEN ARCHIVO W]
+[INFO] 02:23:19:686 [Memoria]/(16104:16415): Intruccion: [F_TRUNCATE ARCHIVO 64]
+[INFO] 02:23:19:686 [Memoria]/(16104:16415): Intruccion: [F_SEEK ARCHIVO 8]
+[INFO] 02:23:19:686 [Memoria]/(16104:16415): Intruccion: [F_WRITE ARCHIVO 0]
+[INFO] 02:23:19:686 [Memoria]/(16104:16415): Intruccion: [F_READ ARCHIVO 0]
+[INFO] 02:23:19:686 [Memoria]/(16104:16415): Intruccion: [F_CLOSE ARCHIVO]
+[INFO] 02:23:20:695 [Memoria]/(16104:16406): FILESYSTEM => <PID:1> <cant_pag:0> - <cant_bloques:0>
+[WARNING] 02:23:20:695 [Memoria]/(16104:16406): Se Cargaron pos_SWAP en proceso <PID:1>
+[WARNING] 02:23:38:713 [Memoria]/(16104:16415): :::::> DELETE <PID:1>
+[ERROR] 02:23:38:715 [Memoria]/(16104:16406): [DESCONEXION]: FILESYSTEM
+[ERROR] 02:23:38:716 [Memoria]/(16104:16413): [DESCONEXION]: CPU
+[ERROR] 02:23:39:723 [Memoria]/(16104:16415): [DESCONEXION]: KERNEL
+[INFO] 02:32:31:005 [Memoria]/(16104:16104): Cliente conectado a Memoria
+[INFO] 02:32:31:005 [Memoria]/(16104:16104): [THREAD] Creo hilo para atender
+[INFO] 02:32:31:006 [Memoria]/(16104:16538): !!!!! FILESYSTEM CONECTADO !!!!!
+[INFO] 02:32:32:472 [Memoria]/(16104:16104): Cliente conectado a Memoria
+[INFO] 02:32:32:472 [Memoria]/(16104:16104): [THREAD] Creo hilo para atender
+[INFO] 02:32:32:473 [Memoria]/(16104:16545): !!!!! CPU CONECTADO !!!!!
+[INFO] 02:32:53:518 [Memoria]/(16104:16104): Cliente conectado a Memoria
+[INFO] 02:32:53:518 [Memoria]/(16104:16104): [THREAD] Creo hilo para atender
+[INFO] 02:32:53:520 [Memoria]/(16104:16559): !!!!! KERNEL CONECTADO !!!!!
+[INFO] 02:33:22:265 [Memoria]/(16104:16559): [Kernel] -> Peticion de creacion de proceso nuevo
+[INFO] 02:33:22:265 [Memoria]/(16104:16559): Intruccion: [SET AX 1]
+[INFO] 02:33:22:265 [Memoria]/(16104:16559): Intruccion: [SET BX 1]
+[INFO] 02:33:22:265 [Memoria]/(16104:16559): Intruccion: [SLEEP 10]
+[INFO] 02:33:22:265 [Memoria]/(16104:16559): Intruccion: [SUM AX BX]
+[INFO] 02:33:22:265 [Memoria]/(16104:16559): Intruccion: [SUB AX BX]
+[INFO] 02:33:22:265 [Memoria]/(16104:16559): Intruccion: [EXIT]
+[INFO] 02:33:22:265 [Memoria]/(16104:16559): Intruccion: [WAIT RECURSO_1]
+[INFO] 02:33:22:265 [Memoria]/(16104:16559): Intruccion: [SIGNAL RECURSO_1]
+[INFO] 02:33:22:266 [Memoria]/(16104:16559): Intruccion: [F_OPEN ARCHIVO W]
+[INFO] 02:33:22:266 [Memoria]/(16104:16559): Intruccion: [F_TRUNCATE ARCHIVO 64]
+[INFO] 02:33:22:266 [Memoria]/(16104:16559): Intruccion: [F_SEEK ARCHIVO 8]
+[INFO] 02:33:22:266 [Memoria]/(16104:16559): Intruccion: [F_WRITE ARCHIVO 0]
+[INFO] 02:33:22:266 [Memoria]/(16104:16559): Intruccion: [F_READ ARCHIVO 0]
+[INFO] 02:33:22:266 [Memoria]/(16104:16559): Intruccion: [F_CLOSE ARCHIVO]
+[INFO] 02:33:23:276 [Memoria]/(16104:16538): FILESYSTEM => <PID:1> <cant_pag:0> - <cant_bloques:0>
+[WARNING] 02:33:23:277 [Memoria]/(16104:16538): Se Cargaron pos_SWAP en proceso <PID:1>
+[WARNING] 02:33:41:365 [Memoria]/(16104:16559): :::::> DELETE <PID:1>
+[INFO] 02:36:31:195 [Memoria]/(16104:16559): [Kernel] -> Peticion de creacion de proceso nuevo
+[INFO] 02:36:31:195 [Memoria]/(16104:16559): Intruccion: [SET AX 1]
+[INFO] 02:36:31:195 [Memoria]/(16104:16559): Intruccion: [SET BX 1]
+[INFO] 02:36:31:195 [Memoria]/(16104:16559): Intruccion: [SLEEP 10]
+[INFO] 02:36:31:195 [Memoria]/(16104:16559): Intruccion: [SUM AX BX]
+[INFO] 02:36:31:195 [Memoria]/(16104:16559): Intruccion: [SUB AX BX]
+[INFO] 02:36:31:195 [Memoria]/(16104:16559): Intruccion: [EXIT]
+[INFO] 02:36:31:195 [Memoria]/(16104:16559): Intruccion: [WAIT RECURSO_1]
+[INFO] 02:36:31:195 [Memoria]/(16104:16559): Intruccion: [SIGNAL RECURSO_1]
+[INFO] 02:36:31:195 [Memoria]/(16104:16559): Intruccion: [F_OPEN ARCHIVO W]
+[INFO] 02:36:31:195 [Memoria]/(16104:16559): Intruccion: [F_TRUNCATE ARCHIVO 64]
+[INFO] 02:36:31:195 [Memoria]/(16104:16559): Intruccion: [F_SEEK ARCHIVO 8]
+[INFO] 02:36:31:196 [Memoria]/(16104:16559): Intruccion: [F_WRITE ARCHIVO 0]
+[INFO] 02:36:31:196 [Memoria]/(16104:16559): Intruccion: [F_READ ARCHIVO 0]
+[INFO] 02:36:31:196 [Memoria]/(16104:16559): Intruccion: [F_CLOSE ARCHIVO]
+[INFO] 02:36:37:205 [Memoria]/(16104:16538): FILESYSTEM => <PID:2> <cant_pag:2> - <cant_bloques:2>
+[WARNING] 02:36:37:205 [Memoria]/(16104:16538): Se Cargaron pos_SWAP en proceso <PID:2>
+[WARNING] 02:36:50:217 [Memoria]/(16104:16559): :::::> DELETE <PID:2>
+[ERROR] 02:36:50:336 [Memoria]/(16104:16538): [DESCONEXION]: FILESYSTEM
+[ERROR] 02:36:50:337 [Memoria]/(16104:16545): [DESCONEXION]: CPU
+[ERROR] 02:36:51:223 [Memoria]/(16104:16559): [DESCONEXION]: KERNEL
+[INFO] 02:39:45:490 [Memoria]/(16104:16104): Cliente conectado a Memoria
+[INFO] 02:39:45:491 [Memoria]/(16104:16104): [THREAD] Creo hilo para atender
+[INFO] 02:39:45:491 [Memoria]/(16104:16625): !!!!! FILESYSTEM CONECTADO !!!!!
+[INFO] 02:39:47:278 [Memoria]/(16104:16104): Cliente conectado a Memoria
+[INFO] 02:39:47:279 [Memoria]/(16104:16104): [THREAD] Creo hilo para atender
+[INFO] 02:39:47:279 [Memoria]/(16104:16630): !!!!! CPU CONECTADO !!!!!
+[INFO] 02:45:27:141 [Memoria]/(16753:16753): Se inicia memoria con Paginacion.
+
+[INFO] 02:45:27:141 [Memoria]/(16753:16753): Algoritmo de reemplazo a usar: FIFO
+
+[INFO] 02:45:27:141 [Memoria]/(16753:16753): Iniciando servidor Memoria
+[INFO] 02:45:32:742 [Memoria]/(16753:16753): Cliente conectado a Memoria
+[INFO] 02:45:32:742 [Memoria]/(16753:16753): [THREAD] Creo hilo para atender
+[INFO] 02:45:32:744 [Memoria]/(16753:16755): !!!!! FILESYSTEM CONECTADO !!!!!
+[INFO] 02:45:34:829 [Memoria]/(16753:16753): Cliente conectado a Memoria
+[INFO] 02:45:34:830 [Memoria]/(16753:16753): [THREAD] Creo hilo para atender
+[INFO] 02:45:34:830 [Memoria]/(16753:16762): !!!!! CPU CONECTADO !!!!!
+[INFO] 02:45:37:906 [Memoria]/(16753:16753): Cliente conectado a Memoria
+[INFO] 02:45:37:907 [Memoria]/(16753:16753): [THREAD] Creo hilo para atender
+[INFO] 02:45:37:908 [Memoria]/(16753:16764): !!!!! KERNEL CONECTADO !!!!!
+[INFO] 02:46:40:339 [Memoria]/(16753:16764): [Kernel] -> Peticion de creacion de proceso nuevo
+[INFO] 02:46:42:341 [Memoria]/(16753:16764): [Kernel] -> Peticion de creacion de proceso nuevo
+[ERROR] 02:46:42:341 [Memoria]/(16753:16762): PID<1> - Nro de Instruccion <0> NO VALIDA
+[INFO] 02:47:33:320 [Memoria]/(16792:16792): Se inicia memoria con Paginacion.
+
+[INFO] 02:47:33:320 [Memoria]/(16792:16792): Algoritmo de reemplazo a usar: FIFO
+
+[INFO] 02:47:33:320 [Memoria]/(16792:16792): Iniciando servidor Memoria
+[INFO] 02:47:34:395 [Memoria]/(16792:16792): Cliente conectado a Memoria
+[INFO] 02:47:34:399 [Memoria]/(16792:16792): [THREAD] Creo hilo para atender
+[INFO] 02:47:34:400 [Memoria]/(16792:16796): !!!!! FILESYSTEM CONECTADO !!!!!
+[INFO] 02:47:36:581 [Memoria]/(16792:16792): Cliente conectado a Memoria
+[INFO] 02:47:36:581 [Memoria]/(16792:16792): [THREAD] Creo hilo para atender
+[INFO] 02:47:36:581 [Memoria]/(16792:16801): !!!!! CPU CONECTADO !!!!!
+[INFO] 02:47:45:792 [Memoria]/(16792:16792): Cliente conectado a Memoria
+[INFO] 02:47:45:792 [Memoria]/(16792:16792): [THREAD] Creo hilo para atender
+[INFO] 02:47:45:793 [Memoria]/(16792:16803): !!!!! KERNEL CONECTADO !!!!!
+[INFO] 02:48:13:192 [Memoria]/(16792:16803): [Kernel] -> Peticion de creacion de proceso nuevo
+[INFO] 02:48:15:200 [Memoria]/(16792:16803): [Kernel] -> Peticion de creacion de proceso nuevo
+[ERROR] 02:48:15:202 [Memoria]/(16792:16801): PID<1> - Nro de Instruccion <0> NO VALIDA
+[INFO] 02:51:08:600 [Memoria]/(16863:16863): Se inicia memoria con Paginacion.
+
+[INFO] 02:51:08:600 [Memoria]/(16863:16863): Algoritmo de reemplazo a usar: FIFO
+
+[INFO] 02:51:08:600 [Memoria]/(16863:16863): Iniciando servidor Memoria
+[INFO] 02:51:09:997 [Memoria]/(16863:16863): Cliente conectado a Memoria
+[INFO] 02:51:09:997 [Memoria]/(16863:16863): [THREAD] Creo hilo para atender
+[INFO] 02:51:10:001 [Memoria]/(16863:16865): !!!!! FILESYSTEM CONECTADO !!!!!
+[INFO] 02:51:11:289 [Memoria]/(16863:16863): Cliente conectado a Memoria
+[INFO] 02:51:11:289 [Memoria]/(16863:16863): [THREAD] Creo hilo para atender
+[INFO] 02:51:11:289 [Memoria]/(16863:16872): !!!!! CPU CONECTADO !!!!!
+[INFO] 02:51:12:262 [Memoria]/(16863:16863): Cliente conectado a Memoria
+[INFO] 02:51:12:263 [Memoria]/(16863:16874): !!!!! KERNEL CONECTADO !!!!!
+[INFO] 02:51:12:264 [Memoria]/(16863:16863): [THREAD] Creo hilo para atender
+[INFO] 02:51:47:800 [Memoria]/(16863:16874): [Kernel] -> Peticion de creacion de proceso nuevo
+[INFO] 02:51:49:805 [Memoria]/(16863:16874): [Kernel] -> Peticion de creacion de proceso nuevo
+[ERROR] 02:51:49:806 [Memoria]/(16863:16872): PID<1> - Nro de Instruccion <0> NO VALIDA
+[INFO] 02:52:02:841 [Memoria]/(16895:16895): Se inicia memoria con Paginacion.
+
+[INFO] 02:52:02:841 [Memoria]/(16895:16895): Algoritmo de reemplazo a usar: FIFO
+
+[INFO] 02:52:02:841 [Memoria]/(16895:16895): Iniciando servidor Memoria
+[INFO] 02:52:04:281 [Memoria]/(16895:16895): Cliente conectado a Memoria
+[INFO] 02:52:04:282 [Memoria]/(16895:16895): [THREAD] Creo hilo para atender
+[INFO] 02:52:04:283 [Memoria]/(16895:16897): !!!!! FILESYSTEM CONECTADO !!!!!
+[INFO] 02:52:23:532 [Memoria]/(16895:16895): Cliente conectado a Memoria
+[INFO] 02:52:23:532 [Memoria]/(16895:16895): [THREAD] Creo hilo para atender
+[INFO] 02:52:23:533 [Memoria]/(16895:16926): !!!!! CPU CONECTADO !!!!!
+[INFO] 02:52:24:696 [Memoria]/(16895:16895): Cliente conectado a Memoria
+[INFO] 02:52:24:696 [Memoria]/(16895:16895): [THREAD] Creo hilo para atender
+[INFO] 02:52:24:697 [Memoria]/(16895:16928): !!!!! KERNEL CONECTADO !!!!!
+[INFO] 02:52:49:676 [Memoria]/(16895:16928): [Kernel] -> Peticion de creacion de proceso nuevo
+[INFO] 02:52:51:677 [Memoria]/(16895:16928): [Kernel] -> Peticion de creacion de proceso nuevo
+[ERROR] 02:52:51:678 [Memoria]/(16895:16926): PID<1> - Nro de Instruccion <0> NO VALIDA
+[INFO] 02:54:50:396 [Memoria]/(16959:16959): Se inicia memoria con Paginacion.
+
+[INFO] 02:54:50:396 [Memoria]/(16959:16959): Algoritmo de reemplazo a usar: FIFO
+
+[INFO] 02:54:50:397 [Memoria]/(16959:16959): Iniciando servidor Memoria
+[INFO] 02:54:52:463 [Memoria]/(16959:16959): Cliente conectado a Memoria
+[INFO] 02:54:52:463 [Memoria]/(16959:16959): [THREAD] Creo hilo para atender
+[INFO] 02:54:52:464 [Memoria]/(16959:16961): !!!!! FILESYSTEM CONECTADO !!!!!
+[INFO] 02:54:53:625 [Memoria]/(16959:16959): Cliente conectado a Memoria
+[INFO] 02:54:53:625 [Memoria]/(16959:16959): [THREAD] Creo hilo para atender
+[INFO] 02:54:53:626 [Memoria]/(16959:16968): !!!!! CPU CONECTADO !!!!!
+[INFO] 02:54:55:015 [Memoria]/(16959:16959): Cliente conectado a Memoria
+[INFO] 02:54:55:015 [Memoria]/(16959:16959): [THREAD] Creo hilo para atender
+[INFO] 02:54:55:015 [Memoria]/(16959:16970): !!!!! KERNEL CONECTADO !!!!!
+[INFO] 02:55:18:010 [Memoria]/(16959:16970): [Kernel] -> Peticion de creacion de proceso nuevo
+[INFO] 02:55:20:075 [Memoria]/(16959:16970): [Kernel] -> Peticion de creacion de proceso nuevo
+[ERROR] 02:55:20:076 [Memoria]/(16959:16968): PID<1> - Nro de Instruccion <0> NO VALIDA
+[INFO] 02:56:04:360 [Memoria]/(16997:16997): Se inicia memoria con Paginacion.
+
+[INFO] 02:56:04:360 [Memoria]/(16997:16997): Algoritmo de reemplazo a usar: FIFO
+
+[INFO] 02:56:04:360 [Memoria]/(16997:16997): Iniciando servidor Memoria
+[INFO] 02:56:05:574 [Memoria]/(16997:16997): Cliente conectado a Memoria
+[INFO] 02:56:05:575 [Memoria]/(16997:16997): [THREAD] Creo hilo para atender
+[INFO] 02:56:05:575 [Memoria]/(16997:17001): !!!!! FILESYSTEM CONECTADO !!!!!
+[INFO] 02:56:06:767 [Memoria]/(16997:16997): Cliente conectado a Memoria
+[INFO] 02:56:06:767 [Memoria]/(16997:16997): [THREAD] Creo hilo para atender
+[INFO] 02:56:06:768 [Memoria]/(16997:17006): !!!!! CPU CONECTADO !!!!!
+[INFO] 02:56:08:363 [Memoria]/(16997:16997): Cliente conectado a Memoria
+[INFO] 02:56:08:367 [Memoria]/(16997:16997): [THREAD] Creo hilo para atender
+[INFO] 02:56:08:367 [Memoria]/(16997:17008): !!!!! KERNEL CONECTADO !!!!!
+[INFO] 02:56:38:128 [Memoria]/(16997:17008): [Kernel] -> Peticion de creacion de proceso nuevo
+[INFO] 02:56:38:128 [Memoria]/(16997:17008): Intruccion: [SET AX 1]
+[INFO] 02:56:38:128 [Memoria]/(16997:17008): Intruccion: [SET BX 1]
+[INFO] 02:56:38:128 [Memoria]/(16997:17008): Intruccion: [SUM AX BX]
+[INFO] 02:56:38:128 [Memoria]/(16997:17008): Intruccion: [SUM AX BX]
+[INFO] 02:56:38:128 [Memoria]/(16997:17008): Intruccion: [SUM AX BX]
+[INFO] 02:56:38:128 [Memoria]/(16997:17008): Intruccion: [SUM AX BX]
+[INFO] 02:56:38:128 [Memoria]/(16997:17008): Intruccion: [SUM AX BX]
+[INFO] 02:56:38:128 [Memoria]/(16997:17008): Intruccion: [SUM AX BX]
+[INFO] 02:56:38:128 [Memoria]/(16997:17008): Intruccion: [SUM AX BX]
+[INFO] 02:56:38:128 [Memoria]/(16997:17008): Intruccion: [SUM AX BX]
+[INFO] 02:56:38:128 [Memoria]/(16997:17008): Intruccion: [SUM AX BX]
+[INFO] 02:56:38:128 [Memoria]/(16997:17008): Intruccion: [SUM AX BX]
+[INFO] 02:56:38:128 [Memoria]/(16997:17008): Intruccion: [SET CX 1]
+[INFO] 02:56:38:128 [Memoria]/(16997:17008): Intruccion: [SET DX 1]
+[INFO] 02:56:38:128 [Memoria]/(16997:17008): Intruccion: [SUM CX DX]
+[INFO] 02:56:38:128 [Memoria]/(16997:17008): Intruccion: [SUM CX DX]
+[INFO] 02:56:38:128 [Memoria]/(16997:17008): Intruccion: [SUM CX DX]
+[INFO] 02:56:38:128 [Memoria]/(16997:17008): Intruccion: [SUM CX DX]
+[INFO] 02:56:38:128 [Memoria]/(16997:17008): Intruccion: [SUM CX DX]
+[INFO] 02:56:38:128 [Memoria]/(16997:17008): Intruccion: [SUM CX DX]
+[INFO] 02:56:38:128 [Memoria]/(16997:17008): Intruccion: [SUM CX DX]
+[INFO] 02:56:38:128 [Memoria]/(16997:17008): Intruccion: [SUM CX DX]
+[INFO] 02:56:38:128 [Memoria]/(16997:17008): Intruccion: [SUM CX DX]
+[INFO] 02:56:38:128 [Memoria]/(16997:17008): Intruccion: [SUM CX DX]
+[INFO] 02:56:38:128 [Memoria]/(16997:17008): Intruccion: [SUM BX DX]
+[INFO] 02:56:38:128 [Memoria]/(16997:17008): Intruccion: [SUM BX DX]
+[INFO] 02:56:38:128 [Memoria]/(16997:17008): Intruccion: [SUM BX DX]
+[INFO] 02:56:38:128 [Memoria]/(16997:17008): Intruccion: [SUM BX DX]
+[INFO] 02:56:38:128 [Memoria]/(16997:17008): Intruccion: [SUM BX DX]
+[INFO] 02:56:38:128 [Memoria]/(16997:17008): Intruccion: [SUM BX DX]
+[INFO] 02:56:38:128 [Memoria]/(16997:17008): Intruccion: [SUM BX DX]
+[INFO] 02:56:38:128 [Memoria]/(16997:17008): Intruccion: [SUM BX DX]
+[INFO] 02:56:38:128 [Memoria]/(16997:17008): Intruccion: [SUM BX DX]
+[INFO] 02:56:38:128 [Memoria]/(16997:17008): Intruccion: [SUM BX DX]
+[INFO] 02:56:38:128 [Memoria]/(16997:17008): Intruccion: [EXIT]
+[INFO] 02:56:40:132 [Memoria]/(16997:17008): [Kernel] -> Peticion de creacion de proceso nuevo
+[INFO] 02:56:40:132 [Memoria]/(16997:17008): Intruccion: [SET AX 1]
+[INFO] 02:56:40:132 [Memoria]/(16997:17008): Intruccion: [SET BX 1]
+[INFO] 02:56:40:132 [Memoria]/(16997:17008): Intruccion: [SET CX 1]
+[INFO] 02:56:40:132 [Memoria]/(16997:17008): Intruccion: [SET DX 1]
+[INFO] 02:56:40:132 [Memoria]/(16997:17008): Intruccion: [SUM AX BX]
+[INFO] 02:56:40:132 [Memoria]/(16997:17008): Intruccion: [SUM CX DX]
+[INFO] 02:56:40:132 [Memoria]/(16997:17008): Intruccion: [SUM AX BX]
+[INFO] 02:56:40:132 [Memoria]/(16997:17008): Intruccion: [SUM CX DX]
+[INFO] 02:56:40:132 [Memoria]/(16997:17008): Intruccion: [SUM AX BX]
+[INFO] 02:56:40:132 [Memoria]/(16997:17008): Intruccion: [SUM CX DX]
+[INFO] 02:56:40:132 [Memoria]/(16997:17008): Intruccion: [SUM AX BX]
+[INFO] 02:56:40:132 [Memoria]/(16997:17008): Intruccion: [SUM CX DX]
+[INFO] 02:56:40:132 [Memoria]/(16997:17008): Intruccion: [SUM AX BX]
+[INFO] 02:56:40:132 [Memoria]/(16997:17008): Intruccion: [SUM CX DX]
+[INFO] 02:56:40:132 [Memoria]/(16997:17008): Intruccion: [SUM AX BX]
+[INFO] 02:56:40:132 [Memoria]/(16997:17008): Intruccion: [SUM CX DX]
+[INFO] 02:56:40:132 [Memoria]/(16997:17008): Intruccion: [SUM AX BX]
+[INFO] 02:56:40:132 [Memoria]/(16997:17008): Intruccion: [SUM CX DX]
+[INFO] 02:56:40:132 [Memoria]/(16997:17008): Intruccion: [EXIT]
+[INFO] 02:56:42:134 [Memoria]/(16997:17008): [Kernel] -> Peticion de creacion de proceso nuevo
+[INFO] 02:56:42:134 [Memoria]/(16997:17008): Intruccion: [SET AX 1]
+[INFO] 02:56:42:134 [Memoria]/(16997:17008): Intruccion: [SET BX 1]
+[INFO] 02:56:42:134 [Memoria]/(16997:17008): Intruccion: [SET CX 1]
+[INFO] 02:56:42:134 [Memoria]/(16997:17008): Intruccion: [SET DX 1]
+[INFO] 02:56:42:134 [Memoria]/(16997:17008): Intruccion: [SUM AX BX]
+[INFO] 02:56:42:134 [Memoria]/(16997:17008): Intruccion: [SUM CX DX]
+[INFO] 02:56:42:135 [Memoria]/(16997:17008): Intruccion: [EXIT]
+[INFO] 02:56:44:136 [Memoria]/(16997:17001): FILESYSTEM => <PID:1> <cant_pag:2> - <cant_bloques:2>
+[WARNING] 02:56:44:136 [Memoria]/(16997:17001): Se Cargaron pos_SWAP en proceso <PID:1>
+[INFO] 02:56:49:149 [Memoria]/(16997:17001): FILESYSTEM => <PID:2> <cant_pag:2> - <cant_bloques:2>
+[WARNING] 02:56:49:149 [Memoria]/(16997:17001): Se Cargaron pos_SWAP en proceso <PID:2>
+[INFO] 02:56:54:151 [Memoria]/(16997:17001): FILESYSTEM => <PID:3> <cant_pag:2> - <cant_bloques:2>
+[WARNING] 02:56:54:151 [Memoria]/(16997:17001): Se Cargaron pos_SWAP en proceso <PID:3>
+[WARNING] 02:57:16:326 [Memoria]/(16997:17008): :::::> DELETE <PID:1>
+[ERROR] 02:57:16:435 [Memoria]/(16997:17001): [DESCONEXION]: FILESYSTEM
+[ERROR] 02:57:16:451 [Memoria]/(16997:17006): [DESCONEXION]: CPU
+[ERROR] 02:57:17:327 [Memoria]/(16997:17008): [DESCONEXION]: KERNEL
+[INFO] 02:59:13:085 [Memoria]/(16997:16997): Cliente conectado a Memoria
+[INFO] 02:59:13:085 [Memoria]/(16997:16997): [THREAD] Creo hilo para atender
+[INFO] 02:59:13:086 [Memoria]/(16997:17101): !!!!! FILESYSTEM CONECTADO !!!!!
+[INFO] 02:59:14:551 [Memoria]/(16997:16997): Cliente conectado a Memoria
+[INFO] 02:59:14:551 [Memoria]/(16997:16997): [THREAD] Creo hilo para atender
+[INFO] 02:59:14:552 [Memoria]/(16997:17108): !!!!! CPU CONECTADO !!!!!
+[INFO] 02:59:15:841 [Memoria]/(16997:16997): Cliente conectado a Memoria
+[INFO] 02:59:15:841 [Memoria]/(16997:16997): [THREAD] Creo hilo para atender
+[INFO] 02:59:15:842 [Memoria]/(16997:17110): !!!!! KERNEL CONECTADO !!!!!
+[INFO] 02:59:25:917 [Memoria]/(16997:17110): [Kernel] -> Peticion de creacion de proceso nuevo
+[INFO] 02:59:25:917 [Memoria]/(16997:17110): Intruccion: [SET AX 1]
+[INFO] 02:59:25:917 [Memoria]/(16997:17110): Intruccion: [SET BX 1]
+[INFO] 02:59:25:917 [Memoria]/(16997:17110): Intruccion: [SUM AX BX]
+[INFO] 02:59:25:917 [Memoria]/(16997:17110): Intruccion: [SUM AX BX]
+[INFO] 02:59:25:917 [Memoria]/(16997:17110): Intruccion: [SUM AX BX]
+[INFO] 02:59:25:917 [Memoria]/(16997:17110): Intruccion: [SUM AX BX]
+[INFO] 02:59:25:917 [Memoria]/(16997:17110): Intruccion: [SUM AX BX]
+[INFO] 02:59:25:917 [Memoria]/(16997:17110): Intruccion: [SUM AX BX]
+[INFO] 02:59:25:917 [Memoria]/(16997:17110): Intruccion: [SUM AX BX]
+[INFO] 02:59:25:917 [Memoria]/(16997:17110): Intruccion: [SUM AX BX]
+[INFO] 02:59:25:917 [Memoria]/(16997:17110): Intruccion: [SUM AX BX]
+[INFO] 02:59:25:917 [Memoria]/(16997:17110): Intruccion: [SUM AX BX]
+[INFO] 02:59:25:917 [Memoria]/(16997:17110): Intruccion: [SET CX 1]
+[INFO] 02:59:25:917 [Memoria]/(16997:17110): Intruccion: [SET DX 1]
+[INFO] 02:59:25:917 [Memoria]/(16997:17110): Intruccion: [SUM CX DX]
+[INFO] 02:59:25:917 [Memoria]/(16997:17110): Intruccion: [SUM CX DX]
+[INFO] 02:59:25:917 [Memoria]/(16997:17110): Intruccion: [SUM CX DX]
+[INFO] 02:59:25:917 [Memoria]/(16997:17110): Intruccion: [SUM CX DX]
+[INFO] 02:59:25:917 [Memoria]/(16997:17110): Intruccion: [SUM CX DX]
+[INFO] 02:59:25:917 [Memoria]/(16997:17110): Intruccion: [SUM CX DX]
+[INFO] 02:59:25:917 [Memoria]/(16997:17110): Intruccion: [SUM CX DX]
+[INFO] 02:59:25:917 [Memoria]/(16997:17110): Intruccion: [SUM CX DX]
+[INFO] 02:59:25:917 [Memoria]/(16997:17110): Intruccion: [SUM CX DX]
+[INFO] 02:59:25:917 [Memoria]/(16997:17110): Intruccion: [SUM CX DX]
+[INFO] 02:59:25:917 [Memoria]/(16997:17110): Intruccion: [SUM BX DX]
+[INFO] 02:59:25:917 [Memoria]/(16997:17110): Intruccion: [SUM BX DX]
+[INFO] 02:59:25:917 [Memoria]/(16997:17110): Intruccion: [SUM BX DX]
+[INFO] 02:59:25:917 [Memoria]/(16997:17110): Intruccion: [SUM BX DX]
+[INFO] 02:59:25:917 [Memoria]/(16997:17110): Intruccion: [SUM BX DX]
+[INFO] 02:59:25:917 [Memoria]/(16997:17110): Intruccion: [SUM BX DX]
+[INFO] 02:59:25:917 [Memoria]/(16997:17110): Intruccion: [SUM BX DX]
+[INFO] 02:59:25:917 [Memoria]/(16997:17110): Intruccion: [SUM BX DX]
+[INFO] 02:59:25:917 [Memoria]/(16997:17110): Intruccion: [SUM BX DX]
+[INFO] 02:59:25:917 [Memoria]/(16997:17110): Intruccion: [SUM BX DX]
+[INFO] 02:59:25:917 [Memoria]/(16997:17110): Intruccion: [EXIT]
+[INFO] 02:59:31:933 [Memoria]/(16997:17101): FILESYSTEM => <PID:1> <cant_pag:2> - <cant_bloques:2>
+[WARNING] 02:59:31:933 [Memoria]/(16997:17101): Se Cargaron pos_SWAP en proceso <PID:1>
+[WARNING] 03:00:04:004 [Memoria]/(16997:17110): :::::> DELETE <PID:1>
+[ERROR] 03:00:04:104 [Memoria]/(16997:17101): [DESCONEXION]: FILESYSTEM
+[ERROR] 03:00:04:106 [Memoria]/(16997:17108): [DESCONEXION]: CPU
+[ERROR] 03:00:05:004 [Memoria]/(16997:17110): [DESCONEXION]: KERNEL
+[INFO] 03:04:18:944 [Memoria]/(16997:16997): Cliente conectado a Memoria
+[INFO] 03:04:18:944 [Memoria]/(16997:16997): [THREAD] Creo hilo para atender
+[INFO] 03:04:18:947 [Memoria]/(16997:17230): !!!!! FILESYSTEM CONECTADO !!!!!
+[INFO] 03:04:21:346 [Memoria]/(16997:16997): Cliente conectado a Memoria
+[INFO] 03:04:21:346 [Memoria]/(16997:16997): [THREAD] Creo hilo para atender
+[INFO] 03:04:21:346 [Memoria]/(16997:17237): !!!!! CPU CONECTADO !!!!!
+[INFO] 03:04:27:037 [Memoria]/(16997:16997): Cliente conectado a Memoria
+[INFO] 03:04:27:039 [Memoria]/(16997:16997): [THREAD] Creo hilo para atender
+[INFO] 03:04:27:040 [Memoria]/(16997:17239): !!!!! KERNEL CONECTADO !!!!!
+[INFO] 03:04:34:245 [Memoria]/(16997:17239): [Kernel] -> Peticion de creacion de proceso nuevo
+[INFO] 03:04:34:245 [Memoria]/(16997:17239): Intruccion: [SET AX 1]
+[INFO] 03:04:34:245 [Memoria]/(16997:17239): Intruccion: [SET BX 1]
+[INFO] 03:04:34:245 [Memoria]/(16997:17239): Intruccion: [SUM AX BX]
+[INFO] 03:04:34:245 [Memoria]/(16997:17239): Intruccion: [SUM AX BX]
+[INFO] 03:04:34:245 [Memoria]/(16997:17239): Intruccion: [SUM AX BX]
+[INFO] 03:04:34:245 [Memoria]/(16997:17239): Intruccion: [SUM AX BX]
+[INFO] 03:04:34:245 [Memoria]/(16997:17239): Intruccion: [SUM AX BX]
+[INFO] 03:04:34:245 [Memoria]/(16997:17239): Intruccion: [SUM AX BX]
+[INFO] 03:04:34:245 [Memoria]/(16997:17239): Intruccion: [SUM AX BX]
+[INFO] 03:04:34:245 [Memoria]/(16997:17239): Intruccion: [SUM AX BX]
+[INFO] 03:04:34:245 [Memoria]/(16997:17239): Intruccion: [SUM AX BX]
+[INFO] 03:04:34:245 [Memoria]/(16997:17239): Intruccion: [SUM AX BX]
+[INFO] 03:04:34:245 [Memoria]/(16997:17239): Intruccion: [SET CX 1]
+[INFO] 03:04:34:245 [Memoria]/(16997:17239): Intruccion: [SET DX 1]
+[INFO] 03:04:34:245 [Memoria]/(16997:17239): Intruccion: [SUM CX DX]
+[INFO] 03:04:34:245 [Memoria]/(16997:17239): Intruccion: [SUM CX DX]
+[INFO] 03:04:34:245 [Memoria]/(16997:17239): Intruccion: [SUM CX DX]
+[INFO] 03:04:34:245 [Memoria]/(16997:17239): Intruccion: [SUM CX DX]
+[INFO] 03:04:34:245 [Memoria]/(16997:17239): Intruccion: [SUM CX DX]
+[INFO] 03:04:34:245 [Memoria]/(16997:17239): Intruccion: [SUM CX DX]
+[INFO] 03:04:34:245 [Memoria]/(16997:17239): Intruccion: [SUM CX DX]
+[INFO] 03:04:34:245 [Memoria]/(16997:17239): Intruccion: [SUM CX DX]
+[INFO] 03:04:34:245 [Memoria]/(16997:17239): Intruccion: [SUM CX DX]
+[INFO] 03:04:34:245 [Memoria]/(16997:17239): Intruccion: [SUM CX DX]
+[INFO] 03:04:34:245 [Memoria]/(16997:17239): Intruccion: [SUM BX DX]
+[INFO] 03:04:34:246 [Memoria]/(16997:17239): Intruccion: [SUM BX DX]
+[INFO] 03:04:34:246 [Memoria]/(16997:17239): Intruccion: [SUM BX DX]
+[INFO] 03:04:34:246 [Memoria]/(16997:17239): Intruccion: [SUM BX DX]
+[INFO] 03:04:34:246 [Memoria]/(16997:17239): Intruccion: [SUM BX DX]
+[INFO] 03:04:34:246 [Memoria]/(16997:17239): Intruccion: [SUM BX DX]
+[INFO] 03:04:34:246 [Memoria]/(16997:17239): Intruccion: [SUM BX DX]
+[INFO] 03:04:34:246 [Memoria]/(16997:17239): Intruccion: [SUM BX DX]
+[INFO] 03:04:34:246 [Memoria]/(16997:17239): Intruccion: [SUM BX DX]
+[INFO] 03:04:34:246 [Memoria]/(16997:17239): Intruccion: [SUM BX DX]
+[INFO] 03:04:34:246 [Memoria]/(16997:17239): Intruccion: [EXIT]
+[INFO] 03:04:40:251 [Memoria]/(16997:17230): FILESYSTEM => <PID:1> <cant_pag:2> - <cant_bloques:2>
+[WARNING] 03:04:40:251 [Memoria]/(16997:17230): Se Cargaron pos_SWAP en proceso <PID:1>
+[WARNING] 03:04:46:263 [Memoria]/(16997:17239): :::::> DELETE <PID:1>
+[ERROR] 03:04:46:365 [Memoria]/(16997:17230): [DESCONEXION]: FILESYSTEM
+[ERROR] 03:04:46:366 [Memoria]/(16997:17237): [DESCONEXION]: CPU
+[ERROR] 03:04:47:267 [Memoria]/(16997:17239): [DESCONEXION]: KERNEL
+[INFO] 03:06:20:958 [Memoria]/(16997:16997): Cliente conectado a Memoria
+[INFO] 03:06:20:958 [Memoria]/(16997:16997): [THREAD] Creo hilo para atender
+[INFO] 03:06:20:962 [Memoria]/(16997:17312): !!!!! FILESYSTEM CONECTADO !!!!!
+[INFO] 03:06:22:390 [Memoria]/(16997:16997): Cliente conectado a Memoria
+[INFO] 03:06:22:390 [Memoria]/(16997:16997): [THREAD] Creo hilo para atender
+[INFO] 03:06:22:390 [Memoria]/(16997:17319): !!!!! CPU CONECTADO !!!!!
+[INFO] 03:06:23:886 [Memoria]/(16997:16997): Cliente conectado a Memoria
+[INFO] 03:06:23:886 [Memoria]/(16997:16997): [THREAD] Creo hilo para atender
+[INFO] 03:06:23:893 [Memoria]/(16997:17322): !!!!! KERNEL CONECTADO !!!!!
+[INFO] 03:06:35:441 [Memoria]/(16997:17322): [Kernel] -> Peticion de creacion de proceso nuevo
+[INFO] 03:06:35:441 [Memoria]/(16997:17322): Intruccion: [SET AX 1]
+[INFO] 03:06:35:441 [Memoria]/(16997:17322): Intruccion: [SET BX 1]
+[INFO] 03:06:35:441 [Memoria]/(16997:17322): Intruccion: [SUM AX BX]
+[INFO] 03:06:35:441 [Memoria]/(16997:17322): Intruccion: [SUM AX BX]
+[INFO] 03:06:35:441 [Memoria]/(16997:17322): Intruccion: [SUM AX BX]
+[INFO] 03:06:35:441 [Memoria]/(16997:17322): Intruccion: [SUM AX BX]
+[INFO] 03:06:35:441 [Memoria]/(16997:17322): Intruccion: [SUM AX BX]
+[INFO] 03:06:35:441 [Memoria]/(16997:17322): Intruccion: [SUM AX BX]
+[INFO] 03:06:35:441 [Memoria]/(16997:17322): Intruccion: [SUM AX BX]
+[INFO] 03:06:35:441 [Memoria]/(16997:17322): Intruccion: [SUM AX BX]
+[INFO] 03:06:35:441 [Memoria]/(16997:17322): Intruccion: [SUM AX BX]
+[INFO] 03:06:35:441 [Memoria]/(16997:17322): Intruccion: [SUM AX BX]
+[INFO] 03:06:35:441 [Memoria]/(16997:17322): Intruccion: [SET CX 1]
+[INFO] 03:06:35:441 [Memoria]/(16997:17322): Intruccion: [SET DX 1]
+[INFO] 03:06:35:441 [Memoria]/(16997:17322): Intruccion: [SUM CX DX]
+[INFO] 03:06:35:441 [Memoria]/(16997:17322): Intruccion: [SUM CX DX]
+[INFO] 03:06:35:441 [Memoria]/(16997:17322): Intruccion: [SUM CX DX]
+[INFO] 03:06:35:441 [Memoria]/(16997:17322): Intruccion: [SUM CX DX]
+[INFO] 03:06:35:441 [Memoria]/(16997:17322): Intruccion: [SUM CX DX]
+[INFO] 03:06:35:441 [Memoria]/(16997:17322): Intruccion: [SUM CX DX]
+[INFO] 03:06:35:441 [Memoria]/(16997:17322): Intruccion: [SUM CX DX]
+[INFO] 03:06:35:441 [Memoria]/(16997:17322): Intruccion: [SUM CX DX]
+[INFO] 03:06:35:441 [Memoria]/(16997:17322): Intruccion: [SUM CX DX]
+[INFO] 03:06:35:441 [Memoria]/(16997:17322): Intruccion: [SUM CX DX]
+[INFO] 03:06:35:441 [Memoria]/(16997:17322): Intruccion: [SUM BX DX]
+[INFO] 03:06:35:441 [Memoria]/(16997:17322): Intruccion: [SUM BX DX]
+[INFO] 03:06:35:441 [Memoria]/(16997:17322): Intruccion: [SUM BX DX]
+[INFO] 03:06:35:441 [Memoria]/(16997:17322): Intruccion: [SUM BX DX]
+[INFO] 03:06:35:441 [Memoria]/(16997:17322): Intruccion: [SUM BX DX]
+[INFO] 03:06:35:441 [Memoria]/(16997:17322): Intruccion: [SUM BX DX]
+[INFO] 03:06:35:441 [Memoria]/(16997:17322): Intruccion: [SUM BX DX]
+[INFO] 03:06:35:441 [Memoria]/(16997:17322): Intruccion: [SUM BX DX]
+[INFO] 03:06:35:441 [Memoria]/(16997:17322): Intruccion: [SUM BX DX]
+[INFO] 03:06:35:441 [Memoria]/(16997:17322): Intruccion: [SUM BX DX]
+[INFO] 03:06:35:441 [Memoria]/(16997:17322): Intruccion: [EXIT]
+[INFO] 03:06:41:456 [Memoria]/(16997:17312): FILESYSTEM => <PID:1> <cant_pag:2> - <cant_bloques:2>
+[WARNING] 03:06:41:456 [Memoria]/(16997:17312): Se Cargaron pos_SWAP en proceso <PID:1>
+[WARNING] 03:06:45:502 [Memoria]/(16997:17322): :::::> DELETE <PID:1>
+[ERROR] 03:06:45:611 [Memoria]/(16997:17312): [DESCONEXION]: FILESYSTEM
+[ERROR] 03:06:45:612 [Memoria]/(16997:17319): [DESCONEXION]: CPU
+[ERROR] 03:06:46:509 [Memoria]/(16997:17322): [DESCONEXION]: KERNEL
+[INFO] 03:11:01:885 [Memoria]/(16997:16997): Cliente conectado a Memoria
+[INFO] 03:11:01:886 [Memoria]/(16997:16997): [THREAD] Creo hilo para atender
+[INFO] 03:11:01:887 [Memoria]/(16997:17592): !!!!! FILESYSTEM CONECTADO !!!!!
+[INFO] 03:11:03:248 [Memoria]/(16997:16997): Cliente conectado a Memoria
+[INFO] 03:11:03:248 [Memoria]/(16997:16997): [THREAD] Creo hilo para atender
+[INFO] 03:11:03:249 [Memoria]/(16997:17597): !!!!! CPU CONECTADO !!!!!
+[INFO] 03:11:04:651 [Memoria]/(16997:16997): Cliente conectado a Memoria
+[INFO] 03:11:04:651 [Memoria]/(16997:16997): [THREAD] Creo hilo para atender
+[INFO] 03:11:04:652 [Memoria]/(16997:17599): !!!!! KERNEL CONECTADO !!!!!
+[INFO] 03:11:12:175 [Memoria]/(16997:17599): [Kernel] -> Peticion de creacion de proceso nuevo
+[INFO] 03:11:12:176 [Memoria]/(16997:17599): Intruccion: [SET AX 1]
+[INFO] 03:11:12:176 [Memoria]/(16997:17599): Intruccion: [SET BX 1]
+[INFO] 03:11:12:176 [Memoria]/(16997:17599): Intruccion: [SUM AX BX]
+[INFO] 03:11:12:176 [Memoria]/(16997:17599): Intruccion: [SUM AX BX]
+[INFO] 03:11:12:176 [Memoria]/(16997:17599): Intruccion: [SUM AX BX]
+[INFO] 03:11:12:176 [Memoria]/(16997:17599): Intruccion: [SUM AX BX]
+[INFO] 03:11:12:176 [Memoria]/(16997:17599): Intruccion: [SUM AX BX]
+[INFO] 03:11:12:176 [Memoria]/(16997:17599): Intruccion: [SUM AX BX]
+[INFO] 03:11:12:176 [Memoria]/(16997:17599): Intruccion: [SUM AX BX]
+[INFO] 03:11:12:176 [Memoria]/(16997:17599): Intruccion: [SUM AX BX]
+[INFO] 03:11:12:176 [Memoria]/(16997:17599): Intruccion: [SUM AX BX]
+[INFO] 03:11:12:176 [Memoria]/(16997:17599): Intruccion: [SUM AX BX]
+[INFO] 03:11:12:176 [Memoria]/(16997:17599): Intruccion: [SET CX 1]
+[INFO] 03:11:12:176 [Memoria]/(16997:17599): Intruccion: [SET DX 1]
+[INFO] 03:11:12:176 [Memoria]/(16997:17599): Intruccion: [SUM CX DX]
+[INFO] 03:11:12:176 [Memoria]/(16997:17599): Intruccion: [SUM CX DX]
+[INFO] 03:11:12:176 [Memoria]/(16997:17599): Intruccion: [SUM CX DX]
+[INFO] 03:11:12:176 [Memoria]/(16997:17599): Intruccion: [SUM CX DX]
+[INFO] 03:11:12:176 [Memoria]/(16997:17599): Intruccion: [SUM CX DX]
+[INFO] 03:11:12:176 [Memoria]/(16997:17599): Intruccion: [SUM CX DX]
+[INFO] 03:11:12:176 [Memoria]/(16997:17599): Intruccion: [SUM CX DX]
+[INFO] 03:11:12:176 [Memoria]/(16997:17599): Intruccion: [SUM CX DX]
+[INFO] 03:11:12:176 [Memoria]/(16997:17599): Intruccion: [SUM CX DX]
+[INFO] 03:11:12:176 [Memoria]/(16997:17599): Intruccion: [SUM CX DX]
+[INFO] 03:11:12:176 [Memoria]/(16997:17599): Intruccion: [SUM BX DX]
+[INFO] 03:11:12:176 [Memoria]/(16997:17599): Intruccion: [SUM BX DX]
+[INFO] 03:11:12:176 [Memoria]/(16997:17599): Intruccion: [SUM BX DX]
+[INFO] 03:11:12:176 [Memoria]/(16997:17599): Intruccion: [SUM BX DX]
+[INFO] 03:11:12:176 [Memoria]/(16997:17599): Intruccion: [SUM BX DX]
+[INFO] 03:11:12:176 [Memoria]/(16997:17599): Intruccion: [SUM BX DX]
+[INFO] 03:11:12:176 [Memoria]/(16997:17599): Intruccion: [SUM BX DX]
+[INFO] 03:11:12:176 [Memoria]/(16997:17599): Intruccion: [SUM BX DX]
+[INFO] 03:11:12:176 [Memoria]/(16997:17599): Intruccion: [SUM BX DX]
+[INFO] 03:11:12:176 [Memoria]/(16997:17599): Intruccion: [SUM BX DX]
+[INFO] 03:11:12:176 [Memoria]/(16997:17599): Intruccion: [EXIT]
+[INFO] 03:11:18:178 [Memoria]/(16997:17592): FILESYSTEM => <PID:1> <cant_pag:2> - <cant_bloques:2>
+[WARNING] 03:11:18:178 [Memoria]/(16997:17592): Se Cargaron pos_SWAP en proceso <PID:1>
+[WARNING] 03:11:29:244 [Memoria]/(16997:17599): :::::> DELETE <PID:1>
+[INFO] 03:12:57:979 [Memoria]/(16997:17599): [Kernel] -> Peticion de creacion de proceso nuevo
+[INFO] 03:12:57:979 [Memoria]/(16997:17599): Intruccion: [SET AX 1]
+[INFO] 03:12:57:979 [Memoria]/(16997:17599): Intruccion: [SET BX 1]
+[INFO] 03:12:57:979 [Memoria]/(16997:17599): Intruccion: [SUM AX BX]
+[INFO] 03:12:57:979 [Memoria]/(16997:17599): Intruccion: [SUM AX BX]
+[INFO] 03:12:57:979 [Memoria]/(16997:17599): Intruccion: [SUM AX BX]
+[INFO] 03:12:57:979 [Memoria]/(16997:17599): Intruccion: [SUM AX BX]
+[INFO] 03:12:57:979 [Memoria]/(16997:17599): Intruccion: [SUM AX BX]
+[INFO] 03:12:57:979 [Memoria]/(16997:17599): Intruccion: [SUM AX BX]
+[INFO] 03:12:57:979 [Memoria]/(16997:17599): Intruccion: [SUM AX BX]
+[INFO] 03:12:57:979 [Memoria]/(16997:17599): Intruccion: [SUM AX BX]
+[INFO] 03:12:57:979 [Memoria]/(16997:17599): Intruccion: [SUM AX BX]
+[INFO] 03:12:57:979 [Memoria]/(16997:17599): Intruccion: [SUM AX BX]
+[INFO] 03:12:57:979 [Memoria]/(16997:17599): Intruccion: [SET CX 1]
+[INFO] 03:12:57:979 [Memoria]/(16997:17599): Intruccion: [SET DX 1]
+[INFO] 03:12:57:979 [Memoria]/(16997:17599): Intruccion: [SUM CX DX]
+[INFO] 03:12:57:979 [Memoria]/(16997:17599): Intruccion: [SUM CX DX]
+[INFO] 03:12:57:979 [Memoria]/(16997:17599): Intruccion: [SUM CX DX]
+[INFO] 03:12:57:979 [Memoria]/(16997:17599): Intruccion: [SUM CX DX]
+[INFO] 03:12:57:979 [Memoria]/(16997:17599): Intruccion: [SUM CX DX]
+[INFO] 03:12:57:979 [Memoria]/(16997:17599): Intruccion: [SUM CX DX]
+[INFO] 03:12:57:979 [Memoria]/(16997:17599): Intruccion: [SUM CX DX]
+[INFO] 03:12:57:979 [Memoria]/(16997:17599): Intruccion: [SUM CX DX]
+[INFO] 03:12:57:979 [Memoria]/(16997:17599): Intruccion: [SUM CX DX]
+[INFO] 03:12:57:979 [Memoria]/(16997:17599): Intruccion: [SUM CX DX]
+[INFO] 03:12:57:979 [Memoria]/(16997:17599): Intruccion: [SUM BX DX]
+[INFO] 03:12:57:979 [Memoria]/(16997:17599): Intruccion: [SUM BX DX]
+[INFO] 03:12:57:979 [Memoria]/(16997:17599): Intruccion: [SUM BX DX]
+[INFO] 03:12:57:979 [Memoria]/(16997:17599): Intruccion: [SUM BX DX]
+[INFO] 03:12:57:979 [Memoria]/(16997:17599): Intruccion: [SUM BX DX]
+[INFO] 03:12:57:979 [Memoria]/(16997:17599): Intruccion: [SUM BX DX]
+[INFO] 03:12:57:979 [Memoria]/(16997:17599): Intruccion: [SUM BX DX]
+[INFO] 03:12:57:980 [Memoria]/(16997:17599): Intruccion: [SUM BX DX]
+[INFO] 03:12:57:980 [Memoria]/(16997:17599): Intruccion: [SUM BX DX]
+[INFO] 03:12:57:980 [Memoria]/(16997:17599): Intruccion: [SUM BX DX]
+[INFO] 03:12:57:980 [Memoria]/(16997:17599): Intruccion: [EXIT]
+[INFO] 03:12:59:988 [Memoria]/(16997:17599): [Kernel] -> Peticion de creacion de proceso nuevo
+[INFO] 03:12:59:988 [Memoria]/(16997:17599): Intruccion: [SET AX 1]
+[INFO] 03:12:59:988 [Memoria]/(16997:17599): Intruccion: [SET BX 1]
+[INFO] 03:12:59:988 [Memoria]/(16997:17599): Intruccion: [SET CX 1]
+[INFO] 03:12:59:988 [Memoria]/(16997:17599): Intruccion: [SET DX 1]
+[INFO] 03:12:59:988 [Memoria]/(16997:17599): Intruccion: [SUM AX BX]
+[INFO] 03:12:59:988 [Memoria]/(16997:17599): Intruccion: [SUM CX DX]
+[INFO] 03:12:59:988 [Memoria]/(16997:17599): Intruccion: [SUM AX BX]
+[INFO] 03:12:59:988 [Memoria]/(16997:17599): Intruccion: [SUM CX DX]
+[INFO] 03:12:59:988 [Memoria]/(16997:17599): Intruccion: [SUM AX BX]
+[INFO] 03:12:59:988 [Memoria]/(16997:17599): Intruccion: [SUM CX DX]
+[INFO] 03:12:59:988 [Memoria]/(16997:17599): Intruccion: [SUM AX BX]
+[INFO] 03:12:59:988 [Memoria]/(16997:17599): Intruccion: [SUM CX DX]
+[INFO] 03:12:59:988 [Memoria]/(16997:17599): Intruccion: [SUM AX BX]
+[INFO] 03:12:59:988 [Memoria]/(16997:17599): Intruccion: [SUM CX DX]
+[INFO] 03:12:59:988 [Memoria]/(16997:17599): Intruccion: [SUM AX BX]
+[INFO] 03:12:59:988 [Memoria]/(16997:17599): Intruccion: [SUM CX DX]
+[INFO] 03:12:59:988 [Memoria]/(16997:17599): Intruccion: [SUM AX BX]
+[INFO] 03:12:59:988 [Memoria]/(16997:17599): Intruccion: [SUM CX DX]
+[INFO] 03:12:59:988 [Memoria]/(16997:17599): Intruccion: [EXIT]
+[INFO] 03:13:02:022 [Memoria]/(16997:17599): [Kernel] -> Peticion de creacion de proceso nuevo
+[INFO] 03:13:02:022 [Memoria]/(16997:17599): Intruccion: [SET AX 1]
+[INFO] 03:13:02:022 [Memoria]/(16997:17599): Intruccion: [SET BX 1]
+[INFO] 03:13:02:022 [Memoria]/(16997:17599): Intruccion: [SET CX 1]
+[INFO] 03:13:02:022 [Memoria]/(16997:17599): Intruccion: [SET DX 1]
+[INFO] 03:13:02:022 [Memoria]/(16997:17599): Intruccion: [SUM AX BX]
+[INFO] 03:13:02:022 [Memoria]/(16997:17599): Intruccion: [SUM CX DX]
+[INFO] 03:13:02:023 [Memoria]/(16997:17599): Intruccion: [EXIT]
+[INFO] 03:13:04:017 [Memoria]/(16997:17592): FILESYSTEM => <PID:2> <cant_pag:2> - <cant_bloques:2>
+[WARNING] 03:13:04:017 [Memoria]/(16997:17592): Se Cargaron pos_SWAP en proceso <PID:2>
+[INFO] 03:13:09:104 [Memoria]/(16997:17592): FILESYSTEM => <PID:3> <cant_pag:2> - <cant_bloques:2>
+[WARNING] 03:13:09:104 [Memoria]/(16997:17592): Se Cargaron pos_SWAP en proceso <PID:3>
+[INFO] 03:13:14:107 [Memoria]/(16997:17592): FILESYSTEM => <PID:4> <cant_pag:2> - <cant_bloques:2>
+[WARNING] 03:13:14:107 [Memoria]/(16997:17592): Se Cargaron pos_SWAP en proceso <PID:4>
+[WARNING] 03:13:20:044 [Memoria]/(16997:17599): :::::> DELETE <PID:2>
+[WARNING] 03:13:29:068 [Memoria]/(16997:17599): :::::> DELETE <PID:3>
+[WARNING] 03:13:38:108 [Memoria]/(16997:17599): :::::> DELETE <PID:4>
+[INFO] 03:17:30:097 [Memoria]/(17668:17668): Se inicia memoria con Paginacion.
+
+[INFO] 03:17:30:097 [Memoria]/(17668:17668): Algoritmo de reemplazo a usar: FIFO
+
+[INFO] 03:17:30:097 [Memoria]/(17668:17668): Iniciando servidor Memoria
+[INFO] 03:17:52:265 [Memoria]/(17668:17668): Cliente conectado a Memoria
+[INFO] 03:17:52:265 [Memoria]/(17668:17668): [THREAD] Creo hilo para atender
+[INFO] 03:17:52:272 [Memoria]/(17668:17679): !!!!! FILESYSTEM CONECTADO !!!!!
+[INFO] 03:17:53:820 [Memoria]/(17668:17668): Cliente conectado a Memoria
+[INFO] 03:17:53:821 [Memoria]/(17668:17668): [THREAD] Creo hilo para atender
+[INFO] 03:17:53:821 [Memoria]/(17668:17686): !!!!! CPU CONECTADO !!!!!
+[INFO] 03:17:54:821 [Memoria]/(17668:17668): Cliente conectado a Memoria
+[INFO] 03:17:54:821 [Memoria]/(17668:17668): [THREAD] Creo hilo para atender
+[INFO] 03:17:54:821 [Memoria]/(17668:17688): !!!!! KERNEL CONECTADO !!!!!
+[INFO] 03:18:09:876 [Memoria]/(17668:17688): [Kernel] -> Peticion de creacion de proceso nuevo
+[INFO] 03:18:09:876 [Memoria]/(17668:17688): Intruccion: [SET AX 1]
+[INFO] 03:18:09:876 [Memoria]/(17668:17688): Intruccion: [SET BX 1]
+[INFO] 03:18:09:876 [Memoria]/(17668:17688): Intruccion: [SUM AX BX]
+[INFO] 03:18:09:876 [Memoria]/(17668:17688): Intruccion: [SUM AX BX]
+[INFO] 03:18:09:876 [Memoria]/(17668:17688): Intruccion: [SUM AX BX]
+[INFO] 03:18:09:876 [Memoria]/(17668:17688): Intruccion: [SUM AX BX]
+[INFO] 03:18:09:876 [Memoria]/(17668:17688): Intruccion: [SUM AX BX]
+[INFO] 03:18:09:876 [Memoria]/(17668:17688): Intruccion: [SUM AX BX]
+[INFO] 03:18:09:876 [Memoria]/(17668:17688): Intruccion: [SUM AX BX]
+[INFO] 03:18:09:876 [Memoria]/(17668:17688): Intruccion: [SUM AX BX]
+[INFO] 03:18:09:876 [Memoria]/(17668:17688): Intruccion: [SUM AX BX]
+[INFO] 03:18:09:876 [Memoria]/(17668:17688): Intruccion: [SUM AX BX]
+[INFO] 03:18:09:876 [Memoria]/(17668:17688): Intruccion: [SET CX 1]
+[INFO] 03:18:09:876 [Memoria]/(17668:17688): Intruccion: [SET DX 1]
+[INFO] 03:18:09:876 [Memoria]/(17668:17688): Intruccion: [SUM CX DX]
+[INFO] 03:18:09:876 [Memoria]/(17668:17688): Intruccion: [SUM CX DX]
+[INFO] 03:18:09:876 [Memoria]/(17668:17688): Intruccion: [SUM CX DX]
+[INFO] 03:18:09:876 [Memoria]/(17668:17688): Intruccion: [SUM CX DX]
+[INFO] 03:18:09:876 [Memoria]/(17668:17688): Intruccion: [SUM CX DX]
+[INFO] 03:18:09:876 [Memoria]/(17668:17688): Intruccion: [SUM CX DX]
+[INFO] 03:18:09:876 [Memoria]/(17668:17688): Intruccion: [SUM CX DX]
+[INFO] 03:18:09:876 [Memoria]/(17668:17688): Intruccion: [SUM CX DX]
+[INFO] 03:18:09:876 [Memoria]/(17668:17688): Intruccion: [SUM CX DX]
+[INFO] 03:18:09:876 [Memoria]/(17668:17688): Intruccion: [SUM CX DX]
+[INFO] 03:18:09:876 [Memoria]/(17668:17688): Intruccion: [SUM BX DX]
+[INFO] 03:18:09:876 [Memoria]/(17668:17688): Intruccion: [SUM BX DX]
+[INFO] 03:18:09:876 [Memoria]/(17668:17688): Intruccion: [SUM BX DX]
+[INFO] 03:18:09:876 [Memoria]/(17668:17688): Intruccion: [SUM BX DX]
+[INFO] 03:18:09:876 [Memoria]/(17668:17688): Intruccion: [SUM BX DX]
+[INFO] 03:18:09:876 [Memoria]/(17668:17688): Intruccion: [SUM BX DX]
+[INFO] 03:18:09:876 [Memoria]/(17668:17688): Intruccion: [SUM BX DX]
+[INFO] 03:18:09:876 [Memoria]/(17668:17688): Intruccion: [SUM BX DX]
+[INFO] 03:18:09:876 [Memoria]/(17668:17688): Intruccion: [SUM BX DX]
+[INFO] 03:18:09:876 [Memoria]/(17668:17688): Intruccion: [SUM BX DX]
+[INFO] 03:18:09:876 [Memoria]/(17668:17688): Intruccion: [EXIT]
+[INFO] 03:18:15:898 [Memoria]/(17668:17679): FILESYSTEM => <PID:1> <cant_pag:2> - <cant_bloques:2>
+[WARNING] 03:18:15:898 [Memoria]/(17668:17679): Se Cargaron pos_SWAP en proceso <PID:1>
+[WARNING] 03:18:29:087 [Memoria]/(17668:17688): :::::> DELETE <PID:1>
+[INFO] 03:21:05:089 [Memoria]/(17668:17688): [Kernel] -> Peticion de creacion de proceso nuevo
+[INFO] 03:21:05:089 [Memoria]/(17668:17688): Intruccion: [SET AX 1]
+[INFO] 03:21:05:089 [Memoria]/(17668:17688): Intruccion: [SET BX 1]
+[INFO] 03:21:05:089 [Memoria]/(17668:17688): Intruccion: [SUM AX BX]
+[INFO] 03:21:05:089 [Memoria]/(17668:17688): Intruccion: [SUM AX BX]
+[INFO] 03:21:05:089 [Memoria]/(17668:17688): Intruccion: [SUM AX BX]
+[INFO] 03:21:05:090 [Memoria]/(17668:17688): Intruccion: [SUM AX BX]
+[INFO] 03:21:05:090 [Memoria]/(17668:17688): Intruccion: [SUM AX BX]
+[INFO] 03:21:05:090 [Memoria]/(17668:17688): Intruccion: [SUM AX BX]
+[INFO] 03:21:05:090 [Memoria]/(17668:17688): Intruccion: [SUM AX BX]
+[INFO] 03:21:05:090 [Memoria]/(17668:17688): Intruccion: [SUM AX BX]
+[INFO] 03:21:05:090 [Memoria]/(17668:17688): Intruccion: [SUM AX BX]
+[INFO] 03:21:05:090 [Memoria]/(17668:17688): Intruccion: [SUM AX BX]
+[INFO] 03:21:05:090 [Memoria]/(17668:17688): Intruccion: [SET CX 1]
+[INFO] 03:21:05:090 [Memoria]/(17668:17688): Intruccion: [SET DX 1]
+[INFO] 03:21:05:090 [Memoria]/(17668:17688): Intruccion: [SUM CX DX]
+[INFO] 03:21:05:090 [Memoria]/(17668:17688): Intruccion: [SUM CX DX]
+[INFO] 03:21:05:090 [Memoria]/(17668:17688): Intruccion: [SUM CX DX]
+[INFO] 03:21:05:090 [Memoria]/(17668:17688): Intruccion: [SUM CX DX]
+[INFO] 03:21:05:090 [Memoria]/(17668:17688): Intruccion: [SUM CX DX]
+[INFO] 03:21:05:090 [Memoria]/(17668:17688): Intruccion: [SUM CX DX]
+[INFO] 03:21:05:090 [Memoria]/(17668:17688): Intruccion: [SUM CX DX]
+[INFO] 03:21:05:090 [Memoria]/(17668:17688): Intruccion: [SUM CX DX]
+[INFO] 03:21:05:090 [Memoria]/(17668:17688): Intruccion: [SUM CX DX]
+[INFO] 03:21:05:090 [Memoria]/(17668:17688): Intruccion: [SUM CX DX]
+[INFO] 03:21:05:090 [Memoria]/(17668:17688): Intruccion: [SUM BX DX]
+[INFO] 03:21:05:090 [Memoria]/(17668:17688): Intruccion: [SUM BX DX]
+[INFO] 03:21:05:090 [Memoria]/(17668:17688): Intruccion: [SUM BX DX]
+[INFO] 03:21:05:090 [Memoria]/(17668:17688): Intruccion: [SUM BX DX]
+[INFO] 03:21:05:090 [Memoria]/(17668:17688): Intruccion: [SUM BX DX]
+[INFO] 03:21:05:090 [Memoria]/(17668:17688): Intruccion: [SUM BX DX]
+[INFO] 03:21:05:090 [Memoria]/(17668:17688): Intruccion: [SUM BX DX]
+[INFO] 03:21:05:090 [Memoria]/(17668:17688): Intruccion: [SUM BX DX]
+[INFO] 03:21:05:090 [Memoria]/(17668:17688): Intruccion: [SUM BX DX]
+[INFO] 03:21:05:090 [Memoria]/(17668:17688): Intruccion: [SUM BX DX]
+[INFO] 03:21:05:090 [Memoria]/(17668:17688): Intruccion: [EXIT]
+[INFO] 03:21:07:123 [Memoria]/(17668:17688): [Kernel] -> Peticion de creacion de proceso nuevo
+[INFO] 03:21:07:123 [Memoria]/(17668:17688): Intruccion: [SET AX 1]
+[INFO] 03:21:07:123 [Memoria]/(17668:17688): Intruccion: [SET BX 1]
+[INFO] 03:21:07:123 [Memoria]/(17668:17688): Intruccion: [SUM AX BX]
+[INFO] 03:21:07:123 [Memoria]/(17668:17688): Intruccion: [SUM AX BX]
+[INFO] 03:21:07:123 [Memoria]/(17668:17688): Intruccion: [SUM AX BX]
+[INFO] 03:21:07:123 [Memoria]/(17668:17688): Intruccion: [SUM AX BX]
+[INFO] 03:21:07:123 [Memoria]/(17668:17688): Intruccion: [SUM AX BX]
+[INFO] 03:21:07:123 [Memoria]/(17668:17688): Intruccion: [SUM AX BX]
+[INFO] 03:21:07:123 [Memoria]/(17668:17688): Intruccion: [SUM AX BX]
+[INFO] 03:21:07:123 [Memoria]/(17668:17688): Intruccion: [SUM AX BX]
+[INFO] 03:21:07:123 [Memoria]/(17668:17688): Intruccion: [SUM AX BX]
+[INFO] 03:21:07:123 [Memoria]/(17668:17688): Intruccion: [SUM AX BX]
+[INFO] 03:21:07:123 [Memoria]/(17668:17688): Intruccion: [SET CX 1]
+[INFO] 03:21:07:123 [Memoria]/(17668:17688): Intruccion: [SET DX 1]
+[INFO] 03:21:07:123 [Memoria]/(17668:17688): Intruccion: [SUM CX DX]
+[INFO] 03:21:07:123 [Memoria]/(17668:17688): Intruccion: [SUM CX DX]
+[INFO] 03:21:07:123 [Memoria]/(17668:17688): Intruccion: [SUM CX DX]
+[INFO] 03:21:07:124 [Memoria]/(17668:17688): Intruccion: [SUM CX DX]
+[INFO] 03:21:07:124 [Memoria]/(17668:17688): Intruccion: [SUM CX DX]
+[INFO] 03:21:07:124 [Memoria]/(17668:17688): Intruccion: [SUM CX DX]
+[INFO] 03:21:07:124 [Memoria]/(17668:17688): Intruccion: [SUM CX DX]
+[INFO] 03:21:07:124 [Memoria]/(17668:17688): Intruccion: [SUM CX DX]
+[INFO] 03:21:07:124 [Memoria]/(17668:17688): Intruccion: [SUM CX DX]
+[INFO] 03:21:07:124 [Memoria]/(17668:17688): Intruccion: [SUM CX DX]
+[INFO] 03:21:07:124 [Memoria]/(17668:17688): Intruccion: [SUM BX DX]
+[INFO] 03:21:07:124 [Memoria]/(17668:17688): Intruccion: [SUM BX DX]
+[INFO] 03:21:07:124 [Memoria]/(17668:17688): Intruccion: [SUM BX DX]
+[INFO] 03:21:07:124 [Memoria]/(17668:17688): Intruccion: [SUM BX DX]
+[INFO] 03:21:07:124 [Memoria]/(17668:17688): Intruccion: [SUM BX DX]
+[INFO] 03:21:07:124 [Memoria]/(17668:17688): Intruccion: [SUM BX DX]
+[INFO] 03:21:07:124 [Memoria]/(17668:17688): Intruccion: [SUM BX DX]
+[INFO] 03:21:07:124 [Memoria]/(17668:17688): Intruccion: [SUM BX DX]
+[INFO] 03:21:07:124 [Memoria]/(17668:17688): Intruccion: [SUM BX DX]
+[INFO] 03:21:07:124 [Memoria]/(17668:17688): Intruccion: [SUM BX DX]
+[INFO] 03:21:07:124 [Memoria]/(17668:17688): Intruccion: [EXIT]
+[INFO] 03:21:11:125 [Memoria]/(17668:17679): FILESYSTEM => <PID:2> <cant_pag:2> - <cant_bloques:2>
+[WARNING] 03:21:11:125 [Memoria]/(17668:17679): Se Cargaron pos_SWAP en proceso <PID:2>
+[INFO] 03:21:16:139 [Memoria]/(17668:17679): FILESYSTEM => <PID:3> <cant_pag:2> - <cant_bloques:2>
+[WARNING] 03:21:16:139 [Memoria]/(17668:17679): Se Cargaron pos_SWAP en proceso <PID:3>
+[WARNING] 03:21:42:271 [Memoria]/(17668:17688): :::::> DELETE <PID:2>
+[WARNING] 03:22:18:348 [Memoria]/(17668:17688): :::::> DELETE <PID:3>
+[ERROR] 03:24:25:763 [Memoria]/(17668:17679): [DESCONEXION]: FILESYSTEM
+[ERROR] 03:24:25:765 [Memoria]/(17668:17688): [DESCONEXION]: KERNEL
+[ERROR] 03:24:25:766 [Memoria]/(17668:17686): [DESCONEXION]: CPU
+[INFO] 03:24:32:652 [Memoria]/(17668:17668): Cliente conectado a Memoria
+[INFO] 03:24:32:652 [Memoria]/(17668:17668): [THREAD] Creo hilo para atender
+[INFO] 03:24:32:659 [Memoria]/(17668:17741): !!!!! FILESYSTEM CONECTADO !!!!!
+[INFO] 03:24:50:498 [Memoria]/(17668:17668): Cliente conectado a Memoria
+[INFO] 03:24:50:498 [Memoria]/(17668:17668): [THREAD] Creo hilo para atender
+[INFO] 03:24:50:498 [Memoria]/(17668:17757): !!!!! CPU CONECTADO !!!!!
+[INFO] 03:24:51:499 [Memoria]/(17668:17668): Cliente conectado a Memoria
+[INFO] 03:24:51:499 [Memoria]/(17668:17668): [THREAD] Creo hilo para atender
+[INFO] 03:24:51:499 [Memoria]/(17668:17759): !!!!! KERNEL CONECTADO !!!!!
+[ERROR] 03:25:14:080 [Memoria]/(17668:17759): [DESCONEXION]: KERNEL
+[ERROR] 03:25:14:081 [Memoria]/(17668:17757): [DESCONEXION]: CPU
+[ERROR] 03:25:14:082 [Memoria]/(17668:17741): [DESCONEXION]: FILESYSTEM
+[INFO] 03:25:19:034 [Memoria]/(17668:17668): Cliente conectado a Memoria
+[INFO] 03:25:19:034 [Memoria]/(17668:17668): [THREAD] Creo hilo para atender
+[INFO] 03:25:19:037 [Memoria]/(17668:17771): !!!!! FILESYSTEM CONECTADO !!!!!
+[INFO] 03:25:21:051 [Memoria]/(17668:17668): Cliente conectado a Memoria
+[INFO] 03:25:21:051 [Memoria]/(17668:17668): [THREAD] Creo hilo para atender
+[INFO] 03:25:21:052 [Memoria]/(17668:17778): !!!!! CPU CONECTADO !!!!!
+[INFO] 03:25:31:686 [Memoria]/(17668:17668): Cliente conectado a Memoria
+[INFO] 03:25:31:686 [Memoria]/(17668:17668): [THREAD] Creo hilo para atender
+[INFO] 03:25:31:686 [Memoria]/(17668:17782): !!!!! KERNEL CONECTADO !!!!!
+[INFO] 03:26:09:708 [Memoria]/(17668:17782): [Kernel] -> Peticion de creacion de proceso nuevo
+[INFO] 03:26:09:708 [Memoria]/(17668:17782): Intruccion: [SET AX 1]
+[INFO] 03:26:09:708 [Memoria]/(17668:17782): Intruccion: [SET BX 1]
+[INFO] 03:26:09:708 [Memoria]/(17668:17782): Intruccion: [SUM AX BX]
+[INFO] 03:26:09:708 [Memoria]/(17668:17782): Intruccion: [SUM AX BX]
+[INFO] 03:26:09:708 [Memoria]/(17668:17782): Intruccion: [SUM AX BX]
+[INFO] 03:26:09:708 [Memoria]/(17668:17782): Intruccion: [SUM AX BX]
+[INFO] 03:26:09:708 [Memoria]/(17668:17782): Intruccion: [SUM AX BX]
+[INFO] 03:26:09:708 [Memoria]/(17668:17782): Intruccion: [SUM AX BX]
+[INFO] 03:26:09:708 [Memoria]/(17668:17782): Intruccion: [SUM AX BX]
+[INFO] 03:26:09:708 [Memoria]/(17668:17782): Intruccion: [SUM AX BX]
+[INFO] 03:26:09:708 [Memoria]/(17668:17782): Intruccion: [SUM AX BX]
+[INFO] 03:26:09:708 [Memoria]/(17668:17782): Intruccion: [SUM AX BX]
+[INFO] 03:26:09:708 [Memoria]/(17668:17782): Intruccion: [SET CX 1]
+[INFO] 03:26:09:708 [Memoria]/(17668:17782): Intruccion: [SET DX 1]
+[INFO] 03:26:09:708 [Memoria]/(17668:17782): Intruccion: [SUM CX DX]
+[INFO] 03:26:09:708 [Memoria]/(17668:17782): Intruccion: [SUM CX DX]
+[INFO] 03:26:09:708 [Memoria]/(17668:17782): Intruccion: [SUM CX DX]
+[INFO] 03:26:09:708 [Memoria]/(17668:17782): Intruccion: [SUM CX DX]
+[INFO] 03:26:09:708 [Memoria]/(17668:17782): Intruccion: [SUM CX DX]
+[INFO] 03:26:09:708 [Memoria]/(17668:17782): Intruccion: [SUM CX DX]
+[INFO] 03:26:09:708 [Memoria]/(17668:17782): Intruccion: [SUM CX DX]
+[INFO] 03:26:09:708 [Memoria]/(17668:17782): Intruccion: [SUM CX DX]
+[INFO] 03:26:09:708 [Memoria]/(17668:17782): Intruccion: [SUM CX DX]
+[INFO] 03:26:09:708 [Memoria]/(17668:17782): Intruccion: [SUM CX DX]
+[INFO] 03:26:09:708 [Memoria]/(17668:17782): Intruccion: [SUM BX DX]
+[INFO] 03:26:09:708 [Memoria]/(17668:17782): Intruccion: [SUM BX DX]
+[INFO] 03:26:09:708 [Memoria]/(17668:17782): Intruccion: [SUM BX DX]
+[INFO] 03:26:09:708 [Memoria]/(17668:17782): Intruccion: [SUM BX DX]
+[INFO] 03:26:09:708 [Memoria]/(17668:17782): Intruccion: [SUM BX DX]
+[INFO] 03:26:09:708 [Memoria]/(17668:17782): Intruccion: [SUM BX DX]
+[INFO] 03:26:09:708 [Memoria]/(17668:17782): Intruccion: [SUM BX DX]
+[INFO] 03:26:09:708 [Memoria]/(17668:17782): Intruccion: [SUM BX DX]
+[INFO] 03:26:09:708 [Memoria]/(17668:17782): Intruccion: [SUM BX DX]
+[INFO] 03:26:09:708 [Memoria]/(17668:17782): Intruccion: [SUM BX DX]
+[INFO] 03:26:09:708 [Memoria]/(17668:17782): Intruccion: [EXIT]
+[INFO] 03:26:11:710 [Memoria]/(17668:17782): [Kernel] -> Peticion de creacion de proceso nuevo
+[INFO] 03:26:11:711 [Memoria]/(17668:17782): Intruccion: [SET AX 1]
+[INFO] 03:26:11:711 [Memoria]/(17668:17782): Intruccion: [SET BX 1]
+[INFO] 03:26:11:711 [Memoria]/(17668:17782): Intruccion: [SET CX 1]
+[INFO] 03:26:11:711 [Memoria]/(17668:17782): Intruccion: [SET DX 1]
+[INFO] 03:26:11:711 [Memoria]/(17668:17782): Intruccion: [SUM AX BX]
+[INFO] 03:26:11:711 [Memoria]/(17668:17782): Intruccion: [SUM CX DX]
+[INFO] 03:26:11:711 [Memoria]/(17668:17782): Intruccion: [SUM AX BX]
+[INFO] 03:26:11:711 [Memoria]/(17668:17782): Intruccion: [SUM CX DX]
+[INFO] 03:26:11:711 [Memoria]/(17668:17782): Intruccion: [SUM AX BX]
+[INFO] 03:26:11:711 [Memoria]/(17668:17782): Intruccion: [SUM CX DX]
+[INFO] 03:26:11:711 [Memoria]/(17668:17782): Intruccion: [SUM AX BX]
+[INFO] 03:26:11:711 [Memoria]/(17668:17782): Intruccion: [SUM CX DX]
+[INFO] 03:26:11:711 [Memoria]/(17668:17782): Intruccion: [SUM AX BX]
+[INFO] 03:26:11:711 [Memoria]/(17668:17782): Intruccion: [SUM CX DX]
+[INFO] 03:26:11:711 [Memoria]/(17668:17782): Intruccion: [SUM AX BX]
+[INFO] 03:26:11:711 [Memoria]/(17668:17782): Intruccion: [SUM CX DX]
+[INFO] 03:26:11:711 [Memoria]/(17668:17782): Intruccion: [SUM AX BX]
+[INFO] 03:26:11:711 [Memoria]/(17668:17782): Intruccion: [SUM CX DX]
+[INFO] 03:26:11:711 [Memoria]/(17668:17782): Intruccion: [EXIT]
+[INFO] 03:26:13:712 [Memoria]/(17668:17782): [Kernel] -> Peticion de creacion de proceso nuevo
+[INFO] 03:26:13:712 [Memoria]/(17668:17782): Intruccion: [SET AX 1]
+[INFO] 03:26:13:712 [Memoria]/(17668:17782): Intruccion: [SET BX 1]
+[INFO] 03:26:13:712 [Memoria]/(17668:17782): Intruccion: [SET CX 1]
+[INFO] 03:26:13:712 [Memoria]/(17668:17782): Intruccion: [SET DX 1]
+[INFO] 03:26:13:712 [Memoria]/(17668:17782): Intruccion: [SUM AX BX]
+[INFO] 03:26:13:712 [Memoria]/(17668:17782): Intruccion: [SUM CX DX]
+[INFO] 03:26:13:712 [Memoria]/(17668:17782): Intruccion: [EXIT]
+[INFO] 03:26:15:716 [Memoria]/(17668:17771): FILESYSTEM => <PID:1> <cant_pag:2> - <cant_bloques:2>
+[WARNING] 03:26:15:716 [Memoria]/(17668:17771): Se Cargaron pos_SWAP en proceso <PID:1>
+[INFO] 03:26:20:776 [Memoria]/(17668:17771): FILESYSTEM => <PID:2> <cant_pag:2> - <cant_bloques:2>
+[WARNING] 03:26:20:777 [Memoria]/(17668:17771): Se Cargaron pos_SWAP en proceso <PID:2>
+[INFO] 03:26:25:779 [Memoria]/(17668:17771): FILESYSTEM => <PID:3> <cant_pag:2> - <cant_bloques:2>
+[WARNING] 03:26:25:779 [Memoria]/(17668:17771): Se Cargaron pos_SWAP en proceso <PID:3>
+[WARNING] 03:26:46:849 [Memoria]/(17668:17782): :::::> DELETE <PID:1>
+[WARNING] 03:27:06:889 [Memoria]/(17668:17782): :::::> DELETE <PID:2>
+[WARNING] 03:27:14:917 [Memoria]/(17668:17782): :::::> DELETE <PID:3>
+[ERROR] 03:27:25:554 [Memoria]/(17668:17782): [DESCONEXION]: KERNEL
+[ERROR] 03:27:25:555 [Memoria]/(17668:17778): [DESCONEXION]: CPU
+[ERROR] 03:27:25:555 [Memoria]/(17668:17771): [DESCONEXION]: FILESYSTEM
+[INFO] 03:31:24:406 [Memoria]/(17668:17668): Cliente conectado a Memoria
+[INFO] 03:31:24:407 [Memoria]/(17668:17668): [THREAD] Creo hilo para atender
+[INFO] 03:31:24:408 [Memoria]/(17668:17906): !!!!! FILESYSTEM CONECTADO !!!!!
+[INFO] 03:31:26:259 [Memoria]/(17668:17668): Cliente conectado a Memoria
+[INFO] 03:31:26:260 [Memoria]/(17668:17668): [THREAD] Creo hilo para atender
+[INFO] 03:31:26:260 [Memoria]/(17668:17913): !!!!! CPU CONECTADO !!!!!
+[INFO] 03:31:27:611 [Memoria]/(17668:17668): Cliente conectado a Memoria
+[INFO] 03:31:27:611 [Memoria]/(17668:17668): [THREAD] Creo hilo para atender
+[INFO] 03:31:27:614 [Memoria]/(17668:17915): !!!!! KERNEL CONECTADO !!!!!
+[INFO] 03:32:40:460 [Memoria]/(17668:17915): [Kernel] -> Peticion de creacion de proceso nuevo
+[INFO] 03:32:40:460 [Memoria]/(17668:17915): Intruccion: [SET AX 1]
+[INFO] 03:32:40:460 [Memoria]/(17668:17915): Intruccion: [SET BX 1]
+[INFO] 03:32:40:460 [Memoria]/(17668:17915): Intruccion: [SUM AX BX]
+[INFO] 03:32:40:460 [Memoria]/(17668:17915): Intruccion: [SUM AX BX]
+[INFO] 03:32:40:460 [Memoria]/(17668:17915): Intruccion: [SUM AX BX]
+[INFO] 03:32:40:460 [Memoria]/(17668:17915): Intruccion: [SUM AX BX]
+[INFO] 03:32:40:460 [Memoria]/(17668:17915): Intruccion: [SUM AX BX]
+[INFO] 03:32:40:460 [Memoria]/(17668:17915): Intruccion: [SUM AX BX]
+[INFO] 03:32:40:460 [Memoria]/(17668:17915): Intruccion: [SUM AX BX]
+[INFO] 03:32:40:460 [Memoria]/(17668:17915): Intruccion: [SUM AX BX]
+[INFO] 03:32:40:460 [Memoria]/(17668:17915): Intruccion: [SUM AX BX]
+[INFO] 03:32:40:460 [Memoria]/(17668:17915): Intruccion: [SUM AX BX]
+[INFO] 03:32:40:460 [Memoria]/(17668:17915): Intruccion: [SET CX 1]
+[INFO] 03:32:40:460 [Memoria]/(17668:17915): Intruccion: [SET DX 1]
+[INFO] 03:32:40:460 [Memoria]/(17668:17915): Intruccion: [SUM CX DX]
+[INFO] 03:32:40:460 [Memoria]/(17668:17915): Intruccion: [SUM CX DX]
+[INFO] 03:32:40:460 [Memoria]/(17668:17915): Intruccion: [SUM CX DX]
+[INFO] 03:32:40:460 [Memoria]/(17668:17915): Intruccion: [SUM CX DX]
+[INFO] 03:32:40:460 [Memoria]/(17668:17915): Intruccion: [SUM CX DX]
+[INFO] 03:32:40:460 [Memoria]/(17668:17915): Intruccion: [SUM CX DX]
+[INFO] 03:32:40:460 [Memoria]/(17668:17915): Intruccion: [SUM CX DX]
+[INFO] 03:32:40:460 [Memoria]/(17668:17915): Intruccion: [SUM CX DX]
+[INFO] 03:32:40:460 [Memoria]/(17668:17915): Intruccion: [SUM CX DX]
+[INFO] 03:32:40:460 [Memoria]/(17668:17915): Intruccion: [SUM CX DX]
+[INFO] 03:32:40:460 [Memoria]/(17668:17915): Intruccion: [SUM BX DX]
+[INFO] 03:32:40:460 [Memoria]/(17668:17915): Intruccion: [SUM BX DX]
+[INFO] 03:32:40:460 [Memoria]/(17668:17915): Intruccion: [SUM BX DX]
+[INFO] 03:32:40:460 [Memoria]/(17668:17915): Intruccion: [SUM BX DX]
+[INFO] 03:32:40:460 [Memoria]/(17668:17915): Intruccion: [SUM BX DX]
+[INFO] 03:32:40:460 [Memoria]/(17668:17915): Intruccion: [SUM BX DX]
+[INFO] 03:32:40:460 [Memoria]/(17668:17915): Intruccion: [SUM BX DX]
+[INFO] 03:32:40:460 [Memoria]/(17668:17915): Intruccion: [SUM BX DX]
+[INFO] 03:32:40:460 [Memoria]/(17668:17915): Intruccion: [SUM BX DX]
+[INFO] 03:32:40:460 [Memoria]/(17668:17915): Intruccion: [SUM BX DX]
+[INFO] 03:32:40:460 [Memoria]/(17668:17915): Intruccion: [EXIT]
+[INFO] 03:32:42:512 [Memoria]/(17668:17915): [Kernel] -> Peticion de creacion de proceso nuevo
+[INFO] 03:32:42:512 [Memoria]/(17668:17915): Intruccion: [SET AX 1]
+[INFO] 03:32:42:512 [Memoria]/(17668:17915): Intruccion: [SET BX 1]
+[INFO] 03:32:42:512 [Memoria]/(17668:17915): Intruccion: [SET CX 1]
+[INFO] 03:32:42:512 [Memoria]/(17668:17915): Intruccion: [SET DX 1]
+[INFO] 03:32:42:512 [Memoria]/(17668:17915): Intruccion: [SUM AX BX]
+[INFO] 03:32:42:512 [Memoria]/(17668:17915): Intruccion: [SUM CX DX]
+[INFO] 03:32:42:512 [Memoria]/(17668:17915): Intruccion: [SUM AX BX]
+[INFO] 03:32:42:512 [Memoria]/(17668:17915): Intruccion: [SUM CX DX]
+[INFO] 03:32:42:512 [Memoria]/(17668:17915): Intruccion: [SUM AX BX]
+[INFO] 03:32:42:512 [Memoria]/(17668:17915): Intruccion: [SUM CX DX]
+[INFO] 03:32:42:512 [Memoria]/(17668:17915): Intruccion: [SUM AX BX]
+[INFO] 03:32:42:512 [Memoria]/(17668:17915): Intruccion: [SUM CX DX]
+[INFO] 03:32:42:512 [Memoria]/(17668:17915): Intruccion: [SUM AX BX]
+[INFO] 03:32:42:512 [Memoria]/(17668:17915): Intruccion: [SUM CX DX]
+[INFO] 03:32:42:512 [Memoria]/(17668:17915): Intruccion: [SUM AX BX]
+[INFO] 03:32:42:512 [Memoria]/(17668:17915): Intruccion: [SUM CX DX]
+[INFO] 03:32:42:512 [Memoria]/(17668:17915): Intruccion: [SUM AX BX]
+[INFO] 03:32:42:512 [Memoria]/(17668:17915): Intruccion: [SUM CX DX]
+[INFO] 03:32:42:512 [Memoria]/(17668:17915): Intruccion: [EXIT]
+[INFO] 03:32:44:515 [Memoria]/(17668:17915): [Kernel] -> Peticion de creacion de proceso nuevo
+[INFO] 03:32:44:515 [Memoria]/(17668:17915): Intruccion: [SET AX 1]
+[INFO] 03:32:44:515 [Memoria]/(17668:17915): Intruccion: [SET BX 1]
+[INFO] 03:32:44:515 [Memoria]/(17668:17915): Intruccion: [SET CX 1]
+[INFO] 03:32:44:515 [Memoria]/(17668:17915): Intruccion: [SET DX 1]
+[INFO] 03:32:44:515 [Memoria]/(17668:17915): Intruccion: [SUM AX BX]
+[INFO] 03:32:44:515 [Memoria]/(17668:17915): Intruccion: [SUM CX DX]
+[INFO] 03:32:44:516 [Memoria]/(17668:17915): Intruccion: [EXIT]
+[INFO] 03:32:46:467 [Memoria]/(17668:17906): FILESYSTEM => <PID:1> <cant_pag:2> - <cant_bloques:2>
+[WARNING] 03:32:46:467 [Memoria]/(17668:17906): Se Cargaron pos_SWAP en proceso <PID:1>
+[INFO] 03:32:51:470 [Memoria]/(17668:17906): FILESYSTEM => <PID:2> <cant_pag:2> - <cant_bloques:2>
+[WARNING] 03:32:51:470 [Memoria]/(17668:17906): Se Cargaron pos_SWAP en proceso <PID:2>
+[INFO] 03:32:56:476 [Memoria]/(17668:17906): FILESYSTEM => <PID:3> <cant_pag:2> - <cant_bloques:2>
+[WARNING] 03:32:56:476 [Memoria]/(17668:17906): Se Cargaron pos_SWAP en proceso <PID:3>
+[WARNING] 03:33:17:611 [Memoria]/(17668:17915): :::::> DELETE <PID:1>
+[WARNING] 03:33:37:645 [Memoria]/(17668:17915): :::::> DELETE <PID:2>
+[WARNING] 03:33:45:661 [Memoria]/(17668:17915): :::::> DELETE <PID:3>
+[ERROR] 03:35:10:380 [Memoria]/(17668:17915): [DESCONEXION]: KERNEL
+[ERROR] 03:35:10:381 [Memoria]/(17668:17906): [DESCONEXION]: FILESYSTEM
+[ERROR] 03:35:10:381 [Memoria]/(17668:17913): [DESCONEXION]: CPU
+[INFO] 03:35:25:566 [Memoria]/(17668:17668): Cliente conectado a Memoria
+[INFO] 03:35:25:567 [Memoria]/(17668:17668): [THREAD] Creo hilo para atender
+[INFO] 03:35:25:576 [Memoria]/(17668:18022): !!!!! FILESYSTEM CONECTADO !!!!!
+[INFO] 03:35:26:601 [Memoria]/(17668:17668): Cliente conectado a Memoria
+[INFO] 03:35:26:601 [Memoria]/(17668:17668): [THREAD] Creo hilo para atender
+[INFO] 03:35:26:601 [Memoria]/(17668:18029): !!!!! CPU CONECTADO !!!!!
+[INFO] 03:35:27:974 [Memoria]/(17668:17668): Cliente conectado a Memoria
+[INFO] 03:35:27:974 [Memoria]/(17668:17668): [THREAD] Creo hilo para atender
+[INFO] 03:35:27:974 [Memoria]/(17668:18031): !!!!! KERNEL CONECTADO !!!!!
+[INFO] 03:36:00:471 [Memoria]/(17668:18031): [Kernel] -> Peticion de creacion de proceso nuevo
+[INFO] 03:36:00:472 [Memoria]/(17668:18031): Intruccion: [SET AX 1]
+[INFO] 03:36:00:472 [Memoria]/(17668:18031): Intruccion: [SET BX 1]
+[INFO] 03:36:00:472 [Memoria]/(17668:18031): Intruccion: [SUM AX BX]
+[INFO] 03:36:00:472 [Memoria]/(17668:18031): Intruccion: [SUM AX BX]
+[INFO] 03:36:00:472 [Memoria]/(17668:18031): Intruccion: [SUM AX BX]
+[INFO] 03:36:00:472 [Memoria]/(17668:18031): Intruccion: [SUM AX BX]
+[INFO] 03:36:00:472 [Memoria]/(17668:18031): Intruccion: [SUM AX BX]
+[INFO] 03:36:00:472 [Memoria]/(17668:18031): Intruccion: [SUM AX BX]
+[INFO] 03:36:00:472 [Memoria]/(17668:18031): Intruccion: [SUM AX BX]
+[INFO] 03:36:00:472 [Memoria]/(17668:18031): Intruccion: [SUM AX BX]
+[INFO] 03:36:00:472 [Memoria]/(17668:18031): Intruccion: [SUM AX BX]
+[INFO] 03:36:00:472 [Memoria]/(17668:18031): Intruccion: [SUM AX BX]
+[INFO] 03:36:00:472 [Memoria]/(17668:18031): Intruccion: [SET CX 1]
+[INFO] 03:36:00:472 [Memoria]/(17668:18031): Intruccion: [SET DX 1]
+[INFO] 03:36:00:472 [Memoria]/(17668:18031): Intruccion: [SUM CX DX]
+[INFO] 03:36:00:472 [Memoria]/(17668:18031): Intruccion: [SUM CX DX]
+[INFO] 03:36:00:472 [Memoria]/(17668:18031): Intruccion: [SUM CX DX]
+[INFO] 03:36:00:472 [Memoria]/(17668:18031): Intruccion: [SUM CX DX]
+[INFO] 03:36:00:472 [Memoria]/(17668:18031): Intruccion: [SUM CX DX]
+[INFO] 03:36:00:472 [Memoria]/(17668:18031): Intruccion: [SUM CX DX]
+[INFO] 03:36:00:472 [Memoria]/(17668:18031): Intruccion: [SUM CX DX]
+[INFO] 03:36:00:472 [Memoria]/(17668:18031): Intruccion: [SUM CX DX]
+[INFO] 03:36:00:472 [Memoria]/(17668:18031): Intruccion: [SUM CX DX]
+[INFO] 03:36:00:472 [Memoria]/(17668:18031): Intruccion: [SUM CX DX]
+[INFO] 03:36:00:472 [Memoria]/(17668:18031): Intruccion: [SUM BX DX]
+[INFO] 03:36:00:472 [Memoria]/(17668:18031): Intruccion: [SUM BX DX]
+[INFO] 03:36:00:472 [Memoria]/(17668:18031): Intruccion: [SUM BX DX]
+[INFO] 03:36:00:472 [Memoria]/(17668:18031): Intruccion: [SUM BX DX]
+[INFO] 03:36:00:472 [Memoria]/(17668:18031): Intruccion: [SUM BX DX]
+[INFO] 03:36:00:472 [Memoria]/(17668:18031): Intruccion: [SUM BX DX]
+[INFO] 03:36:00:472 [Memoria]/(17668:18031): Intruccion: [SUM BX DX]
+[INFO] 03:36:00:472 [Memoria]/(17668:18031): Intruccion: [SUM BX DX]
+[INFO] 03:36:00:472 [Memoria]/(17668:18031): Intruccion: [SUM BX DX]
+[INFO] 03:36:00:472 [Memoria]/(17668:18031): Intruccion: [SUM BX DX]
+[INFO] 03:36:00:472 [Memoria]/(17668:18031): Intruccion: [EXIT]
+[INFO] 03:36:02:480 [Memoria]/(17668:18031): [Kernel] -> Peticion de creacion de proceso nuevo
+[INFO] 03:36:02:480 [Memoria]/(17668:18031): Intruccion: [SET AX 1]
+[INFO] 03:36:02:480 [Memoria]/(17668:18031): Intruccion: [SET BX 1]
+[INFO] 03:36:02:480 [Memoria]/(17668:18031): Intruccion: [SET CX 1]
+[INFO] 03:36:02:480 [Memoria]/(17668:18031): Intruccion: [SET DX 1]
+[INFO] 03:36:02:480 [Memoria]/(17668:18031): Intruccion: [SUM AX BX]
+[INFO] 03:36:02:480 [Memoria]/(17668:18031): Intruccion: [SUM CX DX]
+[INFO] 03:36:02:480 [Memoria]/(17668:18031): Intruccion: [SUM AX BX]
+[INFO] 03:36:02:480 [Memoria]/(17668:18031): Intruccion: [SUM CX DX]
+[INFO] 03:36:02:480 [Memoria]/(17668:18031): Intruccion: [SUM AX BX]
+[INFO] 03:36:02:480 [Memoria]/(17668:18031): Intruccion: [SUM CX DX]
+[INFO] 03:36:02:480 [Memoria]/(17668:18031): Intruccion: [SUM AX BX]
+[INFO] 03:36:02:480 [Memoria]/(17668:18031): Intruccion: [SUM CX DX]
+[INFO] 03:36:02:480 [Memoria]/(17668:18031): Intruccion: [SUM AX BX]
+[INFO] 03:36:02:480 [Memoria]/(17668:18031): Intruccion: [SUM CX DX]
+[INFO] 03:36:02:480 [Memoria]/(17668:18031): Intruccion: [SUM AX BX]
+[INFO] 03:36:02:480 [Memoria]/(17668:18031): Intruccion: [SUM CX DX]
+[INFO] 03:36:02:480 [Memoria]/(17668:18031): Intruccion: [SUM AX BX]
+[INFO] 03:36:02:480 [Memoria]/(17668:18031): Intruccion: [SUM CX DX]
+[INFO] 03:36:02:480 [Memoria]/(17668:18031): Intruccion: [EXIT]
+[INFO] 03:36:04:483 [Memoria]/(17668:18031): [Kernel] -> Peticion de creacion de proceso nuevo
+[INFO] 03:36:04:483 [Memoria]/(17668:18031): Intruccion: [SET AX 1]
+[INFO] 03:36:04:483 [Memoria]/(17668:18031): Intruccion: [SET BX 1]
+[INFO] 03:36:04:483 [Memoria]/(17668:18031): Intruccion: [SET CX 1]
+[INFO] 03:36:04:483 [Memoria]/(17668:18031): Intruccion: [SET DX 1]
+[INFO] 03:36:04:483 [Memoria]/(17668:18031): Intruccion: [SUM AX BX]
+[INFO] 03:36:04:483 [Memoria]/(17668:18031): Intruccion: [SUM CX DX]
+[INFO] 03:36:04:483 [Memoria]/(17668:18031): Intruccion: [EXIT]
+[INFO] 03:36:06:477 [Memoria]/(17668:18022): FILESYSTEM => <PID:1> <cant_pag:2> - <cant_bloques:2>
+[WARNING] 03:36:06:477 [Memoria]/(17668:18022): Se Cargaron pos_SWAP en proceso <PID:1>
+[INFO] 03:36:11:480 [Memoria]/(17668:18022): FILESYSTEM => <PID:2> <cant_pag:2> - <cant_bloques:2>
+[WARNING] 03:36:11:480 [Memoria]/(17668:18022): Se Cargaron pos_SWAP en proceso <PID:2>
+[INFO] 03:36:16:483 [Memoria]/(17668:18022): FILESYSTEM => <PID:3> <cant_pag:2> - <cant_bloques:2>
+[WARNING] 03:36:16:483 [Memoria]/(17668:18022): Se Cargaron pos_SWAP en proceso <PID:3>
+[WARNING] 03:36:37:572 [Memoria]/(17668:18031): :::::> DELETE <PID:1>
+[WARNING] 03:36:57:639 [Memoria]/(17668:18031): :::::> DELETE <PID:2>
+[INFO] 03:36:58:918 [Memoria]/(17668:18031): [Kernel] -> Peticion de creacion de proceso nuevo
+[INFO] 03:36:58:918 [Memoria]/(17668:18031): Intruccion: [SET AX 1]
+[INFO] 03:36:58:918 [Memoria]/(17668:18031): Intruccion: [SET BX 1]
+[INFO] 03:36:58:918 [Memoria]/(17668:18031): Intruccion: [SUM AX BX]
+[INFO] 03:36:58:918 [Memoria]/(17668:18031): Intruccion: [SUM AX BX]
+[INFO] 03:36:58:918 [Memoria]/(17668:18031): Intruccion: [SUM AX BX]
+[INFO] 03:36:58:918 [Memoria]/(17668:18031): Intruccion: [SUM AX BX]
+[INFO] 03:36:58:918 [Memoria]/(17668:18031): Intruccion: [SUM AX BX]
+[INFO] 03:36:58:918 [Memoria]/(17668:18031): Intruccion: [SUM AX BX]
+[INFO] 03:36:58:918 [Memoria]/(17668:18031): Intruccion: [SUM AX BX]
+[INFO] 03:36:58:918 [Memoria]/(17668:18031): Intruccion: [SUM AX BX]
+[INFO] 03:36:58:918 [Memoria]/(17668:18031): Intruccion: [SUM AX BX]
+[INFO] 03:36:58:918 [Memoria]/(17668:18031): Intruccion: [SUM AX BX]
+[INFO] 03:36:58:918 [Memoria]/(17668:18031): Intruccion: [SET CX 1]
+[INFO] 03:36:58:918 [Memoria]/(17668:18031): Intruccion: [SET DX 1]
+[INFO] 03:36:58:918 [Memoria]/(17668:18031): Intruccion: [SUM CX DX]
+[INFO] 03:36:58:918 [Memoria]/(17668:18031): Intruccion: [SUM CX DX]
+[INFO] 03:36:58:918 [Memoria]/(17668:18031): Intruccion: [SUM CX DX]
+[INFO] 03:36:58:918 [Memoria]/(17668:18031): Intruccion: [SUM CX DX]
+[INFO] 03:36:58:918 [Memoria]/(17668:18031): Intruccion: [SUM CX DX]
+[INFO] 03:36:58:918 [Memoria]/(17668:18031): Intruccion: [SUM CX DX]
+[INFO] 03:36:58:918 [Memoria]/(17668:18031): Intruccion: [SUM CX DX]
+[INFO] 03:36:58:918 [Memoria]/(17668:18031): Intruccion: [SUM CX DX]
+[INFO] 03:36:58:918 [Memoria]/(17668:18031): Intruccion: [SUM CX DX]
+[INFO] 03:36:58:918 [Memoria]/(17668:18031): Intruccion: [SUM CX DX]
+[INFO] 03:36:58:918 [Memoria]/(17668:18031): Intruccion: [SUM BX DX]
+[INFO] 03:36:58:918 [Memoria]/(17668:18031): Intruccion: [SUM BX DX]
+[INFO] 03:36:58:918 [Memoria]/(17668:18031): Intruccion: [SUM BX DX]
+[INFO] 03:36:58:918 [Memoria]/(17668:18031): Intruccion: [SUM BX DX]
+[INFO] 03:36:58:918 [Memoria]/(17668:18031): Intruccion: [SUM BX DX]
+[INFO] 03:36:58:918 [Memoria]/(17668:18031): Intruccion: [SUM BX DX]
+[INFO] 03:36:58:918 [Memoria]/(17668:18031): Intruccion: [SUM BX DX]
+[INFO] 03:36:58:918 [Memoria]/(17668:18031): Intruccion: [SUM BX DX]
+[INFO] 03:36:58:918 [Memoria]/(17668:18031): Intruccion: [SUM BX DX]
+[INFO] 03:36:58:918 [Memoria]/(17668:18031): Intruccion: [SUM BX DX]
+[INFO] 03:36:58:918 [Memoria]/(17668:18031): Intruccion: [EXIT]
+[INFO] 03:37:01:741 [Memoria]/(17668:18031): [Kernel] -> Peticion de creacion de proceso nuevo
+[INFO] 03:37:01:741 [Memoria]/(17668:18031): Intruccion: [SET AX 1]
+[INFO] 03:37:01:741 [Memoria]/(17668:18031): Intruccion: [SET BX 1]
+[INFO] 03:37:01:741 [Memoria]/(17668:18031): Intruccion: [SUM AX BX]
+[INFO] 03:37:01:741 [Memoria]/(17668:18031): Intruccion: [SUM AX BX]
+[INFO] 03:37:01:741 [Memoria]/(17668:18031): Intruccion: [SUM AX BX]
+[INFO] 03:37:01:741 [Memoria]/(17668:18031): Intruccion: [SUM AX BX]
+[INFO] 03:37:01:741 [Memoria]/(17668:18031): Intruccion: [SUM AX BX]
+[INFO] 03:37:01:741 [Memoria]/(17668:18031): Intruccion: [SUM AX BX]
+[INFO] 03:37:01:741 [Memoria]/(17668:18031): Intruccion: [SUM AX BX]
+[INFO] 03:37:01:741 [Memoria]/(17668:18031): Intruccion: [SUM AX BX]
+[INFO] 03:37:01:741 [Memoria]/(17668:18031): Intruccion: [SUM AX BX]
+[INFO] 03:37:01:741 [Memoria]/(17668:18031): Intruccion: [SUM AX BX]
+[INFO] 03:37:01:741 [Memoria]/(17668:18031): Intruccion: [SET CX 1]
+[INFO] 03:37:01:741 [Memoria]/(17668:18031): Intruccion: [SET DX 1]
+[INFO] 03:37:01:741 [Memoria]/(17668:18031): Intruccion: [SUM CX DX]
+[INFO] 03:37:01:741 [Memoria]/(17668:18031): Intruccion: [SUM CX DX]
+[INFO] 03:37:01:741 [Memoria]/(17668:18031): Intruccion: [SUM CX DX]
+[INFO] 03:37:01:742 [Memoria]/(17668:18031): Intruccion: [SUM CX DX]
+[INFO] 03:37:01:742 [Memoria]/(17668:18031): Intruccion: [SUM CX DX]
+[INFO] 03:37:01:742 [Memoria]/(17668:18031): Intruccion: [SUM CX DX]
+[INFO] 03:37:01:742 [Memoria]/(17668:18031): Intruccion: [SUM CX DX]
+[INFO] 03:37:01:742 [Memoria]/(17668:18031): Intruccion: [SUM CX DX]
+[INFO] 03:37:01:742 [Memoria]/(17668:18031): Intruccion: [SUM CX DX]
+[INFO] 03:37:01:742 [Memoria]/(17668:18031): Intruccion: [SUM CX DX]
+[INFO] 03:37:01:742 [Memoria]/(17668:18031): Intruccion: [SUM BX DX]
+[INFO] 03:37:01:742 [Memoria]/(17668:18031): Intruccion: [SUM BX DX]
+[INFO] 03:37:01:742 [Memoria]/(17668:18031): Intruccion: [SUM BX DX]
+[INFO] 03:37:01:742 [Memoria]/(17668:18031): Intruccion: [SUM BX DX]
+[INFO] 03:37:01:742 [Memoria]/(17668:18031): Intruccion: [SUM BX DX]
+[INFO] 03:37:01:742 [Memoria]/(17668:18031): Intruccion: [SUM BX DX]
+[INFO] 03:37:01:742 [Memoria]/(17668:18031): Intruccion: [SUM BX DX]
+[INFO] 03:37:01:742 [Memoria]/(17668:18031): Intruccion: [SUM BX DX]
+[INFO] 03:37:01:742 [Memoria]/(17668:18031): Intruccion: [SUM BX DX]
+[INFO] 03:37:01:742 [Memoria]/(17668:18031): Intruccion: [SUM BX DX]
+[INFO] 03:37:01:742 [Memoria]/(17668:18031): Intruccion: [EXIT]
+[INFO] 03:37:03:760 [Memoria]/(17668:18031): [Kernel] -> Peticion de creacion de proceso nuevo
+[INFO] 03:37:03:760 [Memoria]/(17668:18031): Intruccion: [SET AX 1]
+[INFO] 03:37:03:760 [Memoria]/(17668:18031): Intruccion: [SET BX 1]
+[INFO] 03:37:03:760 [Memoria]/(17668:18031): Intruccion: [SUM AX BX]
+[INFO] 03:37:03:760 [Memoria]/(17668:18031): Intruccion: [SUM AX BX]
+[INFO] 03:37:03:760 [Memoria]/(17668:18031): Intruccion: [SUM AX BX]
+[INFO] 03:37:03:760 [Memoria]/(17668:18031): Intruccion: [SUM AX BX]
+[INFO] 03:37:03:760 [Memoria]/(17668:18031): Intruccion: [SUM AX BX]
+[INFO] 03:37:03:760 [Memoria]/(17668:18031): Intruccion: [SUM AX BX]
+[INFO] 03:37:03:760 [Memoria]/(17668:18031): Intruccion: [SUM AX BX]
+[INFO] 03:37:03:760 [Memoria]/(17668:18031): Intruccion: [SUM AX BX]
+[INFO] 03:37:03:761 [Memoria]/(17668:18031): Intruccion: [SUM AX BX]
+[INFO] 03:37:03:761 [Memoria]/(17668:18031): Intruccion: [SUM AX BX]
+[INFO] 03:37:03:761 [Memoria]/(17668:18031): Intruccion: [SET CX 1]
+[INFO] 03:37:03:761 [Memoria]/(17668:18031): Intruccion: [SET DX 1]
+[INFO] 03:37:03:761 [Memoria]/(17668:18031): Intruccion: [SUM CX DX]
+[INFO] 03:37:03:761 [Memoria]/(17668:18031): Intruccion: [SUM CX DX]
+[INFO] 03:37:03:761 [Memoria]/(17668:18031): Intruccion: [SUM CX DX]
+[INFO] 03:37:03:761 [Memoria]/(17668:18031): Intruccion: [SUM CX DX]
+[INFO] 03:37:03:761 [Memoria]/(17668:18031): Intruccion: [SUM CX DX]
+[INFO] 03:37:03:761 [Memoria]/(17668:18031): Intruccion: [SUM CX DX]
+[INFO] 03:37:03:761 [Memoria]/(17668:18031): Intruccion: [SUM CX DX]
+[INFO] 03:37:03:761 [Memoria]/(17668:18031): Intruccion: [SUM CX DX]
+[INFO] 03:37:03:761 [Memoria]/(17668:18031): Intruccion: [SUM CX DX]
+[INFO] 03:37:03:761 [Memoria]/(17668:18031): Intruccion: [SUM CX DX]
+[INFO] 03:37:03:761 [Memoria]/(17668:18031): Intruccion: [SUM BX DX]
+[INFO] 03:37:03:761 [Memoria]/(17668:18031): Intruccion: [SUM BX DX]
+[INFO] 03:37:03:761 [Memoria]/(17668:18031): Intruccion: [SUM BX DX]
+[INFO] 03:37:03:761 [Memoria]/(17668:18031): Intruccion: [SUM BX DX]
+[INFO] 03:37:03:761 [Memoria]/(17668:18031): Intruccion: [SUM BX DX]
+[INFO] 03:37:03:761 [Memoria]/(17668:18031): Intruccion: [SUM BX DX]
+[INFO] 03:37:03:761 [Memoria]/(17668:18031): Intruccion: [SUM BX DX]
+[INFO] 03:37:03:761 [Memoria]/(17668:18031): Intruccion: [SUM BX DX]
+[INFO] 03:37:03:761 [Memoria]/(17668:18031): Intruccion: [SUM BX DX]
+[INFO] 03:37:03:761 [Memoria]/(17668:18031): Intruccion: [SUM BX DX]
+[INFO] 03:37:03:761 [Memoria]/(17668:18031): Intruccion: [EXIT]
+[WARNING] 03:37:05:774 [Memoria]/(17668:18031): :::::> DELETE <PID:3>
+[INFO] 03:37:06:775 [Memoria]/(17668:18031): [Kernel] -> Peticion de creacion de proceso nuevo
+[INFO] 03:37:06:776 [Memoria]/(17668:18031): Intruccion: [SET AX 1]
+[INFO] 03:37:06:776 [Memoria]/(17668:18031): Intruccion: [SET BX 1]
+[INFO] 03:37:06:776 [Memoria]/(17668:18031): Intruccion: [SUM AX BX]
+[INFO] 03:37:06:776 [Memoria]/(17668:18031): Intruccion: [SUM AX BX]
+[INFO] 03:37:06:776 [Memoria]/(17668:18031): Intruccion: [SUM AX BX]
+[INFO] 03:37:06:776 [Memoria]/(17668:18031): Intruccion: [SUM AX BX]
+[INFO] 03:37:06:776 [Memoria]/(17668:18031): Intruccion: [SUM AX BX]
+[INFO] 03:37:06:776 [Memoria]/(17668:18031): Intruccion: [SUM AX BX]
+[INFO] 03:37:06:776 [Memoria]/(17668:18031): Intruccion: [SUM AX BX]
+[INFO] 03:37:06:776 [Memoria]/(17668:18031): Intruccion: [SUM AX BX]
+[INFO] 03:37:06:776 [Memoria]/(17668:18031): Intruccion: [SUM AX BX]
+[INFO] 03:37:06:776 [Memoria]/(17668:18031): Intruccion: [SUM AX BX]
+[INFO] 03:37:06:776 [Memoria]/(17668:18031): Intruccion: [SET CX 1]
+[INFO] 03:37:06:776 [Memoria]/(17668:18031): Intruccion: [SET DX 1]
+[INFO] 03:37:06:776 [Memoria]/(17668:18031): Intruccion: [SUM CX DX]
+[INFO] 03:37:06:776 [Memoria]/(17668:18031): Intruccion: [SUM CX DX]
+[INFO] 03:37:06:777 [Memoria]/(17668:18031): Intruccion: [SUM CX DX]
+[INFO] 03:37:06:777 [Memoria]/(17668:18031): Intruccion: [SUM CX DX]
+[INFO] 03:37:06:777 [Memoria]/(17668:18031): Intruccion: [SUM CX DX]
+[INFO] 03:37:06:777 [Memoria]/(17668:18031): Intruccion: [SUM CX DX]
+[INFO] 03:37:06:777 [Memoria]/(17668:18031): Intruccion: [SUM CX DX]
+[INFO] 03:37:06:777 [Memoria]/(17668:18031): Intruccion: [SUM CX DX]
+[INFO] 03:37:06:777 [Memoria]/(17668:18031): Intruccion: [SUM CX DX]
+[INFO] 03:37:06:777 [Memoria]/(17668:18031): Intruccion: [SUM CX DX]
+[INFO] 03:37:06:777 [Memoria]/(17668:18031): Intruccion: [SUM BX DX]
+[INFO] 03:37:06:777 [Memoria]/(17668:18031): Intruccion: [SUM BX DX]
+[INFO] 03:37:06:777 [Memoria]/(17668:18031): Intruccion: [SUM BX DX]
+[INFO] 03:37:06:777 [Memoria]/(17668:18031): Intruccion: [SUM BX DX]
+[INFO] 03:37:06:777 [Memoria]/(17668:18031): Intruccion: [SUM BX DX]
+[INFO] 03:37:06:777 [Memoria]/(17668:18031): Intruccion: [SUM BX DX]
+[INFO] 03:37:06:777 [Memoria]/(17668:18031): Intruccion: [SUM BX DX]
+[INFO] 03:37:06:777 [Memoria]/(17668:18031): Intruccion: [SUM BX DX]
+[INFO] 03:37:06:777 [Memoria]/(17668:18031): Intruccion: [SUM BX DX]
+[INFO] 03:37:06:777 [Memoria]/(17668:18031): Intruccion: [SUM BX DX]
+[INFO] 03:37:06:777 [Memoria]/(17668:18031): Intruccion: [EXIT]
+[INFO] 03:37:07:649 [Memoria]/(17668:18022): FILESYSTEM => <PID:4> <cant_pag:2> - <cant_bloques:2>
+[WARNING] 03:37:07:649 [Memoria]/(17668:18022): Se Cargaron pos_SWAP en proceso <PID:4>
+[INFO] 03:37:12:658 [Memoria]/(17668:18022): FILESYSTEM => <PID:5> <cant_pag:2> - <cant_bloques:2>
+[WARNING] 03:37:12:659 [Memoria]/(17668:18022): Se Cargaron pos_SWAP en proceso <PID:5>
+[INFO] 03:37:17:666 [Memoria]/(17668:18022): FILESYSTEM => <PID:6> <cant_pag:2> - <cant_bloques:2>
+[WARNING] 03:37:17:666 [Memoria]/(17668:18022): Se Cargaron pos_SWAP en proceso <PID:6>
+[INFO] 03:37:27:676 [Memoria]/(17668:18022): FILESYSTEM => <PID:7> <cant_pag:2> - <cant_bloques:2>
+[WARNING] 03:37:27:676 [Memoria]/(17668:18022): Se Cargaron pos_SWAP en proceso <PID:7>
+[WARNING] 03:37:41:854 [Memoria]/(17668:18031): :::::> DELETE <PID:4>
+[ERROR] 03:38:02:524 [Memoria]/(17668:18031): [DESCONEXION]: KERNEL
+[ERROR] 03:38:02:525 [Memoria]/(17668:18022): [DESCONEXION]: FILESYSTEM
+[ERROR] 03:38:03:007 [Memoria]/(17668:18029): [DESCONEXION]: CPU
+[INFO] 03:45:50:776 [Memoria]/(17668:17668): Cliente conectado a Memoria
+[INFO] 03:45:50:776 [Memoria]/(17668:17668): [THREAD] Creo hilo para atender
+[INFO] 03:45:50:777 [Memoria]/(17668:18988): !!!!! FILESYSTEM CONECTADO !!!!!
+[INFO] 03:45:51:952 [Memoria]/(17668:17668): Cliente conectado a Memoria
+[INFO] 03:45:51:952 [Memoria]/(17668:17668): [THREAD] Creo hilo para atender
+[INFO] 03:45:51:952 [Memoria]/(17668:18995): !!!!! CPU CONECTADO !!!!!
+[INFO] 03:45:53:308 [Memoria]/(17668:17668): Cliente conectado a Memoria
+[INFO] 03:45:53:308 [Memoria]/(17668:17668): [THREAD] Creo hilo para atender
+[INFO] 03:45:53:309 [Memoria]/(17668:18997): !!!!! KERNEL CONECTADO !!!!!
+[INFO] 03:45:57:762 [Memoria]/(17668:18997): [Kernel] -> Peticion de creacion de proceso nuevo
+[INFO] 03:45:57:762 [Memoria]/(17668:18997): Intruccion: [SET AX 1]
+[INFO] 03:45:57:763 [Memoria]/(17668:18997): Intruccion: [SET BX 1]
+[INFO] 03:45:57:763 [Memoria]/(17668:18997): Intruccion: [SUM AX BX]
+[INFO] 03:45:57:763 [Memoria]/(17668:18997): Intruccion: [SUM AX BX]
+[INFO] 03:45:57:763 [Memoria]/(17668:18997): Intruccion: [SUM AX BX]
+[INFO] 03:45:57:763 [Memoria]/(17668:18997): Intruccion: [SUM AX BX]
+[INFO] 03:45:57:763 [Memoria]/(17668:18997): Intruccion: [SUM AX BX]
+[INFO] 03:45:57:763 [Memoria]/(17668:18997): Intruccion: [SUM AX BX]
+[INFO] 03:45:57:763 [Memoria]/(17668:18997): Intruccion: [SUM AX BX]
+[INFO] 03:45:57:763 [Memoria]/(17668:18997): Intruccion: [SUM AX BX]
+[INFO] 03:45:57:763 [Memoria]/(17668:18997): Intruccion: [SUM AX BX]
+[INFO] 03:45:57:763 [Memoria]/(17668:18997): Intruccion: [SUM AX BX]
+[INFO] 03:45:57:763 [Memoria]/(17668:18997): Intruccion: [SET CX 1]
+[INFO] 03:45:57:763 [Memoria]/(17668:18997): Intruccion: [SET DX 1]
+[INFO] 03:45:57:763 [Memoria]/(17668:18997): Intruccion: [SUM CX DX]
+[INFO] 03:45:57:763 [Memoria]/(17668:18997): Intruccion: [SUM CX DX]
+[INFO] 03:45:57:763 [Memoria]/(17668:18997): Intruccion: [SUM CX DX]
+[INFO] 03:45:57:763 [Memoria]/(17668:18997): Intruccion: [SUM CX DX]
+[INFO] 03:45:57:763 [Memoria]/(17668:18997): Intruccion: [SUM CX DX]
+[INFO] 03:45:57:763 [Memoria]/(17668:18997): Intruccion: [SUM CX DX]
+[INFO] 03:45:57:763 [Memoria]/(17668:18997): Intruccion: [SUM CX DX]
+[INFO] 03:45:57:763 [Memoria]/(17668:18997): Intruccion: [SUM CX DX]
+[INFO] 03:45:57:763 [Memoria]/(17668:18997): Intruccion: [SUM CX DX]
+[INFO] 03:45:57:763 [Memoria]/(17668:18997): Intruccion: [SUM CX DX]
+[INFO] 03:45:57:763 [Memoria]/(17668:18997): Intruccion: [SUM BX DX]
+[INFO] 03:45:57:763 [Memoria]/(17668:18997): Intruccion: [SUM BX DX]
+[INFO] 03:45:57:763 [Memoria]/(17668:18997): Intruccion: [SUM BX DX]
+[INFO] 03:45:57:763 [Memoria]/(17668:18997): Intruccion: [SUM BX DX]
+[INFO] 03:45:57:763 [Memoria]/(17668:18997): Intruccion: [SUM BX DX]
+[INFO] 03:45:57:763 [Memoria]/(17668:18997): Intruccion: [SUM BX DX]
+[INFO] 03:45:57:763 [Memoria]/(17668:18997): Intruccion: [SUM BX DX]
+[INFO] 03:45:57:763 [Memoria]/(17668:18997): Intruccion: [SUM BX DX]
+[INFO] 03:45:57:763 [Memoria]/(17668:18997): Intruccion: [SUM BX DX]
+[INFO] 03:45:57:763 [Memoria]/(17668:18997): Intruccion: [SUM BX DX]
+[INFO] 03:45:57:763 [Memoria]/(17668:18997): Intruccion: [EXIT]
+[INFO] 03:46:03:173 [Memoria]/(17668:18997): [Kernel] -> Peticion de creacion de proceso nuevo
+[INFO] 03:46:03:173 [Memoria]/(17668:18997): Intruccion: [SET AX 1]
+[INFO] 03:46:03:174 [Memoria]/(17668:18997): Intruccion: [SET BX 1]
+[INFO] 03:46:03:174 [Memoria]/(17668:18997): Intruccion: [SUM AX BX]
+[INFO] 03:46:03:174 [Memoria]/(17668:18997): Intruccion: [SUM AX BX]
+[INFO] 03:46:03:174 [Memoria]/(17668:18997): Intruccion: [SUM AX BX]
+[INFO] 03:46:03:174 [Memoria]/(17668:18997): Intruccion: [SUM AX BX]
+[INFO] 03:46:03:174 [Memoria]/(17668:18997): Intruccion: [SUM AX BX]
+[INFO] 03:46:03:174 [Memoria]/(17668:18997): Intruccion: [SUM AX BX]
+[INFO] 03:46:03:174 [Memoria]/(17668:18997): Intruccion: [SUM AX BX]
+[INFO] 03:46:03:174 [Memoria]/(17668:18997): Intruccion: [SUM AX BX]
+[INFO] 03:46:03:174 [Memoria]/(17668:18997): Intruccion: [SUM AX BX]
+[INFO] 03:46:03:174 [Memoria]/(17668:18997): Intruccion: [SUM AX BX]
+[INFO] 03:46:03:174 [Memoria]/(17668:18997): Intruccion: [SET CX 1]
+[INFO] 03:46:03:174 [Memoria]/(17668:18997): Intruccion: [SET DX 1]
+[INFO] 03:46:03:174 [Memoria]/(17668:18997): Intruccion: [SUM CX DX]
+[INFO] 03:46:03:174 [Memoria]/(17668:18997): Intruccion: [SUM CX DX]
+[INFO] 03:46:03:174 [Memoria]/(17668:18997): Intruccion: [SUM CX DX]
+[INFO] 03:46:03:174 [Memoria]/(17668:18997): Intruccion: [SUM CX DX]
+[INFO] 03:46:03:174 [Memoria]/(17668:18997): Intruccion: [SUM CX DX]
+[INFO] 03:46:03:174 [Memoria]/(17668:18997): Intruccion: [SUM CX DX]
+[INFO] 03:46:03:174 [Memoria]/(17668:18997): Intruccion: [SUM CX DX]
+[INFO] 03:46:03:174 [Memoria]/(17668:18997): Intruccion: [SUM CX DX]
+[INFO] 03:46:03:174 [Memoria]/(17668:18997): Intruccion: [SUM CX DX]
+[INFO] 03:46:03:174 [Memoria]/(17668:18997): Intruccion: [SUM CX DX]
+[INFO] 03:46:03:174 [Memoria]/(17668:18997): Intruccion: [SUM BX DX]
+[INFO] 03:46:03:174 [Memoria]/(17668:18997): Intruccion: [SUM BX DX]
+[INFO] 03:46:03:174 [Memoria]/(17668:18997): Intruccion: [SUM BX DX]
+[INFO] 03:46:03:174 [Memoria]/(17668:18997): Intruccion: [SUM BX DX]
+[INFO] 03:46:03:174 [Memoria]/(17668:18997): Intruccion: [SUM BX DX]
+[INFO] 03:46:03:174 [Memoria]/(17668:18997): Intruccion: [SUM BX DX]
+[INFO] 03:46:03:174 [Memoria]/(17668:18997): Intruccion: [SUM BX DX]
+[INFO] 03:46:03:174 [Memoria]/(17668:18997): Intruccion: [SUM BX DX]
+[INFO] 03:46:03:174 [Memoria]/(17668:18997): Intruccion: [SUM BX DX]
+[INFO] 03:46:03:174 [Memoria]/(17668:18997): Intruccion: [SUM BX DX]
+[INFO] 03:46:03:174 [Memoria]/(17668:18997): Intruccion: [EXIT]
+[INFO] 03:46:03:767 [Memoria]/(17668:18988): FILESYSTEM => <PID:1> <cant_pag:2> - <cant_bloques:2>
+[WARNING] 03:46:03:767 [Memoria]/(17668:18988): Se Cargaron pos_SWAP en proceso <PID:1>
+[INFO] 03:46:05:186 [Memoria]/(17668:18997): [Kernel] -> Peticion de creacion de proceso nuevo
+[INFO] 03:46:05:186 [Memoria]/(17668:18997): Intruccion: [SET AX 1]
+[INFO] 03:46:05:186 [Memoria]/(17668:18997): Intruccion: [SET BX 1]
+[INFO] 03:46:05:186 [Memoria]/(17668:18997): Intruccion: [SUM AX BX]
+[INFO] 03:46:05:186 [Memoria]/(17668:18997): Intruccion: [SUM AX BX]
+[INFO] 03:46:05:186 [Memoria]/(17668:18997): Intruccion: [SUM AX BX]
+[INFO] 03:46:05:187 [Memoria]/(17668:18997): Intruccion: [SUM AX BX]
+[INFO] 03:46:05:187 [Memoria]/(17668:18997): Intruccion: [SUM AX BX]
+[INFO] 03:46:05:187 [Memoria]/(17668:18997): Intruccion: [SUM AX BX]
+[INFO] 03:46:05:187 [Memoria]/(17668:18997): Intruccion: [SUM AX BX]
+[INFO] 03:46:05:187 [Memoria]/(17668:18997): Intruccion: [SUM AX BX]
+[INFO] 03:46:05:187 [Memoria]/(17668:18997): Intruccion: [SUM AX BX]
+[INFO] 03:46:05:187 [Memoria]/(17668:18997): Intruccion: [SUM AX BX]
+[INFO] 03:46:05:187 [Memoria]/(17668:18997): Intruccion: [SET CX 1]
+[INFO] 03:46:05:187 [Memoria]/(17668:18997): Intruccion: [SET DX 1]
+[INFO] 03:46:05:187 [Memoria]/(17668:18997): Intruccion: [SUM CX DX]
+[INFO] 03:46:05:187 [Memoria]/(17668:18997): Intruccion: [SUM CX DX]
+[INFO] 03:46:05:187 [Memoria]/(17668:18997): Intruccion: [SUM CX DX]
+[INFO] 03:46:05:187 [Memoria]/(17668:18997): Intruccion: [SUM CX DX]
+[INFO] 03:46:05:187 [Memoria]/(17668:18997): Intruccion: [SUM CX DX]
+[INFO] 03:46:05:187 [Memoria]/(17668:18997): Intruccion: [SUM CX DX]
+[INFO] 03:46:05:187 [Memoria]/(17668:18997): Intruccion: [SUM CX DX]
+[INFO] 03:46:05:187 [Memoria]/(17668:18997): Intruccion: [SUM CX DX]
+[INFO] 03:46:05:187 [Memoria]/(17668:18997): Intruccion: [SUM CX DX]
+[INFO] 03:46:05:187 [Memoria]/(17668:18997): Intruccion: [SUM CX DX]
+[INFO] 03:46:05:187 [Memoria]/(17668:18997): Intruccion: [SUM BX DX]
+[INFO] 03:46:05:187 [Memoria]/(17668:18997): Intruccion: [SUM BX DX]
+[INFO] 03:46:05:187 [Memoria]/(17668:18997): Intruccion: [SUM BX DX]
+[INFO] 03:46:05:187 [Memoria]/(17668:18997): Intruccion: [SUM BX DX]
+[INFO] 03:46:05:187 [Memoria]/(17668:18997): Intruccion: [SUM BX DX]
+[INFO] 03:46:05:187 [Memoria]/(17668:18997): Intruccion: [SUM BX DX]
+[INFO] 03:46:05:187 [Memoria]/(17668:18997): Intruccion: [SUM BX DX]
+[INFO] 03:46:05:187 [Memoria]/(17668:18997): Intruccion: [SUM BX DX]
+[INFO] 03:46:05:187 [Memoria]/(17668:18997): Intruccion: [SUM BX DX]
+[INFO] 03:46:05:187 [Memoria]/(17668:18997): Intruccion: [SUM BX DX]
+[INFO] 03:46:05:187 [Memoria]/(17668:18997): Intruccion: [EXIT]
+[INFO] 03:46:07:192 [Memoria]/(17668:18997): [Kernel] -> Peticion de creacion de proceso nuevo
+[INFO] 03:46:07:192 [Memoria]/(17668:18997): Intruccion: [SET AX 1]
+[INFO] 03:46:07:192 [Memoria]/(17668:18997): Intruccion: [SET BX 1]
+[INFO] 03:46:07:192 [Memoria]/(17668:18997): Intruccion: [SUM AX BX]
+[INFO] 03:46:07:192 [Memoria]/(17668:18997): Intruccion: [SUM AX BX]
+[INFO] 03:46:07:192 [Memoria]/(17668:18997): Intruccion: [SUM AX BX]
+[INFO] 03:46:07:192 [Memoria]/(17668:18997): Intruccion: [SUM AX BX]
+[INFO] 03:46:07:192 [Memoria]/(17668:18997): Intruccion: [SUM AX BX]
+[INFO] 03:46:07:192 [Memoria]/(17668:18997): Intruccion: [SUM AX BX]
+[INFO] 03:46:07:192 [Memoria]/(17668:18997): Intruccion: [SUM AX BX]
+[INFO] 03:46:07:192 [Memoria]/(17668:18997): Intruccion: [SUM AX BX]
+[INFO] 03:46:07:192 [Memoria]/(17668:18997): Intruccion: [SUM AX BX]
+[INFO] 03:46:07:192 [Memoria]/(17668:18997): Intruccion: [SUM AX BX]
+[INFO] 03:46:07:193 [Memoria]/(17668:18997): Intruccion: [SET CX 1]
+[INFO] 03:46:07:193 [Memoria]/(17668:18997): Intruccion: [SET DX 1]
+[INFO] 03:46:07:193 [Memoria]/(17668:18997): Intruccion: [SUM CX DX]
+[INFO] 03:46:07:193 [Memoria]/(17668:18997): Intruccion: [SUM CX DX]
+[INFO] 03:46:07:193 [Memoria]/(17668:18997): Intruccion: [SUM CX DX]
+[INFO] 03:46:07:193 [Memoria]/(17668:18997): Intruccion: [SUM CX DX]
+[INFO] 03:46:07:193 [Memoria]/(17668:18997): Intruccion: [SUM CX DX]
+[INFO] 03:46:07:193 [Memoria]/(17668:18997): Intruccion: [SUM CX DX]
+[INFO] 03:46:07:193 [Memoria]/(17668:18997): Intruccion: [SUM CX DX]
+[INFO] 03:46:07:193 [Memoria]/(17668:18997): Intruccion: [SUM CX DX]
+[INFO] 03:46:07:193 [Memoria]/(17668:18997): Intruccion: [SUM CX DX]
+[INFO] 03:46:07:193 [Memoria]/(17668:18997): Intruccion: [SUM CX DX]
+[INFO] 03:46:07:193 [Memoria]/(17668:18997): Intruccion: [SUM BX DX]
+[INFO] 03:46:07:193 [Memoria]/(17668:18997): Intruccion: [SUM BX DX]
+[INFO] 03:46:07:193 [Memoria]/(17668:18997): Intruccion: [SUM BX DX]
+[INFO] 03:46:07:193 [Memoria]/(17668:18997): Intruccion: [SUM BX DX]
+[INFO] 03:46:07:193 [Memoria]/(17668:18997): Intruccion: [SUM BX DX]
+[INFO] 03:46:07:193 [Memoria]/(17668:18997): Intruccion: [SUM BX DX]
+[INFO] 03:46:07:193 [Memoria]/(17668:18997): Intruccion: [SUM BX DX]
+[INFO] 03:46:07:193 [Memoria]/(17668:18997): Intruccion: [SUM BX DX]
+[INFO] 03:46:07:193 [Memoria]/(17668:18997): Intruccion: [SUM BX DX]
+[INFO] 03:46:07:193 [Memoria]/(17668:18997): Intruccion: [SUM BX DX]
+[INFO] 03:46:07:193 [Memoria]/(17668:18997): Intruccion: [EXIT]
+[INFO] 03:46:09:179 [Memoria]/(17668:18988): FILESYSTEM => <PID:2> <cant_pag:2> - <cant_bloques:2>
+[WARNING] 03:46:09:179 [Memoria]/(17668:18988): Se Cargaron pos_SWAP en proceso <PID:2>
+[INFO] 03:46:14:189 [Memoria]/(17668:18988): FILESYSTEM => <PID:3> <cant_pag:2> - <cant_bloques:2>
+[WARNING] 03:46:14:189 [Memoria]/(17668:18988): Se Cargaron pos_SWAP en proceso <PID:3>
+[INFO] 03:46:19:195 [Memoria]/(17668:18988): FILESYSTEM => <PID:4> <cant_pag:2> - <cant_bloques:2>
+[WARNING] 03:46:19:199 [Memoria]/(17668:18988): Se Cargaron pos_SWAP en proceso <PID:4>
+[WARNING] 03:46:34:870 [Memoria]/(17668:18997): :::::> DELETE <PID:1>
+[WARNING] 03:47:10:972 [Memoria]/(17668:18997): :::::> DELETE <PID:2>
+[WARNING] 03:47:47:397 [Memoria]/(17668:18997): :::::> DELETE <PID:3>
+[WARNING] 03:48:23:527 [Memoria]/(17668:18997): :::::> DELETE <PID:4>
+[INFO] 03:51:22:753 [Memoria]/(17668:18997): [Kernel] -> Peticion de creacion de proceso nuevo
+[INFO] 03:51:22:753 [Memoria]/(17668:18997): Intruccion: [SET AX 1]
+[INFO] 03:51:22:753 [Memoria]/(17668:18997): Intruccion: [SET BX 1]
+[INFO] 03:51:22:753 [Memoria]/(17668:18997): Intruccion: [SUM AX BX]
+[INFO] 03:51:22:754 [Memoria]/(17668:18997): Intruccion: [SUM AX BX]
+[INFO] 03:51:22:754 [Memoria]/(17668:18997): Intruccion: [SUM AX BX]
+[INFO] 03:51:22:754 [Memoria]/(17668:18997): Intruccion: [SUM AX BX]
+[INFO] 03:51:22:754 [Memoria]/(17668:18997): Intruccion: [SUM AX BX]
+[INFO] 03:51:22:754 [Memoria]/(17668:18997): Intruccion: [SUM AX BX]
+[INFO] 03:51:22:754 [Memoria]/(17668:18997): Intruccion: [SUM AX BX]
+[INFO] 03:51:22:754 [Memoria]/(17668:18997): Intruccion: [SUM AX BX]
+[INFO] 03:51:22:754 [Memoria]/(17668:18997): Intruccion: [SUM AX BX]
+[INFO] 03:51:22:754 [Memoria]/(17668:18997): Intruccion: [SUM AX BX]
+[INFO] 03:51:22:754 [Memoria]/(17668:18997): Intruccion: [SET CX 1]
+[INFO] 03:51:22:754 [Memoria]/(17668:18997): Intruccion: [SET DX 1]
+[INFO] 03:51:22:754 [Memoria]/(17668:18997): Intruccion: [SUM CX DX]
+[INFO] 03:51:22:754 [Memoria]/(17668:18997): Intruccion: [SUM CX DX]
+[INFO] 03:51:22:754 [Memoria]/(17668:18997): Intruccion: [SUM CX DX]
+[INFO] 03:51:22:754 [Memoria]/(17668:18997): Intruccion: [SUM CX DX]
+[INFO] 03:51:22:754 [Memoria]/(17668:18997): Intruccion: [SUM CX DX]
+[INFO] 03:51:22:754 [Memoria]/(17668:18997): Intruccion: [SUM CX DX]
+[INFO] 03:51:22:754 [Memoria]/(17668:18997): Intruccion: [SUM CX DX]
+[INFO] 03:51:22:754 [Memoria]/(17668:18997): Intruccion: [SUM CX DX]
+[INFO] 03:51:22:754 [Memoria]/(17668:18997): Intruccion: [SUM CX DX]
+[INFO] 03:51:22:754 [Memoria]/(17668:18997): Intruccion: [SUM CX DX]
+[INFO] 03:51:22:754 [Memoria]/(17668:18997): Intruccion: [SUM BX DX]
+[INFO] 03:51:22:754 [Memoria]/(17668:18997): Intruccion: [SUM BX DX]
+[INFO] 03:51:22:754 [Memoria]/(17668:18997): Intruccion: [SUM BX DX]
+[INFO] 03:51:22:754 [Memoria]/(17668:18997): Intruccion: [SUM BX DX]
+[INFO] 03:51:22:754 [Memoria]/(17668:18997): Intruccion: [SUM BX DX]
+[INFO] 03:51:22:754 [Memoria]/(17668:18997): Intruccion: [SUM BX DX]
+[INFO] 03:51:22:754 [Memoria]/(17668:18997): Intruccion: [SUM BX DX]
+[INFO] 03:51:22:754 [Memoria]/(17668:18997): Intruccion: [SUM BX DX]
+[INFO] 03:51:22:754 [Memoria]/(17668:18997): Intruccion: [SUM BX DX]
+[INFO] 03:51:22:754 [Memoria]/(17668:18997): Intruccion: [SUM BX DX]
+[INFO] 03:51:22:754 [Memoria]/(17668:18997): Intruccion: [EXIT]
+[INFO] 03:51:24:828 [Memoria]/(17668:18997): [Kernel] -> Peticion de creacion de proceso nuevo
+[INFO] 03:51:24:828 [Memoria]/(17668:18997): Intruccion: [SET AX 1]
+[INFO] 03:51:24:828 [Memoria]/(17668:18997): Intruccion: [SET BX 1]
+[INFO] 03:51:24:828 [Memoria]/(17668:18997): Intruccion: [SUM AX BX]
+[INFO] 03:51:24:828 [Memoria]/(17668:18997): Intruccion: [SUM AX BX]
+[INFO] 03:51:24:828 [Memoria]/(17668:18997): Intruccion: [SUM AX BX]
+[INFO] 03:51:24:828 [Memoria]/(17668:18997): Intruccion: [SUM AX BX]
+[INFO] 03:51:24:828 [Memoria]/(17668:18997): Intruccion: [SUM AX BX]
+[INFO] 03:51:24:828 [Memoria]/(17668:18997): Intruccion: [SUM AX BX]
+[INFO] 03:51:24:828 [Memoria]/(17668:18997): Intruccion: [SUM AX BX]
+[INFO] 03:51:24:828 [Memoria]/(17668:18997): Intruccion: [SUM AX BX]
+[INFO] 03:51:24:828 [Memoria]/(17668:18997): Intruccion: [SUM AX BX]
+[INFO] 03:51:24:828 [Memoria]/(17668:18997): Intruccion: [SUM AX BX]
+[INFO] 03:51:24:828 [Memoria]/(17668:18997): Intruccion: [SET CX 1]
+[INFO] 03:51:24:828 [Memoria]/(17668:18997): Intruccion: [SET DX 1]
+[INFO] 03:51:24:828 [Memoria]/(17668:18997): Intruccion: [SUM CX DX]
+[INFO] 03:51:24:828 [Memoria]/(17668:18997): Intruccion: [SUM CX DX]
+[INFO] 03:51:24:828 [Memoria]/(17668:18997): Intruccion: [SUM CX DX]
+[INFO] 03:51:24:828 [Memoria]/(17668:18997): Intruccion: [SUM CX DX]
+[INFO] 03:51:24:828 [Memoria]/(17668:18997): Intruccion: [SUM CX DX]
+[INFO] 03:51:24:828 [Memoria]/(17668:18997): Intruccion: [SUM CX DX]
+[INFO] 03:51:24:828 [Memoria]/(17668:18997): Intruccion: [SUM CX DX]
+[INFO] 03:51:24:828 [Memoria]/(17668:18997): Intruccion: [SUM CX DX]
+[INFO] 03:51:24:828 [Memoria]/(17668:18997): Intruccion: [SUM CX DX]
+[INFO] 03:51:24:828 [Memoria]/(17668:18997): Intruccion: [SUM CX DX]
+[INFO] 03:51:24:828 [Memoria]/(17668:18997): Intruccion: [SUM BX DX]
+[INFO] 03:51:24:828 [Memoria]/(17668:18997): Intruccion: [SUM BX DX]
+[INFO] 03:51:24:828 [Memoria]/(17668:18997): Intruccion: [SUM BX DX]
+[INFO] 03:51:24:828 [Memoria]/(17668:18997): Intruccion: [SUM BX DX]
+[INFO] 03:51:24:828 [Memoria]/(17668:18997): Intruccion: [SUM BX DX]
+[INFO] 03:51:24:829 [Memoria]/(17668:18997): Intruccion: [SUM BX DX]
+[INFO] 03:51:24:829 [Memoria]/(17668:18997): Intruccion: [SUM BX DX]
+[INFO] 03:51:24:829 [Memoria]/(17668:18997): Intruccion: [SUM BX DX]
+[INFO] 03:51:24:829 [Memoria]/(17668:18997): Intruccion: [SUM BX DX]
+[INFO] 03:51:24:829 [Memoria]/(17668:18997): Intruccion: [SUM BX DX]
+[INFO] 03:51:24:829 [Memoria]/(17668:18997): Intruccion: [EXIT]
+[INFO] 03:51:28:835 [Memoria]/(17668:18988): FILESYSTEM => <PID:5> <cant_pag:2> - <cant_bloques:2>
+[WARNING] 03:51:28:835 [Memoria]/(17668:18988): Se Cargaron pos_SWAP en proceso <PID:5>
+[INFO] 03:51:33:838 [Memoria]/(17668:18988): FILESYSTEM => <PID:6> <cant_pag:2> - <cant_bloques:2>
+[WARNING] 03:51:33:838 [Memoria]/(17668:18988): Se Cargaron pos_SWAP en proceso <PID:6>
+[WARNING] 03:51:59:921 [Memoria]/(17668:18997): :::::> DELETE <PID:5>
+[WARNING] 03:52:36:017 [Memoria]/(17668:18997): :::::> DELETE <PID:6>
+[ERROR] 03:52:38:795 [Memoria]/(17668:18997): [DESCONEXION]: KERNEL
+[ERROR] 03:52:38:796 [Memoria]/(17668:18988): [DESCONEXION]: FILESYSTEM
+[ERROR] 03:52:38:797 [Memoria]/(17668:18995): [DESCONEXION]: CPU
+[INFO] 03:52:43:124 [Memoria]/(17668:17668): Cliente conectado a Memoria
+[INFO] 03:52:43:124 [Memoria]/(17668:17668): [THREAD] Creo hilo para atender
+[INFO] 03:52:43:124 [Memoria]/(17668:19105): !!!!! FILESYSTEM CONECTADO !!!!!
+[INFO] 03:52:44:274 [Memoria]/(17668:17668): Cliente conectado a Memoria
+[INFO] 03:52:44:275 [Memoria]/(17668:17668): [THREAD] Creo hilo para atender
+[INFO] 03:52:44:275 [Memoria]/(17668:19112): !!!!! CPU CONECTADO !!!!!
+[INFO] 03:52:46:013 [Memoria]/(17668:17668): Cliente conectado a Memoria
+[INFO] 03:52:46:013 [Memoria]/(17668:17668): [THREAD] Creo hilo para atender
+[INFO] 03:52:46:013 [Memoria]/(17668:19114): !!!!! KERNEL CONECTADO !!!!!
+[INFO] 03:52:55:372 [Memoria]/(17668:19114): [Kernel] -> Peticion de creacion de proceso nuevo
+[INFO] 03:52:55:372 [Memoria]/(17668:19114): Intruccion: [SET AX 1]
+[INFO] 03:52:55:372 [Memoria]/(17668:19114): Intruccion: [SET BX 1]
+[INFO] 03:52:55:372 [Memoria]/(17668:19114): Intruccion: [SUM AX BX]
+[INFO] 03:52:55:372 [Memoria]/(17668:19114): Intruccion: [SUM AX BX]
+[INFO] 03:52:55:372 [Memoria]/(17668:19114): Intruccion: [SUM AX BX]
+[INFO] 03:52:55:372 [Memoria]/(17668:19114): Intruccion: [SUM AX BX]
+[INFO] 03:52:55:372 [Memoria]/(17668:19114): Intruccion: [SUM AX BX]
+[INFO] 03:52:55:372 [Memoria]/(17668:19114): Intruccion: [SUM AX BX]
+[INFO] 03:52:55:372 [Memoria]/(17668:19114): Intruccion: [SUM AX BX]
+[INFO] 03:52:55:372 [Memoria]/(17668:19114): Intruccion: [SUM AX BX]
+[INFO] 03:52:55:372 [Memoria]/(17668:19114): Intruccion: [SUM AX BX]
+[INFO] 03:52:55:372 [Memoria]/(17668:19114): Intruccion: [SUM AX BX]
+[INFO] 03:52:55:372 [Memoria]/(17668:19114): Intruccion: [SET CX 1]
+[INFO] 03:52:55:373 [Memoria]/(17668:19114): Intruccion: [SET DX 1]
+[INFO] 03:52:55:373 [Memoria]/(17668:19114): Intruccion: [SUM CX DX]
+[INFO] 03:52:55:373 [Memoria]/(17668:19114): Intruccion: [SUM CX DX]
+[INFO] 03:52:55:373 [Memoria]/(17668:19114): Intruccion: [SUM CX DX]
+[INFO] 03:52:55:373 [Memoria]/(17668:19114): Intruccion: [SUM CX DX]
+[INFO] 03:52:55:373 [Memoria]/(17668:19114): Intruccion: [SUM CX DX]
+[INFO] 03:52:55:373 [Memoria]/(17668:19114): Intruccion: [SUM CX DX]
+[INFO] 03:52:55:373 [Memoria]/(17668:19114): Intruccion: [SUM CX DX]
+[INFO] 03:52:55:373 [Memoria]/(17668:19114): Intruccion: [SUM CX DX]
+[INFO] 03:52:55:373 [Memoria]/(17668:19114): Intruccion: [SUM CX DX]
+[INFO] 03:52:55:373 [Memoria]/(17668:19114): Intruccion: [SUM CX DX]
+[INFO] 03:52:55:373 [Memoria]/(17668:19114): Intruccion: [SUM BX DX]
+[INFO] 03:52:55:373 [Memoria]/(17668:19114): Intruccion: [SUM BX DX]
+[INFO] 03:52:55:373 [Memoria]/(17668:19114): Intruccion: [SUM BX DX]
+[INFO] 03:52:55:373 [Memoria]/(17668:19114): Intruccion: [SUM BX DX]
+[INFO] 03:52:55:373 [Memoria]/(17668:19114): Intruccion: [SUM BX DX]
+[INFO] 03:52:55:373 [Memoria]/(17668:19114): Intruccion: [SUM BX DX]
+[INFO] 03:52:55:373 [Memoria]/(17668:19114): Intruccion: [SUM BX DX]
+[INFO] 03:52:55:373 [Memoria]/(17668:19114): Intruccion: [SUM BX DX]
+[INFO] 03:52:55:373 [Memoria]/(17668:19114): Intruccion: [SUM BX DX]
+[INFO] 03:52:55:373 [Memoria]/(17668:19114): Intruccion: [SUM BX DX]
+[INFO] 03:52:55:373 [Memoria]/(17668:19114): Intruccion: [EXIT]
+[INFO] 03:53:01:377 [Memoria]/(17668:19105): FILESYSTEM => <PID:1> <cant_pag:2> - <cant_bloques:2>
+[WARNING] 03:53:01:377 [Memoria]/(17668:19105): Se Cargaron pos_SWAP en proceso <PID:1>
+[INFO] 03:53:20:428 [Memoria]/(17668:19114): [Kernel] -> Peticion de creacion de proceso nuevo
+[INFO] 03:53:20:429 [Memoria]/(17668:19114): Intruccion: [SET AX 1]
+[INFO] 03:53:20:429 [Memoria]/(17668:19114): Intruccion: [SET BX 1]
+[INFO] 03:53:20:429 [Memoria]/(17668:19114): Intruccion: [SUM AX BX]
+[INFO] 03:53:20:429 [Memoria]/(17668:19114): Intruccion: [SUM AX BX]
+[INFO] 03:53:20:429 [Memoria]/(17668:19114): Intruccion: [SUM AX BX]
+[INFO] 03:53:20:429 [Memoria]/(17668:19114): Intruccion: [SUM AX BX]
+[INFO] 03:53:20:429 [Memoria]/(17668:19114): Intruccion: [SUM AX BX]
+[INFO] 03:53:20:429 [Memoria]/(17668:19114): Intruccion: [SUM AX BX]
+[INFO] 03:53:20:429 [Memoria]/(17668:19114): Intruccion: [SUM AX BX]
+[INFO] 03:53:20:429 [Memoria]/(17668:19114): Intruccion: [SUM AX BX]
+[INFO] 03:53:20:429 [Memoria]/(17668:19114): Intruccion: [SUM AX BX]
+[INFO] 03:53:20:429 [Memoria]/(17668:19114): Intruccion: [SUM AX BX]
+[INFO] 03:53:20:429 [Memoria]/(17668:19114): Intruccion: [SET CX 1]
+[INFO] 03:53:20:429 [Memoria]/(17668:19114): Intruccion: [SET DX 1]
+[INFO] 03:53:20:429 [Memoria]/(17668:19114): Intruccion: [SUM CX DX]
+[INFO] 03:53:20:429 [Memoria]/(17668:19114): Intruccion: [SUM CX DX]
+[INFO] 03:53:20:429 [Memoria]/(17668:19114): Intruccion: [SUM CX DX]
+[INFO] 03:53:20:429 [Memoria]/(17668:19114): Intruccion: [SUM CX DX]
+[INFO] 03:53:20:429 [Memoria]/(17668:19114): Intruccion: [SUM CX DX]
+[INFO] 03:53:20:429 [Memoria]/(17668:19114): Intruccion: [SUM CX DX]
+[INFO] 03:53:20:429 [Memoria]/(17668:19114): Intruccion: [SUM CX DX]
+[INFO] 03:53:20:429 [Memoria]/(17668:19114): Intruccion: [SUM CX DX]
+[INFO] 03:53:20:429 [Memoria]/(17668:19114): Intruccion: [SUM CX DX]
+[INFO] 03:53:20:429 [Memoria]/(17668:19114): Intruccion: [SUM CX DX]
+[INFO] 03:53:20:429 [Memoria]/(17668:19114): Intruccion: [SUM BX DX]
+[INFO] 03:53:20:429 [Memoria]/(17668:19114): Intruccion: [SUM BX DX]
+[INFO] 03:53:20:429 [Memoria]/(17668:19114): Intruccion: [SUM BX DX]
+[INFO] 03:53:20:429 [Memoria]/(17668:19114): Intruccion: [SUM BX DX]
+[INFO] 03:53:20:429 [Memoria]/(17668:19114): Intruccion: [SUM BX DX]
+[INFO] 03:53:20:429 [Memoria]/(17668:19114): Intruccion: [SUM BX DX]
+[INFO] 03:53:20:429 [Memoria]/(17668:19114): Intruccion: [SUM BX DX]
+[INFO] 03:53:20:429 [Memoria]/(17668:19114): Intruccion: [SUM BX DX]
+[INFO] 03:53:20:429 [Memoria]/(17668:19114): Intruccion: [SUM BX DX]
+[INFO] 03:53:20:429 [Memoria]/(17668:19114): Intruccion: [SUM BX DX]
+[INFO] 03:53:20:429 [Memoria]/(17668:19114): Intruccion: [EXIT]
+[INFO] 03:53:22:442 [Memoria]/(17668:19114): [Kernel] -> Peticion de creacion de proceso nuevo
+[INFO] 03:53:22:442 [Memoria]/(17668:19114): Intruccion: [SET AX 1]
+[INFO] 03:53:22:442 [Memoria]/(17668:19114): Intruccion: [SET BX 1]
+[INFO] 03:53:22:442 [Memoria]/(17668:19114): Intruccion: [SUM AX BX]
+[INFO] 03:53:22:442 [Memoria]/(17668:19114): Intruccion: [SUM AX BX]
+[INFO] 03:53:22:442 [Memoria]/(17668:19114): Intruccion: [SUM AX BX]
+[INFO] 03:53:22:442 [Memoria]/(17668:19114): Intruccion: [SUM AX BX]
+[INFO] 03:53:22:443 [Memoria]/(17668:19114): Intruccion: [SUM AX BX]
+[INFO] 03:53:22:443 [Memoria]/(17668:19114): Intruccion: [SUM AX BX]
+[INFO] 03:53:22:443 [Memoria]/(17668:19114): Intruccion: [SUM AX BX]
+[INFO] 03:53:22:443 [Memoria]/(17668:19114): Intruccion: [SUM AX BX]
+[INFO] 03:53:22:443 [Memoria]/(17668:19114): Intruccion: [SUM AX BX]
+[INFO] 03:53:22:443 [Memoria]/(17668:19114): Intruccion: [SUM AX BX]
+[INFO] 03:53:22:443 [Memoria]/(17668:19114): Intruccion: [SET CX 1]
+[INFO] 03:53:22:443 [Memoria]/(17668:19114): Intruccion: [SET DX 1]
+[INFO] 03:53:22:443 [Memoria]/(17668:19114): Intruccion: [SUM CX DX]
+[INFO] 03:53:22:443 [Memoria]/(17668:19114): Intruccion: [SUM CX DX]
+[INFO] 03:53:22:443 [Memoria]/(17668:19114): Intruccion: [SUM CX DX]
+[INFO] 03:53:22:443 [Memoria]/(17668:19114): Intruccion: [SUM CX DX]
+[INFO] 03:53:22:443 [Memoria]/(17668:19114): Intruccion: [SUM CX DX]
+[INFO] 03:53:22:443 [Memoria]/(17668:19114): Intruccion: [SUM CX DX]
+[INFO] 03:53:22:443 [Memoria]/(17668:19114): Intruccion: [SUM CX DX]
+[INFO] 03:53:22:443 [Memoria]/(17668:19114): Intruccion: [SUM CX DX]
+[INFO] 03:53:22:443 [Memoria]/(17668:19114): Intruccion: [SUM CX DX]
+[INFO] 03:53:22:443 [Memoria]/(17668:19114): Intruccion: [SUM CX DX]
+[INFO] 03:53:22:443 [Memoria]/(17668:19114): Intruccion: [SUM BX DX]
+[INFO] 03:53:22:443 [Memoria]/(17668:19114): Intruccion: [SUM BX DX]
+[INFO] 03:53:22:443 [Memoria]/(17668:19114): Intruccion: [SUM BX DX]
+[INFO] 03:53:22:443 [Memoria]/(17668:19114): Intruccion: [SUM BX DX]
+[INFO] 03:53:22:443 [Memoria]/(17668:19114): Intruccion: [SUM BX DX]
+[INFO] 03:53:22:443 [Memoria]/(17668:19114): Intruccion: [SUM BX DX]
+[INFO] 03:53:22:443 [Memoria]/(17668:19114): Intruccion: [SUM BX DX]
+[INFO] 03:53:22:443 [Memoria]/(17668:19114): Intruccion: [SUM BX DX]
+[INFO] 03:53:22:443 [Memoria]/(17668:19114): Intruccion: [SUM BX DX]
+[INFO] 03:53:22:443 [Memoria]/(17668:19114): Intruccion: [SUM BX DX]
+[INFO] 03:53:22:443 [Memoria]/(17668:19114): Intruccion: [EXIT]
+[INFO] 03:53:24:457 [Memoria]/(17668:19114): [Kernel] -> Peticion de creacion de proceso nuevo
+[INFO] 03:53:24:457 [Memoria]/(17668:19114): Intruccion: [SET AX 1]
+[INFO] 03:53:24:457 [Memoria]/(17668:19114): Intruccion: [SET BX 1]
+[INFO] 03:53:24:457 [Memoria]/(17668:19114): Intruccion: [SUM AX BX]
+[INFO] 03:53:24:457 [Memoria]/(17668:19114): Intruccion: [SUM AX BX]
+[INFO] 03:53:24:457 [Memoria]/(17668:19114): Intruccion: [SUM AX BX]
+[INFO] 03:53:24:457 [Memoria]/(17668:19114): Intruccion: [SUM AX BX]
+[INFO] 03:53:24:457 [Memoria]/(17668:19114): Intruccion: [SUM AX BX]
+[INFO] 03:53:24:457 [Memoria]/(17668:19114): Intruccion: [SUM AX BX]
+[INFO] 03:53:24:457 [Memoria]/(17668:19114): Intruccion: [SUM AX BX]
+[INFO] 03:53:24:457 [Memoria]/(17668:19114): Intruccion: [SUM AX BX]
+[INFO] 03:53:24:457 [Memoria]/(17668:19114): Intruccion: [SUM AX BX]
+[INFO] 03:53:24:457 [Memoria]/(17668:19114): Intruccion: [SUM AX BX]
+[INFO] 03:53:24:457 [Memoria]/(17668:19114): Intruccion: [SET CX 1]
+[INFO] 03:53:24:457 [Memoria]/(17668:19114): Intruccion: [SET DX 1]
+[INFO] 03:53:24:458 [Memoria]/(17668:19114): Intruccion: [SUM CX DX]
+[INFO] 03:53:24:458 [Memoria]/(17668:19114): Intruccion: [SUM CX DX]
+[INFO] 03:53:24:458 [Memoria]/(17668:19114): Intruccion: [SUM CX DX]
+[INFO] 03:53:24:458 [Memoria]/(17668:19114): Intruccion: [SUM CX DX]
+[INFO] 03:53:24:458 [Memoria]/(17668:19114): Intruccion: [SUM CX DX]
+[INFO] 03:53:24:458 [Memoria]/(17668:19114): Intruccion: [SUM CX DX]
+[INFO] 03:53:24:458 [Memoria]/(17668:19114): Intruccion: [SUM CX DX]
+[INFO] 03:53:24:458 [Memoria]/(17668:19114): Intruccion: [SUM CX DX]
+[INFO] 03:53:24:458 [Memoria]/(17668:19114): Intruccion: [SUM CX DX]
+[INFO] 03:53:24:458 [Memoria]/(17668:19114): Intruccion: [SUM CX DX]
+[INFO] 03:53:24:458 [Memoria]/(17668:19114): Intruccion: [SUM BX DX]
+[INFO] 03:53:24:458 [Memoria]/(17668:19114): Intruccion: [SUM BX DX]
+[INFO] 03:53:24:458 [Memoria]/(17668:19114): Intruccion: [SUM BX DX]
+[INFO] 03:53:24:458 [Memoria]/(17668:19114): Intruccion: [SUM BX DX]
+[INFO] 03:53:24:458 [Memoria]/(17668:19114): Intruccion: [SUM BX DX]
+[INFO] 03:53:24:458 [Memoria]/(17668:19114): Intruccion: [SUM BX DX]
+[INFO] 03:53:24:458 [Memoria]/(17668:19114): Intruccion: [SUM BX DX]
+[INFO] 03:53:24:458 [Memoria]/(17668:19114): Intruccion: [SUM BX DX]
+[INFO] 03:53:24:458 [Memoria]/(17668:19114): Intruccion: [SUM BX DX]
+[INFO] 03:53:24:458 [Memoria]/(17668:19114): Intruccion: [SUM BX DX]
+[INFO] 03:53:24:458 [Memoria]/(17668:19114): Intruccion: [EXIT]
+[INFO] 03:53:26:447 [Memoria]/(17668:19105): FILESYSTEM => <PID:2> <cant_pag:2> - <cant_bloques:2>
+[WARNING] 03:53:26:447 [Memoria]/(17668:19105): Se Cargaron pos_SWAP en proceso <PID:2>
+[INFO] 03:53:26:474 [Memoria]/(17668:19114): [Kernel] -> Peticion de creacion de proceso nuevo
+[INFO] 03:53:26:474 [Memoria]/(17668:19114): Intruccion: [SET AX 1]
+[INFO] 03:53:26:474 [Memoria]/(17668:19114): Intruccion: [SET BX 1]
+[INFO] 03:53:26:474 [Memoria]/(17668:19114): Intruccion: [SUM AX BX]
+[INFO] 03:53:26:474 [Memoria]/(17668:19114): Intruccion: [SUM AX BX]
+[INFO] 03:53:26:474 [Memoria]/(17668:19114): Intruccion: [SUM AX BX]
+[INFO] 03:53:26:474 [Memoria]/(17668:19114): Intruccion: [SUM AX BX]
+[INFO] 03:53:26:474 [Memoria]/(17668:19114): Intruccion: [SUM AX BX]
+[INFO] 03:53:26:474 [Memoria]/(17668:19114): Intruccion: [SUM AX BX]
+[INFO] 03:53:26:474 [Memoria]/(17668:19114): Intruccion: [SUM AX BX]
+[INFO] 03:53:26:475 [Memoria]/(17668:19114): Intruccion: [SUM AX BX]
+[INFO] 03:53:26:475 [Memoria]/(17668:19114): Intruccion: [SUM AX BX]
+[INFO] 03:53:26:475 [Memoria]/(17668:19114): Intruccion: [SUM AX BX]
+[INFO] 03:53:26:475 [Memoria]/(17668:19114): Intruccion: [SET CX 1]
+[INFO] 03:53:26:475 [Memoria]/(17668:19114): Intruccion: [SET DX 1]
+[INFO] 03:53:26:475 [Memoria]/(17668:19114): Intruccion: [SUM CX DX]
+[INFO] 03:53:26:475 [Memoria]/(17668:19114): Intruccion: [SUM CX DX]
+[INFO] 03:53:26:475 [Memoria]/(17668:19114): Intruccion: [SUM CX DX]
+[INFO] 03:53:26:475 [Memoria]/(17668:19114): Intruccion: [SUM CX DX]
+[INFO] 03:53:26:475 [Memoria]/(17668:19114): Intruccion: [SUM CX DX]
+[INFO] 03:53:26:475 [Memoria]/(17668:19114): Intruccion: [SUM CX DX]
+[INFO] 03:53:26:475 [Memoria]/(17668:19114): Intruccion: [SUM CX DX]
+[INFO] 03:53:26:475 [Memoria]/(17668:19114): Intruccion: [SUM CX DX]
+[INFO] 03:53:26:475 [Memoria]/(17668:19114): Intruccion: [SUM CX DX]
+[INFO] 03:53:26:475 [Memoria]/(17668:19114): Intruccion: [SUM CX DX]
+[INFO] 03:53:26:475 [Memoria]/(17668:19114): Intruccion: [SUM BX DX]
+[INFO] 03:53:26:475 [Memoria]/(17668:19114): Intruccion: [SUM BX DX]
+[INFO] 03:53:26:475 [Memoria]/(17668:19114): Intruccion: [SUM BX DX]
+[INFO] 03:53:26:475 [Memoria]/(17668:19114): Intruccion: [SUM BX DX]
+[INFO] 03:53:26:475 [Memoria]/(17668:19114): Intruccion: [SUM BX DX]
+[INFO] 03:53:26:475 [Memoria]/(17668:19114): Intruccion: [SUM BX DX]
+[INFO] 03:53:26:475 [Memoria]/(17668:19114): Intruccion: [SUM BX DX]
+[INFO] 03:53:26:475 [Memoria]/(17668:19114): Intruccion: [SUM BX DX]
+[INFO] 03:53:26:475 [Memoria]/(17668:19114): Intruccion: [SUM BX DX]
+[INFO] 03:53:26:475 [Memoria]/(17668:19114): Intruccion: [SUM BX DX]
+[INFO] 03:53:26:475 [Memoria]/(17668:19114): Intruccion: [EXIT]
+[INFO] 03:53:28:479 [Memoria]/(17668:19114): [Kernel] -> Peticion de creacion de proceso nuevo
+[INFO] 03:53:28:479 [Memoria]/(17668:19114): Intruccion: [SET AX 1]
+[INFO] 03:53:28:479 [Memoria]/(17668:19114): Intruccion: [SET BX 1]
+[INFO] 03:53:28:479 [Memoria]/(17668:19114): Intruccion: [SUM AX BX]
+[INFO] 03:53:28:480 [Memoria]/(17668:19114): Intruccion: [SUM AX BX]
+[INFO] 03:53:28:480 [Memoria]/(17668:19114): Intruccion: [SUM AX BX]
+[INFO] 03:53:28:480 [Memoria]/(17668:19114): Intruccion: [SUM AX BX]
+[INFO] 03:53:28:480 [Memoria]/(17668:19114): Intruccion: [SUM AX BX]
+[INFO] 03:53:28:480 [Memoria]/(17668:19114): Intruccion: [SUM AX BX]
+[INFO] 03:53:28:480 [Memoria]/(17668:19114): Intruccion: [SUM AX BX]
+[INFO] 03:53:28:480 [Memoria]/(17668:19114): Intruccion: [SUM AX BX]
+[INFO] 03:53:28:480 [Memoria]/(17668:19114): Intruccion: [SUM AX BX]
+[INFO] 03:53:28:480 [Memoria]/(17668:19114): Intruccion: [SUM AX BX]
+[INFO] 03:53:28:480 [Memoria]/(17668:19114): Intruccion: [SET CX 1]
+[INFO] 03:53:28:480 [Memoria]/(17668:19114): Intruccion: [SET DX 1]
+[INFO] 03:53:28:480 [Memoria]/(17668:19114): Intruccion: [SUM CX DX]
+[INFO] 03:53:28:480 [Memoria]/(17668:19114): Intruccion: [SUM CX DX]
+[INFO] 03:53:28:480 [Memoria]/(17668:19114): Intruccion: [SUM CX DX]
+[INFO] 03:53:28:480 [Memoria]/(17668:19114): Intruccion: [SUM CX DX]
+[INFO] 03:53:28:480 [Memoria]/(17668:19114): Intruccion: [SUM CX DX]
+[INFO] 03:53:28:480 [Memoria]/(17668:19114): Intruccion: [SUM CX DX]
+[INFO] 03:53:28:480 [Memoria]/(17668:19114): Intruccion: [SUM CX DX]
+[INFO] 03:53:28:480 [Memoria]/(17668:19114): Intruccion: [SUM CX DX]
+[INFO] 03:53:28:480 [Memoria]/(17668:19114): Intruccion: [SUM CX DX]
+[INFO] 03:53:28:480 [Memoria]/(17668:19114): Intruccion: [SUM CX DX]
+[INFO] 03:53:28:480 [Memoria]/(17668:19114): Intruccion: [SUM BX DX]
+[INFO] 03:53:28:480 [Memoria]/(17668:19114): Intruccion: [SUM BX DX]
+[INFO] 03:53:28:480 [Memoria]/(17668:19114): Intruccion: [SUM BX DX]
+[INFO] 03:53:28:480 [Memoria]/(17668:19114): Intruccion: [SUM BX DX]
+[INFO] 03:53:28:480 [Memoria]/(17668:19114): Intruccion: [SUM BX DX]
+[INFO] 03:53:28:480 [Memoria]/(17668:19114): Intruccion: [SUM BX DX]
+[INFO] 03:53:28:480 [Memoria]/(17668:19114): Intruccion: [SUM BX DX]
+[INFO] 03:53:28:480 [Memoria]/(17668:19114): Intruccion: [SUM BX DX]
+[INFO] 03:53:28:480 [Memoria]/(17668:19114): Intruccion: [SUM BX DX]
+[INFO] 03:53:28:480 [Memoria]/(17668:19114): Intruccion: [SUM BX DX]
+[INFO] 03:53:28:480 [Memoria]/(17668:19114): Intruccion: [EXIT]
+[INFO] 03:53:31:472 [Memoria]/(17668:19105): FILESYSTEM => <PID:3> <cant_pag:2> - <cant_bloques:2>
+[WARNING] 03:53:31:472 [Memoria]/(17668:19105): Se Cargaron pos_SWAP en proceso <PID:3>
+[WARNING] 03:53:32:626 [Memoria]/(17668:19114): :::::> DELETE <PID:1>
+[INFO] 03:53:36:481 [Memoria]/(17668:19105): FILESYSTEM => <PID:4> <cant_pag:2> - <cant_bloques:2>
+[WARNING] 03:53:36:481 [Memoria]/(17668:19105): Se Cargaron pos_SWAP en proceso <PID:4>
+[INFO] 03:53:41:483 [Memoria]/(17668:19105): FILESYSTEM => <PID:5> <cant_pag:2> - <cant_bloques:2>
+[WARNING] 03:53:41:483 [Memoria]/(17668:19105): Se Cargaron pos_SWAP en proceso <PID:5>
+[INFO] 03:53:46:485 [Memoria]/(17668:19105): FILESYSTEM => <PID:6> <cant_pag:2> - <cant_bloques:2>
+[WARNING] 03:53:46:485 [Memoria]/(17668:19105): Se Cargaron pos_SWAP en proceso <PID:6>
+[WARNING] 03:54:08:745 [Memoria]/(17668:19114): :::::> DELETE <PID:2>
+[INFO] 03:54:12:436 [Memoria]/(17668:19114): [Kernel] -> Peticion de creacion de proceso nuevo
+[INFO] 03:54:12:436 [Memoria]/(17668:19114): Intruccion: [SET AX 1]
+[INFO] 03:54:12:436 [Memoria]/(17668:19114): Intruccion: [SET BX 1]
+[INFO] 03:54:12:436 [Memoria]/(17668:19114): Intruccion: [SUM AX BX]
+[INFO] 03:54:12:436 [Memoria]/(17668:19114): Intruccion: [SUM AX BX]
+[INFO] 03:54:12:437 [Memoria]/(17668:19114): Intruccion: [SUM AX BX]
+[INFO] 03:54:12:437 [Memoria]/(17668:19114): Intruccion: [SUM AX BX]
+[INFO] 03:54:12:437 [Memoria]/(17668:19114): Intruccion: [SUM AX BX]
+[INFO] 03:54:12:437 [Memoria]/(17668:19114): Intruccion: [SUM AX BX]
+[INFO] 03:54:12:437 [Memoria]/(17668:19114): Intruccion: [SUM AX BX]
+[INFO] 03:54:12:437 [Memoria]/(17668:19114): Intruccion: [SUM AX BX]
+[INFO] 03:54:12:437 [Memoria]/(17668:19114): Intruccion: [SUM AX BX]
+[INFO] 03:54:12:437 [Memoria]/(17668:19114): Intruccion: [SUM AX BX]
+[INFO] 03:54:12:437 [Memoria]/(17668:19114): Intruccion: [SET CX 1]
+[INFO] 03:54:12:437 [Memoria]/(17668:19114): Intruccion: [SET DX 1]
+[INFO] 03:54:12:437 [Memoria]/(17668:19114): Intruccion: [SUM CX DX]
+[INFO] 03:54:12:437 [Memoria]/(17668:19114): Intruccion: [SUM CX DX]
+[INFO] 03:54:12:437 [Memoria]/(17668:19114): Intruccion: [SUM CX DX]
+[INFO] 03:54:12:437 [Memoria]/(17668:19114): Intruccion: [SUM CX DX]
+[INFO] 03:54:12:437 [Memoria]/(17668:19114): Intruccion: [SUM CX DX]
+[INFO] 03:54:12:437 [Memoria]/(17668:19114): Intruccion: [SUM CX DX]
+[INFO] 03:54:12:437 [Memoria]/(17668:19114): Intruccion: [SUM CX DX]
+[INFO] 03:54:12:437 [Memoria]/(17668:19114): Intruccion: [SUM CX DX]
+[INFO] 03:54:12:437 [Memoria]/(17668:19114): Intruccion: [SUM CX DX]
+[INFO] 03:54:12:437 [Memoria]/(17668:19114): Intruccion: [SUM CX DX]
+[INFO] 03:54:12:437 [Memoria]/(17668:19114): Intruccion: [SUM BX DX]
+[INFO] 03:54:12:437 [Memoria]/(17668:19114): Intruccion: [SUM BX DX]
+[INFO] 03:54:12:437 [Memoria]/(17668:19114): Intruccion: [SUM BX DX]
+[INFO] 03:54:12:437 [Memoria]/(17668:19114): Intruccion: [SUM BX DX]
+[INFO] 03:54:12:437 [Memoria]/(17668:19114): Intruccion: [SUM BX DX]
+[INFO] 03:54:12:437 [Memoria]/(17668:19114): Intruccion: [SUM BX DX]
+[INFO] 03:54:12:437 [Memoria]/(17668:19114): Intruccion: [SUM BX DX]
+[INFO] 03:54:12:437 [Memoria]/(17668:19114): Intruccion: [SUM BX DX]
+[INFO] 03:54:12:437 [Memoria]/(17668:19114): Intruccion: [SUM BX DX]
+[INFO] 03:54:12:437 [Memoria]/(17668:19114): Intruccion: [SUM BX DX]
+[INFO] 03:54:12:437 [Memoria]/(17668:19114): Intruccion: [EXIT]
+[INFO] 03:54:18:747 [Memoria]/(17668:19105): FILESYSTEM => <PID:7> <cant_pag:2> - <cant_bloques:2>
+[WARNING] 03:54:18:747 [Memoria]/(17668:19105): Se Cargaron pos_SWAP en proceso <PID:7>
+[INFO] 03:54:27:715 [Memoria]/(17668:19114): [Kernel] -> Peticion de creacion de proceso nuevo
+[INFO] 03:54:27:715 [Memoria]/(17668:19114): Intruccion: [SET AX 1]
+[INFO] 03:54:27:715 [Memoria]/(17668:19114): Intruccion: [SET BX 1]
+[INFO] 03:54:27:715 [Memoria]/(17668:19114): Intruccion: [SUM AX BX]
+[INFO] 03:54:27:715 [Memoria]/(17668:19114): Intruccion: [SUM AX BX]
+[INFO] 03:54:27:715 [Memoria]/(17668:19114): Intruccion: [SUM AX BX]
+[INFO] 03:54:27:715 [Memoria]/(17668:19114): Intruccion: [SUM AX BX]
+[INFO] 03:54:27:715 [Memoria]/(17668:19114): Intruccion: [SUM AX BX]
+[INFO] 03:54:27:715 [Memoria]/(17668:19114): Intruccion: [SUM AX BX]
+[INFO] 03:54:27:715 [Memoria]/(17668:19114): Intruccion: [SUM AX BX]
+[INFO] 03:54:27:715 [Memoria]/(17668:19114): Intruccion: [SUM AX BX]
+[INFO] 03:54:27:715 [Memoria]/(17668:19114): Intruccion: [SUM AX BX]
+[INFO] 03:54:27:715 [Memoria]/(17668:19114): Intruccion: [SUM AX BX]
+[INFO] 03:54:27:715 [Memoria]/(17668:19114): Intruccion: [SET CX 1]
+[INFO] 03:54:27:715 [Memoria]/(17668:19114): Intruccion: [SET DX 1]
+[INFO] 03:54:27:715 [Memoria]/(17668:19114): Intruccion: [SUM CX DX]
+[INFO] 03:54:27:715 [Memoria]/(17668:19114): Intruccion: [SUM CX DX]
+[INFO] 03:54:27:715 [Memoria]/(17668:19114): Intruccion: [SUM CX DX]
+[INFO] 03:54:27:715 [Memoria]/(17668:19114): Intruccion: [SUM CX DX]
+[INFO] 03:54:27:715 [Memoria]/(17668:19114): Intruccion: [SUM CX DX]
+[INFO] 03:54:27:715 [Memoria]/(17668:19114): Intruccion: [SUM CX DX]
+[INFO] 03:54:27:715 [Memoria]/(17668:19114): Intruccion: [SUM CX DX]
+[INFO] 03:54:27:715 [Memoria]/(17668:19114): Intruccion: [SUM CX DX]
+[INFO] 03:54:27:715 [Memoria]/(17668:19114): Intruccion: [SUM CX DX]
+[INFO] 03:54:27:715 [Memoria]/(17668:19114): Intruccion: [SUM CX DX]
+[INFO] 03:54:27:715 [Memoria]/(17668:19114): Intruccion: [SUM BX DX]
+[INFO] 03:54:27:715 [Memoria]/(17668:19114): Intruccion: [SUM BX DX]
+[INFO] 03:54:27:715 [Memoria]/(17668:19114): Intruccion: [SUM BX DX]
+[INFO] 03:54:27:715 [Memoria]/(17668:19114): Intruccion: [SUM BX DX]
+[INFO] 03:54:27:716 [Memoria]/(17668:19114): Intruccion: [SUM BX DX]
+[INFO] 03:54:27:716 [Memoria]/(17668:19114): Intruccion: [SUM BX DX]
+[INFO] 03:54:27:716 [Memoria]/(17668:19114): Intruccion: [SUM BX DX]
+[INFO] 03:54:27:716 [Memoria]/(17668:19114): Intruccion: [SUM BX DX]
+[INFO] 03:54:27:716 [Memoria]/(17668:19114): Intruccion: [SUM BX DX]
+[INFO] 03:54:27:716 [Memoria]/(17668:19114): Intruccion: [SUM BX DX]
+[INFO] 03:54:27:716 [Memoria]/(17668:19114): Intruccion: [EXIT]
+[INFO] 03:54:33:731 [Memoria]/(17668:19105): FILESYSTEM => <PID:8> <cant_pag:2> - <cant_bloques:2>
+[WARNING] 03:54:33:731 [Memoria]/(17668:19105): Se Cargaron pos_SWAP en proceso <PID:8>
+[WARNING] 03:54:45:033 [Memoria]/(17668:19114): :::::> DELETE <PID:3>
+[ERROR] 03:55:15:201 [Memoria]/(17668:19114): [DESCONEXION]: KERNEL
+[ERROR] 03:55:15:205 [Memoria]/(17668:19105): [DESCONEXION]: FILESYSTEM
+[ERROR] 03:55:16:172 [Memoria]/(17668:19112): [DESCONEXION]: CPU
+[INFO] 03:55:54:062 [Memoria]/(17668:17668): Cliente conectado a Memoria
+[INFO] 03:55:54:062 [Memoria]/(17668:17668): [THREAD] Creo hilo para atender
+[INFO] 03:55:54:063 [Memoria]/(17668:19153): !!!!! FILESYSTEM CONECTADO !!!!!
+[INFO] 03:55:55:588 [Memoria]/(17668:17668): Cliente conectado a Memoria
+[INFO] 03:55:55:588 [Memoria]/(17668:17668): [THREAD] Creo hilo para atender
+[INFO] 03:55:55:589 [Memoria]/(17668:19160): !!!!! CPU CONECTADO !!!!!
+[INFO] 03:56:18:138 [Memoria]/(17668:17668): Cliente conectado a Memoria
+[INFO] 03:56:18:139 [Memoria]/(17668:17668): [THREAD] Creo hilo para atender
+[INFO] 03:56:18:139 [Memoria]/(17668:19162): !!!!! KERNEL CONECTADO !!!!!
+[INFO] 03:57:05:076 [Memoria]/(17668:19162): [Kernel] -> Peticion de creacion de proceso nuevo
+[INFO] 03:57:05:076 [Memoria]/(17668:19162): Intruccion: [SET AX 1]
+[INFO] 03:57:05:076 [Memoria]/(17668:19162): Intruccion: [SET BX 1]
+[INFO] 03:57:05:076 [Memoria]/(17668:19162): Intruccion: [SUM AX BX]
+[INFO] 03:57:05:076 [Memoria]/(17668:19162): Intruccion: [SUM AX BX]
+[INFO] 03:57:05:076 [Memoria]/(17668:19162): Intruccion: [SUM AX BX]
+[INFO] 03:57:05:077 [Memoria]/(17668:19162): Intruccion: [SUM AX BX]
+[INFO] 03:57:05:077 [Memoria]/(17668:19162): Intruccion: [SUM AX BX]
+[INFO] 03:57:05:077 [Memoria]/(17668:19162): Intruccion: [SUM AX BX]
+[INFO] 03:57:05:077 [Memoria]/(17668:19162): Intruccion: [SUM AX BX]
+[INFO] 03:57:05:077 [Memoria]/(17668:19162): Intruccion: [SUM AX BX]
+[INFO] 03:57:05:077 [Memoria]/(17668:19162): Intruccion: [SUM AX BX]
+[INFO] 03:57:05:077 [Memoria]/(17668:19162): Intruccion: [SUM AX BX]
+[INFO] 03:57:05:077 [Memoria]/(17668:19162): Intruccion: [SET CX 1]
+[INFO] 03:57:05:077 [Memoria]/(17668:19162): Intruccion: [SET DX 1]
+[INFO] 03:57:05:077 [Memoria]/(17668:19162): Intruccion: [SUM CX DX]
+[INFO] 03:57:05:077 [Memoria]/(17668:19162): Intruccion: [SUM CX DX]
+[INFO] 03:57:05:077 [Memoria]/(17668:19162): Intruccion: [SUM CX DX]
+[INFO] 03:57:05:077 [Memoria]/(17668:19162): Intruccion: [SUM CX DX]
+[INFO] 03:57:05:077 [Memoria]/(17668:19162): Intruccion: [SUM CX DX]
+[INFO] 03:57:05:077 [Memoria]/(17668:19162): Intruccion: [SUM CX DX]
+[INFO] 03:57:05:077 [Memoria]/(17668:19162): Intruccion: [SUM CX DX]
+[INFO] 03:57:05:077 [Memoria]/(17668:19162): Intruccion: [SUM CX DX]
+[INFO] 03:57:05:077 [Memoria]/(17668:19162): Intruccion: [SUM CX DX]
+[INFO] 03:57:05:077 [Memoria]/(17668:19162): Intruccion: [SUM CX DX]
+[INFO] 03:57:05:077 [Memoria]/(17668:19162): Intruccion: [SUM BX DX]
+[INFO] 03:57:05:077 [Memoria]/(17668:19162): Intruccion: [SUM BX DX]
+[INFO] 03:57:05:077 [Memoria]/(17668:19162): Intruccion: [SUM BX DX]
+[INFO] 03:57:05:077 [Memoria]/(17668:19162): Intruccion: [SUM BX DX]
+[INFO] 03:57:05:077 [Memoria]/(17668:19162): Intruccion: [SUM BX DX]
+[INFO] 03:57:05:077 [Memoria]/(17668:19162): Intruccion: [SUM BX DX]
+[INFO] 03:57:05:077 [Memoria]/(17668:19162): Intruccion: [SUM BX DX]
+[INFO] 03:57:05:077 [Memoria]/(17668:19162): Intruccion: [SUM BX DX]
+[INFO] 03:57:05:077 [Memoria]/(17668:19162): Intruccion: [SUM BX DX]
+[INFO] 03:57:05:078 [Memoria]/(17668:19162): Intruccion: [SUM BX DX]
+[INFO] 03:57:05:078 [Memoria]/(17668:19162): Intruccion: [EXIT]
+[INFO] 03:57:07:079 [Memoria]/(17668:19162): [Kernel] -> Peticion de creacion de proceso nuevo
+[INFO] 03:57:07:079 [Memoria]/(17668:19162): Intruccion: [SET AX 1]
+[INFO] 03:57:07:079 [Memoria]/(17668:19162): Intruccion: [SET BX 1]
+[INFO] 03:57:07:079 [Memoria]/(17668:19162): Intruccion: [SET CX 1]
+[INFO] 03:57:07:079 [Memoria]/(17668:19162): Intruccion: [SET DX 1]
+[INFO] 03:57:07:079 [Memoria]/(17668:19162): Intruccion: [SUM AX BX]
+[INFO] 03:57:07:079 [Memoria]/(17668:19162): Intruccion: [SUM CX DX]
+[INFO] 03:57:07:079 [Memoria]/(17668:19162): Intruccion: [SUM AX BX]
+[INFO] 03:57:07:079 [Memoria]/(17668:19162): Intruccion: [SUM CX DX]
+[INFO] 03:57:07:079 [Memoria]/(17668:19162): Intruccion: [SUM AX BX]
+[INFO] 03:57:07:080 [Memoria]/(17668:19162): Intruccion: [SUM CX DX]
+[INFO] 03:57:07:080 [Memoria]/(17668:19162): Intruccion: [SUM AX BX]
+[INFO] 03:57:07:080 [Memoria]/(17668:19162): Intruccion: [SUM CX DX]
+[INFO] 03:57:07:080 [Memoria]/(17668:19162): Intruccion: [SUM AX BX]
+[INFO] 03:57:07:080 [Memoria]/(17668:19162): Intruccion: [SUM CX DX]
+[INFO] 03:57:07:080 [Memoria]/(17668:19162): Intruccion: [SUM AX BX]
+[INFO] 03:57:07:080 [Memoria]/(17668:19162): Intruccion: [SUM CX DX]
+[INFO] 03:57:07:080 [Memoria]/(17668:19162): Intruccion: [SUM AX BX]
+[INFO] 03:57:07:080 [Memoria]/(17668:19162): Intruccion: [SUM CX DX]
+[INFO] 03:57:07:080 [Memoria]/(17668:19162): Intruccion: [EXIT]
+[INFO] 03:57:09:087 [Memoria]/(17668:19162): [Kernel] -> Peticion de creacion de proceso nuevo
+[INFO] 03:57:09:087 [Memoria]/(17668:19162): Intruccion: [SET AX 1]
+[INFO] 03:57:09:087 [Memoria]/(17668:19162): Intruccion: [SET BX 1]
+[INFO] 03:57:09:087 [Memoria]/(17668:19162): Intruccion: [SET CX 1]
+[INFO] 03:57:09:087 [Memoria]/(17668:19162): Intruccion: [SET DX 1]
+[INFO] 03:57:09:087 [Memoria]/(17668:19162): Intruccion: [SUM AX BX]
+[INFO] 03:57:09:087 [Memoria]/(17668:19162): Intruccion: [SUM CX DX]
+[INFO] 03:57:09:087 [Memoria]/(17668:19162): Intruccion: [EXIT]
+[INFO] 03:57:11:089 [Memoria]/(17668:19153): FILESYSTEM => <PID:1> <cant_pag:2> - <cant_bloques:2>
+[WARNING] 03:57:11:089 [Memoria]/(17668:19153): Se Cargaron pos_SWAP en proceso <PID:1>
+[INFO] 03:57:16:093 [Memoria]/(17668:19153): FILESYSTEM => <PID:2> <cant_pag:2> - <cant_bloques:2>
+[WARNING] 03:57:16:093 [Memoria]/(17668:19153): Se Cargaron pos_SWAP en proceso <PID:2>
+[INFO] 03:57:21:096 [Memoria]/(17668:19153): FILESYSTEM => <PID:3> <cant_pag:2> - <cant_bloques:2>
+[WARNING] 03:57:21:096 [Memoria]/(17668:19153): Se Cargaron pos_SWAP en proceso <PID:3>
+[WARNING] 03:57:42:279 [Memoria]/(17668:19162): :::::> DELETE <PID:1>
+[WARNING] 03:57:50:381 [Memoria]/(17668:19162): :::::> DELETE <PID:3>
+[WARNING] 03:58:10:496 [Memoria]/(17668:19162): :::::> DELETE <PID:2>
+[ERROR] 03:58:47:675 [Memoria]/(17668:19162): [DESCONEXION]: KERNEL
+[ERROR] 03:58:47:687 [Memoria]/(17668:19160): [DESCONEXION]: CPU
+[ERROR] 03:58:47:687 [Memoria]/(17668:19153): [DESCONEXION]: FILESYSTEM
+[INFO] 03:59:10:088 [Memoria]/(19192:19192): Se inicia memoria con Paginacion.
+
+[INFO] 03:59:10:088 [Memoria]/(19192:19192): Algoritmo de reemplazo a usar: FIFO
+
+[INFO] 03:59:10:088 [Memoria]/(19192:19192): Iniciando servidor Memoria
+[INFO] 03:59:11:193 [Memoria]/(19192:19192): Cliente conectado a Memoria
+[INFO] 03:59:11:193 [Memoria]/(19192:19192): [THREAD] Creo hilo para atender
+[INFO] 03:59:11:196 [Memoria]/(19192:19194): !!!!! FILESYSTEM CONECTADO !!!!!
+[INFO] 03:59:12:568 [Memoria]/(19192:19192): Cliente conectado a Memoria
+[INFO] 03:59:12:568 [Memoria]/(19192:19192): [THREAD] Creo hilo para atender
+[INFO] 03:59:12:568 [Memoria]/(19192:19201): !!!!! CPU CONECTADO !!!!!
+[INFO] 03:59:13:684 [Memoria]/(19192:19192): Cliente conectado a Memoria
+[INFO] 03:59:13:684 [Memoria]/(19192:19192): [THREAD] Creo hilo para atender
+[INFO] 03:59:13:687 [Memoria]/(19192:19203): !!!!! KERNEL CONECTADO !!!!!
+[INFO] 03:59:35:324 [Memoria]/(19192:19203): [Kernel] -> Peticion de creacion de proceso nuevo
+[INFO] 03:59:35:324 [Memoria]/(19192:19203): Intruccion: [SET AX 1]
+[INFO] 03:59:35:324 [Memoria]/(19192:19203): Intruccion: [SET BX 1]
+[INFO] 03:59:35:324 [Memoria]/(19192:19203): Intruccion: [SUM AX BX]
+[INFO] 03:59:35:324 [Memoria]/(19192:19203): Intruccion: [SUM AX BX]
+[INFO] 03:59:35:324 [Memoria]/(19192:19203): Intruccion: [SUM AX BX]
+[INFO] 03:59:35:324 [Memoria]/(19192:19203): Intruccion: [SUM AX BX]
+[INFO] 03:59:35:324 [Memoria]/(19192:19203): Intruccion: [SUM AX BX]
+[INFO] 03:59:35:324 [Memoria]/(19192:19203): Intruccion: [SUM AX BX]
+[INFO] 03:59:35:324 [Memoria]/(19192:19203): Intruccion: [SUM AX BX]
+[INFO] 03:59:35:324 [Memoria]/(19192:19203): Intruccion: [SUM AX BX]
+[INFO] 03:59:35:324 [Memoria]/(19192:19203): Intruccion: [SUM AX BX]
+[INFO] 03:59:35:324 [Memoria]/(19192:19203): Intruccion: [SUM AX BX]
+[INFO] 03:59:35:324 [Memoria]/(19192:19203): Intruccion: [SET CX 1]
+[INFO] 03:59:35:324 [Memoria]/(19192:19203): Intruccion: [SET DX 1]
+[INFO] 03:59:35:324 [Memoria]/(19192:19203): Intruccion: [SUM CX DX]
+[INFO] 03:59:35:324 [Memoria]/(19192:19203): Intruccion: [SUM CX DX]
+[INFO] 03:59:35:324 [Memoria]/(19192:19203): Intruccion: [SUM CX DX]
+[INFO] 03:59:35:324 [Memoria]/(19192:19203): Intruccion: [SUM CX DX]
+[INFO] 03:59:35:324 [Memoria]/(19192:19203): Intruccion: [SUM CX DX]
+[INFO] 03:59:35:324 [Memoria]/(19192:19203): Intruccion: [SUM CX DX]
+[INFO] 03:59:35:324 [Memoria]/(19192:19203): Intruccion: [SUM CX DX]
+[INFO] 03:59:35:324 [Memoria]/(19192:19203): Intruccion: [SUM CX DX]
+[INFO] 03:59:35:324 [Memoria]/(19192:19203): Intruccion: [SUM CX DX]
+[INFO] 03:59:35:324 [Memoria]/(19192:19203): Intruccion: [SUM CX DX]
+[INFO] 03:59:35:324 [Memoria]/(19192:19203): Intruccion: [SUM BX DX]
+[INFO] 03:59:35:324 [Memoria]/(19192:19203): Intruccion: [SUM BX DX]
+[INFO] 03:59:35:324 [Memoria]/(19192:19203): Intruccion: [SUM BX DX]
+[INFO] 03:59:35:324 [Memoria]/(19192:19203): Intruccion: [SUM BX DX]
+[INFO] 03:59:35:324 [Memoria]/(19192:19203): Intruccion: [SUM BX DX]
+[INFO] 03:59:35:324 [Memoria]/(19192:19203): Intruccion: [SUM BX DX]
+[INFO] 03:59:35:324 [Memoria]/(19192:19203): Intruccion: [SUM BX DX]
+[INFO] 03:59:35:324 [Memoria]/(19192:19203): Intruccion: [SUM BX DX]
+[INFO] 03:59:35:324 [Memoria]/(19192:19203): Intruccion: [SUM BX DX]
+[INFO] 03:59:35:324 [Memoria]/(19192:19203): Intruccion: [SUM BX DX]
+[INFO] 03:59:35:324 [Memoria]/(19192:19203): Intruccion: [EXIT]
+[INFO] 03:59:37:328 [Memoria]/(19192:19203): [Kernel] -> Peticion de creacion de proceso nuevo
+[INFO] 03:59:37:328 [Memoria]/(19192:19203): Intruccion: [SET AX 1]
+[INFO] 03:59:37:328 [Memoria]/(19192:19203): Intruccion: [SET BX 1]
+[INFO] 03:59:37:328 [Memoria]/(19192:19203): Intruccion: [SET CX 1]
+[INFO] 03:59:37:328 [Memoria]/(19192:19203): Intruccion: [SET DX 1]
+[INFO] 03:59:37:328 [Memoria]/(19192:19203): Intruccion: [SUM AX BX]
+[INFO] 03:59:37:328 [Memoria]/(19192:19203): Intruccion: [SUM CX DX]
+[INFO] 03:59:37:328 [Memoria]/(19192:19203): Intruccion: [SUM AX BX]
+[INFO] 03:59:37:328 [Memoria]/(19192:19203): Intruccion: [SUM CX DX]
+[INFO] 03:59:37:328 [Memoria]/(19192:19203): Intruccion: [SUM AX BX]
+[INFO] 03:59:37:328 [Memoria]/(19192:19203): Intruccion: [SUM CX DX]
+[INFO] 03:59:37:328 [Memoria]/(19192:19203): Intruccion: [SUM AX BX]
+[INFO] 03:59:37:328 [Memoria]/(19192:19203): Intruccion: [SUM CX DX]
+[INFO] 03:59:37:328 [Memoria]/(19192:19203): Intruccion: [SUM AX BX]
+[INFO] 03:59:37:328 [Memoria]/(19192:19203): Intruccion: [SUM CX DX]
+[INFO] 03:59:37:328 [Memoria]/(19192:19203): Intruccion: [SUM AX BX]
+[INFO] 03:59:37:328 [Memoria]/(19192:19203): Intruccion: [SUM CX DX]
+[INFO] 03:59:37:329 [Memoria]/(19192:19203): Intruccion: [SUM AX BX]
+[INFO] 03:59:37:329 [Memoria]/(19192:19203): Intruccion: [SUM CX DX]
+[INFO] 03:59:37:329 [Memoria]/(19192:19203): Intruccion: [EXIT]
+[INFO] 03:59:39:340 [Memoria]/(19192:19203): [Kernel] -> Peticion de creacion de proceso nuevo
+[INFO] 03:59:39:340 [Memoria]/(19192:19203): Intruccion: [SET AX 1]
+[INFO] 03:59:39:340 [Memoria]/(19192:19203): Intruccion: [SET BX 1]
+[INFO] 03:59:39:340 [Memoria]/(19192:19203): Intruccion: [SET CX 1]
+[INFO] 03:59:39:340 [Memoria]/(19192:19203): Intruccion: [SET DX 1]
+[INFO] 03:59:39:340 [Memoria]/(19192:19203): Intruccion: [SUM AX BX]
+[INFO] 03:59:39:340 [Memoria]/(19192:19203): Intruccion: [SUM CX DX]
+[INFO] 03:59:39:340 [Memoria]/(19192:19203): Intruccion: [EXIT]
+[INFO] 03:59:41:340 [Memoria]/(19192:19194): FILESYSTEM => <PID:1> <cant_pag:2> - <cant_bloques:2>
+[WARNING] 03:59:41:340 [Memoria]/(19192:19194): Se Cargaron pos_SWAP en proceso <PID:1>
+[INFO] 03:59:46:345 [Memoria]/(19192:19194): FILESYSTEM => <PID:2> <cant_pag:2> - <cant_bloques:2>
+[WARNING] 03:59:46:345 [Memoria]/(19192:19194): Se Cargaron pos_SWAP en proceso <PID:2>
+[INFO] 03:59:51:366 [Memoria]/(19192:19194): FILESYSTEM => <PID:3> <cant_pag:2> - <cant_bloques:2>
+[WARNING] 03:59:51:366 [Memoria]/(19192:19194): Se Cargaron pos_SWAP en proceso <PID:3>
+[WARNING] 04:00:03:487 [Memoria]/(19192:19203): :::::> DELETE <PID:3>
+[WARNING] 04:00:22:536 [Memoria]/(19192:19203): :::::> DELETE <PID:2>
+[WARNING] 04:00:40:635 [Memoria]/(19192:19203): :::::> DELETE <PID:1>
+[ERROR] 04:01:24:746 [Memoria]/(19192:19203): [DESCONEXION]: KERNEL
+[ERROR] 04:01:24:747 [Memoria]/(19192:19201): [DESCONEXION]: CPU
+[ERROR] 04:01:24:747 [Memoria]/(19192:19194): [DESCONEXION]: FILESYSTEM
+[INFO] 04:04:35:136 [Memoria]/(19317:19317): Se inicia memoria con Paginacion.
+
+[INFO] 04:04:35:136 [Memoria]/(19317:19317): Algoritmo de reemplazo a usar: FIFO
+
+[INFO] 04:04:35:136 [Memoria]/(19317:19317): Iniciando servidor Memoria
+[INFO] 04:04:36:503 [Memoria]/(19317:19317): Cliente conectado a Memoria
+[INFO] 04:04:36:503 [Memoria]/(19317:19317): [THREAD] Creo hilo para atender
+[INFO] 04:04:36:508 [Memoria]/(19317:19319): !!!!! FILESYSTEM CONECTADO !!!!!
+[INFO] 04:04:37:877 [Memoria]/(19317:19317): Cliente conectado a Memoria
+[INFO] 04:04:37:877 [Memoria]/(19317:19317): [THREAD] Creo hilo para atender
+[INFO] 04:04:37:877 [Memoria]/(19317:19326): !!!!! CPU CONECTADO !!!!!
+[INFO] 04:04:41:041 [Memoria]/(19317:19317): Cliente conectado a Memoria
+[INFO] 04:04:41:041 [Memoria]/(19317:19317): [THREAD] Creo hilo para atender
+[INFO] 04:04:41:041 [Memoria]/(19317:19328): !!!!! KERNEL CONECTADO !!!!!
+[INFO] 04:06:22:822 [Memoria]/(19317:19328): [Kernel] -> Peticion de creacion de proceso nuevo
+[INFO] 04:06:22:822 [Memoria]/(19317:19328): Intruccion: [SET AX 1]
+[INFO] 04:06:22:822 [Memoria]/(19317:19328): Intruccion: [MOV_OUT 0 AX]
+[INFO] 04:06:22:822 [Memoria]/(19317:19328): Intruccion: [MOV_OUT 16 AX]
+[INFO] 04:06:22:822 [Memoria]/(19317:19328): Intruccion: [MOV_OUT 32 AX]
+[INFO] 04:06:22:822 [Memoria]/(19317:19328): Intruccion: [MOV_OUT 48 AX]
+[INFO] 04:06:22:822 [Memoria]/(19317:19328): Intruccion: [MOV_IN DX 16]
+[INFO] 04:06:22:822 [Memoria]/(19317:19328): Intruccion: [MOV_IN CX 32]
+[INFO] 04:06:22:822 [Memoria]/(19317:19328): Intruccion: [SET BX 2]
+[INFO] 04:06:22:822 [Memoria]/(19317:19328): Intruccion: [MOV_OUT 64 BX]
+[INFO] 04:06:22:822 [Memoria]/(19317:19328): Intruccion: [MOV_OUT 80 BX]
+[INFO] 04:06:22:822 [Memoria]/(19317:19328): Intruccion: [MOV_OUT 96 BX]
+[INFO] 04:06:22:822 [Memoria]/(19317:19328): Intruccion: [MOV_OUT 112 BX]
+[INFO] 04:06:22:822 [Memoria]/(19317:19328): Intruccion: [EXIT]
+[INFO] 04:06:26:392 [Memoria]/(19317:19328): PAG_SWAP <PID:1> <Pag:0> <Pos_SWAP:0>
+[INFO] 04:06:35:347 [Memoria]/(19317:19319): FILESYSTEM => <PID:1> <cant_pag:8> - <cant_bloques:8>
+[WARNING] 04:06:35:347 [Memoria]/(19317:19319): Se Cargaron pos_SWAP en proceso <PID:1>
+[ERROR] 04:06:35:447 [Memoria]/(19317:19319): [DESCONEXION]: FILESYSTEM
+[ERROR] 04:06:35:449 [Memoria]/(19317:19328): [DESCONEXION]: KERNEL
+[ERROR] 04:06:35:451 [Memoria]/(19317:19326): [DESCONEXION]: CPU
+[INFO] 04:15:37:351 [Memoria]/(19317:19317): Cliente conectado a Memoria
+[INFO] 04:15:37:351 [Memoria]/(19317:19317): [THREAD] Creo hilo para atender
+[INFO] 04:15:37:352 [Memoria]/(19317:19548): !!!!! FILESYSTEM CONECTADO !!!!!
+[INFO] 04:15:39:683 [Memoria]/(19317:19317): Cliente conectado a Memoria
+[INFO] 04:15:39:683 [Memoria]/(19317:19317): [THREAD] Creo hilo para atender
+[INFO] 04:15:39:684 [Memoria]/(19317:19555): !!!!! CPU CONECTADO !!!!!
+[INFO] 04:15:40:917 [Memoria]/(19317:19317): Cliente conectado a Memoria
+[INFO] 04:15:40:918 [Memoria]/(19317:19317): [THREAD] Creo hilo para atender
+[INFO] 04:15:40:918 [Memoria]/(19317:19557): !!!!! KERNEL CONECTADO !!!!!
+[ERROR] 04:16:00:250 [Memoria]/(19317:19548): [DESCONEXION]: FILESYSTEM
+[ERROR] 04:16:00:251 [Memoria]/(19317:19557): [DESCONEXION]: KERNEL
+[ERROR] 04:16:00:252 [Memoria]/(19317:19555): [DESCONEXION]: CPU
+[INFO] 04:16:01:457 [Memoria]/(19317:19317): Cliente conectado a Memoria
+[INFO] 04:16:01:457 [Memoria]/(19317:19317): [THREAD] Creo hilo para atender
+[INFO] 04:16:01:457 [Memoria]/(19317:19567): !!!!! KERNEL CONECTADO !!!!!
+[ERROR] 04:16:01:458 [Memoria]/(19317:19567): [DESCONEXION]: KERNEL
+[INFO] 04:16:13:779 [Memoria]/(19317:19317): Cliente conectado a Memoria
+[INFO] 04:16:13:779 [Memoria]/(19317:19317): [THREAD] Creo hilo para atender
+[INFO] 04:16:13:779 [Memoria]/(19317:19585): !!!!! FILESYSTEM CONECTADO !!!!!
+[INFO] 04:16:15:199 [Memoria]/(19317:19317): Cliente conectado a Memoria
+[INFO] 04:16:15:199 [Memoria]/(19317:19317): [THREAD] Creo hilo para atender
+[INFO] 04:16:15:200 [Memoria]/(19317:19592): !!!!! CPU CONECTADO !!!!!
+[INFO] 04:16:16:794 [Memoria]/(19317:19317): Cliente conectado a Memoria
+[INFO] 04:16:16:794 [Memoria]/(19317:19317): [THREAD] Creo hilo para atender
+[INFO] 04:16:16:794 [Memoria]/(19317:19594): !!!!! KERNEL CONECTADO !!!!!
+[INFO] 04:16:28:731 [Memoria]/(19317:19594): [Kernel] -> Peticion de creacion de proceso nuevo
+[INFO] 04:16:28:731 [Memoria]/(19317:19594): Intruccion: [SET AX 1]
+[INFO] 04:16:28:731 [Memoria]/(19317:19594): Intruccion: [MOV_OUT 0 AX]
+[INFO] 04:16:28:731 [Memoria]/(19317:19594): Intruccion: [MOV_OUT 16 AX]
+[INFO] 04:16:28:731 [Memoria]/(19317:19594): Intruccion: [MOV_OUT 32 AX]
+[INFO] 04:16:28:731 [Memoria]/(19317:19594): Intruccion: [MOV_OUT 48 AX]
+[INFO] 04:16:28:731 [Memoria]/(19317:19594): Intruccion: [MOV_IN DX 16]
+[INFO] 04:16:28:731 [Memoria]/(19317:19594): Intruccion: [MOV_IN CX 32]
+[INFO] 04:16:28:731 [Memoria]/(19317:19594): Intruccion: [SET BX 2]
+[INFO] 04:16:28:731 [Memoria]/(19317:19594): Intruccion: [MOV_OUT 64 BX]
+[INFO] 04:16:28:731 [Memoria]/(19317:19594): Intruccion: [MOV_OUT 80 BX]
+[INFO] 04:16:28:731 [Memoria]/(19317:19594): Intruccion: [MOV_OUT 96 BX]
+[INFO] 04:16:28:731 [Memoria]/(19317:19594): Intruccion: [MOV_OUT 112 BX]
+[INFO] 04:16:28:731 [Memoria]/(19317:19594): Intruccion: [EXIT]
+[INFO] 04:16:32:255 [Memoria]/(19317:19594): PAG_SWAP <PID:1> <Pag:0> <Pos_SWAP:0>
+[INFO] 04:16:41:264 [Memoria]/(19317:19585): FILESYSTEM => <PID:1> <cant_pag:8> - <cant_bloques:8>
+[WARNING] 04:16:41:264 [Memoria]/(19317:19585): Se Cargaron pos_SWAP en proceso <PID:1>
+[INFO] 04:16:46:787 [Memoria]/(19317:19594): PAG_SWAP <PID:1> <Pag:1> <Pos_SWAP:1>
+[INFO] 04:16:52:312 [Memoria]/(19317:19594): PAG_SWAP <PID:1> <Pag:2> <Pos_SWAP:2>

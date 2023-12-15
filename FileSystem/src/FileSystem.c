@@ -58,6 +58,7 @@ void inicializar_archivos(){
 }
 
 void crear_fat(){
+	log_warning(filesystem_logger, "inicio crear_fat");
 	fd_archivoTablaFAT = open(PATH_FAT, O_CREAT | O_RDWR, S_IRUSR | S_IWUSR);
 	tamanio_fat = (CANT_BLOQUES_TOTAL - CANT_BLOQUES_SWAP) * sizeof(uint32_t);
 	ftruncate(fd_archivoTablaFAT, tamanio_fat);
@@ -75,9 +76,11 @@ void crear_fat(){
 	}
 
 	tablaFatEnMemoria[0] = EOF_FS;
+	log_warning(filesystem_logger, "fin crear_fat(mmapeo la tabla fat joya)");
 }
 
 void inicializar_archivo_de_bloques(){
+	log_warning(filesystem_logger, "inicio inicializar_archivo_de_bloques");
 	fd_archivoBloques = open(PATH_BLOQUES, O_CREAT | O_RDWR, S_IRUSR | S_IWUSR);
 	tamanio_archivo_bloques = CANT_BLOQUES_TOTAL * TAM_BLOQUE;
 	ftruncate(fd_archivoBloques, tamanio_archivo_bloques);
@@ -88,14 +91,18 @@ void inicializar_archivo_de_bloques(){
 //	mapear_bloques_swap(fd_archivoBloques);
 //	mapear_bloques_de_archivo(fd_archivoBloques);
 
-	bitmap_swap = malloc(CANT_BLOQUES_SWAP/8);
+	bitmap_swap = calloc(CANT_BLOQUES_SWAP, sizeof(char));
 	bitmapSWAP = bitarray_create_with_mode(bitmap_swap, CANT_BLOQUES_SWAP/8, LSB_FIRST);
+//	for (int i = 0; i < bitarray_get_max_bit(bitmapSWAP); i++) {
+//		bitarray_clean_bit(bitmapSWAP, i);
+//	}
+
 	bloquesEnMemoria = mmap(NULL, CANT_BLOQUES_TOTAL*TAM_BLOQUE, PROT_READ | PROT_WRITE, MAP_SHARED, fd_archivoBloques, 0);
 	if (bloquesEnMemoria == MAP_FAILED) {
 		log_error(filesystem_logger, "Error al mapear los bloques SWAP");
 		exit(1);
 	}
-	log_warning(filesystem_logger, "mmapeo joya");
+	log_warning(filesystem_logger, "fin inicializar_archivo_de_bloques(mmapeo de bloques correcto)");
 }
 
 //void mapear_bloques_swap(int fd){
@@ -180,19 +187,19 @@ void atender_filesystem_kernel(){
 
 		case MANEJAR_F_OPEN_KF:
 			unBuffer = recibiendo_super_paquete(fd_kernel);
-			ejecutar_en_un_hilo_nuevo_detach(atender_f_open_de_kernel, unBuffer);
+			ejecutar_en_un_hilo_nuevo_detach((void*)atender_f_open_de_kernel, unBuffer);
 			break;
 		case MANEJAR_F_TRUNCATE_KF:
 			unBuffer = recibiendo_super_paquete(fd_kernel);
-			ejecutar_en_un_hilo_nuevo_detach(atender_f_truncate_de_kernel, unBuffer);
+			ejecutar_en_un_hilo_nuevo_detach((void*)atender_f_truncate_de_kernel, unBuffer);
 			break;
 		case MANEJAR_F_READ_KF:
 			unBuffer = recibiendo_super_paquete(fd_kernel);
-			ejecutar_en_un_hilo_nuevo_detach(atender_f_read_de_kernel, unBuffer);
+			ejecutar_en_un_hilo_nuevo_detach((void*)atender_f_read_de_kernel, unBuffer);
 			break;
 		case MANEJAR_F_WRITE_KF:
 			unBuffer = recibiendo_super_paquete(fd_kernel);
-			ejecutar_en_un_hilo_nuevo_detach(atender_f_write_de_kernel, unBuffer);
+			ejecutar_en_un_hilo_nuevo_detach((void*)atender_f_write_de_kernel, unBuffer);
 			break;
 		case MENSAJES_POR_CONSOLA:
 		    unBuffer = recibiendo_super_paquete(fd_kernel);

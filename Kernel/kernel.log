@@ -27,3 +27,1075 @@
 [INFO] 23:09:16:585 [Kernel]/(6329:6341): Se aviso a Memoria del nuevo proceso
 [INFO] 23:09:17:708 [Kernel]/(6329:6332): Se recibio algo de FILESYSTEM
 [ERROR] 23:09:17:708 [Kernel]/(6329:6332): [DESCONEXION]: FILESYSTEM
+[INFO] 01:12:09:421 [Kernel]/(13373:13373): [RECURSO | 1]
+[INFO] 01:12:09:426 [Kernel]/(13373:13373): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 01:12:09:426 [Kernel]/(13373:13373): HANDSHAKE CON FILESYSTEM [EXITOSO]
+[INFO] 01:12:09:426 [Kernel]/(13373:13373): HANDSHAKE CON CPU_Dispatch [EXITOSO]
+[INFO] 01:12:09:427 [Kernel]/(13373:13373): HANDSHAKE CON CPU_Interrupt [EXITOSO]
+[INFO] 01:12:31:169 [Kernel]/(13373:13385): Se aviso a Memoria del nuevo proceso
+[INFO] 01:12:33:179 [Kernel]/(13373:13375): Se recibio algo de MEMORIA
+[INFO] 01:12:35:180 [Kernel]/(13373:13387): Me desperte
+[INFO] 01:12:35:181 [Kernel]/(13373:13378): Envio interrupcion por RR
+[INFO] 01:12:35:214 [Kernel]/(13373:13377): Se recibio algo de CPU_Dispatch
+[WARNING] 01:12:35:214 [Kernel]/(13373:13377): <PID:1>[PC:2][0|0|4|0][ALGORITMO_QUANTUM]
+[INFO] 01:12:36:217 [Kernel]/(13373:13377): Se recibio algo de CPU_Dispatch
+[WARNING] 01:12:36:217 [Kernel]/(13373:13377): Entre a atender instruccion
+[WARNING] 01:12:36:217 [Kernel]/(13373:13377): ATIENDO SLEEP
+[WARNING] 01:12:36:217 [Kernel]/(13373:13391): BLOCKEO DURANTE: 10
+[INFO] 01:12:37:218 [Kernel]/(13373:13389): Me desperte
+[INFO] 02:05:55:286 [Kernel]/(15466:15466): [RECURSO | 1]
+[INFO] 02:05:55:288 [Kernel]/(15466:15466): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 02:05:55:288 [Kernel]/(15466:15466): HANDSHAKE CON FILESYSTEM [EXITOSO]
+[INFO] 02:05:55:289 [Kernel]/(15466:15466): HANDSHAKE CON CPU_Dispatch [EXITOSO]
+[INFO] 02:05:55:289 [Kernel]/(15466:15466): HANDSHAKE CON CPU_Interrupt [EXITOSO]
+[INFO] 02:06:03:504 [Kernel]/(15466:15478): Se aviso a Memoria del nuevo proceso
+[INFO] 02:06:05:510 [Kernel]/(15466:15468): Se recibio algo de MEMORIA
+[INFO] 02:06:07:514 [Kernel]/(15466:15481): Me desperte
+[INFO] 02:06:07:514 [Kernel]/(15466:15471): Envio interrupcion por RR
+[INFO] 02:06:07:520 [Kernel]/(15466:15470): Se recibio algo de CPU_Dispatch
+[WARNING] 02:06:07:520 [Kernel]/(15466:15470): <PID:1>[PC:2][0|0|4|0][ALGORITMO_QUANTUM]
+[INFO] 02:06:08:523 [Kernel]/(15466:15470): Se recibio algo de CPU_Dispatch
+[WARNING] 02:06:08:523 [Kernel]/(15466:15470): Entre a atender instruccion
+[WARNING] 02:06:08:523 [Kernel]/(15466:15470): ATIENDO SLEEP
+[WARNING] 02:06:08:524 [Kernel]/(15466:15484): BLOCKEO DURANTE: 10
+[INFO] 02:06:09:522 [Kernel]/(15466:15482): Me desperte
+[INFO] 02:11:01:749 [Kernel]/(15899:15899): [RECURSO | 1]
+[INFO] 02:11:01:754 [Kernel]/(15899:15899): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 02:11:01:755 [Kernel]/(15899:15899): HANDSHAKE CON FILESYSTEM [EXITOSO]
+[INFO] 02:11:01:755 [Kernel]/(15899:15899): HANDSHAKE CON CPU_Dispatch [EXITOSO]
+[INFO] 02:11:01:755 [Kernel]/(15899:15899): HANDSHAKE CON CPU_Interrupt [EXITOSO]
+[INFO] 02:11:23:202 [Kernel]/(15899:15910): Se aviso a Memoria del nuevo proceso
+[INFO] 02:11:25:204 [Kernel]/(15899:15901): Se recibio algo de MEMORIA
+[INFO] 02:11:27:213 [Kernel]/(15899:15913): Me desperte
+[INFO] 02:11:27:214 [Kernel]/(15899:15904): Envio interrupcion por RR
+[INFO] 02:11:27:214 [Kernel]/(15899:15903): Se recibio algo de CPU_Dispatch
+[WARNING] 02:11:27:215 [Kernel]/(15899:15903): <PID:1>[PC:2][0|0|4|0][ALGORITMO_QUANTUM]
+[INFO] 02:11:28:216 [Kernel]/(15899:15903): Se recibio algo de CPU_Dispatch
+[WARNING] 02:11:28:216 [Kernel]/(15899:15903): Entre a atender instruccion
+[WARNING] 02:11:28:216 [Kernel]/(15899:15903): ATIENDO SLEEP
+[WARNING] 02:11:28:216 [Kernel]/(15899:15917): BLOCKEO DURANTE: 10
+[INFO] 02:11:29:216 [Kernel]/(15899:15915): Me desperte
+[INFO] 02:13:19:749 [Kernel]/(15938:15938): [RECURSO | 1]
+[INFO] 02:13:19:750 [Kernel]/(15938:15938): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 02:13:19:754 [Kernel]/(15938:15938): HANDSHAKE CON FILESYSTEM [EXITOSO]
+[INFO] 02:13:19:755 [Kernel]/(15938:15938): HANDSHAKE CON CPU_Dispatch [EXITOSO]
+[INFO] 02:13:19:755 [Kernel]/(15938:15938): HANDSHAKE CON CPU_Interrupt [EXITOSO]
+[INFO] 02:13:29:128 [Kernel]/(15938:15948): Se aviso a Memoria del nuevo proceso
+[INFO] 02:13:31:134 [Kernel]/(15938:15940): Se recibio algo de MEMORIA
+[INFO] 02:13:31:135 [Kernel]/(15938:15949): Se aviso a Memoria del nuevo proceso
+[INFO] 02:13:33:150 [Kernel]/(15938:15952): Me desperte
+[INFO] 02:13:33:150 [Kernel]/(15938:15940): Se recibio algo de MEMORIA
+[INFO] 02:13:33:150 [Kernel]/(15938:15943): Envio interrupcion por RR
+[INFO] 02:13:34:155 [Kernel]/(15938:15942): Se recibio algo de CPU_Dispatch
+[WARNING] 02:13:34:155 [Kernel]/(15938:15942): Entre a atender instruccion
+[WARNING] 02:13:34:155 [Kernel]/(15938:15942): ATIENDO SLEEP
+[WARNING] 02:13:34:156 [Kernel]/(15938:15954): BLOCKEO DURANTE: 10
+[INFO] 02:13:36:157 [Kernel]/(15938:15955): Me desperte
+[INFO] 02:13:36:157 [Kernel]/(15938:15943): Envio interrupcion por RR
+[INFO] 02:13:36:239 [Kernel]/(15938:15942): Se recibio algo de CPU_Dispatch
+[WARNING] 02:13:36:239 [Kernel]/(15938:15942): <PID:2>[PC:2][0|0|4|0][ALGORITMO_QUANTUM]
+[INFO] 02:13:37:260 [Kernel]/(15938:15942): Se recibio algo de CPU_Dispatch
+[WARNING] 02:13:37:260 [Kernel]/(15938:15942): Entre a atender instruccion
+[WARNING] 02:13:37:260 [Kernel]/(15938:15942): ATIENDO SLEEP
+[WARNING] 02:13:37:260 [Kernel]/(15938:15959): BLOCKEO DURANTE: 10
+[INFO] 02:13:38:242 [Kernel]/(15938:15957): Me desperte
+[INFO] 02:17:05:585 [Kernel]/(16117:16117): [RECURSO | 1]
+[INFO] 02:17:05:587 [Kernel]/(16117:16117): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 02:17:05:587 [Kernel]/(16117:16117): HANDSHAKE CON FILESYSTEM [EXITOSO]
+[INFO] 02:17:05:587 [Kernel]/(16117:16117): HANDSHAKE CON CPU_Dispatch [EXITOSO]
+[INFO] 02:17:05:588 [Kernel]/(16117:16117): HANDSHAKE CON CPU_Interrupt [EXITOSO]
+[INFO] 02:17:10:938 [Kernel]/(16117:16129): Se aviso a Memoria del nuevo proceso
+[INFO] 02:17:12:940 [Kernel]/(16117:16119): Se recibio algo de MEMORIA
+[INFO] 02:17:14:942 [Kernel]/(16117:16131): Me desperte
+[INFO] 02:17:14:942 [Kernel]/(16117:16122): Envio interrupcion por RR
+[INFO] 02:17:14:946 [Kernel]/(16117:16121): Se recibio algo de CPU_Dispatch
+[WARNING] 02:17:14:946 [Kernel]/(16117:16121): <PID:1>[PC:2][0|0|4|0][ALGORITMO_QUANTUM]
+[INFO] 02:17:15:949 [Kernel]/(16117:16121): Se recibio algo de CPU_Dispatch
+[WARNING] 02:17:15:949 [Kernel]/(16117:16121): Entre a atender instruccion
+[WARNING] 02:17:15:949 [Kernel]/(16117:16121): ATIENDO SLEEP
+[INFO] 02:17:15:949 [Kernel]/(16117:16121): A2
+[INFO] 02:17:15:949 [Kernel]/(16117:16121): A3
+[INFO] 02:17:15:949 [Kernel]/(16117:16121): A4
+[WARNING] 02:17:15:949 [Kernel]/(16117:16135): BLOCKEO DURANTE: 10
+[INFO] 02:17:16:955 [Kernel]/(16117:16133): Me desperte
+[INFO] 02:20:18:158 [Kernel]/(16317:16317): [RECURSO | 1]
+[INFO] 02:20:18:159 [Kernel]/(16317:16317): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 02:20:18:159 [Kernel]/(16317:16317): HANDSHAKE CON FILESYSTEM [EXITOSO]
+[INFO] 02:20:18:159 [Kernel]/(16317:16317): HANDSHAKE CON CPU_Dispatch [EXITOSO]
+[INFO] 02:20:18:159 [Kernel]/(16317:16317): HANDSHAKE CON CPU_Interrupt [EXITOSO]
+[INFO] 02:20:28:936 [Kernel]/(16317:16329): Se aviso a Memoria del nuevo proceso
+[INFO] 02:20:30:946 [Kernel]/(16317:16319): Se recibio algo de MEMORIA
+[INFO] 02:20:32:947 [Kernel]/(16317:16332): Me desperte
+[WARNING] 02:20:32:947 [Kernel]/(16317:16332): entre al if programar_interrupcion_por_quantum
+[WARNING] 02:20:32:947 [Kernel]/(16317:16332): entre al if 2
+[WARNING] 02:20:32:947 [Kernel]/(16317:16332): salgo del if 2
+[WARNING] 02:20:32:947 [Kernel]/(16317:16332): salgo del if 1
+[INFO] 02:20:32:947 [Kernel]/(16317:16322): Envio interrupcion por RR
+[INFO] 02:20:32:948 [Kernel]/(16317:16321): Se recibio algo de CPU_Dispatch
+[WARNING] 02:20:32:948 [Kernel]/(16317:16321): <PID:1>[PC:2][0|0|4|0][ALGORITMO_QUANTUM]
+[INFO] 02:20:34:016 [Kernel]/(16317:16321): Se recibio algo de CPU_Dispatch
+[WARNING] 02:20:34:016 [Kernel]/(16317:16321): Entre a atender instruccion
+[WARNING] 02:20:34:016 [Kernel]/(16317:16321): ATIENDO SLEEP
+[INFO] 02:20:34:016 [Kernel]/(16317:16321): A2
+[INFO] 02:20:34:018 [Kernel]/(16317:16321): A3
+[INFO] 02:20:34:018 [Kernel]/(16317:16321): A4
+[WARNING] 02:20:34:018 [Kernel]/(16317:16335): BLOCKEO DURANTE: 10
+[INFO] 02:20:34:949 [Kernel]/(16317:16333): Me desperte
+[WARNING] 02:20:34:949 [Kernel]/(16317:16333): entre al if programar_interrupcion_por_quantum
+[WARNING] 02:20:34:949 [Kernel]/(16317:16333): entre al if 2
+[WARNING] 02:20:34:949 [Kernel]/(16317:16333): salgo del if 2
+[WARNING] 02:20:34:949 [Kernel]/(16317:16333): salgo del if 1
+[INFO] 02:23:15:542 [Kernel]/(16414:16414): [RECURSO | 1]
+[INFO] 02:23:15:543 [Kernel]/(16414:16414): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 02:23:15:543 [Kernel]/(16414:16414): HANDSHAKE CON FILESYSTEM [EXITOSO]
+[INFO] 02:23:15:543 [Kernel]/(16414:16414): HANDSHAKE CON CPU_Dispatch [EXITOSO]
+[INFO] 02:23:15:543 [Kernel]/(16414:16414): HANDSHAKE CON CPU_Interrupt [EXITOSO]
+[INFO] 02:23:19:686 [Kernel]/(16414:16426): Se aviso a Memoria del nuevo proceso
+[INFO] 02:23:21:688 [Kernel]/(16414:16416): Se recibio algo de MEMORIA
+[INFO] 02:23:23:688 [Kernel]/(16414:16429): Me desperte
+[WARNING] 02:23:23:688 [Kernel]/(16414:16429): entre al if programar_interrupcion_por_quantum
+[WARNING] 02:23:23:688 [Kernel]/(16414:16429): entre al if 2
+[WARNING] 02:23:23:688 [Kernel]/(16414:16429): salgo del if 2
+[WARNING] 02:23:23:688 [Kernel]/(16414:16429): salgo del if 1
+[INFO] 02:23:23:688 [Kernel]/(16414:16419): Envio interrupcion por RR
+[INFO] 02:23:23:694 [Kernel]/(16414:16418): Se recibio algo de CPU_Dispatch
+[WARNING] 02:23:23:694 [Kernel]/(16414:16418): <PID:1>[PC:2][0|0|4|0][ALGORITMO_QUANTUM]
+[INFO] 02:23:24:706 [Kernel]/(16414:16418): Se recibio algo de CPU_Dispatch
+[WARNING] 02:23:24:706 [Kernel]/(16414:16418): Entre a atender instruccion
+[WARNING] 02:23:24:706 [Kernel]/(16414:16418): ATIENDO SLEEP
+[INFO] 02:23:24:706 [Kernel]/(16414:16418): A2
+[INFO] 02:23:24:706 [Kernel]/(16414:16418): A3
+[INFO] 02:23:24:706 [Kernel]/(16414:16418): A4
+[WARNING] 02:23:24:706 [Kernel]/(16414:16432): BLOCKEO DURANTE: 10
+[INFO] 02:23:25:695 [Kernel]/(16414:16430): Me desperte
+[WARNING] 02:23:25:695 [Kernel]/(16414:16430): entre al if programar_interrupcion_por_quantum
+[WARNING] 02:23:25:695 [Kernel]/(16414:16430): salgo del if 2
+[WARNING] 02:23:25:695 [Kernel]/(16414:16430): salgo del if 1
+[INFO] 02:23:34:708 [Kernel]/(16414:16432): A1
+[INFO] 02:23:34:708 [Kernel]/(16414:16432): A2
+[INFO] 02:23:34:708 [Kernel]/(16414:16432): A3
+[INFO] 02:23:34:708 [Kernel]/(16414:16432): A4
+[INFO] 02:23:36:709 [Kernel]/(16414:16433): Me desperte
+[WARNING] 02:23:36:709 [Kernel]/(16414:16433): entre al if programar_interrupcion_por_quantum
+[WARNING] 02:23:36:709 [Kernel]/(16414:16433): entre al if 2
+[WARNING] 02:23:36:709 [Kernel]/(16414:16433): salgo del if 2
+[WARNING] 02:23:36:709 [Kernel]/(16414:16433): salgo del if 1
+[INFO] 02:23:36:709 [Kernel]/(16414:16419): Envio interrupcion por RR
+[INFO] 02:23:36:711 [Kernel]/(16414:16418): Se recibio algo de CPU_Dispatch
+[WARNING] 02:23:36:711 [Kernel]/(16414:16418): <PID:1>[PC:5][4|4|4|0][ALGORITMO_QUANTUM]
+[INFO] 02:23:37:712 [Kernel]/(16414:16418): Se recibio algo de CPU_Dispatch
+[WARNING] 02:23:37:712 [Kernel]/(16414:16418): Entre a atender instruccion
+[INFO] 02:23:37:712 [Kernel]/(16414:16418): Mensaje a MEMORIA: LIBERAR_ESTRUCTURA_KM [PID: 1]
+[INFO] 02:23:38:712 [Kernel]/(16414:16435): Me desperte
+[WARNING] 02:23:38:712 [Kernel]/(16414:16435): entre al if programar_interrupcion_por_quantum
+[WARNING] 02:23:38:712 [Kernel]/(16414:16435): salgo del if 2
+[WARNING] 02:23:38:712 [Kernel]/(16414:16435): salgo del if 1
+[INFO] 02:23:38:715 [Kernel]/(16414:16417): Se recibio algo de FILESYSTEM
+[ERROR] 02:23:38:715 [Kernel]/(16414:16417): [DESCONEXION]: FILESYSTEM
+[INFO] 02:32:53:517 [Kernel]/(16558:16558): [RECURSO | 1]
+[INFO] 02:32:53:518 [Kernel]/(16558:16558): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 02:32:53:519 [Kernel]/(16558:16558): HANDSHAKE CON FILESYSTEM [EXITOSO]
+[INFO] 02:32:53:520 [Kernel]/(16558:16558): HANDSHAKE CON CPU_Dispatch [EXITOSO]
+[INFO] 02:32:53:521 [Kernel]/(16558:16558): HANDSHAKE CON CPU_Interrupt [EXITOSO]
+[INFO] 02:33:22:265 [Kernel]/(16558:16570): Se aviso a Memoria del nuevo proceso
+[INFO] 02:33:24:273 [Kernel]/(16558:16560): Se recibio algo de MEMORIA
+[INFO] 02:33:26:280 [Kernel]/(16558:16573): Me desperte
+[WARNING] 02:33:26:280 [Kernel]/(16558:16573): entre al if programar_interrupcion_por_quantum
+[WARNING] 02:33:26:280 [Kernel]/(16558:16573): entre al if 2
+[WARNING] 02:33:26:280 [Kernel]/(16558:16573): salgo del if 2
+[WARNING] 02:33:26:280 [Kernel]/(16558:16573): salgo del if 1
+[INFO] 02:33:26:280 [Kernel]/(16558:16563): Envio interrupcion por RR
+[INFO] 02:33:26:281 [Kernel]/(16558:16562): Se recibio algo de CPU_Dispatch
+[WARNING] 02:33:26:281 [Kernel]/(16558:16562): <PID:1>[PC:2][0|0|4|0][ALGORITMO_QUANTUM]
+[INFO] 02:33:27:292 [Kernel]/(16558:16562): Se recibio algo de CPU_Dispatch
+[WARNING] 02:33:27:293 [Kernel]/(16558:16562): Entre a atender instruccion
+[WARNING] 02:33:27:293 [Kernel]/(16558:16562): ATIENDO SLEEP
+[INFO] 02:33:27:293 [Kernel]/(16558:16562): A2
+[INFO] 02:33:27:293 [Kernel]/(16558:16562): A3
+[INFO] 02:33:27:293 [Kernel]/(16558:16562): A4
+[WARNING] 02:33:27:293 [Kernel]/(16558:16576): BLOCKEO DURANTE: 10
+[INFO] 02:33:28:282 [Kernel]/(16558:16574): Me desperte
+[WARNING] 02:33:28:282 [Kernel]/(16558:16574): entre al if programar_interrupcion_por_quantum
+[WARNING] 02:33:28:282 [Kernel]/(16558:16574): salgo del if 2
+[WARNING] 02:33:28:282 [Kernel]/(16558:16574): salgo del if 1
+[INFO] 02:33:37:294 [Kernel]/(16558:16576): A1
+[INFO] 02:33:37:294 [Kernel]/(16558:16576): A2
+[INFO] 02:33:37:294 [Kernel]/(16558:16576): A3
+[INFO] 02:33:37:294 [Kernel]/(16558:16576): A4
+[INFO] 02:33:39:296 [Kernel]/(16558:16577): Me desperte
+[WARNING] 02:33:39:296 [Kernel]/(16558:16577): entre al if programar_interrupcion_por_quantum
+[WARNING] 02:33:39:296 [Kernel]/(16558:16577): entre al if 2
+[WARNING] 02:33:39:296 [Kernel]/(16558:16577): salgo del if 2
+[INFO] 02:33:39:296 [Kernel]/(16558:16563): Envio interrupcion por RR
+[WARNING] 02:33:39:296 [Kernel]/(16558:16577): salgo del if 1
+[INFO] 02:33:39:323 [Kernel]/(16558:16562): Se recibio algo de CPU_Dispatch
+[WARNING] 02:33:39:323 [Kernel]/(16558:16562): <PID:1>[PC:5][4|4|4|0][ALGORITMO_QUANTUM]
+[INFO] 02:33:40:360 [Kernel]/(16558:16562): Se recibio algo de CPU_Dispatch
+[WARNING] 02:33:40:360 [Kernel]/(16558:16562): Entre a atender instruccion
+[INFO] 02:33:40:360 [Kernel]/(16558:16562): Mensaje a MEMORIA: LIBERAR_ESTRUCTURA_KM [PID: 1]
+[INFO] 02:33:41:325 [Kernel]/(16558:16579): Me desperte
+[WARNING] 02:33:41:325 [Kernel]/(16558:16579): entre al if programar_interrupcion_por_quantum
+[WARNING] 02:33:41:325 [Kernel]/(16558:16579): salgo del if 2
+[WARNING] 02:33:41:325 [Kernel]/(16558:16579): salgo del if 1
+[INFO] 02:33:42:402 [Kernel]/(16558:16560): Se recibio algo de MEMORIA
+[INFO] 02:33:42:402 [Kernel]/(16558:16562): A2
+[INFO] 02:33:42:402 [Kernel]/(16558:16562): A3
+[INFO] 02:33:42:402 [Kernel]/(16558:16562): A4
+[INFO] 02:36:31:195 [Kernel]/(16558:16583): Se aviso a Memoria del nuevo proceso
+[INFO] 02:36:33:201 [Kernel]/(16558:16560): Se recibio algo de MEMORIA
+[INFO] 02:36:35:202 [Kernel]/(16558:16586): Me desperte
+[WARNING] 02:36:35:202 [Kernel]/(16558:16586): entre al if programar_interrupcion_por_quantum
+[WARNING] 02:36:35:202 [Kernel]/(16558:16586): entre al if 2
+[WARNING] 02:36:35:202 [Kernel]/(16558:16586): salgo del if 2
+[WARNING] 02:36:35:202 [Kernel]/(16558:16586): salgo del if 1
+[INFO] 02:36:35:202 [Kernel]/(16558:16563): Envio interrupcion por RR
+[INFO] 02:36:35:205 [Kernel]/(16558:16562): Se recibio algo de CPU_Dispatch
+[WARNING] 02:36:35:205 [Kernel]/(16558:16562): <PID:2>[PC:2][0|0|4|0][ALGORITMO_QUANTUM]
+[INFO] 02:36:36:207 [Kernel]/(16558:16562): Se recibio algo de CPU_Dispatch
+[WARNING] 02:36:36:207 [Kernel]/(16558:16562): Entre a atender instruccion
+[WARNING] 02:36:36:207 [Kernel]/(16558:16562): ATIENDO SLEEP
+[INFO] 02:36:36:207 [Kernel]/(16558:16562): A2
+[INFO] 02:36:36:207 [Kernel]/(16558:16562): A3
+[INFO] 02:36:36:207 [Kernel]/(16558:16562): A4
+[WARNING] 02:36:36:207 [Kernel]/(16558:16589): BLOCKEO DURANTE: 10
+[INFO] 02:36:37:205 [Kernel]/(16558:16587): Me desperte
+[WARNING] 02:36:37:205 [Kernel]/(16558:16587): entre al if programar_interrupcion_por_quantum
+[WARNING] 02:36:37:205 [Kernel]/(16558:16587): salgo del if 2
+[WARNING] 02:36:37:205 [Kernel]/(16558:16587): salgo del if 1
+[INFO] 02:36:46:208 [Kernel]/(16558:16589): A1
+[INFO] 02:36:46:208 [Kernel]/(16558:16589): A2
+[INFO] 02:36:46:208 [Kernel]/(16558:16589): A3
+[INFO] 02:36:46:208 [Kernel]/(16558:16589): A4
+[INFO] 02:36:48:213 [Kernel]/(16558:16590): Me desperte
+[WARNING] 02:36:48:214 [Kernel]/(16558:16590): entre al if programar_interrupcion_por_quantum
+[WARNING] 02:36:48:214 [Kernel]/(16558:16590): entre al if 2
+[WARNING] 02:36:48:214 [Kernel]/(16558:16590): salgo del if 2
+[INFO] 02:36:48:214 [Kernel]/(16558:16563): Envio interrupcion por RR
+[INFO] 02:36:48:214 [Kernel]/(16558:16562): Se recibio algo de CPU_Dispatch
+[WARNING] 02:36:48:215 [Kernel]/(16558:16590): salgo del if 1
+[WARNING] 02:36:48:215 [Kernel]/(16558:16562): <PID:2>[PC:5][4|4|4|0][ALGORITMO_QUANTUM]
+[INFO] 02:36:49:216 [Kernel]/(16558:16562): Se recibio algo de CPU_Dispatch
+[WARNING] 02:36:49:217 [Kernel]/(16558:16562): Entre a atender instruccion
+[INFO] 02:36:49:217 [Kernel]/(16558:16562): Mensaje a MEMORIA: LIBERAR_ESTRUCTURA_KM [PID: 2]
+[INFO] 02:36:50:217 [Kernel]/(16558:16592): Me desperte
+[WARNING] 02:36:50:217 [Kernel]/(16558:16592): entre al if programar_interrupcion_por_quantum
+[WARNING] 02:36:50:217 [Kernel]/(16558:16592): salgo del if 2
+[WARNING] 02:36:50:217 [Kernel]/(16558:16592): salgo del if 1
+[INFO] 02:36:50:336 [Kernel]/(16558:16561): Se recibio algo de FILESYSTEM
+[ERROR] 02:36:50:336 [Kernel]/(16558:16561): [DESCONEXION]: FILESYSTEM
+[INFO] 02:45:37:905 [Kernel]/(16763:16763): [RECURSO | 1]
+[INFO] 02:45:37:908 [Kernel]/(16763:16763): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 02:45:37:909 [Kernel]/(16763:16763): HANDSHAKE CON FILESYSTEM [EXITOSO]
+[INFO] 02:45:37:909 [Kernel]/(16763:16763): HANDSHAKE CON CPU_Dispatch [EXITOSO]
+[INFO] 02:45:37:909 [Kernel]/(16763:16763): HANDSHAKE CON CPU_Interrupt [EXITOSO]
+[ERROR] 02:45:57:812 [Kernel]/(16763:16770): Comando no reconocido
+[INFO] 02:46:40:339 [Kernel]/(16763:16776): Se aviso a Memoria del nuevo proceso
+[INFO] 02:46:42:340 [Kernel]/(16763:16765): Se recibio algo de MEMORIA
+[INFO] 02:46:42:340 [Kernel]/(16763:16777): Se aviso a Memoria del nuevo proceso
+[INFO] 02:46:42:341 [Kernel]/(16763:16765): Se recibio algo de MEMORIA
+[ERROR] 02:46:42:341 [Kernel]/(16763:16765): [DESCONEXION]: MEMORIA
+[INFO] 02:47:45:791 [Kernel]/(16802:16802): [RECURSO | 1]
+[INFO] 02:47:45:792 [Kernel]/(16802:16802): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 02:47:45:792 [Kernel]/(16802:16802): HANDSHAKE CON FILESYSTEM [EXITOSO]
+[INFO] 02:47:45:793 [Kernel]/(16802:16802): HANDSHAKE CON CPU_Dispatch [EXITOSO]
+[INFO] 02:47:45:793 [Kernel]/(16802:16802): HANDSHAKE CON CPU_Interrupt [EXITOSO]
+[INFO] 02:48:13:192 [Kernel]/(16802:16812): Se aviso a Memoria del nuevo proceso
+[INFO] 02:48:15:199 [Kernel]/(16802:16804): Se recibio algo de MEMORIA
+[INFO] 02:48:15:200 [Kernel]/(16802:16813): Se aviso a Memoria del nuevo proceso
+[INFO] 02:48:15:202 [Kernel]/(16802:16804): Se recibio algo de MEMORIA
+[ERROR] 02:48:15:203 [Kernel]/(16802:16804): [DESCONEXION]: MEMORIA
+[INFO] 02:51:12:257 [Kernel]/(16873:16873): [RECURSO | 1]
+[INFO] 02:51:12:263 [Kernel]/(16873:16873): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 02:51:12:264 [Kernel]/(16873:16873): HANDSHAKE CON FILESYSTEM [EXITOSO]
+[INFO] 02:51:12:265 [Kernel]/(16873:16873): HANDSHAKE CON CPU_Dispatch [EXITOSO]
+[INFO] 02:51:12:266 [Kernel]/(16873:16873): HANDSHAKE CON CPU_Interrupt [EXITOSO]
+[INFO] 02:51:47:799 [Kernel]/(16873:16887): Se aviso a Memoria del nuevo proceso
+[INFO] 02:51:49:805 [Kernel]/(16873:16875): Se recibio algo de MEMORIA
+[INFO] 02:51:49:805 [Kernel]/(16873:16889): Se aviso a Memoria del nuevo proceso
+[INFO] 02:51:49:807 [Kernel]/(16873:16875): Se recibio algo de MEMORIA
+[ERROR] 02:51:49:807 [Kernel]/(16873:16875): [DESCONEXION]: MEMORIA
+[INFO] 02:52:24:695 [Kernel]/(16927:16927): [RECURSO | 1]
+[INFO] 02:52:24:696 [Kernel]/(16927:16927): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 02:52:24:697 [Kernel]/(16927:16927): HANDSHAKE CON FILESYSTEM [EXITOSO]
+[INFO] 02:52:24:697 [Kernel]/(16927:16927): HANDSHAKE CON CPU_Dispatch [EXITOSO]
+[INFO] 02:52:24:697 [Kernel]/(16927:16927): HANDSHAKE CON CPU_Interrupt [EXITOSO]
+[INFO] 02:52:49:676 [Kernel]/(16927:16936): Se aviso a Memoria del nuevo proceso
+[INFO] 02:52:51:677 [Kernel]/(16927:16929): Se recibio algo de MEMORIA
+[INFO] 02:52:51:677 [Kernel]/(16927:16937): Se aviso a Memoria del nuevo proceso
+[INFO] 02:52:51:678 [Kernel]/(16927:16929): Se recibio algo de MEMORIA
+[ERROR] 02:52:51:678 [Kernel]/(16927:16929): [DESCONEXION]: MEMORIA
+[INFO] 02:54:55:014 [Kernel]/(16969:16969): [RECURSO | 1]
+[INFO] 02:54:55:015 [Kernel]/(16969:16969): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 02:54:55:015 [Kernel]/(16969:16969): HANDSHAKE CON FILESYSTEM [EXITOSO]
+[INFO] 02:54:55:015 [Kernel]/(16969:16969): HANDSHAKE CON CPU_Dispatch [EXITOSO]
+[INFO] 02:54:55:015 [Kernel]/(16969:16969): HANDSHAKE CON CPU_Interrupt [EXITOSO]
+[INFO] 02:55:18:010 [Kernel]/(16969:16979): Se aviso a Memoria del nuevo proceso
+[INFO] 02:55:20:074 [Kernel]/(16969:16971): Se recibio algo de MEMORIA
+[INFO] 02:55:20:074 [Kernel]/(16969:16980): Se aviso a Memoria del nuevo proceso
+[INFO] 02:55:20:077 [Kernel]/(16969:16971): Se recibio algo de MEMORIA
+[ERROR] 02:55:20:077 [Kernel]/(16969:16971): [DESCONEXION]: MEMORIA
+[INFO] 02:56:08:362 [Kernel]/(17007:17007): [RECURSO | 1]
+[INFO] 02:56:08:367 [Kernel]/(17007:17007): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 02:56:08:367 [Kernel]/(17007:17007): HANDSHAKE CON FILESYSTEM [EXITOSO]
+[INFO] 02:56:08:367 [Kernel]/(17007:17007): HANDSHAKE CON CPU_Dispatch [EXITOSO]
+[INFO] 02:56:08:368 [Kernel]/(17007:17007): HANDSHAKE CON CPU_Interrupt [EXITOSO]
+[INFO] 02:56:38:128 [Kernel]/(17007:17016): Se aviso a Memoria del nuevo proceso
+[INFO] 02:56:40:131 [Kernel]/(17007:17009): Se recibio algo de MEMORIA
+[INFO] 02:56:40:131 [Kernel]/(17007:17017): Se aviso a Memoria del nuevo proceso
+[INFO] 02:56:42:134 [Kernel]/(17007:17009): Se recibio algo de MEMORIA
+[INFO] 02:56:42:134 [Kernel]/(17007:17018): Se aviso a Memoria del nuevo proceso
+[INFO] 02:56:44:139 [Kernel]/(17007:17009): Se recibio algo de MEMORIA
+[INFO] 02:57:15:313 [Kernel]/(17007:17011): Se recibio algo de CPU_Dispatch
+[WARNING] 02:57:15:313 [Kernel]/(17007:17011): Entre a atender instruccion
+[INFO] 02:57:15:314 [Kernel]/(17007:17011): Mensaje a MEMORIA: LIBERAR_ESTRUCTURA_KM [PID: 1]
+[INFO] 02:57:16:433 [Kernel]/(17007:17010): Se recibio algo de FILESYSTEM
+[ERROR] 02:57:16:433 [Kernel]/(17007:17010): [DESCONEXION]: FILESYSTEM
+[INFO] 02:59:15:840 [Kernel]/(17109:17109): [RECURSO | 1]
+[INFO] 02:59:15:841 [Kernel]/(17109:17109): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 02:59:15:841 [Kernel]/(17109:17109): HANDSHAKE CON FILESYSTEM [EXITOSO]
+[INFO] 02:59:15:841 [Kernel]/(17109:17109): HANDSHAKE CON CPU_Dispatch [EXITOSO]
+[INFO] 02:59:15:842 [Kernel]/(17109:17109): HANDSHAKE CON CPU_Interrupt [EXITOSO]
+[INFO] 02:59:25:917 [Kernel]/(17109:17121): Se aviso a Memoria del nuevo proceso
+[INFO] 02:59:27:921 [Kernel]/(17109:17111): Se recibio algo de MEMORIA
+[INFO] 03:00:03:002 [Kernel]/(17109:17113): Se recibio algo de CPU_Dispatch
+[WARNING] 03:00:03:002 [Kernel]/(17109:17113): Entre a atender instruccion
+[INFO] 03:00:03:002 [Kernel]/(17109:17113): Mensaje a MEMORIA: LIBERAR_ESTRUCTURA_KM [PID: 1]
+[INFO] 03:00:04:104 [Kernel]/(17109:17112): Se recibio algo de FILESYSTEM
+[ERROR] 03:00:04:104 [Kernel]/(17109:17112): [DESCONEXION]: FILESYSTEM
+[INFO] 03:04:27:031 [Kernel]/(17238:17238): [RECURSO | 1]
+[INFO] 03:04:27:039 [Kernel]/(17238:17238): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 03:04:27:039 [Kernel]/(17238:17238): HANDSHAKE CON FILESYSTEM [EXITOSO]
+[INFO] 03:04:27:040 [Kernel]/(17238:17238): HANDSHAKE CON CPU_Dispatch [EXITOSO]
+[INFO] 03:04:27:040 [Kernel]/(17238:17238): HANDSHAKE CON CPU_Interrupt [EXITOSO]
+[INFO] 03:04:34:245 [Kernel]/(17238:17250): Se aviso a Memoria del nuevo proceso
+[INFO] 03:04:36:249 [Kernel]/(17238:17240): Se recibio algo de MEMORIA
+[INFO] 03:04:45:249 [Kernel]/(17238:17253): Envio interrupcion
+[INFO] 03:04:45:249 [Kernel]/(17238:17243): Send -> CPU: FORZAR_DESALOJO_KC <PID: 1>[T:1]
+[INFO] 03:04:45:262 [Kernel]/(17238:17242): Se recibio algo de CPU_Dispatch
+[WARNING] 03:04:45:262 [Kernel]/(17238:17242): <PID:1>[PC:9][0|0|4|0][DESALOJO_POR_CONSOLA]
+[INFO] 03:04:45:263 [Kernel]/(17238:17242): Mensaje a MEMORIA: LIBERAR_ESTRUCTURA_KM [PID: 1]
+[INFO] 03:04:46:365 [Kernel]/(17238:17241): Se recibio algo de FILESYSTEM
+[ERROR] 03:04:46:365 [Kernel]/(17238:17241): [DESCONEXION]: FILESYSTEM
+[INFO] 03:06:23:885 [Kernel]/(17321:17321): [RECURSO | 1]
+[INFO] 03:06:23:888 [Kernel]/(17321:17321): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 03:06:23:889 [Kernel]/(17321:17321): HANDSHAKE CON FILESYSTEM [EXITOSO]
+[INFO] 03:06:23:889 [Kernel]/(17321:17321): HANDSHAKE CON CPU_Dispatch [EXITOSO]
+[INFO] 03:06:23:889 [Kernel]/(17321:17321): HANDSHAKE CON CPU_Interrupt [EXITOSO]
+[ERROR] 03:06:28:778 [Kernel]/(17321:17328): Comando no reconocido
+[INFO] 03:06:35:441 [Kernel]/(17321:17333): Se aviso a Memoria del nuevo proceso
+[INFO] 03:06:37:447 [Kernel]/(17321:17323): Se recibio algo de MEMORIA
+[INFO] 03:06:43:791 [Kernel]/(17321:17336): Envio interrupcion
+[INFO] 03:06:43:791 [Kernel]/(17321:17326): Send -> CPU: FORZAR_DESALOJO_KC <PID: 1>[T:1]
+[INFO] 03:06:44:495 [Kernel]/(17321:17325): Se recibio algo de CPU_Dispatch
+[WARNING] 03:06:44:495 [Kernel]/(17321:17325): <PID:1>[PC:7][0|0|4|0][DESALOJO_POR_CONSOLA]
+[INFO] 03:06:44:495 [Kernel]/(17321:17325): Mensaje a MEMORIA: LIBERAR_ESTRUCTURA_KM [PID: 1]
+[INFO] 03:06:45:611 [Kernel]/(17321:17324): Se recibio algo de FILESYSTEM
+[ERROR] 03:06:45:611 [Kernel]/(17321:17324): [DESCONEXION]: FILESYSTEM
+[INFO] 03:11:04:650 [Kernel]/(17598:17598): [RECURSO | 1]
+[INFO] 03:11:04:651 [Kernel]/(17598:17598): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 03:11:04:651 [Kernel]/(17598:17598): HANDSHAKE CON FILESYSTEM [EXITOSO]
+[INFO] 03:11:04:652 [Kernel]/(17598:17598): HANDSHAKE CON CPU_Dispatch [EXITOSO]
+[INFO] 03:11:04:652 [Kernel]/(17598:17598): HANDSHAKE CON CPU_Interrupt [EXITOSO]
+[INFO] 03:11:12:175 [Kernel]/(17598:17610): Se aviso a Memoria del nuevo proceso
+[INFO] 03:11:14:177 [Kernel]/(17598:17600): Se recibio algo de MEMORIA
+[ERROR] 03:11:22:123 [Kernel]/(17598:17605): Comando no reconocido
+[INFO] 03:11:27:640 [Kernel]/(17598:17613): Envio interrupcion
+[INFO] 03:11:27:641 [Kernel]/(17598:17603): Send -> CPU: FORZAR_DESALOJO_KC <PID: 1>[T:1]
+[INFO] 03:11:28:243 [Kernel]/(17598:17602): Se recibio algo de CPU_Dispatch
+[WARNING] 03:11:28:243 [Kernel]/(17598:17602): <PID:1>[PC:14][0|0|0|0][DESALOJO_POR_CONSOLA]
+[INFO] 03:11:28:243 [Kernel]/(17598:17602): Mensaje a MEMORIA: LIBERAR_ESTRUCTURA_KM [PID: 1]
+[INFO] 03:11:30:247 [Kernel]/(17598:17600): Se recibio algo de MEMORIA
+[INFO] 03:11:30:248 [Kernel]/(17598:17602): A2
+[INFO] 03:11:30:248 [Kernel]/(17598:17602): A3
+[INFO] 03:11:30:248 [Kernel]/(17598:17602): A4
+[INFO] 03:12:57:979 [Kernel]/(17598:17615): Se aviso a Memoria del nuevo proceso
+[INFO] 03:12:59:987 [Kernel]/(17598:17600): Se recibio algo de MEMORIA
+[INFO] 03:12:59:988 [Kernel]/(17598:17618): Se aviso a Memoria del nuevo proceso
+[INFO] 03:13:02:021 [Kernel]/(17598:17600): Se recibio algo de MEMORIA
+[INFO] 03:13:02:022 [Kernel]/(17598:17619): Se aviso a Memoria del nuevo proceso
+[INFO] 03:13:04:025 [Kernel]/(17598:17600): Se recibio algo de MEMORIA
+[INFO] 03:13:19:042 [Kernel]/(17598:17602): Se recibio algo de CPU_Dispatch
+[WARNING] 03:13:19:042 [Kernel]/(17598:17602): Entre a atender instruccion
+[INFO] 03:13:19:043 [Kernel]/(17598:17602): Mensaje a MEMORIA: LIBERAR_ESTRUCTURA_KM [PID: 2]
+[INFO] 03:13:21:046 [Kernel]/(17598:17600): Se recibio algo de MEMORIA
+[INFO] 03:13:21:047 [Kernel]/(17598:17602): A2
+[INFO] 03:13:21:047 [Kernel]/(17598:17602): A3
+[INFO] 03:13:21:047 [Kernel]/(17598:17602): A4
+[INFO] 03:13:28:065 [Kernel]/(17598:17602): Se recibio algo de CPU_Dispatch
+[WARNING] 03:13:28:065 [Kernel]/(17598:17602): Entre a atender instruccion
+[INFO] 03:13:28:065 [Kernel]/(17598:17602): Mensaje a MEMORIA: LIBERAR_ESTRUCTURA_KM [PID: 3]
+[INFO] 03:13:30:071 [Kernel]/(17598:17600): Se recibio algo de MEMORIA
+[INFO] 03:13:30:071 [Kernel]/(17598:17602): A2
+[INFO] 03:13:30:071 [Kernel]/(17598:17602): A3
+[INFO] 03:13:30:071 [Kernel]/(17598:17602): A4
+[INFO] 03:13:37:101 [Kernel]/(17598:17602): Se recibio algo de CPU_Dispatch
+[WARNING] 03:13:37:101 [Kernel]/(17598:17602): Entre a atender instruccion
+[INFO] 03:13:37:101 [Kernel]/(17598:17602): Mensaje a MEMORIA: LIBERAR_ESTRUCTURA_KM [PID: 4]
+[INFO] 03:13:39:129 [Kernel]/(17598:17600): Se recibio algo de MEMORIA
+[INFO] 03:13:39:135 [Kernel]/(17598:17602): A2
+[INFO] 03:13:39:135 [Kernel]/(17598:17602): A3
+[INFO] 03:13:39:135 [Kernel]/(17598:17602): A4
+[INFO] 03:17:24:412 [Kernel]/(17598:17600): Se recibio algo de MEMORIA
+[ERROR] 03:17:24:414 [Kernel]/(17598:17600): [DESCONEXION]: MEMORIA
+[INFO] 03:17:54:820 [Kernel]/(17687:17687): [RECURSO | 1]
+[INFO] 03:17:54:821 [Kernel]/(17687:17687): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 03:17:54:821 [Kernel]/(17687:17687): HANDSHAKE CON FILESYSTEM [EXITOSO]
+[INFO] 03:17:54:822 [Kernel]/(17687:17687): HANDSHAKE CON CPU_Dispatch [EXITOSO]
+[INFO] 03:17:54:822 [Kernel]/(17687:17687): HANDSHAKE CON CPU_Interrupt [EXITOSO]
+[INFO] 03:18:09:875 [Kernel]/(17687:17695): Se aviso a Memoria del nuevo proceso
+[INFO] 03:18:11:879 [Kernel]/(17687:17689): Se recibio algo de MEMORIA
+[INFO] 03:18:28:576 [Kernel]/(17687:17698): Envio interrupcion
+[INFO] 03:18:28:577 [Kernel]/(17687:17692): Send -> CPU: FORZAR_DESALOJO_KC <PID: 1>[T:1]
+[INFO] 03:18:29:087 [Kernel]/(17687:17691): Se recibio algo de CPU_Dispatch
+[WARNING] 03:18:29:087 [Kernel]/(17687:17691): <PID:1>[PC:17][0|0|0|0][DESALOJO_POR_CONSOLA]
+[INFO] 03:18:29:087 [Kernel]/(17687:17691): Mensaje a MEMORIA: LIBERAR_ESTRUCTURA_KM [PID: 1]
+[INFO] 03:18:30:095 [Kernel]/(17687:17689): Se recibio algo de MEMORIA
+[INFO] 03:18:30:096 [Kernel]/(17687:17691): A2
+[INFO] 03:18:30:096 [Kernel]/(17687:17691): A3
+[INFO] 03:18:30:098 [Kernel]/(17687:17691): A4
+[INFO] 03:21:05:088 [Kernel]/(17687:17709): Se aviso a Memoria del nuevo proceso
+[INFO] 03:21:07:123 [Kernel]/(17687:17689): Se recibio algo de MEMORIA
+[INFO] 03:21:07:123 [Kernel]/(17687:17710): Se aviso a Memoria del nuevo proceso
+[INFO] 03:21:09:127 [Kernel]/(17687:17689): Se recibio algo de MEMORIA
+[INFO] 03:21:42:270 [Kernel]/(17687:17691): Se recibio algo de CPU_Dispatch
+[WARNING] 03:21:42:270 [Kernel]/(17687:17691): Entre a atender instruccion
+[INFO] 03:21:42:270 [Kernel]/(17687:17691): Mensaje a MEMORIA: LIBERAR_ESTRUCTURA_KM [PID: 2]
+[INFO] 03:21:43:280 [Kernel]/(17687:17689): Se recibio algo de MEMORIA
+[INFO] 03:21:43:281 [Kernel]/(17687:17691): A2
+[INFO] 03:21:43:281 [Kernel]/(17687:17691): A3
+[INFO] 03:21:43:281 [Kernel]/(17687:17691): A4
+[INFO] 03:22:18:347 [Kernel]/(17687:17691): Se recibio algo de CPU_Dispatch
+[WARNING] 03:22:18:347 [Kernel]/(17687:17691): Entre a atender instruccion
+[INFO] 03:22:18:347 [Kernel]/(17687:17691): Mensaje a MEMORIA: LIBERAR_ESTRUCTURA_KM [PID: 3]
+[INFO] 03:22:19:348 [Kernel]/(17687:17689): Se recibio algo de MEMORIA
+[INFO] 03:22:19:348 [Kernel]/(17687:17691): A2
+[INFO] 03:22:19:348 [Kernel]/(17687:17691): A3
+[INFO] 03:22:19:348 [Kernel]/(17687:17691): A4
+[INFO] 03:24:25:763 [Kernel]/(17687:17690): Se recibio algo de FILESYSTEM
+[ERROR] 03:24:25:764 [Kernel]/(17687:17690): [DESCONEXION]: FILESYSTEM
+[INFO] 03:24:51:497 [Kernel]/(17758:17758): [RECURSO | 1]
+[INFO] 03:24:51:499 [Kernel]/(17758:17758): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 03:24:51:499 [Kernel]/(17758:17758): HANDSHAKE CON FILESYSTEM [EXITOSO]
+[INFO] 03:24:51:499 [Kernel]/(17758:17758): HANDSHAKE CON CPU_Dispatch [EXITOSO]
+[INFO] 03:24:51:500 [Kernel]/(17758:17758): HANDSHAKE CON CPU_Interrupt [EXITOSO]
+[INFO] 03:25:31:685 [Kernel]/(17781:17781): [RECURSO | 1]
+[INFO] 03:25:31:686 [Kernel]/(17781:17781): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 03:25:31:687 [Kernel]/(17781:17781): HANDSHAKE CON FILESYSTEM [EXITOSO]
+[INFO] 03:25:31:687 [Kernel]/(17781:17781): HANDSHAKE CON CPU_Dispatch [EXITOSO]
+[INFO] 03:25:31:687 [Kernel]/(17781:17781): HANDSHAKE CON CPU_Interrupt [EXITOSO]
+[INFO] 03:26:09:707 [Kernel]/(17781:17790): Se aviso a Memoria del nuevo proceso
+[INFO] 03:26:11:709 [Kernel]/(17781:17783): Se recibio algo de MEMORIA
+[INFO] 03:26:11:710 [Kernel]/(17781:17791): Se aviso a Memoria del nuevo proceso
+[INFO] 03:26:13:712 [Kernel]/(17781:17783): Se recibio algo de MEMORIA
+[INFO] 03:26:13:712 [Kernel]/(17781:17792): Se aviso a Memoria del nuevo proceso
+[INFO] 03:26:15:714 [Kernel]/(17781:17783): Se recibio algo de MEMORIA
+[INFO] 03:26:46:849 [Kernel]/(17781:17785): Se recibio algo de CPU_Dispatch
+[WARNING] 03:26:46:849 [Kernel]/(17781:17785): Entre a atender instruccion
+[INFO] 03:26:46:849 [Kernel]/(17781:17785): Mensaje a MEMORIA: LIBERAR_ESTRUCTURA_KM [PID: 1]
+[INFO] 03:26:47:857 [Kernel]/(17781:17783): Se recibio algo de MEMORIA
+[INFO] 03:26:47:857 [Kernel]/(17781:17785): A2
+[INFO] 03:26:47:857 [Kernel]/(17781:17785): A3
+[INFO] 03:26:47:857 [Kernel]/(17781:17785): A4
+[INFO] 03:27:06:889 [Kernel]/(17781:17785): Se recibio algo de CPU_Dispatch
+[WARNING] 03:27:06:889 [Kernel]/(17781:17785): Entre a atender instruccion
+[INFO] 03:27:06:889 [Kernel]/(17781:17785): Mensaje a MEMORIA: LIBERAR_ESTRUCTURA_KM [PID: 2]
+[INFO] 03:27:07:890 [Kernel]/(17781:17783): Se recibio algo de MEMORIA
+[INFO] 03:27:07:891 [Kernel]/(17781:17785): A2
+[INFO] 03:27:07:891 [Kernel]/(17781:17785): A3
+[INFO] 03:27:07:891 [Kernel]/(17781:17785): A4
+[INFO] 03:27:14:917 [Kernel]/(17781:17785): Se recibio algo de CPU_Dispatch
+[WARNING] 03:27:14:917 [Kernel]/(17781:17785): Entre a atender instruccion
+[INFO] 03:27:14:917 [Kernel]/(17781:17785): Mensaje a MEMORIA: LIBERAR_ESTRUCTURA_KM [PID: 3]
+[INFO] 03:27:15:918 [Kernel]/(17781:17783): Se recibio algo de MEMORIA
+[INFO] 03:27:15:919 [Kernel]/(17781:17785): A2
+[INFO] 03:27:15:919 [Kernel]/(17781:17785): A3
+[INFO] 03:27:15:919 [Kernel]/(17781:17785): A4
+[INFO] 03:31:27:610 [Kernel]/(17914:17914): [RECURSO | 1]
+[INFO] 03:31:27:613 [Kernel]/(17914:17914): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 03:31:27:615 [Kernel]/(17914:17914): HANDSHAKE CON FILESYSTEM [EXITOSO]
+[INFO] 03:31:27:615 [Kernel]/(17914:17914): HANDSHAKE CON CPU_Dispatch [EXITOSO]
+[INFO] 03:31:27:616 [Kernel]/(17914:17914): HANDSHAKE CON CPU_Interrupt [EXITOSO]
+[WARNING] 03:31:56:124 [Kernel]/(17914:17921): N°  Param. Incorrecto
+[ERROR] 03:32:14:878 [Kernel]/(17914:17921): Comando no reconocido
+[INFO] 03:32:40:460 [Kernel]/(17914:17931): Se aviso a Memoria del nuevo proceso
+[INFO] 03:32:42:510 [Kernel]/(17914:17916): Se recibio algo de MEMORIA
+[INFO] 03:32:42:511 [Kernel]/(17914:17932): Se aviso a Memoria del nuevo proceso
+[INFO] 03:32:44:514 [Kernel]/(17914:17916): Se recibio algo de MEMORIA
+[INFO] 03:32:44:515 [Kernel]/(17914:17933): Se aviso a Memoria del nuevo proceso
+[INFO] 03:32:46:520 [Kernel]/(17914:17916): Se recibio algo de MEMORIA
+[INFO] 03:33:17:611 [Kernel]/(17914:17918): Se recibio algo de CPU_Dispatch
+[WARNING] 03:33:17:611 [Kernel]/(17914:17918): Entre a atender instruccion
+[INFO] 03:33:17:611 [Kernel]/(17914:17918): Mensaje a MEMORIA: LIBERAR_ESTRUCTURA_KM [PID: 1]
+[INFO] 03:33:18:612 [Kernel]/(17914:17916): Se recibio algo de MEMORIA
+[INFO] 03:33:18:612 [Kernel]/(17914:17918): A2
+[INFO] 03:33:18:612 [Kernel]/(17914:17918): A3
+[INFO] 03:33:18:612 [Kernel]/(17914:17918): A4
+[INFO] 03:33:37:645 [Kernel]/(17914:17918): Se recibio algo de CPU_Dispatch
+[WARNING] 03:33:37:645 [Kernel]/(17914:17918): Entre a atender instruccion
+[INFO] 03:33:37:645 [Kernel]/(17914:17918): Mensaje a MEMORIA: LIBERAR_ESTRUCTURA_KM [PID: 2]
+[INFO] 03:33:38:646 [Kernel]/(17914:17916): Se recibio algo de MEMORIA
+[INFO] 03:33:38:646 [Kernel]/(17914:17918): A2
+[INFO] 03:33:38:646 [Kernel]/(17914:17918): A3
+[INFO] 03:33:38:646 [Kernel]/(17914:17918): A4
+[INFO] 03:33:45:660 [Kernel]/(17914:17918): Se recibio algo de CPU_Dispatch
+[WARNING] 03:33:45:661 [Kernel]/(17914:17918): Entre a atender instruccion
+[INFO] 03:33:45:661 [Kernel]/(17914:17918): Mensaje a MEMORIA: LIBERAR_ESTRUCTURA_KM [PID: 3]
+[INFO] 03:33:46:663 [Kernel]/(17914:17916): Se recibio algo de MEMORIA
+[INFO] 03:33:46:663 [Kernel]/(17914:17918): A2
+[INFO] 03:33:46:663 [Kernel]/(17914:17918): A3
+[INFO] 03:33:46:663 [Kernel]/(17914:17918): A4
+[WARNING] 03:33:48:684 [Kernel]/(17914:17921): N°  Param. Incorrecto
+[INFO] 03:35:27:969 [Kernel]/(18030:18030): [RECURSO | 1]
+[INFO] 03:35:27:974 [Kernel]/(18030:18030): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 03:35:27:975 [Kernel]/(18030:18030): HANDSHAKE CON FILESYSTEM [EXITOSO]
+[INFO] 03:35:27:975 [Kernel]/(18030:18030): HANDSHAKE CON CPU_Dispatch [EXITOSO]
+[INFO] 03:35:27:975 [Kernel]/(18030:18030): HANDSHAKE CON CPU_Interrupt [EXITOSO]
+[INFO] 03:36:00:471 [Kernel]/(18030:18043): Se aviso a Memoria del nuevo proceso
+[INFO] 03:36:02:479 [Kernel]/(18030:18032): Se recibio algo de MEMORIA
+[INFO] 03:36:02:480 [Kernel]/(18030:18044): Se aviso a Memoria del nuevo proceso
+[INFO] 03:36:04:482 [Kernel]/(18030:18032): Se recibio algo de MEMORIA
+[INFO] 03:36:04:482 [Kernel]/(18030:18045): Se aviso a Memoria del nuevo proceso
+[INFO] 03:36:06:487 [Kernel]/(18030:18032): Se recibio algo de MEMORIA
+[INFO] 03:36:37:571 [Kernel]/(18030:18034): Se recibio algo de CPU_Dispatch
+[WARNING] 03:36:37:571 [Kernel]/(18030:18034): Entre a atender instruccion
+[INFO] 03:36:37:571 [Kernel]/(18030:18034): Mensaje a MEMORIA: LIBERAR_ESTRUCTURA_KM [PID: 1]
+[INFO] 03:36:38:574 [Kernel]/(18030:18032): Se recibio algo de MEMORIA
+[INFO] 03:36:38:574 [Kernel]/(18030:18034): A2
+[INFO] 03:36:38:574 [Kernel]/(18030:18034): A3
+[INFO] 03:36:38:574 [Kernel]/(18030:18034): A4
+[ERROR] 03:36:55:395 [Kernel]/(18030:18037): Comando no reconocido
+[INFO] 03:36:57:639 [Kernel]/(18030:18034): Se recibio algo de CPU_Dispatch
+[WARNING] 03:36:57:639 [Kernel]/(18030:18034): Entre a atender instruccion
+[INFO] 03:36:57:639 [Kernel]/(18030:18034): Mensaje a MEMORIA: LIBERAR_ESTRUCTURA_KM [PID: 2]
+[INFO] 03:36:58:640 [Kernel]/(18030:18032): Se recibio algo de MEMORIA
+[INFO] 03:36:58:640 [Kernel]/(18030:18034): A2
+[INFO] 03:36:58:640 [Kernel]/(18030:18034): A3
+[INFO] 03:36:58:640 [Kernel]/(18030:18034): A4
+[INFO] 03:36:58:918 [Kernel]/(18030:18057): Se aviso a Memoria del nuevo proceso
+[INFO] 03:37:00:921 [Kernel]/(18030:18032): Se recibio algo de MEMORIA
+[INFO] 03:37:01:741 [Kernel]/(18030:18059): Se aviso a Memoria del nuevo proceso
+[INFO] 03:37:03:759 [Kernel]/(18030:18032): Se recibio algo de MEMORIA
+[INFO] 03:37:03:760 [Kernel]/(18030:18060): Se aviso a Memoria del nuevo proceso
+[INFO] 03:37:05:652 [Kernel]/(18030:18034): Se recibio algo de CPU_Dispatch
+[WARNING] 03:37:05:652 [Kernel]/(18030:18034): Entre a atender instruccion
+[INFO] 03:37:05:652 [Kernel]/(18030:18034): Mensaje a MEMORIA: LIBERAR_ESTRUCTURA_KM [PID: 3]
+[INFO] 03:37:05:774 [Kernel]/(18030:18032): Se recibio algo de MEMORIA
+[INFO] 03:37:05:774 [Kernel]/(18030:18062): Se aviso a Memoria del nuevo proceso
+[INFO] 03:37:06:775 [Kernel]/(18030:18032): Se recibio algo de MEMORIA
+[INFO] 03:37:06:776 [Kernel]/(18030:18034): A2
+[INFO] 03:37:06:776 [Kernel]/(18030:18034): A3
+[INFO] 03:37:06:776 [Kernel]/(18030:18034): A4
+[INFO] 03:37:08:779 [Kernel]/(18030:18032): Se recibio algo de MEMORIA
+[INFO] 03:37:41:854 [Kernel]/(18030:18034): Se recibio algo de CPU_Dispatch
+[WARNING] 03:37:41:854 [Kernel]/(18030:18034): Entre a atender instruccion
+[INFO] 03:37:41:854 [Kernel]/(18030:18034): Mensaje a MEMORIA: LIBERAR_ESTRUCTURA_KM [PID: 4]
+[INFO] 03:37:42:898 [Kernel]/(18030:18032): Se recibio algo de MEMORIA
+[INFO] 03:37:42:898 [Kernel]/(18030:18034): A2
+[INFO] 03:37:42:898 [Kernel]/(18030:18034): A3
+[INFO] 03:37:42:898 [Kernel]/(18030:18034): A4
+[INFO] 03:45:53:306 [Kernel]/(18996:18996): [RECURSO | 1]
+[INFO] 03:45:53:308 [Kernel]/(18996:18996): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 03:45:53:309 [Kernel]/(18996:18996): HANDSHAKE CON FILESYSTEM [EXITOSO]
+[INFO] 03:45:53:309 [Kernel]/(18996:18996): HANDSHAKE CON CPU_Dispatch [EXITOSO]
+[INFO] 03:45:53:309 [Kernel]/(18996:18996): HANDSHAKE CON CPU_Interrupt [EXITOSO]
+[INFO] 03:45:57:762 [Kernel]/(18996:19008): Se aviso a Memoria del nuevo proceso
+[INFO] 03:45:59:764 [Kernel]/(18996:18998): Se recibio algo de MEMORIA
+[INFO] 03:46:03:173 [Kernel]/(18996:19011): Se aviso a Memoria del nuevo proceso
+[INFO] 03:46:05:185 [Kernel]/(18996:18998): Se recibio algo de MEMORIA
+[INFO] 03:46:05:186 [Kernel]/(18996:19012): Se aviso a Memoria del nuevo proceso
+[INFO] 03:46:07:192 [Kernel]/(18996:18998): Se recibio algo de MEMORIA
+[INFO] 03:46:07:192 [Kernel]/(18996:19014): Se aviso a Memoria del nuevo proceso
+[INFO] 03:46:09:194 [Kernel]/(18996:18998): Se recibio algo de MEMORIA
+[INFO] 03:46:34:867 [Kernel]/(18996:19000): Se recibio algo de CPU_Dispatch
+[WARNING] 03:46:34:868 [Kernel]/(18996:19000): Entre a atender instruccion
+[INFO] 03:46:34:868 [Kernel]/(18996:19000): Mensaje a MEMORIA: LIBERAR_ESTRUCTURA_KM [PID: 1]
+[INFO] 03:46:35:870 [Kernel]/(18996:18998): Se recibio algo de MEMORIA
+[INFO] 03:46:35:870 [Kernel]/(18996:19000): A2
+[INFO] 03:46:35:871 [Kernel]/(18996:19000): A3
+[INFO] 03:46:35:871 [Kernel]/(18996:19000): A4
+[INFO] 03:47:10:972 [Kernel]/(18996:19000): Se recibio algo de CPU_Dispatch
+[WARNING] 03:47:10:972 [Kernel]/(18996:19000): Entre a atender instruccion
+[INFO] 03:47:10:972 [Kernel]/(18996:19000): Mensaje a MEMORIA: LIBERAR_ESTRUCTURA_KM [PID: 2]
+[INFO] 03:47:11:974 [Kernel]/(18996:18998): Se recibio algo de MEMORIA
+[INFO] 03:47:11:976 [Kernel]/(18996:19000): A2
+[INFO] 03:47:11:976 [Kernel]/(18996:19000): A3
+[INFO] 03:47:11:976 [Kernel]/(18996:19000): A4
+[INFO] 03:47:47:396 [Kernel]/(18996:19000): Se recibio algo de CPU_Dispatch
+[WARNING] 03:47:47:396 [Kernel]/(18996:19000): Entre a atender instruccion
+[INFO] 03:47:47:396 [Kernel]/(18996:19000): Mensaje a MEMORIA: LIBERAR_ESTRUCTURA_KM [PID: 3]
+[INFO] 03:47:48:397 [Kernel]/(18996:18998): Se recibio algo de MEMORIA
+[INFO] 03:47:48:397 [Kernel]/(18996:19000): A2
+[INFO] 03:47:48:398 [Kernel]/(18996:19000): A3
+[INFO] 03:47:48:398 [Kernel]/(18996:19000): A4
+[INFO] 03:48:23:526 [Kernel]/(18996:19000): Se recibio algo de CPU_Dispatch
+[WARNING] 03:48:23:526 [Kernel]/(18996:19000): Entre a atender instruccion
+[INFO] 03:48:23:527 [Kernel]/(18996:19000): Mensaje a MEMORIA: LIBERAR_ESTRUCTURA_KM [PID: 4]
+[INFO] 03:48:24:528 [Kernel]/(18996:18998): Se recibio algo de MEMORIA
+[INFO] 03:48:24:528 [Kernel]/(18996:19000): A2
+[INFO] 03:48:24:528 [Kernel]/(18996:19000): A3
+[INFO] 03:48:24:528 [Kernel]/(18996:19000): A4
+[ERROR] 03:51:20:951 [Kernel]/(18996:19003): Comando no reconocido
+[INFO] 03:51:22:753 [Kernel]/(18996:19077): Se aviso a Memoria del nuevo proceso
+[INFO] 03:51:24:827 [Kernel]/(18996:18998): Se recibio algo de MEMORIA
+[INFO] 03:51:24:828 [Kernel]/(18996:19078): Se aviso a Memoria del nuevo proceso
+[INFO] 03:51:26:829 [Kernel]/(18996:18998): Se recibio algo de MEMORIA
+[INFO] 03:51:59:920 [Kernel]/(18996:19000): Se recibio algo de CPU_Dispatch
+[WARNING] 03:51:59:921 [Kernel]/(18996:19000): Entre a atender instruccion
+[INFO] 03:51:59:921 [Kernel]/(18996:19000): Mensaje a MEMORIA: LIBERAR_ESTRUCTURA_KM [PID: 5]
+[INFO] 03:52:00:921 [Kernel]/(18996:18998): Se recibio algo de MEMORIA
+[INFO] 03:52:00:922 [Kernel]/(18996:19000): A2
+[INFO] 03:52:00:922 [Kernel]/(18996:19000): A3
+[INFO] 03:52:00:922 [Kernel]/(18996:19000): A4
+[INFO] 03:52:36:016 [Kernel]/(18996:19000): Se recibio algo de CPU_Dispatch
+[WARNING] 03:52:36:016 [Kernel]/(18996:19000): Entre a atender instruccion
+[INFO] 03:52:36:016 [Kernel]/(18996:19000): Mensaje a MEMORIA: LIBERAR_ESTRUCTURA_KM [PID: 6]
+[INFO] 03:52:37:017 [Kernel]/(18996:18998): Se recibio algo de MEMORIA
+[INFO] 03:52:37:018 [Kernel]/(18996:19000): A2
+[INFO] 03:52:37:018 [Kernel]/(18996:19000): A3
+[INFO] 03:52:37:018 [Kernel]/(18996:19000): A4
+[INFO] 03:52:46:012 [Kernel]/(19113:19113): [RECURSO | 1]
+[INFO] 03:52:46:013 [Kernel]/(19113:19113): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 03:52:46:014 [Kernel]/(19113:19113): HANDSHAKE CON FILESYSTEM [EXITOSO]
+[INFO] 03:52:46:014 [Kernel]/(19113:19113): HANDSHAKE CON CPU_Dispatch [EXITOSO]
+[INFO] 03:52:46:014 [Kernel]/(19113:19113): HANDSHAKE CON CPU_Interrupt [EXITOSO]
+[ERROR] 03:52:48:903 [Kernel]/(19113:19120): Comando no reconocido
+[INFO] 03:52:55:372 [Kernel]/(19113:19123): Se aviso a Memoria del nuevo proceso
+[INFO] 03:52:57:375 [Kernel]/(19113:19115): Se recibio algo de MEMORIA
+[INFO] 03:53:20:428 [Kernel]/(19113:19126): Se aviso a Memoria del nuevo proceso
+[INFO] 03:53:22:442 [Kernel]/(19113:19115): Se recibio algo de MEMORIA
+[INFO] 03:53:22:442 [Kernel]/(19113:19127): Se aviso a Memoria del nuevo proceso
+[INFO] 03:53:24:448 [Kernel]/(19113:19115): Se recibio algo de MEMORIA
+[INFO] 03:53:24:457 [Kernel]/(19113:19129): Se aviso a Memoria del nuevo proceso
+[INFO] 03:53:26:469 [Kernel]/(19113:19115): Se recibio algo de MEMORIA
+[INFO] 03:53:26:471 [Kernel]/(19113:19132): Se aviso a Memoria del nuevo proceso
+[INFO] 03:53:28:479 [Kernel]/(19113:19115): Se recibio algo de MEMORIA
+[INFO] 03:53:28:479 [Kernel]/(19113:19130): Se aviso a Memoria del nuevo proceso
+[INFO] 03:53:30:489 [Kernel]/(19113:19115): Se recibio algo de MEMORIA
+[INFO] 03:53:32:626 [Kernel]/(19113:19117): Se recibio algo de CPU_Dispatch
+[WARNING] 03:53:32:626 [Kernel]/(19113:19117): Entre a atender instruccion
+[INFO] 03:53:32:626 [Kernel]/(19113:19117): Mensaje a MEMORIA: LIBERAR_ESTRUCTURA_KM [PID: 1]
+[INFO] 03:53:33:631 [Kernel]/(19113:19115): Se recibio algo de MEMORIA
+[INFO] 03:53:33:631 [Kernel]/(19113:19117): A2
+[INFO] 03:53:33:631 [Kernel]/(19113:19117): A3
+[INFO] 03:53:33:631 [Kernel]/(19113:19117): A4
+[INFO] 03:54:08:740 [Kernel]/(19113:19117): Se recibio algo de CPU_Dispatch
+[WARNING] 03:54:08:740 [Kernel]/(19113:19117): Entre a atender instruccion
+[INFO] 03:54:08:740 [Kernel]/(19113:19117): Mensaje a MEMORIA: LIBERAR_ESTRUCTURA_KM [PID: 2]
+[INFO] 03:54:09:745 [Kernel]/(19113:19115): Se recibio algo de MEMORIA
+[INFO] 03:54:09:745 [Kernel]/(19113:19117): A2
+[INFO] 03:54:09:745 [Kernel]/(19113:19117): A3
+[INFO] 03:54:09:745 [Kernel]/(19113:19117): A4
+[INFO] 03:54:12:436 [Kernel]/(19113:19140): Se aviso a Memoria del nuevo proceso
+[INFO] 03:54:14:438 [Kernel]/(19113:19115): Se recibio algo de MEMORIA
+[INFO] 03:54:27:714 [Kernel]/(19113:19142): Se aviso a Memoria del nuevo proceso
+[INFO] 03:54:29:731 [Kernel]/(19113:19115): Se recibio algo de MEMORIA
+[INFO] 03:54:45:033 [Kernel]/(19113:19117): Se recibio algo de CPU_Dispatch
+[WARNING] 03:54:45:033 [Kernel]/(19113:19117): Entre a atender instruccion
+[INFO] 03:54:45:033 [Kernel]/(19113:19117): Mensaje a MEMORIA: LIBERAR_ESTRUCTURA_KM [PID: 3]
+[INFO] 03:54:46:035 [Kernel]/(19113:19115): Se recibio algo de MEMORIA
+[INFO] 03:54:46:035 [Kernel]/(19113:19117): A2
+[INFO] 03:54:46:035 [Kernel]/(19113:19117): A3
+[INFO] 03:54:46:035 [Kernel]/(19113:19117): A4
+[INFO] 03:56:18:137 [Kernel]/(19161:19161): [RECURSO | 1]
+[INFO] 03:56:18:139 [Kernel]/(19161:19161): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 03:56:18:139 [Kernel]/(19161:19161): HANDSHAKE CON FILESYSTEM [EXITOSO]
+[INFO] 03:56:18:139 [Kernel]/(19161:19161): HANDSHAKE CON CPU_Dispatch [EXITOSO]
+[INFO] 03:56:18:139 [Kernel]/(19161:19161): HANDSHAKE CON CPU_Interrupt [EXITOSO]
+[INFO] 03:57:05:076 [Kernel]/(19161:19172): Se aviso a Memoria del nuevo proceso
+[INFO] 03:57:07:079 [Kernel]/(19161:19163): Se recibio algo de MEMORIA
+[INFO] 03:57:07:079 [Kernel]/(19161:19174): Se aviso a Memoria del nuevo proceso
+[INFO] 03:57:09:086 [Kernel]/(19161:19163): Se recibio algo de MEMORIA
+[INFO] 03:57:09:087 [Kernel]/(19161:19175): Se aviso a Memoria del nuevo proceso
+[INFO] 03:57:11:101 [Kernel]/(19161:19163): Se recibio algo de MEMORIA
+[INFO] 03:57:42:279 [Kernel]/(19161:19165): Se recibio algo de CPU_Dispatch
+[WARNING] 03:57:42:279 [Kernel]/(19161:19165): Entre a atender instruccion
+[INFO] 03:57:42:279 [Kernel]/(19161:19165): Mensaje a MEMORIA: LIBERAR_ESTRUCTURA_KM [PID: 1]
+[INFO] 03:57:43:309 [Kernel]/(19161:19163): Se recibio algo de MEMORIA
+[INFO] 03:57:43:310 [Kernel]/(19161:19165): A2
+[INFO] 03:57:43:310 [Kernel]/(19161:19165): A3
+[INFO] 03:57:43:310 [Kernel]/(19161:19165): A4
+[INFO] 03:57:50:381 [Kernel]/(19161:19165): Se recibio algo de CPU_Dispatch
+[WARNING] 03:57:50:381 [Kernel]/(19161:19165): Entre a atender instruccion
+[INFO] 03:57:50:381 [Kernel]/(19161:19165): Mensaje a MEMORIA: LIBERAR_ESTRUCTURA_KM [PID: 3]
+[INFO] 03:57:51:382 [Kernel]/(19161:19163): Se recibio algo de MEMORIA
+[INFO] 03:57:51:383 [Kernel]/(19161:19165): A2
+[INFO] 03:57:51:383 [Kernel]/(19161:19165): A3
+[INFO] 03:57:51:383 [Kernel]/(19161:19165): A4
+[INFO] 03:58:10:495 [Kernel]/(19161:19165): Se recibio algo de CPU_Dispatch
+[WARNING] 03:58:10:495 [Kernel]/(19161:19165): Entre a atender instruccion
+[INFO] 03:58:10:495 [Kernel]/(19161:19165): Mensaje a MEMORIA: LIBERAR_ESTRUCTURA_KM [PID: 2]
+[INFO] 03:58:11:497 [Kernel]/(19161:19163): Se recibio algo de MEMORIA
+[INFO] 03:58:11:497 [Kernel]/(19161:19165): A2
+[INFO] 03:58:11:497 [Kernel]/(19161:19165): A3
+[INFO] 03:58:11:497 [Kernel]/(19161:19165): A4
+[INFO] 03:59:13:683 [Kernel]/(19202:19202): [RECURSO | 1]
+[INFO] 03:59:13:687 [Kernel]/(19202:19202): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 03:59:13:687 [Kernel]/(19202:19202): HANDSHAKE CON FILESYSTEM [EXITOSO]
+[INFO] 03:59:13:687 [Kernel]/(19202:19202): HANDSHAKE CON CPU_Dispatch [EXITOSO]
+[INFO] 03:59:13:688 [Kernel]/(19202:19202): HANDSHAKE CON CPU_Interrupt [EXITOSO]
+[INFO] 03:59:35:323 [Kernel]/(19202:19213): Se aviso a Memoria del nuevo proceso
+[INFO] 03:59:37:327 [Kernel]/(19202:19204): Se recibio algo de MEMORIA
+[INFO] 03:59:37:327 [Kernel]/(19202:19214): Se aviso a Memoria del nuevo proceso
+[INFO] 03:59:39:328 [Kernel]/(19202:19218): Me desperte
+[WARNING] 03:59:39:328 [Kernel]/(19202:19218): entre al if programar_interrupcion_por_quantum
+[WARNING] 03:59:39:328 [Kernel]/(19202:19218): entre al if 2
+[WARNING] 03:59:39:328 [Kernel]/(19202:19218): salgo del if 2
+[WARNING] 03:59:39:328 [Kernel]/(19202:19218): salgo del if 1
+[INFO] 03:59:39:329 [Kernel]/(19202:19207): Envio interrupcion por RR
+[INFO] 03:59:39:340 [Kernel]/(19202:19204): Se recibio algo de MEMORIA
+[INFO] 03:59:39:340 [Kernel]/(19202:19215): Se aviso a Memoria del nuevo proceso
+[INFO] 03:59:39:340 [Kernel]/(19202:19206): Se recibio algo de CPU_Dispatch
+[WARNING] 03:59:39:340 [Kernel]/(19202:19206): <PID:1>[PC:2][0|0|4|0][ALGORITMO_QUANTUM]
+[INFO] 03:59:41:340 [Kernel]/(19202:19221): Me desperte
+[WARNING] 03:59:41:341 [Kernel]/(19202:19221): entre al if programar_interrupcion_por_quantum
+[WARNING] 03:59:41:341 [Kernel]/(19202:19221): entre al if 2
+[WARNING] 03:59:41:341 [Kernel]/(19202:19221): salgo del if 2
+[WARNING] 03:59:41:342 [Kernel]/(19202:19221): salgo del if 1
+[INFO] 03:59:41:343 [Kernel]/(19202:19207): Envio interrupcion por RR
+[INFO] 03:59:41:343 [Kernel]/(19202:19204): Se recibio algo de MEMORIA
+[INFO] 03:59:41:344 [Kernel]/(19202:19206): Se recibio algo de CPU_Dispatch
+[WARNING] 03:59:41:344 [Kernel]/(19202:19206): <PID:2>[PC:2][0|0|4|0][ALGORITMO_QUANTUM]
+[INFO] 03:59:43:349 [Kernel]/(19202:19224): Me desperte
+[WARNING] 03:59:43:349 [Kernel]/(19202:19224): entre al if programar_interrupcion_por_quantum
+[WARNING] 03:59:43:349 [Kernel]/(19202:19224): entre al if 2
+[WARNING] 03:59:43:349 [Kernel]/(19202:19224): salgo del if 2
+[WARNING] 03:59:43:349 [Kernel]/(19202:19224): salgo del if 1
+[INFO] 03:59:43:350 [Kernel]/(19202:19207): Envio interrupcion por RR
+[INFO] 03:59:43:433 [Kernel]/(19202:19206): Se recibio algo de CPU_Dispatch
+[WARNING] 03:59:43:433 [Kernel]/(19202:19206): <PID:1>[PC:4][4|0|4|0][ALGORITMO_QUANTUM]
+[INFO] 03:59:45:434 [Kernel]/(19202:19226): Me desperte
+[WARNING] 03:59:45:435 [Kernel]/(19202:19226): entre al if programar_interrupcion_por_quantum
+[WARNING] 03:59:45:435 [Kernel]/(19202:19226): entre al if 2
+[INFO] 03:59:45:435 [Kernel]/(19202:19207): Envio interrupcion por RR
+[WARNING] 03:59:45:435 [Kernel]/(19202:19226): salgo del if 2
+[WARNING] 03:59:45:435 [Kernel]/(19202:19226): salgo del if 1
+[INFO] 03:59:45:438 [Kernel]/(19202:19206): Se recibio algo de CPU_Dispatch
+[WARNING] 03:59:45:438 [Kernel]/(19202:19206): <PID:3>[PC:2][0|0|4|0][ALGORITMO_QUANTUM]
+[INFO] 03:59:47:438 [Kernel]/(19202:19228): Me desperte
+[WARNING] 03:59:47:438 [Kernel]/(19202:19228): entre al if programar_interrupcion_por_quantum
+[WARNING] 03:59:47:438 [Kernel]/(19202:19228): entre al if 2
+[WARNING] 03:59:47:438 [Kernel]/(19202:19228): salgo del if 2
+[WARNING] 03:59:47:438 [Kernel]/(19202:19228): salgo del if 1
+[INFO] 03:59:47:438 [Kernel]/(19202:19207): Envio interrupcion por RR
+[INFO] 03:59:47:439 [Kernel]/(19202:19206): Se recibio algo de CPU_Dispatch
+[WARNING] 03:59:47:439 [Kernel]/(19202:19206): <PID:2>[PC:4][4|0|0|0][ALGORITMO_QUANTUM]
+[INFO] 03:59:49:440 [Kernel]/(19202:19230): Me desperte
+[WARNING] 03:59:49:440 [Kernel]/(19202:19230): entre al if programar_interrupcion_por_quantum
+[WARNING] 03:59:49:440 [Kernel]/(19202:19230): entre al if 2
+[WARNING] 03:59:49:440 [Kernel]/(19202:19230): salgo del if 2
+[INFO] 03:59:49:440 [Kernel]/(19202:19207): Envio interrupcion por RR
+[WARNING] 03:59:49:441 [Kernel]/(19202:19230): salgo del if 1
+[INFO] 03:59:49:448 [Kernel]/(19202:19206): Se recibio algo de CPU_Dispatch
+[WARNING] 03:59:49:448 [Kernel]/(19202:19206): <PID:1>[PC:6][12|4|4|0][ALGORITMO_QUANTUM]
+[INFO] 03:59:51:448 [Kernel]/(19202:19232): Me desperte
+[WARNING] 03:59:51:448 [Kernel]/(19202:19232): entre al if programar_interrupcion_por_quantum
+[WARNING] 03:59:51:448 [Kernel]/(19202:19232): entre al if 2
+[WARNING] 03:59:51:448 [Kernel]/(19202:19232): salgo del if 2
+[WARNING] 03:59:51:448 [Kernel]/(19202:19232): salgo del if 1
+[INFO] 03:59:51:449 [Kernel]/(19202:19207): Envio interrupcion por RR
+[INFO] 03:59:51:451 [Kernel]/(19202:19206): Se recibio algo de CPU_Dispatch
+[WARNING] 03:59:51:451 [Kernel]/(19202:19206): <PID:3>[PC:4][4|0|0|0][ALGORITMO_QUANTUM]
+[INFO] 03:59:53:457 [Kernel]/(19202:19234): Me desperte
+[WARNING] 03:59:53:457 [Kernel]/(19202:19234): entre al if programar_interrupcion_por_quantum
+[WARNING] 03:59:53:457 [Kernel]/(19202:19234): entre al if 2
+[WARNING] 03:59:53:457 [Kernel]/(19202:19234): salgo del if 2
+[WARNING] 03:59:53:457 [Kernel]/(19202:19234): salgo del if 1
+[INFO] 03:59:53:457 [Kernel]/(19202:19207): Envio interrupcion por RR
+[INFO] 03:59:54:458 [Kernel]/(19202:19206): Se recibio algo de CPU_Dispatch
+[WARNING] 03:59:54:458 [Kernel]/(19202:19206): <PID:2>[PC:7][12|4|4|0][ALGORITMO_QUANTUM]
+[INFO] 03:59:56:460 [Kernel]/(19202:19236): Me desperte
+[WARNING] 03:59:56:460 [Kernel]/(19202:19236): entre al if programar_interrupcion_por_quantum
+[WARNING] 03:59:56:460 [Kernel]/(19202:19236): entre al if 2
+[INFO] 03:59:56:460 [Kernel]/(19202:19207): Envio interrupcion por RR
+[WARNING] 03:59:56:460 [Kernel]/(19202:19236): salgo del if 2
+[WARNING] 03:59:56:460 [Kernel]/(19202:19236): salgo del if 1
+[INFO] 03:59:56:463 [Kernel]/(19202:19206): Se recibio algo de CPU_Dispatch
+[WARNING] 03:59:56:463 [Kernel]/(19202:19206): <PID:1>[PC:8][28|12|4|4][ALGORITMO_QUANTUM]
+[INFO] 03:59:58:464 [Kernel]/(19202:19238): Me desperte
+[WARNING] 03:59:58:464 [Kernel]/(19202:19238): entre al if programar_interrupcion_por_quantum
+[WARNING] 03:59:58:465 [Kernel]/(19202:19238): entre al if 2
+[WARNING] 03:59:58:465 [Kernel]/(19202:19238): salgo del if 2
+[WARNING] 03:59:58:465 [Kernel]/(19202:19238): salgo del if 1
+[INFO] 03:59:58:465 [Kernel]/(19202:19207): Envio interrupcion por RR
+[INFO] 03:59:58:471 [Kernel]/(19202:19206): Se recibio algo de CPU_Dispatch
+[WARNING] 03:59:58:471 [Kernel]/(19202:19206): <PID:3>[PC:6][8|4|4|0][ALGORITMO_QUANTUM]
+[INFO] 04:00:00:472 [Kernel]/(19202:19240): Me desperte
+[WARNING] 04:00:00:473 [Kernel]/(19202:19240): entre al if programar_interrupcion_por_quantum
+[WARNING] 04:00:00:473 [Kernel]/(19202:19240): entre al if 2
+[INFO] 04:00:00:473 [Kernel]/(19202:19207): Envio interrupcion por RR
+[WARNING] 04:00:00:473 [Kernel]/(19202:19240): salgo del if 2
+[WARNING] 04:00:00:474 [Kernel]/(19202:19240): salgo del if 1
+[INFO] 04:00:00:475 [Kernel]/(19202:19206): Se recibio algo de CPU_Dispatch
+[WARNING] 04:00:00:475 [Kernel]/(19202:19206): <PID:2>[PC:9][16|12|8|4][ALGORITMO_QUANTUM]
+[INFO] 04:00:02:476 [Kernel]/(19202:19242): Me desperte
+[WARNING] 04:00:02:476 [Kernel]/(19202:19242): entre al if programar_interrupcion_por_quantum
+[WARNING] 04:00:02:476 [Kernel]/(19202:19242): entre al if 2
+[INFO] 04:00:02:476 [Kernel]/(19202:19207): Envio interrupcion por RR
+[WARNING] 04:00:02:476 [Kernel]/(19202:19242): salgo del if 2
+[WARNING] 04:00:02:476 [Kernel]/(19202:19242): salgo del if 1
+[INFO] 04:00:02:483 [Kernel]/(19202:19206): Se recibio algo de CPU_Dispatch
+[WARNING] 04:00:02:484 [Kernel]/(19202:19206): <PID:1>[PC:10][60|28|4|12][ALGORITMO_QUANTUM]
+[INFO] 04:00:03:487 [Kernel]/(19202:19206): Se recibio algo de CPU_Dispatch
+[WARNING] 04:00:03:487 [Kernel]/(19202:19206): Entre a atender instruccion
+[INFO] 04:00:03:487 [Kernel]/(19202:19206): Mensaje a MEMORIA: LIBERAR_ESTRUCTURA_KM [PID: 3]
+[INFO] 04:00:04:484 [Kernel]/(19202:19244): Me desperte
+[WARNING] 04:00:04:485 [Kernel]/(19202:19244): entre al if programar_interrupcion_por_quantum
+[WARNING] 04:00:04:485 [Kernel]/(19202:19244): salgo del if 2
+[WARNING] 04:00:04:485 [Kernel]/(19202:19244): salgo del if 1
+[INFO] 04:00:04:488 [Kernel]/(19202:19204): Se recibio algo de MEMORIA
+[INFO] 04:00:04:489 [Kernel]/(19202:19206): A2
+[INFO] 04:00:04:489 [Kernel]/(19202:19206): A3
+[INFO] 04:00:04:489 [Kernel]/(19202:19206): A4
+[INFO] 04:00:06:490 [Kernel]/(19202:19247): Me desperte
+[WARNING] 04:00:06:490 [Kernel]/(19202:19247): entre al if programar_interrupcion_por_quantum
+[WARNING] 04:00:06:490 [Kernel]/(19202:19247): entre al if 2
+[WARNING] 04:00:06:490 [Kernel]/(19202:19247): salgo del if 2
+[WARNING] 04:00:06:490 [Kernel]/(19202:19247): salgo del if 1
+[INFO] 04:00:06:490 [Kernel]/(19202:19207): Envio interrupcion por RR
+[INFO] 04:00:06:494 [Kernel]/(19202:19206): Se recibio algo de CPU_Dispatch
+[WARNING] 04:00:06:495 [Kernel]/(19202:19206): <PID:2>[PC:11][20|16|16|12][ALGORITMO_QUANTUM]
+[INFO] 04:00:08:495 [Kernel]/(19202:19249): Me desperte
+[WARNING] 04:00:08:496 [Kernel]/(19202:19249): entre al if programar_interrupcion_por_quantum
+[WARNING] 04:00:08:496 [Kernel]/(19202:19249): entre al if 2
+[WARNING] 04:00:08:496 [Kernel]/(19202:19249): salgo del if 2
+[WARNING] 04:00:08:496 [Kernel]/(19202:19249): salgo del if 1
+[INFO] 04:00:08:496 [Kernel]/(19202:19207): Envio interrupcion por RR
+[INFO] 04:00:08:500 [Kernel]/(19202:19206): Se recibio algo de CPU_Dispatch
+[WARNING] 04:00:08:500 [Kernel]/(19202:19206): <PID:1>[PC:12][124|60|4|28][ALGORITMO_QUANTUM]
+[INFO] 04:00:10:501 [Kernel]/(19202:19251): Me desperte
+[WARNING] 04:00:10:502 [Kernel]/(19202:19251): entre al if programar_interrupcion_por_quantum
+[WARNING] 04:00:10:502 [Kernel]/(19202:19251): entre al if 2
+[INFO] 04:00:10:502 [Kernel]/(19202:19207): Envio interrupcion por RR
+[WARNING] 04:00:10:502 [Kernel]/(19202:19251): salgo del if 2
+[WARNING] 04:00:10:502 [Kernel]/(19202:19251): salgo del if 1
+[INFO] 04:00:10:507 [Kernel]/(19202:19206): Se recibio algo de CPU_Dispatch
+[WARNING] 04:00:10:507 [Kernel]/(19202:19206): <PID:2>[PC:13][24|20|20|16][ALGORITMO_QUANTUM]
+[INFO] 04:00:12:512 [Kernel]/(19202:19253): Me desperte
+[WARNING] 04:00:12:512 [Kernel]/(19202:19253): entre al if programar_interrupcion_por_quantum
+[WARNING] 04:00:12:512 [Kernel]/(19202:19253): entre al if 2
+[INFO] 04:00:12:512 [Kernel]/(19202:19207): Envio interrupcion por RR
+[WARNING] 04:00:12:512 [Kernel]/(19202:19253): salgo del if 2
+[WARNING] 04:00:12:512 [Kernel]/(19202:19253): salgo del if 1
+[INFO] 04:00:12:512 [Kernel]/(19202:19206): Se recibio algo de CPU_Dispatch
+[WARNING] 04:00:12:512 [Kernel]/(19202:19206): <PID:1>[PC:14][4|124|0|0][ALGORITMO_QUANTUM]
+[INFO] 04:00:14:516 [Kernel]/(19202:19255): Me desperte
+[WARNING] 04:00:14:516 [Kernel]/(19202:19255): entre al if programar_interrupcion_por_quantum
+[WARNING] 04:00:14:516 [Kernel]/(19202:19255): entre al if 2
+[WARNING] 04:00:14:516 [Kernel]/(19202:19255): salgo del if 2
+[WARNING] 04:00:14:516 [Kernel]/(19202:19255): salgo del if 1
+[INFO] 04:00:14:516 [Kernel]/(19202:19207): Envio interrupcion por RR
+[INFO] 04:00:14:517 [Kernel]/(19202:19206): Se recibio algo de CPU_Dispatch
+[WARNING] 04:00:14:517 [Kernel]/(19202:19206): <PID:2>[PC:15][28|24|24|20][ALGORITMO_QUANTUM]
+[INFO] 04:00:16:518 [Kernel]/(19202:19257): Me desperte
+[WARNING] 04:00:16:518 [Kernel]/(19202:19257): entre al if programar_interrupcion_por_quantum
+[WARNING] 04:00:16:518 [Kernel]/(19202:19257): entre al if 2
+[WARNING] 04:00:16:518 [Kernel]/(19202:19257): salgo del if 2
+[WARNING] 04:00:16:518 [Kernel]/(19202:19257): salgo del if 1
+[INFO] 04:00:16:518 [Kernel]/(19202:19207): Envio interrupcion por RR
+[INFO] 04:00:16:519 [Kernel]/(19202:19206): Se recibio algo de CPU_Dispatch
+[WARNING] 04:00:16:519 [Kernel]/(19202:19206): <PID:1>[PC:16][4|4|252|124][ALGORITMO_QUANTUM]
+[INFO] 04:00:18:520 [Kernel]/(19202:19259): Me desperte
+[WARNING] 04:00:18:520 [Kernel]/(19202:19259): entre al if programar_interrupcion_por_quantum
+[WARNING] 04:00:18:520 [Kernel]/(19202:19259): entre al if 2
+[INFO] 04:00:18:520 [Kernel]/(19202:19207): Envio interrupcion por RR
+[WARNING] 04:00:18:520 [Kernel]/(19202:19259): salgo del if 2
+[WARNING] 04:00:18:520 [Kernel]/(19202:19259): salgo del if 1
+[INFO] 04:00:18:522 [Kernel]/(19202:19206): Se recibio algo de CPU_Dispatch
+[WARNING] 04:00:18:522 [Kernel]/(19202:19206): <PID:2>[PC:17][32|28|28|24][ALGORITMO_QUANTUM]
+[INFO] 04:00:20:523 [Kernel]/(19202:19261): Me desperte
+[WARNING] 04:00:20:524 [Kernel]/(19202:19261): entre al if programar_interrupcion_por_quantum
+[WARNING] 04:00:20:524 [Kernel]/(19202:19261): entre al if 2
+[WARNING] 04:00:20:524 [Kernel]/(19202:19261): salgo del if 2
+[WARNING] 04:00:20:524 [Kernel]/(19202:19261): salgo del if 1
+[INFO] 04:00:20:524 [Kernel]/(19202:19207): Envio interrupcion por RR
+[INFO] 04:00:20:526 [Kernel]/(19202:19206): Se recibio algo de CPU_Dispatch
+[WARNING] 04:00:20:526 [Kernel]/(19202:19206): <PID:1>[PC:18][4|4|12|4][ALGORITMO_QUANTUM]
+[INFO] 04:00:22:527 [Kernel]/(19202:19263): Me desperte
+[WARNING] 04:00:22:527 [Kernel]/(19202:19263): entre al if programar_interrupcion_por_quantum
+[WARNING] 04:00:22:527 [Kernel]/(19202:19263): entre al if 2
+[WARNING] 04:00:22:527 [Kernel]/(19202:19263): salgo del if 2
+[WARNING] 04:00:22:527 [Kernel]/(19202:19263): salgo del if 1
+[INFO] 04:00:22:527 [Kernel]/(19202:19207): Envio interrupcion por RR
+[INFO] 04:00:22:535 [Kernel]/(19202:19206): Se recibio algo de CPU_Dispatch
+[WARNING] 04:00:22:536 [Kernel]/(19202:19206): Entre a atender instruccion
+[INFO] 04:00:22:536 [Kernel]/(19202:19206): Mensaje a MEMORIA: LIBERAR_ESTRUCTURA_KM [PID: 2]
+[INFO] 04:00:23:546 [Kernel]/(19202:19204): Se recibio algo de MEMORIA
+[INFO] 04:00:23:547 [Kernel]/(19202:19206): A2
+[INFO] 04:00:23:547 [Kernel]/(19202:19206): A3
+[INFO] 04:00:23:547 [Kernel]/(19202:19206): A4
+[INFO] 04:00:25:547 [Kernel]/(19202:19266): Me desperte
+[WARNING] 04:00:25:547 [Kernel]/(19202:19266): entre al if programar_interrupcion_por_quantum
+[WARNING] 04:00:25:547 [Kernel]/(19202:19266): entre al if 2
+[WARNING] 04:00:25:547 [Kernel]/(19202:19266): salgo del if 2
+[WARNING] 04:00:25:547 [Kernel]/(19202:19266): salgo del if 1
+[INFO] 04:00:25:548 [Kernel]/(19202:19207): Envio interrupcion por RR
+[INFO] 04:00:25:549 [Kernel]/(19202:19206): Se recibio algo de CPU_Dispatch
+[WARNING] 04:00:25:549 [Kernel]/(19202:19206): <PID:1>[PC:20][4|4|12|4][ALGORITMO_QUANTUM]
+[INFO] 04:00:27:551 [Kernel]/(19202:19268): Me desperte
+[WARNING] 04:00:27:551 [Kernel]/(19202:19268): entre al if programar_interrupcion_por_quantum
+[WARNING] 04:00:27:551 [Kernel]/(19202:19268): entre al if 2
+[INFO] 04:00:27:551 [Kernel]/(19202:19207): Envio interrupcion por RR
+[WARNING] 04:00:27:551 [Kernel]/(19202:19268): salgo del if 2
+[WARNING] 04:00:27:551 [Kernel]/(19202:19268): salgo del if 1
+[INFO] 04:00:27:554 [Kernel]/(19202:19206): Se recibio algo de CPU_Dispatch
+[WARNING] 04:00:27:554 [Kernel]/(19202:19206): <PID:1>[PC:22][4|4|12|4][ALGORITMO_QUANTUM]
+[INFO] 04:00:29:556 [Kernel]/(19202:19270): Me desperte
+[WARNING] 04:00:29:556 [Kernel]/(19202:19270): entre al if programar_interrupcion_por_quantum
+[WARNING] 04:00:29:556 [Kernel]/(19202:19270): entre al if 2
+[WARNING] 04:00:29:556 [Kernel]/(19202:19270): salgo del if 2
+[WARNING] 04:00:29:556 [Kernel]/(19202:19270): salgo del if 1
+[INFO] 04:00:29:556 [Kernel]/(19202:19207): Envio interrupcion por RR
+[INFO] 04:00:29:559 [Kernel]/(19202:19206): Se recibio algo de CPU_Dispatch
+[WARNING] 04:00:29:560 [Kernel]/(19202:19206): <PID:1>[PC:24][4|4|12|4][ALGORITMO_QUANTUM]
+[INFO] 04:00:31:564 [Kernel]/(19202:19272): Me desperte
+[WARNING] 04:00:31:565 [Kernel]/(19202:19272): entre al if programar_interrupcion_por_quantum
+[WARNING] 04:00:31:565 [Kernel]/(19202:19272): entre al if 2
+[WARNING] 04:00:31:565 [Kernel]/(19202:19272): salgo del if 2
+[WARNING] 04:00:31:565 [Kernel]/(19202:19272): salgo del if 1
+[INFO] 04:00:31:565 [Kernel]/(19202:19207): Envio interrupcion por RR
+[INFO] 04:00:31:565 [Kernel]/(19202:19206): Se recibio algo de CPU_Dispatch
+[WARNING] 04:00:31:565 [Kernel]/(19202:19206): <PID:1>[PC:26][4|12|4|4][ALGORITMO_QUANTUM]
+[INFO] 04:00:33:567 [Kernel]/(19202:19274): Me desperte
+[WARNING] 04:00:33:567 [Kernel]/(19202:19274): entre al if programar_interrupcion_por_quantum
+[WARNING] 04:00:33:567 [Kernel]/(19202:19274): entre al if 2
+[INFO] 04:00:33:567 [Kernel]/(19202:19207): Envio interrupcion por RR
+[WARNING] 04:00:33:567 [Kernel]/(19202:19274): salgo del if 2
+[WARNING] 04:00:33:568 [Kernel]/(19202:19274): salgo del if 1
+[INFO] 04:00:33:622 [Kernel]/(19202:19206): Se recibio algo de CPU_Dispatch
+[WARNING] 04:00:33:623 [Kernel]/(19202:19206): <PID:1>[PC:28][4|28|4|12][ALGORITMO_QUANTUM]
+[INFO] 04:00:35:623 [Kernel]/(19202:19276): Me desperte
+[WARNING] 04:00:35:623 [Kernel]/(19202:19276): entre al if programar_interrupcion_por_quantum
+[WARNING] 04:00:35:623 [Kernel]/(19202:19276): entre al if 2
+[WARNING] 04:00:35:623 [Kernel]/(19202:19276): salgo del if 2
+[WARNING] 04:00:35:623 [Kernel]/(19202:19276): salgo del if 1
+[INFO] 04:00:35:623 [Kernel]/(19202:19207): Envio interrupcion por RR
+[INFO] 04:00:35:626 [Kernel]/(19202:19206): Se recibio algo de CPU_Dispatch
+[WARNING] 04:00:35:626 [Kernel]/(19202:19206): <PID:1>[PC:30][4|60|4|28][ALGORITMO_QUANTUM]
+[INFO] 04:00:37:628 [Kernel]/(19202:19278): Me desperte
+[WARNING] 04:00:37:628 [Kernel]/(19202:19278): entre al if programar_interrupcion_por_quantum
+[WARNING] 04:00:37:628 [Kernel]/(19202:19278): entre al if 2
+[WARNING] 04:00:37:628 [Kernel]/(19202:19278): salgo del if 2
+[WARNING] 04:00:37:628 [Kernel]/(19202:19278): salgo del if 1
+[INFO] 04:00:37:628 [Kernel]/(19202:19207): Envio interrupcion por RR
+[INFO] 04:00:37:630 [Kernel]/(19202:19206): Se recibio algo de CPU_Dispatch
+[WARNING] 04:00:37:630 [Kernel]/(19202:19206): <PID:1>[PC:32][4|124|4|60][ALGORITMO_QUANTUM]
+[INFO] 04:00:39:631 [Kernel]/(19202:19280): Me desperte
+[WARNING] 04:00:39:631 [Kernel]/(19202:19280): entre al if programar_interrupcion_por_quantum
+[WARNING] 04:00:39:631 [Kernel]/(19202:19280): entre al if 2
+[WARNING] 04:00:39:631 [Kernel]/(19202:19280): salgo del if 2
+[WARNING] 04:00:39:631 [Kernel]/(19202:19280): salgo del if 1
+[INFO] 04:00:39:631 [Kernel]/(19202:19207): Envio interrupcion por RR
+[INFO] 04:00:39:633 [Kernel]/(19202:19206): Se recibio algo de CPU_Dispatch
+[WARNING] 04:00:39:633 [Kernel]/(19202:19206): <PID:1>[PC:34][4|252|4|124][ALGORITMO_QUANTUM]
+[INFO] 04:00:40:635 [Kernel]/(19202:19206): Se recibio algo de CPU_Dispatch
+[WARNING] 04:00:40:635 [Kernel]/(19202:19206): Entre a atender instruccion
+[INFO] 04:00:40:635 [Kernel]/(19202:19206): Mensaje a MEMORIA: LIBERAR_ESTRUCTURA_KM [PID: 1]
+[INFO] 04:00:41:633 [Kernel]/(19202:19282): Me desperte
+[WARNING] 04:00:41:633 [Kernel]/(19202:19282): entre al if programar_interrupcion_por_quantum
+[WARNING] 04:00:41:634 [Kernel]/(19202:19282): salgo del if 2
+[WARNING] 04:00:41:634 [Kernel]/(19202:19282): salgo del if 1
+[INFO] 04:00:41:636 [Kernel]/(19202:19204): Se recibio algo de MEMORIA
+[INFO] 04:00:41:636 [Kernel]/(19202:19206): A2
+[INFO] 04:00:41:636 [Kernel]/(19202:19206): A3
+[INFO] 04:00:41:636 [Kernel]/(19202:19206): A4
+[INFO] 04:04:41:040 [Kernel]/(19327:19327): [RECURSO | 1]
+[INFO] 04:04:41:041 [Kernel]/(19327:19327): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 04:04:41:047 [Kernel]/(19327:19327): HANDSHAKE CON FILESYSTEM [EXITOSO]
+[INFO] 04:04:41:047 [Kernel]/(19327:19327): HANDSHAKE CON CPU_Dispatch [EXITOSO]
+[INFO] 04:04:41:047 [Kernel]/(19327:19327): HANDSHAKE CON CPU_Interrupt [EXITOSO]
+[WARNING] 04:05:18:152 [Kernel]/(19327:19334): N°  Param. Incorrecto
+[INFO] 04:06:22:821 [Kernel]/(19327:19339): Se aviso a Memoria del nuevo proceso
+[INFO] 04:06:23:843 [Kernel]/(19327:19329): Se recibio algo de MEMORIA
+[INFO] 04:06:25:846 [Kernel]/(19327:19350): Me desperte
+[WARNING] 04:06:25:846 [Kernel]/(19327:19350): entre al if programar_interrupcion_por_quantum
+[WARNING] 04:06:25:846 [Kernel]/(19327:19350): entre al if 2
+[WARNING] 04:06:25:846 [Kernel]/(19327:19350): salgo del if 2
+[INFO] 04:06:25:846 [Kernel]/(19327:19332): Envio interrupcion por RR
+[WARNING] 04:06:25:846 [Kernel]/(19327:19350): salgo del if 1
+[INFO] 04:06:25:866 [Kernel]/(19327:19331): Se recibio algo de CPU_Dispatch
+[WARNING] 04:06:25:866 [Kernel]/(19327:19331): Entre a atender instruccion
+[INFO] 04:06:25:866 [Kernel]/(19327:19331): A2
+[INFO] 04:06:25:866 [Kernel]/(19327:19331): A3
+[INFO] 04:06:25:866 [Kernel]/(19327:19331): A4
+[INFO] 04:06:25:866 [Kernel]/(19327:19352): Se solicito a Memoria resolver Page FAULT
+[INFO] 04:06:35:447 [Kernel]/(19327:19330): Se recibio algo de FILESYSTEM
+[ERROR] 04:06:35:447 [Kernel]/(19327:19330): [DESCONEXION]: FILESYSTEM
+[INFO] 04:15:40:916 [Kernel]/(19556:19556): [RECURSO | 1]
+[INFO] 04:15:40:918 [Kernel]/(19556:19556): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 04:15:40:920 [Kernel]/(19556:19556): HANDSHAKE CON FILESYSTEM [EXITOSO]
+[INFO] 04:15:40:921 [Kernel]/(19556:19556): HANDSHAKE CON CPU_Dispatch [EXITOSO]
+[INFO] 04:15:40:921 [Kernel]/(19556:19556): HANDSHAKE CON CPU_Interrupt [EXITOSO]
+[INFO] 04:16:01:457 [Kernel]/(19566:19566): [RECURSO | 1]
+[INFO] 04:16:01:457 [Kernel]/(19566:19566): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 04:16:16:793 [Kernel]/(19593:19593): [RECURSO | 1]
+[INFO] 04:16:16:794 [Kernel]/(19593:19593): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 04:16:16:795 [Kernel]/(19593:19593): HANDSHAKE CON FILESYSTEM [EXITOSO]
+[INFO] 04:16:16:795 [Kernel]/(19593:19593): HANDSHAKE CON CPU_Dispatch [EXITOSO]
+[INFO] 04:16:16:795 [Kernel]/(19593:19593): HANDSHAKE CON CPU_Interrupt [EXITOSO]
+[INFO] 04:16:28:730 [Kernel]/(19593:19601): Se aviso a Memoria del nuevo proceso
+[INFO] 04:16:29:733 [Kernel]/(19593:19595): Se recibio algo de MEMORIA
+[INFO] 04:16:31:734 [Kernel]/(19593:19604): Me desperte
+[WARNING] 04:16:31:734 [Kernel]/(19593:19604): entre al if programar_interrupcion_por_quantum
+[WARNING] 04:16:31:734 [Kernel]/(19593:19604): entre al if 2
+[WARNING] 04:16:31:734 [Kernel]/(19593:19604): salgo del if 2
+[WARNING] 04:16:31:734 [Kernel]/(19593:19604): salgo del if 1
+[INFO] 04:16:31:735 [Kernel]/(19593:19598): Envio interrupcion por RR
+[INFO] 04:16:31:754 [Kernel]/(19593:19597): Se recibio algo de CPU_Dispatch
+[WARNING] 04:16:31:754 [Kernel]/(19593:19597): Entre a atender instruccion
+[INFO] 04:16:31:754 [Kernel]/(19593:19597): A2
+[INFO] 04:16:31:754 [Kernel]/(19593:19597): A3
+[INFO] 04:16:31:754 [Kernel]/(19593:19597): A4
+[INFO] 04:16:31:754 [Kernel]/(19593:19605): Se solicito a Memoria resolver Page FAULT
+[INFO] 04:16:43:266 [Kernel]/(19593:19595): Se recibio algo de MEMORIA
+[INFO] 04:16:43:266 [Kernel]/(19593:19595): A2
+[INFO] 04:16:43:266 [Kernel]/(19593:19595): A3
+[INFO] 04:16:43:266 [Kernel]/(19593:19595): A4
+[INFO] 04:16:43:266 [Kernel]/(19593:19595): Memoria soluciono el PAGE FAULT
+[INFO] 04:16:45:271 [Kernel]/(19593:19606): Me desperte
+[WARNING] 04:16:45:271 [Kernel]/(19593:19606): entre al if programar_interrupcion_por_quantum
+[WARNING] 04:16:45:271 [Kernel]/(19593:19606): entre al if 2
+[WARNING] 04:16:45:271 [Kernel]/(19593:19606): salgo del if 2
+[WARNING] 04:16:45:271 [Kernel]/(19593:19606): salgo del if 1
+[INFO] 04:16:45:271 [Kernel]/(19593:19598): Envio interrupcion por RR
+[INFO] 04:16:46:286 [Kernel]/(19593:19597): Se recibio algo de CPU_Dispatch
+[WARNING] 04:16:46:286 [Kernel]/(19593:19597): Entre a atender instruccion
+[INFO] 04:16:46:286 [Kernel]/(19593:19597): A2
+[INFO] 04:16:46:286 [Kernel]/(19593:19597): A3
+[INFO] 04:16:46:286 [Kernel]/(19593:19597): A4
+[INFO] 04:16:46:287 [Kernel]/(19593:19609): Se solicito a Memoria resolver Page FAULT
+[INFO] 04:16:48:789 [Kernel]/(19593:19595): Se recibio algo de MEMORIA
+[INFO] 04:16:48:789 [Kernel]/(19593:19595): A2
+[INFO] 04:16:48:789 [Kernel]/(19593:19595): A3
+[INFO] 04:16:48:789 [Kernel]/(19593:19595): A4
+[INFO] 04:16:48:789 [Kernel]/(19593:19595): Memoria soluciono el PAGE FAULT
+[INFO] 04:16:50:790 [Kernel]/(19593:19610): Me desperte
+[WARNING] 04:16:50:790 [Kernel]/(19593:19610): entre al if programar_interrupcion_por_quantum
+[WARNING] 04:16:50:790 [Kernel]/(19593:19610): entre al if 2
+[WARNING] 04:16:50:790 [Kernel]/(19593:19610): salgo del if 2
+[WARNING] 04:16:50:790 [Kernel]/(19593:19610): salgo del if 1
+[INFO] 04:16:50:790 [Kernel]/(19593:19598): Envio interrupcion por RR
+[INFO] 04:16:51:810 [Kernel]/(19593:19597): Se recibio algo de CPU_Dispatch
+[WARNING] 04:16:51:810 [Kernel]/(19593:19597): Entre a atender instruccion
+[INFO] 04:16:51:810 [Kernel]/(19593:19597): A2
+[INFO] 04:16:51:810 [Kernel]/(19593:19597): A3
+[INFO] 04:16:51:810 [Kernel]/(19593:19597): A4
+[INFO] 04:16:51:811 [Kernel]/(19593:19613): Se solicito a Memoria resolver Page FAULT
+[INFO] 04:16:54:316 [Kernel]/(19593:19595): Se recibio algo de MEMORIA
+[INFO] 04:16:54:316 [Kernel]/(19593:19595): A2
+[INFO] 04:16:54:316 [Kernel]/(19593:19595): A3
+[INFO] 04:16:54:316 [Kernel]/(19593:19595): A4
+[INFO] 04:16:54:316 [Kernel]/(19593:19595): Memoria soluciono el PAGE FAULT
+[INFO] 04:16:56:320 [Kernel]/(19593:19614): Me desperte
+[WARNING] 04:16:56:320 [Kernel]/(19593:19614): entre al if programar_interrupcion_por_quantum
+[WARNING] 04:16:56:321 [Kernel]/(19593:19614): entre al if 2
+[WARNING] 04:16:56:321 [Kernel]/(19593:19614): salgo del if 2
+[WARNING] 04:16:56:321 [Kernel]/(19593:19614): salgo del if 1
+[INFO] 04:16:56:321 [Kernel]/(19593:19598): Envio interrupcion por RR
+[INFO] 04:16:57:341 [Kernel]/(19593:19597): Se recibio algo de CPU_Dispatch
+[WARNING] 04:16:57:341 [Kernel]/(19593:19597): Entre a atender instruccion
+[INFO] 04:16:57:341 [Kernel]/(19593:19597): A2
+[INFO] 04:16:57:341 [Kernel]/(19593:19597): A3
+[INFO] 04:16:57:341 [Kernel]/(19593:19597): A4
+[INFO] 04:16:57:342 [Kernel]/(19593:19617): Se solicito a Memoria resolver Page FAULT
+[INFO] 04:16:57:465 [Kernel]/(19593:19595): Se recibio algo de MEMORIA
+[ERROR] 04:16:57:465 [Kernel]/(19593:19595): [DESCONEXION]: MEMORIA

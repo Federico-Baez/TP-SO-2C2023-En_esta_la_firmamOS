@@ -1,0 +1,11 @@
+F_OPEN GuiaPlatinoSagaDarkSouls R
+F_SEEK GuiaPlatinoSagaDarkSouls 0
+F_READ GuiaPlatinoSagaDarkSouls 0
+F_SEEK GuiaPlatinoSagaDarkSouls 16
+F_READ GuiaPlatinoSagaDarkSouls 16
+F_SEEK GuiaPlatinoSagaDarkSouls 32
+F_READ GuiaPlatinoSagaDarkSouls 32
+F_SEEK GuiaPlatinoSagaDarkSouls 48
+F_READ GuiaPlatinoSagaDarkSouls 48
+F_CLOSE GuiaPlatinoSagaDarkSouls
+EXIT

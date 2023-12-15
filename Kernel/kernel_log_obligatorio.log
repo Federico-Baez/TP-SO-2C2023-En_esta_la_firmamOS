@@ -1,3 +1,560 @@
 [INFO] 23:00:56:071 [Kernel - Log obligatorio]/(5509:5521): Se crea el proceso 1 en NEW
 [INFO] 23:07:26:692 [Kernel - Log obligatorio]/(6102:6114): Se crea el proceso 1 en NEW
 [INFO] 23:09:16:585 [Kernel - Log obligatorio]/(6329:6341): Se crea el proceso 1 en NEW
+[INFO] 01:12:31:169 [Kernel - Log obligatorio]/(13373:13385): Se crea el proceso 1 en NEW
+[INFO] 01:12:33:179 [Kernel - Log obligatorio]/(13373:13385):  PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 01:12:33:179 [Kernel - Log obligatorio]/(13373:13385): Cola Ready FIFO: [1]
+[INFO] 01:12:33:180 [Kernel - Log obligatorio]/(13373:13386):  PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 01:12:35:214 [Kernel - Log obligatorio]/(13373:13377):  PID: 1 - Estado Anterior: EXEC - Estado Actual: READY
+[INFO] 01:12:35:214 [Kernel - Log obligatorio]/(13373:13377): Cola Ready RR: [1]
+[INFO] 01:12:35:214 [Kernel - Log obligatorio]/(13373:13377): PID: 1 - Desalojado por fin de Quantum
+[INFO] 01:12:35:214 [Kernel - Log obligatorio]/(13373:13377):  PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 01:12:36:217 [Kernel - Log obligatorio]/(13373:13377):  PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCKED
+[INFO] 01:12:36:217 [Kernel - Log obligatorio]/(13373:13377): PID: 1 - Bloqueado por: SLEEP
+[INFO] 02:06:03:504 [Kernel - Log obligatorio]/(15466:15478): Se crea el proceso 1 en NEW
+[INFO] 02:06:05:511 [Kernel - Log obligatorio]/(15466:15478):  PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 02:06:05:511 [Kernel - Log obligatorio]/(15466:15478): Cola Ready FIFO: [1]
+[INFO] 02:06:05:512 [Kernel - Log obligatorio]/(15466:15479):  PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 02:06:07:520 [Kernel - Log obligatorio]/(15466:15470):  PID: 1 - Estado Anterior: EXEC - Estado Actual: READY
+[INFO] 02:06:07:520 [Kernel - Log obligatorio]/(15466:15470): Cola Ready RR: [1]
+[INFO] 02:06:07:520 [Kernel - Log obligatorio]/(15466:15470): PID: 1 - Desalojado por fin de Quantum
+[INFO] 02:06:07:520 [Kernel - Log obligatorio]/(15466:15470):  PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 02:06:08:523 [Kernel - Log obligatorio]/(15466:15470):  PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCKED
+[INFO] 02:06:08:523 [Kernel - Log obligatorio]/(15466:15470): PID: 1 - Bloqueado por: SLEEP
+[INFO] 02:11:23:202 [Kernel - Log obligatorio]/(15899:15910): Se crea el proceso 1 en NEW
+[INFO] 02:11:25:204 [Kernel - Log obligatorio]/(15899:15910):  PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 02:11:25:204 [Kernel - Log obligatorio]/(15899:15910): Cola Ready FIFO: [1]
+[INFO] 02:11:25:204 [Kernel - Log obligatorio]/(15899:15912):  PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 02:11:27:215 [Kernel - Log obligatorio]/(15899:15903):  PID: 1 - Estado Anterior: EXEC - Estado Actual: READY
+[INFO] 02:11:27:215 [Kernel - Log obligatorio]/(15899:15903): Cola Ready RR: [1]
+[INFO] 02:11:27:215 [Kernel - Log obligatorio]/(15899:15903): PID: 1 - Desalojado por fin de Quantum
+[INFO] 02:11:27:215 [Kernel - Log obligatorio]/(15899:15903):  PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 02:11:28:216 [Kernel - Log obligatorio]/(15899:15903):  PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCKED
+[INFO] 02:11:28:216 [Kernel - Log obligatorio]/(15899:15903): PID: 1 - Bloqueado por: SLEEP
+[INFO] 02:13:29:128 [Kernel - Log obligatorio]/(15938:15948): Se crea el proceso 1 en NEW
+[INFO] 02:13:31:134 [Kernel - Log obligatorio]/(15938:15948):  PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 02:13:31:134 [Kernel - Log obligatorio]/(15938:15948): Cola Ready FIFO: [1]
+[INFO] 02:13:31:135 [Kernel - Log obligatorio]/(15938:15949): Se crea el proceso 2 en NEW
+[INFO] 02:13:31:135 [Kernel - Log obligatorio]/(15938:15950):  PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 02:13:33:150 [Kernel - Log obligatorio]/(15938:15949):  PID: 2 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 02:13:33:150 [Kernel - Log obligatorio]/(15938:15949): Cola Ready FIFO: [2]
+[INFO] 02:13:34:155 [Kernel - Log obligatorio]/(15938:15942):  PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCKED
+[INFO] 02:13:34:156 [Kernel - Log obligatorio]/(15938:15942): PID: 1 - Bloqueado por: SLEEP
+[INFO] 02:13:34:156 [Kernel - Log obligatorio]/(15938:15942):  PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 02:13:36:239 [Kernel - Log obligatorio]/(15938:15942):  PID: 2 - Estado Anterior: EXEC - Estado Actual: READY
+[INFO] 02:13:36:239 [Kernel - Log obligatorio]/(15938:15942): Cola Ready RR: [2]
+[INFO] 02:13:36:239 [Kernel - Log obligatorio]/(15938:15942): PID: 2 - Desalojado por fin de Quantum
+[INFO] 02:13:36:239 [Kernel - Log obligatorio]/(15938:15942):  PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 02:13:37:260 [Kernel - Log obligatorio]/(15938:15942):  PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCKED
+[INFO] 02:13:37:260 [Kernel - Log obligatorio]/(15938:15942): PID: 2 - Bloqueado por: SLEEP
+[INFO] 02:17:10:938 [Kernel - Log obligatorio]/(16117:16129): Se crea el proceso 1 en NEW
+[INFO] 02:17:12:941 [Kernel - Log obligatorio]/(16117:16129):  PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 02:17:12:941 [Kernel - Log obligatorio]/(16117:16129): Cola Ready FIFO: [1]
+[INFO] 02:17:12:941 [Kernel - Log obligatorio]/(16117:16130):  PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 02:17:14:946 [Kernel - Log obligatorio]/(16117:16121):  PID: 1 - Estado Anterior: EXEC - Estado Actual: READY
+[INFO] 02:17:14:946 [Kernel - Log obligatorio]/(16117:16121): Cola Ready RR: [1]
+[INFO] 02:17:14:946 [Kernel - Log obligatorio]/(16117:16121): PID: 1 - Desalojado por fin de Quantum
+[INFO] 02:17:14:946 [Kernel - Log obligatorio]/(16117:16121):  PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 02:17:15:949 [Kernel - Log obligatorio]/(16117:16121):  PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCKED
+[INFO] 02:17:15:949 [Kernel - Log obligatorio]/(16117:16121): PID: 1 - Bloqueado por: SLEEP
+[INFO] 02:20:28:936 [Kernel - Log obligatorio]/(16317:16329): Se crea el proceso 1 en NEW
+[INFO] 02:20:30:946 [Kernel - Log obligatorio]/(16317:16329):  PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 02:20:30:946 [Kernel - Log obligatorio]/(16317:16329): Cola Ready FIFO: [1]
+[INFO] 02:20:30:946 [Kernel - Log obligatorio]/(16317:16330):  PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 02:20:32:948 [Kernel - Log obligatorio]/(16317:16321):  PID: 1 - Estado Anterior: EXEC - Estado Actual: READY
+[INFO] 02:20:32:948 [Kernel - Log obligatorio]/(16317:16321): Cola Ready RR: [1]
+[INFO] 02:20:32:948 [Kernel - Log obligatorio]/(16317:16321): PID: 1 - Desalojado por fin de Quantum
+[INFO] 02:20:32:948 [Kernel - Log obligatorio]/(16317:16321):  PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 02:20:34:018 [Kernel - Log obligatorio]/(16317:16321):  PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCKED
+[INFO] 02:20:34:018 [Kernel - Log obligatorio]/(16317:16321): PID: 1 - Bloqueado por: SLEEP
+[INFO] 02:23:19:686 [Kernel - Log obligatorio]/(16414:16426): Se crea el proceso 1 en NEW
+[INFO] 02:23:21:688 [Kernel - Log obligatorio]/(16414:16426):  PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 02:23:21:688 [Kernel - Log obligatorio]/(16414:16426): Cola Ready FIFO: [1]
+[INFO] 02:23:21:688 [Kernel - Log obligatorio]/(16414:16427):  PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 02:23:23:694 [Kernel - Log obligatorio]/(16414:16418):  PID: 1 - Estado Anterior: EXEC - Estado Actual: READY
+[INFO] 02:23:23:694 [Kernel - Log obligatorio]/(16414:16418): Cola Ready RR: [1]
+[INFO] 02:23:23:694 [Kernel - Log obligatorio]/(16414:16418): PID: 1 - Desalojado por fin de Quantum
+[INFO] 02:23:23:694 [Kernel - Log obligatorio]/(16414:16418):  PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 02:23:24:706 [Kernel - Log obligatorio]/(16414:16418):  PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCKED
+[INFO] 02:23:24:706 [Kernel - Log obligatorio]/(16414:16418): PID: 1 - Bloqueado por: SLEEP
+[INFO] 02:23:34:708 [Kernel - Log obligatorio]/(16414:16432):  PID: 1 - Estado Anterior: BLOCKED - Estado Actual: READY
+[INFO] 02:23:34:708 [Kernel - Log obligatorio]/(16414:16432): Cola Ready RR: [1]
+[INFO] 02:23:34:708 [Kernel - Log obligatorio]/(16414:16432):  PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 02:23:36:711 [Kernel - Log obligatorio]/(16414:16418):  PID: 1 - Estado Anterior: EXEC - Estado Actual: READY
+[INFO] 02:23:36:711 [Kernel - Log obligatorio]/(16414:16418): Cola Ready RR: [1]
+[INFO] 02:23:36:711 [Kernel - Log obligatorio]/(16414:16418): PID: 1 - Desalojado por fin de Quantum
+[INFO] 02:23:36:711 [Kernel - Log obligatorio]/(16414:16418):  PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 02:33:22:265 [Kernel - Log obligatorio]/(16558:16570): Se crea el proceso 1 en NEW
+[INFO] 02:33:24:273 [Kernel - Log obligatorio]/(16558:16570):  PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 02:33:24:273 [Kernel - Log obligatorio]/(16558:16570): Cola Ready FIFO: [1]
+[INFO] 02:33:24:273 [Kernel - Log obligatorio]/(16558:16571):  PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 02:33:26:281 [Kernel - Log obligatorio]/(16558:16562):  PID: 1 - Estado Anterior: EXEC - Estado Actual: READY
+[INFO] 02:33:26:281 [Kernel - Log obligatorio]/(16558:16562): Cola Ready RR: [1]
+[INFO] 02:33:26:281 [Kernel - Log obligatorio]/(16558:16562): PID: 1 - Desalojado por fin de Quantum
+[INFO] 02:33:26:281 [Kernel - Log obligatorio]/(16558:16562):  PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 02:33:27:293 [Kernel - Log obligatorio]/(16558:16562):  PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCKED
+[INFO] 02:33:27:293 [Kernel - Log obligatorio]/(16558:16562): PID: 1 - Bloqueado por: SLEEP
+[INFO] 02:33:37:294 [Kernel - Log obligatorio]/(16558:16576):  PID: 1 - Estado Anterior: BLOCKED - Estado Actual: READY
+[INFO] 02:33:37:294 [Kernel - Log obligatorio]/(16558:16576): Cola Ready RR: [1]
+[INFO] 02:33:37:294 [Kernel - Log obligatorio]/(16558:16576):  PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 02:33:39:323 [Kernel - Log obligatorio]/(16558:16562):  PID: 1 - Estado Anterior: EXEC - Estado Actual: READY
+[INFO] 02:33:39:323 [Kernel - Log obligatorio]/(16558:16562): Cola Ready RR: [1]
+[INFO] 02:33:39:323 [Kernel - Log obligatorio]/(16558:16562): PID: 1 - Desalojado por fin de Quantum
+[INFO] 02:33:39:323 [Kernel - Log obligatorio]/(16558:16562):  PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 02:33:42:402 [Kernel - Log obligatorio]/(16558:16562):  PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 02:33:42:402 [Kernel - Log obligatorio]/(16558:16562): Finaliza el proceso [PID: 1] - Motivo: SUCCESS
+[INFO] 02:36:31:195 [Kernel - Log obligatorio]/(16558:16583): Se crea el proceso 2 en NEW
+[INFO] 02:36:33:201 [Kernel - Log obligatorio]/(16558:16583):  PID: 2 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 02:36:33:201 [Kernel - Log obligatorio]/(16558:16583): Cola Ready FIFO: [2]
+[INFO] 02:36:33:201 [Kernel - Log obligatorio]/(16558:16584):  PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 02:36:35:205 [Kernel - Log obligatorio]/(16558:16562):  PID: 2 - Estado Anterior: EXEC - Estado Actual: READY
+[INFO] 02:36:35:205 [Kernel - Log obligatorio]/(16558:16562): Cola Ready RR: [2]
+[INFO] 02:36:35:205 [Kernel - Log obligatorio]/(16558:16562): PID: 2 - Desalojado por fin de Quantum
+[INFO] 02:36:35:205 [Kernel - Log obligatorio]/(16558:16562):  PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 02:36:36:207 [Kernel - Log obligatorio]/(16558:16562):  PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCKED
+[INFO] 02:36:36:207 [Kernel - Log obligatorio]/(16558:16562): PID: 2 - Bloqueado por: SLEEP
+[INFO] 02:36:46:208 [Kernel - Log obligatorio]/(16558:16589):  PID: 2 - Estado Anterior: BLOCKED - Estado Actual: READY
+[INFO] 02:36:46:208 [Kernel - Log obligatorio]/(16558:16589): Cola Ready RR: [2]
+[INFO] 02:36:46:208 [Kernel - Log obligatorio]/(16558:16589):  PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 02:36:48:215 [Kernel - Log obligatorio]/(16558:16562):  PID: 2 - Estado Anterior: EXEC - Estado Actual: READY
+[INFO] 02:36:48:215 [Kernel - Log obligatorio]/(16558:16562): Cola Ready RR: [2]
+[INFO] 02:36:48:215 [Kernel - Log obligatorio]/(16558:16562): PID: 2 - Desalojado por fin de Quantum
+[INFO] 02:36:48:215 [Kernel - Log obligatorio]/(16558:16562):  PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[WARNING] 02:45:52:532 [Kernel - Log obligatorio]/(16763:16773): PAUSA DE PLANIFICACIÓN
+[INFO] 02:46:09:193 [Kernel - Log obligatorio]/(16763:16776): Se crea el proceso 1 en NEW
+[INFO] 02:46:19:545 [Kernel - Log obligatorio]/(16763:16777): Se crea el proceso 2 en NEW
+[INFO] 02:46:31:599 [Kernel - Log obligatorio]/(16763:16778): Se crea el proceso 3 en NEW
+[WARNING] 02:46:40:339 [Kernel - Log obligatorio]/(16763:16779): INICIO DE PLANIFICACIÓN
+[INFO] 02:46:42:340 [Kernel - Log obligatorio]/(16763:16776):  PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 02:46:42:340 [Kernel - Log obligatorio]/(16763:16776): Cola Ready FIFO: [1]
+[INFO] 02:46:42:340 [Kernel - Log obligatorio]/(16763:16780):  PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[WARNING] 02:47:54:434 [Kernel - Log obligatorio]/(16802:16811): PAUSA DE PLANIFICACIÓN
+[INFO] 02:47:59:304 [Kernel - Log obligatorio]/(16802:16812): Se crea el proceso 1 en NEW
+[INFO] 02:48:02:836 [Kernel - Log obligatorio]/(16802:16813): Se crea el proceso 2 en NEW
+[INFO] 02:48:05:827 [Kernel - Log obligatorio]/(16802:16814): Se crea el proceso 3 en NEW
+[WARNING] 02:48:13:192 [Kernel - Log obligatorio]/(16802:16815): INICIO DE PLANIFICACIÓN
+[INFO] 02:48:15:199 [Kernel - Log obligatorio]/(16802:16812):  PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 02:48:15:199 [Kernel - Log obligatorio]/(16802:16812): Cola Ready FIFO: [1]
+[INFO] 02:48:15:200 [Kernel - Log obligatorio]/(16802:16816):  PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[WARNING] 02:51:31:332 [Kernel - Log obligatorio]/(16873:16886): PAUSA DE PLANIFICACIÓN
+[INFO] 02:51:33:541 [Kernel - Log obligatorio]/(16873:16887): Se crea el proceso 1 en NEW
+[INFO] 02:51:38:257 [Kernel - Log obligatorio]/(16873:16888): Se crea el proceso 2 en NEW
+[INFO] 02:51:41:759 [Kernel - Log obligatorio]/(16873:16889): Se crea el proceso 3 en NEW
+[WARNING] 02:51:47:799 [Kernel - Log obligatorio]/(16873:16890): INICIO DE PLANIFICACIÓN
+[INFO] 02:51:49:805 [Kernel - Log obligatorio]/(16873:16887):  PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 02:51:49:805 [Kernel - Log obligatorio]/(16873:16887): Cola Ready FIFO: [1]
+[INFO] 02:51:49:805 [Kernel - Log obligatorio]/(16873:16891):  PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[WARNING] 02:52:33:235 [Kernel - Log obligatorio]/(16927:16935): PAUSA DE PLANIFICACIÓN
+[INFO] 02:52:37:278 [Kernel - Log obligatorio]/(16927:16936): Se crea el proceso 1 en NEW
+[INFO] 02:52:41:356 [Kernel - Log obligatorio]/(16927:16937): Se crea el proceso 2 en NEW
+[INFO] 02:52:44:757 [Kernel - Log obligatorio]/(16927:16939): Se crea el proceso 3 en NEW
+[WARNING] 02:52:49:676 [Kernel - Log obligatorio]/(16927:16940): INICIO DE PLANIFICACIÓN
+[INFO] 02:52:51:677 [Kernel - Log obligatorio]/(16927:16936):  PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 02:52:51:677 [Kernel - Log obligatorio]/(16927:16936): Cola Ready FIFO: [1]
+[INFO] 02:52:51:677 [Kernel - Log obligatorio]/(16927:16941):  PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[WARNING] 02:55:02:560 [Kernel - Log obligatorio]/(16969:16978): PAUSA DE PLANIFICACIÓN
+[INFO] 02:55:06:037 [Kernel - Log obligatorio]/(16969:16979): Se crea el proceso 1 en NEW
+[INFO] 02:55:09:174 [Kernel - Log obligatorio]/(16969:16980): Se crea el proceso 2 en NEW
+[INFO] 02:55:12:251 [Kernel - Log obligatorio]/(16969:16981): Se crea el proceso 3 en NEW
+[WARNING] 02:55:18:010 [Kernel - Log obligatorio]/(16969:16982): INICIO DE PLANIFICACIÓN
+[INFO] 02:55:20:074 [Kernel - Log obligatorio]/(16969:16979):  PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 02:55:20:074 [Kernel - Log obligatorio]/(16969:16979): Cola Ready FIFO: [1]
+[INFO] 02:55:20:075 [Kernel - Log obligatorio]/(16969:16983):  PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[WARNING] 02:56:14:065 [Kernel - Log obligatorio]/(17007:17015): PAUSA DE PLANIFICACIÓN
+[INFO] 02:56:17:763 [Kernel - Log obligatorio]/(17007:17016): Se crea el proceso 1 en NEW
+[INFO] 02:56:30:813 [Kernel - Log obligatorio]/(17007:17017): Se crea el proceso 2 en NEW
+[INFO] 02:56:33:421 [Kernel - Log obligatorio]/(17007:17018): Se crea el proceso 3 en NEW
+[WARNING] 02:56:38:128 [Kernel - Log obligatorio]/(17007:17019): INICIO DE PLANIFICACIÓN
+[INFO] 02:56:40:131 [Kernel - Log obligatorio]/(17007:17016):  PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 02:56:40:131 [Kernel - Log obligatorio]/(17007:17016): Cola Ready FIFO: [1]
+[INFO] 02:56:40:131 [Kernel - Log obligatorio]/(17007:17020):  PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 02:56:42:134 [Kernel - Log obligatorio]/(17007:17017):  PID: 2 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 02:56:42:134 [Kernel - Log obligatorio]/(17007:17017): Cola Ready FIFO: [2]
+[INFO] 02:56:44:139 [Kernel - Log obligatorio]/(17007:17018):  PID: 3 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 02:56:44:139 [Kernel - Log obligatorio]/(17007:17018): Cola Ready FIFO: [2, 3]
+[INFO] 02:59:25:916 [Kernel - Log obligatorio]/(17109:17121): Se crea el proceso 1 en NEW
+[INFO] 02:59:27:921 [Kernel - Log obligatorio]/(17109:17121):  PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 02:59:27:921 [Kernel - Log obligatorio]/(17109:17121): Cola Ready FIFO: [1]
+[INFO] 02:59:27:921 [Kernel - Log obligatorio]/(17109:17122):  PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:04:34:245 [Kernel - Log obligatorio]/(17238:17250): Se crea el proceso 1 en NEW
+[INFO] 03:04:36:249 [Kernel - Log obligatorio]/(17238:17250):  PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 03:04:36:249 [Kernel - Log obligatorio]/(17238:17250): Cola Ready FIFO: [1]
+[INFO] 03:04:36:250 [Kernel - Log obligatorio]/(17238:17251):  PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:06:35:440 [Kernel - Log obligatorio]/(17321:17333): Se crea el proceso 1 en NEW
+[INFO] 03:06:37:447 [Kernel - Log obligatorio]/(17321:17333):  PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 03:06:37:447 [Kernel - Log obligatorio]/(17321:17333): Cola Ready FIFO: [1]
+[INFO] 03:06:37:448 [Kernel - Log obligatorio]/(17321:17334):  PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:11:12:175 [Kernel - Log obligatorio]/(17598:17610): Se crea el proceso 1 en NEW
+[INFO] 03:11:14:177 [Kernel - Log obligatorio]/(17598:17610):  PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 03:11:14:177 [Kernel - Log obligatorio]/(17598:17610): Cola Ready FIFO: [1]
+[INFO] 03:11:14:177 [Kernel - Log obligatorio]/(17598:17611):  PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:11:30:248 [Kernel - Log obligatorio]/(17598:17602):  PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 03:11:30:248 [Kernel - Log obligatorio]/(17598:17602): Finaliza el proceso [PID: 1] - Motivo: SUCCESS
+[WARNING] 03:12:29:004 [Kernel - Log obligatorio]/(17598:17614): PAUSA DE PLANIFICACIÓN
+[INFO] 03:12:31:874 [Kernel - Log obligatorio]/(17598:17615): Se crea el proceso 2 en NEW
+[INFO] 03:12:48:118 [Kernel - Log obligatorio]/(17598:17618): Se crea el proceso 3 en NEW
+[INFO] 03:12:53:162 [Kernel - Log obligatorio]/(17598:17619): Se crea el proceso 4 en NEW
+[WARNING] 03:12:57:978 [Kernel - Log obligatorio]/(17598:17620): INICIO DE PLANIFICACIÓN
+[INFO] 03:12:59:987 [Kernel - Log obligatorio]/(17598:17615):  PID: 2 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 03:12:59:988 [Kernel - Log obligatorio]/(17598:17615): Cola Ready FIFO: [2]
+[INFO] 03:12:59:988 [Kernel - Log obligatorio]/(17598:17621):  PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:13:02:021 [Kernel - Log obligatorio]/(17598:17618):  PID: 3 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 03:13:02:021 [Kernel - Log obligatorio]/(17598:17618): Cola Ready FIFO: [3]
+[INFO] 03:13:04:025 [Kernel - Log obligatorio]/(17598:17619):  PID: 4 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 03:13:04:025 [Kernel - Log obligatorio]/(17598:17619): Cola Ready FIFO: [3, 4]
+[INFO] 03:13:21:047 [Kernel - Log obligatorio]/(17598:17602):  PID: 2 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 03:13:21:047 [Kernel - Log obligatorio]/(17598:17602): Finaliza el proceso [PID: 2] - Motivo: SUCCESS
+[INFO] 03:13:21:047 [Kernel - Log obligatorio]/(17598:17625):  PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:13:30:071 [Kernel - Log obligatorio]/(17598:17602):  PID: 3 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 03:13:30:071 [Kernel - Log obligatorio]/(17598:17602): Finaliza el proceso [PID: 3] - Motivo: SUCCESS
+[INFO] 03:13:30:071 [Kernel - Log obligatorio]/(17598:17627):  PID: 4 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:13:39:135 [Kernel - Log obligatorio]/(17598:17602):  PID: 4 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 03:13:39:135 [Kernel - Log obligatorio]/(17598:17602): Finaliza el proceso [PID: 4] - Motivo: SUCCESS
+[INFO] 03:18:09:875 [Kernel - Log obligatorio]/(17687:17695): Se crea el proceso 1 en NEW
+[INFO] 03:18:11:879 [Kernel - Log obligatorio]/(17687:17695):  PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 03:18:11:879 [Kernel - Log obligatorio]/(17687:17695): Cola Ready FIFO: [1]
+[INFO] 03:18:11:880 [Kernel - Log obligatorio]/(17687:17696):  PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:18:30:098 [Kernel - Log obligatorio]/(17687:17691):  PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 03:18:30:098 [Kernel - Log obligatorio]/(17687:17691): Finaliza el proceso [PID: 1] - Motivo: SUCCESS
+[INFO] 03:21:05:088 [Kernel - Log obligatorio]/(17687:17709): Se crea el proceso 2 en NEW
+[INFO] 03:21:07:123 [Kernel - Log obligatorio]/(17687:17709):  PID: 2 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 03:21:07:123 [Kernel - Log obligatorio]/(17687:17709): Cola Ready FIFO: [2]
+[INFO] 03:21:07:123 [Kernel - Log obligatorio]/(17687:17710): Se crea el proceso 3 en NEW
+[INFO] 03:21:07:124 [Kernel - Log obligatorio]/(17687:17711):  PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:21:09:128 [Kernel - Log obligatorio]/(17687:17710):  PID: 3 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 03:21:09:128 [Kernel - Log obligatorio]/(17687:17710): Cola Ready FIFO: [3]
+[INFO] 03:21:43:281 [Kernel - Log obligatorio]/(17687:17691):  PID: 2 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 03:21:43:281 [Kernel - Log obligatorio]/(17687:17691): Finaliza el proceso [PID: 2] - Motivo: SUCCESS
+[INFO] 03:21:43:281 [Kernel - Log obligatorio]/(17687:17714):  PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:22:19:348 [Kernel - Log obligatorio]/(17687:17691):  PID: 3 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 03:22:19:348 [Kernel - Log obligatorio]/(17687:17691): Finaliza el proceso [PID: 3] - Motivo: SUCCESS
+[WARNING] 03:25:05:283 [Kernel - Log obligatorio]/(17758:17768): PAUSA DE PLANIFICACIÓN
+[INFO] 03:25:06:887 [Kernel - Log obligatorio]/(17758:17769): Se crea el proceso 1 en NEW
+[WARNING] 03:25:46:639 [Kernel - Log obligatorio]/(17781:17789): PAUSA DE PLANIFICACIÓN
+[INFO] 03:25:48:012 [Kernel - Log obligatorio]/(17781:17790): Se crea el proceso 1 en NEW
+[INFO] 03:25:50:399 [Kernel - Log obligatorio]/(17781:17791): Se crea el proceso 2 en NEW
+[INFO] 03:26:00:352 [Kernel - Log obligatorio]/(17781:17792): Se crea el proceso 3 en NEW
+[WARNING] 03:26:09:707 [Kernel - Log obligatorio]/(17781:17793): INICIO DE PLANIFICACIÓN
+[INFO] 03:26:11:709 [Kernel - Log obligatorio]/(17781:17790):  PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 03:26:11:709 [Kernel - Log obligatorio]/(17781:17790): Cola Ready FIFO: [1]
+[INFO] 03:26:11:710 [Kernel - Log obligatorio]/(17781:17794):  PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:26:13:712 [Kernel - Log obligatorio]/(17781:17791):  PID: 2 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 03:26:13:712 [Kernel - Log obligatorio]/(17781:17791): Cola Ready FIFO: [2]
+[INFO] 03:26:15:714 [Kernel - Log obligatorio]/(17781:17792):  PID: 3 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 03:26:15:714 [Kernel - Log obligatorio]/(17781:17792): Cola Ready FIFO: [2, 3]
+[INFO] 03:26:47:857 [Kernel - Log obligatorio]/(17781:17785):  PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 03:26:47:857 [Kernel - Log obligatorio]/(17781:17785): Finaliza el proceso [PID: 1] - Motivo: SUCCESS
+[INFO] 03:26:47:860 [Kernel - Log obligatorio]/(17781:17798):  PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:27:07:891 [Kernel - Log obligatorio]/(17781:17785):  PID: 2 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 03:27:07:891 [Kernel - Log obligatorio]/(17781:17785): Finaliza el proceso [PID: 2] - Motivo: SUCCESS
+[INFO] 03:27:07:891 [Kernel - Log obligatorio]/(17781:17800):  PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:27:15:919 [Kernel - Log obligatorio]/(17781:17785):  PID: 3 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 03:27:15:919 [Kernel - Log obligatorio]/(17781:17785): Finaliza el proceso [PID: 3] - Motivo: SUCCESS
+[WARNING] 03:32:22:579 [Kernel - Log obligatorio]/(17914:17929): PAUSA DE PLANIFICACIÓN
+[INFO] 03:32:29:222 [Kernel - Log obligatorio]/(17914:17931): Se crea el proceso 1 en NEW
+[INFO] 03:32:32:426 [Kernel - Log obligatorio]/(17914:17932): Se crea el proceso 2 en NEW
+[INFO] 03:32:35:250 [Kernel - Log obligatorio]/(17914:17933): Se crea el proceso 3 en NEW
+[WARNING] 03:32:40:460 [Kernel - Log obligatorio]/(17914:17934): INICIO DE PLANIFICACIÓN
+[INFO] 03:32:42:510 [Kernel - Log obligatorio]/(17914:17931):  PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 03:32:42:511 [Kernel - Log obligatorio]/(17914:17931): Cola Ready FIFO: [1]
+[INFO] 03:32:42:512 [Kernel - Log obligatorio]/(17914:17935):  PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:32:44:515 [Kernel - Log obligatorio]/(17914:17932):  PID: 2 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 03:32:44:515 [Kernel - Log obligatorio]/(17914:17932): Cola Ready FIFO: [2]
+[INFO] 03:32:46:520 [Kernel - Log obligatorio]/(17914:17933):  PID: 3 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 03:32:46:520 [Kernel - Log obligatorio]/(17914:17933): Cola Ready FIFO: [2, 3]
+[INFO] 03:33:18:612 [Kernel - Log obligatorio]/(17914:17918):  PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 03:33:18:612 [Kernel - Log obligatorio]/(17914:17918): Finaliza el proceso [PID: 1] - Motivo: SUCCESS
+[INFO] 03:33:18:612 [Kernel - Log obligatorio]/(17914:17940):  PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:33:38:646 [Kernel - Log obligatorio]/(17914:17918):  PID: 2 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 03:33:38:646 [Kernel - Log obligatorio]/(17914:17918): Finaliza el proceso [PID: 2] - Motivo: SUCCESS
+[INFO] 03:33:38:647 [Kernel - Log obligatorio]/(17914:17942):  PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:33:46:663 [Kernel - Log obligatorio]/(17914:17918):  PID: 3 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 03:33:46:663 [Kernel - Log obligatorio]/(17914:17918): Finaliza el proceso [PID: 3] - Motivo: SUCCESS
+[WARNING] 03:35:42:251 [Kernel - Log obligatorio]/(18030:18042): PAUSA DE PLANIFICACIÓN
+[INFO] 03:35:43:853 [Kernel - Log obligatorio]/(18030:18043): Se crea el proceso 1 en NEW
+[INFO] 03:35:46:699 [Kernel - Log obligatorio]/(18030:18044): Se crea el proceso 2 en NEW
+[INFO] 03:35:50:120 [Kernel - Log obligatorio]/(18030:18045): Se crea el proceso 3 en NEW
+[WARNING] 03:36:00:471 [Kernel - Log obligatorio]/(18030:18046): INICIO DE PLANIFICACIÓN
+[INFO] 03:36:02:479 [Kernel - Log obligatorio]/(18030:18043):  PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 03:36:02:479 [Kernel - Log obligatorio]/(18030:18043): Cola Ready FIFO: [1]
+[INFO] 03:36:02:479 [Kernel - Log obligatorio]/(18030:18047):  PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:36:04:482 [Kernel - Log obligatorio]/(18030:18044):  PID: 2 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 03:36:04:482 [Kernel - Log obligatorio]/(18030:18044): Cola Ready FIFO: [2]
+[INFO] 03:36:06:487 [Kernel - Log obligatorio]/(18030:18045):  PID: 3 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 03:36:06:487 [Kernel - Log obligatorio]/(18030:18045): Cola Ready FIFO: [2, 3]
+[INFO] 03:36:38:574 [Kernel - Log obligatorio]/(18030:18034):  PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 03:36:38:574 [Kernel - Log obligatorio]/(18030:18034): Finaliza el proceso [PID: 1] - Motivo: SUCCESS
+[INFO] 03:36:38:574 [Kernel - Log obligatorio]/(18030:18051):  PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:36:58:640 [Kernel - Log obligatorio]/(18030:18034):  PID: 2 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 03:36:58:640 [Kernel - Log obligatorio]/(18030:18034): Finaliza el proceso [PID: 2] - Motivo: SUCCESS
+[INFO] 03:36:58:640 [Kernel - Log obligatorio]/(18030:18055):  PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:36:58:918 [Kernel - Log obligatorio]/(18030:18057): Se crea el proceso 4 en NEW
+[INFO] 03:37:00:921 [Kernel - Log obligatorio]/(18030:18057):  PID: 4 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 03:37:00:921 [Kernel - Log obligatorio]/(18030:18057): Cola Ready FIFO: [4]
+[INFO] 03:37:01:741 [Kernel - Log obligatorio]/(18030:18059): Se crea el proceso 5 en NEW
+[INFO] 03:37:03:760 [Kernel - Log obligatorio]/(18030:18059):  PID: 5 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 03:37:03:760 [Kernel - Log obligatorio]/(18030:18059): Cola Ready FIFO: [4, 5]
+[INFO] 03:37:03:760 [Kernel - Log obligatorio]/(18030:18060): Se crea el proceso 6 en NEW
+[INFO] 03:37:05:774 [Kernel - Log obligatorio]/(18030:18060):  PID: 6 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 03:37:05:774 [Kernel - Log obligatorio]/(18030:18060): Cola Ready FIFO: [4, 5, 6]
+[INFO] 03:37:05:774 [Kernel - Log obligatorio]/(18030:18062): Se crea el proceso 7 en NEW
+[INFO] 03:37:06:776 [Kernel - Log obligatorio]/(18030:18034):  PID: 3 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 03:37:06:776 [Kernel - Log obligatorio]/(18030:18034): Finaliza el proceso [PID: 3] - Motivo: SUCCESS
+[INFO] 03:37:06:776 [Kernel - Log obligatorio]/(18030:18063):  PID: 4 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:37:08:779 [Kernel - Log obligatorio]/(18030:18062):  PID: 7 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 03:37:08:779 [Kernel - Log obligatorio]/(18030:18062): Cola Ready FIFO: [5, 6, 7]
+[INFO] 03:37:42:898 [Kernel - Log obligatorio]/(18030:18034):  PID: 4 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 03:37:42:898 [Kernel - Log obligatorio]/(18030:18034): Finaliza el proceso [PID: 4] - Motivo: SUCCESS
+[INFO] 03:37:42:898 [Kernel - Log obligatorio]/(18030:18067):  PID: 5 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:45:57:762 [Kernel - Log obligatorio]/(18996:19008): Se crea el proceso 1 en NEW
+[INFO] 03:45:59:764 [Kernel - Log obligatorio]/(18996:19008):  PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 03:45:59:765 [Kernel - Log obligatorio]/(18996:19008): Cola Ready FIFO: [1]
+[INFO] 03:45:59:765 [Kernel - Log obligatorio]/(18996:19009):  PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:46:03:173 [Kernel - Log obligatorio]/(18996:19011): Se crea el proceso 2 en NEW
+[INFO] 03:46:05:186 [Kernel - Log obligatorio]/(18996:19011):  PID: 2 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 03:46:05:186 [Kernel - Log obligatorio]/(18996:19011): Cola Ready FIFO: [2]
+[INFO] 03:46:05:186 [Kernel - Log obligatorio]/(18996:19012): Se crea el proceso 3 en NEW
+[INFO] 03:46:07:192 [Kernel - Log obligatorio]/(18996:19012):  PID: 3 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 03:46:07:192 [Kernel - Log obligatorio]/(18996:19012): Cola Ready FIFO: [2, 3]
+[INFO] 03:46:07:192 [Kernel - Log obligatorio]/(18996:19014): Se crea el proceso 4 en NEW
+[INFO] 03:46:09:194 [Kernel - Log obligatorio]/(18996:19014):  PID: 4 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 03:46:09:194 [Kernel - Log obligatorio]/(18996:19014): Cola Ready FIFO: [2, 3, 4]
+[INFO] 03:46:35:871 [Kernel - Log obligatorio]/(18996:19000):  PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 03:46:35:871 [Kernel - Log obligatorio]/(18996:19000): Finaliza el proceso [PID: 1] - Motivo: SUCCESS
+[INFO] 03:46:35:873 [Kernel - Log obligatorio]/(18996:19025):  PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:47:11:977 [Kernel - Log obligatorio]/(18996:19000):  PID: 2 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 03:47:11:977 [Kernel - Log obligatorio]/(18996:19000): Finaliza el proceso [PID: 2] - Motivo: SUCCESS
+[INFO] 03:47:11:977 [Kernel - Log obligatorio]/(18996:19032):  PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:47:48:398 [Kernel - Log obligatorio]/(18996:19000):  PID: 3 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 03:47:48:398 [Kernel - Log obligatorio]/(18996:19000): Finaliza el proceso [PID: 3] - Motivo: SUCCESS
+[INFO] 03:47:48:398 [Kernel - Log obligatorio]/(18996:19040):  PID: 4 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:48:24:528 [Kernel - Log obligatorio]/(18996:19000):  PID: 4 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 03:48:24:528 [Kernel - Log obligatorio]/(18996:19000): Finaliza el proceso [PID: 4] - Motivo: SUCCESS
+[INFO] 03:51:22:753 [Kernel - Log obligatorio]/(18996:19077): Se crea el proceso 5 en NEW
+[INFO] 03:51:24:828 [Kernel - Log obligatorio]/(18996:19077):  PID: 5 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 03:51:24:828 [Kernel - Log obligatorio]/(18996:19077): Cola Ready FIFO: [5]
+[INFO] 03:51:24:828 [Kernel - Log obligatorio]/(18996:19078): Se crea el proceso 6 en NEW
+[INFO] 03:51:24:828 [Kernel - Log obligatorio]/(18996:19079):  PID: 5 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:51:26:829 [Kernel - Log obligatorio]/(18996:19078):  PID: 6 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 03:51:26:829 [Kernel - Log obligatorio]/(18996:19078): Cola Ready FIFO: [6]
+[INFO] 03:52:00:922 [Kernel - Log obligatorio]/(18996:19000):  PID: 5 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 03:52:00:922 [Kernel - Log obligatorio]/(18996:19000): Finaliza el proceso [PID: 5] - Motivo: SUCCESS
+[INFO] 03:52:00:922 [Kernel - Log obligatorio]/(18996:19083):  PID: 6 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:52:37:018 [Kernel - Log obligatorio]/(18996:19000):  PID: 6 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 03:52:37:018 [Kernel - Log obligatorio]/(18996:19000): Finaliza el proceso [PID: 6] - Motivo: SUCCESS
+[INFO] 03:52:55:371 [Kernel - Log obligatorio]/(19113:19123): Se crea el proceso 1 en NEW
+[INFO] 03:52:57:376 [Kernel - Log obligatorio]/(19113:19123):  PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 03:52:57:376 [Kernel - Log obligatorio]/(19113:19123): Cola Ready FIFO: [1]
+[INFO] 03:52:57:376 [Kernel - Log obligatorio]/(19113:19124):  PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:53:20:428 [Kernel - Log obligatorio]/(19113:19126): Se crea el proceso 2 en NEW
+[INFO] 03:53:22:442 [Kernel - Log obligatorio]/(19113:19126):  PID: 2 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 03:53:22:442 [Kernel - Log obligatorio]/(19113:19126): Cola Ready FIFO: [2]
+[INFO] 03:53:22:442 [Kernel - Log obligatorio]/(19113:19127): Se crea el proceso 3 en NEW
+[INFO] 03:53:24:451 [Kernel - Log obligatorio]/(19113:19127):  PID: 3 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 03:53:24:451 [Kernel - Log obligatorio]/(19113:19127): Cola Ready FIFO: [2, 3]
+[INFO] 03:53:24:455 [Kernel - Log obligatorio]/(19113:19129): Se crea el proceso 4 en NEW
+[INFO] 03:53:26:470 [Kernel - Log obligatorio]/(19113:19129):  PID: 4 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 03:53:26:470 [Kernel - Log obligatorio]/(19113:19129): Cola Ready FIFO: [2, 3, 4]
+[INFO] 03:53:26:470 [Kernel - Log obligatorio]/(19113:19132): Se crea el proceso 6 en NEW
+[INFO] 03:53:26:470 [Kernel - Log obligatorio]/(19113:19130): Se crea el proceso 5 en NEW
+[INFO] 03:53:28:479 [Kernel - Log obligatorio]/(19113:19132):  PID: 5 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 03:53:28:479 [Kernel - Log obligatorio]/(19113:19132): Cola Ready FIFO: [2, 3, 4, 5]
+[INFO] 03:53:30:489 [Kernel - Log obligatorio]/(19113:19130):  PID: 6 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 03:53:30:489 [Kernel - Log obligatorio]/(19113:19130): Cola Ready FIFO: [2, 3, 4, 5, 6]
+[INFO] 03:53:33:631 [Kernel - Log obligatorio]/(19113:19117):  PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 03:53:33:631 [Kernel - Log obligatorio]/(19113:19117): Finaliza el proceso [PID: 1] - Motivo: SUCCESS
+[INFO] 03:53:33:631 [Kernel - Log obligatorio]/(19113:19136):  PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:54:09:745 [Kernel - Log obligatorio]/(19113:19117):  PID: 2 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 03:54:09:745 [Kernel - Log obligatorio]/(19113:19117): Finaliza el proceso [PID: 2] - Motivo: SUCCESS
+[INFO] 03:54:09:745 [Kernel - Log obligatorio]/(19113:19138):  PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:54:12:436 [Kernel - Log obligatorio]/(19113:19140): Se crea el proceso 7 en NEW
+[INFO] 03:54:14:439 [Kernel - Log obligatorio]/(19113:19140):  PID: 7 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 03:54:14:439 [Kernel - Log obligatorio]/(19113:19140): Cola Ready FIFO: [4, 5, 6, 7]
+[INFO] 03:54:27:714 [Kernel - Log obligatorio]/(19113:19142): Se crea el proceso 8 en NEW
+[INFO] 03:54:29:732 [Kernel - Log obligatorio]/(19113:19142):  PID: 8 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 03:54:29:732 [Kernel - Log obligatorio]/(19113:19142): Cola Ready FIFO: [4, 5, 6, 7, 8]
+[INFO] 03:54:46:035 [Kernel - Log obligatorio]/(19113:19117):  PID: 3 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 03:54:46:035 [Kernel - Log obligatorio]/(19113:19117): Finaliza el proceso [PID: 3] - Motivo: SUCCESS
+[INFO] 03:54:46:035 [Kernel - Log obligatorio]/(19113:19144):  PID: 4 - Estado Anterior: READY - Estado Actual: EXEC
+[WARNING] 03:56:30:544 [Kernel - Log obligatorio]/(19161:19171): PAUSA DE PLANIFICACIÓN
+[INFO] 03:56:42:654 [Kernel - Log obligatorio]/(19161:19172): Se crea el proceso 1 en NEW
+[INFO] 03:56:48:472 [Kernel - Log obligatorio]/(19161:19174): Se crea el proceso 2 en NEW
+[INFO] 03:56:53:126 [Kernel - Log obligatorio]/(19161:19175): Se crea el proceso 3 en NEW
+[WARNING] 03:57:05:076 [Kernel - Log obligatorio]/(19161:19176): INICIO DE PLANIFICACIÓN
+[INFO] 03:57:07:079 [Kernel - Log obligatorio]/(19161:19172):  PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 03:57:07:079 [Kernel - Log obligatorio]/(19161:19172): Cola Ready FIFO: [1]
+[INFO] 03:57:07:079 [Kernel - Log obligatorio]/(19161:19177):  PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:57:09:086 [Kernel - Log obligatorio]/(19161:19174):  PID: 2 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 03:57:09:087 [Kernel - Log obligatorio]/(19161:19174): Cola Ready FIFO: [2]
+[INFO] 03:57:11:102 [Kernel - Log obligatorio]/(19161:19175):  PID: 3 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 03:57:11:102 [Kernel - Log obligatorio]/(19161:19175): Cola Ready FIFO: [2, 3]
+[INFO] 03:57:43:310 [Kernel - Log obligatorio]/(19161:19165):  PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 03:57:43:310 [Kernel - Log obligatorio]/(19161:19165): Finaliza el proceso [PID: 1] - Motivo: SUCCESS
+[INFO] 03:57:43:310 [Kernel - Log obligatorio]/(19161:19182):  PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:57:51:383 [Kernel - Log obligatorio]/(19161:19165):  PID: 3 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 03:57:51:383 [Kernel - Log obligatorio]/(19161:19165): Finaliza el proceso [PID: 3] - Motivo: SUCCESS
+[INFO] 03:57:51:383 [Kernel - Log obligatorio]/(19161:19184):  PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:58:11:497 [Kernel - Log obligatorio]/(19161:19165):  PID: 2 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 03:58:11:497 [Kernel - Log obligatorio]/(19161:19165): Finaliza el proceso [PID: 2] - Motivo: SUCCESS
+[WARNING] 03:59:19:359 [Kernel - Log obligatorio]/(19202:19210): PAUSA DE PLANIFICACIÓN
+[INFO] 03:59:24:727 [Kernel - Log obligatorio]/(19202:19213): Se crea el proceso 1 en NEW
+[INFO] 03:59:27:482 [Kernel - Log obligatorio]/(19202:19214): Se crea el proceso 2 en NEW
+[INFO] 03:59:30:129 [Kernel - Log obligatorio]/(19202:19215): Se crea el proceso 3 en NEW
+[WARNING] 03:59:35:323 [Kernel - Log obligatorio]/(19202:19216): INICIO DE PLANIFICACIÓN
+[INFO] 03:59:37:327 [Kernel - Log obligatorio]/(19202:19213):  PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 03:59:37:327 [Kernel - Log obligatorio]/(19202:19213): Cola Ready FIFO: [1]
+[INFO] 03:59:37:327 [Kernel - Log obligatorio]/(19202:19217):  PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:59:39:340 [Kernel - Log obligatorio]/(19202:19214):  PID: 2 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 03:59:39:340 [Kernel - Log obligatorio]/(19202:19214): Cola Ready FIFO: [2]
+[INFO] 03:59:39:340 [Kernel - Log obligatorio]/(19202:19206):  PID: 1 - Estado Anterior: EXEC - Estado Actual: READY
+[INFO] 03:59:39:340 [Kernel - Log obligatorio]/(19202:19206): Cola Ready RR: [2, 1]
+[INFO] 03:59:39:340 [Kernel - Log obligatorio]/(19202:19206): PID: 1 - Desalojado por fin de Quantum
+[INFO] 03:59:39:340 [Kernel - Log obligatorio]/(19202:19206):  PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:59:41:343 [Kernel - Log obligatorio]/(19202:19215):  PID: 3 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 03:59:41:344 [Kernel - Log obligatorio]/(19202:19215): Cola Ready FIFO: [1, 3]
+[INFO] 03:59:41:344 [Kernel - Log obligatorio]/(19202:19206):  PID: 2 - Estado Anterior: EXEC - Estado Actual: READY
+[INFO] 03:59:41:344 [Kernel - Log obligatorio]/(19202:19206): Cola Ready RR: [1, 3, 2]
+[INFO] 03:59:41:344 [Kernel - Log obligatorio]/(19202:19206): PID: 2 - Desalojado por fin de Quantum
+[INFO] 03:59:41:344 [Kernel - Log obligatorio]/(19202:19206):  PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:59:43:433 [Kernel - Log obligatorio]/(19202:19206):  PID: 1 - Estado Anterior: EXEC - Estado Actual: READY
+[INFO] 03:59:43:433 [Kernel - Log obligatorio]/(19202:19206): Cola Ready RR: [3, 2, 1]
+[INFO] 03:59:43:433 [Kernel - Log obligatorio]/(19202:19206): PID: 1 - Desalojado por fin de Quantum
+[INFO] 03:59:43:433 [Kernel - Log obligatorio]/(19202:19206):  PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:59:45:438 [Kernel - Log obligatorio]/(19202:19206):  PID: 3 - Estado Anterior: EXEC - Estado Actual: READY
+[INFO] 03:59:45:438 [Kernel - Log obligatorio]/(19202:19206): Cola Ready RR: [2, 1, 3]
+[INFO] 03:59:45:438 [Kernel - Log obligatorio]/(19202:19206): PID: 3 - Desalojado por fin de Quantum
+[INFO] 03:59:45:438 [Kernel - Log obligatorio]/(19202:19206):  PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:59:47:439 [Kernel - Log obligatorio]/(19202:19206):  PID: 2 - Estado Anterior: EXEC - Estado Actual: READY
+[INFO] 03:59:47:439 [Kernel - Log obligatorio]/(19202:19206): Cola Ready RR: [1, 3, 2]
+[INFO] 03:59:47:439 [Kernel - Log obligatorio]/(19202:19206): PID: 2 - Desalojado por fin de Quantum
+[INFO] 03:59:47:439 [Kernel - Log obligatorio]/(19202:19206):  PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:59:49:448 [Kernel - Log obligatorio]/(19202:19206):  PID: 1 - Estado Anterior: EXEC - Estado Actual: READY
+[INFO] 03:59:49:448 [Kernel - Log obligatorio]/(19202:19206): Cola Ready RR: [3, 2, 1]
+[INFO] 03:59:49:448 [Kernel - Log obligatorio]/(19202:19206): PID: 1 - Desalojado por fin de Quantum
+[INFO] 03:59:49:448 [Kernel - Log obligatorio]/(19202:19206):  PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:59:51:451 [Kernel - Log obligatorio]/(19202:19206):  PID: 3 - Estado Anterior: EXEC - Estado Actual: READY
+[INFO] 03:59:51:451 [Kernel - Log obligatorio]/(19202:19206): Cola Ready RR: [2, 1, 3]
+[INFO] 03:59:51:451 [Kernel - Log obligatorio]/(19202:19206): PID: 3 - Desalojado por fin de Quantum
+[INFO] 03:59:51:451 [Kernel - Log obligatorio]/(19202:19206):  PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:59:54:458 [Kernel - Log obligatorio]/(19202:19206):  PID: 2 - Estado Anterior: EXEC - Estado Actual: READY
+[INFO] 03:59:54:458 [Kernel - Log obligatorio]/(19202:19206): Cola Ready RR: [1, 3, 2]
+[INFO] 03:59:54:458 [Kernel - Log obligatorio]/(19202:19206): PID: 2 - Desalojado por fin de Quantum
+[INFO] 03:59:54:458 [Kernel - Log obligatorio]/(19202:19206):  PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:59:56:463 [Kernel - Log obligatorio]/(19202:19206):  PID: 1 - Estado Anterior: EXEC - Estado Actual: READY
+[INFO] 03:59:56:463 [Kernel - Log obligatorio]/(19202:19206): Cola Ready RR: [3, 2, 1]
+[INFO] 03:59:56:463 [Kernel - Log obligatorio]/(19202:19206): PID: 1 - Desalojado por fin de Quantum
+[INFO] 03:59:56:463 [Kernel - Log obligatorio]/(19202:19206):  PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:59:58:471 [Kernel - Log obligatorio]/(19202:19206):  PID: 3 - Estado Anterior: EXEC - Estado Actual: READY
+[INFO] 03:59:58:471 [Kernel - Log obligatorio]/(19202:19206): Cola Ready RR: [2, 1, 3]
+[INFO] 03:59:58:471 [Kernel - Log obligatorio]/(19202:19206): PID: 3 - Desalojado por fin de Quantum
+[INFO] 03:59:58:471 [Kernel - Log obligatorio]/(19202:19206):  PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 04:00:00:475 [Kernel - Log obligatorio]/(19202:19206):  PID: 2 - Estado Anterior: EXEC - Estado Actual: READY
+[INFO] 04:00:00:475 [Kernel - Log obligatorio]/(19202:19206): Cola Ready RR: [1, 3, 2]
+[INFO] 04:00:00:475 [Kernel - Log obligatorio]/(19202:19206): PID: 2 - Desalojado por fin de Quantum
+[INFO] 04:00:00:475 [Kernel - Log obligatorio]/(19202:19206):  PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 04:00:02:484 [Kernel - Log obligatorio]/(19202:19206):  PID: 1 - Estado Anterior: EXEC - Estado Actual: READY
+[INFO] 04:00:02:484 [Kernel - Log obligatorio]/(19202:19206): Cola Ready RR: [3, 2, 1]
+[INFO] 04:00:02:484 [Kernel - Log obligatorio]/(19202:19206): PID: 1 - Desalojado por fin de Quantum
+[INFO] 04:00:02:484 [Kernel - Log obligatorio]/(19202:19206):  PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 04:00:04:489 [Kernel - Log obligatorio]/(19202:19206):  PID: 3 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 04:00:04:489 [Kernel - Log obligatorio]/(19202:19206): Finaliza el proceso [PID: 3] - Motivo: SUCCESS
+[INFO] 04:00:04:489 [Kernel - Log obligatorio]/(19202:19246):  PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 04:00:06:495 [Kernel - Log obligatorio]/(19202:19206):  PID: 2 - Estado Anterior: EXEC - Estado Actual: READY
+[INFO] 04:00:06:495 [Kernel - Log obligatorio]/(19202:19206): Cola Ready RR: [1, 2]
+[INFO] 04:00:06:495 [Kernel - Log obligatorio]/(19202:19206): PID: 2 - Desalojado por fin de Quantum
+[INFO] 04:00:06:495 [Kernel - Log obligatorio]/(19202:19206):  PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 04:00:08:500 [Kernel - Log obligatorio]/(19202:19206):  PID: 1 - Estado Anterior: EXEC - Estado Actual: READY
+[INFO] 04:00:08:500 [Kernel - Log obligatorio]/(19202:19206): Cola Ready RR: [2, 1]
+[INFO] 04:00:08:500 [Kernel - Log obligatorio]/(19202:19206): PID: 1 - Desalojado por fin de Quantum
+[INFO] 04:00:08:500 [Kernel - Log obligatorio]/(19202:19206):  PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 04:00:10:507 [Kernel - Log obligatorio]/(19202:19206):  PID: 2 - Estado Anterior: EXEC - Estado Actual: READY
+[INFO] 04:00:10:507 [Kernel - Log obligatorio]/(19202:19206): Cola Ready RR: [1, 2]
+[INFO] 04:00:10:507 [Kernel - Log obligatorio]/(19202:19206): PID: 2 - Desalojado por fin de Quantum
+[INFO] 04:00:10:507 [Kernel - Log obligatorio]/(19202:19206):  PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 04:00:12:512 [Kernel - Log obligatorio]/(19202:19206):  PID: 1 - Estado Anterior: EXEC - Estado Actual: READY
+[INFO] 04:00:12:512 [Kernel - Log obligatorio]/(19202:19206): Cola Ready RR: [2, 1]
+[INFO] 04:00:12:512 [Kernel - Log obligatorio]/(19202:19206): PID: 1 - Desalojado por fin de Quantum
+[INFO] 04:00:12:512 [Kernel - Log obligatorio]/(19202:19206):  PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 04:00:14:517 [Kernel - Log obligatorio]/(19202:19206):  PID: 2 - Estado Anterior: EXEC - Estado Actual: READY
+[INFO] 04:00:14:517 [Kernel - Log obligatorio]/(19202:19206): Cola Ready RR: [1, 2]
+[INFO] 04:00:14:517 [Kernel - Log obligatorio]/(19202:19206): PID: 2 - Desalojado por fin de Quantum
+[INFO] 04:00:14:517 [Kernel - Log obligatorio]/(19202:19206):  PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 04:00:16:519 [Kernel - Log obligatorio]/(19202:19206):  PID: 1 - Estado Anterior: EXEC - Estado Actual: READY
+[INFO] 04:00:16:519 [Kernel - Log obligatorio]/(19202:19206): Cola Ready RR: [2, 1]
+[INFO] 04:00:16:519 [Kernel - Log obligatorio]/(19202:19206): PID: 1 - Desalojado por fin de Quantum
+[INFO] 04:00:16:519 [Kernel - Log obligatorio]/(19202:19206):  PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 04:00:18:522 [Kernel - Log obligatorio]/(19202:19206):  PID: 2 - Estado Anterior: EXEC - Estado Actual: READY
+[INFO] 04:00:18:522 [Kernel - Log obligatorio]/(19202:19206): Cola Ready RR: [1, 2]
+[INFO] 04:00:18:522 [Kernel - Log obligatorio]/(19202:19206): PID: 2 - Desalojado por fin de Quantum
+[INFO] 04:00:18:522 [Kernel - Log obligatorio]/(19202:19206):  PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 04:00:20:526 [Kernel - Log obligatorio]/(19202:19206):  PID: 1 - Estado Anterior: EXEC - Estado Actual: READY
+[INFO] 04:00:20:526 [Kernel - Log obligatorio]/(19202:19206): Cola Ready RR: [2, 1]
+[INFO] 04:00:20:526 [Kernel - Log obligatorio]/(19202:19206): PID: 1 - Desalojado por fin de Quantum
+[INFO] 04:00:20:526 [Kernel - Log obligatorio]/(19202:19206):  PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 04:00:23:547 [Kernel - Log obligatorio]/(19202:19206):  PID: 2 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 04:00:23:547 [Kernel - Log obligatorio]/(19202:19206): Finaliza el proceso [PID: 2] - Motivo: SUCCESS
+[INFO] 04:00:23:547 [Kernel - Log obligatorio]/(19202:19265):  PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 04:00:25:549 [Kernel - Log obligatorio]/(19202:19206):  PID: 1 - Estado Anterior: EXEC - Estado Actual: READY
+[INFO] 04:00:25:549 [Kernel - Log obligatorio]/(19202:19206): Cola Ready RR: [1]
+[INFO] 04:00:25:549 [Kernel - Log obligatorio]/(19202:19206): PID: 1 - Desalojado por fin de Quantum
+[INFO] 04:00:25:549 [Kernel - Log obligatorio]/(19202:19206):  PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 04:00:27:554 [Kernel - Log obligatorio]/(19202:19206):  PID: 1 - Estado Anterior: EXEC - Estado Actual: READY
+[INFO] 04:00:27:554 [Kernel - Log obligatorio]/(19202:19206): Cola Ready RR: [1]
+[INFO] 04:00:27:556 [Kernel - Log obligatorio]/(19202:19206): PID: 1 - Desalojado por fin de Quantum
+[INFO] 04:00:27:556 [Kernel - Log obligatorio]/(19202:19206):  PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 04:00:29:560 [Kernel - Log obligatorio]/(19202:19206):  PID: 1 - Estado Anterior: EXEC - Estado Actual: READY
+[INFO] 04:00:29:560 [Kernel - Log obligatorio]/(19202:19206): Cola Ready RR: [1]
+[INFO] 04:00:29:560 [Kernel - Log obligatorio]/(19202:19206): PID: 1 - Desalojado por fin de Quantum
+[INFO] 04:00:29:560 [Kernel - Log obligatorio]/(19202:19206):  PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 04:00:31:565 [Kernel - Log obligatorio]/(19202:19206):  PID: 1 - Estado Anterior: EXEC - Estado Actual: READY
+[INFO] 04:00:31:565 [Kernel - Log obligatorio]/(19202:19206): Cola Ready RR: [1]
+[INFO] 04:00:31:565 [Kernel - Log obligatorio]/(19202:19206): PID: 1 - Desalojado por fin de Quantum
+[INFO] 04:00:31:565 [Kernel - Log obligatorio]/(19202:19206):  PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 04:00:33:623 [Kernel - Log obligatorio]/(19202:19206):  PID: 1 - Estado Anterior: EXEC - Estado Actual: READY
+[INFO] 04:00:33:623 [Kernel - Log obligatorio]/(19202:19206): Cola Ready RR: [1]
+[INFO] 04:00:33:623 [Kernel - Log obligatorio]/(19202:19206): PID: 1 - Desalojado por fin de Quantum
+[INFO] 04:00:33:623 [Kernel - Log obligatorio]/(19202:19206):  PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 04:00:35:626 [Kernel - Log obligatorio]/(19202:19206):  PID: 1 - Estado Anterior: EXEC - Estado Actual: READY
+[INFO] 04:00:35:627 [Kernel - Log obligatorio]/(19202:19206): Cola Ready RR: [1]
+[INFO] 04:00:35:627 [Kernel - Log obligatorio]/(19202:19206): PID: 1 - Desalojado por fin de Quantum
+[INFO] 04:00:35:627 [Kernel - Log obligatorio]/(19202:19206):  PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 04:00:37:630 [Kernel - Log obligatorio]/(19202:19206):  PID: 1 - Estado Anterior: EXEC - Estado Actual: READY
+[INFO] 04:00:37:630 [Kernel - Log obligatorio]/(19202:19206): Cola Ready RR: [1]
+[INFO] 04:00:37:630 [Kernel - Log obligatorio]/(19202:19206): PID: 1 - Desalojado por fin de Quantum
+[INFO] 04:00:37:630 [Kernel - Log obligatorio]/(19202:19206):  PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 04:00:39:633 [Kernel - Log obligatorio]/(19202:19206):  PID: 1 - Estado Anterior: EXEC - Estado Actual: READY
+[INFO] 04:00:39:633 [Kernel - Log obligatorio]/(19202:19206): Cola Ready RR: [1]
+[INFO] 04:00:39:633 [Kernel - Log obligatorio]/(19202:19206): PID: 1 - Desalojado por fin de Quantum
+[INFO] 04:00:39:633 [Kernel - Log obligatorio]/(19202:19206):  PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 04:00:41:636 [Kernel - Log obligatorio]/(19202:19206):  PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 04:00:41:636 [Kernel - Log obligatorio]/(19202:19206): Finaliza el proceso [PID: 1] - Motivo: SUCCESS
+[WARNING] 04:04:52:427 [Kernel - Log obligatorio]/(19327:19338): PAUSA DE PLANIFICACIÓN
+[INFO] 04:05:10:845 [Kernel - Log obligatorio]/(19327:19339): Se crea el proceso 1 en NEW
+[WARNING] 04:06:22:821 [Kernel - Log obligatorio]/(19327:19348): INICIO DE PLANIFICACIÓN
+[INFO] 04:06:23:844 [Kernel - Log obligatorio]/(19327:19339):  PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 04:06:23:844 [Kernel - Log obligatorio]/(19327:19339): Cola Ready FIFO: [1]
+[INFO] 04:06:23:844 [Kernel - Log obligatorio]/(19327:19349):  PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 04:06:25:866 [Kernel - Log obligatorio]/(19327:19331): Page Fault PID: 1 - Pagina: 0
+[INFO] 04:06:25:866 [Kernel - Log obligatorio]/(19327:19331):  PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCKED
+[WARNING] 04:15:52:053 [Kernel - Log obligatorio]/(19556:19564): PAUSA DE PLANIFICACIÓN
+[INFO] 04:16:28:730 [Kernel - Log obligatorio]/(19593:19601): Se crea el proceso 1 en NEW
+[INFO] 04:16:29:733 [Kernel - Log obligatorio]/(19593:19601):  PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 04:16:29:733 [Kernel - Log obligatorio]/(19593:19601): Cola Ready FIFO: [1]
+[INFO] 04:16:29:733 [Kernel - Log obligatorio]/(19593:19602):  PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 04:16:31:754 [Kernel - Log obligatorio]/(19593:19597): Page Fault PID: 1 - Pagina: 0
+[INFO] 04:16:31:754 [Kernel - Log obligatorio]/(19593:19597):  PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCKED
+[INFO] 04:16:43:266 [Kernel - Log obligatorio]/(19593:19595):  PID: 1 - Estado Anterior: BLOCKED - Estado Actual: READY
+[INFO] 04:16:43:266 [Kernel - Log obligatorio]/(19593:19595): Cola Ready RR: [1]
+[INFO] 04:16:43:266 [Kernel - Log obligatorio]/(19593:19595):  PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 04:16:46:286 [Kernel - Log obligatorio]/(19593:19597): Page Fault PID: 1 - Pagina: 1
+[INFO] 04:16:46:286 [Kernel - Log obligatorio]/(19593:19597):  PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCKED
+[INFO] 04:16:48:789 [Kernel - Log obligatorio]/(19593:19595):  PID: 1 - Estado Anterior: BLOCKED - Estado Actual: READY
+[INFO] 04:16:48:789 [Kernel - Log obligatorio]/(19593:19595): Cola Ready RR: [1]
+[INFO] 04:16:48:789 [Kernel - Log obligatorio]/(19593:19595):  PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 04:16:51:810 [Kernel - Log obligatorio]/(19593:19597): Page Fault PID: 1 - Pagina: 2
+[INFO] 04:16:51:810 [Kernel - Log obligatorio]/(19593:19597):  PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCKED
+[INFO] 04:16:54:316 [Kernel - Log obligatorio]/(19593:19595):  PID: 1 - Estado Anterior: BLOCKED - Estado Actual: READY
+[INFO] 04:16:54:316 [Kernel - Log obligatorio]/(19593:19595): Cola Ready RR: [1]
+[INFO] 04:16:54:316 [Kernel - Log obligatorio]/(19593:19595):  PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 04:16:57:341 [Kernel - Log obligatorio]/(19593:19597): Page Fault PID: 1 - Pagina: 3
+[INFO] 04:16:57:341 [Kernel - Log obligatorio]/(19593:19597):  PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCKED

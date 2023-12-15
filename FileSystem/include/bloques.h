@@ -8,7 +8,7 @@
 //========== SWAP =====================
 
 t_list* swap_obtener_n_cantidad_de_bloques(int cant_bloques);
-void setear_bloque_de_swap_como_libre(int nro_bloque_swap);
+void setear_bloque_de_swap_como_libre(uint32_t nro_bloque_swap);
 
 
 //=========== BLOQUES =============================
