@@ -1385,3 +1385,255 @@
 [INFO] 17:40:08:120 [File System - Log obligatorio]/(4762:4787): Acceso FAT - Entrada: <11> - Valor: <12>
 [INFO] 17:40:08:629 [File System - Log obligatorio]/(4762:4787): Acceso FAT - Entrada: <12> - Valor: <EOF>
 [INFO] 17:40:09:130 [File System - Log obligatorio]/(4762:4787): Truncar Archivo: consolas - Tamaño: 64
+[INFO] 17:55:46:905 [File System - Log obligatorio]/(3584:3585): Acceso SWAP: <0>
+[INFO] 17:55:48:415 [File System - Log obligatorio]/(3584:3585): Acceso SWAP: <1>
+[INFO] 17:55:49:919 [File System - Log obligatorio]/(3584:3585): Acceso SWAP: <2>
+[INFO] 17:55:51:419 [File System - Log obligatorio]/(3584:3585): Acceso SWAP: <3>
+[INFO] 17:55:53:989 [File System - Log obligatorio]/(3584:3671): Crear Archivo: consolas
+[INFO] 17:55:54:498 [File System - Log obligatorio]/(3584:3672): Acceso FAT - Entrada: <0> - Valor: <EOF>
+[INFO] 17:55:55:003 [File System - Log obligatorio]/(3584:3672): Acceso FAT - Entrada: <1> - Valor: <2>
+[INFO] 17:55:55:504 [File System - Log obligatorio]/(3584:3672): Acceso FAT - Entrada: <2> - Valor: <3>
+[INFO] 17:55:56:049 [File System - Log obligatorio]/(3584:3672): Acceso FAT - Entrada: <3> - Valor: <4>
+[INFO] 17:55:56:549 [File System - Log obligatorio]/(3584:3672): Acceso FAT - Entrada: <4> - Valor: <5>
+[INFO] 17:55:57:052 [File System - Log obligatorio]/(3584:3672): Acceso FAT - Entrada: <5> - Valor: <6>
+[INFO] 17:55:57:554 [File System - Log obligatorio]/(3584:3672): Acceso FAT - Entrada: <6> - Valor: <7>
+[INFO] 17:55:58:059 [File System - Log obligatorio]/(3584:3672): Acceso FAT - Entrada: <7> - Valor: <8>
+[INFO] 17:55:58:560 [File System - Log obligatorio]/(3584:3672): Acceso FAT - Entrada: <8> - Valor: <EOF>
+[INFO] 17:55:59:061 [File System - Log obligatorio]/(3584:3672): Acceso FAT - Entrada: <9> - Valor: <10>
+[INFO] 17:55:59:567 [File System - Log obligatorio]/(3584:3672): Acceso FAT - Entrada: <10> - Valor: <11>
+[INFO] 17:56:00:068 [File System - Log obligatorio]/(3584:3672): Acceso FAT - Entrada: <11> - Valor: <12>
+[INFO] 17:56:00:572 [File System - Log obligatorio]/(3584:3672): Acceso FAT - Entrada: <12> - Valor: <EOF>
+[INFO] 17:56:01:073 [File System - Log obligatorio]/(3584:3672): Acceso FAT - Entrada: <13> - Valor: <0>
+[INFO] 17:56:01:574 [File System - Log obligatorio]/(3584:3672): Acceso FAT - Entrada: <14> - Valor: <0>
+[INFO] 17:56:02:075 [File System - Log obligatorio]/(3584:3672): Acceso FAT - Entrada: <15> - Valor: <0>
+[INFO] 17:56:02:577 [File System - Log obligatorio]/(3584:3672): Acceso FAT - Entrada: <16> - Valor: <0>
+[INFO] 17:56:03:077 [File System - Log obligatorio]/(3584:3672): Acceso FAT - Entrada: <13> - Valor: <14>
+[INFO] 17:56:03:578 [File System - Log obligatorio]/(3584:3672): Acceso FAT - Entrada: <14> - Valor: <15>
+[INFO] 17:56:04:078 [File System - Log obligatorio]/(3584:3672): Acceso FAT - Entrada: <15> - Valor: <16>
+[INFO] 17:56:04:579 [File System - Log obligatorio]/(3584:3672): Acceso FAT - Entrada: <16> - Valor: <EOF>
+[INFO] 17:56:05:080 [File System - Log obligatorio]/(3584:3672): Truncar Archivo: consolas - Tamaño: 64
+[INFO] 17:56:07:095 [File System - Log obligatorio]/(3584:3585): Acceso SWAP: <0>
+[INFO] 18:00:42:138 [File System - Log obligatorio]/(4028:4030): Acceso SWAP: <0>
+[INFO] 18:00:43:642 [File System - Log obligatorio]/(4028:4030): Acceso SWAP: <1>
+[INFO] 18:00:45:142 [File System - Log obligatorio]/(4028:4030): Acceso SWAP: <2>
+[INFO] 18:00:46:643 [File System - Log obligatorio]/(4028:4030): Acceso SWAP: <3>
+[INFO] 18:00:49:163 [File System - Log obligatorio]/(4028:4049): Crear Archivo: consolas
+[INFO] 18:00:49:666 [File System - Log obligatorio]/(4028:4050): Acceso FAT - Entrada: <0> - Valor: <EOF>
+[INFO] 18:00:50:171 [File System - Log obligatorio]/(4028:4050): Acceso FAT - Entrada: <1> - Valor: <2>
+[INFO] 18:00:50:682 [File System - Log obligatorio]/(4028:4050): Acceso FAT - Entrada: <2> - Valor: <3>
+[INFO] 18:00:51:195 [File System - Log obligatorio]/(4028:4050): Acceso FAT - Entrada: <3> - Valor: <4>
+[INFO] 18:00:51:714 [File System - Log obligatorio]/(4028:4050): Acceso FAT - Entrada: <4> - Valor: <5>
+[INFO] 18:00:52:215 [File System - Log obligatorio]/(4028:4050): Acceso FAT - Entrada: <5> - Valor: <6>
+[INFO] 18:00:52:715 [File System - Log obligatorio]/(4028:4050): Acceso FAT - Entrada: <6> - Valor: <7>
+[INFO] 18:00:53:216 [File System - Log obligatorio]/(4028:4050): Acceso FAT - Entrada: <7> - Valor: <8>
+[INFO] 18:00:53:723 [File System - Log obligatorio]/(4028:4050): Acceso FAT - Entrada: <8> - Valor: <EOF>
+[INFO] 18:00:54:287 [File System - Log obligatorio]/(4028:4050): Acceso FAT - Entrada: <9> - Valor: <10>
+[INFO] 18:00:54:793 [File System - Log obligatorio]/(4028:4050): Acceso FAT - Entrada: <10> - Valor: <11>
+[INFO] 18:00:55:293 [File System - Log obligatorio]/(4028:4050): Acceso FAT - Entrada: <11> - Valor: <12>
+[INFO] 18:00:55:793 [File System - Log obligatorio]/(4028:4050): Acceso FAT - Entrada: <12> - Valor: <EOF>
+[INFO] 18:00:56:294 [File System - Log obligatorio]/(4028:4050): Acceso FAT - Entrada: <13> - Valor: <14>
+[INFO] 18:00:56:795 [File System - Log obligatorio]/(4028:4050): Acceso FAT - Entrada: <14> - Valor: <15>
+[INFO] 18:00:57:309 [File System - Log obligatorio]/(4028:4050): Acceso FAT - Entrada: <15> - Valor: <16>
+[INFO] 18:00:57:814 [File System - Log obligatorio]/(4028:4050): Acceso FAT - Entrada: <16> - Valor: <EOF>
+[INFO] 18:00:58:318 [File System - Log obligatorio]/(4028:4050): Acceso FAT - Entrada: <17> - Valor: <0>
+[INFO] 18:00:58:818 [File System - Log obligatorio]/(4028:4050): Acceso FAT - Entrada: <18> - Valor: <0>
+[INFO] 18:00:59:320 [File System - Log obligatorio]/(4028:4050): Acceso FAT - Entrada: <19> - Valor: <0>
+[INFO] 18:00:59:821 [File System - Log obligatorio]/(4028:4050): Acceso FAT - Entrada: <20> - Valor: <0>
+[INFO] 18:01:00:330 [File System - Log obligatorio]/(4028:4050): Acceso FAT - Entrada: <17> - Valor: <18>
+[INFO] 18:01:00:833 [File System - Log obligatorio]/(4028:4050): Acceso FAT - Entrada: <18> - Valor: <19>
+[INFO] 18:01:01:333 [File System - Log obligatorio]/(4028:4050): Acceso FAT - Entrada: <19> - Valor: <20>
+[INFO] 18:01:01:834 [File System - Log obligatorio]/(4028:4050): Acceso FAT - Entrada: <20> - Valor: <EOF>
+[INFO] 18:01:02:335 [File System - Log obligatorio]/(4028:4050): Truncar Archivo: consolas - Tamaño: 64
+[INFO] 18:01:04:415 [File System - Log obligatorio]/(4028:4030): Acceso SWAP: <0>
+[INFO] 18:09:28:113 [File System - Log obligatorio]/(4953:4955): Acceso SWAP: <0>
+[INFO] 18:09:29:613 [File System - Log obligatorio]/(4953:4955): Acceso SWAP: <1>
+[INFO] 18:09:31:114 [File System - Log obligatorio]/(4953:4955): Acceso SWAP: <2>
+[INFO] 18:09:32:614 [File System - Log obligatorio]/(4953:4955): Acceso SWAP: <3>
+[INFO] 18:09:35:123 [File System - Log obligatorio]/(4953:4974): Crear Archivo: consolas
+[INFO] 18:09:35:630 [File System - Log obligatorio]/(4953:4975): Acceso FAT - Entrada: <0> - Valor: <EOF>
+[INFO] 18:09:36:130 [File System - Log obligatorio]/(4953:4975): Acceso FAT - Entrada: <1> - Valor: <2>
+[INFO] 18:09:36:631 [File System - Log obligatorio]/(4953:4975): Acceso FAT - Entrada: <2> - Valor: <3>
+[INFO] 18:09:37:131 [File System - Log obligatorio]/(4953:4975): Acceso FAT - Entrada: <3> - Valor: <4>
+[INFO] 18:09:37:632 [File System - Log obligatorio]/(4953:4975): Acceso FAT - Entrada: <4> - Valor: <5>
+[INFO] 18:09:38:133 [File System - Log obligatorio]/(4953:4975): Acceso FAT - Entrada: <5> - Valor: <6>
+[INFO] 18:09:38:634 [File System - Log obligatorio]/(4953:4975): Acceso FAT - Entrada: <6> - Valor: <7>
+[INFO] 18:09:39:135 [File System - Log obligatorio]/(4953:4975): Acceso FAT - Entrada: <7> - Valor: <8>
+[INFO] 18:09:39:635 [File System - Log obligatorio]/(4953:4975): Acceso FAT - Entrada: <8> - Valor: <EOF>
+[INFO] 18:09:40:136 [File System - Log obligatorio]/(4953:4975): Acceso FAT - Entrada: <9> - Valor: <10>
+[INFO] 18:09:40:637 [File System - Log obligatorio]/(4953:4975): Acceso FAT - Entrada: <10> - Valor: <11>
+[INFO] 18:09:41:138 [File System - Log obligatorio]/(4953:4975): Acceso FAT - Entrada: <11> - Valor: <12>
+[INFO] 18:09:41:638 [File System - Log obligatorio]/(4953:4975): Acceso FAT - Entrada: <12> - Valor: <EOF>
+[INFO] 18:09:42:140 [File System - Log obligatorio]/(4953:4975): Acceso FAT - Entrada: <13> - Valor: <14>
+[INFO] 18:09:42:642 [File System - Log obligatorio]/(4953:4975): Acceso FAT - Entrada: <14> - Valor: <15>
+[INFO] 18:09:43:143 [File System - Log obligatorio]/(4953:4975): Acceso FAT - Entrada: <15> - Valor: <16>
+[INFO] 18:09:43:681 [File System - Log obligatorio]/(4953:4975): Acceso FAT - Entrada: <16> - Valor: <EOF>
+[INFO] 18:09:44:189 [File System - Log obligatorio]/(4953:4975): Acceso FAT - Entrada: <17> - Valor: <18>
+[INFO] 18:09:44:689 [File System - Log obligatorio]/(4953:4975): Acceso FAT - Entrada: <18> - Valor: <19>
+[INFO] 18:09:45:191 [File System - Log obligatorio]/(4953:4975): Acceso FAT - Entrada: <19> - Valor: <20>
+[INFO] 18:09:45:691 [File System - Log obligatorio]/(4953:4975): Acceso FAT - Entrada: <20> - Valor: <EOF>
+[INFO] 18:09:46:192 [File System - Log obligatorio]/(4953:4975): Acceso FAT - Entrada: <21> - Valor: <0>
+[INFO] 18:09:46:694 [File System - Log obligatorio]/(4953:4975): Acceso FAT - Entrada: <22> - Valor: <0>
+[INFO] 18:09:47:195 [File System - Log obligatorio]/(4953:4975): Acceso FAT - Entrada: <23> - Valor: <0>
+[INFO] 18:09:47:695 [File System - Log obligatorio]/(4953:4975): Acceso FAT - Entrada: <24> - Valor: <0>
+[INFO] 18:09:48:196 [File System - Log obligatorio]/(4953:4975): Acceso FAT - Entrada: <21> - Valor: <22>
+[INFO] 18:09:48:703 [File System - Log obligatorio]/(4953:4975): Acceso FAT - Entrada: <22> - Valor: <23>
+[INFO] 18:09:49:203 [File System - Log obligatorio]/(4953:4975): Acceso FAT - Entrada: <23> - Valor: <24>
+[INFO] 18:09:49:703 [File System - Log obligatorio]/(4953:4975): Acceso FAT - Entrada: <24> - Valor: <EOF>
+[INFO] 18:09:50:205 [File System - Log obligatorio]/(4953:4975): Truncar Archivo: consolas - Tamaño: 64
+[INFO] 18:09:52:210 [File System - Log obligatorio]/(4953:4955): Acceso SWAP: <0>
+[INFO] 18:09:58:727 [File System - Log obligatorio]/(4953:4955): Acceso Bloque - Archivo: <consolas> - Bloque Archivo: <21> - Bloque FS: <1046>
+[INFO] 18:18:10:681 [File System - Log obligatorio]/(5306:5308): Acceso SWAP: <0>
+[INFO] 18:18:12:182 [File System - Log obligatorio]/(5306:5308): Acceso SWAP: <1>
+[INFO] 18:18:13:683 [File System - Log obligatorio]/(5306:5308): Acceso SWAP: <2>
+[INFO] 18:18:15:185 [File System - Log obligatorio]/(5306:5308): Acceso SWAP: <3>
+[INFO] 18:18:17:697 [File System - Log obligatorio]/(5306:5327): Crear Archivo: consolas
+[INFO] 18:18:18:215 [File System - Log obligatorio]/(5306:5328): Acceso FAT - Entrada: <0> - Valor: <EOF>
+[INFO] 18:18:18:715 [File System - Log obligatorio]/(5306:5328): Acceso FAT - Entrada: <1> - Valor: <2>
+[INFO] 18:18:19:223 [File System - Log obligatorio]/(5306:5328): Acceso FAT - Entrada: <2> - Valor: <3>
+[INFO] 18:18:19:726 [File System - Log obligatorio]/(5306:5328): Acceso FAT - Entrada: <3> - Valor: <4>
+[INFO] 18:18:20:229 [File System - Log obligatorio]/(5306:5328): Acceso FAT - Entrada: <4> - Valor: <5>
+[INFO] 18:18:20:730 [File System - Log obligatorio]/(5306:5328): Acceso FAT - Entrada: <5> - Valor: <6>
+[INFO] 18:18:21:230 [File System - Log obligatorio]/(5306:5328): Acceso FAT - Entrada: <6> - Valor: <7>
+[INFO] 18:18:21:732 [File System - Log obligatorio]/(5306:5328): Acceso FAT - Entrada: <7> - Valor: <8>
+[INFO] 18:18:22:233 [File System - Log obligatorio]/(5306:5328): Acceso FAT - Entrada: <8> - Valor: <EOF>
+[INFO] 18:18:22:734 [File System - Log obligatorio]/(5306:5328): Acceso FAT - Entrada: <9> - Valor: <10>
+[INFO] 18:18:23:235 [File System - Log obligatorio]/(5306:5328): Acceso FAT - Entrada: <10> - Valor: <11>
+[INFO] 18:18:23:738 [File System - Log obligatorio]/(5306:5328): Acceso FAT - Entrada: <11> - Valor: <12>
+[INFO] 18:18:24:239 [File System - Log obligatorio]/(5306:5328): Acceso FAT - Entrada: <12> - Valor: <EOF>
+[INFO] 18:18:24:741 [File System - Log obligatorio]/(5306:5328): Acceso FAT - Entrada: <13> - Valor: <14>
+[INFO] 18:18:25:241 [File System - Log obligatorio]/(5306:5328): Acceso FAT - Entrada: <14> - Valor: <15>
+[INFO] 18:18:25:742 [File System - Log obligatorio]/(5306:5328): Acceso FAT - Entrada: <15> - Valor: <16>
+[INFO] 18:18:26:242 [File System - Log obligatorio]/(5306:5328): Acceso FAT - Entrada: <16> - Valor: <EOF>
+[INFO] 18:18:26:745 [File System - Log obligatorio]/(5306:5328): Acceso FAT - Entrada: <17> - Valor: <18>
+[INFO] 18:18:27:248 [File System - Log obligatorio]/(5306:5328): Acceso FAT - Entrada: <18> - Valor: <19>
+[INFO] 18:18:27:749 [File System - Log obligatorio]/(5306:5328): Acceso FAT - Entrada: <19> - Valor: <20>
+[INFO] 18:18:28:250 [File System - Log obligatorio]/(5306:5328): Acceso FAT - Entrada: <20> - Valor: <EOF>
+[INFO] 18:18:28:750 [File System - Log obligatorio]/(5306:5328): Acceso FAT - Entrada: <21> - Valor: <22>
+[INFO] 18:18:29:250 [File System - Log obligatorio]/(5306:5328): Acceso FAT - Entrada: <22> - Valor: <23>
+[INFO] 18:18:29:752 [File System - Log obligatorio]/(5306:5328): Acceso FAT - Entrada: <23> - Valor: <24>
+[INFO] 18:18:30:254 [File System - Log obligatorio]/(5306:5328): Acceso FAT - Entrada: <24> - Valor: <EOF>
+[INFO] 18:18:30:755 [File System - Log obligatorio]/(5306:5328): Acceso FAT - Entrada: <25> - Valor: <0>
+[INFO] 18:18:31:256 [File System - Log obligatorio]/(5306:5328): Acceso FAT - Entrada: <26> - Valor: <0>
+[INFO] 18:18:31:756 [File System - Log obligatorio]/(5306:5328): Acceso FAT - Entrada: <27> - Valor: <0>
+[INFO] 18:18:32:257 [File System - Log obligatorio]/(5306:5328): Acceso FAT - Entrada: <28> - Valor: <0>
+[INFO] 18:18:32:758 [File System - Log obligatorio]/(5306:5328): Acceso FAT - Entrada: <25> - Valor: <26>
+[INFO] 18:18:33:258 [File System - Log obligatorio]/(5306:5328): Acceso FAT - Entrada: <26> - Valor: <27>
+[INFO] 18:18:33:759 [File System - Log obligatorio]/(5306:5328): Acceso FAT - Entrada: <27> - Valor: <28>
+[INFO] 18:18:34:261 [File System - Log obligatorio]/(5306:5328): Acceso FAT - Entrada: <28> - Valor: <EOF>
+[INFO] 18:18:34:762 [File System - Log obligatorio]/(5306:5328): Truncar Archivo: consolas - Tamaño: 64
+[INFO] 18:18:36:769 [File System - Log obligatorio]/(5306:5308): Acceso SWAP: <0>
+[INFO] 18:21:09:594 [File System - Log obligatorio]/(5418:5420): Acceso SWAP: <0>
+[INFO] 18:21:11:095 [File System - Log obligatorio]/(5418:5420): Acceso SWAP: <1>
+[INFO] 18:21:12:600 [File System - Log obligatorio]/(5418:5420): Acceso SWAP: <2>
+[INFO] 18:21:14:108 [File System - Log obligatorio]/(5418:5420): Acceso SWAP: <3>
+[INFO] 18:21:16:619 [File System - Log obligatorio]/(5418:5439): Crear Archivo: consolas
+[INFO] 18:21:17:137 [File System - Log obligatorio]/(5418:5440): Acceso FAT - Entrada: <0> - Valor: <EOF>
+[INFO] 18:21:17:638 [File System - Log obligatorio]/(5418:5440): Acceso FAT - Entrada: <1> - Valor: <0>
+[INFO] 18:21:18:138 [File System - Log obligatorio]/(5418:5440): Acceso FAT - Entrada: <2> - Valor: <0>
+[INFO] 18:21:18:644 [File System - Log obligatorio]/(5418:5440): Acceso FAT - Entrada: <3> - Valor: <0>
+[INFO] 18:21:19:144 [File System - Log obligatorio]/(5418:5440): Acceso FAT - Entrada: <4> - Valor: <0>
+[INFO] 18:21:19:645 [File System - Log obligatorio]/(5418:5440): Acceso FAT - Entrada: <1> - Valor: <2>
+[INFO] 18:21:20:145 [File System - Log obligatorio]/(5418:5440): Acceso FAT - Entrada: <2> - Valor: <3>
+[INFO] 18:21:20:646 [File System - Log obligatorio]/(5418:5440): Acceso FAT - Entrada: <3> - Valor: <4>
+[INFO] 18:21:21:147 [File System - Log obligatorio]/(5418:5440): Acceso FAT - Entrada: <4> - Valor: <EOF>
+[INFO] 18:21:21:648 [File System - Log obligatorio]/(5418:5440): Truncar Archivo: consolas - Tamaño: 64
+[INFO] 18:21:23:664 [File System - Log obligatorio]/(5418:5420): Acceso SWAP: <0>
+[INFO] 18:21:30:244 [File System - Log obligatorio]/(5418:5420): Acceso Bloque - Archivo: <consolas> - Bloque Archivo: <1> - Bloque FS: <1026>
+[INFO] 18:24:29:454 [File System - Log obligatorio]/(5870:5872): Acceso SWAP: <0>
+[INFO] 18:24:30:964 [File System - Log obligatorio]/(5870:5872): Acceso SWAP: <1>
+[INFO] 18:24:32:473 [File System - Log obligatorio]/(5870:5872): Acceso SWAP: <2>
+[INFO] 18:24:33:978 [File System - Log obligatorio]/(5870:5872): Acceso SWAP: <3>
+[INFO] 18:24:36:489 [File System - Log obligatorio]/(5870:5898): Crear Archivo: consolas
+[INFO] 18:24:36:992 [File System - Log obligatorio]/(5870:5899): Acceso FAT - Entrada: <0> - Valor: <EOF>
+[INFO] 18:24:37:493 [File System - Log obligatorio]/(5870:5899): Acceso FAT - Entrada: <1> - Valor: <2>
+[INFO] 18:24:37:994 [File System - Log obligatorio]/(5870:5899): Acceso FAT - Entrada: <2> - Valor: <3>
+[INFO] 18:24:38:497 [File System - Log obligatorio]/(5870:5899): Acceso FAT - Entrada: <3> - Valor: <4>
+[INFO] 18:24:39:002 [File System - Log obligatorio]/(5870:5899): Acceso FAT - Entrada: <4> - Valor: <EOF>
+[INFO] 18:24:39:502 [File System - Log obligatorio]/(5870:5899): Acceso FAT - Entrada: <5> - Valor: <0>
+[INFO] 18:24:40:006 [File System - Log obligatorio]/(5870:5899): Acceso FAT - Entrada: <6> - Valor: <0>
+[INFO] 18:24:40:547 [File System - Log obligatorio]/(5870:5899): Acceso FAT - Entrada: <7> - Valor: <0>
+[INFO] 18:24:41:069 [File System - Log obligatorio]/(5870:5899): Acceso FAT - Entrada: <8> - Valor: <0>
+[INFO] 18:24:41:570 [File System - Log obligatorio]/(5870:5899): Acceso FAT - Entrada: <5> - Valor: <6>
+[INFO] 18:24:42:073 [File System - Log obligatorio]/(5870:5899): Acceso FAT - Entrada: <6> - Valor: <7>
+[INFO] 18:24:42:573 [File System - Log obligatorio]/(5870:5899): Acceso FAT - Entrada: <7> - Valor: <8>
+[INFO] 18:24:43:077 [File System - Log obligatorio]/(5870:5899): Acceso FAT - Entrada: <8> - Valor: <EOF>
+[INFO] 18:24:43:577 [File System - Log obligatorio]/(5870:5899): Truncar Archivo: consolas - Tamaño: 64
+[INFO] 18:24:45:601 [File System - Log obligatorio]/(5870:5872): Acceso SWAP: <0>
+[INFO] 18:24:52:122 [File System - Log obligatorio]/(5870:5872): Acceso Bloque - Archivo: <consolas> - Bloque Archivo: <5> - Bloque FS: <1030>
+[INFO] 18:25:56:647 [File System - Log obligatorio]/(6045:6047): Acceso SWAP: <0>
+[INFO] 18:25:58:148 [File System - Log obligatorio]/(6045:6047): Acceso SWAP: <1>
+[INFO] 18:25:59:648 [File System - Log obligatorio]/(6045:6047): Acceso SWAP: <2>
+[INFO] 18:26:01:149 [File System - Log obligatorio]/(6045:6047): Acceso SWAP: <3>
+[INFO] 18:26:03:660 [File System - Log obligatorio]/(6045:6070): Crear Archivo: consolas
+[INFO] 18:26:04:163 [File System - Log obligatorio]/(6045:6071): Acceso FAT - Entrada: <0> - Valor: <EOF>
+[INFO] 18:26:04:664 [File System - Log obligatorio]/(6045:6071): Acceso FAT - Entrada: <1> - Valor: <2>
+[INFO] 18:26:05:166 [File System - Log obligatorio]/(6045:6071): Acceso FAT - Entrada: <2> - Valor: <3>
+[INFO] 18:26:05:667 [File System - Log obligatorio]/(6045:6071): Acceso FAT - Entrada: <3> - Valor: <4>
+[INFO] 18:26:06:169 [File System - Log obligatorio]/(6045:6071): Acceso FAT - Entrada: <4> - Valor: <EOF>
+[INFO] 18:26:06:670 [File System - Log obligatorio]/(6045:6071): Acceso FAT - Entrada: <5> - Valor: <6>
+[INFO] 18:26:07:171 [File System - Log obligatorio]/(6045:6071): Acceso FAT - Entrada: <6> - Valor: <7>
+[INFO] 18:26:07:683 [File System - Log obligatorio]/(6045:6071): Acceso FAT - Entrada: <7> - Valor: <8>
+[INFO] 18:26:08:184 [File System - Log obligatorio]/(6045:6071): Acceso FAT - Entrada: <8> - Valor: <EOF>
+[INFO] 18:26:08:685 [File System - Log obligatorio]/(6045:6071): Acceso FAT - Entrada: <9> - Valor: <0>
+[INFO] 18:26:09:185 [File System - Log obligatorio]/(6045:6071): Acceso FAT - Entrada: <10> - Valor: <0>
+[INFO] 18:26:09:690 [File System - Log obligatorio]/(6045:6071): Acceso FAT - Entrada: <11> - Valor: <0>
+[INFO] 18:26:10:191 [File System - Log obligatorio]/(6045:6071): Acceso FAT - Entrada: <12> - Valor: <0>
+[INFO] 18:26:10:700 [File System - Log obligatorio]/(6045:6071): Acceso FAT - Entrada: <9> - Valor: <10>
+[INFO] 18:26:11:201 [File System - Log obligatorio]/(6045:6071): Acceso FAT - Entrada: <10> - Valor: <11>
+[INFO] 18:26:11:703 [File System - Log obligatorio]/(6045:6071): Acceso FAT - Entrada: <11> - Valor: <12>
+[INFO] 18:26:12:209 [File System - Log obligatorio]/(6045:6071): Acceso FAT - Entrada: <12> - Valor: <EOF>
+[INFO] 18:26:12:709 [File System - Log obligatorio]/(6045:6071): Truncar Archivo: consolas - Tamaño: 64
+[INFO] 18:26:14:721 [File System - Log obligatorio]/(6045:6047): Acceso SWAP: <0>
+[INFO] 18:26:21:233 [File System - Log obligatorio]/(6045:6047): Acceso Bloque - Archivo: <consolas> - Bloque Archivo: <9> - Bloque FS: <1034>
+[INFO] 18:30:37:676 [File System - Log obligatorio]/(6349:6351): Acceso SWAP: <0>
+[INFO] 18:30:40:177 [File System - Log obligatorio]/(6349:6351): Acceso SWAP: <1>
+[INFO] 18:30:42:678 [File System - Log obligatorio]/(6349:6351): Acceso SWAP: <2>
+[INFO] 18:30:45:186 [File System - Log obligatorio]/(6349:6351): Acceso SWAP: <3>
+[INFO] 18:30:48:736 [File System - Log obligatorio]/(6349:6351): Acceso SWAP: <4>
+[INFO] 18:30:50:806 [File System - Log obligatorio]/(6349:6378): Crear Archivo: consolas
+[INFO] 18:30:51:237 [File System - Log obligatorio]/(6349:6351): Acceso SWAP: <5>
+[INFO] 18:30:51:310 [File System - Log obligatorio]/(6349:6379): Acceso FAT - Entrada: <0> - Valor: <EOF>
+[INFO] 18:30:51:811 [File System - Log obligatorio]/(6349:6379): Acceso FAT - Entrada: <1> - Valor: <0>
+[INFO] 18:30:52:311 [File System - Log obligatorio]/(6349:6379): Acceso FAT - Entrada: <2> - Valor: <0>
+[INFO] 18:30:52:812 [File System - Log obligatorio]/(6349:6379): Acceso FAT - Entrada: <3> - Valor: <0>
+[INFO] 18:30:53:313 [File System - Log obligatorio]/(6349:6379): Acceso FAT - Entrada: <4> - Valor: <0>
+[INFO] 18:30:53:738 [File System - Log obligatorio]/(6349:6351): Acceso SWAP: <6>
+[INFO] 18:30:53:814 [File System - Log obligatorio]/(6349:6379): Acceso FAT - Entrada: <1> - Valor: <2>
+[INFO] 18:30:54:314 [File System - Log obligatorio]/(6349:6379): Acceso FAT - Entrada: <2> - Valor: <3>
+[INFO] 18:30:54:815 [File System - Log obligatorio]/(6349:6379): Acceso FAT - Entrada: <3> - Valor: <4>
+[INFO] 18:30:55:315 [File System - Log obligatorio]/(6349:6379): Acceso FAT - Entrada: <4> - Valor: <EOF>
+[INFO] 18:30:55:818 [File System - Log obligatorio]/(6349:6379): Truncar Archivo: consolas - Tamaño: 64
+[INFO] 18:30:56:239 [File System - Log obligatorio]/(6349:6351): Acceso SWAP: <7>
+[INFO] 18:30:59:746 [File System - Log obligatorio]/(6349:6351): Acceso SWAP: <0>
+[INFO] 18:31:02:247 [File System - Log obligatorio]/(6349:6351): Acceso SWAP: <8>
+[INFO] 18:31:04:748 [File System - Log obligatorio]/(6349:6351): Acceso SWAP: <9>
+[INFO] 18:31:07:249 [File System - Log obligatorio]/(6349:6351): Acceso SWAP: <10>
+[INFO] 18:31:09:750 [File System - Log obligatorio]/(6349:6351): Acceso SWAP: <11>
+[INFO] 18:44:19:683 [File System - Log obligatorio]/(7191:7193): Acceso SWAP: <0>
+[INFO] 18:44:22:183 [File System - Log obligatorio]/(7191:7193): Acceso SWAP: <1>
+[INFO] 18:44:24:684 [File System - Log obligatorio]/(7191:7193): Acceso SWAP: <2>
+[INFO] 18:44:27:184 [File System - Log obligatorio]/(7191:7193): Acceso SWAP: <3>
+[INFO] 18:44:30:687 [File System - Log obligatorio]/(7191:7193): Acceso SWAP: <4>
+[INFO] 18:44:32:694 [File System - Log obligatorio]/(7191:7225): Crear Archivo: consolas
+[INFO] 18:44:33:188 [File System - Log obligatorio]/(7191:7193): Acceso SWAP: <5>
+[INFO] 18:44:33:196 [File System - Log obligatorio]/(7191:7226): Acceso FAT - Entrada: <0> - Valor: <EOF>
+[INFO] 18:44:33:697 [File System - Log obligatorio]/(7191:7226): Acceso FAT - Entrada: <1> - Valor: <2>
+[INFO] 18:44:34:198 [File System - Log obligatorio]/(7191:7226): Acceso FAT - Entrada: <2> - Valor: <3>
+[INFO] 18:44:34:699 [File System - Log obligatorio]/(7191:7226): Acceso FAT - Entrada: <3> - Valor: <4>
+[INFO] 18:44:35:200 [File System - Log obligatorio]/(7191:7226): Acceso FAT - Entrada: <4> - Valor: <EOF>
+[INFO] 18:44:35:689 [File System - Log obligatorio]/(7191:7193): Acceso SWAP: <6>
+[INFO] 18:44:35:700 [File System - Log obligatorio]/(7191:7226): Acceso FAT - Entrada: <5> - Valor: <0>
+[INFO] 18:44:36:200 [File System - Log obligatorio]/(7191:7226): Acceso FAT - Entrada: <6> - Valor: <0>
+[INFO] 18:44:36:703 [File System - Log obligatorio]/(7191:7226): Acceso FAT - Entrada: <7> - Valor: <0>
+[INFO] 18:44:37:203 [File System - Log obligatorio]/(7191:7226): Acceso FAT - Entrada: <8> - Valor: <0>
+[INFO] 18:44:37:703 [File System - Log obligatorio]/(7191:7226): Acceso FAT - Entrada: <5> - Valor: <6>
+[INFO] 18:44:38:190 [File System - Log obligatorio]/(7191:7193): Acceso SWAP: <7>
+[INFO] 18:44:38:204 [File System - Log obligatorio]/(7191:7226): Acceso FAT - Entrada: <6> - Valor: <7>
+[INFO] 18:44:38:706 [File System - Log obligatorio]/(7191:7226): Acceso FAT - Entrada: <7> - Valor: <8>
+[INFO] 18:44:39:206 [File System - Log obligatorio]/(7191:7226): Acceso FAT - Entrada: <8> - Valor: <EOF>
+[INFO] 18:44:39:707 [File System - Log obligatorio]/(7191:7226): Truncar Archivo: consolas - Tamaño: 64
+[INFO] 18:44:41:693 [File System - Log obligatorio]/(7191:7193): Acceso SWAP: <8>
+[INFO] 18:44:44:197 [File System - Log obligatorio]/(7191:7193): Acceso SWAP: <9>
+[INFO] 18:44:46:701 [File System - Log obligatorio]/(7191:7193): Acceso SWAP: <10>
+[INFO] 18:44:49:202 [File System - Log obligatorio]/(7191:7193): Acceso SWAP: <11>
+[INFO] 18:44:52:706 [File System - Log obligatorio]/(7191:7193): Acceso SWAP: <0>

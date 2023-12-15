@@ -4705,3 +4705,296 @@
 [WARNING] 17:40:10:665 [CPU]/(4767:4788): Proceso_desalojado <PID:1>
 [INFO] 17:40:10:665 [CPU]/(4767:4788): Todo el contexto se elimino correctamente .....
 [ERROR] 17:40:10:771 [CPU]/(4767:4769): [DESCONEXION]: KERNEL_Interrupt
+[INFO] 17:55:06:931 [CPU]/(3598:3599): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 17:55:41:786 [CPU]/(3598:3601): Cliente conectado a Kernel por dispatch
+[INFO] 17:55:41:786 [CPU]/(3598:3600): Cliente conectado a Kernel por interrupt
+[INFO] 17:55:41:787 [CPU]/(3598:3601): ::::::::::: KERNEL CONECTADO POR DISPATCH ::::::::::::
+[INFO] 17:55:41:787 [CPU]/(3598:3600): ::::::::::: KERNEL CONECTADO POR INTERRUPT ::::::::::::
+[INFO] 17:55:53:423 [CPU]/(3598:3669): [PID: 1][PC: 0][Registros: 0|0|0|0]
+[INFO] 17:55:53:985 [CPU]/(3598:3599): Instruccion recibida: [F_OPEN consolas W]
+[INFO] 17:55:54:497 [CPU]/(3598:3599): Instruccion recibida: [F_TRUNCATE consolas 64]
+[INFO] 17:55:54:497 [CPU]/(3598:3669): Elimino paquete
+[WARNING] 17:55:54:497 [CPU]/(3598:3669): Proceso_desalojado <PID:1>
+[INFO] 17:55:54:497 [CPU]/(3598:3669): Todo el contexto se elimino correctamente .....
+[INFO] 17:56:05:081 [CPU]/(3598:3673): [PID: 1][PC: 2][Registros: 0|0|0|0]
+[INFO] 17:56:05:581 [CPU]/(3598:3599): Instruccion recibida: [F_SEEK consolas 0]
+[INFO] 17:56:06:083 [CPU]/(3598:3599): Instruccion recibida: [F_WRITE consolas 0]
+[ERROR] 17:56:06:590 [CPU]/(3598:3673): >>>>>>< Nro_marco:-1
+[INFO] 17:56:06:590 [CPU]/(3598:3673): Elimino paquete
+[WARNING] 17:56:06:590 [CPU]/(3598:3673): Proceso_desalojado <PID:1>
+[INFO] 17:56:06:590 [CPU]/(3598:3673): Todo el contexto se elimino correctamente .....
+[INFO] 17:56:12:099 [CPU]/(3598:3676): [PID: 1][PC: 3][Registros: 0|0|0|0]
+[INFO] 17:56:12:601 [CPU]/(3598:3599): Instruccion recibida: [F_WRITE consolas 0]
+[ERROR] 17:56:13:101 [CPU]/(3598:3676): >>>>>>< Nro_marco:0
+[INFO] 17:56:13:101 [CPU]/(3598:3676): Elimino paquete
+[WARNING] 17:56:13:101 [CPU]/(3598:3676): Proceso_desalojado <PID:1>
+[INFO] 17:56:13:101 [CPU]/(3598:3676): Todo el contexto se elimino correctamente .....
+[ERROR] 17:56:13:231 [CPU]/(3598:3599): [DESCONEXION]: MEMORIA
+[INFO] 18:00:37:509 [CPU]/(4032:4033): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 18:00:38:344 [CPU]/(4032:4035): Cliente conectado a Kernel por dispatch
+[INFO] 18:00:38:344 [CPU]/(4032:4034): Cliente conectado a Kernel por interrupt
+[INFO] 18:00:38:345 [CPU]/(4032:4035): ::::::::::: KERNEL CONECTADO POR DISPATCH ::::::::::::
+[INFO] 18:00:38:345 [CPU]/(4032:4034): ::::::::::: KERNEL CONECTADO POR INTERRUPT ::::::::::::
+[INFO] 18:00:48:658 [CPU]/(4032:4047): [PID: 1][PC: 0][Registros: 0|0|0|0]
+[INFO] 18:00:49:161 [CPU]/(4032:4033): Instruccion recibida: [F_OPEN consolas W]
+[INFO] 18:00:49:664 [CPU]/(4032:4033): Instruccion recibida: [F_TRUNCATE consolas 64]
+[INFO] 18:00:49:664 [CPU]/(4032:4047): Elimino paquete
+[WARNING] 18:00:49:664 [CPU]/(4032:4047): Proceso_desalojado <PID:1>
+[INFO] 18:00:49:664 [CPU]/(4032:4047): Todo el contexto se elimino correctamente .....
+[INFO] 18:01:02:336 [CPU]/(4032:4051): [PID: 1][PC: 2][Registros: 0|0|0|0]
+[INFO] 18:01:02:899 [CPU]/(4032:4033): Instruccion recibida: [F_SEEK consolas 0]
+[INFO] 18:01:03:412 [CPU]/(4032:4033): Instruccion recibida: [F_WRITE consolas 0]
+[ERROR] 18:01:03:913 [CPU]/(4032:4051): >>>>>>< Nro_marco:-1
+[INFO] 18:01:03:913 [CPU]/(4032:4051): Elimino paquete
+[WARNING] 18:01:03:913 [CPU]/(4032:4051): Proceso_desalojado <PID:1>
+[INFO] 18:01:03:913 [CPU]/(4032:4051): Todo el contexto se elimino correctamente .....
+[INFO] 18:01:09:418 [CPU]/(4032:4054): [PID: 1][PC: 3][Registros: 0|0|0|0]
+[INFO] 18:01:09:918 [CPU]/(4032:4033): Instruccion recibida: [F_WRITE consolas 0]
+[ERROR] 18:01:10:419 [CPU]/(4032:4054): >>>>>>< Nro_marco:0
+[INFO] 18:01:10:420 [CPU]/(4032:4054): Elimino paquete
+[WARNING] 18:01:10:420 [CPU]/(4032:4054): Proceso_desalojado <PID:1>
+[INFO] 18:01:10:420 [CPU]/(4032:4054): Todo el contexto se elimino correctamente .....
+[ERROR] 18:01:10:689 [CPU]/(4032:4033): [DESCONEXION]: MEMORIA
+[INFO] 18:09:24:303 [CPU]/(4957:4958): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 18:09:25:074 [CPU]/(4957:4960): Cliente conectado a Kernel por dispatch
+[INFO] 18:09:25:074 [CPU]/(4957:4959): Cliente conectado a Kernel por interrupt
+[INFO] 18:09:25:075 [CPU]/(4957:4960): ::::::::::: KERNEL CONECTADO POR DISPATCH ::::::::::::
+[INFO] 18:09:25:075 [CPU]/(4957:4959): ::::::::::: KERNEL CONECTADO POR INTERRUPT ::::::::::::
+[INFO] 18:09:34:621 [CPU]/(4957:4972): [PID: 1][PC: 0][Registros: 0|0|0|0]
+[INFO] 18:09:35:122 [CPU]/(4957:4958): Instruccion recibida: [F_OPEN consolas W]
+[INFO] 18:09:35:628 [CPU]/(4957:4958): Instruccion recibida: [F_TRUNCATE consolas 64]
+[INFO] 18:09:35:628 [CPU]/(4957:4972): Elimino paquete
+[WARNING] 18:09:35:628 [CPU]/(4957:4972): Proceso_desalojado <PID:1>
+[INFO] 18:09:35:628 [CPU]/(4957:4972): Todo el contexto se elimino correctamente .....
+[INFO] 18:09:50:205 [CPU]/(4957:4976): [PID: 1][PC: 2][Registros: 0|0|0|0]
+[INFO] 18:09:50:706 [CPU]/(4957:4958): Instruccion recibida: [F_SEEK consolas 0]
+[INFO] 18:09:51:207 [CPU]/(4957:4958): Instruccion recibida: [F_WRITE consolas 0]
+[ERROR] 18:09:51:709 [CPU]/(4957:4976): >>>>>>< Nro_marco:-1
+[INFO] 18:09:51:709 [CPU]/(4957:4976): Elimino paquete
+[WARNING] 18:09:51:709 [CPU]/(4957:4976): Proceso_desalojado <PID:1>
+[INFO] 18:09:51:709 [CPU]/(4957:4976): Todo el contexto se elimino correctamente .....
+[INFO] 18:09:57:224 [CPU]/(4957:4979): [PID: 1][PC: 3][Registros: 0|0|0|0]
+[INFO] 18:09:57:725 [CPU]/(4957:4958): Instruccion recibida: [F_WRITE consolas 0]
+[ERROR] 18:09:58:225 [CPU]/(4957:4979): >>>>>>< Nro_marco:0
+[INFO] 18:09:58:226 [CPU]/(4957:4979): Elimino paquete
+[WARNING] 18:09:58:226 [CPU]/(4957:4979): Proceso_desalojado <PID:1>
+[INFO] 18:09:58:226 [CPU]/(4957:4979): Todo el contexto se elimino correctamente .....
+[ERROR] 18:17:27:042 [CPU]/(4957:4959): [DESCONEXION]: KERNEL_Interrupt
+[INFO] 18:18:06:814 [CPU]/(5310:5311): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 18:18:07:275 [CPU]/(5310:5313): Cliente conectado a Kernel por dispatch
+[INFO] 18:18:07:275 [CPU]/(5310:5312): Cliente conectado a Kernel por interrupt
+[INFO] 18:18:07:276 [CPU]/(5310:5313): ::::::::::: KERNEL CONECTADO POR DISPATCH ::::::::::::
+[INFO] 18:18:07:276 [CPU]/(5310:5312): ::::::::::: KERNEL CONECTADO POR INTERRUPT ::::::::::::
+[INFO] 18:18:17:194 [CPU]/(5310:5325): [PID: 1][PC: 0][Registros: 0|0|0|0]
+[INFO] 18:18:17:695 [CPU]/(5310:5311): Instruccion recibida: [F_OPEN consolas W]
+[INFO] 18:18:18:214 [CPU]/(5310:5311): Instruccion recibida: [F_TRUNCATE consolas 64]
+[INFO] 18:18:18:214 [CPU]/(5310:5325): Elimino paquete
+[WARNING] 18:18:18:214 [CPU]/(5310:5325): Proceso_desalojado <PID:1>
+[INFO] 18:18:18:214 [CPU]/(5310:5325): Todo el contexto se elimino correctamente .....
+[INFO] 18:18:34:762 [CPU]/(5310:5329): [PID: 1][PC: 2][Registros: 0|0|0|0]
+[INFO] 18:18:35:263 [CPU]/(5310:5311): Instruccion recibida: [F_SEEK consolas 0]
+[INFO] 18:18:35:766 [CPU]/(5310:5311): Instruccion recibida: [F_WRITE consolas 0]
+[ERROR] 18:18:36:268 [CPU]/(5310:5329): >>>>>>< Nro_marco:-1
+[INFO] 18:18:36:268 [CPU]/(5310:5329): Elimino paquete
+[WARNING] 18:18:36:268 [CPU]/(5310:5329): Proceso_desalojado <PID:1>
+[INFO] 18:18:36:268 [CPU]/(5310:5329): Todo el contexto se elimino correctamente .....
+[INFO] 18:18:41:778 [CPU]/(5310:5332): [PID: 1][PC: 3][Registros: 0|0|0|0]
+[INFO] 18:18:42:278 [CPU]/(5310:5311): Instruccion recibida: [F_WRITE consolas 0]
+[ERROR] 18:18:42:779 [CPU]/(5310:5332): >>>>>>< Nro_marco:0
+[INFO] 18:18:42:779 [CPU]/(5310:5332): Elimino paquete
+[WARNING] 18:18:42:779 [CPU]/(5310:5332): Proceso_desalojado <PID:1>
+[INFO] 18:18:42:779 [CPU]/(5310:5332): Todo el contexto se elimino correctamente .....
+[ERROR] 18:18:42:852 [CPU]/(5310:5311): [DESCONEXION]: MEMORIA
+[INFO] 18:21:05:450 [CPU]/(5422:5423): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 18:21:05:919 [CPU]/(5422:5425): Cliente conectado a Kernel por dispatch
+[INFO] 18:21:05:919 [CPU]/(5422:5424): Cliente conectado a Kernel por interrupt
+[INFO] 18:21:05:920 [CPU]/(5422:5425): ::::::::::: KERNEL CONECTADO POR DISPATCH ::::::::::::
+[INFO] 18:21:05:921 [CPU]/(5422:5424): ::::::::::: KERNEL CONECTADO POR INTERRUPT ::::::::::::
+[INFO] 18:21:16:113 [CPU]/(5422:5437): [PID: 1][PC: 0][Registros: 0|0|0|0]
+[INFO] 18:21:16:617 [CPU]/(5422:5423): Instruccion recibida: [F_OPEN consolas W]
+[INFO] 18:21:17:135 [CPU]/(5422:5423): Instruccion recibida: [F_TRUNCATE consolas 64]
+[INFO] 18:21:17:136 [CPU]/(5422:5437): Elimino paquete
+[WARNING] 18:21:17:136 [CPU]/(5422:5437): Proceso_desalojado <PID:1>
+[INFO] 18:21:17:136 [CPU]/(5422:5437): Todo el contexto se elimino correctamente .....
+[INFO] 18:21:21:648 [CPU]/(5422:5441): [PID: 1][PC: 2][Registros: 0|0|0|0]
+[INFO] 18:21:22:151 [CPU]/(5422:5423): Instruccion recibida: [F_SEEK consolas 0]
+[INFO] 18:21:22:659 [CPU]/(5422:5423): Instruccion recibida: [F_WRITE consolas 0]
+[ERROR] 18:21:23:162 [CPU]/(5422:5441): >>>>>>< Nro_marco:-1
+[INFO] 18:21:23:162 [CPU]/(5422:5441): Elimino paquete
+[WARNING] 18:21:23:162 [CPU]/(5422:5441): Proceso_desalojado <PID:1>
+[INFO] 18:21:23:162 [CPU]/(5422:5441): Todo el contexto se elimino correctamente .....
+[INFO] 18:21:28:738 [CPU]/(5422:5444): [PID: 1][PC: 3][Registros: 0|0|0|0]
+[INFO] 18:21:29:241 [CPU]/(5422:5423): Instruccion recibida: [F_WRITE consolas 0]
+[ERROR] 18:21:29:743 [CPU]/(5422:5444): >>>>>>< Nro_marco:0
+[INFO] 18:21:29:744 [CPU]/(5422:5444): Elimino paquete
+[WARNING] 18:21:29:744 [CPU]/(5422:5444): Proceso_desalojado <PID:1>
+[INFO] 18:21:29:744 [CPU]/(5422:5444): Todo el contexto se elimino correctamente .....
+[ERROR] 18:23:07:777 [CPU]/(5422:5425): [DESCONEXION]: KERNEL_Dispatch
+[INFO] 18:24:23:114 [CPU]/(5874:5875): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 18:24:25:497 [CPU]/(5874:5877): Cliente conectado a Kernel por dispatch
+[INFO] 18:24:25:497 [CPU]/(5874:5876): Cliente conectado a Kernel por interrupt
+[INFO] 18:24:25:498 [CPU]/(5874:5877): ::::::::::: KERNEL CONECTADO POR DISPATCH ::::::::::::
+[INFO] 18:24:25:498 [CPU]/(5874:5876): ::::::::::: KERNEL CONECTADO POR INTERRUPT ::::::::::::
+[INFO] 18:24:35:983 [CPU]/(5874:5896): [PID: 1][PC: 0][Registros: 0|0|0|0]
+[INFO] 18:24:36:486 [CPU]/(5874:5875): Instruccion recibida: [F_OPEN consolas W]
+[INFO] 18:24:36:990 [CPU]/(5874:5875): Instruccion recibida: [F_TRUNCATE consolas 64]
+[INFO] 18:24:36:990 [CPU]/(5874:5896): Elimino paquete
+[WARNING] 18:24:36:990 [CPU]/(5874:5896): Proceso_desalojado <PID:1>
+[INFO] 18:24:36:990 [CPU]/(5874:5896): Todo el contexto se elimino correctamente .....
+[INFO] 18:24:43:578 [CPU]/(5874:5900): [PID: 1][PC: 2][Registros: 0|0|0|0]
+[INFO] 18:24:44:079 [CPU]/(5874:5875): Instruccion recibida: [F_SEEK consolas 0]
+[INFO] 18:24:44:585 [CPU]/(5874:5875): Instruccion recibida: [F_WRITE consolas 0]
+[ERROR] 18:24:45:086 [CPU]/(5874:5900): >>>>>>< Nro_marco:-1
+[INFO] 18:24:45:086 [CPU]/(5874:5900): Elimino paquete
+[WARNING] 18:24:45:086 [CPU]/(5874:5900): Proceso_desalojado <PID:1>
+[INFO] 18:24:45:086 [CPU]/(5874:5900): Todo el contexto se elimino correctamente .....
+[INFO] 18:24:50:607 [CPU]/(5874:5903): [PID: 1][PC: 3][Registros: 0|0|0|0]
+[INFO] 18:24:51:107 [CPU]/(5874:5875): Instruccion recibida: [F_WRITE consolas 0]
+[ERROR] 18:24:51:608 [CPU]/(5874:5903): >>>>>>< Nro_marco:0
+[INFO] 18:24:51:608 [CPU]/(5874:5903): Elimino paquete
+[WARNING] 18:24:51:608 [CPU]/(5874:5903): Proceso_desalojado <PID:1>
+[INFO] 18:24:51:608 [CPU]/(5874:5903): Todo el contexto se elimino correctamente .....
+[ERROR] 18:25:36:671 [CPU]/(5874:5877): [DESCONEXION]: KERNEL_Dispatch
+[INFO] 18:25:52:645 [CPU]/(6050:6051): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 18:25:53:462 [CPU]/(6050:6053): Cliente conectado a Kernel por dispatch
+[INFO] 18:25:53:462 [CPU]/(6050:6052): Cliente conectado a Kernel por interrupt
+[INFO] 18:25:53:463 [CPU]/(6050:6053): ::::::::::: KERNEL CONECTADO POR DISPATCH ::::::::::::
+[INFO] 18:25:53:463 [CPU]/(6050:6052): ::::::::::: KERNEL CONECTADO POR INTERRUPT ::::::::::::
+[INFO] 18:26:03:158 [CPU]/(6050:6068): [PID: 1][PC: 0][Registros: 0|0|0|0]
+[INFO] 18:26:03:658 [CPU]/(6050:6051): Instruccion recibida: [F_OPEN consolas W]
+[INFO] 18:26:04:161 [CPU]/(6050:6051): Instruccion recibida: [F_TRUNCATE consolas 64]
+[INFO] 18:26:04:161 [CPU]/(6050:6068): Elimino paquete
+[WARNING] 18:26:04:161 [CPU]/(6050:6068): Proceso_desalojado <PID:1>
+[INFO] 18:26:04:161 [CPU]/(6050:6068): Todo el contexto se elimino correctamente .....
+[INFO] 18:26:12:710 [CPU]/(6050:6072): [PID: 1][PC: 2][Registros: 0|0|0|0]
+[INFO] 18:26:13:215 [CPU]/(6050:6051): Instruccion recibida: [F_SEEK consolas 0]
+[INFO] 18:26:13:716 [CPU]/(6050:6051): Instruccion recibida: [F_WRITE consolas 0]
+[ERROR] 18:26:14:217 [CPU]/(6050:6072): >>>>>>< Nro_marco:-1
+[INFO] 18:26:14:218 [CPU]/(6050:6072): Elimino paquete
+[WARNING] 18:26:14:218 [CPU]/(6050:6072): Proceso_desalojado <PID:1>
+[INFO] 18:26:14:218 [CPU]/(6050:6072): Todo el contexto se elimino correctamente .....
+[INFO] 18:26:19:728 [CPU]/(6050:6075): [PID: 1][PC: 3][Registros: 0|0|0|0]
+[INFO] 18:26:20:228 [CPU]/(6050:6051): Instruccion recibida: [F_WRITE consolas 0]
+[ERROR] 18:26:20:730 [CPU]/(6050:6075): >>>>>>< Nro_marco:0
+[INFO] 18:26:20:730 [CPU]/(6050:6075): Elimino paquete
+[WARNING] 18:26:20:730 [CPU]/(6050:6075): Proceso_desalojado <PID:1>
+[INFO] 18:26:20:730 [CPU]/(6050:6075): Todo el contexto se elimino correctamente .....
+[ERROR] 18:27:03:693 [CPU]/(6050:6052): [DESCONEXION]: KERNEL_Interrupt
+[INFO] 18:28:58:239 [CPU]/(6325:6326): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 18:29:00:090 [CPU]/(6325:6328): Cliente conectado a Kernel por dispatch
+[INFO] 18:29:00:091 [CPU]/(6325:6327): Cliente conectado a Kernel por interrupt
+[INFO] 18:29:00:092 [CPU]/(6325:6328): ::::::::::: KERNEL CONECTADO POR DISPATCH ::::::::::::
+[INFO] 18:29:00:092 [CPU]/(6325:6327): ::::::::::: KERNEL CONECTADO POR INTERRUPT ::::::::::::
+[ERROR] 18:29:52:860 [CPU]/(6325:6327): [DESCONEXION]: KERNEL_Interrupt
+[INFO] 18:29:56:043 [CPU]/(6353:6354): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 18:29:56:528 [CPU]/(6353:6357): Cliente conectado a Kernel por dispatch
+[INFO] 18:29:56:528 [CPU]/(6353:6356): Cliente conectado a Kernel por interrupt
+[INFO] 18:29:56:529 [CPU]/(6353:6357): ::::::::::: KERNEL CONECTADO POR DISPATCH ::::::::::::
+[INFO] 18:29:56:529 [CPU]/(6353:6356): ::::::::::: KERNEL CONECTADO POR INTERRUPT ::::::::::::
+[INFO] 18:30:48:234 [CPU]/(6353:6376): [PID: 1][PC: 0][Registros: 0|0|0|0]
+[INFO] 18:30:48:735 [CPU]/(6353:6354): Instruccion recibida: [SET AX 83]
+[INFO] 18:30:48:735 [CPU]/(6353:6376): AAAA 1
+[INFO] 18:30:48:735 [CPU]/(6353:6376): AAAA 1: 83
+[INFO] 18:30:49:239 [CPU]/(6353:6354): Instruccion recibida: [SET BX 79]
+[INFO] 18:30:49:240 [CPU]/(6353:6376): AAAA 1
+[INFO] 18:30:49:240 [CPU]/(6353:6376): AAAA 1: 79
+[INFO] 18:30:49:799 [CPU]/(6353:6354): Instruccion recibida: [SET CX 78]
+[INFO] 18:30:49:799 [CPU]/(6353:6376): AAAA 1
+[INFO] 18:30:49:799 [CPU]/(6353:6376): AAAA 1: 78
+[INFO] 18:30:50:303 [CPU]/(6353:6354): Instruccion recibida: [SET DX 89]
+[INFO] 18:30:50:303 [CPU]/(6353:6376): AAAA 1
+[INFO] 18:30:50:303 [CPU]/(6353:6376): AAAA 1: 89
+[INFO] 18:30:50:805 [CPU]/(6353:6354): Instruccion recibida: [F_OPEN consolas W]
+[INFO] 18:30:51:308 [CPU]/(6353:6354): Instruccion recibida: [F_TRUNCATE consolas 64]
+[INFO] 18:30:51:309 [CPU]/(6353:6376): Elimino paquete
+[WARNING] 18:30:51:309 [CPU]/(6353:6376): Proceso_desalojado <PID:1>
+[INFO] 18:30:51:309 [CPU]/(6353:6376): Todo el contexto se elimino correctamente .....
+[INFO] 18:30:55:818 [CPU]/(6353:6380): [PID: 1][PC: 6][Registros: 83|79|78|89]
+[INFO] 18:30:56:323 [CPU]/(6353:6354): Instruccion recibida: [F_SEEK consolas 0]
+[INFO] 18:30:56:827 [CPU]/(6353:6354): Instruccion recibida: [MOV_OUT 0 AX]
+[ERROR] 18:30:57:332 [CPU]/(6353:6380): >>>>>>< Nro_marco:-1
+[INFO] 18:30:57:332 [CPU]/(6353:6380): Elimino paquete
+[WARNING] 18:30:57:332 [CPU]/(6353:6380): Proceso_desalojado <PID:1>
+[INFO] 18:30:57:332 [CPU]/(6353:6380): Todo el contexto se elimino correctamente .....
+[INFO] 18:30:59:241 [CPU]/(6353:6383): [PID: 2][PC: 0][Registros: 0|0|0|0]
+[INFO] 18:30:59:746 [CPU]/(6353:6354): Instruccion recibida: [SET AX 1]
+[INFO] 18:30:59:747 [CPU]/(6353:6383): AAAA 1
+[INFO] 18:30:59:747 [CPU]/(6353:6383): AAAA 1: 1
+[INFO] 18:31:00:248 [CPU]/(6353:6354): Instruccion recibida: [F_OPEN consolas R]
+[INFO] 18:31:00:248 [CPU]/(6353:6357): PID: <2> - Voy a tener que desaloajr 0
+[WARNING] 18:31:00:248 [CPU]/(6353:6383): Proceso_desalojado <PID:2>
+[INFO] 18:31:00:248 [CPU]/(6353:6383): Todo el contexto se elimino correctamente .....
+[INFO] 18:31:05:748 [CPU]/(6353:6385): [PID: 1][PC: 7][Registros: 83|79|78|89]
+[INFO] 18:31:06:249 [CPU]/(6353:6354): Instruccion recibida: [MOV_OUT 0 AX]
+[ERROR] 18:31:06:750 [CPU]/(6353:6385): >>>>>>< Nro_marco:0
+[INFO] 18:31:07:751 [CPU]/(6353:6354): Instruccion recibida: [MOV_OUT 4 BX]
+[ERROR] 18:31:08:255 [CPU]/(6353:6385): >>>>>>< Nro_marco:0
+[INFO] 18:31:09:260 [CPU]/(6353:6354): Instruccion recibida: [MOV_OUT 8 CX]
+[ERROR] 18:31:09:761 [CPU]/(6353:6385): >>>>>>< Nro_marco:0
+[INFO] 18:31:10:762 [CPU]/(6353:6354): Instruccion recibida: [MOV_OUT 12 DX]
+[ERROR] 18:31:11:264 [CPU]/(6353:6385): >>>>>>< Nro_marco:0
+[INFO] 18:31:12:266 [CPU]/(6353:6354): Instruccion recibida: [F_WRITE consolas 0]
+[ERROR] 18:31:12:842 [CPU]/(6353:6354): [DESCONEXION]: MEMORIA
+[INFO] 18:41:30:415 [CPU]/(7015:7016): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 18:41:30:975 [CPU]/(7015:7018): Cliente conectado a Kernel por dispatch
+[INFO] 18:41:30:975 [CPU]/(7015:7017): Cliente conectado a Kernel por interrupt
+[INFO] 18:41:30:976 [CPU]/(7015:7018): ::::::::::: KERNEL CONECTADO POR DISPATCH ::::::::::::
+[INFO] 18:41:30:977 [CPU]/(7015:7017): ::::::::::: KERNEL CONECTADO POR INTERRUPT ::::::::::::
+[INFO] 18:42:23:092 [CPU]/(7015:7037): [PID: 1][PC: 0][Registros: 0|0|0|0]
+[ERROR] 18:42:23:094 [CPU]/(7015:7016): [DESCONEXION]: MEMORIA
+[INFO] 18:43:35:025 [CPU]/(7195:7196): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 18:43:37:956 [CPU]/(7195:7198): Cliente conectado a Kernel por dispatch
+[INFO] 18:43:37:956 [CPU]/(7195:7197): Cliente conectado a Kernel por interrupt
+[INFO] 18:43:37:957 [CPU]/(7195:7198): ::::::::::: KERNEL CONECTADO POR DISPATCH ::::::::::::
+[INFO] 18:43:37:957 [CPU]/(7195:7197): ::::::::::: KERNEL CONECTADO POR INTERRUPT ::::::::::::
+[INFO] 18:44:30:186 [CPU]/(7195:7223): [PID: 1][PC: 0][Registros: 0|0|0|0]
+[INFO] 18:44:30:687 [CPU]/(7195:7196): Instruccion recibida: [SET AX 83]
+[INFO] 18:44:30:687 [CPU]/(7195:7223): AAAA 1
+[INFO] 18:44:30:688 [CPU]/(7195:7223): AAAA 1: 83
+[INFO] 18:44:31:189 [CPU]/(7195:7196): Instruccion recibida: [SET BX 79]
+[INFO] 18:44:31:189 [CPU]/(7195:7223): AAAA 1
+[INFO] 18:44:31:189 [CPU]/(7195:7223): AAAA 1: 79
+[INFO] 18:44:31:690 [CPU]/(7195:7196): Instruccion recibida: [SET CX 78]
+[INFO] 18:44:31:690 [CPU]/(7195:7223): AAAA 1
+[INFO] 18:44:31:690 [CPU]/(7195:7223): AAAA 1: 78
+[INFO] 18:44:32:191 [CPU]/(7195:7196): Instruccion recibida: [SET DX 89]
+[INFO] 18:44:32:191 [CPU]/(7195:7223): AAAA 1
+[INFO] 18:44:32:191 [CPU]/(7195:7223): AAAA 1: 89
+[INFO] 18:44:32:692 [CPU]/(7195:7196): Instruccion recibida: [F_OPEN consolas W]
+[INFO] 18:44:33:195 [CPU]/(7195:7196): Instruccion recibida: [F_TRUNCATE consolas 64]
+[INFO] 18:44:33:195 [CPU]/(7195:7223): Elimino paquete
+[WARNING] 18:44:33:195 [CPU]/(7195:7223): Proceso_desalojado <PID:1>
+[INFO] 18:44:33:195 [CPU]/(7195:7223): Todo el contexto se elimino correctamente .....
+[INFO] 18:44:39:707 [CPU]/(7195:7227): [PID: 1][PC: 6][Registros: 83|79|78|89]
+[INFO] 18:44:40:208 [CPU]/(7195:7196): Instruccion recibida: [F_SEEK consolas 0]
+[INFO] 18:44:40:709 [CPU]/(7195:7196): Instruccion recibida: [MOV_OUT 0 AX]
+[ERROR] 18:44:41:211 [CPU]/(7195:7227): >>>>>>< Nro_marco:-1
+[INFO] 18:44:41:211 [CPU]/(7195:7227): Elimino paquete
+[WARNING] 18:44:41:211 [CPU]/(7195:7227): Proceso_desalojado <PID:1>
+[INFO] 18:44:41:211 [CPU]/(7195:7227): Todo el contexto se elimino correctamente .....
+[INFO] 18:44:52:205 [CPU]/(7195:7231): [PID: 2][PC: 0][Registros: 0|0|0|0]
+[ERROR] 18:44:52:840 [CPU]/(7195:7196): [DESCONEXION]: MEMORIA
+[INFO] 18:48:02:456 [CPU]/(7247:7248): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 18:48:04:324 [CPU]/(7247:7250): Cliente conectado a Kernel por dispatch
+[INFO] 18:48:04:324 [CPU]/(7247:7249): Cliente conectado a Kernel por interrupt
+[INFO] 18:48:04:325 [CPU]/(7247:7250): ::::::::::: KERNEL CONECTADO POR DISPATCH ::::::::::::
+[INFO] 18:48:04:325 [CPU]/(7247:7249): ::::::::::: KERNEL CONECTADO POR INTERRUPT ::::::::::::
+[ERROR] 18:48:19:528 [CPU]/(7247:7248): [DESCONEXION]: MEMORIA
+[INFO] 18:57:28:524 [CPU]/(7560:7561): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 18:57:29:168 [CPU]/(7560:7563): Cliente conectado a Kernel por dispatch
+[INFO] 18:57:29:168 [CPU]/(7560:7562): Cliente conectado a Kernel por interrupt
+[INFO] 18:57:29:171 [CPU]/(7560:7563): ::::::::::: KERNEL CONECTADO POR DISPATCH ::::::::::::
+[INFO] 18:57:29:171 [CPU]/(7560:7562): ::::::::::: KERNEL CONECTADO POR INTERRUPT ::::::::::::
+[ERROR] 18:57:33:890 [CPU]/(7560:7561): [DESCONEXION]: MEMORIA
+[INFO] 19:03:57:961 [CPU]/(7800:7801): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 19:03:59:049 [CPU]/(7800:7803): Cliente conectado a Kernel por dispatch
+[INFO] 19:03:59:049 [CPU]/(7800:7802): Cliente conectado a Kernel por interrupt
+[INFO] 19:03:59:049 [CPU]/(7800:7803): ::::::::::: KERNEL CONECTADO POR DISPATCH ::::::::::::
+[INFO] 19:03:59:050 [CPU]/(7800:7802): ::::::::::: KERNEL CONECTADO POR INTERRUPT ::::::::::::
+[ERROR] 19:04:07:863 [CPU]/(7800:7801): [DESCONEXION]: MEMORIA
+[INFO] 19:05:35:760 [CPU]/(7946:7947): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 19:05:36:626 [CPU]/(7946:7949): Cliente conectado a Kernel por dispatch
+[INFO] 19:05:36:626 [CPU]/(7946:7948): Cliente conectado a Kernel por interrupt
+[INFO] 19:05:36:627 [CPU]/(7946:7949): ::::::::::: KERNEL CONECTADO POR DISPATCH ::::::::::::
+[INFO] 19:05:36:627 [CPU]/(7946:7948): ::::::::::: KERNEL CONECTADO POR INTERRUPT ::::::::::::
+[ERROR] 19:05:44:157 [CPU]/(7946:7947): [DESCONEXION]: MEMORIA

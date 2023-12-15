@@ -76,8 +76,10 @@ void setear_config_del_marco_segun_algoritmo(t_marco* un_marco){
 
 
 void setear_config_por_ultima_referencia(t_marco* un_marco){
+	log_info(memoria_logger, "AA3");
 	if(strcmp(ALGORITMO_REEMPLAZO, "LRU") == 0){
 		if(un_marco->ultimo_uso != NULL){
+			un_marco->ultimo_uso = temporal_create();
 			temporal_destroy(un_marco->ultimo_uso);
 			un_marco->ultimo_uso = temporal_create();
 		}else{

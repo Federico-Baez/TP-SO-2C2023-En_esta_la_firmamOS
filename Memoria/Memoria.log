@@ -9287,3 +9287,1037 @@
 [ERROR] 17:40:10:772 [Memoria]/(2136:4773): [DESCONEXION]: KERNEL
 [ERROR] 17:40:10:773 [Memoria]/(2136:4771): [DESCONEXION]: CPU
 [ERROR] 17:40:10:772 [Memoria]/(2136:4763): [DESCONEXION]: FILESYSTEM
+[INFO] 17:54:27:929 [Memoria]/(3551:3551): Se inicia memoria con Paginacion.
+
+[INFO] 17:54:27:930 [Memoria]/(3551:3551): Algoritmo de reemplazo a usar: LRU
+
+[INFO] 17:54:27:930 [Memoria]/(3551:3551): Iniciando servidor Memoria
+[INFO] 17:54:47:760 [Memoria]/(3551:3551): Cliente conectado a Memoria
+[INFO] 17:54:47:760 [Memoria]/(3551:3551): [THREAD] Creo hilo para atender
+[INFO] 17:54:47:761 [Memoria]/(3551:3587): !!!!! FILESYSTEM CONECTADO !!!!!
+[INFO] 17:55:06:931 [Memoria]/(3551:3551): Cliente conectado a Memoria
+[INFO] 17:55:06:931 [Memoria]/(3551:3551): [THREAD] Creo hilo para atender
+[INFO] 17:55:06:931 [Memoria]/(3551:3602): !!!!! CPU CONECTADO !!!!!
+[INFO] 17:55:41:786 [Memoria]/(3551:3551): Cliente conectado a Memoria
+[INFO] 17:55:41:786 [Memoria]/(3551:3551): [THREAD] Creo hilo para atender
+[INFO] 17:55:41:786 [Memoria]/(3551:3660): !!!!! KERNEL CONECTADO !!!!!
+[INFO] 17:55:46:404 [Memoria]/(3551:3660): [Kernel] -> Peticion de creacion de proceso nuevo
+[INFO] 17:55:46:404 [Memoria]/(3551:3660): Intruccion: [F_OPEN consolas W]
+[INFO] 17:55:46:404 [Memoria]/(3551:3660): Intruccion: [F_TRUNCATE consolas 64]
+[INFO] 17:55:46:404 [Memoria]/(3551:3660): Intruccion: [F_SEEK consolas 0]
+[INFO] 17:55:46:404 [Memoria]/(3551:3660): Intruccion: [F_WRITE consolas 0]
+[WARNING] 17:55:52:920 [Memoria]/(3551:3587): >>>>> PID:1 | BLOQUES:4
+[INFO] 17:55:52:920 [Memoria]/(3551:3587): >>>>>LLEGA:: PID:1 | POS_SWAP:0
+[INFO] 17:55:52:920 [Memoria]/(3551:3587): >>>>>LLEGA:: PID:1 | POS_SWAP:1
+[INFO] 17:55:52:920 [Memoria]/(3551:3587): >>>>>LLEGA:: PID:1 | POS_SWAP:2
+[INFO] 17:55:52:920 [Memoria]/(3551:3587): >>>>>LLEGA:: PID:1 | POS_SWAP:3
+[INFO] 17:55:52:920 [Memoria]/(3551:3587): FILESYSTEM => <PID:1> <cant_pag:4> - <cant_bloques:4>
+[WARNING] 17:55:52:920 [Memoria]/(3551:3587): >>>>> CARGA_BLOQUES_PAG: PID:1|PAG:0|POS_SWAP:0
+[WARNING] 17:55:52:920 [Memoria]/(3551:3587): >>>>> CARGA_BLOQUES_PAG: PID:1|PAG:1|POS_SWAP:1
+[WARNING] 17:55:52:920 [Memoria]/(3551:3587): >>>>> CARGA_BLOQUES_PAG: PID:1|PAG:2|POS_SWAP:2
+[WARNING] 17:55:52:920 [Memoria]/(3551:3587): >>>>> CARGA_BLOQUES_PAG: PID:1|PAG:3|POS_SWAP:3
+[WARNING] 17:55:52:920 [Memoria]/(3551:3587): Se Cargaron pos_SWAP en proceso <PID:1>
+[INFO] 17:56:06:083 [Memoria]/(3551:3602): AAA_0
+[INFO] 17:56:06:590 [Memoria]/(3551:3602): AAA_1
+[INFO] 17:56:06:590 [Memoria]/(3551:3660): PAGE_FAUL: K->M
+[INFO] 17:56:06:590 [Memoria]/(3551:3660): BBB_1
+[INFO] 17:56:06:590 [Memoria]/(3551:3660): BBB_2
+[INFO] 17:56:06:590 [Memoria]/(3551:3660): BBB_3
+[INFO] 17:56:06:590 [Memoria]/(3551:3660): TTT_1
+[INFO] 17:56:06:590 [Memoria]/(3551:3660): TTT_ENTRE_AL_ELSE
+[INFO] 17:56:06:590 [Memoria]/(3551:3660): TTT_SALI_DEL_IF
+[INFO] 17:56:06:590 [Memoria]/(3551:3660): BBB_4
+[INFO] 17:56:07:094 [Memoria]/(3551:3660): PAG_SWAP <PID:1> <Pag:0> <Pos_SWAP:0>
+[INFO] 17:56:08:596 [Memoria]/(3551:3587): >>>>SETEADO
+[INFO] 17:56:12:601 [Memoria]/(3551:3602): AAA_0
+[INFO] 17:56:13:101 [Memoria]/(3551:3602): AAA_1
+[INFO] 18:00:36:129 [Memoria]/(4027:4027): Se inicia memoria con Paginacion.
+
+[INFO] 18:00:36:131 [Memoria]/(4027:4027): Algoritmo de reemplazo a usar: LRU
+
+[INFO] 18:00:36:131 [Memoria]/(4027:4027): Iniciando servidor Memoria
+[INFO] 18:00:36:917 [Memoria]/(4027:4027): Cliente conectado a Memoria
+[INFO] 18:00:36:917 [Memoria]/(4027:4027): [THREAD] Creo hilo para atender
+[INFO] 18:00:36:918 [Memoria]/(4027:4029): !!!!! FILESYSTEM CONECTADO !!!!!
+[INFO] 18:00:37:509 [Memoria]/(4027:4027): Cliente conectado a Memoria
+[INFO] 18:00:37:509 [Memoria]/(4027:4027): [THREAD] Creo hilo para atender
+[INFO] 18:00:37:509 [Memoria]/(4027:4036): !!!!! CPU CONECTADO !!!!!
+[INFO] 18:00:38:344 [Memoria]/(4027:4027): Cliente conectado a Memoria
+[INFO] 18:00:38:344 [Memoria]/(4027:4027): [THREAD] Creo hilo para atender
+[INFO] 18:00:38:345 [Memoria]/(4027:4038): !!!!! KERNEL CONECTADO !!!!!
+[INFO] 18:00:41:625 [Memoria]/(4027:4038): [Kernel] -> Peticion de creacion de proceso nuevo
+[INFO] 18:00:41:625 [Memoria]/(4027:4038): Intruccion: [F_OPEN consolas W]
+[INFO] 18:00:41:625 [Memoria]/(4027:4038): Intruccion: [F_TRUNCATE consolas 64]
+[INFO] 18:00:41:625 [Memoria]/(4027:4038): Intruccion: [F_SEEK consolas 0]
+[INFO] 18:00:41:625 [Memoria]/(4027:4038): Intruccion: [F_WRITE consolas 0]
+[WARNING] 18:00:48:148 [Memoria]/(4027:4029): >>>>> PID:1 | BLOQUES:4
+[INFO] 18:00:48:148 [Memoria]/(4027:4029): >>>>>LLEGA:: PID:1 | POS_SWAP:0
+[INFO] 18:00:48:148 [Memoria]/(4027:4029): >>>>>LLEGA:: PID:1 | POS_SWAP:1
+[INFO] 18:00:48:148 [Memoria]/(4027:4029): >>>>>LLEGA:: PID:1 | POS_SWAP:2
+[INFO] 18:00:48:148 [Memoria]/(4027:4029): >>>>>LLEGA:: PID:1 | POS_SWAP:3
+[INFO] 18:00:48:148 [Memoria]/(4027:4029): FILESYSTEM => <PID:1> <cant_pag:4> - <cant_bloques:4>
+[WARNING] 18:00:48:148 [Memoria]/(4027:4029): >>>>> CARGA_BLOQUES_PAG: PID:1|PAG:0|POS_SWAP:0
+[WARNING] 18:00:48:148 [Memoria]/(4027:4029): >>>>> CARGA_BLOQUES_PAG: PID:1|PAG:1|POS_SWAP:1
+[WARNING] 18:00:48:148 [Memoria]/(4027:4029): >>>>> CARGA_BLOQUES_PAG: PID:1|PAG:2|POS_SWAP:2
+[WARNING] 18:00:48:148 [Memoria]/(4027:4029): >>>>> CARGA_BLOQUES_PAG: PID:1|PAG:3|POS_SWAP:3
+[WARNING] 18:00:48:148 [Memoria]/(4027:4029): Se Cargaron pos_SWAP en proceso <PID:1>
+[INFO] 18:01:03:412 [Memoria]/(4027:4036): AAA_0
+[INFO] 18:01:03:913 [Memoria]/(4027:4036): AAA_1
+[INFO] 18:01:03:913 [Memoria]/(4027:4038): PAGE_FAUL: K->M
+[INFO] 18:01:03:913 [Memoria]/(4027:4038): BBB_1
+[INFO] 18:01:03:913 [Memoria]/(4027:4038): BBB_2
+[INFO] 18:01:03:913 [Memoria]/(4027:4038): BBB_3
+[INFO] 18:01:03:914 [Memoria]/(4027:4038): TTT_1
+[INFO] 18:01:03:914 [Memoria]/(4027:4038): TTT_ENTRE_AL_ELSE
+[INFO] 18:01:03:914 [Memoria]/(4027:4038): TTT_SALI_DEL_IF
+[INFO] 18:01:03:914 [Memoria]/(4027:4038): BBB_4
+[INFO] 18:01:04:414 [Memoria]/(4027:4038): PAG_SWAP <PID:1> <Pag:0> <Pos_SWAP:0>
+[INFO] 18:01:05:915 [Memoria]/(4027:4029): >>>>SETEADO
+[INFO] 18:01:09:919 [Memoria]/(4027:4036): AA3
+[INFO] 18:01:09:919 [Memoria]/(4027:4036): AA4
+[INFO] 18:01:09:919 [Memoria]/(4027:4036): AA5
+[INFO] 18:01:09:919 [Memoria]/(4027:4036): AA6
+[INFO] 18:01:09:919 [Memoria]/(4027:4036): AAA_0
+[INFO] 18:01:10:419 [Memoria]/(4027:4036): AAA_1
+[INFO] 18:01:10:420 [Memoria]/(4027:4029): AA1
+[INFO] 18:01:10:420 [Memoria]/(4027:4029): AA3
+[INFO] 18:01:10:420 [Memoria]/(4027:4029): AA4
+[INFO] 18:09:21:536 [Memoria]/(4952:4952): Se inicia memoria con Paginacion.
+
+[INFO] 18:09:21:536 [Memoria]/(4952:4952): Algoritmo de reemplazo a usar: LRU
+
+[INFO] 18:09:21:536 [Memoria]/(4952:4952): Iniciando servidor Memoria
+[INFO] 18:09:22:762 [Memoria]/(4952:4952): Cliente conectado a Memoria
+[INFO] 18:09:22:762 [Memoria]/(4952:4952): [THREAD] Creo hilo para atender
+[INFO] 18:09:22:763 [Memoria]/(4952:4954): !!!!! FILESYSTEM CONECTADO !!!!!
+[INFO] 18:09:24:302 [Memoria]/(4952:4952): Cliente conectado a Memoria
+[INFO] 18:09:24:302 [Memoria]/(4952:4952): [THREAD] Creo hilo para atender
+[INFO] 18:09:24:303 [Memoria]/(4952:4961): !!!!! CPU CONECTADO !!!!!
+[INFO] 18:09:25:074 [Memoria]/(4952:4952): Cliente conectado a Memoria
+[INFO] 18:09:25:074 [Memoria]/(4952:4952): [THREAD] Creo hilo para atender
+[INFO] 18:09:25:075 [Memoria]/(4952:4963): !!!!! KERNEL CONECTADO !!!!!
+[INFO] 18:09:27:607 [Memoria]/(4952:4963): [Kernel] -> Peticion de creacion de proceso nuevo
+[INFO] 18:09:27:607 [Memoria]/(4952:4963): Intruccion: [F_OPEN consolas W]
+[INFO] 18:09:27:607 [Memoria]/(4952:4963): Intruccion: [F_TRUNCATE consolas 64]
+[INFO] 18:09:27:607 [Memoria]/(4952:4963): Intruccion: [F_SEEK consolas 0]
+[INFO] 18:09:27:607 [Memoria]/(4952:4963): Intruccion: [F_WRITE consolas 0]
+[WARNING] 18:09:34:115 [Memoria]/(4952:4954): >>>>> PID:1 | BLOQUES:4
+[INFO] 18:09:34:115 [Memoria]/(4952:4954): >>>>>LLEGA:: PID:1 | POS_SWAP:0
+[INFO] 18:09:34:115 [Memoria]/(4952:4954): >>>>>LLEGA:: PID:1 | POS_SWAP:1
+[INFO] 18:09:34:115 [Memoria]/(4952:4954): >>>>>LLEGA:: PID:1 | POS_SWAP:2
+[INFO] 18:09:34:115 [Memoria]/(4952:4954): >>>>>LLEGA:: PID:1 | POS_SWAP:3
+[INFO] 18:09:34:115 [Memoria]/(4952:4954): FILESYSTEM => <PID:1> <cant_pag:4> - <cant_bloques:4>
+[WARNING] 18:09:34:115 [Memoria]/(4952:4954): >>>>> CARGA_BLOQUES_PAG: PID:1|PAG:0|POS_SWAP:0
+[WARNING] 18:09:34:115 [Memoria]/(4952:4954): >>>>> CARGA_BLOQUES_PAG: PID:1|PAG:1|POS_SWAP:1
+[WARNING] 18:09:34:115 [Memoria]/(4952:4954): >>>>> CARGA_BLOQUES_PAG: PID:1|PAG:2|POS_SWAP:2
+[WARNING] 18:09:34:115 [Memoria]/(4952:4954): >>>>> CARGA_BLOQUES_PAG: PID:1|PAG:3|POS_SWAP:3
+[WARNING] 18:09:34:115 [Memoria]/(4952:4954): Se Cargaron pos_SWAP en proceso <PID:1>
+[INFO] 18:09:51:207 [Memoria]/(4952:4961): AAA_0
+[INFO] 18:09:51:709 [Memoria]/(4952:4961): AAA_1
+[INFO] 18:09:51:709 [Memoria]/(4952:4963): PAGE_FAUL: K->M
+[INFO] 18:09:51:709 [Memoria]/(4952:4963): BBB_1
+[INFO] 18:09:51:709 [Memoria]/(4952:4963): BBB_2
+[INFO] 18:09:51:709 [Memoria]/(4952:4963): BBB_3
+[INFO] 18:09:51:709 [Memoria]/(4952:4963): TTT_1
+[INFO] 18:09:51:709 [Memoria]/(4952:4963): TTT_ENTRE_AL_ELSE
+[INFO] 18:09:51:709 [Memoria]/(4952:4963): TTT_SALI_DEL_IF
+[INFO] 18:09:51:709 [Memoria]/(4952:4963): BBB_4
+[INFO] 18:09:52:209 [Memoria]/(4952:4963): PAG_SWAP <PID:1> <Pag:0> <Pos_SWAP:0>
+[INFO] 18:09:53:710 [Memoria]/(4952:4954): >>>>SETEADO
+[INFO] 18:09:57:725 [Memoria]/(4952:4961): AA3
+[INFO] 18:09:57:725 [Memoria]/(4952:4961): AA4
+[INFO] 18:09:57:725 [Memoria]/(4952:4961): TIRE UN CREATE ANTES
+[INFO] 18:09:57:725 [Memoria]/(4952:4961): AA5
+[INFO] 18:09:57:725 [Memoria]/(4952:4961): AA6
+[INFO] 18:09:57:725 [Memoria]/(4952:4961): AAA_0
+[INFO] 18:09:58:225 [Memoria]/(4952:4961): AAA_1
+[INFO] 18:09:58:226 [Memoria]/(4952:4954): AA1
+[INFO] 18:09:58:226 [Memoria]/(4952:4954): AA3
+[INFO] 18:09:58:226 [Memoria]/(4952:4954): AA4
+[INFO] 18:09:58:226 [Memoria]/(4952:4954): TIRE UN CREATE ANTES
+[INFO] 18:09:58:226 [Memoria]/(4952:4954): AA5
+[INFO] 18:09:58:226 [Memoria]/(4952:4954): AA6
+[INFO] 18:09:58:226 [Memoria]/(4952:4954): AA SALI
+[INFO] 18:09:58:226 [Memoria]/(4952:4954): VOY A ENVIAR MARCO
+[ERROR] 18:17:27:042 [Memoria]/(4952:4963): [DESCONEXION]: KERNEL
+[ERROR] 18:17:27:043 [Memoria]/(4952:4954): [DESCONEXION]: FILESYSTEM
+[ERROR] 18:17:27:043 [Memoria]/(4952:4961): [DESCONEXION]: CPU
+[INFO] 18:18:05:521 [Memoria]/(5305:5305): Se inicia memoria con Paginacion.
+
+[INFO] 18:18:05:521 [Memoria]/(5305:5305): Algoritmo de reemplazo a usar: LRU
+
+[INFO] 18:18:05:521 [Memoria]/(5305:5305): Iniciando servidor Memoria
+[INFO] 18:18:06:205 [Memoria]/(5305:5305): Cliente conectado a Memoria
+[INFO] 18:18:06:206 [Memoria]/(5305:5305): [THREAD] Creo hilo para atender
+[INFO] 18:18:06:206 [Memoria]/(5305:5307): !!!!! FILESYSTEM CONECTADO !!!!!
+[INFO] 18:18:06:813 [Memoria]/(5305:5305): Cliente conectado a Memoria
+[INFO] 18:18:06:813 [Memoria]/(5305:5305): [THREAD] Creo hilo para atender
+[INFO] 18:18:06:814 [Memoria]/(5305:5314): !!!!! CPU CONECTADO !!!!!
+[INFO] 18:18:07:275 [Memoria]/(5305:5305): Cliente conectado a Memoria
+[INFO] 18:18:07:275 [Memoria]/(5305:5305): [THREAD] Creo hilo para atender
+[INFO] 18:18:07:275 [Memoria]/(5305:5316): !!!!! KERNEL CONECTADO !!!!!
+[INFO] 18:18:10:134 [Memoria]/(5305:5316): [Kernel] -> Peticion de creacion de proceso nuevo
+[INFO] 18:18:10:134 [Memoria]/(5305:5316): Intruccion: [F_OPEN consolas W]
+[INFO] 18:18:10:134 [Memoria]/(5305:5316): Intruccion: [F_TRUNCATE consolas 64]
+[INFO] 18:18:10:134 [Memoria]/(5305:5316): Intruccion: [F_SEEK consolas 0]
+[INFO] 18:18:10:134 [Memoria]/(5305:5316): Intruccion: [F_WRITE consolas 0]
+[WARNING] 18:18:16:693 [Memoria]/(5305:5307): >>>>> PID:1 | BLOQUES:4
+[INFO] 18:18:16:693 [Memoria]/(5305:5307): >>>>>LLEGA:: PID:1 | POS_SWAP:0
+[INFO] 18:18:16:693 [Memoria]/(5305:5307): >>>>>LLEGA:: PID:1 | POS_SWAP:1
+[INFO] 18:18:16:693 [Memoria]/(5305:5307): >>>>>LLEGA:: PID:1 | POS_SWAP:2
+[INFO] 18:18:16:693 [Memoria]/(5305:5307): >>>>>LLEGA:: PID:1 | POS_SWAP:3
+[INFO] 18:18:16:693 [Memoria]/(5305:5307): FILESYSTEM => <PID:1> <cant_pag:4> - <cant_bloques:4>
+[WARNING] 18:18:16:693 [Memoria]/(5305:5307): >>>>> CARGA_BLOQUES_PAG: PID:1|PAG:0|POS_SWAP:0
+[WARNING] 18:18:16:693 [Memoria]/(5305:5307): >>>>> CARGA_BLOQUES_PAG: PID:1|PAG:1|POS_SWAP:1
+[WARNING] 18:18:16:693 [Memoria]/(5305:5307): >>>>> CARGA_BLOQUES_PAG: PID:1|PAG:2|POS_SWAP:2
+[WARNING] 18:18:16:693 [Memoria]/(5305:5307): >>>>> CARGA_BLOQUES_PAG: PID:1|PAG:3|POS_SWAP:3
+[WARNING] 18:18:16:693 [Memoria]/(5305:5307): Se Cargaron pos_SWAP en proceso <PID:1>
+[INFO] 18:18:35:766 [Memoria]/(5305:5314): AAA_0
+[INFO] 18:18:36:267 [Memoria]/(5305:5314): AAA_1
+[INFO] 18:18:36:268 [Memoria]/(5305:5316): PAGE_FAUL: K->M
+[INFO] 18:18:36:268 [Memoria]/(5305:5316): BBB_1
+[INFO] 18:18:36:268 [Memoria]/(5305:5316): BBB_2
+[INFO] 18:18:36:268 [Memoria]/(5305:5316): BBB_3
+[INFO] 18:18:36:268 [Memoria]/(5305:5316): TTT_1
+[INFO] 18:18:36:268 [Memoria]/(5305:5316): TTT_ENTRE_AL_ELSE
+[INFO] 18:18:36:268 [Memoria]/(5305:5316): TTT_SALI_DEL_IF
+[INFO] 18:18:36:268 [Memoria]/(5305:5316): BBB_4
+[INFO] 18:18:36:769 [Memoria]/(5305:5316): PAG_SWAP <PID:1> <Pag:0> <Pos_SWAP:0>
+[INFO] 18:18:38:270 [Memoria]/(5305:5307): >>>>SETEADO
+[INFO] 18:18:42:278 [Memoria]/(5305:5314): AA3
+[INFO] 18:18:42:278 [Memoria]/(5305:5314): AA4
+[INFO] 18:18:42:278 [Memoria]/(5305:5314): TIRE UN CREATE ANTES
+[INFO] 18:18:42:278 [Memoria]/(5305:5314): AA5
+[INFO] 18:18:42:278 [Memoria]/(5305:5314): AA6
+[INFO] 18:18:42:278 [Memoria]/(5305:5314): AAA_0
+[INFO] 18:18:42:779 [Memoria]/(5305:5314): AAA_1
+[INFO] 18:18:42:780 [Memoria]/(5305:5307): AA1
+[INFO] 18:18:42:780 [Memoria]/(5305:5307): AA3
+[INFO] 18:21:04:503 [Memoria]/(5417:5417): Se inicia memoria con Paginacion.
+
+[INFO] 18:21:04:503 [Memoria]/(5417:5417): Algoritmo de reemplazo a usar: LRU
+
+[INFO] 18:21:04:504 [Memoria]/(5417:5417): Iniciando servidor Memoria
+[INFO] 18:21:05:011 [Memoria]/(5417:5417): Cliente conectado a Memoria
+[INFO] 18:21:05:011 [Memoria]/(5417:5417): [THREAD] Creo hilo para atender
+[INFO] 18:21:05:011 [Memoria]/(5417:5419): !!!!! FILESYSTEM CONECTADO !!!!!
+[INFO] 18:21:05:450 [Memoria]/(5417:5417): Cliente conectado a Memoria
+[INFO] 18:21:05:450 [Memoria]/(5417:5417): [THREAD] Creo hilo para atender
+[INFO] 18:21:05:450 [Memoria]/(5417:5426): !!!!! CPU CONECTADO !!!!!
+[INFO] 18:21:05:919 [Memoria]/(5417:5417): Cliente conectado a Memoria
+[INFO] 18:21:05:919 [Memoria]/(5417:5417): [THREAD] Creo hilo para atender
+[INFO] 18:21:05:920 [Memoria]/(5417:5428): !!!!! KERNEL CONECTADO !!!!!
+[INFO] 18:21:09:091 [Memoria]/(5417:5428): [Kernel] -> Peticion de creacion de proceso nuevo
+[INFO] 18:21:09:091 [Memoria]/(5417:5428): Intruccion: [F_OPEN consolas W]
+[INFO] 18:21:09:091 [Memoria]/(5417:5428): Intruccion: [F_TRUNCATE consolas 64]
+[INFO] 18:21:09:091 [Memoria]/(5417:5428): Intruccion: [F_SEEK consolas 0]
+[INFO] 18:21:09:091 [Memoria]/(5417:5428): Intruccion: [F_WRITE consolas 0]
+[WARNING] 18:21:15:612 [Memoria]/(5417:5419): >>>>> PID:1 | BLOQUES:4
+[INFO] 18:21:15:612 [Memoria]/(5417:5419): >>>>>LLEGA:: PID:1 | POS_SWAP:0
+[INFO] 18:21:15:612 [Memoria]/(5417:5419): >>>>>LLEGA:: PID:1 | POS_SWAP:1
+[INFO] 18:21:15:612 [Memoria]/(5417:5419): >>>>>LLEGA:: PID:1 | POS_SWAP:2
+[INFO] 18:21:15:612 [Memoria]/(5417:5419): >>>>>LLEGA:: PID:1 | POS_SWAP:3
+[INFO] 18:21:15:612 [Memoria]/(5417:5419): FILESYSTEM => <PID:1> <cant_pag:4> - <cant_bloques:4>
+[WARNING] 18:21:15:612 [Memoria]/(5417:5419): >>>>> CARGA_BLOQUES_PAG: PID:1|PAG:0|POS_SWAP:0
+[WARNING] 18:21:15:612 [Memoria]/(5417:5419): >>>>> CARGA_BLOQUES_PAG: PID:1|PAG:1|POS_SWAP:1
+[WARNING] 18:21:15:612 [Memoria]/(5417:5419): >>>>> CARGA_BLOQUES_PAG: PID:1|PAG:2|POS_SWAP:2
+[WARNING] 18:21:15:612 [Memoria]/(5417:5419): >>>>> CARGA_BLOQUES_PAG: PID:1|PAG:3|POS_SWAP:3
+[WARNING] 18:21:15:612 [Memoria]/(5417:5419): Se Cargaron pos_SWAP en proceso <PID:1>
+[INFO] 18:21:22:660 [Memoria]/(5417:5426): AAA_0
+[INFO] 18:21:23:161 [Memoria]/(5417:5426): AAA_1
+[INFO] 18:21:23:162 [Memoria]/(5417:5428): PAGE_FAUL: K->M
+[INFO] 18:21:23:162 [Memoria]/(5417:5428): BBB_1
+[INFO] 18:21:23:162 [Memoria]/(5417:5428): BBB_2
+[INFO] 18:21:23:162 [Memoria]/(5417:5428): BBB_3
+[INFO] 18:21:23:162 [Memoria]/(5417:5428): TTT_1
+[INFO] 18:21:23:162 [Memoria]/(5417:5428): TTT_ENTRE_AL_ELSE
+[INFO] 18:21:23:162 [Memoria]/(5417:5428): TTT_SALI_DEL_IF
+[INFO] 18:21:23:162 [Memoria]/(5417:5428): BBB_4
+[INFO] 18:21:23:663 [Memoria]/(5417:5428): PAG_SWAP <PID:1> <Pag:0> <Pos_SWAP:0>
+[INFO] 18:21:25:233 [Memoria]/(5417:5419): >>>>SETEADO
+[INFO] 18:21:29:242 [Memoria]/(5417:5426): AA3
+[INFO] 18:21:29:242 [Memoria]/(5417:5426): AA4
+[INFO] 18:21:29:242 [Memoria]/(5417:5426): TIRE UN CREATE ANTES
+[INFO] 18:21:29:242 [Memoria]/(5417:5426): AA5
+[INFO] 18:21:29:242 [Memoria]/(5417:5426): AA6
+[INFO] 18:21:29:242 [Memoria]/(5417:5426): AAA_0
+[INFO] 18:21:29:743 [Memoria]/(5417:5426): AAA_1
+[INFO] 18:21:29:744 [Memoria]/(5417:5419): AA1
+[INFO] 18:21:29:744 [Memoria]/(5417:5419): AA3
+[INFO] 18:21:29:744 [Memoria]/(5417:5419): AA4
+[INFO] 18:21:29:744 [Memoria]/(5417:5419): TIRE UN CREATE ANTES
+[INFO] 18:21:29:744 [Memoria]/(5417:5419): AA5
+[INFO] 18:21:29:744 [Memoria]/(5417:5419): AA6
+[INFO] 18:21:29:744 [Memoria]/(5417:5419): AA SALI
+[INFO] 18:21:29:744 [Memoria]/(5417:5419): VOY A ENVIAR MARCO
+[ERROR] 18:23:07:777 [Memoria]/(5417:5428): [DESCONEXION]: KERNEL
+[ERROR] 18:23:07:777 [Memoria]/(5417:5426): [DESCONEXION]: CPU
+[ERROR] 18:23:07:778 [Memoria]/(5417:5419): [DESCONEXION]: FILESYSTEM
+[INFO] 18:24:18:742 [Memoria]/(5868:5868): Se inicia memoria con Paginacion.
+
+[INFO] 18:24:18:743 [Memoria]/(5868:5868): Algoritmo de reemplazo a usar: LRU
+
+[INFO] 18:24:18:743 [Memoria]/(5868:5868): Iniciando servidor Memoria
+[INFO] 18:24:21:215 [Memoria]/(5868:5868): Cliente conectado a Memoria
+[INFO] 18:24:21:215 [Memoria]/(5868:5868): [THREAD] Creo hilo para atender
+[INFO] 18:24:21:216 [Memoria]/(5868:5871): !!!!! FILESYSTEM CONECTADO !!!!!
+[INFO] 18:24:23:113 [Memoria]/(5868:5868): Cliente conectado a Memoria
+[INFO] 18:24:23:114 [Memoria]/(5868:5868): [THREAD] Creo hilo para atender
+[INFO] 18:24:23:114 [Memoria]/(5868:5878): !!!!! CPU CONECTADO !!!!!
+[INFO] 18:24:25:497 [Memoria]/(5868:5868): Cliente conectado a Memoria
+[INFO] 18:24:25:497 [Memoria]/(5868:5868): [THREAD] Creo hilo para atender
+[INFO] 18:24:25:498 [Memoria]/(5868:5881): !!!!! KERNEL CONECTADO !!!!!
+[INFO] 18:24:28:953 [Memoria]/(5868:5881): [Kernel] -> Peticion de creacion de proceso nuevo
+[INFO] 18:24:28:953 [Memoria]/(5868:5881): Intruccion: [F_OPEN consolas W]
+[INFO] 18:24:28:953 [Memoria]/(5868:5881): Intruccion: [F_TRUNCATE consolas 64]
+[INFO] 18:24:28:953 [Memoria]/(5868:5881): Intruccion: [F_SEEK consolas 0]
+[INFO] 18:24:28:953 [Memoria]/(5868:5881): Intruccion: [F_WRITE consolas 0]
+[INFO] 18:24:28:953 [Memoria]/(5868:5881): Intruccion: [F_READ consolas 0]
+[WARNING] 18:24:35:480 [Memoria]/(5868:5871): >>>>> PID:1 | BLOQUES:4
+[INFO] 18:24:35:480 [Memoria]/(5868:5871): >>>>>LLEGA:: PID:1 | POS_SWAP:0
+[INFO] 18:24:35:480 [Memoria]/(5868:5871): >>>>>LLEGA:: PID:1 | POS_SWAP:1
+[INFO] 18:24:35:480 [Memoria]/(5868:5871): >>>>>LLEGA:: PID:1 | POS_SWAP:2
+[INFO] 18:24:35:480 [Memoria]/(5868:5871): >>>>>LLEGA:: PID:1 | POS_SWAP:3
+[INFO] 18:24:35:480 [Memoria]/(5868:5871): FILESYSTEM => <PID:1> <cant_pag:4> - <cant_bloques:4>
+[WARNING] 18:24:35:480 [Memoria]/(5868:5871): >>>>> CARGA_BLOQUES_PAG: PID:1|PAG:0|POS_SWAP:0
+[WARNING] 18:24:35:480 [Memoria]/(5868:5871): >>>>> CARGA_BLOQUES_PAG: PID:1|PAG:1|POS_SWAP:1
+[WARNING] 18:24:35:480 [Memoria]/(5868:5871): >>>>> CARGA_BLOQUES_PAG: PID:1|PAG:2|POS_SWAP:2
+[WARNING] 18:24:35:480 [Memoria]/(5868:5871): >>>>> CARGA_BLOQUES_PAG: PID:1|PAG:3|POS_SWAP:3
+[WARNING] 18:24:35:480 [Memoria]/(5868:5871): Se Cargaron pos_SWAP en proceso <PID:1>
+[INFO] 18:24:44:585 [Memoria]/(5868:5878): AAA_0
+[INFO] 18:24:45:086 [Memoria]/(5868:5878): AAA_1
+[INFO] 18:24:45:086 [Memoria]/(5868:5881): PAGE_FAUL: K->M
+[INFO] 18:24:45:086 [Memoria]/(5868:5881): BBB_1
+[INFO] 18:24:45:086 [Memoria]/(5868:5881): BBB_2
+[INFO] 18:24:45:086 [Memoria]/(5868:5881): BBB_3
+[INFO] 18:24:45:086 [Memoria]/(5868:5881): TTT_1
+[INFO] 18:24:45:086 [Memoria]/(5868:5881): TTT_ENTRE_AL_ELSE
+[INFO] 18:24:45:086 [Memoria]/(5868:5881): TTT_SALI_DEL_IF
+[INFO] 18:24:45:086 [Memoria]/(5868:5881): BBB_4
+[INFO] 18:24:45:598 [Memoria]/(5868:5881): PAG_SWAP <PID:1> <Pag:0> <Pos_SWAP:0>
+[INFO] 18:24:47:102 [Memoria]/(5868:5871): >>>>SETEADO
+[INFO] 18:24:51:108 [Memoria]/(5868:5878): AA3
+[INFO] 18:24:51:108 [Memoria]/(5868:5878): AA4
+[INFO] 18:24:51:108 [Memoria]/(5868:5878): TIRE UN CREATE ANTES
+[INFO] 18:24:51:108 [Memoria]/(5868:5878): AA5
+[INFO] 18:24:51:108 [Memoria]/(5868:5878): AA6
+[INFO] 18:24:51:108 [Memoria]/(5868:5878): AAA_0
+[INFO] 18:24:51:608 [Memoria]/(5868:5878): AAA_1
+[INFO] 18:24:51:609 [Memoria]/(5868:5871): AA1
+[INFO] 18:24:51:609 [Memoria]/(5868:5871): AA3
+[INFO] 18:24:51:609 [Memoria]/(5868:5871): AA4
+[INFO] 18:24:51:609 [Memoria]/(5868:5871): TIRE UN CREATE ANTES
+[INFO] 18:24:51:609 [Memoria]/(5868:5871): AA5
+[INFO] 18:24:51:609 [Memoria]/(5868:5871): AA6
+[INFO] 18:24:51:609 [Memoria]/(5868:5871): AA SALI
+[INFO] 18:24:51:609 [Memoria]/(5868:5871): VOY A ENVIAR MARCO
+[ERROR] 18:25:36:671 [Memoria]/(5868:5881): [DESCONEXION]: KERNEL
+[ERROR] 18:25:36:672 [Memoria]/(5868:5871): [DESCONEXION]: FILESYSTEM
+[ERROR] 18:25:36:673 [Memoria]/(5868:5878): [DESCONEXION]: CPU
+[INFO] 18:25:40:125 [Memoria]/(5868:5868): Cliente conectado a Memoria
+[INFO] 18:25:40:125 [Memoria]/(5868:5868): [THREAD] Creo hilo para atender
+[INFO] 18:25:40:125 [Memoria]/(5868:6033): !!!!! KERNEL CONECTADO !!!!!
+[ERROR] 18:25:40:125 [Memoria]/(5868:6033): [DESCONEXION]: KERNEL
+[INFO] 18:25:46:876 [Memoria]/(6043:6043): Se inicia memoria con Paginacion.
+
+[INFO] 18:25:46:876 [Memoria]/(6043:6043): Algoritmo de reemplazo a usar: LRU
+
+[INFO] 18:25:46:876 [Memoria]/(6043:6043): Iniciando servidor Memoria
+[INFO] 18:25:50:581 [Memoria]/(6043:6043): Cliente conectado a Memoria
+[INFO] 18:25:50:582 [Memoria]/(6043:6043): [THREAD] Creo hilo para atender
+[INFO] 18:25:50:582 [Memoria]/(6043:6046): !!!!! FILESYSTEM CONECTADO !!!!!
+[INFO] 18:25:52:644 [Memoria]/(6043:6043): Cliente conectado a Memoria
+[INFO] 18:25:52:644 [Memoria]/(6043:6043): [THREAD] Creo hilo para atender
+[INFO] 18:25:52:645 [Memoria]/(6043:6054): !!!!! CPU CONECTADO !!!!!
+[INFO] 18:25:53:462 [Memoria]/(6043:6043): Cliente conectado a Memoria
+[INFO] 18:25:53:462 [Memoria]/(6043:6043): [THREAD] Creo hilo para atender
+[INFO] 18:25:53:462 [Memoria]/(6043:6056): !!!!! KERNEL CONECTADO !!!!!
+[INFO] 18:25:56:146 [Memoria]/(6043:6056): [Kernel] -> Peticion de creacion de proceso nuevo
+[INFO] 18:25:56:146 [Memoria]/(6043:6056): Intruccion: [F_OPEN consolas W]
+[INFO] 18:25:56:146 [Memoria]/(6043:6056): Intruccion: [F_TRUNCATE consolas 64]
+[INFO] 18:25:56:146 [Memoria]/(6043:6056): Intruccion: [F_SEEK consolas 0]
+[INFO] 18:25:56:146 [Memoria]/(6043:6056): Intruccion: [F_WRITE consolas 0]
+[INFO] 18:25:56:146 [Memoria]/(6043:6056): Intruccion: [F_READ consolas 0]
+[WARNING] 18:26:02:656 [Memoria]/(6043:6046): >>>>> PID:1 | BLOQUES:4
+[INFO] 18:26:02:656 [Memoria]/(6043:6046): >>>>>LLEGA:: PID:1 | POS_SWAP:0
+[INFO] 18:26:02:656 [Memoria]/(6043:6046): >>>>>LLEGA:: PID:1 | POS_SWAP:1
+[INFO] 18:26:02:656 [Memoria]/(6043:6046): >>>>>LLEGA:: PID:1 | POS_SWAP:2
+[INFO] 18:26:02:656 [Memoria]/(6043:6046): >>>>>LLEGA:: PID:1 | POS_SWAP:3
+[INFO] 18:26:02:656 [Memoria]/(6043:6046): FILESYSTEM => <PID:1> <cant_pag:4> - <cant_bloques:4>
+[WARNING] 18:26:02:656 [Memoria]/(6043:6046): >>>>> CARGA_BLOQUES_PAG: PID:1|PAG:0|POS_SWAP:0
+[WARNING] 18:26:02:656 [Memoria]/(6043:6046): >>>>> CARGA_BLOQUES_PAG: PID:1|PAG:1|POS_SWAP:1
+[WARNING] 18:26:02:656 [Memoria]/(6043:6046): >>>>> CARGA_BLOQUES_PAG: PID:1|PAG:2|POS_SWAP:2
+[WARNING] 18:26:02:656 [Memoria]/(6043:6046): >>>>> CARGA_BLOQUES_PAG: PID:1|PAG:3|POS_SWAP:3
+[WARNING] 18:26:02:656 [Memoria]/(6043:6046): Se Cargaron pos_SWAP en proceso <PID:1>
+[INFO] 18:26:13:716 [Memoria]/(6043:6054): AAA_0
+[INFO] 18:26:14:217 [Memoria]/(6043:6054): AAA_1
+[INFO] 18:26:14:218 [Memoria]/(6043:6056): PAGE_FAUL: K->M
+[INFO] 18:26:14:218 [Memoria]/(6043:6056): BBB_1
+[INFO] 18:26:14:218 [Memoria]/(6043:6056): BBB_2
+[INFO] 18:26:14:218 [Memoria]/(6043:6056): BBB_3
+[INFO] 18:26:14:218 [Memoria]/(6043:6056): TTT_1
+[INFO] 18:26:14:218 [Memoria]/(6043:6056): TTT_ENTRE_AL_ELSE
+[INFO] 18:26:14:218 [Memoria]/(6043:6056): TTT_SALI_DEL_IF
+[INFO] 18:26:14:218 [Memoria]/(6043:6056): BBB_4
+[INFO] 18:26:14:721 [Memoria]/(6043:6056): PAG_SWAP <PID:1> <Pag:0> <Pos_SWAP:0>
+[INFO] 18:26:16:225 [Memoria]/(6043:6046): >>>>SETEADO
+[INFO] 18:26:20:229 [Memoria]/(6043:6054): AA3
+[INFO] 18:26:20:229 [Memoria]/(6043:6054): AAA_0
+[INFO] 18:26:20:729 [Memoria]/(6043:6054): AAA_1
+[INFO] 18:26:20:730 [Memoria]/(6043:6046): AA1
+[INFO] 18:26:20:730 [Memoria]/(6043:6046): AA3
+[INFO] 18:26:20:730 [Memoria]/(6043:6046): AA SALI
+[INFO] 18:26:20:730 [Memoria]/(6043:6046): VOY A ENVIAR MARCO
+[ERROR] 18:27:03:692 [Memoria]/(6043:6056): [DESCONEXION]: KERNEL
+[ERROR] 18:27:03:693 [Memoria]/(6043:6046): [DESCONEXION]: FILESYSTEM
+[ERROR] 18:27:03:694 [Memoria]/(6043:6054): [DESCONEXION]: CPU
+[INFO] 18:28:52:110 [Memoria]/(6316:6316): Se inicia memoria con Paginacion.
+
+[INFO] 18:28:52:110 [Memoria]/(6316:6316): Algoritmo de reemplazo a usar: FIFO
+
+[INFO] 18:28:52:110 [Memoria]/(6316:6316): Iniciando servidor Memoria
+[INFO] 18:28:55:159 [Memoria]/(6316:6316): Cliente conectado a Memoria
+[INFO] 18:28:55:159 [Memoria]/(6316:6316): [THREAD] Creo hilo para atender
+[INFO] 18:28:55:160 [Memoria]/(6316:6321): !!!!! FILESYSTEM CONECTADO !!!!!
+[INFO] 18:28:58:239 [Memoria]/(6316:6316): Cliente conectado a Memoria
+[INFO] 18:28:58:239 [Memoria]/(6316:6316): [THREAD] Creo hilo para atender
+[INFO] 18:28:58:239 [Memoria]/(6316:6329): !!!!! CPU CONECTADO !!!!!
+[INFO] 18:29:00:091 [Memoria]/(6316:6316): Cliente conectado a Memoria
+[INFO] 18:29:00:091 [Memoria]/(6316:6316): [THREAD] Creo hilo para atender
+[INFO] 18:29:00:091 [Memoria]/(6316:6331): !!!!! KERNEL CONECTADO !!!!!
+[ERROR] 18:29:52:867 [Memoria]/(6316:6331): [DESCONEXION]: KERNEL
+[ERROR] 18:29:52:868 [Memoria]/(6316:6321): [DESCONEXION]: FILESYSTEM
+[ERROR] 18:29:52:868 [Memoria]/(6316:6329): [DESCONEXION]: CPU
+[INFO] 18:29:55:465 [Memoria]/(6316:6316): Cliente conectado a Memoria
+[INFO] 18:29:55:465 [Memoria]/(6316:6316): [THREAD] Creo hilo para atender
+[INFO] 18:29:55:465 [Memoria]/(6316:6350): !!!!! FILESYSTEM CONECTADO !!!!!
+[INFO] 18:29:56:043 [Memoria]/(6316:6316): Cliente conectado a Memoria
+[INFO] 18:29:56:043 [Memoria]/(6316:6316): [THREAD] Creo hilo para atender
+[INFO] 18:29:56:043 [Memoria]/(6316:6355): !!!!! CPU CONECTADO !!!!!
+[INFO] 18:29:56:528 [Memoria]/(6316:6316): Cliente conectado a Memoria
+[INFO] 18:29:56:528 [Memoria]/(6316:6316): [THREAD] Creo hilo para atender
+[INFO] 18:29:56:528 [Memoria]/(6316:6359): !!!!! KERNEL CONECTADO !!!!!
+[INFO] 18:30:37:173 [Memoria]/(6316:6359): [Kernel] -> Peticion de creacion de proceso nuevo
+[INFO] 18:30:37:175 [Memoria]/(6316:6359): Intruccion: [SET AX 83]
+[INFO] 18:30:37:175 [Memoria]/(6316:6359): Intruccion: [SET BX 79]
+[INFO] 18:30:37:175 [Memoria]/(6316:6359): Intruccion: [SET CX 78]
+[INFO] 18:30:37:175 [Memoria]/(6316:6359): Intruccion: [SET DX 89]
+[INFO] 18:30:37:175 [Memoria]/(6316:6359): Intruccion: [F_OPEN consolas W]
+[INFO] 18:30:37:175 [Memoria]/(6316:6359): Intruccion: [F_TRUNCATE consolas 64]
+[INFO] 18:30:37:175 [Memoria]/(6316:6359): Intruccion: [F_SEEK consolas 0]
+[INFO] 18:30:37:175 [Memoria]/(6316:6359): Intruccion: [MOV_OUT 0 AX]
+[INFO] 18:30:37:175 [Memoria]/(6316:6359): Intruccion: [MOV_OUT 4 BX]
+[INFO] 18:30:37:175 [Memoria]/(6316:6359): Intruccion: [MOV_OUT 8 CX]
+[INFO] 18:30:37:175 [Memoria]/(6316:6359): Intruccion: [MOV_OUT 12 DX]
+[INFO] 18:30:37:175 [Memoria]/(6316:6359): Intruccion: [F_WRITE consolas 0]
+[INFO] 18:30:37:175 [Memoria]/(6316:6359): Intruccion: [SET AX 88]
+[INFO] 18:30:37:175 [Memoria]/(6316:6359): Intruccion: [SET BX 66]
+[INFO] 18:30:37:175 [Memoria]/(6316:6359): Intruccion: [SET CX 79]
+[INFO] 18:30:37:175 [Memoria]/(6316:6359): Intruccion: [MOV_OUT 16 AX]
+[INFO] 18:30:37:175 [Memoria]/(6316:6359): Intruccion: [MOV_OUT 20 BX]
+[INFO] 18:30:37:175 [Memoria]/(6316:6359): Intruccion: [MOV_OUT 24 CX]
+[INFO] 18:30:37:175 [Memoria]/(6316:6359): Intruccion: [MOV_OUT 28 AX]
+[INFO] 18:30:37:175 [Memoria]/(6316:6359): Intruccion: [F_SEEK consolas 16]
+[INFO] 18:30:37:175 [Memoria]/(6316:6359): Intruccion: [F_WRITE consolas 16]
+[INFO] 18:30:37:175 [Memoria]/(6316:6359): Intruccion: [SLEEP 180]
+[INFO] 18:30:37:175 [Memoria]/(6316:6359): Intruccion: [F_CLOSE consolas]
+[INFO] 18:30:37:175 [Memoria]/(6316:6359): Intruccion: [EXIT]
+[WARNING] 18:30:47:732 [Memoria]/(6316:6350): >>>>> PID:1 | BLOQUES:4
+[INFO] 18:30:47:732 [Memoria]/(6316:6350): >>>>>LLEGA:: PID:1 | POS_SWAP:0
+[INFO] 18:30:47:732 [Memoria]/(6316:6350): >>>>>LLEGA:: PID:1 | POS_SWAP:1
+[INFO] 18:30:47:732 [Memoria]/(6316:6350): >>>>>LLEGA:: PID:1 | POS_SWAP:2
+[INFO] 18:30:47:732 [Memoria]/(6316:6350): >>>>>LLEGA:: PID:1 | POS_SWAP:3
+[INFO] 18:30:47:732 [Memoria]/(6316:6350): FILESYSTEM => <PID:1> <cant_pag:4> - <cant_bloques:4>
+[WARNING] 18:30:47:732 [Memoria]/(6316:6350): >>>>> CARGA_BLOQUES_PAG: PID:1|PAG:0|POS_SWAP:0
+[WARNING] 18:30:47:732 [Memoria]/(6316:6350): >>>>> CARGA_BLOQUES_PAG: PID:1|PAG:1|POS_SWAP:1
+[WARNING] 18:30:47:732 [Memoria]/(6316:6350): >>>>> CARGA_BLOQUES_PAG: PID:1|PAG:2|POS_SWAP:2
+[WARNING] 18:30:47:732 [Memoria]/(6316:6350): >>>>> CARGA_BLOQUES_PAG: PID:1|PAG:3|POS_SWAP:3
+[WARNING] 18:30:47:732 [Memoria]/(6316:6350): Se Cargaron pos_SWAP en proceso <PID:1>
+[INFO] 18:30:48:234 [Memoria]/(6316:6359): [Kernel] -> Peticion de creacion de proceso nuevo
+[INFO] 18:30:48:235 [Memoria]/(6316:6359): Intruccion: [SET AX 1]
+[INFO] 18:30:48:236 [Memoria]/(6316:6359): Intruccion: [F_OPEN consolas R]
+[INFO] 18:30:48:236 [Memoria]/(6316:6359): Intruccion: [F_SEEK consolas 0]
+[INFO] 18:30:48:236 [Memoria]/(6316:6359): Intruccion: [F_READ consolas 0]
+[INFO] 18:30:48:236 [Memoria]/(6316:6359): Intruccion: [MOV_IN AX 0]
+[INFO] 18:30:48:236 [Memoria]/(6316:6359): Intruccion: [MOV_IN BX 4]
+[INFO] 18:30:48:236 [Memoria]/(6316:6359): Intruccion: [MOV_IN CX 8]
+[INFO] 18:30:48:236 [Memoria]/(6316:6359): Intruccion: [MOV_IN DX 12]
+[INFO] 18:30:48:236 [Memoria]/(6316:6359): Intruccion: [F_CLOSE consolas]
+[INFO] 18:30:48:236 [Memoria]/(6316:6359): Intruccion: [EXIT]
+[INFO] 18:30:56:828 [Memoria]/(6316:6355): AAA_0
+[INFO] 18:30:57:332 [Memoria]/(6316:6355): AAA_1
+[WARNING] 18:30:58:740 [Memoria]/(6316:6350): >>>>> PID:2 | BLOQUES:4
+[INFO] 18:30:58:740 [Memoria]/(6316:6350): >>>>>LLEGA:: PID:2 | POS_SWAP:4
+[INFO] 18:30:58:740 [Memoria]/(6316:6350): >>>>>LLEGA:: PID:2 | POS_SWAP:5
+[INFO] 18:30:58:740 [Memoria]/(6316:6350): >>>>>LLEGA:: PID:2 | POS_SWAP:6
+[INFO] 18:30:58:740 [Memoria]/(6316:6350): >>>>>LLEGA:: PID:2 | POS_SWAP:7
+[INFO] 18:30:58:740 [Memoria]/(6316:6350): FILESYSTEM => <PID:2> <cant_pag:4> - <cant_bloques:4>
+[WARNING] 18:30:58:740 [Memoria]/(6316:6350): >>>>> CARGA_BLOQUES_PAG: PID:2|PAG:0|POS_SWAP:4
+[WARNING] 18:30:58:740 [Memoria]/(6316:6350): >>>>> CARGA_BLOQUES_PAG: PID:2|PAG:1|POS_SWAP:5
+[WARNING] 18:30:58:740 [Memoria]/(6316:6350): >>>>> CARGA_BLOQUES_PAG: PID:2|PAG:2|POS_SWAP:6
+[WARNING] 18:30:58:740 [Memoria]/(6316:6350): >>>>> CARGA_BLOQUES_PAG: PID:2|PAG:3|POS_SWAP:7
+[WARNING] 18:30:58:740 [Memoria]/(6316:6350): Se Cargaron pos_SWAP en proceso <PID:2>
+[INFO] 18:30:59:241 [Memoria]/(6316:6359): PAGE_FAUL: K->M
+[INFO] 18:30:59:241 [Memoria]/(6316:6359): BBB_1
+[INFO] 18:30:59:241 [Memoria]/(6316:6359): BBB_2
+[INFO] 18:30:59:241 [Memoria]/(6316:6359): BBB_3
+[INFO] 18:30:59:241 [Memoria]/(6316:6359): TTT_1
+[INFO] 18:30:59:241 [Memoria]/(6316:6359): TTT_ENTRE_AL_ELSE
+[INFO] 18:30:59:241 [Memoria]/(6316:6359): TTT_SALI_DEL_IF
+[INFO] 18:30:59:241 [Memoria]/(6316:6359): BBB_4
+[INFO] 18:30:59:746 [Memoria]/(6316:6359): PAG_SWAP <PID:1> <Pag:0> <Pos_SWAP:0>
+[INFO] 18:30:59:746 [Memoria]/(6316:6359): [Kernel] -> Peticion de creacion de proceso nuevo
+[INFO] 18:30:59:747 [Memoria]/(6316:6359): Intruccion: [SET BX 1]
+[INFO] 18:30:59:747 [Memoria]/(6316:6359): Intruccion: [F_OPEN consolas R]
+[INFO] 18:30:59:747 [Memoria]/(6316:6359): Intruccion: [F_SEEK consolas 16]
+[INFO] 18:30:59:747 [Memoria]/(6316:6359): Intruccion: [F_READ consolas 0]
+[INFO] 18:30:59:747 [Memoria]/(6316:6359): Intruccion: [MOV_IN AX 0]
+[INFO] 18:30:59:747 [Memoria]/(6316:6359): Intruccion: [MOV_IN BX 4]
+[INFO] 18:30:59:747 [Memoria]/(6316:6359): Intruccion: [MOV_IN CX 8]
+[INFO] 18:30:59:747 [Memoria]/(6316:6359): Intruccion: [MOV_IN DX 12]
+[INFO] 18:30:59:747 [Memoria]/(6316:6359): Intruccion: [F_CLOSE consolas]
+[INFO] 18:30:59:747 [Memoria]/(6316:6359): Intruccion: [EXIT]
+[INFO] 18:31:02:247 [Memoria]/(6316:6350): >>>>SETEADO
+[INFO] 18:31:06:249 [Memoria]/(6316:6355): AA3
+[INFO] 18:31:06:249 [Memoria]/(6316:6355): AAA_0
+[INFO] 18:31:06:750 [Memoria]/(6316:6355): AAA_1
+[INFO] 18:31:06:750 [Memoria]/(6316:6355): AA3
+[INFO] 18:31:07:751 [Memoria]/(6316:6355): AA3
+[INFO] 18:31:07:751 [Memoria]/(6316:6355): AAA_0
+[INFO] 18:31:08:255 [Memoria]/(6316:6355): AAA_1
+[INFO] 18:31:08:255 [Memoria]/(6316:6355): AA3
+[INFO] 18:31:09:260 [Memoria]/(6316:6355): AA3
+[INFO] 18:31:09:260 [Memoria]/(6316:6355): AAA_0
+[INFO] 18:31:09:761 [Memoria]/(6316:6355): AAA_1
+[INFO] 18:31:09:761 [Memoria]/(6316:6355): AA3
+[INFO] 18:31:10:763 [Memoria]/(6316:6355): AA3
+[INFO] 18:31:10:763 [Memoria]/(6316:6355): AAA_0
+[INFO] 18:31:11:264 [Memoria]/(6316:6355): AAA_1
+[INFO] 18:31:11:264 [Memoria]/(6316:6355): AA3
+[WARNING] 18:31:12:251 [Memoria]/(6316:6350): >>>>> PID:3 | BLOQUES:4
+[INFO] 18:31:12:251 [Memoria]/(6316:6350): >>>>>LLEGA:: PID:3 | POS_SWAP:8
+[INFO] 18:31:12:251 [Memoria]/(6316:6350): >>>>>LLEGA:: PID:3 | POS_SWAP:9
+[INFO] 18:31:12:251 [Memoria]/(6316:6350): >>>>>LLEGA:: PID:3 | POS_SWAP:10
+[INFO] 18:31:12:251 [Memoria]/(6316:6350): >>>>>LLEGA:: PID:3 | POS_SWAP:11
+[INFO] 18:31:12:251 [Memoria]/(6316:6350): FILESYSTEM => <PID:3> <cant_pag:4> - <cant_bloques:4>
+[WARNING] 18:31:12:251 [Memoria]/(6316:6350): >>>>> CARGA_BLOQUES_PAG: PID:3|PAG:0|POS_SWAP:8
+[WARNING] 18:31:12:251 [Memoria]/(6316:6350): >>>>> CARGA_BLOQUES_PAG: PID:3|PAG:1|POS_SWAP:9
+[WARNING] 18:31:12:251 [Memoria]/(6316:6350): >>>>> CARGA_BLOQUES_PAG: PID:3|PAG:2|POS_SWAP:10
+[WARNING] 18:31:12:251 [Memoria]/(6316:6350): >>>>> CARGA_BLOQUES_PAG: PID:3|PAG:3|POS_SWAP:11
+[WARNING] 18:31:12:251 [Memoria]/(6316:6350): Se Cargaron pos_SWAP en proceso <PID:3>
+[INFO] 18:31:12:267 [Memoria]/(6316:6355): AA3
+[INFO] 18:31:12:267 [Memoria]/(6316:6355): AAA_0
+[INFO] 18:31:12:755 [Memoria]/(6316:6359): [Kernel] -> Peticion de creacion de proceso nuevo
+[INFO] 18:31:12:765 [Memoria]/(6316:6359): Intruccion: [SET AX 0]
+[INFO] 18:31:12:765 [Memoria]/(6316:6359): Intruccion: [SET BX 1]
+[INFO] 18:31:12:765 [Memoria]/(6316:6359): Intruccion: [F_OPEN fibonacci W]
+[INFO] 18:41:28:452 [Memoria]/(7010:7010): Se inicia memoria con Paginacion.
+
+[INFO] 18:41:28:452 [Memoria]/(7010:7010): Algoritmo de reemplazo a usar: FIFO
+
+[INFO] 18:41:28:453 [Memoria]/(7010:7010): Iniciando servidor Memoria
+[INFO] 18:41:29:648 [Memoria]/(7010:7010): Cliente conectado a Memoria
+[INFO] 18:41:29:648 [Memoria]/(7010:7010): [THREAD] Creo hilo para atender
+[INFO] 18:41:29:649 [Memoria]/(7010:7012): !!!!! FILESYSTEM CONECTADO !!!!!
+[INFO] 18:41:30:415 [Memoria]/(7010:7010): Cliente conectado a Memoria
+[INFO] 18:41:30:415 [Memoria]/(7010:7010): [THREAD] Creo hilo para atender
+[INFO] 18:41:30:415 [Memoria]/(7010:7019): !!!!! CPU CONECTADO !!!!!
+[INFO] 18:41:30:975 [Memoria]/(7010:7010): Cliente conectado a Memoria
+[INFO] 18:41:30:975 [Memoria]/(7010:7010): [THREAD] Creo hilo para atender
+[INFO] 18:41:30:976 [Memoria]/(7010:7021): !!!!! KERNEL CONECTADO !!!!!
+[INFO] 18:42:23:091 [Memoria]/(7010:7021): [Kernel] -> Peticion de creacion de proceso nuevo
+[INFO] 18:42:23:091 [Memoria]/(7010:7021): Intruccion: [SET AX 83]
+[INFO] 18:42:23:092 [Memoria]/(7010:7021): Intruccion: [SET BX 79]
+[ERROR] 18:42:23:092 [Memoria]/(7010:7019): PID<1> No encontrado en la lista de procesos
+[INFO] 18:42:23:092 [Memoria]/(7010:7021): Intruccion: [SET CX 78]
+[INFO] 18:42:23:092 [Memoria]/(7010:7021): Intruccion: [SET DX 89]
+[INFO] 18:42:23:092 [Memoria]/(7010:7021): Intruccion: [F_OPEN consolas W]
+[INFO] 18:42:23:092 [Memoria]/(7010:7021): Intruccion: [F_TRUNCATE consolas 64]
+[INFO] 18:42:23:092 [Memoria]/(7010:7021): Intruccion: [F_SEEK consolas 0]
+[INFO] 18:42:23:092 [Memoria]/(7010:7021): Intruccion: [MOV_OUT 0 AX]
+[INFO] 18:42:23:092 [Memoria]/(7010:7021): Intruccion: [MOV_OUT 4 BX]
+[INFO] 18:42:23:092 [Memoria]/(7010:7021): Intruccion: [MOV_OUT 8 CX]
+[INFO] 18:42:23:092 [Memoria]/(7010:7021): Intruccion: [MOV_OUT 12 DX]
+[INFO] 18:42:23:093 [Memoria]/(7010:7021): Intruccion: [F_WRITE consolas 0]
+[INFO] 18:42:23:093 [Memoria]/(7010:7021): Intruccion: [SET AX 88]
+[INFO] 18:42:23:093 [Memoria]/(7010:7021): Intruccion: [SET BX 66]
+[INFO] 18:42:23:093 [Memoria]/(7010:7021): Intruccion: [SET CX 79]
+[INFO] 18:42:23:093 [Memoria]/(7010:7021): Intruccion: [MOV_OUT 16 AX]
+[INFO] 18:42:23:093 [Memoria]/(7010:7021): Intruccion: [MOV_OUT 20 BX]
+[INFO] 18:42:23:093 [Memoria]/(7010:7021): Intruccion: [MOV_OUT 24 CX]
+[INFO] 18:42:23:093 [Memoria]/(7010:7021): Intruccion: [MOV_OUT 28 AX]
+[INFO] 18:42:23:093 [Memoria]/(7010:7021): Intruccion: [F_SEEK consolas 16]
+[INFO] 18:42:23:093 [Memoria]/(7010:7021): Intruccion: [F_WRITE consolas 16]
+[INFO] 18:42:23:093 [Memoria]/(7010:7021): Intruccion: [SLEEP 180]
+[INFO] 18:42:23:093 [Memoria]/(7010:7021): Intruccion: [F_CLOSE consolas]
+[INFO] 18:42:23:093 [Memoria]/(7010:7021): Intruccion: [EXIT]
+[INFO] 18:43:32:073 [Memoria]/(7190:7190): Se inicia memoria con Paginacion.
+
+[INFO] 18:43:32:074 [Memoria]/(7190:7190): Algoritmo de reemplazo a usar: FIFO
+
+[INFO] 18:43:32:074 [Memoria]/(7190:7190): Iniciando servidor Memoria
+[INFO] 18:43:34:474 [Memoria]/(7190:7190): Cliente conectado a Memoria
+[INFO] 18:43:34:474 [Memoria]/(7190:7190): [THREAD] Creo hilo para atender
+[INFO] 18:43:34:475 [Memoria]/(7190:7192): !!!!! FILESYSTEM CONECTADO !!!!!
+[INFO] 18:43:35:025 [Memoria]/(7190:7190): Cliente conectado a Memoria
+[INFO] 18:43:35:025 [Memoria]/(7190:7190): [THREAD] Creo hilo para atender
+[INFO] 18:43:35:025 [Memoria]/(7190:7199): !!!!! CPU CONECTADO !!!!!
+[INFO] 18:43:37:956 [Memoria]/(7190:7190): Cliente conectado a Memoria
+[INFO] 18:43:37:956 [Memoria]/(7190:7190): [THREAD] Creo hilo para atender
+[INFO] 18:43:37:957 [Memoria]/(7190:7201): !!!!! KERNEL CONECTADO !!!!!
+[INFO] 18:44:19:181 [Memoria]/(7190:7201): [Kernel] -> Peticion de creacion de proceso nuevo
+[INFO] 18:44:19:181 [Memoria]/(7190:7201): Intruccion: [SET AX 83]
+[INFO] 18:44:19:181 [Memoria]/(7190:7201): Intruccion: [SET BX 79]
+[INFO] 18:44:19:181 [Memoria]/(7190:7201): Intruccion: [SET CX 78]
+[INFO] 18:44:19:181 [Memoria]/(7190:7201): Intruccion: [SET DX 89]
+[INFO] 18:44:19:181 [Memoria]/(7190:7201): Intruccion: [F_OPEN consolas W]
+[INFO] 18:44:19:181 [Memoria]/(7190:7201): Intruccion: [F_TRUNCATE consolas 64]
+[INFO] 18:44:19:181 [Memoria]/(7190:7201): Intruccion: [F_SEEK consolas 0]
+[INFO] 18:44:19:181 [Memoria]/(7190:7201): Intruccion: [MOV_OUT 0 AX]
+[INFO] 18:44:19:181 [Memoria]/(7190:7201): Intruccion: [MOV_OUT 4 BX]
+[INFO] 18:44:19:181 [Memoria]/(7190:7201): Intruccion: [MOV_OUT 8 CX]
+[INFO] 18:44:19:181 [Memoria]/(7190:7201): Intruccion: [MOV_OUT 12 DX]
+[INFO] 18:44:19:181 [Memoria]/(7190:7201): Intruccion: [F_WRITE consolas 0]
+[INFO] 18:44:19:181 [Memoria]/(7190:7201): Intruccion: [SET AX 88]
+[INFO] 18:44:19:181 [Memoria]/(7190:7201): Intruccion: [SET BX 66]
+[INFO] 18:44:19:181 [Memoria]/(7190:7201): Intruccion: [SET CX 79]
+[INFO] 18:44:19:181 [Memoria]/(7190:7201): Intruccion: [MOV_OUT 16 AX]
+[INFO] 18:44:19:181 [Memoria]/(7190:7201): Intruccion: [MOV_OUT 20 BX]
+[INFO] 18:44:19:182 [Memoria]/(7190:7201): Intruccion: [MOV_OUT 24 CX]
+[INFO] 18:44:19:182 [Memoria]/(7190:7201): Intruccion: [MOV_OUT 28 AX]
+[INFO] 18:44:19:182 [Memoria]/(7190:7201): Intruccion: [F_SEEK consolas 16]
+[INFO] 18:44:19:182 [Memoria]/(7190:7201): Intruccion: [F_WRITE consolas 16]
+[INFO] 18:44:19:182 [Memoria]/(7190:7201): Intruccion: [SLEEP 180]
+[INFO] 18:44:19:182 [Memoria]/(7190:7201): Intruccion: [F_CLOSE consolas]
+[INFO] 18:44:19:182 [Memoria]/(7190:7201): Intruccion: [EXIT]
+[WARNING] 18:44:29:685 [Memoria]/(7190:7192): >>>>> PID:1 | BLOQUES:4
+[INFO] 18:44:29:685 [Memoria]/(7190:7192): >>>>>LLEGA:: PID:1 | POS_SWAP:0
+[INFO] 18:44:29:685 [Memoria]/(7190:7192): >>>>>LLEGA:: PID:1 | POS_SWAP:1
+[INFO] 18:44:29:685 [Memoria]/(7190:7192): >>>>>LLEGA:: PID:1 | POS_SWAP:2
+[INFO] 18:44:29:685 [Memoria]/(7190:7192): >>>>>LLEGA:: PID:1 | POS_SWAP:3
+[INFO] 18:44:29:685 [Memoria]/(7190:7192): FILESYSTEM => <PID:1> <cant_pag:4> - <cant_bloques:4>
+[WARNING] 18:44:29:685 [Memoria]/(7190:7192): >>>>> CARGA_BLOQUES_PAG: PID:1|PAG:0|POS_SWAP:0
+[WARNING] 18:44:29:685 [Memoria]/(7190:7192): >>>>> CARGA_BLOQUES_PAG: PID:1|PAG:1|POS_SWAP:1
+[WARNING] 18:44:29:685 [Memoria]/(7190:7192): >>>>> CARGA_BLOQUES_PAG: PID:1|PAG:2|POS_SWAP:2
+[WARNING] 18:44:29:685 [Memoria]/(7190:7192): >>>>> CARGA_BLOQUES_PAG: PID:1|PAG:3|POS_SWAP:3
+[WARNING] 18:44:29:685 [Memoria]/(7190:7192): Se Cargaron pos_SWAP en proceso <PID:1>
+[INFO] 18:44:30:186 [Memoria]/(7190:7201): [Kernel] -> Peticion de creacion de proceso nuevo
+[INFO] 18:44:30:186 [Memoria]/(7190:7201): Intruccion: [SET AX 1]
+[INFO] 18:44:30:186 [Memoria]/(7190:7201): Intruccion: [F_OPEN consolas R]
+[INFO] 18:44:30:186 [Memoria]/(7190:7201): Intruccion: [F_SEEK consolas 0]
+[INFO] 18:44:30:186 [Memoria]/(7190:7201): Intruccion: [F_READ consolas 0]
+[INFO] 18:44:30:187 [Memoria]/(7190:7201): Intruccion: [MOV_IN AX 0]
+[INFO] 18:44:30:187 [Memoria]/(7190:7201): Intruccion: [MOV_IN BX 4]
+[INFO] 18:44:30:187 [Memoria]/(7190:7201): Intruccion: [MOV_IN CX 8]
+[INFO] 18:44:30:187 [Memoria]/(7190:7201): Intruccion: [MOV_IN DX 12]
+[INFO] 18:44:30:187 [Memoria]/(7190:7201): Intruccion: [F_CLOSE consolas]
+[INFO] 18:44:30:187 [Memoria]/(7190:7201): Intruccion: [EXIT]
+[WARNING] 18:44:40:691 [Memoria]/(7190:7192): >>>>> PID:2 | BLOQUES:4
+[INFO] 18:44:40:691 [Memoria]/(7190:7192): >>>>>LLEGA:: PID:2 | POS_SWAP:4
+[INFO] 18:44:40:691 [Memoria]/(7190:7192): >>>>>LLEGA:: PID:2 | POS_SWAP:5
+[INFO] 18:44:40:691 [Memoria]/(7190:7192): >>>>>LLEGA:: PID:2 | POS_SWAP:6
+[INFO] 18:44:40:691 [Memoria]/(7190:7192): >>>>>LLEGA:: PID:2 | POS_SWAP:7
+[INFO] 18:44:40:691 [Memoria]/(7190:7192): FILESYSTEM => <PID:2> <cant_pag:4> - <cant_bloques:4>
+[WARNING] 18:44:40:691 [Memoria]/(7190:7192): >>>>> CARGA_BLOQUES_PAG: PID:2|PAG:0|POS_SWAP:4
+[WARNING] 18:44:40:691 [Memoria]/(7190:7192): >>>>> CARGA_BLOQUES_PAG: PID:2|PAG:1|POS_SWAP:5
+[WARNING] 18:44:40:691 [Memoria]/(7190:7192): >>>>> CARGA_BLOQUES_PAG: PID:2|PAG:2|POS_SWAP:6
+[WARNING] 18:44:40:691 [Memoria]/(7190:7192): >>>>> CARGA_BLOQUES_PAG: PID:2|PAG:3|POS_SWAP:7
+[WARNING] 18:44:40:691 [Memoria]/(7190:7192): Se Cargaron pos_SWAP en proceso <PID:2>
+[INFO] 18:44:40:710 [Memoria]/(7190:7199): AAA_0
+[INFO] 18:44:41:192 [Memoria]/(7190:7201): [Kernel] -> Peticion de creacion de proceso nuevo
+[INFO] 18:44:41:192 [Memoria]/(7190:7201): Intruccion: [SET BX 1]
+[INFO] 18:44:41:192 [Memoria]/(7190:7201): Intruccion: [F_OPEN consolas R]
+[INFO] 18:44:41:192 [Memoria]/(7190:7201): Intruccion: [F_SEEK consolas 16]
+[INFO] 18:44:41:192 [Memoria]/(7190:7201): Intruccion: [F_READ consolas 0]
+[INFO] 18:44:41:192 [Memoria]/(7190:7201): Intruccion: [MOV_IN AX 0]
+[INFO] 18:44:41:192 [Memoria]/(7190:7201): Intruccion: [MOV_IN BX 4]
+[INFO] 18:44:41:192 [Memoria]/(7190:7201): Intruccion: [MOV_IN CX 8]
+[INFO] 18:44:41:192 [Memoria]/(7190:7201): Intruccion: [MOV_IN DX 12]
+[INFO] 18:44:41:192 [Memoria]/(7190:7201): Intruccion: [F_CLOSE consolas]
+[INFO] 18:44:41:192 [Memoria]/(7190:7201): Intruccion: [EXIT]
+[INFO] 18:44:41:210 [Memoria]/(7190:7199): AAA_1
+[WARNING] 18:44:51:704 [Memoria]/(7190:7192): >>>>> PID:3 | BLOQUES:4
+[INFO] 18:44:51:704 [Memoria]/(7190:7192): >>>>>LLEGA:: PID:3 | POS_SWAP:8
+[INFO] 18:44:51:704 [Memoria]/(7190:7192): >>>>>LLEGA:: PID:3 | POS_SWAP:9
+[INFO] 18:44:51:704 [Memoria]/(7190:7192): >>>>>LLEGA:: PID:3 | POS_SWAP:10
+[INFO] 18:44:51:704 [Memoria]/(7190:7192): >>>>>LLEGA:: PID:3 | POS_SWAP:11
+[INFO] 18:44:51:704 [Memoria]/(7190:7192): FILESYSTEM => <PID:3> <cant_pag:4> - <cant_bloques:4>
+[WARNING] 18:44:51:704 [Memoria]/(7190:7192): >>>>> CARGA_BLOQUES_PAG: PID:3|PAG:0|POS_SWAP:8
+[WARNING] 18:44:51:704 [Memoria]/(7190:7192): >>>>> CARGA_BLOQUES_PAG: PID:3|PAG:1|POS_SWAP:9
+[WARNING] 18:44:51:704 [Memoria]/(7190:7192): >>>>> CARGA_BLOQUES_PAG: PID:3|PAG:2|POS_SWAP:10
+[WARNING] 18:44:51:704 [Memoria]/(7190:7192): >>>>> CARGA_BLOQUES_PAG: PID:3|PAG:3|POS_SWAP:11
+[WARNING] 18:44:51:704 [Memoria]/(7190:7192): Se Cargaron pos_SWAP en proceso <PID:3>
+[INFO] 18:44:52:205 [Memoria]/(7190:7201): PAGE_FAUL: K->M
+[INFO] 18:44:52:205 [Memoria]/(7190:7201): BBB_1
+[INFO] 18:44:52:205 [Memoria]/(7190:7201): BBB_2
+[INFO] 18:44:52:205 [Memoria]/(7190:7201): BBB_3
+[INFO] 18:44:52:205 [Memoria]/(7190:7201): TTT_1
+[INFO] 18:44:52:205 [Memoria]/(7190:7201): TTT_ENTRE_AL_ELSE
+[INFO] 18:44:52:205 [Memoria]/(7190:7201): TTT_SALI_DEL_IF
+[INFO] 18:44:52:205 [Memoria]/(7190:7201): BBB_4
+[INFO] 18:44:52:705 [Memoria]/(7190:7201): PAG_SWAP <PID:1> <Pag:0> <Pos_SWAP:0>
+[INFO] 18:44:52:706 [Memoria]/(7190:7201): [Kernel] -> Peticion de creacion de proceso nuevo
+[INFO] 18:44:52:706 [Memoria]/(7190:7201): Intruccion: [SET AX 0]
+[INFO] 18:44:52:706 [Memoria]/(7190:7201): Intruccion: [SET BX 1]
+[INFO] 18:44:52:706 [Memoria]/(7190:7201): Intruccion: [F_OPEN fibonacci W]
+[INFO] 18:48:00:947 [Memoria]/(7242:7242): Se inicia memoria con Paginacion.
+
+[INFO] 18:48:00:947 [Memoria]/(7242:7242): Algoritmo de reemplazo a usar: FIFO
+
+[INFO] 18:48:00:947 [Memoria]/(7242:7242): Iniciando servidor Memoria
+[INFO] 18:48:01:762 [Memoria]/(7242:7242): Cliente conectado a Memoria
+[INFO] 18:48:01:762 [Memoria]/(7242:7242): [THREAD] Creo hilo para atender
+[INFO] 18:48:01:762 [Memoria]/(7242:7246): !!!!! FILESYSTEM CONECTADO !!!!!
+[INFO] 18:48:02:456 [Memoria]/(7242:7242): Cliente conectado a Memoria
+[INFO] 18:48:02:456 [Memoria]/(7242:7242): [THREAD] Creo hilo para atender
+[INFO] 18:48:02:456 [Memoria]/(7242:7251): !!!!! CPU CONECTADO !!!!!
+[INFO] 18:48:04:325 [Memoria]/(7242:7242): Cliente conectado a Memoria
+[INFO] 18:48:04:325 [Memoria]/(7242:7242): [THREAD] Creo hilo para atender
+[INFO] 18:48:04:325 [Memoria]/(7242:7253): !!!!! KERNEL CONECTADO !!!!!
+[INFO] 18:48:19:445 [Memoria]/(7242:7253): [Kernel] -> Peticion de creacion de proceso nuevo
+[INFO] 18:48:19:445 [Memoria]/(7242:7253): Intruccion: [SET AX 0]
+[INFO] 18:48:19:445 [Memoria]/(7242:7253): Intruccion: [SET BX 1]
+[INFO] 18:48:19:445 [Memoria]/(7242:7253): Intruccion: [F_OPEN fibonacci W]
+[INFO] 18:57:27:479 [Memoria]/(7555:7555): Se inicia memoria con Paginacion.
+
+[INFO] 18:57:27:479 [Memoria]/(7555:7555): Algoritmo de reemplazo a usar: FIFO
+
+[INFO] 18:57:27:479 [Memoria]/(7555:7555): Iniciando servidor Memoria
+[INFO] 18:57:28:023 [Memoria]/(7555:7555): Cliente conectado a Memoria
+[INFO] 18:57:28:023 [Memoria]/(7555:7555): [THREAD] Creo hilo para atender
+[INFO] 18:57:28:023 [Memoria]/(7555:7557): !!!!! FILESYSTEM CONECTADO !!!!!
+[INFO] 18:57:28:523 [Memoria]/(7555:7555): Cliente conectado a Memoria
+[INFO] 18:57:28:523 [Memoria]/(7555:7555): [THREAD] Creo hilo para atender
+[INFO] 18:57:28:524 [Memoria]/(7555:7564): !!!!! CPU CONECTADO !!!!!
+[INFO] 18:57:29:169 [Memoria]/(7555:7555): Cliente conectado a Memoria
+[INFO] 18:57:29:169 [Memoria]/(7555:7555): [THREAD] Creo hilo para atender
+[INFO] 18:57:29:169 [Memoria]/(7555:7566): !!!!! KERNEL CONECTADO !!!!!
+[INFO] 18:57:33:810 [Memoria]/(7555:7566): [Kernel] -> Peticion de creacion de proceso nuevo
+[INFO] 18:57:33:810 [Memoria]/(7555:7566): AA1
+[INFO] 18:57:33:810 [Memoria]/(7555:7566): AA2
+[INFO] 18:57:33:810 [Memoria]/(7555:7566): AA3
+[WARNING] 18:57:33:810 [Memoria]/(7555:7566): REPITO WHILE
+[INFO] 18:57:33:810 [Memoria]/(7555:7566): AA4 tamnio instrusccion 9
+[INFO] 18:57:33:810 [Memoria]/(7555:7566): AA5 IF LINEA INSTRUCCION
+[INFO] 18:57:33:810 [Memoria]/(7555:7566): AA6
+[INFO] 18:57:33:810 [Memoria]/(7555:7566): AA7
+[INFO] 18:57:33:810 [Memoria]/(7555:7566): AA8
+[INFO] 18:57:33:810 [Memoria]/(7555:7566): AA9
+[INFO] 18:57:33:810 [Memoria]/(7555:7566): AA10
+[INFO] 18:57:33:810 [Memoria]/(7555:7566): Intruccion: [SET AX 0]
+[INFO] 18:57:33:810 [Memoria]/(7555:7566): AA11
+[INFO] 18:57:33:810 [Memoria]/(7555:7566): AA12 MALLO PSEUDO
+[INFO] 18:57:33:810 [Memoria]/(7555:7566): AA13
+[INFO] 18:57:33:810 [Memoria]/(7555:7566): AA14
+[INFO] 18:57:33:810 [Memoria]/(7555:7566): AA15
+[INFO] 18:57:33:810 [Memoria]/(7555:7566): AA16
+[INFO] 18:57:33:810 [Memoria]/(7555:7566): AA19
+[INFO] 18:57:33:810 [Memoria]/(7555:7566): AA20
+[INFO] 18:57:33:810 [Memoria]/(7555:7566): AA21
+[INFO] 18:57:33:810 [Memoria]/(7555:7566): AA21
+[INFO] 18:57:33:810 [Memoria]/(7555:7566): AA21
+[INFO] 18:57:33:810 [Memoria]/(7555:7566): AA22
+[INFO] 18:57:33:810 [Memoria]/(7555:7566): AA23
+[INFO] 18:57:33:810 [Memoria]/(7555:7566): AA24
+[INFO] 18:57:33:810 [Memoria]/(7555:7566): AA25
+[INFO] 18:57:33:810 [Memoria]/(7555:7566): AA26
+[INFO] 18:57:33:810 [Memoria]/(7555:7566): AA27
+[WARNING] 18:57:33:810 [Memoria]/(7555:7566): REPITO WHILE
+[INFO] 18:57:33:810 [Memoria]/(7555:7566): AA4 tamnio instrusccion 9
+[INFO] 18:57:33:810 [Memoria]/(7555:7566): AA5 IF LINEA INSTRUCCION
+[INFO] 18:57:33:810 [Memoria]/(7555:7566): AA6
+[INFO] 18:57:33:810 [Memoria]/(7555:7566): AA7
+[INFO] 18:57:33:810 [Memoria]/(7555:7566): AA8
+[INFO] 18:57:33:810 [Memoria]/(7555:7566): AA9
+[INFO] 18:57:33:810 [Memoria]/(7555:7566): AA10
+[INFO] 18:57:33:810 [Memoria]/(7555:7566): Intruccion: [SET BX 1]
+[INFO] 18:57:33:810 [Memoria]/(7555:7566): AA11
+[INFO] 18:57:33:810 [Memoria]/(7555:7566): AA12 MALLO PSEUDO
+[INFO] 18:57:33:810 [Memoria]/(7555:7566): AA13
+[INFO] 18:57:33:810 [Memoria]/(7555:7566): AA14
+[INFO] 18:57:33:810 [Memoria]/(7555:7566): AA15
+[INFO] 18:57:33:810 [Memoria]/(7555:7566): AA16
+[INFO] 18:57:33:810 [Memoria]/(7555:7566): AA19
+[INFO] 18:57:33:810 [Memoria]/(7555:7566): AA20
+[INFO] 18:57:33:810 [Memoria]/(7555:7566): AA21
+[INFO] 18:57:33:810 [Memoria]/(7555:7566): AA21
+[INFO] 18:57:33:810 [Memoria]/(7555:7566): AA21
+[INFO] 18:57:33:810 [Memoria]/(7555:7566): AA22
+[INFO] 18:57:33:810 [Memoria]/(7555:7566): AA23
+[INFO] 18:57:33:810 [Memoria]/(7555:7566): AA24
+[INFO] 18:57:33:810 [Memoria]/(7555:7566): AA25
+[INFO] 18:57:33:810 [Memoria]/(7555:7566): AA26
+[INFO] 18:57:33:810 [Memoria]/(7555:7566): AA27
+[WARNING] 18:57:33:810 [Memoria]/(7555:7566): REPITO WHILE
+[INFO] 18:57:33:810 [Memoria]/(7555:7566): AA4 tamnio instrusccion 19
+[INFO] 18:57:33:810 [Memoria]/(7555:7566): AA5 IF LINEA INSTRUCCION
+[INFO] 18:57:33:810 [Memoria]/(7555:7566): AA6
+[INFO] 18:57:33:810 [Memoria]/(7555:7566): AA7
+[INFO] 18:57:33:810 [Memoria]/(7555:7566): AA8
+[INFO] 18:57:33:810 [Memoria]/(7555:7566): AA9
+[INFO] 18:57:33:810 [Memoria]/(7555:7566): AA10
+[INFO] 18:57:33:810 [Memoria]/(7555:7566): Intruccion: [F_OPEN fibonacci W]
+[INFO] 18:57:33:810 [Memoria]/(7555:7566): AA11
+[INFO] 18:57:33:810 [Memoria]/(7555:7566): AA12 MALLO PSEUDO
+[INFO] 18:57:33:810 [Memoria]/(7555:7566): AA13
+[INFO] 18:57:33:810 [Memoria]/(7555:7566): AA14
+[INFO] 18:57:33:810 [Memoria]/(7555:7566): AA15
+[INFO] 18:57:33:810 [Memoria]/(7555:7566): AA16
+[INFO] 18:57:33:810 [Memoria]/(7555:7566): AA19
+[INFO] 18:57:33:810 [Memoria]/(7555:7566): AA20
+[INFO] 18:57:33:810 [Memoria]/(7555:7566): AA21
+[INFO] 18:57:33:810 [Memoria]/(7555:7566): AA21
+[INFO] 18:57:33:810 [Memoria]/(7555:7566): AA21
+[INFO] 18:57:33:810 [Memoria]/(7555:7566): AA22
+[INFO] 18:57:33:810 [Memoria]/(7555:7566): AA23
+[INFO] 18:57:33:810 [Memoria]/(7555:7566): AA24
+[INFO] 18:57:33:810 [Memoria]/(7555:7566): AA25
+[INFO] 18:57:33:810 [Memoria]/(7555:7566): AA26
+[INFO] 18:57:33:810 [Memoria]/(7555:7566): AA27
+[WARNING] 18:57:33:810 [Memoria]/(7555:7566): REPITO WHILE
+[INFO] 19:03:56:802 [Memoria]/(7795:7795): Se inicia memoria con Paginacion.
+
+[INFO] 19:03:56:802 [Memoria]/(7795:7795): Algoritmo de reemplazo a usar: FIFO
+
+[INFO] 19:03:56:803 [Memoria]/(7795:7795): Iniciando servidor Memoria
+[INFO] 19:03:57:444 [Memoria]/(7795:7795): Cliente conectado a Memoria
+[INFO] 19:03:57:444 [Memoria]/(7795:7795): [THREAD] Creo hilo para atender
+[INFO] 19:03:57:444 [Memoria]/(7795:7797): !!!!! FILESYSTEM CONECTADO !!!!!
+[INFO] 19:03:57:960 [Memoria]/(7795:7795): Cliente conectado a Memoria
+[INFO] 19:03:57:960 [Memoria]/(7795:7795): [THREAD] Creo hilo para atender
+[INFO] 19:03:57:961 [Memoria]/(7795:7804): !!!!! CPU CONECTADO !!!!!
+[INFO] 19:03:59:049 [Memoria]/(7795:7795): Cliente conectado a Memoria
+[INFO] 19:03:59:049 [Memoria]/(7795:7795): [THREAD] Creo hilo para atender
+[INFO] 19:03:59:049 [Memoria]/(7795:7806): !!!!! KERNEL CONECTADO !!!!!
+[INFO] 19:04:07:780 [Memoria]/(7795:7806): [Kernel] -> Peticion de creacion de proceso nuevo
+[INFO] 19:04:07:780 [Memoria]/(7795:7806): AA1
+[INFO] 19:04:07:780 [Memoria]/(7795:7806): AA2
+[INFO] 19:04:07:780 [Memoria]/(7795:7806): AA3
+[WARNING] 19:04:07:780 [Memoria]/(7795:7806): REPITO WHILE
+[INFO] 19:04:07:780 [Memoria]/(7795:7806): AA4 tamnio instrusccion 9
+[INFO] 19:04:07:780 [Memoria]/(7795:7806): AA5 IF LINEA INSTRUCCION
+[INFO] 19:04:07:780 [Memoria]/(7795:7806): AA6
+[INFO] 19:04:07:780 [Memoria]/(7795:7806): AA7
+[INFO] 19:04:07:780 [Memoria]/(7795:7806): AA8
+[INFO] 19:04:07:780 [Memoria]/(7795:7806): AA9
+[INFO] 19:04:07:780 [Memoria]/(7795:7806): AA10
+[INFO] 19:04:07:780 [Memoria]/(7795:7806): Intruccion: [SET AX 0]
+[INFO] 19:04:07:780 [Memoria]/(7795:7806): AA11
+[INFO] 19:04:07:780 [Memoria]/(7795:7806): AA11.5 0
+[INFO] 19:04:07:780 [Memoria]/(7795:7806): AA11.8 1
+[INFO] 19:04:07:780 [Memoria]/(7795:7806): AA11.8 AX
+[INFO] 19:04:07:780 [Memoria]/(7795:7806): AA11.5 1
+[INFO] 19:04:07:780 [Memoria]/(7795:7806): AA11.8 2
+[INFO] 19:04:07:780 [Memoria]/(7795:7806): AA11.8 0
+[INFO] 19:04:07:780 [Memoria]/(7795:7806): AA11.5 2
+[INFO] 19:04:07:780 [Memoria]/(7795:7806): AA11.8 3
+[INFO] 19:04:07:780 [Memoria]/(7795:7806): AA11.8 (null)
+[INFO] 19:04:07:780 [Memoria]/(7795:7806): AA12 MALLO PSEUDO
+[INFO] 19:04:07:780 [Memoria]/(7795:7806): AA13
+[INFO] 19:04:07:780 [Memoria]/(7795:7806): AA14
+[INFO] 19:04:07:780 [Memoria]/(7795:7806): AA15
+[INFO] 19:04:07:780 [Memoria]/(7795:7806): AA16
+[INFO] 19:04:07:780 [Memoria]/(7795:7806): AA19
+[INFO] 19:04:07:780 [Memoria]/(7795:7806): AA20
+[INFO] 19:04:07:780 [Memoria]/(7795:7806): AA21
+[INFO] 19:04:07:780 [Memoria]/(7795:7806): AA21
+[INFO] 19:04:07:780 [Memoria]/(7795:7806): AA21
+[INFO] 19:04:07:780 [Memoria]/(7795:7806): AA22
+[INFO] 19:04:07:780 [Memoria]/(7795:7806): AA23
+[INFO] 19:04:07:780 [Memoria]/(7795:7806): AA24
+[INFO] 19:04:07:780 [Memoria]/(7795:7806): AA25
+[INFO] 19:04:07:780 [Memoria]/(7795:7806): AA26
+[INFO] 19:04:07:781 [Memoria]/(7795:7806): AA27
+[WARNING] 19:04:07:781 [Memoria]/(7795:7806): REPITO WHILE
+[INFO] 19:04:07:781 [Memoria]/(7795:7806): AA4 tamnio instrusccion 9
+[INFO] 19:04:07:781 [Memoria]/(7795:7806): AA5 IF LINEA INSTRUCCION
+[INFO] 19:04:07:781 [Memoria]/(7795:7806): AA6
+[INFO] 19:04:07:781 [Memoria]/(7795:7806): AA7
+[INFO] 19:04:07:781 [Memoria]/(7795:7806): AA8
+[INFO] 19:04:07:781 [Memoria]/(7795:7806): AA9
+[INFO] 19:04:07:781 [Memoria]/(7795:7806): AA10
+[INFO] 19:04:07:781 [Memoria]/(7795:7806): Intruccion: [SET BX 1]
+[INFO] 19:04:07:781 [Memoria]/(7795:7806): AA11
+[INFO] 19:04:07:781 [Memoria]/(7795:7806): AA11.5 0
+[INFO] 19:04:07:781 [Memoria]/(7795:7806): AA11.8 1
+[INFO] 19:04:07:781 [Memoria]/(7795:7806): AA11.8 BX
+[INFO] 19:04:07:781 [Memoria]/(7795:7806): AA11.5 1
+[INFO] 19:04:07:781 [Memoria]/(7795:7806): AA11.8 2
+[INFO] 19:04:07:781 [Memoria]/(7795:7806): AA11.8 1
+[INFO] 19:04:07:781 [Memoria]/(7795:7806): AA11.5 2
+[INFO] 19:04:07:781 [Memoria]/(7795:7806): AA11.8 3
+[INFO] 19:04:07:781 [Memoria]/(7795:7806): AA11.8 (null)
+[INFO] 19:04:07:781 [Memoria]/(7795:7806): AA12 MALLO PSEUDO
+[INFO] 19:04:07:781 [Memoria]/(7795:7806): AA13
+[INFO] 19:04:07:781 [Memoria]/(7795:7806): AA14
+[INFO] 19:04:07:781 [Memoria]/(7795:7806): AA15
+[INFO] 19:04:07:781 [Memoria]/(7795:7806): AA16
+[INFO] 19:04:07:781 [Memoria]/(7795:7806): AA19
+[INFO] 19:04:07:781 [Memoria]/(7795:7806): AA20
+[INFO] 19:04:07:781 [Memoria]/(7795:7806): AA21
+[INFO] 19:04:07:781 [Memoria]/(7795:7806): AA21
+[INFO] 19:04:07:781 [Memoria]/(7795:7806): AA21
+[INFO] 19:04:07:781 [Memoria]/(7795:7806): AA22
+[INFO] 19:04:07:781 [Memoria]/(7795:7806): AA23
+[INFO] 19:04:07:781 [Memoria]/(7795:7806): AA24
+[INFO] 19:04:07:781 [Memoria]/(7795:7806): AA25
+[INFO] 19:04:07:781 [Memoria]/(7795:7806): AA26
+[INFO] 19:04:07:781 [Memoria]/(7795:7806): AA27
+[WARNING] 19:04:07:781 [Memoria]/(7795:7806): REPITO WHILE
+[INFO] 19:04:07:781 [Memoria]/(7795:7806): AA4 tamnio instrusccion 19
+[INFO] 19:04:07:781 [Memoria]/(7795:7806): AA5 IF LINEA INSTRUCCION
+[INFO] 19:04:07:781 [Memoria]/(7795:7806): AA6
+[INFO] 19:04:07:781 [Memoria]/(7795:7806): AA7
+[INFO] 19:04:07:781 [Memoria]/(7795:7806): AA8
+[INFO] 19:04:07:781 [Memoria]/(7795:7806): AA9
+[INFO] 19:04:07:781 [Memoria]/(7795:7806): AA10
+[INFO] 19:04:07:781 [Memoria]/(7795:7806): Intruccion: [F_OPEN fibonacci W]
+[INFO] 19:04:07:781 [Memoria]/(7795:7806): AA11
+[INFO] 19:04:07:781 [Memoria]/(7795:7806): AA11.5 0
+[INFO] 19:04:07:781 [Memoria]/(7795:7806): AA11.8 1
+[INFO] 19:04:07:781 [Memoria]/(7795:7806): AA11.8 fibonacci
+[INFO] 19:04:07:781 [Memoria]/(7795:7806): AA11.5 1
+[INFO] 19:04:07:781 [Memoria]/(7795:7806): AA11.8 2
+[INFO] 19:04:07:781 [Memoria]/(7795:7806): AA11.8 W
+[INFO] 19:04:07:781 [Memoria]/(7795:7806): AA11.5 2
+[INFO] 19:04:07:781 [Memoria]/(7795:7806): AA11.8 3
+[INFO] 19:04:07:781 [Memoria]/(7795:7806): AA11.8 (null)
+[INFO] 19:04:07:781 [Memoria]/(7795:7806): AA12 MALLO PSEUDO
+[INFO] 19:04:07:781 [Memoria]/(7795:7806): AA13
+[INFO] 19:04:07:781 [Memoria]/(7795:7806): AA14
+[INFO] 19:04:07:781 [Memoria]/(7795:7806): AA15
+[INFO] 19:04:07:781 [Memoria]/(7795:7806): AA16
+[INFO] 19:04:07:781 [Memoria]/(7795:7806): AA19
+[INFO] 19:04:07:781 [Memoria]/(7795:7806): AA20
+[INFO] 19:04:07:781 [Memoria]/(7795:7806): AA21
+[INFO] 19:04:07:781 [Memoria]/(7795:7806): AA21
+[INFO] 19:04:07:781 [Memoria]/(7795:7806): AA21
+[INFO] 19:04:07:781 [Memoria]/(7795:7806): AA22
+[INFO] 19:04:07:781 [Memoria]/(7795:7806): AA23
+[INFO] 19:04:07:781 [Memoria]/(7795:7806): AA24
+[INFO] 19:04:07:781 [Memoria]/(7795:7806): AA25
+[INFO] 19:04:07:781 [Memoria]/(7795:7806): AA26
+[INFO] 19:04:07:781 [Memoria]/(7795:7806): AA27
+[INFO] 19:05:33:731 [Memoria]/(7941:7941): Se inicia memoria con Paginacion.
+
+[INFO] 19:05:33:731 [Memoria]/(7941:7941): Algoritmo de reemplazo a usar: FIFO
+
+[INFO] 19:05:33:731 [Memoria]/(7941:7941): Iniciando servidor Memoria
+[INFO] 19:05:35:230 [Memoria]/(7941:7941): Cliente conectado a Memoria
+[INFO] 19:05:35:230 [Memoria]/(7941:7941): [THREAD] Creo hilo para atender
+[INFO] 19:05:35:231 [Memoria]/(7941:7943): !!!!! FILESYSTEM CONECTADO !!!!!
+[INFO] 19:05:35:760 [Memoria]/(7941:7941): Cliente conectado a Memoria
+[INFO] 19:05:35:760 [Memoria]/(7941:7941): [THREAD] Creo hilo para atender
+[INFO] 19:05:35:760 [Memoria]/(7941:7950): !!!!! CPU CONECTADO !!!!!
+[INFO] 19:05:36:626 [Memoria]/(7941:7941): Cliente conectado a Memoria
+[INFO] 19:05:36:627 [Memoria]/(7941:7941): [THREAD] Creo hilo para atender
+[INFO] 19:05:36:627 [Memoria]/(7941:7952): !!!!! KERNEL CONECTADO !!!!!
+[INFO] 19:05:44:079 [Memoria]/(7941:7952): [Kernel] -> Peticion de creacion de proceso nuevo
+[INFO] 19:05:44:079 [Memoria]/(7941:7952): AA1
+[INFO] 19:05:44:079 [Memoria]/(7941:7952): AA2
+[INFO] 19:05:44:079 [Memoria]/(7941:7952): AA3
+[WARNING] 19:05:44:079 [Memoria]/(7941:7952): REPITO WHILE
+[INFO] 19:05:44:079 [Memoria]/(7941:7952): AA4 tamnio instrusccion 9
+[INFO] 19:05:44:079 [Memoria]/(7941:7952): AA5 IF LINEA INSTRUCCION
+[INFO] 19:05:44:079 [Memoria]/(7941:7952): AA6
+[INFO] 19:05:44:079 [Memoria]/(7941:7952): AA7
+[INFO] 19:05:44:079 [Memoria]/(7941:7952): AA8
+[INFO] 19:05:44:079 [Memoria]/(7941:7952): AA9
+[INFO] 19:05:44:080 [Memoria]/(7941:7952): AA10
+[INFO] 19:05:44:080 [Memoria]/(7941:7952): Intruccion: [SET AX 0]
+[INFO] 19:05:44:080 [Memoria]/(7941:7952): AA11
+[INFO] 19:05:44:080 [Memoria]/(7941:7952): AA11.5 0
+[INFO] 19:05:44:080 [Memoria]/(7941:7952): AA11.8 1
+[INFO] 19:05:44:080 [Memoria]/(7941:7952): AA11.8 AX
+[INFO] 19:05:44:080 [Memoria]/(7941:7952): AA11.5 1
+[INFO] 19:05:44:080 [Memoria]/(7941:7952): AA11.8 2
+[INFO] 19:05:44:080 [Memoria]/(7941:7952): AA11.8 0
+[INFO] 19:05:44:080 [Memoria]/(7941:7952): AA11.5 2
+[INFO] 19:05:44:080 [Memoria]/(7941:7952): AA11.8 3
+[INFO] 19:05:44:080 [Memoria]/(7941:7952): AA11.8 (null)
+[INFO] 19:05:44:080 [Memoria]/(7941:7952): AA12 MALLO PSEUDO
+[INFO] 19:05:44:080 [Memoria]/(7941:7952): AA13
+[INFO] 19:05:44:080 [Memoria]/(7941:7952): AA14
+[INFO] 19:05:44:080 [Memoria]/(7941:7952): AA15
+[INFO] 19:05:44:080 [Memoria]/(7941:7952): AA16
+[INFO] 19:05:44:080 [Memoria]/(7941:7952): AA19
+[INFO] 19:05:44:080 [Memoria]/(7941:7952): AA20
+[INFO] 19:05:44:080 [Memoria]/(7941:7952): AA21
+[INFO] 19:05:44:080 [Memoria]/(7941:7952): AA21
+[INFO] 19:05:44:080 [Memoria]/(7941:7952): AA21
+[INFO] 19:05:44:080 [Memoria]/(7941:7952): AA22
+[INFO] 19:05:44:080 [Memoria]/(7941:7952): AA23
+[INFO] 19:05:44:080 [Memoria]/(7941:7952): AA24
+[INFO] 19:05:44:080 [Memoria]/(7941:7952): AA25
+[INFO] 19:05:44:080 [Memoria]/(7941:7952): AA26
+[INFO] 19:05:44:080 [Memoria]/(7941:7952): AA27
+[WARNING] 19:05:44:080 [Memoria]/(7941:7952): REPITO WHILE
+[INFO] 19:05:44:080 [Memoria]/(7941:7952): AA4 tamnio instrusccion 9
+[INFO] 19:05:44:080 [Memoria]/(7941:7952): AA5 IF LINEA INSTRUCCION
+[INFO] 19:05:44:080 [Memoria]/(7941:7952): AA6
+[INFO] 19:05:44:080 [Memoria]/(7941:7952): AA7
+[INFO] 19:05:44:080 [Memoria]/(7941:7952): AA8
+[INFO] 19:05:44:080 [Memoria]/(7941:7952): AA9
+[INFO] 19:05:44:080 [Memoria]/(7941:7952): AA10
+[INFO] 19:05:44:080 [Memoria]/(7941:7952): Intruccion: [SET BX 1]
+[INFO] 19:05:44:080 [Memoria]/(7941:7952): AA11
+[INFO] 19:05:44:080 [Memoria]/(7941:7952): AA11.5 0
+[INFO] 19:05:44:080 [Memoria]/(7941:7952): AA11.8 1
+[INFO] 19:05:44:080 [Memoria]/(7941:7952): AA11.8 BX
+[INFO] 19:05:44:080 [Memoria]/(7941:7952): AA11.5 1
+[INFO] 19:05:44:080 [Memoria]/(7941:7952): AA11.8 2
+[INFO] 19:05:44:080 [Memoria]/(7941:7952): AA11.8 1
+[INFO] 19:05:44:080 [Memoria]/(7941:7952): AA11.5 2
+[INFO] 19:05:44:080 [Memoria]/(7941:7952): AA11.8 3
+[INFO] 19:05:44:080 [Memoria]/(7941:7952): AA11.8 (null)
+[INFO] 19:05:44:080 [Memoria]/(7941:7952): AA12 MALLO PSEUDO
+[INFO] 19:05:44:080 [Memoria]/(7941:7952): AA13
+[INFO] 19:05:44:080 [Memoria]/(7941:7952): AA14
+[INFO] 19:05:44:080 [Memoria]/(7941:7952): AA15
+[INFO] 19:05:44:080 [Memoria]/(7941:7952): AA16
+[INFO] 19:05:44:080 [Memoria]/(7941:7952): AA19
+[INFO] 19:05:44:080 [Memoria]/(7941:7952): AA20
+[INFO] 19:05:44:080 [Memoria]/(7941:7952): AA21
+[INFO] 19:05:44:080 [Memoria]/(7941:7952): AA21
+[INFO] 19:05:44:080 [Memoria]/(7941:7952): AA21
+[INFO] 19:05:44:080 [Memoria]/(7941:7952): AA22
+[INFO] 19:05:44:080 [Memoria]/(7941:7952): AA23
+[INFO] 19:05:44:080 [Memoria]/(7941:7952): AA24
+[INFO] 19:05:44:080 [Memoria]/(7941:7952): AA25
+[INFO] 19:05:44:080 [Memoria]/(7941:7952): AA26
+[INFO] 19:05:44:080 [Memoria]/(7941:7952): AA27
+[WARNING] 19:05:44:080 [Memoria]/(7941:7952): REPITO WHILE
+[INFO] 19:05:44:080 [Memoria]/(7941:7952): AA4 tamnio instrusccion 19
+[INFO] 19:05:44:080 [Memoria]/(7941:7952): AA5 IF LINEA INSTRUCCION
+[INFO] 19:05:44:080 [Memoria]/(7941:7952): AA6
+[INFO] 19:05:44:080 [Memoria]/(7941:7952): AA7
+[INFO] 19:05:44:080 [Memoria]/(7941:7952): AA8
+[INFO] 19:05:44:081 [Memoria]/(7941:7952): AA9
+[INFO] 19:05:44:081 [Memoria]/(7941:7952): AA10
+[INFO] 19:05:44:081 [Memoria]/(7941:7952): Intruccion: [F_OPEN fibonacci W]
+[INFO] 19:05:44:081 [Memoria]/(7941:7952): AA11
+[INFO] 19:05:44:081 [Memoria]/(7941:7952): AA11.5 0
+[INFO] 19:05:44:081 [Memoria]/(7941:7952): AA11.8 1
+[INFO] 19:05:44:081 [Memoria]/(7941:7952): AA11.8 fibonacci
+[INFO] 19:05:44:081 [Memoria]/(7941:7952): AA11.5 1
+[INFO] 19:05:44:081 [Memoria]/(7941:7952): AA11.8 2
+[INFO] 19:05:44:081 [Memoria]/(7941:7952): AA11.8 W
+[INFO] 19:05:44:081 [Memoria]/(7941:7952): AA11.5 2
+[INFO] 19:05:44:081 [Memoria]/(7941:7952): AA11.8 3
+[INFO] 19:05:44:081 [Memoria]/(7941:7952): AA11.8 (null)
+[INFO] 19:05:44:081 [Memoria]/(7941:7952): AA12 MALLO PSEUDO
+[INFO] 19:05:44:081 [Memoria]/(7941:7952): AA13
+[INFO] 19:05:44:081 [Memoria]/(7941:7952): AA14
+[INFO] 19:05:44:081 [Memoria]/(7941:7952): AA15
+[INFO] 19:05:44:081 [Memoria]/(7941:7952): AA16
+[INFO] 19:05:44:081 [Memoria]/(7941:7952): AA19
+[INFO] 19:05:44:081 [Memoria]/(7941:7952): AA20
+[INFO] 19:05:44:081 [Memoria]/(7941:7952): AA21
+[INFO] 19:05:44:081 [Memoria]/(7941:7952): AA21
+[INFO] 19:05:44:081 [Memoria]/(7941:7952): AA21
+[INFO] 19:05:44:081 [Memoria]/(7941:7952): AA22
+[INFO] 19:05:44:081 [Memoria]/(7941:7952): AA23
+[INFO] 19:05:44:081 [Memoria]/(7941:7952): AA24
+[INFO] 19:05:44:081 [Memoria]/(7941:7952): AA25
+[INFO] 19:05:44:081 [Memoria]/(7941:7952): AA26
+[INFO] 19:05:44:081 [Memoria]/(7941:7952): AA27

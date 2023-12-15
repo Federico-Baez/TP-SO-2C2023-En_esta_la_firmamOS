@@ -4902,3 +4902,685 @@
 [INFO] 17:40:10:664 [Kernel]/(4772:4776): El lock es: 1 y su modo de apertura W
 [INFO] 17:40:10:664 [Kernel]/(4772:4776): VOy a entrar a obtener archivo
 [INFO] 17:40:10:664 [Kernel]/(4772:4776): ENtrew a obetener archiso
+[INFO] 17:55:41:785 [Kernel]/(3659:3659): [R1 | 1]
+[INFO] 17:55:41:785 [Kernel]/(3659:3659): [R2 | 1]
+[INFO] 17:55:41:785 [Kernel]/(3659:3659): [R3 | 1]
+[INFO] 17:55:41:785 [Kernel]/(3659:3659): [R4 | 1]
+[INFO] 17:55:41:786 [Kernel]/(3659:3659): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 17:55:41:787 [Kernel]/(3659:3659): HANDSHAKE CON FILESYSTEM [EXITOSO]
+[INFO] 17:55:41:787 [Kernel]/(3659:3659): HANDSHAKE CON CPU_Dispatch [EXITOSO]
+[INFO] 17:55:41:787 [Kernel]/(3659:3659): HANDSHAKE CON CPU_Interrupt [EXITOSO]
+[INFO] 17:55:46:404 [Kernel]/(3659:3667): Entre al IF
+[INFO] 17:55:46:404 [Kernel]/(3659:3667): Se aviso a Memoria del nuevo proceso
+[INFO] 17:55:53:422 [Kernel]/(3659:3661): Se recibio algo de MEMORIA
+[INFO] 17:55:53:986 [Kernel]/(3659:3663): Se recibio algo de CPU_Dispatch
+[WARNING] 17:55:53:986 [Kernel]/(3659:3663): Entre a atender instruccion
+[INFO] 17:55:53:987 [Kernel]/(3659:3662): Se recibio algo de FILESYSTEM
+[INFO] 17:55:53:987 [Kernel]/(3659:3662): LA oepracion es: -1 -- ABRIR_ARCHIVO
+[INFO] 17:55:53:987 [Kernel]/(3659:3663): Cree el archivo: consolas
+[INFO] 17:55:53:989 [Kernel]/(3659:3662): Se recibio algo de FILESYSTEM
+[INFO] 17:55:53:989 [Kernel]/(3659:3662): LA oepracion es: 0 -- CREAR_ARCHIVO
+[INFO] 17:55:53:989 [Kernel]/(3659:3662): Se creo el archivo en FS
+[INFO] 17:55:54:497 [Kernel]/(3659:3663): Se recibio algo de CPU_Dispatch
+[WARNING] 17:55:54:497 [Kernel]/(3659:3663): Entre a atender instruccion
+[INFO] 17:56:05:080 [Kernel]/(3659:3662): Se recibio algo de FILESYSTEM
+[INFO] 17:56:05:080 [Kernel]/(3659:3662):  La respuesta es: Truncate realizado
+[INFO] 17:56:05:582 [Kernel]/(3659:3663): Se recibio algo de CPU_Dispatch
+[WARNING] 17:56:05:582 [Kernel]/(3659:3663): Entre a atender instruccion
+[INFO] 17:56:06:590 [Kernel]/(3659:3663): Se recibio algo de CPU_Dispatch
+[WARNING] 17:56:06:590 [Kernel]/(3659:3663): Entre a atender instruccion
+[INFO] 17:56:06:590 [Kernel]/(3659:3674): Se solicito a Memoria resolver Page FAULT
+[INFO] 17:56:12:098 [Kernel]/(3659:3661): Se recibio algo de MEMORIA
+[INFO] 17:56:12:099 [Kernel]/(3659:3661): Memoria soluciono el PAGE FAULT
+[INFO] 17:56:13:101 [Kernel]/(3659:3663): Se recibio algo de CPU_Dispatch
+[WARNING] 17:56:13:101 [Kernel]/(3659:3663): Entre a atender instruccion
+[INFO] 17:56:13:101 [Kernel]/(3659:3663): El lock es: 1 y su modo de apertura W
+[INFO] 17:56:13:101 [Kernel]/(3659:3663): VOy a entrar a obtener archivo
+[INFO] 17:56:13:101 [Kernel]/(3659:3663): Obtuve el archivo : consolas 
+[INFO] 17:56:13:231 [Kernel]/(3659:3661): Se recibio algo de MEMORIA
+[ERROR] 17:56:13:231 [Kernel]/(3659:3661): [DESCONEXION]: MEMORIA
+[INFO] 18:00:38:343 [Kernel]/(4037:4037): [R1 | 1]
+[INFO] 18:00:38:344 [Kernel]/(4037:4037): [R2 | 1]
+[INFO] 18:00:38:344 [Kernel]/(4037:4037): [R3 | 1]
+[INFO] 18:00:38:344 [Kernel]/(4037:4037): [R4 | 1]
+[INFO] 18:00:38:345 [Kernel]/(4037:4037): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 18:00:38:345 [Kernel]/(4037:4037): HANDSHAKE CON FILESYSTEM [EXITOSO]
+[INFO] 18:00:38:345 [Kernel]/(4037:4037): HANDSHAKE CON CPU_Dispatch [EXITOSO]
+[INFO] 18:00:38:345 [Kernel]/(4037:4037): HANDSHAKE CON CPU_Interrupt [EXITOSO]
+[INFO] 18:00:41:625 [Kernel]/(4037:4045): Entre al IF
+[INFO] 18:00:41:625 [Kernel]/(4037:4045): Se aviso a Memoria del nuevo proceso
+[INFO] 18:00:48:657 [Kernel]/(4037:4039): Se recibio algo de MEMORIA
+[INFO] 18:00:49:161 [Kernel]/(4037:4041): Se recibio algo de CPU_Dispatch
+[WARNING] 18:00:49:161 [Kernel]/(4037:4041): Entre a atender instruccion
+[INFO] 18:00:49:162 [Kernel]/(4037:4040): Se recibio algo de FILESYSTEM
+[INFO] 18:00:49:162 [Kernel]/(4037:4040): LA oepracion es: -1 -- ABRIR_ARCHIVO
+[INFO] 18:00:49:162 [Kernel]/(4037:4041): Cree el archivo: consolas
+[INFO] 18:00:49:163 [Kernel]/(4037:4040): Se recibio algo de FILESYSTEM
+[INFO] 18:00:49:163 [Kernel]/(4037:4040): LA oepracion es: 0 -- CREAR_ARCHIVO
+[INFO] 18:00:49:163 [Kernel]/(4037:4040): Se creo el archivo en FS
+[INFO] 18:00:49:665 [Kernel]/(4037:4041): Se recibio algo de CPU_Dispatch
+[WARNING] 18:00:49:665 [Kernel]/(4037:4041): Entre a atender instruccion
+[INFO] 18:01:02:336 [Kernel]/(4037:4040): Se recibio algo de FILESYSTEM
+[INFO] 18:01:02:336 [Kernel]/(4037:4040):  La respuesta es: Truncate realizado
+[INFO] 18:01:02:899 [Kernel]/(4037:4041): Se recibio algo de CPU_Dispatch
+[WARNING] 18:01:02:899 [Kernel]/(4037:4041): Entre a atender instruccion
+[INFO] 18:01:03:913 [Kernel]/(4037:4041): Se recibio algo de CPU_Dispatch
+[WARNING] 18:01:03:913 [Kernel]/(4037:4041): Entre a atender instruccion
+[INFO] 18:01:03:913 [Kernel]/(4037:4052): Se solicito a Memoria resolver Page FAULT
+[INFO] 18:01:09:417 [Kernel]/(4037:4039): Se recibio algo de MEMORIA
+[INFO] 18:01:09:417 [Kernel]/(4037:4039): Memoria soluciono el PAGE FAULT
+[INFO] 18:01:10:419 [Kernel]/(4037:4041): Se recibio algo de CPU_Dispatch
+[WARNING] 18:01:10:419 [Kernel]/(4037:4041): Entre a atender instruccion
+[INFO] 18:01:10:420 [Kernel]/(4037:4041): El lock es: 1 y su modo de apertura W
+[INFO] 18:01:10:420 [Kernel]/(4037:4041): VOy a entrar a obtener archivo
+[INFO] 18:01:10:420 [Kernel]/(4037:4041): Obtuve el archivo : consolas 
+[INFO] 18:01:10:689 [Kernel]/(4037:4039): Se recibio algo de MEMORIA
+[ERROR] 18:01:10:689 [Kernel]/(4037:4039): [DESCONEXION]: MEMORIA
+[INFO] 18:09:25:073 [Kernel]/(4962:4962): [R1 | 1]
+[INFO] 18:09:25:073 [Kernel]/(4962:4962): [R2 | 1]
+[INFO] 18:09:25:073 [Kernel]/(4962:4962): [R3 | 1]
+[INFO] 18:09:25:073 [Kernel]/(4962:4962): [R4 | 1]
+[INFO] 18:09:25:075 [Kernel]/(4962:4962): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 18:09:25:075 [Kernel]/(4962:4962): HANDSHAKE CON FILESYSTEM [EXITOSO]
+[INFO] 18:09:25:075 [Kernel]/(4962:4962): HANDSHAKE CON CPU_Dispatch [EXITOSO]
+[INFO] 18:09:25:075 [Kernel]/(4962:4962): HANDSHAKE CON CPU_Interrupt [EXITOSO]
+[INFO] 18:09:27:607 [Kernel]/(4962:4970): Entre al IF
+[INFO] 18:09:27:607 [Kernel]/(4962:4970): Se aviso a Memoria del nuevo proceso
+[INFO] 18:09:34:620 [Kernel]/(4962:4964): Se recibio algo de MEMORIA
+[INFO] 18:09:35:122 [Kernel]/(4962:4966): Se recibio algo de CPU_Dispatch
+[WARNING] 18:09:35:122 [Kernel]/(4962:4966): Entre a atender instruccion
+[INFO] 18:09:35:123 [Kernel]/(4962:4965): Se recibio algo de FILESYSTEM
+[INFO] 18:09:35:123 [Kernel]/(4962:4965): LA oepracion es: -1 -- ABRIR_ARCHIVO
+[INFO] 18:09:35:123 [Kernel]/(4962:4966): Cree el archivo: consolas
+[INFO] 18:09:35:124 [Kernel]/(4962:4965): Se recibio algo de FILESYSTEM
+[INFO] 18:09:35:124 [Kernel]/(4962:4965): LA oepracion es: 0 -- CREAR_ARCHIVO
+[INFO] 18:09:35:124 [Kernel]/(4962:4965): Se creo el archivo en FS
+[INFO] 18:09:35:628 [Kernel]/(4962:4966): Se recibio algo de CPU_Dispatch
+[WARNING] 18:09:35:628 [Kernel]/(4962:4966): Entre a atender instruccion
+[INFO] 18:09:50:205 [Kernel]/(4962:4965): Se recibio algo de FILESYSTEM
+[INFO] 18:09:50:205 [Kernel]/(4962:4965):  La respuesta es: Truncate realizado
+[INFO] 18:09:50:706 [Kernel]/(4962:4966): Se recibio algo de CPU_Dispatch
+[WARNING] 18:09:50:706 [Kernel]/(4962:4966): Entre a atender instruccion
+[INFO] 18:09:51:709 [Kernel]/(4962:4966): Se recibio algo de CPU_Dispatch
+[WARNING] 18:09:51:709 [Kernel]/(4962:4966): Entre a atender instruccion
+[INFO] 18:09:51:709 [Kernel]/(4962:4977): Se solicito a Memoria resolver Page FAULT
+[INFO] 18:09:57:223 [Kernel]/(4962:4964): Se recibio algo de MEMORIA
+[INFO] 18:09:57:224 [Kernel]/(4962:4964): Memoria soluciono el PAGE FAULT
+[INFO] 18:09:58:226 [Kernel]/(4962:4966): Se recibio algo de CPU_Dispatch
+[WARNING] 18:09:58:226 [Kernel]/(4962:4966): Entre a atender instruccion
+[INFO] 18:09:58:226 [Kernel]/(4962:4966): El lock es: 1 y su modo de apertura W
+[INFO] 18:09:58:226 [Kernel]/(4962:4966): VOy a entrar a obtener archivo
+[INFO] 18:09:58:226 [Kernel]/(4962:4966): Obtuve el archivo : consolas 
+[INFO] 18:10:00:227 [Kernel]/(4962:4965): Se recibio algo de FILESYSTEM
+[INFO] 18:10:00:227 [Kernel]/(4962:4965):  La respuesta es: 3
+[INFO] 18:18:07:274 [Kernel]/(5315:5315): [R1 | 1]
+[INFO] 18:18:07:274 [Kernel]/(5315:5315): [R2 | 1]
+[INFO] 18:18:07:274 [Kernel]/(5315:5315): [R3 | 1]
+[INFO] 18:18:07:274 [Kernel]/(5315:5315): [R4 | 1]
+[INFO] 18:18:07:275 [Kernel]/(5315:5315): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 18:18:07:275 [Kernel]/(5315:5315): HANDSHAKE CON FILESYSTEM [EXITOSO]
+[INFO] 18:18:07:276 [Kernel]/(5315:5315): HANDSHAKE CON CPU_Dispatch [EXITOSO]
+[INFO] 18:18:07:276 [Kernel]/(5315:5315): HANDSHAKE CON CPU_Interrupt [EXITOSO]
+[INFO] 18:18:10:134 [Kernel]/(5315:5323): Entre al IF
+[INFO] 18:18:10:134 [Kernel]/(5315:5323): Se aviso a Memoria del nuevo proceso
+[INFO] 18:18:17:193 [Kernel]/(5315:5317): Se recibio algo de MEMORIA
+[INFO] 18:18:17:695 [Kernel]/(5315:5319): Se recibio algo de CPU_Dispatch
+[WARNING] 18:18:17:695 [Kernel]/(5315:5319): Entre a atender instruccion
+[INFO] 18:18:17:696 [Kernel]/(5315:5318): Se recibio algo de FILESYSTEM
+[INFO] 18:18:17:696 [Kernel]/(5315:5318): LA oepracion es: -1 -- ABRIR_ARCHIVO
+[INFO] 18:18:17:696 [Kernel]/(5315:5319): Cree el archivo: consolas
+[INFO] 18:18:17:697 [Kernel]/(5315:5318): Se recibio algo de FILESYSTEM
+[INFO] 18:18:17:697 [Kernel]/(5315:5318): LA oepracion es: 0 -- CREAR_ARCHIVO
+[INFO] 18:18:17:697 [Kernel]/(5315:5318): Se creo el archivo en FS
+[INFO] 18:18:18:214 [Kernel]/(5315:5319): Se recibio algo de CPU_Dispatch
+[WARNING] 18:18:18:214 [Kernel]/(5315:5319): Entre a atender instruccion
+[INFO] 18:18:34:762 [Kernel]/(5315:5318): Se recibio algo de FILESYSTEM
+[INFO] 18:18:34:762 [Kernel]/(5315:5318):  La respuesta es: Truncate realizado
+[INFO] 18:18:35:264 [Kernel]/(5315:5319): Se recibio algo de CPU_Dispatch
+[WARNING] 18:18:35:264 [Kernel]/(5315:5319): Entre a atender instruccion
+[INFO] 18:18:36:268 [Kernel]/(5315:5319): Se recibio algo de CPU_Dispatch
+[WARNING] 18:18:36:268 [Kernel]/(5315:5319): Entre a atender instruccion
+[INFO] 18:18:36:268 [Kernel]/(5315:5330): Se solicito a Memoria resolver Page FAULT
+[INFO] 18:18:41:777 [Kernel]/(5315:5317): Se recibio algo de MEMORIA
+[INFO] 18:18:41:777 [Kernel]/(5315:5317): Memoria soluciono el PAGE FAULT
+[INFO] 18:18:42:779 [Kernel]/(5315:5319): Se recibio algo de CPU_Dispatch
+[WARNING] 18:18:42:779 [Kernel]/(5315:5319): Entre a atender instruccion
+[INFO] 18:18:42:779 [Kernel]/(5315:5319): El lock es: 1 y su modo de apertura W
+[INFO] 18:18:42:779 [Kernel]/(5315:5319): VOy a entrar a obtener archivo
+[INFO] 18:18:42:779 [Kernel]/(5315:5319): Obtuve el archivo : consolas 
+[INFO] 18:18:42:851 [Kernel]/(5315:5317): Se recibio algo de MEMORIA
+[ERROR] 18:18:42:851 [Kernel]/(5315:5317): [DESCONEXION]: MEMORIA
+[INFO] 18:20:31:288 [Kernel]/(5395:5395): [R1 | 1]
+[INFO] 18:20:31:288 [Kernel]/(5395:5395): [R2 | 1]
+[INFO] 18:20:31:288 [Kernel]/(5395:5395): [R3 | 1]
+[INFO] 18:20:31:288 [Kernel]/(5395:5395): [R4 | 1]
+[INFO] 18:21:05:919 [Kernel]/(5427:5427): [R1 | 1]
+[INFO] 18:21:05:919 [Kernel]/(5427:5427): [R2 | 1]
+[INFO] 18:21:05:919 [Kernel]/(5427:5427): [R3 | 1]
+[INFO] 18:21:05:919 [Kernel]/(5427:5427): [R4 | 1]
+[INFO] 18:21:05:920 [Kernel]/(5427:5427): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 18:21:05:920 [Kernel]/(5427:5427): HANDSHAKE CON FILESYSTEM [EXITOSO]
+[INFO] 18:21:05:921 [Kernel]/(5427:5427): HANDSHAKE CON CPU_Dispatch [EXITOSO]
+[INFO] 18:21:05:921 [Kernel]/(5427:5427): HANDSHAKE CON CPU_Interrupt [EXITOSO]
+[INFO] 18:21:09:091 [Kernel]/(5427:5435): Entre al IF
+[INFO] 18:21:09:091 [Kernel]/(5427:5435): Se aviso a Memoria del nuevo proceso
+[INFO] 18:21:16:113 [Kernel]/(5427:5429): Se recibio algo de MEMORIA
+[INFO] 18:21:16:617 [Kernel]/(5427:5431): Se recibio algo de CPU_Dispatch
+[WARNING] 18:21:16:617 [Kernel]/(5427:5431): Entre a atender instruccion
+[INFO] 18:21:16:618 [Kernel]/(5427:5430): Se recibio algo de FILESYSTEM
+[INFO] 18:21:16:618 [Kernel]/(5427:5430): LA oepracion es: -1 -- ABRIR_ARCHIVO
+[INFO] 18:21:16:618 [Kernel]/(5427:5431): Cree el archivo: consolas
+[INFO] 18:21:16:619 [Kernel]/(5427:5430): Se recibio algo de FILESYSTEM
+[INFO] 18:21:16:619 [Kernel]/(5427:5430): LA oepracion es: 0 -- CREAR_ARCHIVO
+[INFO] 18:21:16:619 [Kernel]/(5427:5430): Se creo el archivo en FS
+[INFO] 18:21:17:136 [Kernel]/(5427:5431): Se recibio algo de CPU_Dispatch
+[WARNING] 18:21:17:136 [Kernel]/(5427:5431): Entre a atender instruccion
+[INFO] 18:21:21:648 [Kernel]/(5427:5430): Se recibio algo de FILESYSTEM
+[INFO] 18:21:21:648 [Kernel]/(5427:5430):  La respuesta es: Truncate realizado
+[INFO] 18:21:22:152 [Kernel]/(5427:5431): Se recibio algo de CPU_Dispatch
+[WARNING] 18:21:22:152 [Kernel]/(5427:5431): Entre a atender instruccion
+[INFO] 18:21:23:162 [Kernel]/(5427:5431): Se recibio algo de CPU_Dispatch
+[WARNING] 18:21:23:162 [Kernel]/(5427:5431): Entre a atender instruccion
+[INFO] 18:21:23:162 [Kernel]/(5427:5442): Se solicito a Memoria resolver Page FAULT
+[INFO] 18:21:28:737 [Kernel]/(5427:5429): Se recibio algo de MEMORIA
+[INFO] 18:21:28:738 [Kernel]/(5427:5429): Memoria soluciono el PAGE FAULT
+[INFO] 18:21:29:743 [Kernel]/(5427:5431): Se recibio algo de CPU_Dispatch
+[WARNING] 18:21:29:743 [Kernel]/(5427:5431): Entre a atender instruccion
+[INFO] 18:21:29:743 [Kernel]/(5427:5431): El lock es: 1 y su modo de apertura W
+[INFO] 18:21:29:743 [Kernel]/(5427:5431): VOy a entrar a obtener archivo
+[INFO] 18:21:29:743 [Kernel]/(5427:5431): Obtuve el archivo : consolas 
+[INFO] 18:21:31:746 [Kernel]/(5427:5430): Se recibio algo de FILESYSTEM
+[INFO] 18:21:31:746 [Kernel]/(5427:5430):  La respuesta es: 3
+[INFO] 18:24:25:496 [Kernel]/(5880:5880): [R1 | 1]
+[INFO] 18:24:25:497 [Kernel]/(5880:5880): [R2 | 1]
+[INFO] 18:24:25:497 [Kernel]/(5880:5880): [R3 | 1]
+[INFO] 18:24:25:497 [Kernel]/(5880:5880): [R4 | 1]
+[INFO] 18:24:25:498 [Kernel]/(5880:5880): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 18:24:25:498 [Kernel]/(5880:5880): HANDSHAKE CON FILESYSTEM [EXITOSO]
+[INFO] 18:24:25:498 [Kernel]/(5880:5880): HANDSHAKE CON CPU_Dispatch [EXITOSO]
+[INFO] 18:24:25:498 [Kernel]/(5880:5880): HANDSHAKE CON CPU_Interrupt [EXITOSO]
+[INFO] 18:24:28:952 [Kernel]/(5880:5894): Entre al IF
+[INFO] 18:24:28:953 [Kernel]/(5880:5894): Se aviso a Memoria del nuevo proceso
+[INFO] 18:24:35:981 [Kernel]/(5880:5882): Se recibio algo de MEMORIA
+[INFO] 18:24:36:486 [Kernel]/(5880:5884): Se recibio algo de CPU_Dispatch
+[WARNING] 18:24:36:486 [Kernel]/(5880:5884): Entre a atender instruccion
+[INFO] 18:24:36:487 [Kernel]/(5880:5883): Se recibio algo de FILESYSTEM
+[INFO] 18:24:36:487 [Kernel]/(5880:5883): LA oepracion es: -1 -- ABRIR_ARCHIVO
+[INFO] 18:24:36:487 [Kernel]/(5880:5884): Cree el archivo: consolas
+[INFO] 18:24:36:489 [Kernel]/(5880:5883): Se recibio algo de FILESYSTEM
+[INFO] 18:24:36:489 [Kernel]/(5880:5883): LA oepracion es: 0 -- CREAR_ARCHIVO
+[INFO] 18:24:36:489 [Kernel]/(5880:5883): Se creo el archivo en FS
+[INFO] 18:24:36:990 [Kernel]/(5880:5884): Se recibio algo de CPU_Dispatch
+[WARNING] 18:24:36:990 [Kernel]/(5880:5884): Entre a atender instruccion
+[INFO] 18:24:43:578 [Kernel]/(5880:5883): Se recibio algo de FILESYSTEM
+[INFO] 18:24:43:578 [Kernel]/(5880:5883):  La respuesta es: Truncate realizado
+[INFO] 18:24:44:080 [Kernel]/(5880:5884): Se recibio algo de CPU_Dispatch
+[WARNING] 18:24:44:080 [Kernel]/(5880:5884): Entre a atender instruccion
+[INFO] 18:24:45:086 [Kernel]/(5880:5884): Se recibio algo de CPU_Dispatch
+[WARNING] 18:24:45:086 [Kernel]/(5880:5884): Entre a atender instruccion
+[INFO] 18:24:45:086 [Kernel]/(5880:5901): Se solicito a Memoria resolver Page FAULT
+[INFO] 18:24:50:606 [Kernel]/(5880:5882): Se recibio algo de MEMORIA
+[INFO] 18:24:50:607 [Kernel]/(5880:5882): Memoria soluciono el PAGE FAULT
+[INFO] 18:24:51:609 [Kernel]/(5880:5884): Se recibio algo de CPU_Dispatch
+[WARNING] 18:24:51:609 [Kernel]/(5880:5884): Entre a atender instruccion
+[INFO] 18:24:51:609 [Kernel]/(5880:5884): El lock es: 1 y su modo de apertura W
+[INFO] 18:24:51:609 [Kernel]/(5880:5884): VOy a entrar a obtener archivo
+[INFO] 18:24:51:609 [Kernel]/(5880:5884): Obtuve el archivo : consolas 
+[INFO] 18:24:53:643 [Kernel]/(5880:5883): Se recibio algo de FILESYSTEM
+[INFO] 18:24:53:644 [Kernel]/(5880:5883):  La respuesta es: 3
+[INFO] 18:25:40:124 [Kernel]/(6032:6032): [R1 | 1]
+[INFO] 18:25:40:125 [Kernel]/(6032:6032): [R2 | 1]
+[INFO] 18:25:40:125 [Kernel]/(6032:6032): [R3 | 1]
+[INFO] 18:25:40:125 [Kernel]/(6032:6032): [R4 | 1]
+[INFO] 18:25:40:125 [Kernel]/(6032:6032): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 18:25:53:461 [Kernel]/(6055:6055): [R1 | 1]
+[INFO] 18:25:53:461 [Kernel]/(6055:6055): [R2 | 1]
+[INFO] 18:25:53:461 [Kernel]/(6055:6055): [R3 | 1]
+[INFO] 18:25:53:462 [Kernel]/(6055:6055): [R4 | 1]
+[INFO] 18:25:53:462 [Kernel]/(6055:6055): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 18:25:53:462 [Kernel]/(6055:6055): HANDSHAKE CON FILESYSTEM [EXITOSO]
+[INFO] 18:25:53:463 [Kernel]/(6055:6055): HANDSHAKE CON CPU_Dispatch [EXITOSO]
+[INFO] 18:25:53:463 [Kernel]/(6055:6055): HANDSHAKE CON CPU_Interrupt [EXITOSO]
+[INFO] 18:25:56:146 [Kernel]/(6055:6066): Entre al IF
+[INFO] 18:25:56:146 [Kernel]/(6055:6066): Se aviso a Memoria del nuevo proceso
+[INFO] 18:26:03:157 [Kernel]/(6055:6057): Se recibio algo de MEMORIA
+[INFO] 18:26:03:659 [Kernel]/(6055:6059): Se recibio algo de CPU_Dispatch
+[WARNING] 18:26:03:659 [Kernel]/(6055:6059): Entre a atender instruccion
+[INFO] 18:26:03:659 [Kernel]/(6055:6058): Se recibio algo de FILESYSTEM
+[INFO] 18:26:03:659 [Kernel]/(6055:6058): LA oepracion es: -1 -- ABRIR_ARCHIVO
+[INFO] 18:26:03:659 [Kernel]/(6055:6059): Cree el archivo: consolas
+[INFO] 18:26:03:660 [Kernel]/(6055:6058): Se recibio algo de FILESYSTEM
+[INFO] 18:26:03:660 [Kernel]/(6055:6058): LA oepracion es: 0 -- CREAR_ARCHIVO
+[INFO] 18:26:03:660 [Kernel]/(6055:6058): Se creo el archivo en FS
+[INFO] 18:26:04:161 [Kernel]/(6055:6059): Se recibio algo de CPU_Dispatch
+[WARNING] 18:26:04:161 [Kernel]/(6055:6059): Entre a atender instruccion
+[INFO] 18:26:12:710 [Kernel]/(6055:6058): Se recibio algo de FILESYSTEM
+[INFO] 18:26:12:710 [Kernel]/(6055:6058):  La respuesta es: Truncate realizado
+[INFO] 18:26:13:215 [Kernel]/(6055:6059): Se recibio algo de CPU_Dispatch
+[WARNING] 18:26:13:215 [Kernel]/(6055:6059): Entre a atender instruccion
+[INFO] 18:26:14:218 [Kernel]/(6055:6059): Se recibio algo de CPU_Dispatch
+[WARNING] 18:26:14:218 [Kernel]/(6055:6059): Entre a atender instruccion
+[INFO] 18:26:14:218 [Kernel]/(6055:6073): Se solicito a Memoria resolver Page FAULT
+[INFO] 18:26:19:728 [Kernel]/(6055:6057): Se recibio algo de MEMORIA
+[INFO] 18:26:19:728 [Kernel]/(6055:6057): Memoria soluciono el PAGE FAULT
+[INFO] 18:26:20:730 [Kernel]/(6055:6059): Se recibio algo de CPU_Dispatch
+[WARNING] 18:26:20:730 [Kernel]/(6055:6059): Entre a atender instruccion
+[INFO] 18:26:20:730 [Kernel]/(6055:6059): El lock es: 1 y su modo de apertura W
+[INFO] 18:26:20:730 [Kernel]/(6055:6059): VOy a entrar a obtener archivo
+[INFO] 18:26:20:730 [Kernel]/(6055:6059): Obtuve el archivo : consolas 
+[INFO] 18:26:22:734 [Kernel]/(6055:6058): Se recibio algo de FILESYSTEM
+[INFO] 18:26:22:734 [Kernel]/(6055:6058):  La respuesta es: 3
+[INFO] 18:29:00:090 [Kernel]/(6330:6330): [R1 | 1]
+[INFO] 18:29:00:090 [Kernel]/(6330:6330): [R2 | 1]
+[INFO] 18:29:00:090 [Kernel]/(6330:6330): [R3 | 1]
+[INFO] 18:29:00:090 [Kernel]/(6330:6330): [R4 | 1]
+[INFO] 18:29:00:091 [Kernel]/(6330:6330): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 18:29:00:091 [Kernel]/(6330:6330): HANDSHAKE CON FILESYSTEM [EXITOSO]
+[INFO] 18:29:00:092 [Kernel]/(6330:6330): HANDSHAKE CON CPU_Dispatch [EXITOSO]
+[INFO] 18:29:00:092 [Kernel]/(6330:6330): HANDSHAKE CON CPU_Interrupt [EXITOSO]
+[INFO] 18:29:56:527 [Kernel]/(6358:6358): [R1 | 1]
+[INFO] 18:29:56:527 [Kernel]/(6358:6358): [R2 | 1]
+[INFO] 18:29:56:527 [Kernel]/(6358:6358): [R3 | 1]
+[INFO] 18:29:56:527 [Kernel]/(6358:6358): [R4 | 1]
+[INFO] 18:29:56:528 [Kernel]/(6358:6358): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 18:29:56:529 [Kernel]/(6358:6358): HANDSHAKE CON FILESYSTEM [EXITOSO]
+[INFO] 18:29:56:529 [Kernel]/(6358:6358): HANDSHAKE CON CPU_Dispatch [EXITOSO]
+[INFO] 18:29:56:529 [Kernel]/(6358:6358): HANDSHAKE CON CPU_Interrupt [EXITOSO]
+[INFO] 18:30:37:173 [Kernel]/(6358:6367): Entre al IF
+[INFO] 18:30:37:173 [Kernel]/(6358:6367): Se aviso a Memoria del nuevo proceso
+[INFO] 18:30:48:233 [Kernel]/(6358:6360): Se recibio algo de MEMORIA
+[INFO] 18:30:48:233 [Kernel]/(6358:6368): Entre al IF
+[INFO] 18:30:48:234 [Kernel]/(6358:6368): Se aviso a Memoria del nuevo proceso
+[INFO] 18:30:50:806 [Kernel]/(6358:6362): Se recibio algo de CPU_Dispatch
+[WARNING] 18:30:50:806 [Kernel]/(6358:6362): Entre a atender instruccion
+[INFO] 18:30:50:806 [Kernel]/(6358:6361): Se recibio algo de FILESYSTEM
+[INFO] 18:30:50:806 [Kernel]/(6358:6361): LA oepracion es: -1 -- ABRIR_ARCHIVO
+[INFO] 18:30:50:806 [Kernel]/(6358:6362): Cree el archivo: consolas
+[INFO] 18:30:50:806 [Kernel]/(6358:6361): Se recibio algo de FILESYSTEM
+[INFO] 18:30:50:806 [Kernel]/(6358:6361): LA oepracion es: 0 -- CREAR_ARCHIVO
+[INFO] 18:30:50:806 [Kernel]/(6358:6361): Se creo el archivo en FS
+[INFO] 18:30:51:309 [Kernel]/(6358:6362): Se recibio algo de CPU_Dispatch
+[WARNING] 18:30:51:309 [Kernel]/(6358:6362): Entre a atender instruccion
+[INFO] 18:30:55:818 [Kernel]/(6358:6361): Se recibio algo de FILESYSTEM
+[INFO] 18:30:55:818 [Kernel]/(6358:6361):  La respuesta es: Truncate realizado
+[INFO] 18:30:56:324 [Kernel]/(6358:6362): Se recibio algo de CPU_Dispatch
+[WARNING] 18:30:56:324 [Kernel]/(6358:6362): Entre a atender instruccion
+[INFO] 18:30:57:332 [Kernel]/(6358:6362): Se recibio algo de CPU_Dispatch
+[WARNING] 18:30:57:332 [Kernel]/(6358:6362): Entre a atender instruccion
+[INFO] 18:30:57:332 [Kernel]/(6358:6381): Se solicito a Memoria resolver Page FAULT
+[INFO] 18:30:59:241 [Kernel]/(6358:6360): Se recibio algo de MEMORIA
+[INFO] 18:30:59:241 [Kernel]/(6358:6369): Entre al IF
+[INFO] 18:30:59:241 [Kernel]/(6358:6369): Se aviso a Memoria del nuevo proceso
+[INFO] 18:31:00:248 [Kernel]/(6358:6362): Se recibio algo de CPU_Dispatch
+[WARNING] 18:31:00:248 [Kernel]/(6358:6362): Entre a atender instruccion
+[INFO] 18:31:00:248 [Kernel]/(6358:6362): El PID: 2 - Lo voy a bloquear en la cola fs
+[INFO] 18:31:05:748 [Kernel]/(6358:6360): Se recibio algo de MEMORIA
+[INFO] 18:31:05:748 [Kernel]/(6358:6360): Memoria soluciono el PAGE FAULT
+[INFO] 18:31:12:752 [Kernel]/(6358:6360): Se recibio algo de MEMORIA
+[INFO] 18:31:12:752 [Kernel]/(6358:6370): Entre al IF
+[INFO] 18:31:12:753 [Kernel]/(6358:6370): Se aviso a Memoria del nuevo proceso
+[INFO] 18:31:12:843 [Kernel]/(6358:6360): Se recibio algo de MEMORIA
+[ERROR] 18:31:12:843 [Kernel]/(6358:6360): [DESCONEXION]: MEMORIA
+[INFO] 18:41:30:975 [Kernel]/(7020:7020): [R1 | 1]
+[INFO] 18:41:30:975 [Kernel]/(7020:7020): [R2 | 1]
+[INFO] 18:41:30:975 [Kernel]/(7020:7020): [R3 | 1]
+[INFO] 18:41:30:975 [Kernel]/(7020:7020): [R4 | 1]
+[INFO] 18:41:30:976 [Kernel]/(7020:7020): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 18:41:30:976 [Kernel]/(7020:7020): HANDSHAKE CON FILESYSTEM [EXITOSO]
+[INFO] 18:41:30:977 [Kernel]/(7020:7020): HANDSHAKE CON CPU_Dispatch [EXITOSO]
+[INFO] 18:41:30:977 [Kernel]/(7020:7020): HANDSHAKE CON CPU_Interrupt [EXITOSO]
+[INFO] 18:42:23:091 [Kernel]/(7020:7029): Entre al IF
+[INFO] 18:42:23:091 [Kernel]/(7020:7029): Se aviso a Memoria del nuevo proceso
+[INFO] 18:42:23:092 [Kernel]/(7020:7030): Entre al IF
+[INFO] 18:42:23:092 [Kernel]/(7020:7030): Se aviso a Memoria del nuevo proceso
+[INFO] 18:42:23:092 [Kernel]/(7020:7031): Entre al IF
+[INFO] 18:42:23:092 [Kernel]/(7020:7031): Se aviso a Memoria del nuevo proceso
+[INFO] 18:42:23:093 [Kernel]/(7020:7032): Entre al IF
+[INFO] 18:42:23:093 [Kernel]/(7020:7032): Se aviso a Memoria del nuevo proceso
+[INFO] 18:42:23:093 [Kernel]/(7020:7033): Entre al IF
+[INFO] 18:42:23:093 [Kernel]/(7020:7033): Se aviso a Memoria del nuevo proceso
+[INFO] 18:42:23:093 [Kernel]/(7020:7034): Entre al IF
+[INFO] 18:42:23:093 [Kernel]/(7020:7034): Se aviso a Memoria del nuevo proceso
+[INFO] 18:42:23:094 [Kernel]/(7020:7022): Se recibio algo de MEMORIA
+[WARNING] 18:42:23:094 [Kernel]/(7020:7022): Operacion desconocida
+[INFO] 18:42:23:094 [Kernel]/(7020:7022): Se recibio algo de MEMORIA
+[WARNING] 18:42:23:094 [Kernel]/(7020:7022): Operacion desconocida
+[INFO] 18:42:23:094 [Kernel]/(7020:7022): Se recibio algo de MEMORIA
+[WARNING] 18:42:23:094 [Kernel]/(7020:7022): Operacion desconocida
+[INFO] 18:42:23:094 [Kernel]/(7020:7022): Se recibio algo de MEMORIA
+[WARNING] 18:42:23:094 [Kernel]/(7020:7022): Operacion desconocida
+[INFO] 18:42:23:095 [Kernel]/(7020:7022): Se recibio algo de MEMORIA
+[WARNING] 18:42:23:095 [Kernel]/(7020:7022): Operacion desconocida
+[INFO] 18:42:23:095 [Kernel]/(7020:7022): Se recibio algo de MEMORIA
+[WARNING] 18:42:23:095 [Kernel]/(7020:7022): Operacion desconocida
+[INFO] 18:42:23:095 [Kernel]/(7020:7022): Se recibio algo de MEMORIA
+[WARNING] 18:42:23:095 [Kernel]/(7020:7022): Operacion desconocida
+[INFO] 18:42:23:095 [Kernel]/(7020:7022): Se recibio algo de MEMORIA
+[WARNING] 18:42:23:095 [Kernel]/(7020:7022): Operacion desconocida
+[INFO] 18:42:23:095 [Kernel]/(7020:7022): Se recibio algo de MEMORIA
+[WARNING] 18:42:23:095 [Kernel]/(7020:7022): Operacion desconocida
+[INFO] 18:42:23:095 [Kernel]/(7020:7022): Se recibio algo de MEMORIA
+[WARNING] 18:42:23:095 [Kernel]/(7020:7022): Operacion desconocida
+[INFO] 18:42:23:095 [Kernel]/(7020:7022): Se recibio algo de MEMORIA
+[WARNING] 18:42:23:095 [Kernel]/(7020:7022): Operacion desconocida
+[INFO] 18:42:23:095 [Kernel]/(7020:7022): Se recibio algo de MEMORIA
+[WARNING] 18:42:23:095 [Kernel]/(7020:7022): Operacion desconocida
+[INFO] 18:42:23:095 [Kernel]/(7020:7022): Se recibio algo de MEMORIA
+[WARNING] 18:42:23:095 [Kernel]/(7020:7022): Operacion desconocida
+[INFO] 18:42:23:095 [Kernel]/(7020:7022): Se recibio algo de MEMORIA
+[WARNING] 18:42:23:095 [Kernel]/(7020:7022): Operacion desconocida
+[INFO] 18:42:23:095 [Kernel]/(7020:7022): Se recibio algo de MEMORIA
+[WARNING] 18:42:23:095 [Kernel]/(7020:7022): Operacion desconocida
+[INFO] 18:42:23:095 [Kernel]/(7020:7022): Se recibio algo de MEMORIA
+[WARNING] 18:42:23:095 [Kernel]/(7020:7022): Operacion desconocida
+[INFO] 18:42:23:095 [Kernel]/(7020:7022): Se recibio algo de MEMORIA
+[WARNING] 18:42:23:095 [Kernel]/(7020:7022): Operacion desconocida
+[INFO] 18:42:23:095 [Kernel]/(7020:7022): Se recibio algo de MEMORIA
+[WARNING] 18:42:23:095 [Kernel]/(7020:7022): Operacion desconocida
+[INFO] 18:42:23:095 [Kernel]/(7020:7022): Se recibio algo de MEMORIA
+[WARNING] 18:42:23:095 [Kernel]/(7020:7022): Operacion desconocida
+[INFO] 18:42:23:095 [Kernel]/(7020:7022): Se recibio algo de MEMORIA
+[WARNING] 18:42:23:095 [Kernel]/(7020:7022): Operacion desconocida
+[INFO] 18:42:23:096 [Kernel]/(7020:7022): Se recibio algo de MEMORIA
+[WARNING] 18:42:23:096 [Kernel]/(7020:7022): Operacion desconocida
+[INFO] 18:42:23:096 [Kernel]/(7020:7022): Se recibio algo de MEMORIA
+[WARNING] 18:42:23:096 [Kernel]/(7020:7022): Operacion desconocida
+[INFO] 18:42:23:096 [Kernel]/(7020:7022): Se recibio algo de MEMORIA
+[WARNING] 18:42:23:096 [Kernel]/(7020:7022): Operacion desconocida
+[INFO] 18:42:23:096 [Kernel]/(7020:7022): Se recibio algo de MEMORIA
+[WARNING] 18:42:23:096 [Kernel]/(7020:7022): Operacion desconocida
+[INFO] 18:42:23:096 [Kernel]/(7020:7022): Se recibio algo de MEMORIA
+[WARNING] 18:42:23:096 [Kernel]/(7020:7022): Operacion desconocida
+[INFO] 18:42:23:096 [Kernel]/(7020:7022): Se recibio algo de MEMORIA
+[WARNING] 18:42:23:096 [Kernel]/(7020:7022): Operacion desconocida
+[INFO] 18:42:23:096 [Kernel]/(7020:7022): Se recibio algo de MEMORIA
+[WARNING] 18:42:23:096 [Kernel]/(7020:7022): Operacion desconocida
+[INFO] 18:42:23:096 [Kernel]/(7020:7022): Se recibio algo de MEMORIA
+[WARNING] 18:42:23:096 [Kernel]/(7020:7022): Operacion desconocida
+[INFO] 18:42:23:096 [Kernel]/(7020:7022): Se recibio algo de MEMORIA
+[WARNING] 18:42:23:096 [Kernel]/(7020:7022): Operacion desconocida
+[INFO] 18:42:23:096 [Kernel]/(7020:7022): Se recibio algo de MEMORIA
+[WARNING] 18:42:23:096 [Kernel]/(7020:7022): Operacion desconocida
+[INFO] 18:42:23:096 [Kernel]/(7020:7022): Se recibio algo de MEMORIA
+[WARNING] 18:42:23:096 [Kernel]/(7020:7022): Operacion desconocida
+[INFO] 18:42:23:096 [Kernel]/(7020:7022): Se recibio algo de MEMORIA
+[WARNING] 18:42:23:096 [Kernel]/(7020:7022): Operacion desconocida
+[INFO] 18:42:23:096 [Kernel]/(7020:7022): Se recibio algo de MEMORIA
+[WARNING] 18:42:23:096 [Kernel]/(7020:7022): Operacion desconocida
+[INFO] 18:42:23:096 [Kernel]/(7020:7022): Se recibio algo de MEMORIA
+[WARNING] 18:42:23:096 [Kernel]/(7020:7022): Operacion desconocida
+[INFO] 18:42:23:096 [Kernel]/(7020:7022): Se recibio algo de MEMORIA
+[WARNING] 18:42:23:096 [Kernel]/(7020:7022): Operacion desconocida
+[INFO] 18:42:23:096 [Kernel]/(7020:7022): Se recibio algo de MEMORIA
+[WARNING] 18:42:23:096 [Kernel]/(7020:7022): Operacion desconocida
+[INFO] 18:42:23:096 [Kernel]/(7020:7022): Se recibio algo de MEMORIA
+[WARNING] 18:42:23:096 [Kernel]/(7020:7022): Operacion desconocida
+[INFO] 18:42:23:096 [Kernel]/(7020:7022): Se recibio algo de MEMORIA
+[WARNING] 18:42:23:096 [Kernel]/(7020:7022): Operacion desconocida
+[INFO] 18:42:23:096 [Kernel]/(7020:7022): Se recibio algo de MEMORIA
+[WARNING] 18:42:23:096 [Kernel]/(7020:7022): Operacion desconocida
+[INFO] 18:42:23:096 [Kernel]/(7020:7022): Se recibio algo de MEMORIA
+[WARNING] 18:42:23:096 [Kernel]/(7020:7022): Operacion desconocida
+[INFO] 18:42:23:096 [Kernel]/(7020:7022): Se recibio algo de MEMORIA
+[WARNING] 18:42:23:096 [Kernel]/(7020:7022): Operacion desconocida
+[INFO] 18:42:23:096 [Kernel]/(7020:7022): Se recibio algo de MEMORIA
+[WARNING] 18:42:23:096 [Kernel]/(7020:7022): Operacion desconocida
+[INFO] 18:42:23:096 [Kernel]/(7020:7022): Se recibio algo de MEMORIA
+[WARNING] 18:42:23:096 [Kernel]/(7020:7022): Operacion desconocida
+[INFO] 18:42:23:096 [Kernel]/(7020:7022): Se recibio algo de MEMORIA
+[WARNING] 18:42:23:096 [Kernel]/(7020:7022): Operacion desconocida
+[INFO] 18:42:23:096 [Kernel]/(7020:7022): Se recibio algo de MEMORIA
+[WARNING] 18:42:23:096 [Kernel]/(7020:7022): Operacion desconocida
+[INFO] 18:42:23:096 [Kernel]/(7020:7022): Se recibio algo de MEMORIA
+[WARNING] 18:42:23:096 [Kernel]/(7020:7022): Operacion desconocida
+[INFO] 18:42:23:096 [Kernel]/(7020:7022): Se recibio algo de MEMORIA
+[WARNING] 18:42:23:096 [Kernel]/(7020:7022): Operacion desconocida
+[INFO] 18:42:23:096 [Kernel]/(7020:7022): Se recibio algo de MEMORIA
+[WARNING] 18:42:23:096 [Kernel]/(7020:7022): Operacion desconocida
+[INFO] 18:42:23:096 [Kernel]/(7020:7022): Se recibio algo de MEMORIA
+[WARNING] 18:42:23:096 [Kernel]/(7020:7022): Operacion desconocida
+[INFO] 18:42:23:096 [Kernel]/(7020:7022): Se recibio algo de MEMORIA
+[WARNING] 18:42:23:096 [Kernel]/(7020:7022): Operacion desconocida
+[INFO] 18:42:23:096 [Kernel]/(7020:7022): Se recibio algo de MEMORIA
+[WARNING] 18:42:23:096 [Kernel]/(7020:7022): Operacion desconocida
+[INFO] 18:42:23:096 [Kernel]/(7020:7022): Se recibio algo de MEMORIA
+[WARNING] 18:42:23:096 [Kernel]/(7020:7022): Operacion desconocida
+[INFO] 18:42:23:096 [Kernel]/(7020:7022): Se recibio algo de MEMORIA
+[WARNING] 18:42:23:096 [Kernel]/(7020:7022): Operacion desconocida
+[INFO] 18:42:23:096 [Kernel]/(7020:7022): Se recibio algo de MEMORIA
+[WARNING] 18:42:23:096 [Kernel]/(7020:7022): Operacion desconocida
+[INFO] 18:42:23:096 [Kernel]/(7020:7022): Se recibio algo de MEMORIA
+[WARNING] 18:42:23:096 [Kernel]/(7020:7022): Operacion desconocida
+[INFO] 18:42:23:096 [Kernel]/(7020:7022): Se recibio algo de MEMORIA
+[WARNING] 18:42:23:096 [Kernel]/(7020:7022): Operacion desconocida
+[INFO] 18:42:23:096 [Kernel]/(7020:7022): Se recibio algo de MEMORIA
+[WARNING] 18:42:23:096 [Kernel]/(7020:7022): Operacion desconocida
+[INFO] 18:42:23:096 [Kernel]/(7020:7022): Se recibio algo de MEMORIA
+[WARNING] 18:42:23:096 [Kernel]/(7020:7022): Operacion desconocida
+[INFO] 18:42:23:096 [Kernel]/(7020:7022): Se recibio algo de MEMORIA
+[WARNING] 18:42:23:096 [Kernel]/(7020:7022): Operacion desconocida
+[INFO] 18:42:23:096 [Kernel]/(7020:7022): Se recibio algo de MEMORIA
+[WARNING] 18:42:23:096 [Kernel]/(7020:7022): Operacion desconocida
+[INFO] 18:42:23:096 [Kernel]/(7020:7022): Se recibio algo de MEMORIA
+[WARNING] 18:42:23:096 [Kernel]/(7020:7022): Operacion desconocida
+[INFO] 18:42:23:096 [Kernel]/(7020:7022): Se recibio algo de MEMORIA
+[WARNING] 18:42:23:096 [Kernel]/(7020:7022): Operacion desconocida
+[INFO] 18:42:23:096 [Kernel]/(7020:7022): Se recibio algo de MEMORIA
+[WARNING] 18:42:23:096 [Kernel]/(7020:7022): Operacion desconocida
+[INFO] 18:42:23:097 [Kernel]/(7020:7022): Se recibio algo de MEMORIA
+[WARNING] 18:42:23:097 [Kernel]/(7020:7022): Operacion desconocida
+[INFO] 18:42:23:097 [Kernel]/(7020:7022): Se recibio algo de MEMORIA
+[WARNING] 18:42:23:097 [Kernel]/(7020:7022): Operacion desconocida
+[INFO] 18:42:23:097 [Kernel]/(7020:7022): Se recibio algo de MEMORIA
+[WARNING] 18:42:23:097 [Kernel]/(7020:7022): Operacion desconocida
+[INFO] 18:42:23:097 [Kernel]/(7020:7022): Se recibio algo de MEMORIA
+[WARNING] 18:42:23:097 [Kernel]/(7020:7022): Operacion desconocida
+[INFO] 18:42:23:097 [Kernel]/(7020:7022): Se recibio algo de MEMORIA
+[WARNING] 18:42:23:097 [Kernel]/(7020:7022): Operacion desconocida
+[INFO] 18:42:23:097 [Kernel]/(7020:7022): Se recibio algo de MEMORIA
+[WARNING] 18:42:23:097 [Kernel]/(7020:7022): Operacion desconocida
+[INFO] 18:42:23:097 [Kernel]/(7020:7022): Se recibio algo de MEMORIA
+[WARNING] 18:42:23:097 [Kernel]/(7020:7022): Operacion desconocida
+[INFO] 18:42:23:097 [Kernel]/(7020:7022): Se recibio algo de MEMORIA
+[WARNING] 18:42:23:097 [Kernel]/(7020:7022): Operacion desconocida
+[INFO] 18:42:23:097 [Kernel]/(7020:7022): Se recibio algo de MEMORIA
+[WARNING] 18:42:23:097 [Kernel]/(7020:7022): Operacion desconocida
+[INFO] 18:42:23:097 [Kernel]/(7020:7022): Se recibio algo de MEMORIA
+[WARNING] 18:42:23:097 [Kernel]/(7020:7022): Operacion desconocida
+[INFO] 18:42:23:097 [Kernel]/(7020:7022): Se recibio algo de MEMORIA
+[WARNING] 18:42:23:097 [Kernel]/(7020:7022): Operacion desconocida
+[INFO] 18:42:23:097 [Kernel]/(7020:7022): Se recibio algo de MEMORIA
+[WARNING] 18:42:23:097 [Kernel]/(7020:7022): Operacion desconocida
+[INFO] 18:42:23:097 [Kernel]/(7020:7022): Se recibio algo de MEMORIA
+[WARNING] 18:42:23:097 [Kernel]/(7020:7022): Operacion desconocida
+[INFO] 18:42:23:097 [Kernel]/(7020:7022): Se recibio algo de MEMORIA
+[WARNING] 18:42:23:097 [Kernel]/(7020:7022): Operacion desconocida
+[INFO] 18:42:23:097 [Kernel]/(7020:7022): Se recibio algo de MEMORIA
+[WARNING] 18:42:23:097 [Kernel]/(7020:7022): Operacion desconocida
+[INFO] 18:42:23:097 [Kernel]/(7020:7022): Se recibio algo de MEMORIA
+[WARNING] 18:42:23:097 [Kernel]/(7020:7022): Operacion desconocida
+[INFO] 18:42:23:097 [Kernel]/(7020:7022): Se recibio algo de MEMORIA
+[WARNING] 18:42:23:097 [Kernel]/(7020:7022): Operacion desconocida
+[INFO] 18:42:23:097 [Kernel]/(7020:7022): Se recibio algo de MEMORIA
+[WARNING] 18:42:23:097 [Kernel]/(7020:7022): Operacion desconocida
+[INFO] 18:42:23:097 [Kernel]/(7020:7022): Se recibio algo de MEMORIA
+[WARNING] 18:42:23:097 [Kernel]/(7020:7022): Operacion desconocida
+[INFO] 18:42:23:097 [Kernel]/(7020:7022): Se recibio algo de MEMORIA
+[WARNING] 18:42:23:097 [Kernel]/(7020:7022): Operacion desconocida
+[INFO] 18:42:23:097 [Kernel]/(7020:7022): Se recibio algo de MEMORIA
+[WARNING] 18:42:23:097 [Kernel]/(7020:7022): Operacion desconocida
+[INFO] 18:42:23:097 [Kernel]/(7020:7022): Se recibio algo de MEMORIA
+[WARNING] 18:42:23:097 [Kernel]/(7020:7022): Operacion desconocida
+[INFO] 18:42:23:097 [Kernel]/(7020:7022): Se recibio algo de MEMORIA
+[WARNING] 18:42:23:097 [Kernel]/(7020:7022): Operacion desconocida
+[INFO] 18:42:23:097 [Kernel]/(7020:7022): Se recibio algo de MEMORIA
+[WARNING] 18:42:23:097 [Kernel]/(7020:7022): Operacion desconocida
+[INFO] 18:42:23:097 [Kernel]/(7020:7022): Se recibio algo de MEMORIA
+[WARNING] 18:42:23:097 [Kernel]/(7020:7022): Operacion desconocida
+[INFO] 18:42:23:097 [Kernel]/(7020:7022): Se recibio algo de MEMORIA
+[WARNING] 18:42:23:097 [Kernel]/(7020:7022): Operacion desconocida
+[INFO] 18:42:23:102 [Kernel]/(7020:7022): Se recibio algo de MEMORIA
+[WARNING] 18:42:23:103 [Kernel]/(7020:7022): Operacion desconocida
+[INFO] 18:42:23:103 [Kernel]/(7020:7022): Se recibio algo de MEMORIA
+[WARNING] 18:42:23:103 [Kernel]/(7020:7022): Operacion desconocida
+[INFO] 18:42:23:103 [Kernel]/(7020:7022): Se recibio algo de MEMORIA
+[WARNING] 18:42:23:103 [Kernel]/(7020:7022): Operacion desconocida
+[INFO] 18:42:23:103 [Kernel]/(7020:7022): Se recibio algo de MEMORIA
+[WARNING] 18:42:23:103 [Kernel]/(7020:7022): Operacion desconocida
+[INFO] 18:42:23:103 [Kernel]/(7020:7022): Se recibio algo de MEMORIA
+[WARNING] 18:42:23:103 [Kernel]/(7020:7022): Operacion desconocida
+[INFO] 18:42:23:103 [Kernel]/(7020:7022): Se recibio algo de MEMORIA
+[WARNING] 18:42:23:103 [Kernel]/(7020:7022): Operacion desconocida
+[INFO] 18:42:23:103 [Kernel]/(7020:7022): Se recibio algo de MEMORIA
+[WARNING] 18:42:23:103 [Kernel]/(7020:7022): Operacion desconocida
+[INFO] 18:42:23:103 [Kernel]/(7020:7022): Se recibio algo de MEMORIA
+[WARNING] 18:42:23:103 [Kernel]/(7020:7022): Operacion desconocida
+[INFO] 18:42:23:103 [Kernel]/(7020:7022): Se recibio algo de MEMORIA
+[WARNING] 18:42:23:103 [Kernel]/(7020:7022): Operacion desconocida
+[INFO] 18:42:23:103 [Kernel]/(7020:7022): Se recibio algo de MEMORIA
+[WARNING] 18:42:23:103 [Kernel]/(7020:7022): Operacion desconocida
+[INFO] 18:42:23:103 [Kernel]/(7020:7022): Se recibio algo de MEMORIA
+[WARNING] 18:42:23:103 [Kernel]/(7020:7022): Operacion desconocida
+[INFO] 18:42:23:103 [Kernel]/(7020:7022): Se recibio algo de MEMORIA
+[WARNING] 18:42:23:103 [Kernel]/(7020:7022): Operacion desconocida
+[INFO] 18:42:23:103 [Kernel]/(7020:7022): Se recibio algo de MEMORIA
+[WARNING] 18:42:23:103 [Kernel]/(7020:7022): Operacion desconocida
+[INFO] 18:42:23:103 [Kernel]/(7020:7022): Se recibio algo de MEMORIA
+[WARNING] 18:42:23:103 [Kernel]/(7020:7022): Operacion desconocida
+[INFO] 18:42:23:103 [Kernel]/(7020:7022): Se recibio algo de MEMORIA
+[WARNING] 18:42:23:103 [Kernel]/(7020:7022): Operacion desconocida
+[INFO] 18:42:23:103 [Kernel]/(7020:7022): Se recibio algo de MEMORIA
+[WARNING] 18:42:23:103 [Kernel]/(7020:7022): Operacion desconocida
+[INFO] 18:42:23:103 [Kernel]/(7020:7022): Se recibio algo de MEMORIA
+[WARNING] 18:42:23:103 [Kernel]/(7020:7022): Operacion desconocida
+[INFO] 18:42:23:103 [Kernel]/(7020:7022): Se recibio algo de MEMORIA
+[WARNING] 18:42:23:103 [Kernel]/(7020:7022): Operacion desconocida
+[INFO] 18:42:23:103 [Kernel]/(7020:7022): Se recibio algo de MEMORIA
+[WARNING] 18:42:23:103 [Kernel]/(7020:7022): Operacion desconocida
+[INFO] 18:42:23:103 [Kernel]/(7020:7022): Se recibio algo de MEMORIA
+[WARNING] 18:42:23:103 [Kernel]/(7020:7022): Operacion desconocida
+[INFO] 18:42:23:103 [Kernel]/(7020:7022): Se recibio algo de MEMORIA
+[WARNING] 18:42:23:103 [Kernel]/(7020:7022): Operacion desconocida
+[INFO] 18:42:23:103 [Kernel]/(7020:7022): Se recibio algo de MEMORIA
+[WARNING] 18:42:23:103 [Kernel]/(7020:7022): Operacion desconocida
+[INFO] 18:42:23:103 [Kernel]/(7020:7022): Se recibio algo de MEMORIA
+[WARNING] 18:42:23:103 [Kernel]/(7020:7022): Operacion desconocida
+[INFO] 18:42:23:103 [Kernel]/(7020:7022): Se recibio algo de MEMORIA
+[WARNING] 18:42:23:103 [Kernel]/(7020:7022): Operacion desconocida
+[INFO] 18:42:23:103 [Kernel]/(7020:7022): Se recibio algo de MEMORIA
+[WARNING] 18:42:23:103 [Kernel]/(7020:7022): Operacion desconocida
+[INFO] 18:42:23:103 [Kernel]/(7020:7022): Se recibio algo de MEMORIA
+[WARNING] 18:42:23:103 [Kernel]/(7020:7022): Operacion desconocida
+[INFO] 18:42:23:103 [Kernel]/(7020:7022): Se recibio algo de MEMORIA
+[WARNING] 18:42:23:103 [Kernel]/(7020:7022): Operacion desconocida
+[INFO] 18:42:23:103 [Kernel]/(7020:7022): Se recibio algo de MEMORIA
+[WARNING] 18:42:23:103 [Kernel]/(7020:7022): Operacion desconocida
+[INFO] 18:42:23:103 [Kernel]/(7020:7022): Se recibio algo de MEMORIA
+[WARNING] 18:42:23:103 [Kernel]/(7020:7022): Operacion desconocida
+[INFO] 18:42:23:103 [Kernel]/(7020:7022): Se recibio algo de MEMORIA
+[WARNING] 18:42:23:103 [Kernel]/(7020:7022): Operacion desconocida
+[INFO] 18:42:23:103 [Kernel]/(7020:7022): Se recibio algo de MEMORIA
+[WARNING] 18:42:23:103 [Kernel]/(7020:7022): Operacion desconocida
+[INFO] 18:42:23:103 [Kernel]/(7020:7022): Se recibio algo de MEMORIA
+[WARNING] 18:42:23:103 [Kernel]/(7020:7022): Operacion desconocida
+[INFO] 18:42:23:103 [Kernel]/(7020:7022): Se recibio algo de MEMORIA
+[WARNING] 18:42:23:103 [Kernel]/(7020:7022): Operacion desconocida
+[INFO] 18:42:23:103 [Kernel]/(7020:7022): Se recibio algo de MEMORIA
+[WARNING] 18:42:23:103 [Kernel]/(7020:7022): Operacion desconocida
+[INFO] 18:42:23:103 [Kernel]/(7020:7022): Se recibio algo de MEMORIA
+[INFO] 18:42:23:103 [Kernel]/(7020:7024): Se recibio algo de CPU_Dispatch
+[ERROR] 18:42:23:103 [Kernel]/(7020:7024): [DESCONEXION]: FILESYSTEM
+[INFO] 18:43:37:956 [Kernel]/(7200:7200): [R1 | 1]
+[INFO] 18:43:37:956 [Kernel]/(7200:7200): [R2 | 1]
+[INFO] 18:43:37:956 [Kernel]/(7200:7200): [R3 | 1]
+[INFO] 18:43:37:956 [Kernel]/(7200:7200): [R4 | 1]
+[INFO] 18:43:37:956 [Kernel]/(7200:7200): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 18:43:37:957 [Kernel]/(7200:7200): HANDSHAKE CON FILESYSTEM [EXITOSO]
+[INFO] 18:43:37:957 [Kernel]/(7200:7200): HANDSHAKE CON CPU_Dispatch [EXITOSO]
+[INFO] 18:43:37:957 [Kernel]/(7200:7200): HANDSHAKE CON CPU_Interrupt [EXITOSO]
+[INFO] 18:44:19:181 [Kernel]/(7200:7216): Entre al IF
+[INFO] 18:44:19:181 [Kernel]/(7200:7216): Se aviso a Memoria del nuevo proceso
+[INFO] 18:44:30:186 [Kernel]/(7200:7202): Se recibio algo de MEMORIA
+[INFO] 18:44:30:186 [Kernel]/(7200:7217): Entre al IF
+[INFO] 18:44:30:186 [Kernel]/(7200:7217): Se aviso a Memoria del nuevo proceso
+[INFO] 18:44:32:693 [Kernel]/(7200:7204): Se recibio algo de CPU_Dispatch
+[WARNING] 18:44:32:693 [Kernel]/(7200:7204): Entre a atender instruccion
+[INFO] 18:44:32:693 [Kernel]/(7200:7203): Se recibio algo de FILESYSTEM
+[INFO] 18:44:32:693 [Kernel]/(7200:7203): LA oepracion es: -1 -- ABRIR_ARCHIVO
+[INFO] 18:44:32:693 [Kernel]/(7200:7204): Cree el archivo: consolas
+[INFO] 18:44:32:694 [Kernel]/(7200:7203): Se recibio algo de FILESYSTEM
+[INFO] 18:44:32:694 [Kernel]/(7200:7203): LA oepracion es: 0 -- CREAR_ARCHIVO
+[INFO] 18:44:32:694 [Kernel]/(7200:7203): Se creo el archivo en FS
+[INFO] 18:44:33:195 [Kernel]/(7200:7204): Se recibio algo de CPU_Dispatch
+[WARNING] 18:44:33:195 [Kernel]/(7200:7204): Entre a atender instruccion
+[INFO] 18:44:39:707 [Kernel]/(7200:7203): Se recibio algo de FILESYSTEM
+[INFO] 18:44:39:707 [Kernel]/(7200:7203):  La respuesta es: Truncate realizado
+[INFO] 18:44:40:208 [Kernel]/(7200:7204): Se recibio algo de CPU_Dispatch
+[WARNING] 18:44:40:208 [Kernel]/(7200:7204): Entre a atender instruccion
+[INFO] 18:44:41:192 [Kernel]/(7200:7202): Se recibio algo de MEMORIA
+[INFO] 18:44:41:192 [Kernel]/(7200:7219): Entre al IF
+[INFO] 18:44:41:192 [Kernel]/(7200:7219): Se aviso a Memoria del nuevo proceso
+[INFO] 18:44:41:211 [Kernel]/(7200:7204): Se recibio algo de CPU_Dispatch
+[WARNING] 18:44:41:211 [Kernel]/(7200:7204): Entre a atender instruccion
+[INFO] 18:44:41:212 [Kernel]/(7200:7229): Se solicito a Memoria resolver Page FAULT
+[INFO] 18:44:52:205 [Kernel]/(7200:7202): Se recibio algo de MEMORIA
+[INFO] 18:44:52:205 [Kernel]/(7200:7220): Entre al IF
+[INFO] 18:44:52:205 [Kernel]/(7200:7220): Se aviso a Memoria del nuevo proceso
+[INFO] 18:44:52:840 [Kernel]/(7200:7202): Se recibio algo de MEMORIA
+[ERROR] 18:44:52:840 [Kernel]/(7200:7202): [DESCONEXION]: MEMORIA
+[INFO] 18:47:57:815 [Kernel]/(7241:7241): [R1 | 1]
+[INFO] 18:47:57:815 [Kernel]/(7241:7241): [R2 | 1]
+[INFO] 18:47:57:815 [Kernel]/(7241:7241): [R3 | 1]
+[INFO] 18:47:57:815 [Kernel]/(7241:7241): [R4 | 1]
+[INFO] 18:48:04:324 [Kernel]/(7252:7252): [R1 | 1]
+[INFO] 18:48:04:324 [Kernel]/(7252:7252): [R2 | 1]
+[INFO] 18:48:04:324 [Kernel]/(7252:7252): [R3 | 1]
+[INFO] 18:48:04:324 [Kernel]/(7252:7252): [R4 | 1]
+[INFO] 18:48:04:325 [Kernel]/(7252:7252): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 18:48:04:325 [Kernel]/(7252:7252): HANDSHAKE CON FILESYSTEM [EXITOSO]
+[INFO] 18:48:04:325 [Kernel]/(7252:7252): HANDSHAKE CON CPU_Dispatch [EXITOSO]
+[INFO] 18:48:04:325 [Kernel]/(7252:7252): HANDSHAKE CON CPU_Interrupt [EXITOSO]
+[INFO] 18:48:19:445 [Kernel]/(7252:7262): Entre al IF
+[INFO] 18:48:19:445 [Kernel]/(7252:7262): Se aviso a Memoria del nuevo proceso
+[INFO] 18:48:19:528 [Kernel]/(7252:7254): Se recibio algo de MEMORIA
+[ERROR] 18:48:19:528 [Kernel]/(7252:7254): [DESCONEXION]: MEMORIA
+[INFO] 18:57:29:167 [Kernel]/(7565:7565): [R1 | 1]
+[INFO] 18:57:29:168 [Kernel]/(7565:7565): [R2 | 1]
+[INFO] 18:57:29:168 [Kernel]/(7565:7565): [R3 | 1]
+[INFO] 18:57:29:168 [Kernel]/(7565:7565): [R4 | 1]
+[INFO] 18:57:29:169 [Kernel]/(7565:7565): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 18:57:29:171 [Kernel]/(7565:7565): HANDSHAKE CON FILESYSTEM [EXITOSO]
+[INFO] 18:57:29:171 [Kernel]/(7565:7565): HANDSHAKE CON CPU_Dispatch [EXITOSO]
+[INFO] 18:57:29:171 [Kernel]/(7565:7565): HANDSHAKE CON CPU_Interrupt [EXITOSO]
+[INFO] 18:57:33:810 [Kernel]/(7565:7574): Entre al IF
+[INFO] 18:57:33:810 [Kernel]/(7565:7574): Se aviso a Memoria del nuevo proceso
+[INFO] 18:57:33:890 [Kernel]/(7565:7567): Se recibio algo de MEMORIA
+[ERROR] 18:57:33:890 [Kernel]/(7565:7567): [DESCONEXION]: MEMORIA
+[INFO] 19:03:52:650 [Kernel]/(7785:7785): [R1 | 1]
+[INFO] 19:03:52:650 [Kernel]/(7785:7785): [R2 | 1]
+[INFO] 19:03:52:650 [Kernel]/(7785:7785): [R3 | 1]
+[INFO] 19:03:52:650 [Kernel]/(7785:7785): [R4 | 1]
+[INFO] 19:03:59:048 [Kernel]/(7805:7805): [R1 | 1]
+[INFO] 19:03:59:048 [Kernel]/(7805:7805): [R2 | 1]
+[INFO] 19:03:59:048 [Kernel]/(7805:7805): [R3 | 1]
+[INFO] 19:03:59:048 [Kernel]/(7805:7805): [R4 | 1]
+[INFO] 19:03:59:049 [Kernel]/(7805:7805): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 19:03:59:049 [Kernel]/(7805:7805): HANDSHAKE CON FILESYSTEM [EXITOSO]
+[INFO] 19:03:59:049 [Kernel]/(7805:7805): HANDSHAKE CON CPU_Dispatch [EXITOSO]
+[INFO] 19:03:59:050 [Kernel]/(7805:7805): HANDSHAKE CON CPU_Interrupt [EXITOSO]
+[INFO] 19:04:07:780 [Kernel]/(7805:7814): Entre al IF
+[INFO] 19:04:07:780 [Kernel]/(7805:7814): Se aviso a Memoria del nuevo proceso
+[INFO] 19:04:07:863 [Kernel]/(7805:7807): Se recibio algo de MEMORIA
+[ERROR] 19:04:07:863 [Kernel]/(7805:7807): [DESCONEXION]: MEMORIA
+[INFO] 19:05:36:626 [Kernel]/(7951:7951): [R1 | 1]
+[INFO] 19:05:36:626 [Kernel]/(7951:7951): [R2 | 1]
+[INFO] 19:05:36:626 [Kernel]/(7951:7951): [R3 | 1]
+[INFO] 19:05:36:626 [Kernel]/(7951:7951): [R4 | 1]
+[INFO] 19:05:36:627 [Kernel]/(7951:7951): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 19:05:36:627 [Kernel]/(7951:7951): HANDSHAKE CON FILESYSTEM [EXITOSO]
+[INFO] 19:05:36:627 [Kernel]/(7951:7951): HANDSHAKE CON CPU_Dispatch [EXITOSO]
+[INFO] 19:05:36:627 [Kernel]/(7951:7951): HANDSHAKE CON CPU_Interrupt [EXITOSO]
+[INFO] 19:05:44:079 [Kernel]/(7951:7961): Entre al IF
+[INFO] 19:05:44:079 [Kernel]/(7951:7961): Se aviso a Memoria del nuevo proceso
+[INFO] 19:05:44:157 [Kernel]/(7951:7953): Se recibio algo de MEMORIA
+[ERROR] 19:05:44:157 [Kernel]/(7951:7953): [DESCONEXION]: MEMORIA

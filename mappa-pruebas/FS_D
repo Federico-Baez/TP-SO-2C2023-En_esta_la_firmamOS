@@ -1,7 +1,7 @@
 SET AX 0
 SET BX 1
 F_OPEN fibonacci W
-F_TRUNCATE fibonacci 160
+F_TRUNCATE fibonacci 16
 MOV_OUT 0 AX
 MOV_OUT 4 BX
 SUM AX BX
