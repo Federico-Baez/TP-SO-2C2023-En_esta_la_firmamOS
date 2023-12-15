@@ -4439,3 +4439,145 @@
 [INFO] 17:40:09:650 [CPU - Log obligatorio]/(4767:4788): PID: <1> - FETCH - Program Counter: <7>
 [INFO] 17:40:10:152 [CPU - Log obligatorio]/(4767:4788): PID: <1> - Ejecutando: <F_WRITE> - <consolas> - <16>
 [INFO] 17:40:10:665 [CPU - Log obligatorio]/(4767:4788): PID: <1> - OBTENER MARCO - Página: <1> - Marco: <0>
+[INFO] 17:55:53:423 [CPU - Log obligatorio]/(3598:3669): PID: <1> - FETCH - Program Counter: <0>
+[INFO] 17:55:53:986 [CPU - Log obligatorio]/(3598:3669): PID: <1> - Ejecutando: <F_OPEN> - <consolas> - <W>
+[INFO] 17:55:53:990 [CPU - Log obligatorio]/(3598:3669): PID: <1> - FETCH - Program Counter: <1>
+[INFO] 17:55:54:497 [CPU - Log obligatorio]/(3598:3669): PID: <1> - Ejecutando: <F_TRUNCATE> - <consolas> - <64>
+[INFO] 17:56:05:081 [CPU - Log obligatorio]/(3598:3673): PID: <1> - FETCH - Program Counter: <2>
+[INFO] 17:56:05:581 [CPU - Log obligatorio]/(3598:3673): PID: <1> - Ejecutando: <F_SEEK> - <consolas> - <0>
+[INFO] 17:56:05:582 [CPU - Log obligatorio]/(3598:3673): PID: <1> - FETCH - Program Counter: <3>
+[INFO] 17:56:06:083 [CPU - Log obligatorio]/(3598:3673): PID: <1> - Ejecutando: <F_WRITE> - <consolas> - <0>
+[INFO] 17:56:06:590 [CPU - Log obligatorio]/(3598:3673): Page Fault PID: <1> - Página: <0>
+[INFO] 17:56:12:100 [CPU - Log obligatorio]/(3598:3676): PID: <1> - FETCH - Program Counter: <3>
+[INFO] 17:56:12:601 [CPU - Log obligatorio]/(3598:3676): PID: <1> - Ejecutando: <F_WRITE> - <consolas> - <0>
+[INFO] 17:56:13:101 [CPU - Log obligatorio]/(3598:3676): PID: <1> - OBTENER MARCO - Página: <0> - Marco: <0>
+[INFO] 18:00:48:658 [CPU - Log obligatorio]/(4032:4047): PID: <1> - FETCH - Program Counter: <0>
+[INFO] 18:00:49:161 [CPU - Log obligatorio]/(4032:4047): PID: <1> - Ejecutando: <F_OPEN> - <consolas> - <W>
+[INFO] 18:00:49:163 [CPU - Log obligatorio]/(4032:4047): PID: <1> - FETCH - Program Counter: <1>
+[INFO] 18:00:49:664 [CPU - Log obligatorio]/(4032:4047): PID: <1> - Ejecutando: <F_TRUNCATE> - <consolas> - <64>
+[INFO] 18:01:02:336 [CPU - Log obligatorio]/(4032:4051): PID: <1> - FETCH - Program Counter: <2>
+[INFO] 18:01:02:899 [CPU - Log obligatorio]/(4032:4051): PID: <1> - Ejecutando: <F_SEEK> - <consolas> - <0>
+[INFO] 18:01:02:899 [CPU - Log obligatorio]/(4032:4051): PID: <1> - FETCH - Program Counter: <3>
+[INFO] 18:01:03:412 [CPU - Log obligatorio]/(4032:4051): PID: <1> - Ejecutando: <F_WRITE> - <consolas> - <0>
+[INFO] 18:01:03:913 [CPU - Log obligatorio]/(4032:4051): Page Fault PID: <1> - Página: <0>
+[INFO] 18:01:09:418 [CPU - Log obligatorio]/(4032:4054): PID: <1> - FETCH - Program Counter: <3>
+[INFO] 18:01:09:919 [CPU - Log obligatorio]/(4032:4054): PID: <1> - Ejecutando: <F_WRITE> - <consolas> - <0>
+[INFO] 18:01:10:419 [CPU - Log obligatorio]/(4032:4054): PID: <1> - OBTENER MARCO - Página: <0> - Marco: <0>
+[INFO] 18:09:34:621 [CPU - Log obligatorio]/(4957:4972): PID: <1> - FETCH - Program Counter: <0>
+[INFO] 18:09:35:122 [CPU - Log obligatorio]/(4957:4972): PID: <1> - Ejecutando: <F_OPEN> - <consolas> - <W>
+[INFO] 18:09:35:124 [CPU - Log obligatorio]/(4957:4972): PID: <1> - FETCH - Program Counter: <1>
+[INFO] 18:09:35:628 [CPU - Log obligatorio]/(4957:4972): PID: <1> - Ejecutando: <F_TRUNCATE> - <consolas> - <64>
+[INFO] 18:09:50:205 [CPU - Log obligatorio]/(4957:4976): PID: <1> - FETCH - Program Counter: <2>
+[INFO] 18:09:50:706 [CPU - Log obligatorio]/(4957:4976): PID: <1> - Ejecutando: <F_SEEK> - <consolas> - <0>
+[INFO] 18:09:50:706 [CPU - Log obligatorio]/(4957:4976): PID: <1> - FETCH - Program Counter: <3>
+[INFO] 18:09:51:207 [CPU - Log obligatorio]/(4957:4976): PID: <1> - Ejecutando: <F_WRITE> - <consolas> - <0>
+[INFO] 18:09:51:709 [CPU - Log obligatorio]/(4957:4976): Page Fault PID: <1> - Página: <0>
+[INFO] 18:09:57:224 [CPU - Log obligatorio]/(4957:4979): PID: <1> - FETCH - Program Counter: <3>
+[INFO] 18:09:57:725 [CPU - Log obligatorio]/(4957:4979): PID: <1> - Ejecutando: <F_WRITE> - <consolas> - <0>
+[INFO] 18:09:58:225 [CPU - Log obligatorio]/(4957:4979): PID: <1> - OBTENER MARCO - Página: <0> - Marco: <0>
+[INFO] 18:18:17:194 [CPU - Log obligatorio]/(5310:5325): PID: <1> - FETCH - Program Counter: <0>
+[INFO] 18:18:17:695 [CPU - Log obligatorio]/(5310:5325): PID: <1> - Ejecutando: <F_OPEN> - <consolas> - <W>
+[INFO] 18:18:17:697 [CPU - Log obligatorio]/(5310:5325): PID: <1> - FETCH - Program Counter: <1>
+[INFO] 18:18:18:214 [CPU - Log obligatorio]/(5310:5325): PID: <1> - Ejecutando: <F_TRUNCATE> - <consolas> - <64>
+[INFO] 18:18:34:762 [CPU - Log obligatorio]/(5310:5329): PID: <1> - FETCH - Program Counter: <2>
+[INFO] 18:18:35:264 [CPU - Log obligatorio]/(5310:5329): PID: <1> - Ejecutando: <F_SEEK> - <consolas> - <0>
+[INFO] 18:18:35:265 [CPU - Log obligatorio]/(5310:5329): PID: <1> - FETCH - Program Counter: <3>
+[INFO] 18:18:35:766 [CPU - Log obligatorio]/(5310:5329): PID: <1> - Ejecutando: <F_WRITE> - <consolas> - <0>
+[INFO] 18:18:36:268 [CPU - Log obligatorio]/(5310:5329): Page Fault PID: <1> - Página: <0>
+[INFO] 18:18:41:778 [CPU - Log obligatorio]/(5310:5332): PID: <1> - FETCH - Program Counter: <3>
+[INFO] 18:18:42:278 [CPU - Log obligatorio]/(5310:5332): PID: <1> - Ejecutando: <F_WRITE> - <consolas> - <0>
+[INFO] 18:18:42:779 [CPU - Log obligatorio]/(5310:5332): PID: <1> - OBTENER MARCO - Página: <0> - Marco: <0>
+[INFO] 18:21:16:113 [CPU - Log obligatorio]/(5422:5437): PID: <1> - FETCH - Program Counter: <0>
+[INFO] 18:21:16:617 [CPU - Log obligatorio]/(5422:5437): PID: <1> - Ejecutando: <F_OPEN> - <consolas> - <W>
+[INFO] 18:21:16:619 [CPU - Log obligatorio]/(5422:5437): PID: <1> - FETCH - Program Counter: <1>
+[INFO] 18:21:17:136 [CPU - Log obligatorio]/(5422:5437): PID: <1> - Ejecutando: <F_TRUNCATE> - <consolas> - <64>
+[INFO] 18:21:21:648 [CPU - Log obligatorio]/(5422:5441): PID: <1> - FETCH - Program Counter: <2>
+[INFO] 18:21:22:151 [CPU - Log obligatorio]/(5422:5441): PID: <1> - Ejecutando: <F_SEEK> - <consolas> - <0>
+[INFO] 18:21:22:152 [CPU - Log obligatorio]/(5422:5441): PID: <1> - FETCH - Program Counter: <3>
+[INFO] 18:21:22:660 [CPU - Log obligatorio]/(5422:5441): PID: <1> - Ejecutando: <F_WRITE> - <consolas> - <0>
+[INFO] 18:21:23:162 [CPU - Log obligatorio]/(5422:5441): Page Fault PID: <1> - Página: <0>
+[INFO] 18:21:28:738 [CPU - Log obligatorio]/(5422:5444): PID: <1> - FETCH - Program Counter: <3>
+[INFO] 18:21:29:241 [CPU - Log obligatorio]/(5422:5444): PID: <1> - Ejecutando: <F_WRITE> - <consolas> - <0>
+[INFO] 18:21:29:743 [CPU - Log obligatorio]/(5422:5444): PID: <1> - OBTENER MARCO - Página: <0> - Marco: <0>
+[INFO] 18:24:35:983 [CPU - Log obligatorio]/(5874:5896): PID: <1> - FETCH - Program Counter: <0>
+[INFO] 18:24:36:486 [CPU - Log obligatorio]/(5874:5896): PID: <1> - Ejecutando: <F_OPEN> - <consolas> - <W>
+[INFO] 18:24:36:489 [CPU - Log obligatorio]/(5874:5896): PID: <1> - FETCH - Program Counter: <1>
+[INFO] 18:24:36:990 [CPU - Log obligatorio]/(5874:5896): PID: <1> - Ejecutando: <F_TRUNCATE> - <consolas> - <64>
+[INFO] 18:24:43:578 [CPU - Log obligatorio]/(5874:5900): PID: <1> - FETCH - Program Counter: <2>
+[INFO] 18:24:44:080 [CPU - Log obligatorio]/(5874:5900): PID: <1> - Ejecutando: <F_SEEK> - <consolas> - <0>
+[INFO] 18:24:44:080 [CPU - Log obligatorio]/(5874:5900): PID: <1> - FETCH - Program Counter: <3>
+[INFO] 18:24:44:585 [CPU - Log obligatorio]/(5874:5900): PID: <1> - Ejecutando: <F_WRITE> - <consolas> - <0>
+[INFO] 18:24:45:086 [CPU - Log obligatorio]/(5874:5900): Page Fault PID: <1> - Página: <0>
+[INFO] 18:24:50:607 [CPU - Log obligatorio]/(5874:5903): PID: <1> - FETCH - Program Counter: <3>
+[INFO] 18:24:51:107 [CPU - Log obligatorio]/(5874:5903): PID: <1> - Ejecutando: <F_WRITE> - <consolas> - <0>
+[INFO] 18:24:51:608 [CPU - Log obligatorio]/(5874:5903): PID: <1> - OBTENER MARCO - Página: <0> - Marco: <0>
+[INFO] 18:26:03:158 [CPU - Log obligatorio]/(6050:6068): PID: <1> - FETCH - Program Counter: <0>
+[INFO] 18:26:03:659 [CPU - Log obligatorio]/(6050:6068): PID: <1> - Ejecutando: <F_OPEN> - <consolas> - <W>
+[INFO] 18:26:03:660 [CPU - Log obligatorio]/(6050:6068): PID: <1> - FETCH - Program Counter: <1>
+[INFO] 18:26:04:161 [CPU - Log obligatorio]/(6050:6068): PID: <1> - Ejecutando: <F_TRUNCATE> - <consolas> - <64>
+[INFO] 18:26:12:710 [CPU - Log obligatorio]/(6050:6072): PID: <1> - FETCH - Program Counter: <2>
+[INFO] 18:26:13:215 [CPU - Log obligatorio]/(6050:6072): PID: <1> - Ejecutando: <F_SEEK> - <consolas> - <0>
+[INFO] 18:26:13:216 [CPU - Log obligatorio]/(6050:6072): PID: <1> - FETCH - Program Counter: <3>
+[INFO] 18:26:13:716 [CPU - Log obligatorio]/(6050:6072): PID: <1> - Ejecutando: <F_WRITE> - <consolas> - <0>
+[INFO] 18:26:14:218 [CPU - Log obligatorio]/(6050:6072): Page Fault PID: <1> - Página: <0>
+[INFO] 18:26:19:728 [CPU - Log obligatorio]/(6050:6075): PID: <1> - FETCH - Program Counter: <3>
+[INFO] 18:26:20:229 [CPU - Log obligatorio]/(6050:6075): PID: <1> - Ejecutando: <F_WRITE> - <consolas> - <0>
+[INFO] 18:26:20:730 [CPU - Log obligatorio]/(6050:6075): PID: <1> - OBTENER MARCO - Página: <0> - Marco: <0>
+[INFO] 18:30:48:234 [CPU - Log obligatorio]/(6353:6376): PID: <1> - FETCH - Program Counter: <0>
+[INFO] 18:30:48:735 [CPU - Log obligatorio]/(6353:6376): PID: <1> - Ejecutando: <SET> - <AX> - <83>
+[INFO] 18:30:48:735 [CPU - Log obligatorio]/(6353:6376): PID: <1> - FETCH - Program Counter: <1>
+[INFO] 18:30:49:240 [CPU - Log obligatorio]/(6353:6376): PID: <1> - Ejecutando: <SET> - <BX> - <79>
+[INFO] 18:30:49:240 [CPU - Log obligatorio]/(6353:6376): PID: <1> - FETCH - Program Counter: <2>
+[INFO] 18:30:49:799 [CPU - Log obligatorio]/(6353:6376): PID: <1> - Ejecutando: <SET> - <CX> - <78>
+[INFO] 18:30:49:799 [CPU - Log obligatorio]/(6353:6376): PID: <1> - FETCH - Program Counter: <3>
+[INFO] 18:30:50:303 [CPU - Log obligatorio]/(6353:6376): PID: <1> - Ejecutando: <SET> - <DX> - <89>
+[INFO] 18:30:50:303 [CPU - Log obligatorio]/(6353:6376): PID: <1> - FETCH - Program Counter: <4>
+[INFO] 18:30:50:805 [CPU - Log obligatorio]/(6353:6376): PID: <1> - Ejecutando: <F_OPEN> - <consolas> - <W>
+[INFO] 18:30:50:807 [CPU - Log obligatorio]/(6353:6376): PID: <1> - FETCH - Program Counter: <5>
+[INFO] 18:30:51:309 [CPU - Log obligatorio]/(6353:6376): PID: <1> - Ejecutando: <F_TRUNCATE> - <consolas> - <64>
+[INFO] 18:30:55:818 [CPU - Log obligatorio]/(6353:6380): PID: <1> - FETCH - Program Counter: <6>
+[INFO] 18:30:56:324 [CPU - Log obligatorio]/(6353:6380): PID: <1> - Ejecutando: <F_SEEK> - <consolas> - <0>
+[INFO] 18:30:56:324 [CPU - Log obligatorio]/(6353:6380): PID: <1> - FETCH - Program Counter: <7>
+[INFO] 18:30:56:828 [CPU - Log obligatorio]/(6353:6380): PID: <1> - Ejecutando: <MOV_OUT> - <0> - <AX>
+[INFO] 18:30:57:332 [CPU - Log obligatorio]/(6353:6380): Page Fault PID: <1> - Página: <0>
+[INFO] 18:30:59:241 [CPU - Log obligatorio]/(6353:6383): PID: <2> - FETCH - Program Counter: <0>
+[INFO] 18:30:59:747 [CPU - Log obligatorio]/(6353:6383): PID: <2> - Ejecutando: <SET> - <AX> - <1>
+[INFO] 18:30:59:747 [CPU - Log obligatorio]/(6353:6383): PID: <2> - FETCH - Program Counter: <1>
+[INFO] 18:31:00:248 [CPU - Log obligatorio]/(6353:6383): PID: <2> - Ejecutando: <F_OPEN> - <consolas> - <R>
+[INFO] 18:31:05:748 [CPU - Log obligatorio]/(6353:6385): PID: <1> - FETCH - Program Counter: <7>
+[INFO] 18:31:06:249 [CPU - Log obligatorio]/(6353:6385): PID: <1> - Ejecutando: <MOV_OUT> - <0> - <AX>
+[INFO] 18:31:06:750 [CPU - Log obligatorio]/(6353:6385): PID: <1> - OBTENER MARCO - Página: <0> - Marco: <0>
+[INFO] 18:31:07:250 [CPU - Log obligatorio]/(6353:6385): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <0> - Valor: <83>
+[INFO] 18:31:07:250 [CPU - Log obligatorio]/(6353:6385): PID: <1> - FETCH - Program Counter: <8>
+[INFO] 18:31:07:751 [CPU - Log obligatorio]/(6353:6385): PID: <1> - Ejecutando: <MOV_OUT> - <4> - <BX>
+[INFO] 18:31:08:255 [CPU - Log obligatorio]/(6353:6385): PID: <1> - OBTENER MARCO - Página: <0> - Marco: <0>
+[INFO] 18:31:08:757 [CPU - Log obligatorio]/(6353:6385): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <4> - Valor: <79>
+[INFO] 18:31:08:757 [CPU - Log obligatorio]/(6353:6385): PID: <1> - FETCH - Program Counter: <9>
+[INFO] 18:31:09:260 [CPU - Log obligatorio]/(6353:6385): PID: <1> - Ejecutando: <MOV_OUT> - <8> - <CX>
+[INFO] 18:31:09:761 [CPU - Log obligatorio]/(6353:6385): PID: <1> - OBTENER MARCO - Página: <0> - Marco: <0>
+[INFO] 18:31:10:262 [CPU - Log obligatorio]/(6353:6385): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <8> - Valor: <78>
+[INFO] 18:31:10:262 [CPU - Log obligatorio]/(6353:6385): PID: <1> - FETCH - Program Counter: <10>
+[INFO] 18:31:10:763 [CPU - Log obligatorio]/(6353:6385): PID: <1> - Ejecutando: <MOV_OUT> - <12> - <DX>
+[INFO] 18:31:11:264 [CPU - Log obligatorio]/(6353:6385): PID: <1> - OBTENER MARCO - Página: <0> - Marco: <0>
+[INFO] 18:31:11:765 [CPU - Log obligatorio]/(6353:6385): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <12> - Valor: <89>
+[INFO] 18:31:11:765 [CPU - Log obligatorio]/(6353:6385): PID: <1> - FETCH - Program Counter: <11>
+[INFO] 18:31:12:266 [CPU - Log obligatorio]/(6353:6385): PID: <1> - Ejecutando: <F_WRITE> - <consolas> - <0>
+[INFO] 18:42:23:092 [CPU - Log obligatorio]/(7015:7037): PID: <1> - FETCH - Program Counter: <0>
+[INFO] 18:44:30:186 [CPU - Log obligatorio]/(7195:7223): PID: <1> - FETCH - Program Counter: <0>
+[INFO] 18:44:30:687 [CPU - Log obligatorio]/(7195:7223): PID: <1> - Ejecutando: <SET> - <AX> - <83>
+[INFO] 18:44:30:688 [CPU - Log obligatorio]/(7195:7223): PID: <1> - FETCH - Program Counter: <1>
+[INFO] 18:44:31:189 [CPU - Log obligatorio]/(7195:7223): PID: <1> - Ejecutando: <SET> - <BX> - <79>
+[INFO] 18:44:31:189 [CPU - Log obligatorio]/(7195:7223): PID: <1> - FETCH - Program Counter: <2>
+[INFO] 18:44:31:690 [CPU - Log obligatorio]/(7195:7223): PID: <1> - Ejecutando: <SET> - <CX> - <78>
+[INFO] 18:44:31:690 [CPU - Log obligatorio]/(7195:7223): PID: <1> - FETCH - Program Counter: <3>
+[INFO] 18:44:32:191 [CPU - Log obligatorio]/(7195:7223): PID: <1> - Ejecutando: <SET> - <DX> - <89>
+[INFO] 18:44:32:191 [CPU - Log obligatorio]/(7195:7223): PID: <1> - FETCH - Program Counter: <4>
+[INFO] 18:44:32:692 [CPU - Log obligatorio]/(7195:7223): PID: <1> - Ejecutando: <F_OPEN> - <consolas> - <W>
+[INFO] 18:44:32:694 [CPU - Log obligatorio]/(7195:7223): PID: <1> - FETCH - Program Counter: <5>
+[INFO] 18:44:33:195 [CPU - Log obligatorio]/(7195:7223): PID: <1> - Ejecutando: <F_TRUNCATE> - <consolas> - <64>
+[INFO] 18:44:39:707 [CPU - Log obligatorio]/(7195:7227): PID: <1> - FETCH - Program Counter: <6>
+[INFO] 18:44:40:208 [CPU - Log obligatorio]/(7195:7227): PID: <1> - Ejecutando: <F_SEEK> - <consolas> - <0>
+[INFO] 18:44:40:209 [CPU - Log obligatorio]/(7195:7227): PID: <1> - FETCH - Program Counter: <7>
+[INFO] 18:44:40:709 [CPU - Log obligatorio]/(7195:7227): PID: <1> - Ejecutando: <MOV_OUT> - <0> - <AX>
+[INFO] 18:44:41:211 [CPU - Log obligatorio]/(7195:7227): Page Fault PID: <1> - Página: <0>
+[INFO] 18:44:52:205 [CPU - Log obligatorio]/(7195:7231): PID: <2> - FETCH - Program Counter: <0>

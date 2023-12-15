@@ -68,7 +68,8 @@ void plp_planificar_proceso_nuevo(t_pcb* un_pcb){
 	}
 	pausador();
 	//Verificar si puedo pasar a READY segun el GMMP
-	plp_planifica();
+	ejecutar_en_un_hilo_nuevo_detach((void*)plp_planifica, NULL);
+//	plp_planifica();
 }
 
 /*Planificador a Largo Plazo para [XX] -> EXIT*/

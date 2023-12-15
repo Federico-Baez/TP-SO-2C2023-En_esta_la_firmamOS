@@ -2001,3 +2001,233 @@
 [INFO] 17:40:09:130 [Kernel - Log obligatorio]/(4772:4775): Cola Ready FIFO: [1]
 [INFO] 17:40:09:130 [Kernel - Log obligatorio]/(4772:4775):  PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
 [INFO] 17:40:09:649 [Kernel - Log obligatorio]/(4772:4776): PID: 1 - Actualizar puntero Archivo: consolas - Puntero 0
+[INFO] 17:55:46:403 [Kernel - Log obligatorio]/(3659:3667): Se crea el proceso 1 en NEW
+[INFO] 17:55:53:422 [Kernel - Log obligatorio]/(3659:3667):  PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 17:55:53:422 [Kernel - Log obligatorio]/(3659:3667): Cola Ready FIFO: [1]
+[INFO] 17:55:53:422 [Kernel - Log obligatorio]/(3659:3668):  PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 17:55:53:986 [Kernel - Log obligatorio]/(3659:3663): PID: 1 - Abrir Archivo: consolas
+[INFO] 17:55:54:497 [Kernel - Log obligatorio]/(3659:3663):  PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCKED
+[INFO] 17:55:54:497 [Kernel - Log obligatorio]/(3659:3663): PID: 1 - Bloqueado por: consolas
+[INFO] 17:55:54:497 [Kernel - Log obligatorio]/(3659:3663): PID: 1 - Archivo: consolas - Tamaño: 64
+[INFO] 17:56:05:080 [Kernel - Log obligatorio]/(3659:3662):  PID: 1 - Estado Anterior: BLOCKED - Estado Actual: READY
+[INFO] 17:56:05:080 [Kernel - Log obligatorio]/(3659:3662): Cola Ready FIFO: [1]
+[INFO] 17:56:05:080 [Kernel - Log obligatorio]/(3659:3662):  PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 17:56:05:582 [Kernel - Log obligatorio]/(3659:3663): PID: 1 - Actualizar puntero Archivo: consolas - Puntero 0
+[INFO] 17:56:06:590 [Kernel - Log obligatorio]/(3659:3663): Page Fault PID: 1 - Pagina: 0
+[INFO] 17:56:06:590 [Kernel - Log obligatorio]/(3659:3663):  PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCKED
+[INFO] 17:56:12:099 [Kernel - Log obligatorio]/(3659:3675):  PID: 1 - Estado Anterior: BLOCKED - Estado Actual: READY
+[INFO] 17:56:12:099 [Kernel - Log obligatorio]/(3659:3675): Cola Ready FIFO: [1]
+[INFO] 17:56:12:099 [Kernel - Log obligatorio]/(3659:3675):  PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 17:56:13:101 [Kernel - Log obligatorio]/(3659:3663): PID: 1 - Escribir Archivo: consolas - Puntero: 0 - Dirección Memoria 0 - Tamaño 64
+[INFO] 17:56:13:101 [Kernel - Log obligatorio]/(3659:3663):  PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCKED
+[INFO] 17:56:13:101 [Kernel - Log obligatorio]/(3659:3663): PID: 1 - Bloqueado por: consolas
+[INFO] 18:00:41:624 [Kernel - Log obligatorio]/(4037:4045): Se crea el proceso 1 en NEW
+[INFO] 18:00:48:658 [Kernel - Log obligatorio]/(4037:4045):  PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 18:00:48:658 [Kernel - Log obligatorio]/(4037:4045): Cola Ready FIFO: [1]
+[INFO] 18:00:48:658 [Kernel - Log obligatorio]/(4037:4046):  PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 18:00:49:161 [Kernel - Log obligatorio]/(4037:4041): PID: 1 - Abrir Archivo: consolas
+[INFO] 18:00:49:665 [Kernel - Log obligatorio]/(4037:4041):  PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCKED
+[INFO] 18:00:49:665 [Kernel - Log obligatorio]/(4037:4041): PID: 1 - Bloqueado por: consolas
+[INFO] 18:00:49:665 [Kernel - Log obligatorio]/(4037:4041): PID: 1 - Archivo: consolas - Tamaño: 64
+[INFO] 18:01:02:336 [Kernel - Log obligatorio]/(4037:4040):  PID: 1 - Estado Anterior: BLOCKED - Estado Actual: READY
+[INFO] 18:01:02:336 [Kernel - Log obligatorio]/(4037:4040): Cola Ready FIFO: [1]
+[INFO] 18:01:02:336 [Kernel - Log obligatorio]/(4037:4040):  PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 18:01:02:899 [Kernel - Log obligatorio]/(4037:4041): PID: 1 - Actualizar puntero Archivo: consolas - Puntero 0
+[INFO] 18:01:03:913 [Kernel - Log obligatorio]/(4037:4041): Page Fault PID: 1 - Pagina: 0
+[INFO] 18:01:03:913 [Kernel - Log obligatorio]/(4037:4041):  PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCKED
+[INFO] 18:01:09:417 [Kernel - Log obligatorio]/(4037:4053):  PID: 1 - Estado Anterior: BLOCKED - Estado Actual: READY
+[INFO] 18:01:09:418 [Kernel - Log obligatorio]/(4037:4053): Cola Ready FIFO: [1]
+[INFO] 18:01:09:418 [Kernel - Log obligatorio]/(4037:4053):  PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 18:01:10:420 [Kernel - Log obligatorio]/(4037:4041): PID: 1 - Escribir Archivo: consolas - Puntero: 0 - Dirección Memoria 0 - Tamaño 64
+[INFO] 18:01:10:420 [Kernel - Log obligatorio]/(4037:4041):  PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCKED
+[INFO] 18:01:10:420 [Kernel - Log obligatorio]/(4037:4041): PID: 1 - Bloqueado por: consolas
+[INFO] 18:09:27:607 [Kernel - Log obligatorio]/(4962:4970): Se crea el proceso 1 en NEW
+[INFO] 18:09:34:620 [Kernel - Log obligatorio]/(4962:4970):  PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 18:09:34:620 [Kernel - Log obligatorio]/(4962:4970): Cola Ready FIFO: [1]
+[INFO] 18:09:34:620 [Kernel - Log obligatorio]/(4962:4971):  PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 18:09:35:122 [Kernel - Log obligatorio]/(4962:4966): PID: 1 - Abrir Archivo: consolas
+[INFO] 18:09:35:628 [Kernel - Log obligatorio]/(4962:4966):  PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCKED
+[INFO] 18:09:35:628 [Kernel - Log obligatorio]/(4962:4966): PID: 1 - Bloqueado por: consolas
+[INFO] 18:09:35:629 [Kernel - Log obligatorio]/(4962:4966): PID: 1 - Archivo: consolas - Tamaño: 64
+[INFO] 18:09:50:205 [Kernel - Log obligatorio]/(4962:4965):  PID: 1 - Estado Anterior: BLOCKED - Estado Actual: READY
+[INFO] 18:09:50:205 [Kernel - Log obligatorio]/(4962:4965): Cola Ready FIFO: [1]
+[INFO] 18:09:50:205 [Kernel - Log obligatorio]/(4962:4965):  PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 18:09:50:706 [Kernel - Log obligatorio]/(4962:4966): PID: 1 - Actualizar puntero Archivo: consolas - Puntero 0
+[INFO] 18:09:51:709 [Kernel - Log obligatorio]/(4962:4966): Page Fault PID: 1 - Pagina: 0
+[INFO] 18:09:51:709 [Kernel - Log obligatorio]/(4962:4966):  PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCKED
+[INFO] 18:09:57:223 [Kernel - Log obligatorio]/(4962:4978):  PID: 1 - Estado Anterior: BLOCKED - Estado Actual: READY
+[INFO] 18:09:57:224 [Kernel - Log obligatorio]/(4962:4978): Cola Ready FIFO: [1]
+[INFO] 18:09:57:224 [Kernel - Log obligatorio]/(4962:4978):  PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 18:09:58:226 [Kernel - Log obligatorio]/(4962:4966): PID: 1 - Escribir Archivo: consolas - Puntero: 0 - Dirección Memoria 0 - Tamaño 64
+[INFO] 18:09:58:226 [Kernel - Log obligatorio]/(4962:4966):  PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCKED
+[INFO] 18:09:58:226 [Kernel - Log obligatorio]/(4962:4966): PID: 1 - Bloqueado por: consolas
+[INFO] 18:18:10:134 [Kernel - Log obligatorio]/(5315:5323): Se crea el proceso 1 en NEW
+[INFO] 18:18:17:193 [Kernel - Log obligatorio]/(5315:5323):  PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 18:18:17:193 [Kernel - Log obligatorio]/(5315:5323): Cola Ready FIFO: [1]
+[INFO] 18:18:17:193 [Kernel - Log obligatorio]/(5315:5324):  PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 18:18:17:695 [Kernel - Log obligatorio]/(5315:5319): PID: 1 - Abrir Archivo: consolas
+[INFO] 18:18:18:214 [Kernel - Log obligatorio]/(5315:5319):  PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCKED
+[INFO] 18:18:18:214 [Kernel - Log obligatorio]/(5315:5319): PID: 1 - Bloqueado por: consolas
+[INFO] 18:18:18:214 [Kernel - Log obligatorio]/(5315:5319): PID: 1 - Archivo: consolas - Tamaño: 64
+[INFO] 18:18:34:762 [Kernel - Log obligatorio]/(5315:5318):  PID: 1 - Estado Anterior: BLOCKED - Estado Actual: READY
+[INFO] 18:18:34:762 [Kernel - Log obligatorio]/(5315:5318): Cola Ready FIFO: [1]
+[INFO] 18:18:34:762 [Kernel - Log obligatorio]/(5315:5318):  PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 18:18:35:264 [Kernel - Log obligatorio]/(5315:5319): PID: 1 - Actualizar puntero Archivo: consolas - Puntero 0
+[INFO] 18:18:36:268 [Kernel - Log obligatorio]/(5315:5319): Page Fault PID: 1 - Pagina: 0
+[INFO] 18:18:36:268 [Kernel - Log obligatorio]/(5315:5319):  PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCKED
+[INFO] 18:18:41:777 [Kernel - Log obligatorio]/(5315:5331):  PID: 1 - Estado Anterior: BLOCKED - Estado Actual: READY
+[INFO] 18:18:41:778 [Kernel - Log obligatorio]/(5315:5331): Cola Ready FIFO: [1]
+[INFO] 18:18:41:778 [Kernel - Log obligatorio]/(5315:5331):  PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 18:18:42:779 [Kernel - Log obligatorio]/(5315:5319): PID: 1 - Escribir Archivo: consolas - Puntero: 0 - Dirección Memoria 0 - Tamaño 64
+[INFO] 18:18:42:779 [Kernel - Log obligatorio]/(5315:5319):  PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCKED
+[INFO] 18:18:42:779 [Kernel - Log obligatorio]/(5315:5319): PID: 1 - Bloqueado por: consolas
+[INFO] 18:21:09:091 [Kernel - Log obligatorio]/(5427:5435): Se crea el proceso 1 en NEW
+[INFO] 18:21:16:113 [Kernel - Log obligatorio]/(5427:5435):  PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 18:21:16:113 [Kernel - Log obligatorio]/(5427:5435): Cola Ready FIFO: [1]
+[INFO] 18:21:16:113 [Kernel - Log obligatorio]/(5427:5436):  PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 18:21:16:617 [Kernel - Log obligatorio]/(5427:5431): PID: 1 - Abrir Archivo: consolas
+[INFO] 18:21:17:136 [Kernel - Log obligatorio]/(5427:5431):  PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCKED
+[INFO] 18:21:17:136 [Kernel - Log obligatorio]/(5427:5431): PID: 1 - Bloqueado por: consolas
+[INFO] 18:21:17:136 [Kernel - Log obligatorio]/(5427:5431): PID: 1 - Archivo: consolas - Tamaño: 64
+[INFO] 18:21:21:648 [Kernel - Log obligatorio]/(5427:5430):  PID: 1 - Estado Anterior: BLOCKED - Estado Actual: READY
+[INFO] 18:21:21:648 [Kernel - Log obligatorio]/(5427:5430): Cola Ready FIFO: [1]
+[INFO] 18:21:21:648 [Kernel - Log obligatorio]/(5427:5430):  PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 18:21:22:152 [Kernel - Log obligatorio]/(5427:5431): PID: 1 - Actualizar puntero Archivo: consolas - Puntero 0
+[INFO] 18:21:23:162 [Kernel - Log obligatorio]/(5427:5431): Page Fault PID: 1 - Pagina: 0
+[INFO] 18:21:23:162 [Kernel - Log obligatorio]/(5427:5431):  PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCKED
+[INFO] 18:21:28:738 [Kernel - Log obligatorio]/(5427:5443):  PID: 1 - Estado Anterior: BLOCKED - Estado Actual: READY
+[INFO] 18:21:28:738 [Kernel - Log obligatorio]/(5427:5443): Cola Ready FIFO: [1]
+[INFO] 18:21:28:738 [Kernel - Log obligatorio]/(5427:5443):  PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 18:21:29:743 [Kernel - Log obligatorio]/(5427:5431): PID: 1 - Escribir Archivo: consolas - Puntero: 0 - Dirección Memoria 0 - Tamaño 64
+[INFO] 18:21:29:744 [Kernel - Log obligatorio]/(5427:5431):  PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCKED
+[INFO] 18:21:29:744 [Kernel - Log obligatorio]/(5427:5431): PID: 1 - Bloqueado por: consolas
+[INFO] 18:24:28:952 [Kernel - Log obligatorio]/(5880:5894): Se crea el proceso 1 en NEW
+[INFO] 18:24:35:982 [Kernel - Log obligatorio]/(5880:5894):  PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 18:24:35:982 [Kernel - Log obligatorio]/(5880:5894): Cola Ready FIFO: [1]
+[INFO] 18:24:35:982 [Kernel - Log obligatorio]/(5880:5895):  PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 18:24:36:487 [Kernel - Log obligatorio]/(5880:5884): PID: 1 - Abrir Archivo: consolas
+[INFO] 18:24:36:990 [Kernel - Log obligatorio]/(5880:5884):  PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCKED
+[INFO] 18:24:36:990 [Kernel - Log obligatorio]/(5880:5884): PID: 1 - Bloqueado por: consolas
+[INFO] 18:24:36:990 [Kernel - Log obligatorio]/(5880:5884): PID: 1 - Archivo: consolas - Tamaño: 64
+[INFO] 18:24:43:578 [Kernel - Log obligatorio]/(5880:5883):  PID: 1 - Estado Anterior: BLOCKED - Estado Actual: READY
+[INFO] 18:24:43:578 [Kernel - Log obligatorio]/(5880:5883): Cola Ready FIFO: [1]
+[INFO] 18:24:43:578 [Kernel - Log obligatorio]/(5880:5883):  PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 18:24:44:080 [Kernel - Log obligatorio]/(5880:5884): PID: 1 - Actualizar puntero Archivo: consolas - Puntero 0
+[INFO] 18:24:45:086 [Kernel - Log obligatorio]/(5880:5884): Page Fault PID: 1 - Pagina: 0
+[INFO] 18:24:45:086 [Kernel - Log obligatorio]/(5880:5884):  PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCKED
+[INFO] 18:24:50:607 [Kernel - Log obligatorio]/(5880:5902):  PID: 1 - Estado Anterior: BLOCKED - Estado Actual: READY
+[INFO] 18:24:50:607 [Kernel - Log obligatorio]/(5880:5902): Cola Ready FIFO: [1]
+[INFO] 18:24:50:607 [Kernel - Log obligatorio]/(5880:5902):  PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 18:24:51:609 [Kernel - Log obligatorio]/(5880:5884): PID: 1 - Escribir Archivo: consolas - Puntero: 0 - Dirección Memoria 0 - Tamaño 64
+[INFO] 18:24:51:609 [Kernel - Log obligatorio]/(5880:5884):  PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCKED
+[INFO] 18:24:51:609 [Kernel - Log obligatorio]/(5880:5884): PID: 1 - Bloqueado por: consolas
+[INFO] 18:25:56:145 [Kernel - Log obligatorio]/(6055:6066): Se crea el proceso 1 en NEW
+[INFO] 18:26:03:157 [Kernel - Log obligatorio]/(6055:6066):  PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 18:26:03:157 [Kernel - Log obligatorio]/(6055:6066): Cola Ready FIFO: [1]
+[INFO] 18:26:03:157 [Kernel - Log obligatorio]/(6055:6067):  PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 18:26:03:659 [Kernel - Log obligatorio]/(6055:6059): PID: 1 - Abrir Archivo: consolas
+[INFO] 18:26:04:161 [Kernel - Log obligatorio]/(6055:6059):  PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCKED
+[INFO] 18:26:04:161 [Kernel - Log obligatorio]/(6055:6059): PID: 1 - Bloqueado por: consolas
+[INFO] 18:26:04:161 [Kernel - Log obligatorio]/(6055:6059): PID: 1 - Archivo: consolas - Tamaño: 64
+[INFO] 18:26:12:710 [Kernel - Log obligatorio]/(6055:6058):  PID: 1 - Estado Anterior: BLOCKED - Estado Actual: READY
+[INFO] 18:26:12:710 [Kernel - Log obligatorio]/(6055:6058): Cola Ready FIFO: [1]
+[INFO] 18:26:12:710 [Kernel - Log obligatorio]/(6055:6058):  PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 18:26:13:215 [Kernel - Log obligatorio]/(6055:6059): PID: 1 - Actualizar puntero Archivo: consolas - Puntero 0
+[INFO] 18:26:14:218 [Kernel - Log obligatorio]/(6055:6059): Page Fault PID: 1 - Pagina: 0
+[INFO] 18:26:14:218 [Kernel - Log obligatorio]/(6055:6059):  PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCKED
+[INFO] 18:26:19:728 [Kernel - Log obligatorio]/(6055:6074):  PID: 1 - Estado Anterior: BLOCKED - Estado Actual: READY
+[INFO] 18:26:19:728 [Kernel - Log obligatorio]/(6055:6074): Cola Ready FIFO: [1]
+[INFO] 18:26:19:728 [Kernel - Log obligatorio]/(6055:6074):  PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 18:26:20:730 [Kernel - Log obligatorio]/(6055:6059): PID: 1 - Escribir Archivo: consolas - Puntero: 0 - Dirección Memoria 0 - Tamaño 64
+[INFO] 18:26:20:730 [Kernel - Log obligatorio]/(6055:6059):  PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCKED
+[INFO] 18:26:20:730 [Kernel - Log obligatorio]/(6055:6059): PID: 1 - Bloqueado por: consolas
+[WARNING] 18:29:07:919 [Kernel - Log obligatorio]/(6330:6341): PAUSA DE PLANIFICACIÓN
+[INFO] 18:29:16:595 [Kernel - Log obligatorio]/(6330:6342): Se crea el proceso 1 en NEW
+[INFO] 18:29:20:523 [Kernel - Log obligatorio]/(6330:6343): Se crea el proceso 2 en NEW
+[INFO] 18:29:23:356 [Kernel - Log obligatorio]/(6330:6344): Se crea el proceso 3 en NEW
+[INFO] 18:29:27:036 [Kernel - Log obligatorio]/(6330:6345): Se crea el proceso 4 en NEW
+[INFO] 18:29:31:094 [Kernel - Log obligatorio]/(6330:6346): Se crea el proceso 5 en NEW
+[INFO] 18:29:52:536 [Kernel - Log obligatorio]/(6330:6347): Se crea el proceso 6 en NEW
+[WARNING] 18:30:01:093 [Kernel - Log obligatorio]/(6358:6366): PAUSA DE PLANIFICACIÓN
+[INFO] 18:30:05:234 [Kernel - Log obligatorio]/(6358:6367): Se crea el proceso 1 en NEW
+[INFO] 18:30:09:208 [Kernel - Log obligatorio]/(6358:6368): Se crea el proceso 2 en NEW
+[INFO] 18:30:12:915 [Kernel - Log obligatorio]/(6358:6369): Se crea el proceso 3 en NEW
+[INFO] 18:30:18:914 [Kernel - Log obligatorio]/(6358:6370): Se crea el proceso 4 en NEW
+[INFO] 18:30:23:334 [Kernel - Log obligatorio]/(6358:6371): Se crea el proceso 5 en NEW
+[INFO] 18:30:30:839 [Kernel - Log obligatorio]/(6358:6372): Se crea el proceso 6 en NEW
+[WARNING] 18:30:37:173 [Kernel - Log obligatorio]/(6358:6374): INICIO DE PLANIFICACIÓN
+[INFO] 18:30:48:233 [Kernel - Log obligatorio]/(6358:6367):  PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 18:30:48:233 [Kernel - Log obligatorio]/(6358:6367): Cola Ready FIFO: [1]
+[INFO] 18:30:48:233 [Kernel - Log obligatorio]/(6358:6375):  PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 18:30:50:806 [Kernel - Log obligatorio]/(6358:6362): PID: 1 - Abrir Archivo: consolas
+[INFO] 18:30:51:309 [Kernel - Log obligatorio]/(6358:6362):  PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCKED
+[INFO] 18:30:51:309 [Kernel - Log obligatorio]/(6358:6362): PID: 1 - Bloqueado por: consolas
+[INFO] 18:30:51:309 [Kernel - Log obligatorio]/(6358:6362): PID: 1 - Archivo: consolas - Tamaño: 64
+[INFO] 18:30:55:818 [Kernel - Log obligatorio]/(6358:6361):  PID: 1 - Estado Anterior: BLOCKED - Estado Actual: READY
+[INFO] 18:30:55:818 [Kernel - Log obligatorio]/(6358:6361): Cola Ready FIFO: [1]
+[INFO] 18:30:55:818 [Kernel - Log obligatorio]/(6358:6361):  PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 18:30:56:324 [Kernel - Log obligatorio]/(6358:6362): PID: 1 - Actualizar puntero Archivo: consolas - Puntero 0
+[INFO] 18:30:57:332 [Kernel - Log obligatorio]/(6358:6362): Page Fault PID: 1 - Pagina: 0
+[INFO] 18:30:57:332 [Kernel - Log obligatorio]/(6358:6362):  PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCKED
+[INFO] 18:30:59:241 [Kernel - Log obligatorio]/(6358:6368):  PID: 2 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 18:30:59:241 [Kernel - Log obligatorio]/(6358:6368): Cola Ready FIFO: [2]
+[INFO] 18:30:59:241 [Kernel - Log obligatorio]/(6358:6382):  PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 18:31:00:248 [Kernel - Log obligatorio]/(6358:6362): PID: 2 - Abrir Archivo: consolas
+[INFO] 18:31:00:248 [Kernel - Log obligatorio]/(6358:6362):  PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCKED
+[INFO] 18:31:00:248 [Kernel - Log obligatorio]/(6358:6362): PID: 2 - Bloqueado por: consolas
+[INFO] 18:31:05:748 [Kernel - Log obligatorio]/(6358:6384):  PID: 1 - Estado Anterior: BLOCKED - Estado Actual: READY
+[INFO] 18:31:05:748 [Kernel - Log obligatorio]/(6358:6384): Cola Ready FIFO: [1]
+[INFO] 18:31:05:748 [Kernel - Log obligatorio]/(6358:6384):  PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 18:31:12:752 [Kernel - Log obligatorio]/(6358:6369):  PID: 3 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 18:31:12:752 [Kernel - Log obligatorio]/(6358:6369): Cola Ready FIFO: [3]
+[WARNING] 18:41:40:648 [Kernel - Log obligatorio]/(7020:7028): PAUSA DE PLANIFICACIÓN
+[INFO] 18:41:50:821 [Kernel - Log obligatorio]/(7020:7029): Se crea el proceso 1 en NEW
+[INFO] 18:41:53:966 [Kernel - Log obligatorio]/(7020:7030): Se crea el proceso 2 en NEW
+[INFO] 18:41:56:586 [Kernel - Log obligatorio]/(7020:7031): Se crea el proceso 3 en NEW
+[INFO] 18:42:02:536 [Kernel - Log obligatorio]/(7020:7032): Se crea el proceso 4 en NEW
+[INFO] 18:42:10:312 [Kernel - Log obligatorio]/(7020:7033): Se crea el proceso 5 en NEW
+[INFO] 18:42:16:756 [Kernel - Log obligatorio]/(7020:7034): Se crea el proceso 6 en NEW
+[WARNING] 18:42:23:091 [Kernel - Log obligatorio]/(7020:7035): INICIO DE PLANIFICACIÓN
+[INFO] 18:42:23:091 [Kernel - Log obligatorio]/(7020:7029):  PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 18:42:23:091 [Kernel - Log obligatorio]/(7020:7029): Cola Ready FIFO: [1]
+[INFO] 18:42:23:092 [Kernel - Log obligatorio]/(7020:7036):  PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 18:42:23:092 [Kernel - Log obligatorio]/(7020:7030):  PID: 2 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 18:42:23:092 [Kernel - Log obligatorio]/(7020:7030): Cola Ready FIFO: [2]
+[INFO] 18:42:23:092 [Kernel - Log obligatorio]/(7020:7031):  PID: 3 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 18:42:23:092 [Kernel - Log obligatorio]/(7020:7031): Cola Ready FIFO: [2, 3]
+[INFO] 18:42:23:093 [Kernel - Log obligatorio]/(7020:7032):  PID: 4 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 18:42:23:093 [Kernel - Log obligatorio]/(7020:7032): Cola Ready FIFO: [2, 3, 4]
+[INFO] 18:42:23:093 [Kernel - Log obligatorio]/(7020:7033):  PID: 5 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 18:42:23:093 [Kernel - Log obligatorio]/(7020:7033): Cola Ready FIFO: [2, 3, 4, 5]
+[INFO] 18:42:23:093 [Kernel - Log obligatorio]/(7020:7034):  PID: 6 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 18:42:23:093 [Kernel - Log obligatorio]/(7020:7034): Cola Ready FIFO: [2, 3, 4, 5, 6]
+[WARNING] 18:43:43:728 [Kernel - Log obligatorio]/(7200:7208): PAUSA DE PLANIFICACIÓN
+[INFO] 18:43:47:869 [Kernel - Log obligatorio]/(7200:7209): Se crea el proceso 1 en NEW
+[INFO] 18:43:51:270 [Kernel - Log obligatorio]/(7200:7210): Se crea el proceso 2 en NEW
+[INFO] 18:43:54:221 [Kernel - Log obligatorio]/(7200:7211): Se crea el proceso 3 en NEW
+[INFO] 18:43:59:408 [Kernel - Log obligatorio]/(7200:7212): Se crea el proceso 4 en NEW
+[INFO] 18:44:03:798 [Kernel - Log obligatorio]/(7200:7213): Se crea el proceso 5 en NEW
+[INFO] 18:44:15:157 [Kernel - Log obligatorio]/(7200:7214): Se crea el proceso 6 en NEW
+[WARNING] 18:44:19:181 [Kernel - Log obligatorio]/(7200:7215): INICIO DE PLANIFICACIÓN
+[INFO] 18:44:30:186 [Kernel - Log obligatorio]/(7200:7216):  PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 18:44:30:186 [Kernel - Log obligatorio]/(7200:7216): Cola Ready FIFO: [1]
+[INFO] 18:44:30:186 [Kernel - Log obligatorio]/(7200:7222):  PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 18:44:32:693 [Kernel - Log obligatorio]/(7200:7204): PID: 1 - Abrir Archivo: consolas
+[INFO] 18:44:33:195 [Kernel - Log obligatorio]/(7200:7204):  PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCKED
+[INFO] 18:44:33:195 [Kernel - Log obligatorio]/(7200:7204): PID: 1 - Bloqueado por: consolas
+[INFO] 18:44:33:195 [Kernel - Log obligatorio]/(7200:7204): PID: 1 - Archivo: consolas - Tamaño: 64
+[INFO] 18:44:39:707 [Kernel - Log obligatorio]/(7200:7203):  PID: 1 - Estado Anterior: BLOCKED - Estado Actual: READY
+[INFO] 18:44:39:707 [Kernel - Log obligatorio]/(7200:7203): Cola Ready FIFO: [1]
+[INFO] 18:44:39:707 [Kernel - Log obligatorio]/(7200:7203):  PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 18:44:40:208 [Kernel - Log obligatorio]/(7200:7204): PID: 1 - Actualizar puntero Archivo: consolas - Puntero 0
+[INFO] 18:44:41:192 [Kernel - Log obligatorio]/(7200:7217):  PID: 2 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 18:44:41:192 [Kernel - Log obligatorio]/(7200:7217): Cola Ready FIFO: [2]
+[INFO] 18:44:41:211 [Kernel - Log obligatorio]/(7200:7204): Page Fault PID: 1 - Pagina: 0
+[INFO] 18:44:41:211 [Kernel - Log obligatorio]/(7200:7204):  PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCKED
+[INFO] 18:44:52:205 [Kernel - Log obligatorio]/(7200:7219):  PID: 3 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 18:44:52:205 [Kernel - Log obligatorio]/(7200:7219): Cola Ready FIFO: [2, 3]
+[INFO] 18:44:52:205 [Kernel - Log obligatorio]/(7200:7230):  PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 18:48:19:444 [Kernel - Log obligatorio]/(7252:7261): Se crea el proceso 1 en NEW
+[INFO] 18:57:33:809 [Kernel - Log obligatorio]/(7565:7573): Se crea el proceso 1 en NEW
+[INFO] 19:04:07:780 [Kernel - Log obligatorio]/(7805:7813): Se crea el proceso 1 en NEW
+[INFO] 19:05:44:079 [Kernel - Log obligatorio]/(7951:7960): Se crea el proceso 1 en NEW

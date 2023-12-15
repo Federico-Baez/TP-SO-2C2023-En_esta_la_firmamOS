@@ -131,65 +131,92 @@ t_list* leer_archivo_y_cargar_instrucciones(const char* path_archivo) {
     t_list* instrucciones = list_create();
     char* instruccion_formateada = NULL;
     int i = 0;
-
+    log_info(memoria_logger,"AA1");
     if (archivo == NULL) {
         perror("No se encontró el archivo");
         return instrucciones;
     }
+    log_info(memoria_logger,"AA2");
 
     char* linea_instruccion = malloc(256 * sizeof(char));
+    log_info(memoria_logger,"AA3");
     while (fgets(linea_instruccion, 256, archivo)) {
+    	log_warning(memoria_logger,"REPITO WHILE");
     	//Comprobar si el ultimo caracter del string capturado tiene un salto delinea
     	//Si lo tiene hay que sacarlo
     	//[0][1][2][3][4]["\n"]["\0"] -> Size:6
     	int size_linea_actual = strlen(linea_instruccion);
+    	log_info(memoria_logger,"AA4 tamnio instrusccion %d", size_linea_actual);
     	if(size_linea_actual > 2){
     		if(linea_instruccion[size_linea_actual - 1] == '\n'){
+    			log_info(memoria_logger,"AA5 IF LINEA INSTRUCCION");
 				char* linea_limpia = string_new();
 				string_n_append(&linea_limpia, linea_instruccion, size_linea_actual - 1);
+				log_info(memoria_logger,"AA6");
 				free(linea_instruccion);
+				log_info(memoria_logger,"AA7");
 				linea_instruccion = linea_limpia;
+				log_info(memoria_logger,"AA8");
     		}
     	}
     	//-----------------------------------------------
-
+    	log_info(memoria_logger,"AA9");
         char** l_instrucciones = string_split(linea_instruccion, " ");
-
+        log_info(memoria_logger,"AA10");
         log_info(memoria_logger, "Intruccion: [%s]", linea_instruccion);
-
+        log_info(memoria_logger,"AA11");
         while (l_instrucciones[i]) {
-            i++;
+            log_info(memoria_logger,"AA11.5 %d", i);
+        	i++;
+            log_info(memoria_logger,"AA11.8 %d", i);
+            log_info(memoria_logger,"AA11.8 %s", l_instrucciones[i]);
         }
-
+        log_info(memoria_logger,"AA12 MALLO PSEUDO");
         t_instruccion_codigo* pseudo_cod = malloc(sizeof(t_instruccion_codigo));
+        log_info(memoria_logger,"AA13");
         pseudo_cod->pseudo_c = strdup(l_instrucciones[0]);
+        log_info(memoria_logger,"AA14");
         pseudo_cod->fst_param = (i > 1) ? strdup(l_instrucciones[1]) : NULL;
+        log_info(memoria_logger,"AA15");
         pseudo_cod->snd_param = (i > 2) ? strdup(l_instrucciones[2]) : NULL;
 
         if (i == 3) {
-            instruccion_formateada = string_from_format("%s %s %s", pseudo_cod->pseudo_c, pseudo_cod->fst_param, pseudo_cod->snd_param);
+        	log_info(memoria_logger,"AA16");
+        	instruccion_formateada = string_from_format("%s %s %s", pseudo_cod->pseudo_c, pseudo_cod->fst_param, pseudo_cod->snd_param);
         } else if (i == 2) {
+        	log_info(memoria_logger,"AA17");
             instruccion_formateada = string_from_format("%s %s", pseudo_cod->pseudo_c, pseudo_cod->fst_param);
         } else {
+        	log_info(memoria_logger,"AA18");
             instruccion_formateada = strdup(pseudo_cod->pseudo_c);
         }
 
 //        log_info(memoria_logger, "Se carga la instrucción [%d] %s", (int)strlen(instruccion_formateada),instruccion_formateada);
+        log_info(memoria_logger,"AA19");
         list_add(instrucciones, instruccion_formateada);
-
+        log_info(memoria_logger,"AA20");
         for (int j = 0; j < i; j++) {
+        	log_info(memoria_logger,"AA21");
             free(l_instrucciones[j]);
         }
+        log_info(memoria_logger,"AA22");
         free(l_instrucciones);
+        log_info(memoria_logger,"AA23");
         free(pseudo_cod->pseudo_c);
+        log_info(memoria_logger,"AA24");
 		if(pseudo_cod->fst_param) free(pseudo_cod->fst_param);
+		log_info(memoria_logger,"AA25");
 		if(pseudo_cod->snd_param) free(pseudo_cod->snd_param);
+		log_info(memoria_logger,"AA26");
 		free(pseudo_cod);
+		log_info(memoria_logger,"AA27");
         i = 0; // Restablece la cuenta para la próxima iteración
     }
-
+    log_warning(memoria_logger,"termino while");
     fclose(archivo);
+    log_info(memoria_logger,"AA28");
     free(linea_instruccion);
+    log_info(memoria_logger,"AA29");
     return instrucciones;
 }
 
