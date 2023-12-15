@@ -22,7 +22,7 @@ void enviar_rta_f_truncate_a_kernel(int pid_process);
 
 // =========== ENVIAR A MEMORIA ===============
 void enviar_contenido_a_memoria(int pid_process ,int dir_fisica, void* contenido_leido);
-void enviar_solicitud_de_escritura_a_memoria(int pid_process, int dir_fisica, uint32_t bloque_a_escribir_fat);
+void enviar_solicitud_de_escritura_a_memoria(int pid_process, int dir_fisica, uint32_t bloque_a_escribir_fat, char* nombre_archivo);
 
 
 #endif /* FS_KERNEL_H_ */

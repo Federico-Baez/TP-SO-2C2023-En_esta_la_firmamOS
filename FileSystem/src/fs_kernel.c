@@ -130,7 +130,7 @@ void atender_f_write_de_kernel(t_buffer* un_buffer){
 
 	uint32_t bloque_a_escribir_fat = obtener_el_nro_bloque_segun_el_la_posicion_del_seek(fcb->bloque_inicial, puntero);
 
-	enviar_solicitud_de_escritura_a_memoria(pid_process, dir_fisica, bloque_a_escribir_fat);
+	enviar_solicitud_de_escritura_a_memoria(pid_process, dir_fisica, bloque_a_escribir_fat, nombre_archivo);
 
 	// Ahora queda esperar la respuesta de memoria en atender_memoria
 	// y desde fs_memoria se sigue con el procedimiento
@@ -173,12 +173,13 @@ void enviar_contenido_a_memoria(int pid_process ,int dir_fisica, void* contenido
 	log_warning(filesystem_logger, "fin enviar_contenido_a_memoria");
 }
 
-void enviar_solicitud_de_escritura_a_memoria(int pid_process, int dir_fisica, uint32_t bloque_a_escribir_fat){
+void enviar_solicitud_de_escritura_a_memoria(int pid_process, int dir_fisica, uint32_t bloque_a_escribir_fat, char* nombre_archivo){
 	log_warning(filesystem_logger, "inicio enviar_solicitud_de_escritura_a_memoria");
 	t_paquete* paquete = crear_super_paquete(BLOQUE_DE_MEMORIA_A_FILESYSTEM_FM);
 	cargar_int_al_super_paquete(paquete,pid_process);
 	cargar_int_al_super_paquete(paquete,dir_fisica);
 	cargar_int_al_super_paquete(paquete, (int)bloque_a_escribir_fat);
+	cargar_string_al_super_paquete(paquete, nombre_archivo);
 	enviar_paquete(paquete, fd_memoria);
 	eliminar_paquete(paquete);
 	log_warning(filesystem_logger, "fin enviar_solicitud_de_escritura_a_memoria");
