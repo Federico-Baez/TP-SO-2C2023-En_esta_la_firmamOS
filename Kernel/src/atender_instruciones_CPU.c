@@ -276,10 +276,14 @@ void plp_exit(t_pcb* pcb){
 	//Este control verifica que ese PCB siga en la lista
 	if(list_remove_element(lista_execute, pcb)){
 		liberar_recursos_pcb(pcb);
+		//liberar_archivo_pcb(pcb);
 		avisar_a_memoria_para_liberar_estructuras(pcb);
 		sem_wait(&sem_estructura_liberada);
 		transferir_from_actual_to_siguiente(pcb, lista_exit, mutex_lista_exit, EXIT);
 		log_info(kernel_log_obligatorio, "Finaliza el proceso [PID: %d] - Motivo: %s", pcb->pid, motivo_to_string(pcb->motivo_exit));
+		pthread_mutex_lock(&mutex_core);
+		procesos_en_core--;
+		pthread_mutex_unlock(&mutex_core);
 	}else{
 		log_error(kernel_logger, "PCB no encontrada en EXEC [Eliminacion por consola]");
 		exit(EXIT_FAILURE);

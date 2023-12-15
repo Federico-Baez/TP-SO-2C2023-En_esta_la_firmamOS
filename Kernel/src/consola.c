@@ -135,7 +135,11 @@ static void _cambiar_grado_de_multiprogramacion(char* un_valor){
 	if(nuevo_valor >= 1){
 		GRADO_MULTIPROGRAMACION_INI = nuevo_valor;
 		log_info(kernel_log_obligatorio, "Grado Anterior: %d - Grado Actual: %d" ,valor_anterior ,nuevo_valor);
-		diferencia = nuevo_valor - valor_anterior;
+		if(nuevo_valor > valor_anterior){
+			diferencia = nuevo_valor - valor_anterior;
+		}else{
+			diferencia = valor_anterior - nuevo_valor;
+		}
 		if(diferencia > 0){
 			while(diferencia > 0){
 				plp_planificar_proceso_nuevo(NULL);

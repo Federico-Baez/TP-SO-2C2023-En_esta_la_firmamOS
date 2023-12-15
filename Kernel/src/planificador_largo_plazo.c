@@ -6,6 +6,7 @@ void plp_planifica(){
 
 	pthread_mutex_lock(&mutex_core);
 	pthread_mutex_lock(&mutex_lista_new);
+	log_warning(kernel_logger, "ESTOY POR ENTRAR AL IF - CORE %d", procesos_en_core);
 	if(GRADO_MULTIPROGRAMACION_INI > procesos_en_core && !list_is_empty(lista_new)){
 		log_info(kernel_logger, "Entre al IF");
 
@@ -105,6 +106,7 @@ void plp_planificar_proceso_exit(int pid){
 
 			pthread_mutex_lock(&mutex_lista_ready);
 			liberar_recursos_pcb(un_pcb);
+			//liberar_archivo_pcb(un_pcb);
 			// Quizas hay que agregar un semaforo que este a la espera de que se liberen las estructuras, para que no se genere condicion de carrera
 			avisar_a_memoria_para_liberar_estructuras(un_pcb);
 			sem_wait(&sem_estructura_liberada);
@@ -143,6 +145,7 @@ void plp_planificar_proceso_exit(int pid){
 
 			pthread_mutex_lock(&mutex_lista_blocked);
 			liberar_recursos_pcb(un_pcb);
+			//liberar_archivo_pcb(un_pcb);
 			avisar_a_memoria_para_liberar_estructuras(un_pcb);
 			sem_wait(&sem_estructura_liberada);
 			transferir_from_actual_to_siguiente(un_pcb, lista_exit, mutex_lista_exit, EXIT);

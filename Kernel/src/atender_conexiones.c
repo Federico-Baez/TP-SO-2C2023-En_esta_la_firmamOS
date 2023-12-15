@@ -435,6 +435,7 @@ void _desalojar_proceso(t_pcb* un_pcb){
 	//Este control verifica que esa PCB siga en la lista
 	if(list_remove_element(lista_execute, un_pcb)){
 		liberar_recursos_pcb(un_pcb);
+		//liberar_archivo_pcb(un_pcb);
 		avisar_a_memoria_para_liberar_estructuras(un_pcb);
 		sem_wait(&sem_estructura_liberada);
 		transferir_from_actual_to_siguiente(un_pcb, lista_exit, mutex_lista_exit, EXIT);
