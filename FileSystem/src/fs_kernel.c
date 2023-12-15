@@ -72,7 +72,7 @@ void atender_f_truncate_de_kernel(t_buffer* un_buffer){
 	if(tamanio_nuevo > tamanio_viejo){
 		if(tamanio_viejo == 0){
 			lista_bloques_libres_asignados = obtener_n_cantidad_de_bloques_libres_de_tabla_fat(cantidad_bloques);
-			log_info(filesystem_log_obligatorio, " Tamaño LISTA BLOQ ASIG: <%d>", lista_bloques_libres_asignados);
+			log_info(filesystem_log_obligatorio, " Tamaño LISTA BLOQ ASIG: <%d>", list_size(lista_bloques_libres_asignados));
 			cargar_secuencia_de_bloques_asignados_a_tabla_fat(lista_bloques_libres_asignados);
 			fcb->bloque_inicial = *((int*)list_get(lista_bloques_libres_asignados, 0));
 
