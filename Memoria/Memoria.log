@@ -8810,3 +8810,480 @@
 [ERROR] 16:30:54:709 [Memoria]/(14658:14669): [DESCONEXION]: KERNEL
 [ERROR] 16:30:54:710 [Memoria]/(14658:14661): [DESCONEXION]: FILESYSTEM
 [ERROR] 16:30:54:710 [Memoria]/(14658:14667): [DESCONEXION]: CPU
+[INFO] 16:41:44:764 [Memoria]/(2136:2136): Se inicia memoria con Paginacion.
+
+[INFO] 16:41:44:764 [Memoria]/(2136:2136): Algoritmo de reemplazo a usar: LRU
+
+[INFO] 16:41:44:765 [Memoria]/(2136:2136): Iniciando servidor Memoria
+[INFO] 16:41:54:787 [Memoria]/(2136:2136): Cliente conectado a Memoria
+[INFO] 16:41:54:787 [Memoria]/(2136:2136): [THREAD] Creo hilo para atender
+[INFO] 16:41:54:788 [Memoria]/(2136:2142): !!!!! FILESYSTEM CONECTADO !!!!!
+[INFO] 16:42:03:868 [Memoria]/(2136:2136): Cliente conectado a Memoria
+[INFO] 16:42:03:868 [Memoria]/(2136:2136): [THREAD] Creo hilo para atender
+[INFO] 16:42:03:868 [Memoria]/(2136:2155): !!!!! CPU CONECTADO !!!!!
+[INFO] 16:42:12:275 [Memoria]/(2136:2136): Cliente conectado a Memoria
+[INFO] 16:42:12:275 [Memoria]/(2136:2136): [THREAD] Creo hilo para atender
+[INFO] 16:42:12:277 [Memoria]/(2136:2161): !!!!! KERNEL CONECTADO !!!!!
+[INFO] 16:44:39:871 [Memoria]/(2136:2161): [Kernel] -> Peticion de creacion de proceso nuevo
+[INFO] 16:44:39:872 [Memoria]/(2136:2161): Intruccion: [SET AX 1]
+[INFO] 16:44:39:873 [Memoria]/(2136:2161): Intruccion: [SET BX 1]
+[INFO] 16:44:39:873 [Memoria]/(2136:2161): Intruccion: [SET CX 1]
+[INFO] 16:44:39:873 [Memoria]/(2136:2161): Intruccion: [SET DX 1]
+[INFO] 16:44:39:873 [Memoria]/(2136:2161): Intruccion: [F_OPEN consolas W]
+[INFO] 16:44:39:873 [Memoria]/(2136:2161): Intruccion: [F_TRUNCATE consolas 64]
+[INFO] 16:44:39:873 [Memoria]/(2136:2161): Intruccion: [F_SEEK consolas 0]
+[INFO] 16:44:39:873 [Memoria]/(2136:2161): Intruccion: [F_WRITE consolas 16]
+[INFO] 16:44:39:873 [Memoria]/(2136:2161): Intruccion: [SET BX 79]
+[INFO] 16:44:39:873 [Memoria]/(2136:2161): Intruccion: [SET CX 78]
+[INFO] 16:44:39:873 [Memoria]/(2136:2161): Intruccion: [SET DX 89]
+[INFO] 16:44:39:873 [Memoria]/(2136:2161): Intruccion: [EXIT]
+[WARNING] 16:44:46:412 [Memoria]/(2136:2142): >>>>> PID:1 | BLOQUES:4
+[INFO] 16:44:46:412 [Memoria]/(2136:2142): >>>>>LLEGA:: PID:1 | POS_SWAP:0
+[INFO] 16:44:46:412 [Memoria]/(2136:2142): >>>>>LLEGA:: PID:1 | POS_SWAP:1
+[INFO] 16:44:46:412 [Memoria]/(2136:2142): >>>>>LLEGA:: PID:1 | POS_SWAP:2
+[INFO] 16:44:46:412 [Memoria]/(2136:2142): >>>>>LLEGA:: PID:1 | POS_SWAP:3
+[INFO] 16:44:46:412 [Memoria]/(2136:2142): FILESYSTEM => <PID:1> <cant_pag:4> - <cant_bloques:4>
+[WARNING] 16:44:46:412 [Memoria]/(2136:2142): >>>>> CARGA_BLOQUES_PAG: PID:1|PAG:0|POS_SWAP:0
+[WARNING] 16:44:46:412 [Memoria]/(2136:2142): >>>>> CARGA_BLOQUES_PAG: PID:1|PAG:1|POS_SWAP:1
+[WARNING] 16:44:46:412 [Memoria]/(2136:2142): >>>>> CARGA_BLOQUES_PAG: PID:1|PAG:2|POS_SWAP:2
+[WARNING] 16:44:46:412 [Memoria]/(2136:2142): >>>>> CARGA_BLOQUES_PAG: PID:1|PAG:3|POS_SWAP:3
+[WARNING] 16:44:46:412 [Memoria]/(2136:2142): Se Cargaron pos_SWAP en proceso <PID:1>
+[ERROR] 16:45:35:033 [Memoria]/(2136:2161): [DESCONEXION]: KERNEL
+[ERROR] 16:45:35:034 [Memoria]/(2136:2142): [DESCONEXION]: FILESYSTEM
+[ERROR] 16:45:35:034 [Memoria]/(2136:2155): [DESCONEXION]: CPU
+[INFO] 16:46:02:088 [Memoria]/(2136:2136): Cliente conectado a Memoria
+[INFO] 16:46:02:089 [Memoria]/(2136:2136): [THREAD] Creo hilo para atender
+[INFO] 16:46:02:089 [Memoria]/(2136:2554): !!!!! FILESYSTEM CONECTADO !!!!!
+[INFO] 16:46:03:290 [Memoria]/(2136:2136): Cliente conectado a Memoria
+[INFO] 16:46:03:291 [Memoria]/(2136:2136): [THREAD] Creo hilo para atender
+[INFO] 16:46:03:291 [Memoria]/(2136:2561): !!!!! CPU CONECTADO !!!!!
+[INFO] 16:46:04:345 [Memoria]/(2136:2136): Cliente conectado a Memoria
+[INFO] 16:46:04:345 [Memoria]/(2136:2136): [THREAD] Creo hilo para atender
+[INFO] 16:46:04:346 [Memoria]/(2136:2563): !!!!! KERNEL CONECTADO !!!!!
+[ERROR] 16:49:48:483 [Memoria]/(2136:2563): [DESCONEXION]: KERNEL
+[ERROR] 16:49:48:484 [Memoria]/(2136:2561): [DESCONEXION]: CPU
+[ERROR] 16:49:48:485 [Memoria]/(2136:2554): [DESCONEXION]: FILESYSTEM
+[INFO] 16:49:54:154 [Memoria]/(2136:2136): Cliente conectado a Memoria
+[INFO] 16:49:54:154 [Memoria]/(2136:2136): [THREAD] Creo hilo para atender
+[INFO] 16:49:54:155 [Memoria]/(2136:2623): !!!!! FILESYSTEM CONECTADO !!!!!
+[INFO] 16:49:55:396 [Memoria]/(2136:2136): Cliente conectado a Memoria
+[INFO] 16:49:55:396 [Memoria]/(2136:2136): [THREAD] Creo hilo para atender
+[INFO] 16:49:55:397 [Memoria]/(2136:2628): !!!!! CPU CONECTADO !!!!!
+[INFO] 16:49:57:613 [Memoria]/(2136:2136): Cliente conectado a Memoria
+[INFO] 16:49:57:613 [Memoria]/(2136:2136): [THREAD] Creo hilo para atender
+[INFO] 16:49:57:613 [Memoria]/(2136:2631): !!!!! KERNEL CONECTADO !!!!!
+[INFO] 16:50:36:626 [Memoria]/(2136:2631): [Kernel] -> Peticion de creacion de proceso nuevo
+[INFO] 16:50:36:627 [Memoria]/(2136:2631): Intruccion: [SET AX 1]
+[INFO] 16:50:36:627 [Memoria]/(2136:2631): Intruccion: [SET BX 1]
+[INFO] 16:50:36:627 [Memoria]/(2136:2631): Intruccion: [SET CX 1]
+[INFO] 16:50:36:627 [Memoria]/(2136:2631): Intruccion: [SET DX 1]
+[INFO] 16:50:36:627 [Memoria]/(2136:2631): Intruccion: [F_OPEN consolas W]
+[INFO] 16:50:36:627 [Memoria]/(2136:2631): Intruccion: [F_TRUNCATE consolas 64]
+[INFO] 16:50:36:627 [Memoria]/(2136:2631): Intruccion: [F_SEEK consolas 0]
+[INFO] 16:50:36:627 [Memoria]/(2136:2631): Intruccion: [F_WRITE consolas 16]
+[INFO] 16:50:36:627 [Memoria]/(2136:2631): Intruccion: [SET BX 79]
+[INFO] 16:50:36:627 [Memoria]/(2136:2631): Intruccion: [SET CX 78]
+[INFO] 16:50:36:627 [Memoria]/(2136:2631): Intruccion: [SET DX 89]
+[INFO] 16:50:36:627 [Memoria]/(2136:2631): Intruccion: [EXIT]
+[WARNING] 16:50:43:147 [Memoria]/(2136:2623): >>>>> PID:1 | BLOQUES:4
+[INFO] 16:50:43:147 [Memoria]/(2136:2623): >>>>>LLEGA:: PID:1 | POS_SWAP:0
+[INFO] 16:50:43:147 [Memoria]/(2136:2623): >>>>>LLEGA:: PID:1 | POS_SWAP:1
+[INFO] 16:50:43:147 [Memoria]/(2136:2623): >>>>>LLEGA:: PID:1 | POS_SWAP:2
+[INFO] 16:50:43:147 [Memoria]/(2136:2623): >>>>>LLEGA:: PID:1 | POS_SWAP:3
+[INFO] 16:50:43:147 [Memoria]/(2136:2623): FILESYSTEM => <PID:1> <cant_pag:4> - <cant_bloques:4>
+[WARNING] 16:50:43:147 [Memoria]/(2136:2623): >>>>> CARGA_BLOQUES_PAG: PID:1|PAG:0|POS_SWAP:0
+[WARNING] 16:50:43:147 [Memoria]/(2136:2623): >>>>> CARGA_BLOQUES_PAG: PID:1|PAG:1|POS_SWAP:1
+[WARNING] 16:50:43:147 [Memoria]/(2136:2623): >>>>> CARGA_BLOQUES_PAG: PID:1|PAG:2|POS_SWAP:2
+[WARNING] 16:50:43:148 [Memoria]/(2136:2623): >>>>> CARGA_BLOQUES_PAG: PID:1|PAG:3|POS_SWAP:3
+[WARNING] 16:50:43:149 [Memoria]/(2136:2623): Se Cargaron pos_SWAP en proceso <PID:1>
+[INFO] 16:51:01:062 [Memoria]/(2136:2628): AAA_0
+[INFO] 16:51:01:563 [Memoria]/(2136:2628): AAA_1
+[INFO] 16:51:01:570 [Memoria]/(2136:2631): PAGE_FAUL: K->M
+[INFO] 16:51:01:570 [Memoria]/(2136:2631): BBB_1
+[INFO] 16:51:01:570 [Memoria]/(2136:2631): BBB_2
+[INFO] 16:51:01:570 [Memoria]/(2136:2631): BBB_3
+[INFO] 16:51:01:570 [Memoria]/(2136:2631): TTT_1
+[INFO] 16:51:01:570 [Memoria]/(2136:2631): TTT_ENTRE_AL_ELSE
+[INFO] 16:51:01:570 [Memoria]/(2136:2631): TTT_SALI_DEL_IF
+[INFO] 16:51:01:570 [Memoria]/(2136:2631): BBB_4
+[INFO] 16:51:02:088 [Memoria]/(2136:2631): PAG_SWAP <PID:1> <Pag:1> <Pos_SWAP:1>
+[INFO] 16:51:03:631 [Memoria]/(2136:2623): >>>>SETEADO
+[INFO] 16:51:07:640 [Memoria]/(2136:2628): AAA_0
+[INFO] 16:51:08:141 [Memoria]/(2136:2628): AAA_1
+[ERROR] 16:51:08:274 [Memoria]/(2136:2631): [DESCONEXION]: KERNEL
+[ERROR] 16:51:08:274 [Memoria]/(2136:2623): [DESCONEXION]: FILESYSTEM
+[ERROR] 16:51:08:274 [Memoria]/(2136:2628): [DESCONEXION]: CPU
+[INFO] 16:54:51:375 [Memoria]/(2136:2136): Cliente conectado a Memoria
+[INFO] 16:54:51:375 [Memoria]/(2136:2136): [THREAD] Creo hilo para atender
+[INFO] 16:54:51:376 [Memoria]/(2136:2677): !!!!! FILESYSTEM CONECTADO !!!!!
+[INFO] 16:54:54:340 [Memoria]/(2136:2136): Cliente conectado a Memoria
+[INFO] 16:54:54:340 [Memoria]/(2136:2136): [THREAD] Creo hilo para atender
+[INFO] 16:54:54:341 [Memoria]/(2136:2685): !!!!! CPU CONECTADO !!!!!
+[INFO] 16:55:17:039 [Memoria]/(2136:2136): Cliente conectado a Memoria
+[INFO] 16:55:17:039 [Memoria]/(2136:2136): [THREAD] Creo hilo para atender
+[INFO] 16:55:17:040 [Memoria]/(2136:2690): !!!!! KERNEL CONECTADO !!!!!
+[INFO] 16:55:19:554 [Memoria]/(2136:2690): [Kernel] -> Peticion de creacion de proceso nuevo
+[INFO] 16:55:19:555 [Memoria]/(2136:2690): Intruccion: [SET AX 1]
+[INFO] 16:55:19:555 [Memoria]/(2136:2690): Intruccion: [SET BX 1]
+[INFO] 16:55:19:555 [Memoria]/(2136:2690): Intruccion: [SET CX 1]
+[INFO] 16:55:19:555 [Memoria]/(2136:2690): Intruccion: [SET DX 1]
+[INFO] 16:55:19:555 [Memoria]/(2136:2690): Intruccion: [F_OPEN consolas W]
+[INFO] 16:55:19:555 [Memoria]/(2136:2690): Intruccion: [F_TRUNCATE consolas 64]
+[INFO] 16:55:19:555 [Memoria]/(2136:2690): Intruccion: [F_SEEK consolas 0]
+[INFO] 16:55:19:555 [Memoria]/(2136:2690): Intruccion: [F_WRITE consolas 16]
+[INFO] 16:55:19:555 [Memoria]/(2136:2690): Intruccion: [SET BX 79]
+[INFO] 16:55:19:555 [Memoria]/(2136:2690): Intruccion: [SET CX 78]
+[INFO] 16:55:19:555 [Memoria]/(2136:2690): Intruccion: [SET DX 89]
+[INFO] 16:55:19:555 [Memoria]/(2136:2690): Intruccion: [EXIT]
+[WARNING] 16:55:26:065 [Memoria]/(2136:2677): >>>>> PID:1 | BLOQUES:4
+[INFO] 16:55:26:065 [Memoria]/(2136:2677): >>>>>LLEGA:: PID:1 | POS_SWAP:0
+[INFO] 16:55:26:065 [Memoria]/(2136:2677): >>>>>LLEGA:: PID:1 | POS_SWAP:1
+[INFO] 16:55:26:065 [Memoria]/(2136:2677): >>>>>LLEGA:: PID:1 | POS_SWAP:2
+[INFO] 16:55:26:065 [Memoria]/(2136:2677): >>>>>LLEGA:: PID:1 | POS_SWAP:3
+[INFO] 16:55:26:065 [Memoria]/(2136:2677): FILESYSTEM => <PID:1> <cant_pag:4> - <cant_bloques:4>
+[WARNING] 16:55:26:065 [Memoria]/(2136:2677): >>>>> CARGA_BLOQUES_PAG: PID:1|PAG:0|POS_SWAP:0
+[WARNING] 16:55:26:065 [Memoria]/(2136:2677): >>>>> CARGA_BLOQUES_PAG: PID:1|PAG:1|POS_SWAP:1
+[WARNING] 16:55:26:065 [Memoria]/(2136:2677): >>>>> CARGA_BLOQUES_PAG: PID:1|PAG:2|POS_SWAP:2
+[WARNING] 16:55:26:065 [Memoria]/(2136:2677): >>>>> CARGA_BLOQUES_PAG: PID:1|PAG:3|POS_SWAP:3
+[WARNING] 16:55:26:065 [Memoria]/(2136:2677): Se Cargaron pos_SWAP en proceso <PID:1>
+[INFO] 16:55:51:915 [Memoria]/(2136:2685): AAA_0
+[INFO] 16:55:52:416 [Memoria]/(2136:2685): AAA_1
+[ERROR] 16:55:52:520 [Memoria]/(2136:2690): [DESCONEXION]: KERNEL
+[ERROR] 16:55:52:521 [Memoria]/(2136:2685): [DESCONEXION]: CPU
+[ERROR] 16:55:52:521 [Memoria]/(2136:2677): [DESCONEXION]: FILESYSTEM
+[INFO] 16:59:19:314 [Memoria]/(2136:2136): Cliente conectado a Memoria
+[INFO] 16:59:19:314 [Memoria]/(2136:2136): [THREAD] Creo hilo para atender
+[INFO] 16:59:19:315 [Memoria]/(2136:2727): !!!!! FILESYSTEM CONECTADO !!!!!
+[INFO] 16:59:20:454 [Memoria]/(2136:2136): Cliente conectado a Memoria
+[INFO] 16:59:20:454 [Memoria]/(2136:2136): [THREAD] Creo hilo para atender
+[INFO] 16:59:20:455 [Memoria]/(2136:2733): !!!!! CPU CONECTADO !!!!!
+[INFO] 16:59:21:420 [Memoria]/(2136:2136): Cliente conectado a Memoria
+[INFO] 16:59:21:420 [Memoria]/(2136:2136): [THREAD] Creo hilo para atender
+[INFO] 16:59:21:421 [Memoria]/(2136:2736): !!!!! KERNEL CONECTADO !!!!!
+[INFO] 16:59:27:159 [Memoria]/(2136:2736): [Kernel] -> Peticion de creacion de proceso nuevo
+[INFO] 16:59:27:159 [Memoria]/(2136:2736): Intruccion: [SET AX 1]
+[INFO] 16:59:27:159 [Memoria]/(2136:2736): Intruccion: [SET BX 1]
+[INFO] 16:59:27:159 [Memoria]/(2136:2736): Intruccion: [SET CX 1]
+[INFO] 16:59:27:159 [Memoria]/(2136:2736): Intruccion: [SET DX 1]
+[INFO] 16:59:27:159 [Memoria]/(2136:2736): Intruccion: [F_OPEN consolas W]
+[INFO] 16:59:27:159 [Memoria]/(2136:2736): Intruccion: [F_TRUNCATE consolas 64]
+[INFO] 16:59:27:159 [Memoria]/(2136:2736): Intruccion: [F_SEEK consolas 0]
+[INFO] 16:59:27:159 [Memoria]/(2136:2736): Intruccion: [F_WRITE consolas 16]
+[INFO] 16:59:27:159 [Memoria]/(2136:2736): Intruccion: [SET BX 79]
+[INFO] 16:59:27:159 [Memoria]/(2136:2736): Intruccion: [SET CX 78]
+[INFO] 16:59:27:159 [Memoria]/(2136:2736): Intruccion: [SET DX 89]
+[INFO] 16:59:27:159 [Memoria]/(2136:2736): Intruccion: [EXIT]
+[WARNING] 16:59:33:676 [Memoria]/(2136:2727): >>>>> PID:1 | BLOQUES:4
+[INFO] 16:59:33:676 [Memoria]/(2136:2727): >>>>>LLEGA:: PID:1 | POS_SWAP:0
+[INFO] 16:59:33:676 [Memoria]/(2136:2727): >>>>>LLEGA:: PID:1 | POS_SWAP:1
+[INFO] 16:59:33:676 [Memoria]/(2136:2727): >>>>>LLEGA:: PID:1 | POS_SWAP:2
+[INFO] 16:59:33:677 [Memoria]/(2136:2727): >>>>>LLEGA:: PID:1 | POS_SWAP:3
+[INFO] 16:59:33:677 [Memoria]/(2136:2727): FILESYSTEM => <PID:1> <cant_pag:4> - <cant_bloques:4>
+[WARNING] 16:59:33:677 [Memoria]/(2136:2727): >>>>> CARGA_BLOQUES_PAG: PID:1|PAG:0|POS_SWAP:0
+[WARNING] 16:59:33:677 [Memoria]/(2136:2727): >>>>> CARGA_BLOQUES_PAG: PID:1|PAG:1|POS_SWAP:1
+[WARNING] 16:59:33:677 [Memoria]/(2136:2727): >>>>> CARGA_BLOQUES_PAG: PID:1|PAG:2|POS_SWAP:2
+[WARNING] 16:59:33:677 [Memoria]/(2136:2727): >>>>> CARGA_BLOQUES_PAG: PID:1|PAG:3|POS_SWAP:3
+[WARNING] 16:59:33:677 [Memoria]/(2136:2727): Se Cargaron pos_SWAP en proceso <PID:1>
+[ERROR] 16:59:46:502 [Memoria]/(2136:2736): [DESCONEXION]: KERNEL
+[ERROR] 16:59:46:502 [Memoria]/(2136:2733): [DESCONEXION]: CPU
+[ERROR] 16:59:46:503 [Memoria]/(2136:2727): [DESCONEXION]: FILESYSTEM
+[INFO] 17:03:52:684 [Memoria]/(2136:2136): Cliente conectado a Memoria
+[INFO] 17:03:52:684 [Memoria]/(2136:2136): [THREAD] Creo hilo para atender
+[INFO] 17:03:52:685 [Memoria]/(2136:2878): !!!!! FILESYSTEM CONECTADO !!!!!
+[INFO] 17:03:53:973 [Memoria]/(2136:2136): Cliente conectado a Memoria
+[INFO] 17:03:53:973 [Memoria]/(2136:2136): [THREAD] Creo hilo para atender
+[INFO] 17:03:53:973 [Memoria]/(2136:2885): !!!!! CPU CONECTADO !!!!!
+[INFO] 17:03:55:693 [Memoria]/(2136:2136): Cliente conectado a Memoria
+[INFO] 17:03:55:693 [Memoria]/(2136:2136): [THREAD] Creo hilo para atender
+[INFO] 17:03:55:694 [Memoria]/(2136:2887): !!!!! KERNEL CONECTADO !!!!!
+[INFO] 17:04:00:126 [Memoria]/(2136:2887): [Kernel] -> Peticion de creacion de proceso nuevo
+[INFO] 17:04:00:126 [Memoria]/(2136:2887): Intruccion: [SET AX 1]
+[INFO] 17:04:00:126 [Memoria]/(2136:2887): Intruccion: [SET BX 1]
+[INFO] 17:04:00:126 [Memoria]/(2136:2887): Intruccion: [SET CX 1]
+[INFO] 17:04:00:126 [Memoria]/(2136:2887): Intruccion: [SET DX 1]
+[INFO] 17:04:00:126 [Memoria]/(2136:2887): Intruccion: [F_OPEN consolas W]
+[INFO] 17:04:00:127 [Memoria]/(2136:2887): Intruccion: [F_TRUNCATE consolas 64]
+[INFO] 17:04:00:127 [Memoria]/(2136:2887): Intruccion: [F_SEEK consolas 0]
+[INFO] 17:04:00:127 [Memoria]/(2136:2887): Intruccion: [F_WRITE consolas 16]
+[INFO] 17:04:00:127 [Memoria]/(2136:2887): Intruccion: [SET BX 79]
+[INFO] 17:04:00:127 [Memoria]/(2136:2887): Intruccion: [SET CX 78]
+[INFO] 17:04:00:127 [Memoria]/(2136:2887): Intruccion: [SET DX 89]
+[INFO] 17:04:00:127 [Memoria]/(2136:2887): Intruccion: [EXIT]
+[WARNING] 17:04:06:638 [Memoria]/(2136:2878): >>>>> PID:1 | BLOQUES:4
+[INFO] 17:04:06:638 [Memoria]/(2136:2878): >>>>>LLEGA:: PID:1 | POS_SWAP:0
+[INFO] 17:04:06:638 [Memoria]/(2136:2878): >>>>>LLEGA:: PID:1 | POS_SWAP:1
+[INFO] 17:04:06:638 [Memoria]/(2136:2878): >>>>>LLEGA:: PID:1 | POS_SWAP:2
+[INFO] 17:04:06:638 [Memoria]/(2136:2878): >>>>>LLEGA:: PID:1 | POS_SWAP:3
+[INFO] 17:04:06:638 [Memoria]/(2136:2878): FILESYSTEM => <PID:1> <cant_pag:4> - <cant_bloques:4>
+[WARNING] 17:04:06:638 [Memoria]/(2136:2878): >>>>> CARGA_BLOQUES_PAG: PID:1|PAG:0|POS_SWAP:0
+[WARNING] 17:04:06:638 [Memoria]/(2136:2878): >>>>> CARGA_BLOQUES_PAG: PID:1|PAG:1|POS_SWAP:1
+[WARNING] 17:04:06:638 [Memoria]/(2136:2878): >>>>> CARGA_BLOQUES_PAG: PID:1|PAG:2|POS_SWAP:2
+[WARNING] 17:04:06:638 [Memoria]/(2136:2878): >>>>> CARGA_BLOQUES_PAG: PID:1|PAG:3|POS_SWAP:3
+[WARNING] 17:04:06:638 [Memoria]/(2136:2878): Se Cargaron pos_SWAP en proceso <PID:1>
+[INFO] 17:04:40:458 [Memoria]/(2136:2885): AAA_0
+[INFO] 17:04:40:960 [Memoria]/(2136:2885): AAA_1
+[ERROR] 17:04:41:085 [Memoria]/(2136:2887): [DESCONEXION]: KERNEL
+[ERROR] 17:04:41:086 [Memoria]/(2136:2878): [DESCONEXION]: FILESYSTEM
+[ERROR] 17:04:41:086 [Memoria]/(2136:2885): [DESCONEXION]: CPU
+[INFO] 17:10:26:486 [Memoria]/(2136:2136): Cliente conectado a Memoria
+[INFO] 17:10:26:486 [Memoria]/(2136:2136): [THREAD] Creo hilo para atender
+[INFO] 17:10:26:487 [Memoria]/(2136:3013): !!!!! FILESYSTEM CONECTADO !!!!!
+[INFO] 17:10:27:986 [Memoria]/(2136:2136): Cliente conectado a Memoria
+[INFO] 17:10:27:986 [Memoria]/(2136:2136): [THREAD] Creo hilo para atender
+[INFO] 17:10:27:986 [Memoria]/(2136:3018): !!!!! CPU CONECTADO !!!!!
+[INFO] 17:10:30:394 [Memoria]/(2136:2136): Cliente conectado a Memoria
+[INFO] 17:10:30:394 [Memoria]/(2136:2136): [THREAD] Creo hilo para atender
+[INFO] 17:10:30:395 [Memoria]/(2136:3020): !!!!! KERNEL CONECTADO !!!!!
+[INFO] 17:10:37:653 [Memoria]/(2136:3020): [Kernel] -> Peticion de creacion de proceso nuevo
+[INFO] 17:10:37:653 [Memoria]/(2136:3020): Intruccion: [SET AX 1]
+[INFO] 17:10:37:653 [Memoria]/(2136:3020): Intruccion: [SET BX 1]
+[INFO] 17:10:37:653 [Memoria]/(2136:3020): Intruccion: [SET CX 1]
+[INFO] 17:10:37:653 [Memoria]/(2136:3020): Intruccion: [SET DX 1]
+[INFO] 17:10:37:653 [Memoria]/(2136:3020): Intruccion: [F_OPEN consolas W]
+[INFO] 17:10:37:653 [Memoria]/(2136:3020): Intruccion: [F_TRUNCATE consolas 64]
+[INFO] 17:10:37:653 [Memoria]/(2136:3020): Intruccion: [F_SEEK consolas 0]
+[INFO] 17:10:37:653 [Memoria]/(2136:3020): Intruccion: [F_WRITE consolas 16]
+[INFO] 17:10:37:653 [Memoria]/(2136:3020): Intruccion: [SET BX 79]
+[INFO] 17:10:37:653 [Memoria]/(2136:3020): Intruccion: [SET CX 78]
+[INFO] 17:10:37:653 [Memoria]/(2136:3020): Intruccion: [SET DX 89]
+[INFO] 17:10:37:653 [Memoria]/(2136:3020): Intruccion: [EXIT]
+[WARNING] 17:10:44:166 [Memoria]/(2136:3013): >>>>> PID:1 | BLOQUES:4
+[INFO] 17:10:44:166 [Memoria]/(2136:3013): >>>>>LLEGA:: PID:1 | POS_SWAP:0
+[INFO] 17:10:44:166 [Memoria]/(2136:3013): >>>>>LLEGA:: PID:1 | POS_SWAP:1
+[INFO] 17:10:44:166 [Memoria]/(2136:3013): >>>>>LLEGA:: PID:1 | POS_SWAP:2
+[INFO] 17:10:44:166 [Memoria]/(2136:3013): >>>>>LLEGA:: PID:1 | POS_SWAP:3
+[INFO] 17:10:44:166 [Memoria]/(2136:3013): FILESYSTEM => <PID:1> <cant_pag:4> - <cant_bloques:4>
+[WARNING] 17:10:44:167 [Memoria]/(2136:3013): >>>>> CARGA_BLOQUES_PAG: PID:1|PAG:0|POS_SWAP:0
+[WARNING] 17:10:44:167 [Memoria]/(2136:3013): >>>>> CARGA_BLOQUES_PAG: PID:1|PAG:1|POS_SWAP:1
+[WARNING] 17:10:44:167 [Memoria]/(2136:3013): >>>>> CARGA_BLOQUES_PAG: PID:1|PAG:2|POS_SWAP:2
+[WARNING] 17:10:44:167 [Memoria]/(2136:3013): >>>>> CARGA_BLOQUES_PAG: PID:1|PAG:3|POS_SWAP:3
+[WARNING] 17:10:44:167 [Memoria]/(2136:3013): Se Cargaron pos_SWAP en proceso <PID:1>
+[INFO] 17:11:01:854 [Memoria]/(2136:3018): AAA_0
+[INFO] 17:11:02:357 [Memoria]/(2136:3018): AAA_1
+[ERROR] 17:11:02:481 [Memoria]/(2136:3020): [DESCONEXION]: KERNEL
+[ERROR] 17:11:02:482 [Memoria]/(2136:3013): [DESCONEXION]: FILESYSTEM
+[ERROR] 17:11:02:483 [Memoria]/(2136:3018): [DESCONEXION]: CPU
+[INFO] 17:14:51:567 [Memoria]/(2136:2136): Cliente conectado a Memoria
+[INFO] 17:14:51:567 [Memoria]/(2136:2136): [THREAD] Creo hilo para atender
+[INFO] 17:14:51:568 [Memoria]/(2136:3420): !!!!! FILESYSTEM CONECTADO !!!!!
+[INFO] 17:14:52:935 [Memoria]/(2136:2136): Cliente conectado a Memoria
+[INFO] 17:14:52:936 [Memoria]/(2136:2136): [THREAD] Creo hilo para atender
+[INFO] 17:14:52:937 [Memoria]/(2136:3427): !!!!! CPU CONECTADO !!!!!
+[INFO] 17:14:54:571 [Memoria]/(2136:2136): Cliente conectado a Memoria
+[INFO] 17:14:54:571 [Memoria]/(2136:2136): [THREAD] Creo hilo para atender
+[INFO] 17:14:54:572 [Memoria]/(2136:3429): !!!!! KERNEL CONECTADO !!!!!
+[INFO] 17:14:58:229 [Memoria]/(2136:3429): [Kernel] -> Peticion de creacion de proceso nuevo
+[INFO] 17:14:58:229 [Memoria]/(2136:3429): Intruccion: [SET AX 1]
+[INFO] 17:14:58:229 [Memoria]/(2136:3429): Intruccion: [SET BX 1]
+[INFO] 17:14:58:229 [Memoria]/(2136:3429): Intruccion: [SET CX 1]
+[INFO] 17:14:58:229 [Memoria]/(2136:3429): Intruccion: [SET DX 1]
+[INFO] 17:14:58:229 [Memoria]/(2136:3429): Intruccion: [F_OPEN consolas W]
+[INFO] 17:14:58:229 [Memoria]/(2136:3429): Intruccion: [F_TRUNCATE consolas 64]
+[INFO] 17:14:58:229 [Memoria]/(2136:3429): Intruccion: [F_SEEK consolas 0]
+[INFO] 17:14:58:230 [Memoria]/(2136:3429): Intruccion: [F_WRITE consolas 16]
+[INFO] 17:14:58:230 [Memoria]/(2136:3429): Intruccion: [SET BX 79]
+[INFO] 17:14:58:230 [Memoria]/(2136:3429): Intruccion: [SET CX 78]
+[INFO] 17:14:58:230 [Memoria]/(2136:3429): Intruccion: [SET DX 89]
+[INFO] 17:14:58:230 [Memoria]/(2136:3429): Intruccion: [EXIT]
+[WARNING] 17:15:04:801 [Memoria]/(2136:3420): >>>>> PID:1 | BLOQUES:4
+[INFO] 17:15:04:801 [Memoria]/(2136:3420): >>>>>LLEGA:: PID:1 | POS_SWAP:0
+[INFO] 17:15:04:801 [Memoria]/(2136:3420): >>>>>LLEGA:: PID:1 | POS_SWAP:1
+[INFO] 17:15:04:801 [Memoria]/(2136:3420): >>>>>LLEGA:: PID:1 | POS_SWAP:2
+[INFO] 17:15:04:801 [Memoria]/(2136:3420): >>>>>LLEGA:: PID:1 | POS_SWAP:3
+[INFO] 17:15:04:801 [Memoria]/(2136:3420): FILESYSTEM => <PID:1> <cant_pag:4> - <cant_bloques:4>
+[WARNING] 17:15:04:801 [Memoria]/(2136:3420): >>>>> CARGA_BLOQUES_PAG: PID:1|PAG:0|POS_SWAP:0
+[WARNING] 17:15:04:801 [Memoria]/(2136:3420): >>>>> CARGA_BLOQUES_PAG: PID:1|PAG:1|POS_SWAP:1
+[WARNING] 17:15:04:801 [Memoria]/(2136:3420): >>>>> CARGA_BLOQUES_PAG: PID:1|PAG:2|POS_SWAP:2
+[WARNING] 17:15:04:801 [Memoria]/(2136:3420): >>>>> CARGA_BLOQUES_PAG: PID:1|PAG:3|POS_SWAP:3
+[WARNING] 17:15:04:801 [Memoria]/(2136:3420): Se Cargaron pos_SWAP en proceso <PID:1>
+[ERROR] 17:15:20:544 [Memoria]/(2136:3429): [DESCONEXION]: KERNEL
+[ERROR] 17:15:20:545 [Memoria]/(2136:3427): [DESCONEXION]: CPU
+[ERROR] 17:15:20:546 [Memoria]/(2136:3420): [DESCONEXION]: FILESYSTEM
+[INFO] 17:17:41:987 [Memoria]/(2136:2136): Cliente conectado a Memoria
+[INFO] 17:17:41:987 [Memoria]/(2136:2136): [THREAD] Creo hilo para atender
+[INFO] 17:17:41:989 [Memoria]/(2136:3740): !!!!! FILESYSTEM CONECTADO !!!!!
+[INFO] 17:17:43:198 [Memoria]/(2136:2136): Cliente conectado a Memoria
+[INFO] 17:17:43:198 [Memoria]/(2136:2136): [THREAD] Creo hilo para atender
+[INFO] 17:17:43:198 [Memoria]/(2136:3747): !!!!! CPU CONECTADO !!!!!
+[INFO] 17:17:44:661 [Memoria]/(2136:2136): Cliente conectado a Memoria
+[INFO] 17:17:44:661 [Memoria]/(2136:2136): [THREAD] Creo hilo para atender
+[INFO] 17:17:44:662 [Memoria]/(2136:3749): !!!!! KERNEL CONECTADO !!!!!
+[INFO] 17:17:48:178 [Memoria]/(2136:3749): [Kernel] -> Peticion de creacion de proceso nuevo
+[INFO] 17:17:48:178 [Memoria]/(2136:3749): Intruccion: [SET AX 1]
+[INFO] 17:17:48:179 [Memoria]/(2136:3749): Intruccion: [SET BX 1]
+[INFO] 17:17:48:179 [Memoria]/(2136:3749): Intruccion: [SET CX 1]
+[INFO] 17:17:48:179 [Memoria]/(2136:3749): Intruccion: [SET DX 1]
+[INFO] 17:17:48:179 [Memoria]/(2136:3749): Intruccion: [F_OPEN consolas W]
+[INFO] 17:17:48:179 [Memoria]/(2136:3749): Intruccion: [F_TRUNCATE consolas 64]
+[INFO] 17:17:48:179 [Memoria]/(2136:3749): Intruccion: [F_SEEK consolas 0]
+[INFO] 17:17:48:179 [Memoria]/(2136:3749): Intruccion: [F_WRITE consolas 16]
+[INFO] 17:17:48:179 [Memoria]/(2136:3749): Intruccion: [SET BX 79]
+[INFO] 17:17:48:180 [Memoria]/(2136:3749): Intruccion: [SET CX 78]
+[INFO] 17:17:48:180 [Memoria]/(2136:3749): Intruccion: [SET DX 89]
+[INFO] 17:17:48:180 [Memoria]/(2136:3749): Intruccion: [EXIT]
+[WARNING] 17:17:54:690 [Memoria]/(2136:3740): >>>>> PID:1 | BLOQUES:4
+[INFO] 17:17:54:690 [Memoria]/(2136:3740): >>>>>LLEGA:: PID:1 | POS_SWAP:0
+[INFO] 17:17:54:690 [Memoria]/(2136:3740): >>>>>LLEGA:: PID:1 | POS_SWAP:1
+[INFO] 17:17:54:690 [Memoria]/(2136:3740): >>>>>LLEGA:: PID:1 | POS_SWAP:2
+[INFO] 17:17:54:690 [Memoria]/(2136:3740): >>>>>LLEGA:: PID:1 | POS_SWAP:3
+[INFO] 17:17:54:690 [Memoria]/(2136:3740): FILESYSTEM => <PID:1> <cant_pag:4> - <cant_bloques:4>
+[WARNING] 17:17:54:690 [Memoria]/(2136:3740): >>>>> CARGA_BLOQUES_PAG: PID:1|PAG:0|POS_SWAP:0
+[WARNING] 17:17:54:690 [Memoria]/(2136:3740): >>>>> CARGA_BLOQUES_PAG: PID:1|PAG:1|POS_SWAP:1
+[WARNING] 17:17:54:690 [Memoria]/(2136:3740): >>>>> CARGA_BLOQUES_PAG: PID:1|PAG:2|POS_SWAP:2
+[WARNING] 17:17:54:690 [Memoria]/(2136:3740): >>>>> CARGA_BLOQUES_PAG: PID:1|PAG:3|POS_SWAP:3
+[WARNING] 17:17:54:690 [Memoria]/(2136:3740): Se Cargaron pos_SWAP en proceso <PID:1>
+[INFO] 17:18:24:385 [Memoria]/(2136:3747): AAA_0
+[INFO] 17:18:24:888 [Memoria]/(2136:3747): AAA_1
+[ERROR] 17:18:25:080 [Memoria]/(2136:3749): [DESCONEXION]: KERNEL
+[ERROR] 17:18:25:082 [Memoria]/(2136:3740): [DESCONEXION]: FILESYSTEM
+[ERROR] 17:18:25:082 [Memoria]/(2136:3747): [DESCONEXION]: CPU
+[INFO] 17:19:53:250 [Memoria]/(2136:2136): Cliente conectado a Memoria
+[INFO] 17:19:53:250 [Memoria]/(2136:2136): [THREAD] Creo hilo para atender
+[INFO] 17:19:53:251 [Memoria]/(2136:4076): !!!!! FILESYSTEM CONECTADO !!!!!
+[INFO] 17:19:54:446 [Memoria]/(2136:2136): Cliente conectado a Memoria
+[INFO] 17:19:54:447 [Memoria]/(2136:2136): [THREAD] Creo hilo para atender
+[INFO] 17:19:54:448 [Memoria]/(2136:4083): !!!!! CPU CONECTADO !!!!!
+[INFO] 17:19:56:101 [Memoria]/(2136:2136): Cliente conectado a Memoria
+[INFO] 17:19:56:101 [Memoria]/(2136:2136): [THREAD] Creo hilo para atender
+[INFO] 17:19:56:101 [Memoria]/(2136:4085): !!!!! KERNEL CONECTADO !!!!!
+[INFO] 17:20:00:171 [Memoria]/(2136:4085): [Kernel] -> Peticion de creacion de proceso nuevo
+[INFO] 17:20:00:171 [Memoria]/(2136:4085): Intruccion: [SET AX 1]
+[INFO] 17:20:00:171 [Memoria]/(2136:4085): Intruccion: [SET BX 1]
+[INFO] 17:20:00:171 [Memoria]/(2136:4085): Intruccion: [SET CX 1]
+[INFO] 17:20:00:171 [Memoria]/(2136:4085): Intruccion: [SET DX 1]
+[INFO] 17:20:00:171 [Memoria]/(2136:4085): Intruccion: [F_OPEN consolas W]
+[INFO] 17:20:00:171 [Memoria]/(2136:4085): Intruccion: [F_TRUNCATE consolas 64]
+[INFO] 17:20:00:171 [Memoria]/(2136:4085): Intruccion: [F_SEEK consolas 0]
+[INFO] 17:20:00:171 [Memoria]/(2136:4085): Intruccion: [F_WRITE consolas 16]
+[INFO] 17:20:00:172 [Memoria]/(2136:4085): Intruccion: [SET BX 79]
+[INFO] 17:20:00:172 [Memoria]/(2136:4085): Intruccion: [SET CX 78]
+[INFO] 17:20:00:172 [Memoria]/(2136:4085): Intruccion: [SET DX 89]
+[INFO] 17:20:00:172 [Memoria]/(2136:4085): Intruccion: [EXIT]
+[WARNING] 17:20:06:706 [Memoria]/(2136:4076): >>>>> PID:1 | BLOQUES:4
+[INFO] 17:20:06:707 [Memoria]/(2136:4076): >>>>>LLEGA:: PID:1 | POS_SWAP:0
+[INFO] 17:20:06:707 [Memoria]/(2136:4076): >>>>>LLEGA:: PID:1 | POS_SWAP:1
+[INFO] 17:20:06:707 [Memoria]/(2136:4076): >>>>>LLEGA:: PID:1 | POS_SWAP:2
+[INFO] 17:20:06:707 [Memoria]/(2136:4076): >>>>>LLEGA:: PID:1 | POS_SWAP:3
+[INFO] 17:20:06:707 [Memoria]/(2136:4076): FILESYSTEM => <PID:1> <cant_pag:4> - <cant_bloques:4>
+[WARNING] 17:20:06:707 [Memoria]/(2136:4076): >>>>> CARGA_BLOQUES_PAG: PID:1|PAG:0|POS_SWAP:0
+[WARNING] 17:20:06:707 [Memoria]/(2136:4076): >>>>> CARGA_BLOQUES_PAG: PID:1|PAG:1|POS_SWAP:1
+[WARNING] 17:20:06:707 [Memoria]/(2136:4076): >>>>> CARGA_BLOQUES_PAG: PID:1|PAG:2|POS_SWAP:2
+[WARNING] 17:20:06:707 [Memoria]/(2136:4076): >>>>> CARGA_BLOQUES_PAG: PID:1|PAG:3|POS_SWAP:3
+[WARNING] 17:20:06:707 [Memoria]/(2136:4076): Se Cargaron pos_SWAP en proceso <PID:1>
+[ERROR] 17:20:29:946 [Memoria]/(2136:4085): [DESCONEXION]: KERNEL
+[ERROR] 17:20:29:947 [Memoria]/(2136:4083): [DESCONEXION]: CPU
+[ERROR] 17:20:29:947 [Memoria]/(2136:4076): [DESCONEXION]: FILESYSTEM
+[INFO] 17:21:18:838 [Memoria]/(2136:2136): Cliente conectado a Memoria
+[INFO] 17:21:18:838 [Memoria]/(2136:2136): [THREAD] Creo hilo para atender
+[INFO] 17:21:18:838 [Memoria]/(2136:4131): !!!!! FILESYSTEM CONECTADO !!!!!
+[INFO] 17:21:20:242 [Memoria]/(2136:2136): Cliente conectado a Memoria
+[INFO] 17:21:20:242 [Memoria]/(2136:2136): [THREAD] Creo hilo para atender
+[INFO] 17:21:20:243 [Memoria]/(2136:4137): !!!!! CPU CONECTADO !!!!!
+[INFO] 17:21:21:538 [Memoria]/(2136:2136): Cliente conectado a Memoria
+[INFO] 17:21:21:538 [Memoria]/(2136:2136): [THREAD] Creo hilo para atender
+[INFO] 17:21:21:539 [Memoria]/(2136:4139): !!!!! KERNEL CONECTADO !!!!!
+[INFO] 17:21:24:783 [Memoria]/(2136:4139): [Kernel] -> Peticion de creacion de proceso nuevo
+[INFO] 17:21:24:783 [Memoria]/(2136:4139): Intruccion: [SET AX 1]
+[INFO] 17:21:24:783 [Memoria]/(2136:4139): Intruccion: [SET BX 1]
+[INFO] 17:21:24:783 [Memoria]/(2136:4139): Intruccion: [SET CX 1]
+[INFO] 17:21:24:783 [Memoria]/(2136:4139): Intruccion: [SET DX 1]
+[INFO] 17:21:24:783 [Memoria]/(2136:4139): Intruccion: [F_OPEN consolas W]
+[INFO] 17:21:24:783 [Memoria]/(2136:4139): Intruccion: [F_TRUNCATE consolas 64]
+[INFO] 17:21:24:783 [Memoria]/(2136:4139): Intruccion: [F_SEEK consolas 0]
+[INFO] 17:21:24:783 [Memoria]/(2136:4139): Intruccion: [F_WRITE consolas 16]
+[INFO] 17:21:24:783 [Memoria]/(2136:4139): Intruccion: [SET BX 79]
+[INFO] 17:21:24:783 [Memoria]/(2136:4139): Intruccion: [SET CX 78]
+[INFO] 17:21:24:783 [Memoria]/(2136:4139): Intruccion: [SET DX 89]
+[INFO] 17:21:24:783 [Memoria]/(2136:4139): Intruccion: [EXIT]
+[WARNING] 17:21:31:297 [Memoria]/(2136:4131): >>>>> PID:1 | BLOQUES:4
+[INFO] 17:21:31:298 [Memoria]/(2136:4131): >>>>>LLEGA:: PID:1 | POS_SWAP:0
+[INFO] 17:21:31:298 [Memoria]/(2136:4131): >>>>>LLEGA:: PID:1 | POS_SWAP:1
+[INFO] 17:21:31:298 [Memoria]/(2136:4131): >>>>>LLEGA:: PID:1 | POS_SWAP:2
+[INFO] 17:21:31:298 [Memoria]/(2136:4131): >>>>>LLEGA:: PID:1 | POS_SWAP:3
+[INFO] 17:21:31:298 [Memoria]/(2136:4131): FILESYSTEM => <PID:1> <cant_pag:4> - <cant_bloques:4>
+[WARNING] 17:21:31:298 [Memoria]/(2136:4131): >>>>> CARGA_BLOQUES_PAG: PID:1|PAG:0|POS_SWAP:0
+[WARNING] 17:21:31:298 [Memoria]/(2136:4131): >>>>> CARGA_BLOQUES_PAG: PID:1|PAG:1|POS_SWAP:1
+[WARNING] 17:21:31:298 [Memoria]/(2136:4131): >>>>> CARGA_BLOQUES_PAG: PID:1|PAG:2|POS_SWAP:2
+[WARNING] 17:21:31:298 [Memoria]/(2136:4131): >>>>> CARGA_BLOQUES_PAG: PID:1|PAG:3|POS_SWAP:3
+[WARNING] 17:21:31:298 [Memoria]/(2136:4131): Se Cargaron pos_SWAP en proceso <PID:1>
+[INFO] 17:22:13:278 [Memoria]/(2136:4137): AAA_0
+[INFO] 17:22:13:788 [Memoria]/(2136:4137): AAA_1
+[ERROR] 17:22:13:905 [Memoria]/(2136:4139): [DESCONEXION]: KERNEL
+[ERROR] 17:22:13:905 [Memoria]/(2136:4137): [DESCONEXION]: CPU
+[ERROR] 17:22:13:906 [Memoria]/(2136:4131): [DESCONEXION]: FILESYSTEM
+[INFO] 17:24:50:187 [Memoria]/(2136:2136): Cliente conectado a Memoria
+[INFO] 17:24:50:187 [Memoria]/(2136:2136): [THREAD] Creo hilo para atender
+[INFO] 17:24:50:188 [Memoria]/(2136:4294): !!!!! FILESYSTEM CONECTADO !!!!!
+[INFO] 17:24:51:236 [Memoria]/(2136:2136): Cliente conectado a Memoria
+[INFO] 17:24:51:237 [Memoria]/(2136:2136): [THREAD] Creo hilo para atender
+[INFO] 17:24:51:238 [Memoria]/(2136:4301): !!!!! CPU CONECTADO !!!!!
+[INFO] 17:24:52:537 [Memoria]/(2136:2136): Cliente conectado a Memoria
+[INFO] 17:24:52:537 [Memoria]/(2136:2136): [THREAD] Creo hilo para atender
+[INFO] 17:24:52:537 [Memoria]/(2136:4303): !!!!! KERNEL CONECTADO !!!!!
+[INFO] 17:24:55:560 [Memoria]/(2136:4303): [Kernel] -> Peticion de creacion de proceso nuevo
+[INFO] 17:24:55:561 [Memoria]/(2136:4303): Intruccion: [SET AX 1]
+[INFO] 17:24:55:561 [Memoria]/(2136:4303): Intruccion: [SET BX 1]
+[INFO] 17:24:55:561 [Memoria]/(2136:4303): Intruccion: [SET CX 1]
+[INFO] 17:24:55:561 [Memoria]/(2136:4303): Intruccion: [SET DX 1]
+[INFO] 17:24:55:561 [Memoria]/(2136:4303): Intruccion: [F_OPEN consolas W]
+[INFO] 17:24:55:561 [Memoria]/(2136:4303): Intruccion: [F_TRUNCATE consolas 64]
+[INFO] 17:24:55:561 [Memoria]/(2136:4303): Intruccion: [F_SEEK consolas 0]
+[INFO] 17:24:55:561 [Memoria]/(2136:4303): Intruccion: [F_WRITE consolas 16]
+[INFO] 17:24:55:561 [Memoria]/(2136:4303): Intruccion: [SET BX 79]
+[INFO] 17:24:55:561 [Memoria]/(2136:4303): Intruccion: [SET CX 78]
+[INFO] 17:24:55:561 [Memoria]/(2136:4303): Intruccion: [SET DX 89]
+[INFO] 17:24:55:561 [Memoria]/(2136:4303): Intruccion: [EXIT]
+[WARNING] 17:25:02:079 [Memoria]/(2136:4294): >>>>> PID:1 | BLOQUES:4
+[INFO] 17:25:02:079 [Memoria]/(2136:4294): >>>>>LLEGA:: PID:1 | POS_SWAP:0
+[INFO] 17:25:02:079 [Memoria]/(2136:4294): >>>>>LLEGA:: PID:1 | POS_SWAP:1
+[INFO] 17:25:02:079 [Memoria]/(2136:4294): >>>>>LLEGA:: PID:1 | POS_SWAP:2
+[INFO] 17:25:02:080 [Memoria]/(2136:4294): >>>>>LLEGA:: PID:1 | POS_SWAP:3
+[INFO] 17:25:02:080 [Memoria]/(2136:4294): FILESYSTEM => <PID:1> <cant_pag:4> - <cant_bloques:4>
+[WARNING] 17:25:02:080 [Memoria]/(2136:4294): >>>>> CARGA_BLOQUES_PAG: PID:1|PAG:0|POS_SWAP:0
+[WARNING] 17:25:02:080 [Memoria]/(2136:4294): >>>>> CARGA_BLOQUES_PAG: PID:1|PAG:1|POS_SWAP:1
+[WARNING] 17:25:02:080 [Memoria]/(2136:4294): >>>>> CARGA_BLOQUES_PAG: PID:1|PAG:2|POS_SWAP:2
+[WARNING] 17:25:02:080 [Memoria]/(2136:4294): >>>>> CARGA_BLOQUES_PAG: PID:1|PAG:3|POS_SWAP:3
+[WARNING] 17:25:02:080 [Memoria]/(2136:4294): Se Cargaron pos_SWAP en proceso <PID:1>
+[INFO] 17:25:19:757 [Memoria]/(2136:4301): AAA_0
+[INFO] 17:25:20:261 [Memoria]/(2136:4301): AAA_1
+[ERROR] 17:25:20:414 [Memoria]/(2136:4303): [DESCONEXION]: KERNEL
+[ERROR] 17:25:20:415 [Memoria]/(2136:4294): [DESCONEXION]: FILESYSTEM
+[ERROR] 17:25:20:416 [Memoria]/(2136:4301): [DESCONEXION]: CPU
+[INFO] 17:39:41:581 [Memoria]/(2136:2136): Cliente conectado a Memoria
+[INFO] 17:39:41:581 [Memoria]/(2136:2136): [THREAD] Creo hilo para atender
+[INFO] 17:39:41:582 [Memoria]/(2136:4763): !!!!! FILESYSTEM CONECTADO !!!!!
+[INFO] 17:39:43:336 [Memoria]/(2136:2136): Cliente conectado a Memoria
+[INFO] 17:39:43:336 [Memoria]/(2136:2136): [THREAD] Creo hilo para atender
+[INFO] 17:39:43:336 [Memoria]/(2136:4771): !!!!! CPU CONECTADO !!!!!
+[INFO] 17:39:44:635 [Memoria]/(2136:2136): Cliente conectado a Memoria
+[INFO] 17:39:44:635 [Memoria]/(2136:2136): [THREAD] Creo hilo para atender
+[INFO] 17:39:44:635 [Memoria]/(2136:4773): !!!!! KERNEL CONECTADO !!!!!
+[INFO] 17:39:50:520 [Memoria]/(2136:4773): [Kernel] -> Peticion de creacion de proceso nuevo
+[INFO] 17:39:50:520 [Memoria]/(2136:4773): Intruccion: [SET AX 1]
+[INFO] 17:39:50:520 [Memoria]/(2136:4773): Intruccion: [SET BX 1]
+[INFO] 17:39:50:520 [Memoria]/(2136:4773): Intruccion: [SET CX 1]
+[INFO] 17:39:50:520 [Memoria]/(2136:4773): Intruccion: [SET DX 1]
+[INFO] 17:39:50:520 [Memoria]/(2136:4773): Intruccion: [F_OPEN consolas W]
+[INFO] 17:39:50:520 [Memoria]/(2136:4773): Intruccion: [F_TRUNCATE consolas 64]
+[INFO] 17:39:50:520 [Memoria]/(2136:4773): Intruccion: [F_SEEK consolas 0]
+[INFO] 17:39:50:520 [Memoria]/(2136:4773): Intruccion: [F_WRITE consolas 16]
+[INFO] 17:39:50:521 [Memoria]/(2136:4773): Intruccion: [SET BX 79]
+[INFO] 17:39:50:521 [Memoria]/(2136:4773): Intruccion: [SET CX 78]
+[INFO] 17:39:50:521 [Memoria]/(2136:4773): Intruccion: [SET DX 89]
+[INFO] 17:39:50:521 [Memoria]/(2136:4773): Intruccion: [EXIT]
+[WARNING] 17:39:57:030 [Memoria]/(2136:4763): >>>>> PID:1 | BLOQUES:4
+[INFO] 17:39:57:031 [Memoria]/(2136:4763): >>>>>LLEGA:: PID:1 | POS_SWAP:0
+[INFO] 17:39:57:031 [Memoria]/(2136:4763): >>>>>LLEGA:: PID:1 | POS_SWAP:1
+[INFO] 17:39:57:031 [Memoria]/(2136:4763): >>>>>LLEGA:: PID:1 | POS_SWAP:2
+[INFO] 17:39:57:031 [Memoria]/(2136:4763): >>>>>LLEGA:: PID:1 | POS_SWAP:3
+[INFO] 17:39:57:031 [Memoria]/(2136:4763): FILESYSTEM => <PID:1> <cant_pag:4> - <cant_bloques:4>
+[WARNING] 17:39:57:031 [Memoria]/(2136:4763): >>>>> CARGA_BLOQUES_PAG: PID:1|PAG:0|POS_SWAP:0
+[WARNING] 17:39:57:031 [Memoria]/(2136:4763): >>>>> CARGA_BLOQUES_PAG: PID:1|PAG:1|POS_SWAP:1
+[WARNING] 17:39:57:031 [Memoria]/(2136:4763): >>>>> CARGA_BLOQUES_PAG: PID:1|PAG:2|POS_SWAP:2
+[WARNING] 17:39:57:031 [Memoria]/(2136:4763): >>>>> CARGA_BLOQUES_PAG: PID:1|PAG:3|POS_SWAP:3
+[WARNING] 17:39:57:031 [Memoria]/(2136:4763): Se Cargaron pos_SWAP en proceso <PID:1>
+[INFO] 17:40:10:152 [Memoria]/(2136:4771): AAA_0
+[INFO] 17:40:10:661 [Memoria]/(2136:4771): AAA_1
+[ERROR] 17:40:10:772 [Memoria]/(2136:4773): [DESCONEXION]: KERNEL
+[ERROR] 17:40:10:773 [Memoria]/(2136:4771): [DESCONEXION]: CPU
+[ERROR] 17:40:10:772 [Memoria]/(2136:4763): [DESCONEXION]: FILESYSTEM

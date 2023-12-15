@@ -10,7 +10,11 @@ t_list* obtener_n_cantidad_de_bloques_libres_de_tabla_fat(int cant_bloques){
 	uint32_t i = 0;
 
 	while(i<sizeArrayFat && list_size(una_lista)<cant_bloques){
-//		log_info(filesystem_log_obligatorio, "Acceso FAT - Entrada: <%d> - Valor: <%d>", i, tablaFatEnMemoria[i]);
+		if(tablaFatEnMemoria[i] == EOF_FS){
+			log_info(filesystem_log_obligatorio, "Acceso FAT - Entrada: <%d> - Valor: <EOF>", i);
+		}else{
+			log_info(filesystem_log_obligatorio, "Acceso FAT - Entrada: <%d> - Valor: <%d>", i, tablaFatEnMemoria[i]);
+		}
 		usleep(RETARDO_ACCESO_FAT*1000);
 		if(tablaFatEnMemoria[i]==0){
 			uint32_t* aux = malloc(sizeof(uint32_t));
@@ -25,6 +29,7 @@ t_list* obtener_n_cantidad_de_bloques_libres_de_tabla_fat(int cant_bloques){
 		return NULL;
 	}
 	log_warning(filesystem_logger, "fin obtener_n_cantidad_de_bloques_libres_de_tabla_fat");
+
 	return una_lista;
 }
 
@@ -44,7 +49,7 @@ t_list* obtener_secuencia_de_bloques_de_archivo(int nro_bloque_inicial){
 		*aux = i;
 		list_add(lista_a_devolver, aux);
 	}
-	log_info(filesystem_log_obligatorio, "Acceso FAT - Entrada: <%d> - Valor: EOF", i);
+	log_info(filesystem_log_obligatorio, "Acceso FAT - Entrada: <%d> - Valor: <EOF>", i);
 	usleep(RETARDO_ACCESO_FAT*1000);
 
 	log_warning(filesystem_logger, "fin obtener_secuencia_de_bloques_de_archivo");
@@ -55,7 +60,7 @@ t_list* obtener_secuencia_de_bloques_de_archivo(int nro_bloque_inicial){
 void cargar_secuencia_de_bloques_asignados_a_tabla_fat(t_list* una_lista){
 	//Lista [uint32_t*]
 	log_warning(filesystem_logger, "inicio cargar_secuencia_de_bloques_asignados_a_tabla_fat");
-	int i;
+	uint32_t i;
 
 	for(i = 0; i< list_size(una_lista); i++){
 		if(i == list_size(una_lista)-1){
@@ -63,7 +68,11 @@ void cargar_secuencia_de_bloques_asignados_a_tabla_fat(t_list* una_lista){
 		}else{
 			tablaFatEnMemoria[*((uint32_t*)list_get(una_lista, i))] =  *((uint32_t*)list_get(una_lista, i+1));
 		}
-		log_info(filesystem_log_obligatorio, "Acceso FAT - Entrada: <%d> - Valor: <%d>", i, tablaFatEnMemoria[i]);
+		if(tablaFatEnMemoria[*((uint32_t*)list_get(una_lista, i))] == EOF_FS){
+			log_info(filesystem_log_obligatorio, "Acceso FAT - Entrada: <%d> - Valor: <EOF>", *((uint32_t*)list_get(una_lista, i)));
+		}else{
+			log_info(filesystem_log_obligatorio, "Acceso FAT - Entrada: <%d> - Valor: <%d>", *((uint32_t*)list_get(una_lista, i)), tablaFatEnMemoria[*((uint32_t*)list_get(una_lista, i))]);
+		}
 		usleep(RETARDO_ACCESO_FAT*1000);
 	}
 	log_warning(filesystem_logger, "fin cargar_secuencia_de_bloques_asignados_a_tabla_fat");
@@ -75,7 +84,11 @@ uint32_t obtener_el_nro_bloque_segun_el_la_posicion_del_seek(int nro_bloque_inic
 	uint32_t i = nro_bloque_inicial;
 
 	for(int j=0; j<bloque_desplazado; j++){
-		log_info(filesystem_log_obligatorio, "Acceso FAT - Entrada: <%d> - Valor: <%d>", i, tablaFatEnMemoria[i]);
+		if(tablaFatEnMemoria[i] == EOF_FS){
+			log_info(filesystem_log_obligatorio, "Acceso FAT - Entrada: <%d> - Valor: <EOF>", i);
+		}else{
+			log_info(filesystem_log_obligatorio, "Acceso FAT - Entrada: <%d> - Valor: <%d>", i, tablaFatEnMemoria[i]);
+		}
 		usleep(RETARDO_ACCESO_FAT*1000);
 		i = tablaFatEnMemoria[i];
 	}
