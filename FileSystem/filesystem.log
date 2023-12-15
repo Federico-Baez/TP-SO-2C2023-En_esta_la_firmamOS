@@ -8093,3 +8093,1574 @@
 [WARNING] 07:59:42:974 [File System]/(36940:36942): inicio setear_bloque_de_swap_como_libre
 [WARNING] 07:59:42:974 [File System]/(36940:36942): NUM BLOQUE SWAP: 0
 [ERROR] 07:59:42:976 [File System]/(36940:36943): [DESCONEXION]: KERNEL
+[WARNING] 13:47:01:539 [File System]/(3397:3397): inicio crear_fat
+[WARNING] 13:47:01:539 [File System]/(3397:3397): fin crear_fat(mmapeo la tabla fat joya)
+[WARNING] 13:47:01:540 [File System]/(3397:3397): inicio inicializar_archivo_de_bloques
+[WARNING] 13:47:01:540 [File System]/(3397:3397): fin inicializar_archivo_de_bloques(mmapeo de bloques correcto)
+[INFO] 13:47:01:540 [File System]/(3397:3399): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 13:47:15:191 [File System]/(3397:3400): Cliente conectado a Kernel
+[INFO] 13:47:15:191 [File System]/(3397:3400): ::::::::::: KERNEL CONECTADO ::::::::::::
+[INFO] 13:47:50:279 [File System]/(3397:3399): Se recibio algo de MEMORIA
+[INFO] 13:47:50:280 [File System]/(3397:3399): entro a PETICION_ASIGNACION_BLOQUE_SWAP_FM
+[INFO] 13:47:50:280 [File System]/(3397:3399): recibo buffer
+[WARNING] 13:47:50:280 [File System]/(3397:3399): inicio atender_asignacion_de_bloques_por_creacion_de_proceso
+[WARNING] 13:47:50:280 [File System]/(3397:3399): pre lista de bloques
+[WARNING] 13:47:50:280 [File System]/(3397:3399): inicio swap_obtener_n_cantidad_de_bloques: 0
+[WARNING] 13:47:56:286 [File System]/(3397:3399): fin swap_obtener_n_cantidad_de_bloques
+[WARNING] 13:47:56:286 [File System]/(3397:3399): post lista de bloques
+[WARNING] 13:47:56:286 [File System]/(3397:3399): inicio enviar_lista_bloques_a_memoria
+[INFO] 13:47:56:286 [File System]/(3397:3399): >>>>>nro_B:0
+[INFO] 13:47:56:286 [File System]/(3397:3399): >>>>>nro_B:1
+[INFO] 13:47:56:286 [File System]/(3397:3399): >>>>>nro_B:2
+[INFO] 13:47:56:286 [File System]/(3397:3399): >>>>>nro_B:3
+[WARNING] 13:47:56:286 [File System]/(3397:3399): >>>>>ENVIADO a M:4
+[WARNING] 13:47:56:286 [File System]/(3397:3399): fin enviar_lista_bloques_a_memoria
+[WARNING] 13:47:56:286 [File System]/(3397:3399): fin atender_asignacion_de_bloques_por_creacion_de_proceso
+[INFO] 13:47:56:787 [File System]/(3397:3399): Se recibio algo de MEMORIA
+[WARNING] 13:47:56:787 [File System]/(3397:3399): inicio atender_peticion_de_libarar_bloques_swap
+[WARNING] 13:47:56:787 [File System]/(3397:3399): CANT_BLOQUES_A_LIBERAR: 4
+[WARNING] 13:47:56:787 [File System]/(3397:3399): inicio setear_bloque_de_swap_como_libre
+[WARNING] 13:47:56:787 [File System]/(3397:3399): NUM BLOQUE SWAP: 0
+[WARNING] 13:47:58:287 [File System]/(3397:3399): fin setear_bloque_de_swap_como_libre
+[WARNING] 13:47:58:287 [File System]/(3397:3399): inicio setear_bloque_de_swap_como_libre
+[WARNING] 13:47:58:287 [File System]/(3397:3399): NUM BLOQUE SWAP: 1
+[WARNING] 13:47:59:789 [File System]/(3397:3399): fin setear_bloque_de_swap_como_libre
+[WARNING] 13:47:59:789 [File System]/(3397:3399): inicio setear_bloque_de_swap_como_libre
+[WARNING] 13:47:59:789 [File System]/(3397:3399): NUM BLOQUE SWAP: 2
+[WARNING] 13:48:01:290 [File System]/(3397:3399): fin setear_bloque_de_swap_como_libre
+[WARNING] 13:48:01:297 [File System]/(3397:3399): inicio setear_bloque_de_swap_como_libre
+[WARNING] 13:48:01:297 [File System]/(3397:3399): NUM BLOQUE SWAP: 3
+[WARNING] 13:48:02:798 [File System]/(3397:3399): fin setear_bloque_de_swap_como_libre
+[WARNING] 13:48:02:798 [File System]/(3397:3399): fin atender_peticion_de_libarar_bloques_swap
+[INFO] 13:48:47:254 [File System]/(3397:3399): Se recibio algo de MEMORIA
+[INFO] 13:48:47:254 [File System]/(3397:3399): entro a PETICION_ASIGNACION_BLOQUE_SWAP_FM
+[INFO] 13:48:47:254 [File System]/(3397:3399): recibo buffer
+[WARNING] 13:48:47:254 [File System]/(3397:3399): inicio atender_asignacion_de_bloques_por_creacion_de_proceso
+[WARNING] 13:48:47:254 [File System]/(3397:3399): pre lista de bloques
+[WARNING] 13:48:47:254 [File System]/(3397:3399): inicio swap_obtener_n_cantidad_de_bloques: 0
+[WARNING] 13:48:53:263 [File System]/(3397:3399): fin swap_obtener_n_cantidad_de_bloques
+[WARNING] 13:48:53:264 [File System]/(3397:3399): post lista de bloques
+[WARNING] 13:48:53:264 [File System]/(3397:3399): inicio enviar_lista_bloques_a_memoria
+[INFO] 13:48:53:264 [File System]/(3397:3399): >>>>>nro_B:0
+[INFO] 13:48:53:264 [File System]/(3397:3399): >>>>>nro_B:1
+[INFO] 13:48:53:264 [File System]/(3397:3399): >>>>>nro_B:2
+[INFO] 13:48:53:264 [File System]/(3397:3399): >>>>>nro_B:3
+[WARNING] 13:48:53:264 [File System]/(3397:3399): >>>>>ENVIADO a M:4
+[WARNING] 13:48:53:264 [File System]/(3397:3399): fin enviar_lista_bloques_a_memoria
+[WARNING] 13:48:53:264 [File System]/(3397:3399): fin atender_asignacion_de_bloques_por_creacion_de_proceso
+[INFO] 13:48:56:279 [File System]/(3397:3399): Se recibio algo de MEMORIA
+[WARNING] 13:48:56:280 [File System]/(3397:3399): inicio atender_pedido_de_lectura_de_pag_swap
+[WARNING] 13:48:56:280 [File System]/(3397:3399): SWAP_PAGEFAULT: <PID:2> <Nro_PAG:0> <POS_SWAP:0>
+[WARNING] 13:48:56:280 [File System]/(3397:3399): inicio obtener_bloque
+[WARNING] 13:48:57:780 [File System]/(3397:3399): fin obtener_bloque
+[WARNING] 13:48:57:780 [File System]/(3397:3399): inicio enviar_bloque_pagina_a_memoria
+[WARNING] 13:48:57:780 [File System]/(3397:3399): fin enviar_bloque_pagina_a_memoria
+[WARNING] 13:48:57:780 [File System]/(3397:3399): fin atender_pedido_de_lectura_de_pag_swap
+[INFO] 13:49:04:302 [File System]/(3397:3399): Se recibio algo de MEMORIA
+[WARNING] 13:49:04:302 [File System]/(3397:3399): inicio atender_pedido_de_lectura_de_pag_swap
+[WARNING] 13:49:04:302 [File System]/(3397:3399): SWAP_PAGEFAULT: <PID:2> <Nro_PAG:1> <POS_SWAP:1>
+[WARNING] 13:49:04:302 [File System]/(3397:3399): inicio obtener_bloque
+[WARNING] 13:49:05:802 [File System]/(3397:3399): fin obtener_bloque
+[WARNING] 13:49:05:802 [File System]/(3397:3399): inicio enviar_bloque_pagina_a_memoria
+[WARNING] 13:49:05:802 [File System]/(3397:3399): fin enviar_bloque_pagina_a_memoria
+[WARNING] 13:49:05:802 [File System]/(3397:3399): fin atender_pedido_de_lectura_de_pag_swap
+[INFO] 13:49:11:820 [File System]/(3397:3399): Se recibio algo de MEMORIA
+[WARNING] 13:49:11:820 [File System]/(3397:3399): inicio atender_peticion_de_libarar_bloques_swap
+[WARNING] 13:49:11:820 [File System]/(3397:3399): CANT_BLOQUES_A_LIBERAR: 4
+[WARNING] 13:49:11:820 [File System]/(3397:3399): inicio setear_bloque_de_swap_como_libre
+[WARNING] 13:49:11:820 [File System]/(3397:3399): NUM BLOQUE SWAP: 0
+[WARNING] 13:49:13:320 [File System]/(3397:3399): fin setear_bloque_de_swap_como_libre
+[WARNING] 13:49:13:320 [File System]/(3397:3399): inicio setear_bloque_de_swap_como_libre
+[WARNING] 13:49:13:320 [File System]/(3397:3399): NUM BLOQUE SWAP: 1
+[WARNING] 13:49:14:821 [File System]/(3397:3399): fin setear_bloque_de_swap_como_libre
+[WARNING] 13:49:14:821 [File System]/(3397:3399): inicio setear_bloque_de_swap_como_libre
+[WARNING] 13:49:14:821 [File System]/(3397:3399): NUM BLOQUE SWAP: 2
+[WARNING] 13:49:16:322 [File System]/(3397:3399): fin setear_bloque_de_swap_como_libre
+[WARNING] 13:49:16:323 [File System]/(3397:3399): inicio setear_bloque_de_swap_como_libre
+[WARNING] 13:49:16:323 [File System]/(3397:3399): NUM BLOQUE SWAP: 3
+[WARNING] 13:49:17:824 [File System]/(3397:3399): fin setear_bloque_de_swap_como_libre
+[WARNING] 13:49:17:824 [File System]/(3397:3399): fin atender_peticion_de_libarar_bloques_swap
+[INFO] 13:49:46:099 [File System]/(3397:3399): Se recibio algo de MEMORIA
+[INFO] 13:49:46:099 [File System]/(3397:3399): entro a PETICION_ASIGNACION_BLOQUE_SWAP_FM
+[INFO] 13:49:46:099 [File System]/(3397:3399): recibo buffer
+[WARNING] 13:49:46:099 [File System]/(3397:3399): inicio atender_asignacion_de_bloques_por_creacion_de_proceso
+[WARNING] 13:49:46:099 [File System]/(3397:3399): pre lista de bloques
+[WARNING] 13:49:46:099 [File System]/(3397:3399): inicio swap_obtener_n_cantidad_de_bloques: 0
+[WARNING] 13:49:52:109 [File System]/(3397:3399): fin swap_obtener_n_cantidad_de_bloques
+[WARNING] 13:49:52:109 [File System]/(3397:3399): post lista de bloques
+[WARNING] 13:49:52:109 [File System]/(3397:3399): inicio enviar_lista_bloques_a_memoria
+[INFO] 13:49:52:109 [File System]/(3397:3399): >>>>>nro_B:0
+[INFO] 13:49:52:109 [File System]/(3397:3399): >>>>>nro_B:1
+[INFO] 13:49:52:109 [File System]/(3397:3399): >>>>>nro_B:2
+[INFO] 13:49:52:109 [File System]/(3397:3399): >>>>>nro_B:3
+[WARNING] 13:49:52:109 [File System]/(3397:3399): >>>>>ENVIADO a M:4
+[WARNING] 13:49:52:109 [File System]/(3397:3399): fin enviar_lista_bloques_a_memoria
+[WARNING] 13:49:52:109 [File System]/(3397:3399): fin atender_asignacion_de_bloques_por_creacion_de_proceso
+[INFO] 13:49:57:634 [File System]/(3397:3399): Se recibio algo de MEMORIA
+[WARNING] 13:49:57:634 [File System]/(3397:3399): inicio atender_peticion_de_libarar_bloques_swap
+[WARNING] 13:49:57:634 [File System]/(3397:3399): CANT_BLOQUES_A_LIBERAR: 4
+[WARNING] 13:49:57:634 [File System]/(3397:3399): inicio setear_bloque_de_swap_como_libre
+[WARNING] 13:49:57:634 [File System]/(3397:3399): NUM BLOQUE SWAP: 0
+[WARNING] 13:49:59:134 [File System]/(3397:3399): fin setear_bloque_de_swap_como_libre
+[WARNING] 13:49:59:134 [File System]/(3397:3399): inicio setear_bloque_de_swap_como_libre
+[WARNING] 13:49:59:134 [File System]/(3397:3399): NUM BLOQUE SWAP: 1
+[WARNING] 13:50:00:637 [File System]/(3397:3399): fin setear_bloque_de_swap_como_libre
+[WARNING] 13:50:00:640 [File System]/(3397:3399): inicio setear_bloque_de_swap_como_libre
+[WARNING] 13:50:00:640 [File System]/(3397:3399): NUM BLOQUE SWAP: 2
+[WARNING] 13:50:02:140 [File System]/(3397:3399): fin setear_bloque_de_swap_como_libre
+[WARNING] 13:50:02:140 [File System]/(3397:3399): inicio setear_bloque_de_swap_como_libre
+[WARNING] 13:50:02:140 [File System]/(3397:3399): NUM BLOQUE SWAP: 3
+[WARNING] 13:50:03:704 [File System]/(3397:3399): fin setear_bloque_de_swap_como_libre
+[WARNING] 13:50:03:704 [File System]/(3397:3399): fin atender_peticion_de_libarar_bloques_swap
+[ERROR] 13:51:01:897 [File System]/(3397:3400): [DESCONEXION]: KERNEL
+[WARNING] 13:51:06:696 [File System]/(3456:3456): inicio crear_fat
+[WARNING] 13:51:06:697 [File System]/(3456:3456): fin crear_fat(mmapeo la tabla fat joya)
+[WARNING] 13:51:06:697 [File System]/(3456:3456): inicio inicializar_archivo_de_bloques
+[WARNING] 13:51:06:697 [File System]/(3456:3456): fin inicializar_archivo_de_bloques(mmapeo de bloques correcto)
+[INFO] 13:51:06:698 [File System]/(3456:3458): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 13:51:08:276 [File System]/(3456:3459): Cliente conectado a Kernel
+[INFO] 13:51:08:277 [File System]/(3456:3459): ::::::::::: KERNEL CONECTADO ::::::::::::
+[INFO] 13:52:20:531 [File System]/(3456:3458): Se recibio algo de MEMORIA
+[INFO] 13:52:20:531 [File System]/(3456:3458): entro a PETICION_ASIGNACION_BLOQUE_SWAP_FM
+[INFO] 13:52:20:531 [File System]/(3456:3458): recibo buffer
+[WARNING] 13:52:20:531 [File System]/(3456:3458): inicio atender_asignacion_de_bloques_por_creacion_de_proceso
+[WARNING] 13:52:20:531 [File System]/(3456:3458): pre lista de bloques
+[WARNING] 13:52:20:531 [File System]/(3456:3458): inicio swap_obtener_n_cantidad_de_bloques: 0
+[WARNING] 13:52:26:547 [File System]/(3456:3458): fin swap_obtener_n_cantidad_de_bloques
+[WARNING] 13:52:26:547 [File System]/(3456:3458): post lista de bloques
+[WARNING] 13:52:26:547 [File System]/(3456:3458): inicio enviar_lista_bloques_a_memoria
+[INFO] 13:52:26:547 [File System]/(3456:3458): >>>>>nro_B:0
+[INFO] 13:52:26:547 [File System]/(3456:3458): >>>>>nro_B:1
+[INFO] 13:52:26:547 [File System]/(3456:3458): >>>>>nro_B:2
+[INFO] 13:52:26:547 [File System]/(3456:3458): >>>>>nro_B:3
+[WARNING] 13:52:26:547 [File System]/(3456:3458): >>>>>ENVIADO a M:4
+[WARNING] 13:52:26:548 [File System]/(3456:3458): fin enviar_lista_bloques_a_memoria
+[WARNING] 13:52:26:548 [File System]/(3456:3458): fin atender_asignacion_de_bloques_por_creacion_de_proceso
+[INFO] 13:52:27:579 [File System]/(3456:3458): Se recibio algo de MEMORIA
+[INFO] 13:52:27:579 [File System]/(3456:3458): entro a PETICION_ASIGNACION_BLOQUE_SWAP_FM
+[INFO] 13:52:27:579 [File System]/(3456:3458): recibo buffer
+[WARNING] 13:52:27:579 [File System]/(3456:3458): inicio atender_asignacion_de_bloques_por_creacion_de_proceso
+[WARNING] 13:52:27:579 [File System]/(3456:3458): pre lista de bloques
+[WARNING] 13:52:27:579 [File System]/(3456:3458): inicio swap_obtener_n_cantidad_de_bloques: 1
+[WARNING] 13:52:33:584 [File System]/(3456:3458): fin swap_obtener_n_cantidad_de_bloques
+[WARNING] 13:52:33:584 [File System]/(3456:3458): post lista de bloques
+[WARNING] 13:52:33:584 [File System]/(3456:3458): inicio enviar_lista_bloques_a_memoria
+[INFO] 13:52:33:584 [File System]/(3456:3458): >>>>>nro_B:4
+[INFO] 13:52:33:584 [File System]/(3456:3458): >>>>>nro_B:5
+[INFO] 13:52:33:584 [File System]/(3456:3458): >>>>>nro_B:6
+[INFO] 13:52:33:584 [File System]/(3456:3458): >>>>>nro_B:7
+[WARNING] 13:52:33:584 [File System]/(3456:3458): >>>>>ENVIADO a M:4
+[WARNING] 13:52:33:585 [File System]/(3456:3458): fin enviar_lista_bloques_a_memoria
+[WARNING] 13:52:33:585 [File System]/(3456:3458): fin atender_asignacion_de_bloques_por_creacion_de_proceso
+[INFO] 13:52:34:590 [File System]/(3456:3458): Se recibio algo de MEMORIA
+[WARNING] 13:52:34:590 [File System]/(3456:3458): inicio atender_pedido_de_lectura_de_pag_swap
+[WARNING] 13:52:34:590 [File System]/(3456:3458): SWAP_PAGEFAULT: <PID:1> <Nro_PAG:0> <POS_SWAP:0>
+[WARNING] 13:52:34:590 [File System]/(3456:3458): inicio obtener_bloque
+[WARNING] 13:52:36:091 [File System]/(3456:3458): fin obtener_bloque
+[WARNING] 13:52:36:091 [File System]/(3456:3458): inicio enviar_bloque_pagina_a_memoria
+[WARNING] 13:52:36:091 [File System]/(3456:3458): fin enviar_bloque_pagina_a_memoria
+[WARNING] 13:52:36:091 [File System]/(3456:3458): fin atender_pedido_de_lectura_de_pag_swap
+[INFO] 13:52:36:091 [File System]/(3456:3458): Se recibio algo de MEMORIA
+[INFO] 13:52:36:091 [File System]/(3456:3458): entro a PETICION_ASIGNACION_BLOQUE_SWAP_FM
+[INFO] 13:52:36:091 [File System]/(3456:3458): recibo buffer
+[WARNING] 13:52:36:091 [File System]/(3456:3458): inicio atender_asignacion_de_bloques_por_creacion_de_proceso
+[WARNING] 13:52:36:091 [File System]/(3456:3458): pre lista de bloques
+[WARNING] 13:52:36:091 [File System]/(3456:3458): inicio swap_obtener_n_cantidad_de_bloques: 1
+[WARNING] 13:52:42:099 [File System]/(3456:3458): fin swap_obtener_n_cantidad_de_bloques
+[WARNING] 13:52:42:099 [File System]/(3456:3458): post lista de bloques
+[WARNING] 13:52:42:099 [File System]/(3456:3458): inicio enviar_lista_bloques_a_memoria
+[INFO] 13:52:42:099 [File System]/(3456:3458): >>>>>nro_B:8
+[INFO] 13:52:42:099 [File System]/(3456:3458): >>>>>nro_B:9
+[INFO] 13:52:42:099 [File System]/(3456:3458): >>>>>nro_B:10
+[INFO] 13:52:42:099 [File System]/(3456:3458): >>>>>nro_B:11
+[WARNING] 13:52:42:099 [File System]/(3456:3458): >>>>>ENVIADO a M:4
+[WARNING] 13:52:42:099 [File System]/(3456:3458): fin enviar_lista_bloques_a_memoria
+[WARNING] 13:52:42:099 [File System]/(3456:3458): fin atender_asignacion_de_bloques_por_creacion_de_proceso
+[INFO] 13:52:43:102 [File System]/(3456:3458): Se recibio algo de MEMORIA
+[WARNING] 13:52:43:102 [File System]/(3456:3458): inicio atender_pedido_de_lectura_de_pag_swap
+[WARNING] 13:52:43:102 [File System]/(3456:3458): SWAP_PAGEFAULT: <PID:2> <Nro_PAG:0> <POS_SWAP:4>
+[WARNING] 13:52:43:102 [File System]/(3456:3458): inicio obtener_bloque
+[WARNING] 13:52:44:603 [File System]/(3456:3458): fin obtener_bloque
+[WARNING] 13:52:44:603 [File System]/(3456:3458): inicio enviar_bloque_pagina_a_memoria
+[WARNING] 13:52:44:603 [File System]/(3456:3458): fin enviar_bloque_pagina_a_memoria
+[WARNING] 13:52:44:603 [File System]/(3456:3458): fin atender_pedido_de_lectura_de_pag_swap
+[INFO] 13:52:44:603 [File System]/(3456:3458): Se recibio algo de MEMORIA
+[INFO] 13:52:44:603 [File System]/(3456:3458): entro a PETICION_ASIGNACION_BLOQUE_SWAP_FM
+[INFO] 13:52:44:603 [File System]/(3456:3458): recibo buffer
+[WARNING] 13:52:44:603 [File System]/(3456:3458): inicio atender_asignacion_de_bloques_por_creacion_de_proceso
+[WARNING] 13:52:44:603 [File System]/(3456:3458): pre lista de bloques
+[WARNING] 13:52:44:603 [File System]/(3456:3458): inicio swap_obtener_n_cantidad_de_bloques: 1
+[WARNING] 13:52:50:618 [File System]/(3456:3458): fin swap_obtener_n_cantidad_de_bloques
+[WARNING] 13:52:50:618 [File System]/(3456:3458): post lista de bloques
+[WARNING] 13:52:50:618 [File System]/(3456:3458): inicio enviar_lista_bloques_a_memoria
+[INFO] 13:52:50:618 [File System]/(3456:3458): >>>>>nro_B:12
+[INFO] 13:52:50:618 [File System]/(3456:3458): >>>>>nro_B:13
+[INFO] 13:52:50:618 [File System]/(3456:3458): >>>>>nro_B:14
+[INFO] 13:52:50:618 [File System]/(3456:3458): >>>>>nro_B:15
+[WARNING] 13:52:50:618 [File System]/(3456:3458): >>>>>ENVIADO a M:4
+[WARNING] 13:52:50:618 [File System]/(3456:3458): fin enviar_lista_bloques_a_memoria
+[WARNING] 13:52:50:618 [File System]/(3456:3458): fin atender_asignacion_de_bloques_por_creacion_de_proceso
+[INFO] 13:52:51:628 [File System]/(3456:3458): Se recibio algo de MEMORIA
+[WARNING] 13:52:51:628 [File System]/(3456:3458): inicio atender_pedido_de_lectura_de_pag_swap
+[WARNING] 13:52:51:628 [File System]/(3456:3458): SWAP_PAGEFAULT: <PID:1> <Nro_PAG:1> <POS_SWAP:1>
+[WARNING] 13:52:51:628 [File System]/(3456:3458): inicio obtener_bloque
+[WARNING] 13:52:53:131 [File System]/(3456:3458): fin obtener_bloque
+[WARNING] 13:52:53:131 [File System]/(3456:3458): inicio enviar_bloque_pagina_a_memoria
+[WARNING] 13:52:53:131 [File System]/(3456:3458): fin enviar_bloque_pagina_a_memoria
+[WARNING] 13:52:53:131 [File System]/(3456:3458): fin atender_pedido_de_lectura_de_pag_swap
+[INFO] 13:52:57:134 [File System]/(3456:3458): Se recibio algo de MEMORIA
+[WARNING] 13:52:57:134 [File System]/(3456:3458): inicio atender_pedido_de_lectura_de_pag_swap
+[WARNING] 13:52:57:134 [File System]/(3456:3458): SWAP_PAGEFAULT: <PID:3> <Nro_PAG:0> <POS_SWAP:8>
+[WARNING] 13:52:57:134 [File System]/(3456:3458): inicio obtener_bloque
+[WARNING] 13:52:58:643 [File System]/(3456:3458): fin obtener_bloque
+[WARNING] 13:52:58:643 [File System]/(3456:3458): inicio enviar_bloque_pagina_a_memoria
+[WARNING] 13:52:58:643 [File System]/(3456:3458): fin enviar_bloque_pagina_a_memoria
+[WARNING] 13:52:58:643 [File System]/(3456:3458): fin atender_pedido_de_lectura_de_pag_swap
+[INFO] 13:53:02:660 [File System]/(3456:3458): Se recibio algo de MEMORIA
+[WARNING] 13:53:02:660 [File System]/(3456:3458): inicio atender_pedido_de_lectura_de_pag_swap
+[WARNING] 13:53:02:660 [File System]/(3456:3458): SWAP_PAGEFAULT: <PID:2> <Nro_PAG:1> <POS_SWAP:5>
+[WARNING] 13:53:02:660 [File System]/(3456:3458): inicio obtener_bloque
+[WARNING] 13:53:04:161 [File System]/(3456:3458): fin obtener_bloque
+[WARNING] 13:53:04:161 [File System]/(3456:3458): inicio enviar_bloque_pagina_a_memoria
+[WARNING] 13:53:04:161 [File System]/(3456:3458): fin enviar_bloque_pagina_a_memoria
+[WARNING] 13:53:04:161 [File System]/(3456:3458): fin atender_pedido_de_lectura_de_pag_swap
+[INFO] 13:53:08:163 [File System]/(3456:3458): Se recibio algo de MEMORIA
+[WARNING] 13:53:08:163 [File System]/(3456:3458): inicio atender_pedido_de_lectura_de_pag_swap
+[WARNING] 13:53:08:163 [File System]/(3456:3458): SWAP_PAGEFAULT: <PID:4> <Nro_PAG:0> <POS_SWAP:12>
+[WARNING] 13:53:08:163 [File System]/(3456:3458): inicio obtener_bloque
+[WARNING] 13:53:09:668 [File System]/(3456:3458): fin obtener_bloque
+[WARNING] 13:53:09:668 [File System]/(3456:3458): inicio enviar_bloque_pagina_a_memoria
+[WARNING] 13:53:09:668 [File System]/(3456:3458): fin enviar_bloque_pagina_a_memoria
+[WARNING] 13:53:09:668 [File System]/(3456:3458): fin atender_pedido_de_lectura_de_pag_swap
+[INFO] 13:53:13:671 [File System]/(3456:3458): Se recibio algo de MEMORIA
+[WARNING] 13:53:13:671 [File System]/(3456:3458): inicio atender_pedido_de_lectura_de_pag_swap
+[WARNING] 13:53:13:671 [File System]/(3456:3458): SWAP_PAGEFAULT: <PID:1> <Nro_PAG:2> <POS_SWAP:2>
+[WARNING] 13:53:13:671 [File System]/(3456:3458): inicio obtener_bloque
+[WARNING] 13:53:15:175 [File System]/(3456:3458): fin obtener_bloque
+[WARNING] 13:53:15:175 [File System]/(3456:3458): inicio enviar_bloque_pagina_a_memoria
+[WARNING] 13:53:15:175 [File System]/(3456:3458): fin enviar_bloque_pagina_a_memoria
+[WARNING] 13:53:15:175 [File System]/(3456:3458): fin atender_pedido_de_lectura_de_pag_swap
+[INFO] 13:53:19:180 [File System]/(3456:3458): Se recibio algo de MEMORIA
+[WARNING] 13:53:19:180 [File System]/(3456:3458): inicio atender_pedido_de_lectura_de_pag_swap
+[WARNING] 13:53:19:180 [File System]/(3456:3458): SWAP_PAGEFAULT: <PID:3> <Nro_PAG:1> <POS_SWAP:9>
+[WARNING] 13:53:19:180 [File System]/(3456:3458): inicio obtener_bloque
+[WARNING] 13:53:20:680 [File System]/(3456:3458): fin obtener_bloque
+[WARNING] 13:53:20:680 [File System]/(3456:3458): inicio enviar_bloque_pagina_a_memoria
+[WARNING] 13:53:20:680 [File System]/(3456:3458): fin enviar_bloque_pagina_a_memoria
+[WARNING] 13:53:20:680 [File System]/(3456:3458): fin atender_pedido_de_lectura_de_pag_swap
+[INFO] 13:53:24:690 [File System]/(3456:3458): Se recibio algo de MEMORIA
+[WARNING] 13:53:24:690 [File System]/(3456:3458): inicio atender_pedido_de_lectura_de_pag_swap
+[WARNING] 13:53:24:690 [File System]/(3456:3458): SWAP_PAGEFAULT: <PID:2> <Nro_PAG:2> <POS_SWAP:6>
+[WARNING] 13:53:24:690 [File System]/(3456:3458): inicio obtener_bloque
+[WARNING] 13:53:26:227 [File System]/(3456:3458): fin obtener_bloque
+[WARNING] 13:53:26:228 [File System]/(3456:3458): inicio enviar_bloque_pagina_a_memoria
+[WARNING] 13:53:26:228 [File System]/(3456:3458): fin enviar_bloque_pagina_a_memoria
+[WARNING] 13:53:26:228 [File System]/(3456:3458): fin atender_pedido_de_lectura_de_pag_swap
+[INFO] 13:53:30:235 [File System]/(3456:3458): Se recibio algo de MEMORIA
+[WARNING] 13:53:30:235 [File System]/(3456:3458): inicio atender_pedido_de_lectura_de_pag_swap
+[WARNING] 13:53:30:235 [File System]/(3456:3458): SWAP_PAGEFAULT: <PID:4> <Nro_PAG:1> <POS_SWAP:13>
+[WARNING] 13:53:30:235 [File System]/(3456:3458): inicio obtener_bloque
+[WARNING] 13:53:31:736 [File System]/(3456:3458): fin obtener_bloque
+[WARNING] 13:53:31:736 [File System]/(3456:3458): inicio enviar_bloque_pagina_a_memoria
+[WARNING] 13:53:31:736 [File System]/(3456:3458): fin enviar_bloque_pagina_a_memoria
+[WARNING] 13:53:31:736 [File System]/(3456:3458): fin atender_pedido_de_lectura_de_pag_swap
+[INFO] 13:53:35:740 [File System]/(3456:3458): Se recibio algo de MEMORIA
+[WARNING] 13:53:35:740 [File System]/(3456:3458): inicio atender_pedido_de_lectura_de_pag_swap
+[WARNING] 13:53:35:740 [File System]/(3456:3458): SWAP_PAGEFAULT: <PID:1> <Nro_PAG:3> <POS_SWAP:3>
+[WARNING] 13:53:35:740 [File System]/(3456:3458): inicio obtener_bloque
+[WARNING] 13:53:37:240 [File System]/(3456:3458): fin obtener_bloque
+[WARNING] 13:53:37:240 [File System]/(3456:3458): inicio enviar_bloque_pagina_a_memoria
+[WARNING] 13:53:37:240 [File System]/(3456:3458): fin enviar_bloque_pagina_a_memoria
+[WARNING] 13:53:37:240 [File System]/(3456:3458): fin atender_pedido_de_lectura_de_pag_swap
+[INFO] 13:53:41:243 [File System]/(3456:3458): Se recibio algo de MEMORIA
+[WARNING] 13:53:41:244 [File System]/(3456:3458): inicio atender_pedido_de_lectura_de_pag_swap
+[WARNING] 13:53:41:244 [File System]/(3456:3458): SWAP_PAGEFAULT: <PID:3> <Nro_PAG:2> <POS_SWAP:10>
+[WARNING] 13:53:41:244 [File System]/(3456:3458): inicio obtener_bloque
+[WARNING] 13:53:42:750 [File System]/(3456:3458): fin obtener_bloque
+[WARNING] 13:53:42:750 [File System]/(3456:3458): inicio enviar_bloque_pagina_a_memoria
+[WARNING] 13:53:42:750 [File System]/(3456:3458): fin enviar_bloque_pagina_a_memoria
+[WARNING] 13:53:42:751 [File System]/(3456:3458): fin atender_pedido_de_lectura_de_pag_swap
+[INFO] 13:53:46:755 [File System]/(3456:3458): Se recibio algo de MEMORIA
+[WARNING] 13:53:46:755 [File System]/(3456:3458): inicio atender_pedido_de_lectura_de_pag_swap
+[WARNING] 13:53:46:755 [File System]/(3456:3458): SWAP_PAGEFAULT: <PID:2> <Nro_PAG:3> <POS_SWAP:7>
+[WARNING] 13:53:46:755 [File System]/(3456:3458): inicio obtener_bloque
+[WARNING] 13:53:48:259 [File System]/(3456:3458): fin obtener_bloque
+[WARNING] 13:53:48:259 [File System]/(3456:3458): inicio enviar_bloque_pagina_a_memoria
+[WARNING] 13:53:48:259 [File System]/(3456:3458): fin enviar_bloque_pagina_a_memoria
+[WARNING] 13:53:48:259 [File System]/(3456:3458): fin atender_pedido_de_lectura_de_pag_swap
+[INFO] 13:53:52:274 [File System]/(3456:3458): Se recibio algo de MEMORIA
+[WARNING] 13:53:52:274 [File System]/(3456:3458): inicio atender_pedido_de_lectura_de_pag_swap
+[WARNING] 13:53:52:274 [File System]/(3456:3458): SWAP_PAGEFAULT: <PID:4> <Nro_PAG:2> <POS_SWAP:14>
+[WARNING] 13:53:52:274 [File System]/(3456:3458): inicio obtener_bloque
+[WARNING] 13:53:53:775 [File System]/(3456:3458): fin obtener_bloque
+[WARNING] 13:53:53:775 [File System]/(3456:3458): inicio enviar_bloque_pagina_a_memoria
+[WARNING] 13:53:53:775 [File System]/(3456:3458): fin enviar_bloque_pagina_a_memoria
+[WARNING] 13:53:53:775 [File System]/(3456:3458): fin atender_pedido_de_lectura_de_pag_swap
+[INFO] 13:53:57:780 [File System]/(3456:3458): Se recibio algo de MEMORIA
+[WARNING] 13:53:57:780 [File System]/(3456:3458): inicio atender_pedido_de_lectura_de_pag_swap
+[WARNING] 13:53:57:780 [File System]/(3456:3458): SWAP_PAGEFAULT: <PID:1> <Nro_PAG:0> <POS_SWAP:0>
+[WARNING] 13:53:57:780 [File System]/(3456:3458): inicio obtener_bloque
+[WARNING] 13:53:59:281 [File System]/(3456:3458): fin obtener_bloque
+[WARNING] 13:53:59:281 [File System]/(3456:3458): inicio enviar_bloque_pagina_a_memoria
+[WARNING] 13:53:59:281 [File System]/(3456:3458): fin enviar_bloque_pagina_a_memoria
+[WARNING] 13:53:59:281 [File System]/(3456:3458): fin atender_pedido_de_lectura_de_pag_swap
+[INFO] 13:54:03:285 [File System]/(3456:3458): Se recibio algo de MEMORIA
+[WARNING] 13:54:03:286 [File System]/(3456:3458): inicio atender_pedido_de_lectura_de_pag_swap
+[WARNING] 13:54:03:286 [File System]/(3456:3458): SWAP_PAGEFAULT: <PID:3> <Nro_PAG:3> <POS_SWAP:11>
+[WARNING] 13:54:03:286 [File System]/(3456:3458): inicio obtener_bloque
+[WARNING] 13:54:04:786 [File System]/(3456:3458): fin obtener_bloque
+[WARNING] 13:54:04:786 [File System]/(3456:3458): inicio enviar_bloque_pagina_a_memoria
+[WARNING] 13:54:04:786 [File System]/(3456:3458): fin enviar_bloque_pagina_a_memoria
+[WARNING] 13:54:04:786 [File System]/(3456:3458): fin atender_pedido_de_lectura_de_pag_swap
+[INFO] 13:55:17:844 [File System]/(3456:3458): Se recibio algo de MEMORIA
+[WARNING] 13:55:17:844 [File System]/(3456:3458): inicio atender_pedido_de_lectura_de_pag_swap
+[WARNING] 13:55:17:844 [File System]/(3456:3458): SWAP_PAGEFAULT: <PID:2> <Nro_PAG:0> <POS_SWAP:4>
+[WARNING] 13:55:17:844 [File System]/(3456:3458): inicio obtener_bloque
+[WARNING] 13:55:19:346 [File System]/(3456:3458): fin obtener_bloque
+[WARNING] 13:55:19:346 [File System]/(3456:3458): inicio enviar_bloque_pagina_a_memoria
+[WARNING] 13:55:19:346 [File System]/(3456:3458): fin enviar_bloque_pagina_a_memoria
+[WARNING] 13:55:19:346 [File System]/(3456:3458): fin atender_pedido_de_lectura_de_pag_swap
+[INFO] 13:55:19:346 [File System]/(3456:3458): Se recibio algo de MEMORIA
+[WARNING] 13:55:19:346 [File System]/(3456:3458): inicio atender_peticion_de_libarar_bloques_swap
+[WARNING] 13:55:19:346 [File System]/(3456:3458): CANT_BLOQUES_A_LIBERAR: 4
+[WARNING] 13:55:19:346 [File System]/(3456:3458): inicio setear_bloque_de_swap_como_libre
+[WARNING] 13:55:19:346 [File System]/(3456:3458): NUM BLOQUE SWAP: 8
+[WARNING] 13:55:20:850 [File System]/(3456:3458): fin setear_bloque_de_swap_como_libre
+[WARNING] 13:55:20:850 [File System]/(3456:3458): inicio setear_bloque_de_swap_como_libre
+[WARNING] 13:55:20:850 [File System]/(3456:3458): NUM BLOQUE SWAP: 9
+[WARNING] 13:55:22:353 [File System]/(3456:3458): fin setear_bloque_de_swap_como_libre
+[WARNING] 13:55:22:354 [File System]/(3456:3458): inicio setear_bloque_de_swap_como_libre
+[WARNING] 13:55:22:354 [File System]/(3456:3458): NUM BLOQUE SWAP: 10
+[ERROR] 13:55:22:936 [File System]/(3456:3459): [DESCONEXION]: KERNEL
+[WARNING] 14:02:14:009 [File System]/(4400:4400): inicio crear_fat
+[WARNING] 14:02:14:009 [File System]/(4400:4400): fin crear_fat(mmapeo la tabla fat joya)
+[WARNING] 14:02:14:009 [File System]/(4400:4400): inicio inicializar_archivo_de_bloques
+[WARNING] 14:02:14:009 [File System]/(4400:4400): fin inicializar_archivo_de_bloques(mmapeo de bloques correcto)
+[INFO] 14:02:14:010 [File System]/(4400:4402): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 14:02:15:186 [File System]/(4400:4403): Cliente conectado a Kernel
+[INFO] 14:02:15:187 [File System]/(4400:4403): ::::::::::: KERNEL CONECTADO ::::::::::::
+[INFO] 14:02:38:677 [File System]/(4400:4402): Se recibio algo de MEMORIA
+[INFO] 14:02:38:677 [File System]/(4400:4402): entro a PETICION_ASIGNACION_BLOQUE_SWAP_FM
+[INFO] 14:02:38:677 [File System]/(4400:4402): recibo buffer
+[WARNING] 14:02:38:677 [File System]/(4400:4402): inicio atender_asignacion_de_bloques_por_creacion_de_proceso
+[WARNING] 14:02:38:677 [File System]/(4400:4402): pre lista de bloques
+[WARNING] 14:02:38:677 [File System]/(4400:4402): inicio swap_obtener_n_cantidad_de_bloques: 0
+[WARNING] 14:02:44:679 [File System]/(4400:4402): fin swap_obtener_n_cantidad_de_bloques
+[WARNING] 14:02:44:679 [File System]/(4400:4402): post lista de bloques
+[WARNING] 14:02:44:679 [File System]/(4400:4402): inicio enviar_lista_bloques_a_memoria
+[INFO] 14:02:44:679 [File System]/(4400:4402): >>>>>nro_B:0
+[INFO] 14:02:44:679 [File System]/(4400:4402): >>>>>nro_B:1
+[INFO] 14:02:44:679 [File System]/(4400:4402): >>>>>nro_B:2
+[INFO] 14:02:44:679 [File System]/(4400:4402): >>>>>nro_B:3
+[WARNING] 14:02:44:679 [File System]/(4400:4402): >>>>>ENVIADO a M:4
+[WARNING] 14:02:44:679 [File System]/(4400:4402): fin enviar_lista_bloques_a_memoria
+[WARNING] 14:02:44:679 [File System]/(4400:4402): fin atender_asignacion_de_bloques_por_creacion_de_proceso
+[INFO] 14:02:45:696 [File System]/(4400:4402): Se recibio algo de MEMORIA
+[INFO] 14:02:45:696 [File System]/(4400:4402): entro a PETICION_ASIGNACION_BLOQUE_SWAP_FM
+[INFO] 14:02:45:696 [File System]/(4400:4402): recibo buffer
+[WARNING] 14:02:45:696 [File System]/(4400:4402): inicio atender_asignacion_de_bloques_por_creacion_de_proceso
+[WARNING] 14:02:45:696 [File System]/(4400:4402): pre lista de bloques
+[WARNING] 14:02:45:696 [File System]/(4400:4402): inicio swap_obtener_n_cantidad_de_bloques: 1
+[WARNING] 14:02:51:715 [File System]/(4400:4402): fin swap_obtener_n_cantidad_de_bloques
+[WARNING] 14:02:51:715 [File System]/(4400:4402): post lista de bloques
+[WARNING] 14:02:51:715 [File System]/(4400:4402): inicio enviar_lista_bloques_a_memoria
+[INFO] 14:02:51:715 [File System]/(4400:4402): >>>>>nro_B:4
+[INFO] 14:02:51:715 [File System]/(4400:4402): >>>>>nro_B:5
+[INFO] 14:02:51:715 [File System]/(4400:4402): >>>>>nro_B:6
+[INFO] 14:02:51:715 [File System]/(4400:4402): >>>>>nro_B:7
+[WARNING] 14:02:51:715 [File System]/(4400:4402): >>>>>ENVIADO a M:4
+[WARNING] 14:02:51:716 [File System]/(4400:4402): fin enviar_lista_bloques_a_memoria
+[WARNING] 14:02:51:716 [File System]/(4400:4402): fin atender_asignacion_de_bloques_por_creacion_de_proceso
+[INFO] 14:02:52:738 [File System]/(4400:4402): Se recibio algo de MEMORIA
+[WARNING] 14:02:52:738 [File System]/(4400:4402): inicio atender_pedido_de_lectura_de_pag_swap
+[WARNING] 14:02:52:738 [File System]/(4400:4402): SWAP_PAGEFAULT: <PID:1> <Nro_PAG:0> <POS_SWAP:0>
+[WARNING] 14:02:52:738 [File System]/(4400:4402): inicio obtener_bloque
+[WARNING] 14:02:54:262 [File System]/(4400:4402): fin obtener_bloque
+[WARNING] 14:02:54:262 [File System]/(4400:4402): inicio enviar_bloque_pagina_a_memoria
+[WARNING] 14:02:54:262 [File System]/(4400:4402): fin enviar_bloque_pagina_a_memoria
+[WARNING] 14:02:54:262 [File System]/(4400:4402): fin atender_pedido_de_lectura_de_pag_swap
+[INFO] 14:02:54:262 [File System]/(4400:4402): Se recibio algo de MEMORIA
+[INFO] 14:02:54:262 [File System]/(4400:4402): entro a PETICION_ASIGNACION_BLOQUE_SWAP_FM
+[INFO] 14:02:54:262 [File System]/(4400:4402): recibo buffer
+[WARNING] 14:02:54:262 [File System]/(4400:4402): inicio atender_asignacion_de_bloques_por_creacion_de_proceso
+[WARNING] 14:02:54:262 [File System]/(4400:4402): pre lista de bloques
+[WARNING] 14:02:54:262 [File System]/(4400:4402): inicio swap_obtener_n_cantidad_de_bloques: 1
+[WARNING] 14:03:00:334 [File System]/(4400:4402): fin swap_obtener_n_cantidad_de_bloques
+[WARNING] 14:03:00:334 [File System]/(4400:4402): post lista de bloques
+[WARNING] 14:03:00:334 [File System]/(4400:4402): inicio enviar_lista_bloques_a_memoria
+[INFO] 14:03:00:334 [File System]/(4400:4402): >>>>>nro_B:8
+[INFO] 14:03:00:334 [File System]/(4400:4402): >>>>>nro_B:9
+[INFO] 14:03:00:334 [File System]/(4400:4402): >>>>>nro_B:10
+[INFO] 14:03:00:334 [File System]/(4400:4402): >>>>>nro_B:11
+[WARNING] 14:03:00:334 [File System]/(4400:4402): >>>>>ENVIADO a M:4
+[WARNING] 14:03:00:334 [File System]/(4400:4402): fin enviar_lista_bloques_a_memoria
+[WARNING] 14:03:00:334 [File System]/(4400:4402): fin atender_asignacion_de_bloques_por_creacion_de_proceso
+[INFO] 14:03:01:338 [File System]/(4400:4402): Se recibio algo de MEMORIA
+[WARNING] 14:03:01:338 [File System]/(4400:4402): inicio atender_pedido_de_lectura_de_pag_swap
+[WARNING] 14:03:01:338 [File System]/(4400:4402): SWAP_PAGEFAULT: <PID:2> <Nro_PAG:0> <POS_SWAP:4>
+[WARNING] 14:03:01:338 [File System]/(4400:4402): inicio obtener_bloque
+[WARNING] 14:03:02:842 [File System]/(4400:4402): fin obtener_bloque
+[WARNING] 14:03:02:842 [File System]/(4400:4402): inicio enviar_bloque_pagina_a_memoria
+[WARNING] 14:03:02:842 [File System]/(4400:4402): fin enviar_bloque_pagina_a_memoria
+[WARNING] 14:03:02:842 [File System]/(4400:4402): fin atender_pedido_de_lectura_de_pag_swap
+[INFO] 14:03:02:842 [File System]/(4400:4402): Se recibio algo de MEMORIA
+[INFO] 14:03:02:842 [File System]/(4400:4402): entro a PETICION_ASIGNACION_BLOQUE_SWAP_FM
+[INFO] 14:03:02:842 [File System]/(4400:4402): recibo buffer
+[WARNING] 14:03:02:842 [File System]/(4400:4402): inicio atender_asignacion_de_bloques_por_creacion_de_proceso
+[WARNING] 14:03:02:842 [File System]/(4400:4402): pre lista de bloques
+[WARNING] 14:03:02:842 [File System]/(4400:4402): inicio swap_obtener_n_cantidad_de_bloques: 1
+[WARNING] 14:03:08:849 [File System]/(4400:4402): fin swap_obtener_n_cantidad_de_bloques
+[WARNING] 14:03:08:849 [File System]/(4400:4402): post lista de bloques
+[WARNING] 14:03:08:849 [File System]/(4400:4402): inicio enviar_lista_bloques_a_memoria
+[INFO] 14:03:08:849 [File System]/(4400:4402): >>>>>nro_B:12
+[INFO] 14:03:08:849 [File System]/(4400:4402): >>>>>nro_B:13
+[INFO] 14:03:08:849 [File System]/(4400:4402): >>>>>nro_B:14
+[INFO] 14:03:08:849 [File System]/(4400:4402): >>>>>nro_B:15
+[WARNING] 14:03:08:849 [File System]/(4400:4402): >>>>>ENVIADO a M:4
+[WARNING] 14:03:08:849 [File System]/(4400:4402): fin enviar_lista_bloques_a_memoria
+[WARNING] 14:03:08:849 [File System]/(4400:4402): fin atender_asignacion_de_bloques_por_creacion_de_proceso
+[INFO] 14:03:09:852 [File System]/(4400:4402): Se recibio algo de MEMORIA
+[WARNING] 14:03:09:852 [File System]/(4400:4402): inicio atender_pedido_de_lectura_de_pag_swap
+[WARNING] 14:03:09:852 [File System]/(4400:4402): SWAP_PAGEFAULT: <PID:1> <Nro_PAG:1> <POS_SWAP:1>
+[WARNING] 14:03:09:852 [File System]/(4400:4402): inicio obtener_bloque
+[WARNING] 14:03:11:353 [File System]/(4400:4402): fin obtener_bloque
+[WARNING] 14:03:11:353 [File System]/(4400:4402): inicio enviar_bloque_pagina_a_memoria
+[WARNING] 14:03:11:353 [File System]/(4400:4402): fin enviar_bloque_pagina_a_memoria
+[WARNING] 14:03:11:353 [File System]/(4400:4402): fin atender_pedido_de_lectura_de_pag_swap
+[INFO] 14:03:15:359 [File System]/(4400:4402): Se recibio algo de MEMORIA
+[WARNING] 14:03:15:359 [File System]/(4400:4402): inicio atender_pedido_de_lectura_de_pag_swap
+[WARNING] 14:03:15:359 [File System]/(4400:4402): SWAP_PAGEFAULT: <PID:3> <Nro_PAG:0> <POS_SWAP:8>
+[WARNING] 14:03:15:359 [File System]/(4400:4402): inicio obtener_bloque
+[WARNING] 14:03:16:860 [File System]/(4400:4402): fin obtener_bloque
+[WARNING] 14:03:16:860 [File System]/(4400:4402): inicio enviar_bloque_pagina_a_memoria
+[WARNING] 14:03:16:860 [File System]/(4400:4402): fin enviar_bloque_pagina_a_memoria
+[WARNING] 14:03:16:860 [File System]/(4400:4402): fin atender_pedido_de_lectura_de_pag_swap
+[INFO] 14:03:20:873 [File System]/(4400:4402): Se recibio algo de MEMORIA
+[WARNING] 14:03:20:873 [File System]/(4400:4402): inicio atender_pedido_de_lectura_de_pag_swap
+[WARNING] 14:03:20:873 [File System]/(4400:4402): SWAP_PAGEFAULT: <PID:2> <Nro_PAG:1> <POS_SWAP:5>
+[WARNING] 14:03:20:873 [File System]/(4400:4402): inicio obtener_bloque
+[WARNING] 14:03:22:373 [File System]/(4400:4402): fin obtener_bloque
+[WARNING] 14:03:22:373 [File System]/(4400:4402): inicio enviar_bloque_pagina_a_memoria
+[WARNING] 14:03:22:374 [File System]/(4400:4402): fin enviar_bloque_pagina_a_memoria
+[WARNING] 14:03:22:374 [File System]/(4400:4402): fin atender_pedido_de_lectura_de_pag_swap
+[INFO] 14:03:26:382 [File System]/(4400:4402): Se recibio algo de MEMORIA
+[WARNING] 14:03:26:382 [File System]/(4400:4402): inicio atender_pedido_de_lectura_de_pag_swap
+[WARNING] 14:03:26:382 [File System]/(4400:4402): SWAP_PAGEFAULT: <PID:4> <Nro_PAG:0> <POS_SWAP:12>
+[WARNING] 14:03:26:382 [File System]/(4400:4402): inicio obtener_bloque
+[WARNING] 14:03:27:883 [File System]/(4400:4402): fin obtener_bloque
+[WARNING] 14:03:27:883 [File System]/(4400:4402): inicio enviar_bloque_pagina_a_memoria
+[WARNING] 14:03:27:883 [File System]/(4400:4402): fin enviar_bloque_pagina_a_memoria
+[WARNING] 14:03:27:883 [File System]/(4400:4402): fin atender_pedido_de_lectura_de_pag_swap
+[INFO] 14:03:31:888 [File System]/(4400:4402): Se recibio algo de MEMORIA
+[WARNING] 14:03:31:888 [File System]/(4400:4402): inicio atender_pedido_de_lectura_de_pag_swap
+[WARNING] 14:03:31:888 [File System]/(4400:4402): SWAP_PAGEFAULT: <PID:1> <Nro_PAG:2> <POS_SWAP:2>
+[WARNING] 14:03:31:888 [File System]/(4400:4402): inicio obtener_bloque
+[WARNING] 14:03:33:389 [File System]/(4400:4402): fin obtener_bloque
+[WARNING] 14:03:33:390 [File System]/(4400:4402): inicio enviar_bloque_pagina_a_memoria
+[WARNING] 14:03:33:390 [File System]/(4400:4402): fin enviar_bloque_pagina_a_memoria
+[WARNING] 14:03:33:390 [File System]/(4400:4402): fin atender_pedido_de_lectura_de_pag_swap
+[INFO] 14:04:37:227 [File System]/(4400:4402): Se recibio algo de MEMORIA
+[WARNING] 14:04:37:227 [File System]/(4400:4402): inicio atender_peticion_de_libarar_bloques_swap
+[WARNING] 14:04:37:227 [File System]/(4400:4402): CANT_BLOQUES_A_LIBERAR: 4
+[WARNING] 14:04:37:227 [File System]/(4400:4402): inicio setear_bloque_de_swap_como_libre
+[WARNING] 14:04:37:227 [File System]/(4400:4402): NUM BLOQUE SWAP: 0
+[WARNING] 14:04:38:733 [File System]/(4400:4402): fin setear_bloque_de_swap_como_libre
+[WARNING] 14:04:38:733 [File System]/(4400:4402): inicio setear_bloque_de_swap_como_libre
+[WARNING] 14:04:38:733 [File System]/(4400:4402): NUM BLOQUE SWAP: 1
+[WARNING] 14:04:40:238 [File System]/(4400:4402): fin setear_bloque_de_swap_como_libre
+[WARNING] 14:04:40:238 [File System]/(4400:4402): inicio setear_bloque_de_swap_como_libre
+[WARNING] 14:04:40:238 [File System]/(4400:4402): NUM BLOQUE SWAP: 2
+[WARNING] 14:04:41:739 [File System]/(4400:4402): fin setear_bloque_de_swap_como_libre
+[WARNING] 14:04:41:739 [File System]/(4400:4402): inicio setear_bloque_de_swap_como_libre
+[WARNING] 14:04:41:739 [File System]/(4400:4402): NUM BLOQUE SWAP: 3
+[WARNING] 14:04:43:239 [File System]/(4400:4402): fin setear_bloque_de_swap_como_libre
+[WARNING] 14:04:43:239 [File System]/(4400:4402): fin atender_peticion_de_libarar_bloques_swap
+[INFO] 14:04:43:239 [File System]/(4400:4402): Se recibio algo de MEMORIA
+[WARNING] 14:04:43:239 [File System]/(4400:4402): inicio atender_peticion_de_libarar_bloques_swap
+[WARNING] 14:04:43:239 [File System]/(4400:4402): CANT_BLOQUES_A_LIBERAR: 4
+[WARNING] 14:04:43:239 [File System]/(4400:4402): inicio setear_bloque_de_swap_como_libre
+[WARNING] 14:04:43:239 [File System]/(4400:4402): NUM BLOQUE SWAP: 4
+[WARNING] 14:04:44:759 [File System]/(4400:4402): fin setear_bloque_de_swap_como_libre
+[WARNING] 14:04:44:759 [File System]/(4400:4402): inicio setear_bloque_de_swap_como_libre
+[WARNING] 14:04:44:759 [File System]/(4400:4402): NUM BLOQUE SWAP: 5
+[WARNING] 14:04:46:260 [File System]/(4400:4402): fin setear_bloque_de_swap_como_libre
+[WARNING] 14:04:46:260 [File System]/(4400:4402): inicio setear_bloque_de_swap_como_libre
+[WARNING] 14:04:46:260 [File System]/(4400:4402): NUM BLOQUE SWAP: 6
+[WARNING] 14:04:47:761 [File System]/(4400:4402): fin setear_bloque_de_swap_como_libre
+[WARNING] 14:04:47:761 [File System]/(4400:4402): inicio setear_bloque_de_swap_como_libre
+[WARNING] 14:04:47:761 [File System]/(4400:4402): NUM BLOQUE SWAP: 7
+[WARNING] 14:04:49:264 [File System]/(4400:4402): fin setear_bloque_de_swap_como_libre
+[WARNING] 14:04:49:264 [File System]/(4400:4402): fin atender_peticion_de_libarar_bloques_swap
+[INFO] 14:04:49:264 [File System]/(4400:4402): Se recibio algo de MEMORIA
+[WARNING] 14:04:49:264 [File System]/(4400:4402): inicio atender_peticion_de_libarar_bloques_swap
+[WARNING] 14:04:49:264 [File System]/(4400:4402): CANT_BLOQUES_A_LIBERAR: 4
+[WARNING] 14:04:49:264 [File System]/(4400:4402): inicio setear_bloque_de_swap_como_libre
+[WARNING] 14:04:49:264 [File System]/(4400:4402): NUM BLOQUE SWAP: 8
+[WARNING] 14:04:50:766 [File System]/(4400:4402): fin setear_bloque_de_swap_como_libre
+[WARNING] 14:04:50:766 [File System]/(4400:4402): inicio setear_bloque_de_swap_como_libre
+[WARNING] 14:04:50:766 [File System]/(4400:4402): NUM BLOQUE SWAP: 9
+[WARNING] 14:04:52:267 [File System]/(4400:4402): fin setear_bloque_de_swap_como_libre
+[WARNING] 14:04:52:267 [File System]/(4400:4402): inicio setear_bloque_de_swap_como_libre
+[WARNING] 14:04:52:267 [File System]/(4400:4402): NUM BLOQUE SWAP: 10
+[WARNING] 14:04:53:768 [File System]/(4400:4402): fin setear_bloque_de_swap_como_libre
+[WARNING] 14:04:53:768 [File System]/(4400:4402): inicio setear_bloque_de_swap_como_libre
+[WARNING] 14:04:53:768 [File System]/(4400:4402): NUM BLOQUE SWAP: 11
+[WARNING] 14:04:55:268 [File System]/(4400:4402): fin setear_bloque_de_swap_como_libre
+[WARNING] 14:04:55:268 [File System]/(4400:4402): fin atender_peticion_de_libarar_bloques_swap
+[INFO] 14:04:55:268 [File System]/(4400:4402): Se recibio algo de MEMORIA
+[WARNING] 14:04:55:268 [File System]/(4400:4402): inicio atender_peticion_de_libarar_bloques_swap
+[WARNING] 14:04:55:268 [File System]/(4400:4402): CANT_BLOQUES_A_LIBERAR: 4
+[WARNING] 14:04:55:269 [File System]/(4400:4402): inicio setear_bloque_de_swap_como_libre
+[WARNING] 14:04:55:269 [File System]/(4400:4402): NUM BLOQUE SWAP: 12
+[WARNING] 14:04:56:770 [File System]/(4400:4402): fin setear_bloque_de_swap_como_libre
+[WARNING] 14:04:56:770 [File System]/(4400:4402): inicio setear_bloque_de_swap_como_libre
+[WARNING] 14:04:56:770 [File System]/(4400:4402): NUM BLOQUE SWAP: 13
+[WARNING] 14:04:58:271 [File System]/(4400:4402): fin setear_bloque_de_swap_como_libre
+[WARNING] 14:04:58:271 [File System]/(4400:4402): inicio setear_bloque_de_swap_como_libre
+[WARNING] 14:04:58:271 [File System]/(4400:4402): NUM BLOQUE SWAP: 14
+[WARNING] 14:04:59:771 [File System]/(4400:4402): fin setear_bloque_de_swap_como_libre
+[WARNING] 14:04:59:772 [File System]/(4400:4402): inicio setear_bloque_de_swap_como_libre
+[WARNING] 14:04:59:772 [File System]/(4400:4402): NUM BLOQUE SWAP: 15
+[WARNING] 14:05:01:273 [File System]/(4400:4402): fin setear_bloque_de_swap_como_libre
+[WARNING] 14:05:01:273 [File System]/(4400:4402): fin atender_peticion_de_libarar_bloques_swap
+[INFO] 14:05:50:672 [File System]/(4400:4402): Se recibio algo de MEMORIA
+[INFO] 14:05:50:672 [File System]/(4400:4402): entro a PETICION_ASIGNACION_BLOQUE_SWAP_FM
+[INFO] 14:05:50:672 [File System]/(4400:4402): recibo buffer
+[WARNING] 14:05:50:672 [File System]/(4400:4402): inicio atender_asignacion_de_bloques_por_creacion_de_proceso
+[WARNING] 14:05:50:672 [File System]/(4400:4402): pre lista de bloques
+[WARNING] 14:05:50:672 [File System]/(4400:4402): inicio swap_obtener_n_cantidad_de_bloques: 0
+[WARNING] 14:05:56:702 [File System]/(4400:4402): fin swap_obtener_n_cantidad_de_bloques
+[WARNING] 14:05:56:702 [File System]/(4400:4402): post lista de bloques
+[WARNING] 14:05:56:702 [File System]/(4400:4402): inicio enviar_lista_bloques_a_memoria
+[INFO] 14:05:56:702 [File System]/(4400:4402): >>>>>nro_B:0
+[INFO] 14:05:56:702 [File System]/(4400:4402): >>>>>nro_B:1
+[INFO] 14:05:56:702 [File System]/(4400:4402): >>>>>nro_B:2
+[INFO] 14:05:56:702 [File System]/(4400:4402): >>>>>nro_B:3
+[WARNING] 14:05:56:702 [File System]/(4400:4402): >>>>>ENVIADO a M:4
+[WARNING] 14:05:56:702 [File System]/(4400:4402): fin enviar_lista_bloques_a_memoria
+[WARNING] 14:05:56:703 [File System]/(4400:4402): fin atender_asignacion_de_bloques_por_creacion_de_proceso
+[INFO] 14:05:57:705 [File System]/(4400:4402): Se recibio algo de MEMORIA
+[INFO] 14:05:57:705 [File System]/(4400:4402): entro a PETICION_ASIGNACION_BLOQUE_SWAP_FM
+[INFO] 14:05:57:706 [File System]/(4400:4402): recibo buffer
+[WARNING] 14:05:57:706 [File System]/(4400:4402): inicio atender_asignacion_de_bloques_por_creacion_de_proceso
+[WARNING] 14:05:57:706 [File System]/(4400:4402): pre lista de bloques
+[WARNING] 14:05:57:706 [File System]/(4400:4402): inicio swap_obtener_n_cantidad_de_bloques: 1
+[WARNING] 14:06:03:720 [File System]/(4400:4402): fin swap_obtener_n_cantidad_de_bloques
+[WARNING] 14:06:03:721 [File System]/(4400:4402): post lista de bloques
+[WARNING] 14:06:03:721 [File System]/(4400:4402): inicio enviar_lista_bloques_a_memoria
+[INFO] 14:06:03:721 [File System]/(4400:4402): >>>>>nro_B:4
+[INFO] 14:06:03:721 [File System]/(4400:4402): >>>>>nro_B:5
+[INFO] 14:06:03:721 [File System]/(4400:4402): >>>>>nro_B:6
+[INFO] 14:06:03:721 [File System]/(4400:4402): >>>>>nro_B:7
+[WARNING] 14:06:03:721 [File System]/(4400:4402): >>>>>ENVIADO a M:4
+[WARNING] 14:06:03:721 [File System]/(4400:4402): fin enviar_lista_bloques_a_memoria
+[WARNING] 14:06:03:721 [File System]/(4400:4402): fin atender_asignacion_de_bloques_por_creacion_de_proceso
+[INFO] 14:06:04:731 [File System]/(4400:4402): Se recibio algo de MEMORIA
+[WARNING] 14:06:04:731 [File System]/(4400:4402): inicio atender_pedido_de_lectura_de_pag_swap
+[WARNING] 14:06:04:731 [File System]/(4400:4402): SWAP_PAGEFAULT: <PID:5> <Nro_PAG:0> <POS_SWAP:0>
+[WARNING] 14:06:04:731 [File System]/(4400:4402): inicio obtener_bloque
+[WARNING] 14:06:06:232 [File System]/(4400:4402): fin obtener_bloque
+[WARNING] 14:06:06:232 [File System]/(4400:4402): inicio enviar_bloque_pagina_a_memoria
+[WARNING] 14:06:06:232 [File System]/(4400:4402): fin enviar_bloque_pagina_a_memoria
+[WARNING] 14:06:06:232 [File System]/(4400:4402): fin atender_pedido_de_lectura_de_pag_swap
+[INFO] 14:06:06:232 [File System]/(4400:4402): Se recibio algo de MEMORIA
+[INFO] 14:06:06:232 [File System]/(4400:4402): entro a PETICION_ASIGNACION_BLOQUE_SWAP_FM
+[INFO] 14:06:06:232 [File System]/(4400:4402): recibo buffer
+[WARNING] 14:06:06:232 [File System]/(4400:4402): inicio atender_asignacion_de_bloques_por_creacion_de_proceso
+[WARNING] 14:06:06:232 [File System]/(4400:4402): pre lista de bloques
+[WARNING] 14:06:06:232 [File System]/(4400:4402): inicio swap_obtener_n_cantidad_de_bloques: 1
+[WARNING] 14:06:12:253 [File System]/(4400:4402): fin swap_obtener_n_cantidad_de_bloques
+[WARNING] 14:06:12:253 [File System]/(4400:4402): post lista de bloques
+[WARNING] 14:06:12:253 [File System]/(4400:4402): inicio enviar_lista_bloques_a_memoria
+[INFO] 14:06:12:253 [File System]/(4400:4402): >>>>>nro_B:8
+[INFO] 14:06:12:253 [File System]/(4400:4402): >>>>>nro_B:9
+[INFO] 14:06:12:253 [File System]/(4400:4402): >>>>>nro_B:10
+[INFO] 14:06:12:253 [File System]/(4400:4402): >>>>>nro_B:11
+[WARNING] 14:06:12:253 [File System]/(4400:4402): >>>>>ENVIADO a M:4
+[WARNING] 14:06:12:253 [File System]/(4400:4402): fin enviar_lista_bloques_a_memoria
+[WARNING] 14:06:12:253 [File System]/(4400:4402): fin atender_asignacion_de_bloques_por_creacion_de_proceso
+[INFO] 14:06:13:262 [File System]/(4400:4402): Se recibio algo de MEMORIA
+[WARNING] 14:06:13:262 [File System]/(4400:4402): inicio atender_pedido_de_lectura_de_pag_swap
+[WARNING] 14:06:13:262 [File System]/(4400:4402): SWAP_PAGEFAULT: <PID:6> <Nro_PAG:0> <POS_SWAP:4>
+[WARNING] 14:06:13:262 [File System]/(4400:4402): inicio obtener_bloque
+[WARNING] 14:06:14:762 [File System]/(4400:4402): fin obtener_bloque
+[WARNING] 14:06:14:762 [File System]/(4400:4402): inicio enviar_bloque_pagina_a_memoria
+[WARNING] 14:06:14:762 [File System]/(4400:4402): fin enviar_bloque_pagina_a_memoria
+[WARNING] 14:06:14:762 [File System]/(4400:4402): fin atender_pedido_de_lectura_de_pag_swap
+[INFO] 14:06:14:762 [File System]/(4400:4402): Se recibio algo de MEMORIA
+[INFO] 14:06:14:762 [File System]/(4400:4402): entro a PETICION_ASIGNACION_BLOQUE_SWAP_FM
+[INFO] 14:06:14:762 [File System]/(4400:4402): recibo buffer
+[WARNING] 14:06:14:762 [File System]/(4400:4402): inicio atender_asignacion_de_bloques_por_creacion_de_proceso
+[WARNING] 14:06:14:762 [File System]/(4400:4402): pre lista de bloques
+[WARNING] 14:06:14:762 [File System]/(4400:4402): inicio swap_obtener_n_cantidad_de_bloques: 1
+[WARNING] 14:06:20:766 [File System]/(4400:4402): fin swap_obtener_n_cantidad_de_bloques
+[WARNING] 14:06:20:766 [File System]/(4400:4402): post lista de bloques
+[WARNING] 14:06:20:766 [File System]/(4400:4402): inicio enviar_lista_bloques_a_memoria
+[INFO] 14:06:20:766 [File System]/(4400:4402): >>>>>nro_B:12
+[INFO] 14:06:20:766 [File System]/(4400:4402): >>>>>nro_B:13
+[INFO] 14:06:20:766 [File System]/(4400:4402): >>>>>nro_B:14
+[INFO] 14:06:20:766 [File System]/(4400:4402): >>>>>nro_B:15
+[WARNING] 14:06:20:766 [File System]/(4400:4402): >>>>>ENVIADO a M:4
+[WARNING] 14:06:20:766 [File System]/(4400:4402): fin enviar_lista_bloques_a_memoria
+[WARNING] 14:06:20:766 [File System]/(4400:4402): fin atender_asignacion_de_bloques_por_creacion_de_proceso
+[INFO] 14:06:21:768 [File System]/(4400:4402): Se recibio algo de MEMORIA
+[WARNING] 14:06:21:768 [File System]/(4400:4402): inicio atender_pedido_de_lectura_de_pag_swap
+[WARNING] 14:06:21:768 [File System]/(4400:4402): SWAP_PAGEFAULT: <PID:5> <Nro_PAG:1> <POS_SWAP:1>
+[WARNING] 14:06:21:768 [File System]/(4400:4402): inicio obtener_bloque
+[WARNING] 14:06:23:269 [File System]/(4400:4402): fin obtener_bloque
+[WARNING] 14:06:23:269 [File System]/(4400:4402): inicio enviar_bloque_pagina_a_memoria
+[WARNING] 14:06:23:269 [File System]/(4400:4402): fin enviar_bloque_pagina_a_memoria
+[WARNING] 14:06:23:269 [File System]/(4400:4402): fin atender_pedido_de_lectura_de_pag_swap
+[INFO] 14:06:27:272 [File System]/(4400:4402): Se recibio algo de MEMORIA
+[WARNING] 14:06:27:272 [File System]/(4400:4402): inicio atender_pedido_de_lectura_de_pag_swap
+[WARNING] 14:06:27:272 [File System]/(4400:4402): SWAP_PAGEFAULT: <PID:7> <Nro_PAG:0> <POS_SWAP:8>
+[WARNING] 14:06:27:272 [File System]/(4400:4402): inicio obtener_bloque
+[WARNING] 14:06:28:773 [File System]/(4400:4402): fin obtener_bloque
+[WARNING] 14:06:28:773 [File System]/(4400:4402): inicio enviar_bloque_pagina_a_memoria
+[WARNING] 14:06:28:773 [File System]/(4400:4402): fin enviar_bloque_pagina_a_memoria
+[WARNING] 14:06:28:773 [File System]/(4400:4402): fin atender_pedido_de_lectura_de_pag_swap
+[INFO] 14:06:32:775 [File System]/(4400:4402): Se recibio algo de MEMORIA
+[WARNING] 14:06:32:775 [File System]/(4400:4402): inicio atender_pedido_de_lectura_de_pag_swap
+[WARNING] 14:06:32:775 [File System]/(4400:4402): SWAP_PAGEFAULT: <PID:6> <Nro_PAG:1> <POS_SWAP:5>
+[WARNING] 14:06:32:775 [File System]/(4400:4402): inicio obtener_bloque
+[WARNING] 14:06:34:276 [File System]/(4400:4402): fin obtener_bloque
+[WARNING] 14:06:34:276 [File System]/(4400:4402): inicio enviar_bloque_pagina_a_memoria
+[WARNING] 14:06:34:276 [File System]/(4400:4402): fin enviar_bloque_pagina_a_memoria
+[WARNING] 14:06:34:276 [File System]/(4400:4402): fin atender_pedido_de_lectura_de_pag_swap
+[INFO] 14:06:38:279 [File System]/(4400:4402): Se recibio algo de MEMORIA
+[WARNING] 14:06:38:279 [File System]/(4400:4402): inicio atender_pedido_de_lectura_de_pag_swap
+[WARNING] 14:06:38:279 [File System]/(4400:4402): SWAP_PAGEFAULT: <PID:8> <Nro_PAG:0> <POS_SWAP:12>
+[WARNING] 14:06:38:279 [File System]/(4400:4402): inicio obtener_bloque
+[WARNING] 14:06:39:780 [File System]/(4400:4402): fin obtener_bloque
+[WARNING] 14:06:39:780 [File System]/(4400:4402): inicio enviar_bloque_pagina_a_memoria
+[WARNING] 14:06:39:780 [File System]/(4400:4402): fin enviar_bloque_pagina_a_memoria
+[WARNING] 14:06:39:780 [File System]/(4400:4402): fin atender_pedido_de_lectura_de_pag_swap
+[INFO] 14:06:48:237 [File System]/(4400:4402): Se recibio algo de MEMORIA
+[WARNING] 14:06:48:237 [File System]/(4400:4402): inicio atender_pedido_de_lectura_de_pag_swap
+[WARNING] 14:06:48:237 [File System]/(4400:4402): SWAP_PAGEFAULT: <PID:5> <Nro_PAG:2> <POS_SWAP:2>
+[WARNING] 14:06:48:237 [File System]/(4400:4402): inicio obtener_bloque
+[WARNING] 14:06:49:737 [File System]/(4400:4402): fin obtener_bloque
+[WARNING] 14:06:49:737 [File System]/(4400:4402): inicio enviar_bloque_pagina_a_memoria
+[WARNING] 14:06:49:737 [File System]/(4400:4402): fin enviar_bloque_pagina_a_memoria
+[WARNING] 14:06:49:737 [File System]/(4400:4402): fin atender_pedido_de_lectura_de_pag_swap
+[INFO] 14:06:53:742 [File System]/(4400:4402): Se recibio algo de MEMORIA
+[WARNING] 14:06:53:742 [File System]/(4400:4402): inicio atender_pedido_de_lectura_de_pag_swap
+[WARNING] 14:06:53:742 [File System]/(4400:4402): SWAP_PAGEFAULT: <PID:7> <Nro_PAG:1> <POS_SWAP:9>
+[WARNING] 14:06:53:742 [File System]/(4400:4402): inicio obtener_bloque
+[WARNING] 14:06:55:252 [File System]/(4400:4402): fin obtener_bloque
+[WARNING] 14:06:55:252 [File System]/(4400:4402): inicio enviar_bloque_pagina_a_memoria
+[WARNING] 14:06:55:252 [File System]/(4400:4402): fin enviar_bloque_pagina_a_memoria
+[WARNING] 14:06:55:252 [File System]/(4400:4402): fin atender_pedido_de_lectura_de_pag_swap
+[INFO] 14:06:59:259 [File System]/(4400:4402): Se recibio algo de MEMORIA
+[WARNING] 14:06:59:259 [File System]/(4400:4402): inicio atender_pedido_de_lectura_de_pag_swap
+[WARNING] 14:06:59:259 [File System]/(4400:4402): SWAP_PAGEFAULT: <PID:6> <Nro_PAG:1> <POS_SWAP:5>
+[WARNING] 14:06:59:259 [File System]/(4400:4402): inicio obtener_bloque
+[WARNING] 14:07:00:762 [File System]/(4400:4402): fin obtener_bloque
+[WARNING] 14:07:00:762 [File System]/(4400:4402): inicio enviar_bloque_pagina_a_memoria
+[WARNING] 14:07:00:762 [File System]/(4400:4402): fin enviar_bloque_pagina_a_memoria
+[WARNING] 14:07:00:762 [File System]/(4400:4402): fin atender_pedido_de_lectura_de_pag_swap
+[INFO] 14:07:13:371 [File System]/(4400:4402): Se recibio algo de MEMORIA
+[WARNING] 14:07:13:372 [File System]/(4400:4402): inicio atender_pedido_de_lectura_de_pag_swap
+[WARNING] 14:07:13:372 [File System]/(4400:4402): SWAP_PAGEFAULT: <PID:8> <Nro_PAG:0> <POS_SWAP:12>
+[WARNING] 14:07:13:372 [File System]/(4400:4402): inicio obtener_bloque
+[WARNING] 14:07:14:873 [File System]/(4400:4402): fin obtener_bloque
+[WARNING] 14:07:14:873 [File System]/(4400:4402): inicio enviar_bloque_pagina_a_memoria
+[WARNING] 14:07:14:874 [File System]/(4400:4402): fin enviar_bloque_pagina_a_memoria
+[WARNING] 14:07:14:874 [File System]/(4400:4402): fin atender_pedido_de_lectura_de_pag_swap
+[INFO] 14:07:50:691 [File System]/(4400:4402): Se recibio algo de MEMORIA
+[WARNING] 14:07:50:691 [File System]/(4400:4402): inicio atender_pedido_de_lectura_de_pag_swap
+[WARNING] 14:07:50:691 [File System]/(4400:4402): SWAP_PAGEFAULT: <PID:5> <Nro_PAG:3> <POS_SWAP:3>
+[WARNING] 14:07:50:691 [File System]/(4400:4402): inicio obtener_bloque
+[WARNING] 14:07:52:196 [File System]/(4400:4402): fin obtener_bloque
+[WARNING] 14:07:52:196 [File System]/(4400:4402): inicio enviar_bloque_pagina_a_memoria
+[WARNING] 14:07:52:196 [File System]/(4400:4402): fin enviar_bloque_pagina_a_memoria
+[WARNING] 14:07:52:196 [File System]/(4400:4402): fin atender_pedido_de_lectura_de_pag_swap
+[INFO] 14:07:57:212 [File System]/(4400:4402): Se recibio algo de MEMORIA
+[WARNING] 14:07:57:212 [File System]/(4400:4402): inicio atender_pedido_de_lectura_de_pag_swap
+[WARNING] 14:07:57:212 [File System]/(4400:4402): SWAP_PAGEFAULT: <PID:7> <Nro_PAG:1> <POS_SWAP:9>
+[WARNING] 14:07:57:212 [File System]/(4400:4402): inicio obtener_bloque
+[WARNING] 14:07:58:713 [File System]/(4400:4402): fin obtener_bloque
+[WARNING] 14:07:58:713 [File System]/(4400:4402): inicio enviar_bloque_pagina_a_memoria
+[WARNING] 14:07:58:713 [File System]/(4400:4402): fin enviar_bloque_pagina_a_memoria
+[WARNING] 14:07:58:713 [File System]/(4400:4402): fin atender_pedido_de_lectura_de_pag_swap
+[INFO] 14:08:03:724 [File System]/(4400:4402): Se recibio algo de MEMORIA
+[WARNING] 14:08:03:724 [File System]/(4400:4402): inicio atender_pedido_de_lectura_de_pag_swap
+[WARNING] 14:08:03:724 [File System]/(4400:4402): SWAP_PAGEFAULT: <PID:6> <Nro_PAG:1> <POS_SWAP:5>
+[WARNING] 14:08:03:724 [File System]/(4400:4402): inicio obtener_bloque
+[WARNING] 14:08:05:226 [File System]/(4400:4402): fin obtener_bloque
+[WARNING] 14:08:05:226 [File System]/(4400:4402): inicio enviar_bloque_pagina_a_memoria
+[WARNING] 14:08:05:226 [File System]/(4400:4402): fin enviar_bloque_pagina_a_memoria
+[WARNING] 14:08:05:226 [File System]/(4400:4402): fin atender_pedido_de_lectura_de_pag_swap
+[INFO] 14:08:10:241 [File System]/(4400:4402): Se recibio algo de MEMORIA
+[WARNING] 14:08:10:241 [File System]/(4400:4402): inicio atender_pedido_de_lectura_de_pag_swap
+[WARNING] 14:08:10:241 [File System]/(4400:4402): SWAP_PAGEFAULT: <PID:8> <Nro_PAG:0> <POS_SWAP:12>
+[WARNING] 14:08:10:241 [File System]/(4400:4402): inicio obtener_bloque
+[WARNING] 14:08:11:751 [File System]/(4400:4402): fin obtener_bloque
+[WARNING] 14:08:11:751 [File System]/(4400:4402): inicio enviar_bloque_pagina_a_memoria
+[WARNING] 14:08:11:751 [File System]/(4400:4402): fin enviar_bloque_pagina_a_memoria
+[WARNING] 14:08:11:751 [File System]/(4400:4402): fin atender_pedido_de_lectura_de_pag_swap
+[INFO] 14:11:53:977 [File System]/(4400:4402): Se recibio algo de MEMORIA
+[WARNING] 14:11:53:977 [File System]/(4400:4402): inicio atender_peticion_de_libarar_bloques_swap
+[WARNING] 14:11:53:977 [File System]/(4400:4402): CANT_BLOQUES_A_LIBERAR: 4
+[WARNING] 14:11:53:977 [File System]/(4400:4402): inicio setear_bloque_de_swap_como_libre
+[WARNING] 14:11:53:977 [File System]/(4400:4402): NUM BLOQUE SWAP: 4
+[WARNING] 14:11:55:478 [File System]/(4400:4402): fin setear_bloque_de_swap_como_libre
+[WARNING] 14:11:55:478 [File System]/(4400:4402): inicio setear_bloque_de_swap_como_libre
+[WARNING] 14:11:55:478 [File System]/(4400:4402): NUM BLOQUE SWAP: 5
+[WARNING] 14:11:56:979 [File System]/(4400:4402): fin setear_bloque_de_swap_como_libre
+[WARNING] 14:11:56:979 [File System]/(4400:4402): inicio setear_bloque_de_swap_como_libre
+[WARNING] 14:11:56:979 [File System]/(4400:4402): NUM BLOQUE SWAP: 6
+[WARNING] 14:11:58:487 [File System]/(4400:4402): fin setear_bloque_de_swap_como_libre
+[WARNING] 14:11:58:487 [File System]/(4400:4402): inicio setear_bloque_de_swap_como_libre
+[WARNING] 14:11:58:487 [File System]/(4400:4402): NUM BLOQUE SWAP: 7
+[WARNING] 14:11:59:992 [File System]/(4400:4402): fin setear_bloque_de_swap_como_libre
+[WARNING] 14:11:59:992 [File System]/(4400:4402): fin atender_peticion_de_libarar_bloques_swap
+[INFO] 14:11:59:992 [File System]/(4400:4402): Se recibio algo de MEMORIA
+[WARNING] 14:11:59:992 [File System]/(4400:4402): inicio atender_peticion_de_libarar_bloques_swap
+[WARNING] 14:11:59:992 [File System]/(4400:4402): CANT_BLOQUES_A_LIBERAR: 4
+[WARNING] 14:11:59:992 [File System]/(4400:4402): inicio setear_bloque_de_swap_como_libre
+[WARNING] 14:11:59:992 [File System]/(4400:4402): NUM BLOQUE SWAP: 0
+[WARNING] 14:12:01:492 [File System]/(4400:4402): fin setear_bloque_de_swap_como_libre
+[WARNING] 14:12:01:493 [File System]/(4400:4402): inicio setear_bloque_de_swap_como_libre
+[WARNING] 14:12:01:493 [File System]/(4400:4402): NUM BLOQUE SWAP: 1
+[WARNING] 14:12:02:993 [File System]/(4400:4402): fin setear_bloque_de_swap_como_libre
+[WARNING] 14:12:02:993 [File System]/(4400:4402): inicio setear_bloque_de_swap_como_libre
+[WARNING] 14:12:02:993 [File System]/(4400:4402): NUM BLOQUE SWAP: 2
+[WARNING] 14:12:04:494 [File System]/(4400:4402): fin setear_bloque_de_swap_como_libre
+[WARNING] 14:12:04:494 [File System]/(4400:4402): inicio setear_bloque_de_swap_como_libre
+[WARNING] 14:12:04:494 [File System]/(4400:4402): NUM BLOQUE SWAP: 3
+[WARNING] 14:12:05:994 [File System]/(4400:4402): fin setear_bloque_de_swap_como_libre
+[WARNING] 14:12:05:994 [File System]/(4400:4402): fin atender_peticion_de_libarar_bloques_swap
+[INFO] 14:12:05:995 [File System]/(4400:4402): Se recibio algo de MEMORIA
+[WARNING] 14:12:05:995 [File System]/(4400:4402): inicio atender_peticion_de_libarar_bloques_swap
+[WARNING] 14:12:05:995 [File System]/(4400:4402): CANT_BLOQUES_A_LIBERAR: 4
+[WARNING] 14:12:05:995 [File System]/(4400:4402): inicio setear_bloque_de_swap_como_libre
+[WARNING] 14:12:05:995 [File System]/(4400:4402): NUM BLOQUE SWAP: 8
+[WARNING] 14:12:07:495 [File System]/(4400:4402): fin setear_bloque_de_swap_como_libre
+[WARNING] 14:12:07:495 [File System]/(4400:4402): inicio setear_bloque_de_swap_como_libre
+[WARNING] 14:12:07:495 [File System]/(4400:4402): NUM BLOQUE SWAP: 9
+[WARNING] 14:12:09:015 [File System]/(4400:4402): fin setear_bloque_de_swap_como_libre
+[WARNING] 14:12:09:015 [File System]/(4400:4402): inicio setear_bloque_de_swap_como_libre
+[WARNING] 14:12:09:015 [File System]/(4400:4402): NUM BLOQUE SWAP: 10
+[WARNING] 14:12:10:520 [File System]/(4400:4402): fin setear_bloque_de_swap_como_libre
+[WARNING] 14:12:10:520 [File System]/(4400:4402): inicio setear_bloque_de_swap_como_libre
+[WARNING] 14:12:10:520 [File System]/(4400:4402): NUM BLOQUE SWAP: 11
+[WARNING] 14:12:12:020 [File System]/(4400:4402): fin setear_bloque_de_swap_como_libre
+[WARNING] 14:12:12:020 [File System]/(4400:4402): fin atender_peticion_de_libarar_bloques_swap
+[INFO] 14:12:12:020 [File System]/(4400:4402): Se recibio algo de MEMORIA
+[WARNING] 14:12:12:020 [File System]/(4400:4402): inicio atender_peticion_de_libarar_bloques_swap
+[WARNING] 14:12:12:020 [File System]/(4400:4402): CANT_BLOQUES_A_LIBERAR: 4
+[WARNING] 14:12:12:020 [File System]/(4400:4402): inicio setear_bloque_de_swap_como_libre
+[WARNING] 14:12:12:020 [File System]/(4400:4402): NUM BLOQUE SWAP: 12
+[WARNING] 14:12:13:520 [File System]/(4400:4402): fin setear_bloque_de_swap_como_libre
+[WARNING] 14:12:13:520 [File System]/(4400:4402): inicio setear_bloque_de_swap_como_libre
+[WARNING] 14:12:13:520 [File System]/(4400:4402): NUM BLOQUE SWAP: 13
+[WARNING] 14:12:15:021 [File System]/(4400:4402): fin setear_bloque_de_swap_como_libre
+[WARNING] 14:12:15:022 [File System]/(4400:4402): inicio setear_bloque_de_swap_como_libre
+[WARNING] 14:12:15:022 [File System]/(4400:4402): NUM BLOQUE SWAP: 14
+[WARNING] 14:12:16:522 [File System]/(4400:4402): fin setear_bloque_de_swap_como_libre
+[WARNING] 14:12:16:522 [File System]/(4400:4402): inicio setear_bloque_de_swap_como_libre
+[WARNING] 14:12:16:522 [File System]/(4400:4402): NUM BLOQUE SWAP: 15
+[WARNING] 14:12:18:026 [File System]/(4400:4402): fin setear_bloque_de_swap_como_libre
+[WARNING] 14:12:18:026 [File System]/(4400:4402): fin atender_peticion_de_libarar_bloques_swap
+[ERROR] 14:12:39:139 [File System]/(4400:4403): [DESCONEXION]: KERNEL
+[WARNING] 14:15:29:684 [File System]/(4563:4563): inicio crear_fat
+[WARNING] 14:15:29:684 [File System]/(4563:4563): fin crear_fat(mmapeo la tabla fat joya)
+[WARNING] 14:15:29:684 [File System]/(4563:4563): inicio inicializar_archivo_de_bloques
+[WARNING] 14:15:29:684 [File System]/(4563:4563): fin inicializar_archivo_de_bloques(mmapeo de bloques correcto)
+[INFO] 14:15:29:684 [File System]/(4563:4564): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 14:15:31:364 [File System]/(4563:4565): Cliente conectado a Kernel
+[INFO] 14:15:31:365 [File System]/(4563:4565): ::::::::::: KERNEL CONECTADO ::::::::::::
+[INFO] 14:15:36:434 [File System]/(4563:4564): Se recibio algo de MEMORIA
+[INFO] 14:15:36:434 [File System]/(4563:4564): entro a PETICION_ASIGNACION_BLOQUE_SWAP_FM
+[INFO] 14:15:36:434 [File System]/(4563:4564): recibo buffer
+[WARNING] 14:15:36:434 [File System]/(4563:4564): inicio atender_asignacion_de_bloques_por_creacion_de_proceso
+[WARNING] 14:15:36:434 [File System]/(4563:4564): pre lista de bloques
+[WARNING] 14:15:36:434 [File System]/(4563:4564): inicio swap_obtener_n_cantidad_de_bloques: 0
+[WARNING] 14:15:42:458 [File System]/(4563:4564): fin swap_obtener_n_cantidad_de_bloques
+[WARNING] 14:15:42:458 [File System]/(4563:4564): post lista de bloques
+[WARNING] 14:15:42:458 [File System]/(4563:4564): inicio enviar_lista_bloques_a_memoria
+[INFO] 14:15:42:458 [File System]/(4563:4564): >>>>>nro_B:0
+[INFO] 14:15:42:458 [File System]/(4563:4564): >>>>>nro_B:1
+[INFO] 14:15:42:458 [File System]/(4563:4564): >>>>>nro_B:2
+[INFO] 14:15:42:458 [File System]/(4563:4564): >>>>>nro_B:3
+[WARNING] 14:15:42:458 [File System]/(4563:4564): >>>>>ENVIADO a M:4
+[WARNING] 14:15:42:458 [File System]/(4563:4564): fin enviar_lista_bloques_a_memoria
+[WARNING] 14:15:42:458 [File System]/(4563:4564): fin atender_asignacion_de_bloques_por_creacion_de_proceso
+[INFO] 14:15:42:961 [File System]/(4563:4564): Se recibio algo de MEMORIA
+[ERROR] 14:15:42:962 [File System]/(4563:4564): [DESCONEXION]: KERNEL
+[WARNING] 14:16:14:409 [File System]/(4633:4633): inicio crear_fat
+[WARNING] 14:16:14:409 [File System]/(4633:4633): fin crear_fat(mmapeo la tabla fat joya)
+[WARNING] 14:16:14:409 [File System]/(4633:4633): inicio inicializar_archivo_de_bloques
+[WARNING] 14:16:14:409 [File System]/(4633:4633): fin inicializar_archivo_de_bloques(mmapeo de bloques correcto)
+[INFO] 14:16:14:409 [File System]/(4633:4635): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 14:16:17:612 [File System]/(4633:4636): Cliente conectado a Kernel
+[INFO] 14:16:17:614 [File System]/(4633:4636): ::::::::::: KERNEL CONECTADO ::::::::::::
+[INFO] 14:16:33:610 [File System]/(4633:4635): Se recibio algo de MEMORIA
+[INFO] 14:16:33:610 [File System]/(4633:4635): entro a PETICION_ASIGNACION_BLOQUE_SWAP_FM
+[INFO] 14:16:33:610 [File System]/(4633:4635): recibo buffer
+[WARNING] 14:16:33:610 [File System]/(4633:4635): inicio atender_asignacion_de_bloques_por_creacion_de_proceso
+[WARNING] 14:16:33:610 [File System]/(4633:4635): pre lista de bloques
+[WARNING] 14:16:33:610 [File System]/(4633:4635): inicio swap_obtener_n_cantidad_de_bloques: 0
+[WARNING] 14:16:39:619 [File System]/(4633:4635): fin swap_obtener_n_cantidad_de_bloques
+[WARNING] 14:16:39:619 [File System]/(4633:4635): post lista de bloques
+[WARNING] 14:16:39:619 [File System]/(4633:4635): inicio enviar_lista_bloques_a_memoria
+[INFO] 14:16:39:619 [File System]/(4633:4635): >>>>>nro_B:0
+[INFO] 14:16:39:619 [File System]/(4633:4635): >>>>>nro_B:1
+[INFO] 14:16:39:620 [File System]/(4633:4635): >>>>>nro_B:2
+[INFO] 14:16:39:620 [File System]/(4633:4635): >>>>>nro_B:3
+[WARNING] 14:16:39:620 [File System]/(4633:4635): >>>>>ENVIADO a M:4
+[WARNING] 14:16:39:620 [File System]/(4633:4635): fin enviar_lista_bloques_a_memoria
+[WARNING] 14:16:39:620 [File System]/(4633:4635): fin atender_asignacion_de_bloques_por_creacion_de_proceso
+[WARNING] 14:16:42:648 [File System]/(4633:4653): inicio atender_f_open_de_kernel
+[WARNING] 14:20:36:919 [File System]/(5204:5204): inicio crear_fat
+[WARNING] 14:20:36:919 [File System]/(5204:5204): fin crear_fat(mmapeo la tabla fat joya)
+[WARNING] 14:20:36:919 [File System]/(5204:5204): inicio inicializar_archivo_de_bloques
+[WARNING] 14:20:36:919 [File System]/(5204:5204): fin inicializar_archivo_de_bloques(mmapeo de bloques correcto)
+[INFO] 14:20:36:920 [File System]/(5204:5206): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 14:20:55:366 [File System]/(5204:5207): Cliente conectado a Kernel
+[INFO] 14:20:55:366 [File System]/(5204:5207): ::::::::::: KERNEL CONECTADO ::::::::::::
+[INFO] 14:21:01:009 [File System]/(5204:5206): Se recibio algo de MEMORIA
+[INFO] 14:21:01:009 [File System]/(5204:5206): entro a PETICION_ASIGNACION_BLOQUE_SWAP_FM
+[INFO] 14:21:01:009 [File System]/(5204:5206): recibo buffer
+[WARNING] 14:21:01:009 [File System]/(5204:5206): inicio atender_asignacion_de_bloques_por_creacion_de_proceso
+[WARNING] 14:21:01:009 [File System]/(5204:5206): pre lista de bloques
+[WARNING] 14:21:01:009 [File System]/(5204:5206): inicio swap_obtener_n_cantidad_de_bloques: 0
+[WARNING] 14:21:07:012 [File System]/(5204:5206): fin swap_obtener_n_cantidad_de_bloques
+[WARNING] 14:21:07:012 [File System]/(5204:5206): post lista de bloques
+[WARNING] 14:21:07:012 [File System]/(5204:5206): inicio enviar_lista_bloques_a_memoria
+[INFO] 14:21:07:012 [File System]/(5204:5206): >>>>>nro_B:0
+[INFO] 14:21:07:012 [File System]/(5204:5206): >>>>>nro_B:1
+[INFO] 14:21:07:012 [File System]/(5204:5206): >>>>>nro_B:2
+[INFO] 14:21:07:012 [File System]/(5204:5206): >>>>>nro_B:3
+[WARNING] 14:21:07:012 [File System]/(5204:5206): >>>>>ENVIADO a M:4
+[WARNING] 14:21:07:012 [File System]/(5204:5206): fin enviar_lista_bloques_a_memoria
+[WARNING] 14:21:07:012 [File System]/(5204:5206): fin atender_asignacion_de_bloques_por_creacion_de_proceso
+[WARNING] 14:21:10:018 [File System]/(5204:5245): inicio atender_f_open_de_kernel
+[WARNING] 14:21:10:018 [File System]/(5204:5245): inicio obtener_fcb
+[WARNING] 14:24:29:881 [File System]/(5583:5583): inicio crear_fat
+[WARNING] 14:24:29:881 [File System]/(5583:5583): fin crear_fat(mmapeo la tabla fat joya)
+[WARNING] 14:24:29:882 [File System]/(5583:5583): inicio inicializar_archivo_de_bloques
+[WARNING] 14:24:29:882 [File System]/(5583:5583): fin inicializar_archivo_de_bloques(mmapeo de bloques correcto)
+[INFO] 14:24:29:882 [File System]/(5583:5585): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 14:24:31:513 [File System]/(5583:5586): Cliente conectado a Kernel
+[INFO] 14:24:31:514 [File System]/(5583:5586): ::::::::::: KERNEL CONECTADO ::::::::::::
+[INFO] 14:24:35:315 [File System]/(5583:5585): Se recibio algo de MEMORIA
+[INFO] 14:24:35:315 [File System]/(5583:5585): entro a PETICION_ASIGNACION_BLOQUE_SWAP_FM
+[INFO] 14:24:35:315 [File System]/(5583:5585): recibo buffer
+[WARNING] 14:24:35:315 [File System]/(5583:5585): inicio atender_asignacion_de_bloques_por_creacion_de_proceso
+[WARNING] 14:24:35:315 [File System]/(5583:5585): pre lista de bloques
+[WARNING] 14:24:35:315 [File System]/(5583:5585): inicio swap_obtener_n_cantidad_de_bloques: 0
+[WARNING] 14:24:41:322 [File System]/(5583:5585): fin swap_obtener_n_cantidad_de_bloques
+[WARNING] 14:24:41:322 [File System]/(5583:5585): post lista de bloques
+[WARNING] 14:24:41:322 [File System]/(5583:5585): inicio enviar_lista_bloques_a_memoria
+[INFO] 14:24:41:322 [File System]/(5583:5585): >>>>>nro_B:0
+[INFO] 14:24:41:322 [File System]/(5583:5585): >>>>>nro_B:1
+[INFO] 14:24:41:322 [File System]/(5583:5585): >>>>>nro_B:2
+[INFO] 14:24:41:322 [File System]/(5583:5585): >>>>>nro_B:3
+[WARNING] 14:24:41:322 [File System]/(5583:5585): >>>>>ENVIADO a M:4
+[WARNING] 14:24:41:323 [File System]/(5583:5585): fin enviar_lista_bloques_a_memoria
+[WARNING] 14:24:41:323 [File System]/(5583:5585): fin atender_asignacion_de_bloques_por_creacion_de_proceso
+[WARNING] 14:24:44:329 [File System]/(5583:5603): inicio atender_f_open_de_kernel
+[WARNING] 14:24:44:329 [File System]/(5583:5603): inicio obtener_fcb
+[WARNING] 14:25:54:276 [File System]/(5639:5639): inicio crear_fat
+[WARNING] 14:25:54:276 [File System]/(5639:5639): fin crear_fat(mmapeo la tabla fat joya)
+[WARNING] 14:25:54:276 [File System]/(5639:5639): inicio inicializar_archivo_de_bloques
+[WARNING] 14:25:54:276 [File System]/(5639:5639): fin inicializar_archivo_de_bloques(mmapeo de bloques correcto)
+[INFO] 14:25:54:277 [File System]/(5639:5640): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 14:25:56:913 [File System]/(5639:5641): Cliente conectado a Kernel
+[INFO] 14:25:56:914 [File System]/(5639:5641): ::::::::::: KERNEL CONECTADO ::::::::::::
+[INFO] 14:26:00:635 [File System]/(5639:5640): Se recibio algo de MEMORIA
+[INFO] 14:26:00:635 [File System]/(5639:5640): entro a PETICION_ASIGNACION_BLOQUE_SWAP_FM
+[INFO] 14:26:00:635 [File System]/(5639:5640): recibo buffer
+[WARNING] 14:26:00:635 [File System]/(5639:5640): inicio atender_asignacion_de_bloques_por_creacion_de_proceso
+[WARNING] 14:26:00:635 [File System]/(5639:5640): pre lista de bloques
+[WARNING] 14:26:00:635 [File System]/(5639:5640): inicio swap_obtener_n_cantidad_de_bloques: 0
+[WARNING] 14:26:06:670 [File System]/(5639:5640): fin swap_obtener_n_cantidad_de_bloques
+[WARNING] 14:26:06:670 [File System]/(5639:5640): post lista de bloques
+[WARNING] 14:26:06:670 [File System]/(5639:5640): inicio enviar_lista_bloques_a_memoria
+[INFO] 14:26:06:670 [File System]/(5639:5640): >>>>>nro_B:0
+[INFO] 14:26:06:670 [File System]/(5639:5640): >>>>>nro_B:1
+[INFO] 14:26:06:670 [File System]/(5639:5640): >>>>>nro_B:2
+[INFO] 14:26:06:670 [File System]/(5639:5640): >>>>>nro_B:3
+[WARNING] 14:26:06:670 [File System]/(5639:5640): >>>>>ENVIADO a M:4
+[WARNING] 14:26:06:670 [File System]/(5639:5640): fin enviar_lista_bloques_a_memoria
+[WARNING] 14:26:06:670 [File System]/(5639:5640): fin atender_asignacion_de_bloques_por_creacion_de_proceso
+[WARNING] 14:26:09:680 [File System]/(5639:5659): inicio atender_f_open_de_kernel
+[WARNING] 14:26:09:680 [File System]/(5639:5659): inicio obtener_fcb
+[WARNING] 14:27:15:006 [File System]/(5839:5839): inicio crear_fat
+[WARNING] 14:27:15:006 [File System]/(5839:5839): fin crear_fat(mmapeo la tabla fat joya)
+[WARNING] 14:27:15:006 [File System]/(5839:5839): inicio inicializar_archivo_de_bloques
+[WARNING] 14:27:15:006 [File System]/(5839:5839): fin inicializar_archivo_de_bloques(mmapeo de bloques correcto)
+[INFO] 14:27:15:006 [File System]/(5839:5840): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 14:27:16:819 [File System]/(5839:5842): Cliente conectado a Kernel
+[INFO] 14:27:16:820 [File System]/(5839:5842): ::::::::::: KERNEL CONECTADO ::::::::::::
+[INFO] 14:27:20:532 [File System]/(5839:5840): Se recibio algo de MEMORIA
+[INFO] 14:27:20:532 [File System]/(5839:5840): entro a PETICION_ASIGNACION_BLOQUE_SWAP_FM
+[INFO] 14:27:20:532 [File System]/(5839:5840): recibo buffer
+[WARNING] 14:27:20:532 [File System]/(5839:5840): inicio atender_asignacion_de_bloques_por_creacion_de_proceso
+[WARNING] 14:27:20:532 [File System]/(5839:5840): pre lista de bloques
+[WARNING] 14:27:20:532 [File System]/(5839:5840): inicio swap_obtener_n_cantidad_de_bloques: 0
+[WARNING] 14:27:26:560 [File System]/(5839:5840): fin swap_obtener_n_cantidad_de_bloques
+[WARNING] 14:27:26:560 [File System]/(5839:5840): post lista de bloques
+[WARNING] 14:27:26:560 [File System]/(5839:5840): inicio enviar_lista_bloques_a_memoria
+[INFO] 14:27:26:560 [File System]/(5839:5840): >>>>>nro_B:0
+[INFO] 14:27:26:560 [File System]/(5839:5840): >>>>>nro_B:1
+[INFO] 14:27:26:560 [File System]/(5839:5840): >>>>>nro_B:2
+[INFO] 14:27:26:560 [File System]/(5839:5840): >>>>>nro_B:3
+[WARNING] 14:27:26:560 [File System]/(5839:5840): >>>>>ENVIADO a M:4
+[WARNING] 14:27:26:561 [File System]/(5839:5840): fin enviar_lista_bloques_a_memoria
+[WARNING] 14:27:26:561 [File System]/(5839:5840): fin atender_asignacion_de_bloques_por_creacion_de_proceso
+[WARNING] 14:27:29:581 [File System]/(5839:5859): inicio atender_f_open_de_kernel
+[WARNING] 14:27:29:581 [File System]/(5839:5859): inicio obtener_fcb
+[WARNING] 14:30:29:880 [File System]/(5975:5975): inicio crear_fat
+[WARNING] 14:30:29:880 [File System]/(5975:5975): fin crear_fat(mmapeo la tabla fat joya)
+[WARNING] 14:30:29:880 [File System]/(5975:5975): inicio inicializar_archivo_de_bloques
+[WARNING] 14:30:29:880 [File System]/(5975:5975): fin inicializar_archivo_de_bloques(mmapeo de bloques correcto)
+[INFO] 14:30:29:881 [File System]/(5975:5976): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 14:30:32:073 [File System]/(5975:5976): Se recibio algo de MEMORIA
+[ERROR] 14:30:32:073 [File System]/(5975:5976): [DESCONEXION]: KERNEL
+[WARNING] 14:30:34:674 [File System]/(5980:5980): inicio crear_fat
+[WARNING] 14:30:34:674 [File System]/(5980:5980): fin crear_fat(mmapeo la tabla fat joya)
+[WARNING] 14:30:34:674 [File System]/(5980:5980): inicio inicializar_archivo_de_bloques
+[WARNING] 14:30:34:674 [File System]/(5980:5980): fin inicializar_archivo_de_bloques(mmapeo de bloques correcto)
+[INFO] 14:30:34:675 [File System]/(5980:5982): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 14:30:37:084 [File System]/(5980:5983): Cliente conectado a Kernel
+[INFO] 14:30:37:085 [File System]/(5980:5983): ::::::::::: KERNEL CONECTADO ::::::::::::
+[INFO] 14:30:41:477 [File System]/(5980:5982): Se recibio algo de MEMORIA
+[INFO] 14:30:41:477 [File System]/(5980:5982): entro a PETICION_ASIGNACION_BLOQUE_SWAP_FM
+[INFO] 14:30:41:477 [File System]/(5980:5982): recibo buffer
+[WARNING] 14:30:41:477 [File System]/(5980:5982): inicio atender_asignacion_de_bloques_por_creacion_de_proceso
+[WARNING] 14:30:41:477 [File System]/(5980:5982): pre lista de bloques
+[WARNING] 14:30:41:477 [File System]/(5980:5982): inicio swap_obtener_n_cantidad_de_bloques: 0
+[WARNING] 14:30:47:479 [File System]/(5980:5982): fin swap_obtener_n_cantidad_de_bloques
+[WARNING] 14:30:47:479 [File System]/(5980:5982): post lista de bloques
+[WARNING] 14:30:47:479 [File System]/(5980:5982): inicio enviar_lista_bloques_a_memoria
+[INFO] 14:30:47:479 [File System]/(5980:5982): >>>>>nro_B:0
+[INFO] 14:30:47:479 [File System]/(5980:5982): >>>>>nro_B:1
+[INFO] 14:30:47:479 [File System]/(5980:5982): >>>>>nro_B:2
+[INFO] 14:30:47:479 [File System]/(5980:5982): >>>>>nro_B:3
+[WARNING] 14:30:47:479 [File System]/(5980:5982): >>>>>ENVIADO a M:4
+[WARNING] 14:30:47:480 [File System]/(5980:5982): fin enviar_lista_bloques_a_memoria
+[WARNING] 14:30:47:480 [File System]/(5980:5982): fin atender_asignacion_de_bloques_por_creacion_de_proceso
+[WARNING] 14:30:50:500 [File System]/(5980:6000): inicio atender_f_open_de_kernel
+[WARNING] 14:30:50:500 [File System]/(5980:6000): inicio obtener_fcb
+[WARNING] 14:32:26:907 [File System]/(6244:6244): inicio crear_fat
+[WARNING] 14:32:26:907 [File System]/(6244:6244): fin crear_fat(mmapeo la tabla fat joya)
+[WARNING] 14:32:26:907 [File System]/(6244:6244): inicio inicializar_archivo_de_bloques
+[WARNING] 14:32:26:907 [File System]/(6244:6244): fin inicializar_archivo_de_bloques(mmapeo de bloques correcto)
+[INFO] 14:32:26:908 [File System]/(6244:6245): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 14:32:38:983 [File System]/(6244:6246): Cliente conectado a Kernel
+[INFO] 14:32:38:984 [File System]/(6244:6246): ::::::::::: KERNEL CONECTADO ::::::::::::
+[INFO] 14:32:42:522 [File System]/(6244:6245): Se recibio algo de MEMORIA
+[INFO] 14:32:42:522 [File System]/(6244:6245): entro a PETICION_ASIGNACION_BLOQUE_SWAP_FM
+[INFO] 14:32:42:522 [File System]/(6244:6245): recibo buffer
+[WARNING] 14:32:42:522 [File System]/(6244:6245): inicio atender_asignacion_de_bloques_por_creacion_de_proceso
+[WARNING] 14:32:42:522 [File System]/(6244:6245): pre lista de bloques
+[WARNING] 14:32:42:522 [File System]/(6244:6245): inicio swap_obtener_n_cantidad_de_bloques: 0
+[WARNING] 14:32:48:531 [File System]/(6244:6245): fin swap_obtener_n_cantidad_de_bloques
+[WARNING] 14:32:48:531 [File System]/(6244:6245): post lista de bloques
+[WARNING] 14:32:48:531 [File System]/(6244:6245): inicio enviar_lista_bloques_a_memoria
+[INFO] 14:32:48:531 [File System]/(6244:6245): >>>>>nro_B:0
+[INFO] 14:32:48:531 [File System]/(6244:6245): >>>>>nro_B:1
+[INFO] 14:32:48:531 [File System]/(6244:6245): >>>>>nro_B:2
+[INFO] 14:32:48:531 [File System]/(6244:6245): >>>>>nro_B:3
+[WARNING] 14:32:48:532 [File System]/(6244:6245): >>>>>ENVIADO a M:4
+[WARNING] 14:32:48:532 [File System]/(6244:6245): fin enviar_lista_bloques_a_memoria
+[WARNING] 14:32:48:532 [File System]/(6244:6245): fin atender_asignacion_de_bloques_por_creacion_de_proceso
+[WARNING] 14:32:51:555 [File System]/(6244:6274): inicio atender_f_open_de_kernel
+[WARNING] 14:32:51:555 [File System]/(6244:6274): inicio obtener_fcb
+[WARNING] 14:32:51:555 [File System]/(6244:6274): tamaño lista 0
+[WARNING] 14:32:51:555 [File System]/(6244:6274): fin obtener_fcb
+[INFO] 14:32:51:555 [File System]/(6244:6274): El archivo solicitado no existe
+[WARNING] 14:32:51:555 [File System]/(6244:6274): inicio enviar_rta_f_open_a_kernel
+[WARNING] 14:32:51:556 [File System]/(6244:6274): fin enviar_rta_f_open_a_kernel
+[WARNING] 14:32:51:556 [File System]/(6244:6274): fin atender_f_open_de_kernel
+[WARNING] 14:32:51:556 [File System]/(6244:6275): inicio atender_f_open_de_kernel
+[WARNING] 14:32:51:556 [File System]/(6244:6275): inicio obtener_fcb
+[WARNING] 14:32:51:556 [File System]/(6244:6275): tamaño lista 0
+[WARNING] 14:32:51:556 [File System]/(6244:6275): fin obtener_fcb
+[WARNING] 14:32:51:556 [File System]/(6244:6275): inicio crear_fcb
+[WARNING] 14:32:51:556 [File System]/(6244:6275): fin crear_fcb
+[WARNING] 14:32:51:556 [File System]/(6244:6275): inicio enviar_rta_f_open_a_kernel
+[WARNING] 14:32:51:556 [File System]/(6244:6275): fin enviar_rta_f_open_a_kernel
+[WARNING] 14:32:51:557 [File System]/(6244:6275): fin atender_f_open_de_kernel
+[WARNING] 14:32:52:058 [File System]/(6244:6276): inicio atender_f_truncate_de_kernel
+[WARNING] 14:32:52:058 [File System]/(6244:6276): inicio obtener_fcb
+[WARNING] 14:32:52:058 [File System]/(6244:6276): tamaño lista 1
+[WARNING] 14:32:52:058 [File System]/(6244:6276): ENtre al if
+[WARNING] 14:32:52:058 [File System]/(6244:6276): VOy a obtener FCB
+[WARNING] 14:32:52:058 [File System]/(6244:6276): AAA
+[WARNING] 14:32:52:058 [File System]/(6244:6276): fin obtener_fcb
+[WARNING] 14:32:52:058 [File System]/(6244:6276): inicio setear_size_de_una_fcb
+[WARNING] 14:32:52:058 [File System]/(6244:6276): fin setear_size_de_una_fcb
+[WARNING] 14:32:52:059 [File System]/(6244:6276): inicio asignar_mas_nro_de_bloque_a_la_secuencia_de_tabla_fat
+[WARNING] 14:32:52:059 [File System]/(6244:6276): inicio obtener_secuencia_de_bloques_de_archivo
+[WARNING] 14:32:52:562 [File System]/(6244:6276): fin obtener_secuencia_de_bloques_de_archivo
+[WARNING] 14:32:52:562 [File System]/(6244:6276): inicio obtener_n_cantidad_de_bloques_libres_de_tabla_fat
+[WARNING] 14:32:55:085 [File System]/(6244:6276): fin obtener_n_cantidad_de_bloques_libres_de_tabla_fat
+[WARNING] 14:32:57:088 [File System]/(6244:6276): fin asignar_mas_nro_de_bloque_a_la_secuencia_de_tabla_fat
+[WARNING] 14:32:57:088 [File System]/(6244:6276): inicio enviar_rta_f_truncate_a_kernel
+[WARNING] 14:32:57:088 [File System]/(6244:6276): fin enviar_rta_f_truncate_a_kernel
+[WARNING] 14:32:57:088 [File System]/(6244:6276): fin atender_f_truncate_de_kernel
+[ERROR] 14:41:36:205 [File System]/(6244:6246): [DESCONEXION]: KERNEL
+[WARNING] 14:41:47:495 [File System]/(7030:7030): inicio crear_fat
+[WARNING] 14:41:47:495 [File System]/(7030:7030): fin crear_fat(mmapeo la tabla fat joya)
+[WARNING] 14:41:47:495 [File System]/(7030:7030): inicio inicializar_archivo_de_bloques
+[WARNING] 14:41:47:495 [File System]/(7030:7030): fin inicializar_archivo_de_bloques(mmapeo de bloques correcto)
+[INFO] 14:41:47:496 [File System]/(7030:7032): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 14:41:49:450 [File System]/(7030:7033): Cliente conectado a Kernel
+[INFO] 14:41:49:451 [File System]/(7030:7033): ::::::::::: KERNEL CONECTADO ::::::::::::
+[INFO] 14:41:54:948 [File System]/(7030:7032): Se recibio algo de MEMORIA
+[INFO] 14:41:54:948 [File System]/(7030:7032): entro a PETICION_ASIGNACION_BLOQUE_SWAP_FM
+[INFO] 14:41:54:948 [File System]/(7030:7032): recibo buffer
+[WARNING] 14:41:54:948 [File System]/(7030:7032): inicio atender_asignacion_de_bloques_por_creacion_de_proceso
+[WARNING] 14:41:54:948 [File System]/(7030:7032): pre lista de bloques
+[WARNING] 14:41:54:948 [File System]/(7030:7032): inicio swap_obtener_n_cantidad_de_bloques: 0
+[WARNING] 14:42:00:963 [File System]/(7030:7032): fin swap_obtener_n_cantidad_de_bloques
+[WARNING] 14:42:00:963 [File System]/(7030:7032): post lista de bloques
+[WARNING] 14:42:00:963 [File System]/(7030:7032): inicio enviar_lista_bloques_a_memoria
+[INFO] 14:42:00:963 [File System]/(7030:7032): >>>>>nro_B:0
+[INFO] 14:42:00:963 [File System]/(7030:7032): >>>>>nro_B:1
+[INFO] 14:42:00:964 [File System]/(7030:7032): >>>>>nro_B:2
+[INFO] 14:42:00:964 [File System]/(7030:7032): >>>>>nro_B:3
+[WARNING] 14:42:00:964 [File System]/(7030:7032): >>>>>ENVIADO a M:4
+[WARNING] 14:42:00:964 [File System]/(7030:7032): fin enviar_lista_bloques_a_memoria
+[WARNING] 14:42:00:964 [File System]/(7030:7032): fin atender_asignacion_de_bloques_por_creacion_de_proceso
+[WARNING] 14:42:03:995 [File System]/(7030:7045): inicio atender_f_open_de_kernel
+[WARNING] 14:42:03:996 [File System]/(7030:7045): inicio obtener_fcb
+[WARNING] 14:42:03:996 [File System]/(7030:7045): tamaño lista 0
+[WARNING] 14:42:03:996 [File System]/(7030:7045): fin obtener_fcb
+[INFO] 14:42:03:996 [File System]/(7030:7045): El archivo solicitado no existe
+[WARNING] 14:42:03:996 [File System]/(7030:7045): inicio enviar_rta_f_open_a_kernel
+[WARNING] 14:42:03:996 [File System]/(7030:7045): fin enviar_rta_f_open_a_kernel
+[WARNING] 14:42:03:996 [File System]/(7030:7045): fin atender_f_open_de_kernel
+[WARNING] 14:42:03:996 [File System]/(7030:7046): inicio atender_f_open_de_kernel
+[WARNING] 14:42:03:996 [File System]/(7030:7046): inicio obtener_fcb
+[WARNING] 14:42:03:996 [File System]/(7030:7046): tamaño lista 0
+[WARNING] 14:42:03:996 [File System]/(7030:7046): fin obtener_fcb
+[WARNING] 14:42:03:996 [File System]/(7030:7046): inicio crear_fcb
+[WARNING] 14:42:03:996 [File System]/(7030:7046): fin crear_fcb
+[WARNING] 14:42:03:997 [File System]/(7030:7046): inicio enviar_rta_f_open_a_kernel
+[WARNING] 14:42:03:997 [File System]/(7030:7046): fin enviar_rta_f_open_a_kernel
+[WARNING] 14:42:03:997 [File System]/(7030:7046): fin atender_f_open_de_kernel
+[WARNING] 14:42:04:499 [File System]/(7030:7047): inicio atender_f_truncate_de_kernel
+[WARNING] 14:42:04:499 [File System]/(7030:7047): inicio obtener_fcb
+[WARNING] 14:42:04:499 [File System]/(7030:7047): tamaño lista 1
+[WARNING] 14:42:04:499 [File System]/(7030:7047): ENtre al if
+[WARNING] 14:42:04:499 [File System]/(7030:7047): VOy a obtener FCB
+[WARNING] 14:42:04:499 [File System]/(7030:7047): AAA
+[WARNING] 14:42:04:499 [File System]/(7030:7047): fin obtener_fcb
+[WARNING] 14:42:04:499 [File System]/(7030:7047): inicio setear_size_de_una_fcb
+[WARNING] 14:42:04:499 [File System]/(7030:7047): fin setear_size_de_una_fcb
+[WARNING] 14:42:04:499 [File System]/(7030:7047): inicio asignar_mas_nro_de_bloque_a_la_secuencia_de_tabla_fat
+[WARNING] 14:42:04:499 [File System]/(7030:7047): inicio obtener_secuencia_de_bloques_de_archivo
+[WARNING] 14:42:05:002 [File System]/(7030:7047): fin obtener_secuencia_de_bloques_de_archivo
+[WARNING] 14:42:05:002 [File System]/(7030:7047): inicio obtener_n_cantidad_de_bloques_libres_de_tabla_fat
+[WARNING] 14:42:09:554 [File System]/(7030:7047): fin obtener_n_cantidad_de_bloques_libres_de_tabla_fat
+[WARNING] 14:42:11:638 [File System]/(7030:7047): fin asignar_mas_nro_de_bloque_a_la_secuencia_de_tabla_fat
+[WARNING] 14:42:11:638 [File System]/(7030:7047): inicio enviar_rta_f_truncate_a_kernel
+[WARNING] 14:42:11:638 [File System]/(7030:7047): fin enviar_rta_f_truncate_a_kernel
+[WARNING] 14:42:11:639 [File System]/(7030:7047): fin atender_f_truncate_de_kernel
+[INFO] 14:42:13:645 [File System]/(7030:7032): Se recibio algo de MEMORIA
+[WARNING] 14:42:13:645 [File System]/(7030:7032): inicio atender_pedido_de_lectura_de_pag_swap
+[WARNING] 14:42:13:645 [File System]/(7030:7032): SWAP_PAGEFAULT: <PID:1> <Nro_PAG:0> <POS_SWAP:0>
+[WARNING] 14:42:13:645 [File System]/(7030:7032): inicio obtener_bloque
+[WARNING] 14:42:15:146 [File System]/(7030:7032): fin obtener_bloque
+[WARNING] 14:42:15:146 [File System]/(7030:7032): inicio enviar_bloque_pagina_a_memoria
+[WARNING] 14:42:15:146 [File System]/(7030:7032): fin enviar_bloque_pagina_a_memoria
+[WARNING] 14:42:15:147 [File System]/(7030:7032): fin atender_pedido_de_lectura_de_pag_swap
+[ERROR] 14:42:25:804 [File System]/(7030:7033): [DESCONEXION]: KERNEL
+[WARNING] 15:58:38:710 [File System]/(11709:11709): inicio crear_fat
+[WARNING] 15:58:38:710 [File System]/(11709:11709): fin crear_fat(mmapeo la tabla fat joya)
+[WARNING] 15:58:38:710 [File System]/(11709:11709): inicio inicializar_archivo_de_bloques
+[WARNING] 15:58:38:710 [File System]/(11709:11709): fin inicializar_archivo_de_bloques(mmapeo de bloques correcto)
+[INFO] 15:58:38:710 [File System]/(11709:11711): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 15:58:42:174 [File System]/(11709:11712): Cliente conectado a Kernel
+[INFO] 15:58:42:175 [File System]/(11709:11712): ::::::::::: KERNEL CONECTADO ::::::::::::
+[INFO] 15:58:48:824 [File System]/(11709:11711): Se recibio algo de MEMORIA
+[INFO] 15:58:48:824 [File System]/(11709:11711): entro a PETICION_ASIGNACION_BLOQUE_SWAP_FM
+[INFO] 15:58:48:824 [File System]/(11709:11711): recibo buffer
+[WARNING] 15:58:48:824 [File System]/(11709:11711): inicio atender_asignacion_de_bloques_por_creacion_de_proceso
+[WARNING] 15:58:48:825 [File System]/(11709:11711): pre lista de bloques
+[WARNING] 15:58:48:825 [File System]/(11709:11711): inicio swap_obtener_n_cantidad_de_bloques: 0
+[WARNING] 15:58:54:861 [File System]/(11709:11711): fin swap_obtener_n_cantidad_de_bloques
+[WARNING] 15:58:54:861 [File System]/(11709:11711): post lista de bloques
+[WARNING] 15:58:54:861 [File System]/(11709:11711): inicio enviar_lista_bloques_a_memoria
+[INFO] 15:58:54:861 [File System]/(11709:11711): >>>>>nro_B:0
+[INFO] 15:58:54:861 [File System]/(11709:11711): >>>>>nro_B:1
+[INFO] 15:58:54:861 [File System]/(11709:11711): >>>>>nro_B:2
+[INFO] 15:58:54:861 [File System]/(11709:11711): >>>>>nro_B:3
+[WARNING] 15:58:54:861 [File System]/(11709:11711): >>>>>ENVIADO a M:4
+[WARNING] 15:58:54:861 [File System]/(11709:11711): fin enviar_lista_bloques_a_memoria
+[WARNING] 15:58:54:861 [File System]/(11709:11711): fin atender_asignacion_de_bloques_por_creacion_de_proceso
+[WARNING] 15:58:57:874 [File System]/(11709:11729): inicio atender_f_open_de_kernel
+[WARNING] 15:58:57:874 [File System]/(11709:11729): inicio obtener_fcb
+[WARNING] 15:58:57:874 [File System]/(11709:11729): fin obtener_fcb
+[INFO] 15:58:57:874 [File System]/(11709:11729): El archivo solicitado no existe
+[WARNING] 15:58:57:874 [File System]/(11709:11729): inicio enviar_rta_f_open_a_kernel
+[WARNING] 15:58:57:874 [File System]/(11709:11729): fin enviar_rta_f_open_a_kernel
+[WARNING] 15:58:57:874 [File System]/(11709:11729): fin atender_f_open_de_kernel
+[WARNING] 15:58:57:874 [File System]/(11709:11730): inicio atender_f_open_de_kernel
+[WARNING] 15:58:57:874 [File System]/(11709:11730): inicio obtener_fcb
+[WARNING] 15:58:57:874 [File System]/(11709:11730): fin obtener_fcb
+[WARNING] 15:58:57:874 [File System]/(11709:11730): inicio crear_fcb
+[WARNING] 16:01:55:458 [File System]/(11934:11934): inicio crear_fat
+[WARNING] 16:01:55:459 [File System]/(11934:11934): fin crear_fat(mmapeo la tabla fat joya)
+[WARNING] 16:01:55:459 [File System]/(11934:11934): inicio inicializar_archivo_de_bloques
+[WARNING] 16:01:55:459 [File System]/(11934:11934): fin inicializar_archivo_de_bloques(mmapeo de bloques correcto)
+[INFO] 16:01:55:459 [File System]/(11934:11936): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 16:01:56:814 [File System]/(11934:11937): Cliente conectado a Kernel
+[INFO] 16:01:56:815 [File System]/(11934:11937): ::::::::::: KERNEL CONECTADO ::::::::::::
+[INFO] 16:02:00:094 [File System]/(11934:11936): Se recibio algo de MEMORIA
+[INFO] 16:02:00:094 [File System]/(11934:11936): entro a PETICION_ASIGNACION_BLOQUE_SWAP_FM
+[INFO] 16:02:00:094 [File System]/(11934:11936): recibo buffer
+[WARNING] 16:02:00:094 [File System]/(11934:11936): inicio atender_asignacion_de_bloques_por_creacion_de_proceso
+[WARNING] 16:02:00:094 [File System]/(11934:11936): pre lista de bloques
+[WARNING] 16:02:00:094 [File System]/(11934:11936): inicio swap_obtener_n_cantidad_de_bloques: 0
+[WARNING] 16:02:06:097 [File System]/(11934:11936): fin swap_obtener_n_cantidad_de_bloques
+[WARNING] 16:02:06:097 [File System]/(11934:11936): post lista de bloques
+[WARNING] 16:02:06:097 [File System]/(11934:11936): inicio enviar_lista_bloques_a_memoria
+[INFO] 16:02:06:097 [File System]/(11934:11936): >>>>>nro_B:0
+[INFO] 16:02:06:097 [File System]/(11934:11936): >>>>>nro_B:1
+[INFO] 16:02:06:097 [File System]/(11934:11936): >>>>>nro_B:2
+[INFO] 16:02:06:097 [File System]/(11934:11936): >>>>>nro_B:3
+[WARNING] 16:02:06:097 [File System]/(11934:11936): >>>>>ENVIADO a M:4
+[WARNING] 16:02:06:097 [File System]/(11934:11936): fin enviar_lista_bloques_a_memoria
+[WARNING] 16:02:06:097 [File System]/(11934:11936): fin atender_asignacion_de_bloques_por_creacion_de_proceso
+[WARNING] 16:02:09:124 [File System]/(11934:11954): inicio atender_f_open_de_kernel
+[WARNING] 16:02:09:124 [File System]/(11934:11954): inicio obtener_fcb
+[WARNING] 16:02:09:124 [File System]/(11934:11954): fin obtener_fcb
+[INFO] 16:02:09:124 [File System]/(11934:11954): El archivo solicitado no existe
+[WARNING] 16:02:09:124 [File System]/(11934:11954): inicio enviar_rta_f_open_a_kernel
+[WARNING] 16:02:09:124 [File System]/(11934:11954): fin enviar_rta_f_open_a_kernel
+[WARNING] 16:02:09:124 [File System]/(11934:11954): fin atender_f_open_de_kernel
+[WARNING] 16:02:09:125 [File System]/(11934:11955): inicio atender_f_open_de_kernel
+[WARNING] 16:02:09:125 [File System]/(11934:11955): inicio obtener_fcb
+[WARNING] 16:02:09:125 [File System]/(11934:11955): fin obtener_fcb
+[WARNING] 16:02:09:125 [File System]/(11934:11955): inicio crear_fcb
+[INFO] 16:02:09:125 [File System]/(11934:11955): AA_1
+[INFO] 16:02:09:125 [File System]/(11934:11955): AA_2
+[INFO] 16:02:09:125 [File System]/(11934:11955): AA_3
+[INFO] 16:02:09:125 [File System]/(11934:11955): AA_4
+[INFO] 16:02:09:125 [File System]/(11934:11955): AA_5
+[INFO] 16:02:09:125 [File System]/(11934:11955): AA_6
+[INFO] 16:02:09:125 [File System]/(11934:11955): AA_7
+[INFO] 16:02:09:125 [File System]/(11934:11955): AA_8
+[INFO] 16:02:09:125 [File System]/(11934:11955): AA_11
+[INFO] 16:02:09:125 [File System]/(11934:11955): AA_12
+[INFO] 16:02:09:125 [File System]/(11934:11955): AA_13
+[INFO] 16:02:09:125 [File System]/(11934:11955): AA_14 Save
+[WARNING] 16:02:09:125 [File System]/(11934:11955): fin crear_fcb
+[WARNING] 16:02:09:126 [File System]/(11934:11955): inicio enviar_rta_f_open_a_kernel
+[WARNING] 16:02:09:126 [File System]/(11934:11955): fin enviar_rta_f_open_a_kernel
+[WARNING] 16:02:09:126 [File System]/(11934:11955): fin atender_f_open_de_kernel
+[WARNING] 16:02:09:630 [File System]/(11934:11956): inicio atender_f_truncate_de_kernel
+[WARNING] 16:02:09:630 [File System]/(11934:11956): inicio obtener_fcb
+[WARNING] 16:02:09:630 [File System]/(11934:11956): inicio setear_size_de_una_fcb
+[WARNING] 16:02:09:630 [File System]/(11934:11956): fin setear_size_de_una_fcb
+[WARNING] 16:02:09:631 [File System]/(11934:11956): inicio obtener_n_cantidad_de_bloques_libres_de_tabla_fat
+[WARNING] 16:02:16:162 [File System]/(11934:11956): fin obtener_n_cantidad_de_bloques_libres_de_tabla_fat
+[WARNING] 16:02:16:162 [File System]/(11934:11956): inicio cargar_secuencia_de_bloques_asignados_a_tabla_fat
+[WARNING] 16:02:18:165 [File System]/(11934:11956): fin cargar_secuencia_de_bloques_asignados_a_tabla_fat
+[WARNING] 16:02:18:165 [File System]/(11934:11956): inicio asignar_mas_nro_de_bloque_a_la_secuencia_de_tabla_fat
+[WARNING] 16:02:18:165 [File System]/(11934:11956): inicio obtener_secuencia_de_bloques_de_archivo
+[WARNING] 16:02:20:167 [File System]/(11934:11956): fin obtener_secuencia_de_bloques_de_archivo
+[WARNING] 16:02:20:167 [File System]/(11934:11956): inicio obtener_n_cantidad_de_bloques_libres_de_tabla_fat
+[WARNING] 16:02:28:678 [File System]/(11934:11956): fin obtener_n_cantidad_de_bloques_libres_de_tabla_fat
+[WARNING] 16:02:30:680 [File System]/(11934:11956): fin asignar_mas_nro_de_bloque_a_la_secuencia_de_tabla_fat
+[WARNING] 16:02:30:680 [File System]/(11934:11956): inicio enviar_rta_f_truncate_a_kernel
+[WARNING] 16:02:30:680 [File System]/(11934:11956): fin enviar_rta_f_truncate_a_kernel
+[WARNING] 16:02:30:680 [File System]/(11934:11956): fin atender_f_truncate_de_kernel
+[INFO] 16:02:32:685 [File System]/(11934:11936): Se recibio algo de MEMORIA
+[WARNING] 16:02:32:685 [File System]/(11934:11936): inicio atender_pedido_de_lectura_de_pag_swap
+[WARNING] 16:02:32:685 [File System]/(11934:11936): SWAP_PAGEFAULT: <PID:1> <Nro_PAG:0> <POS_SWAP:0>
+[WARNING] 16:02:32:685 [File System]/(11934:11936): inicio obtener_bloque
+[WARNING] 16:02:34:186 [File System]/(11934:11936): fin obtener_bloque
+[WARNING] 16:02:34:186 [File System]/(11934:11936): inicio enviar_bloque_pagina_a_memoria
+[WARNING] 16:02:34:186 [File System]/(11934:11936): fin enviar_bloque_pagina_a_memoria
+[WARNING] 16:02:34:186 [File System]/(11934:11936): fin atender_pedido_de_lectura_de_pag_swap
+[ERROR] 16:06:50:542 [File System]/(11934:11937): [DESCONEXION]: KERNEL
+[WARNING] 16:10:33:802 [File System]/(12462:12462): inicio crear_fat
+[WARNING] 16:10:33:802 [File System]/(12462:12462): fin crear_fat(mmapeo la tabla fat joya)
+[WARNING] 16:10:33:802 [File System]/(12462:12462): inicio inicializar_archivo_de_bloques
+[WARNING] 16:10:33:802 [File System]/(12462:12462): fin inicializar_archivo_de_bloques(mmapeo de bloques correcto)
+[INFO] 16:10:33:803 [File System]/(12462:12464): HANDSHAKE CON MEMORIA [EXITOSO]
+[WARNING] 16:10:42:086 [File System]/(12467:12467): inicio crear_fat
+[WARNING] 16:10:42:087 [File System]/(12467:12467): fin crear_fat(mmapeo la tabla fat joya)
+[WARNING] 16:10:42:087 [File System]/(12467:12467): inicio inicializar_archivo_de_bloques
+[WARNING] 16:10:42:087 [File System]/(12467:12467): fin inicializar_archivo_de_bloques(mmapeo de bloques correcto)
+[INFO] 16:10:42:087 [File System]/(12467:12469): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 16:10:46:261 [File System]/(12467:12469): Se recibio algo de MEMORIA
+[ERROR] 16:10:46:261 [File System]/(12467:12469): [DESCONEXION]: KERNEL
+[WARNING] 16:10:49:368 [File System]/(12478:12478): inicio crear_fat
+[WARNING] 16:10:49:368 [File System]/(12478:12478): fin crear_fat(mmapeo la tabla fat joya)
+[WARNING] 16:10:49:368 [File System]/(12478:12478): inicio inicializar_archivo_de_bloques
+[WARNING] 16:10:49:368 [File System]/(12478:12478): fin inicializar_archivo_de_bloques(mmapeo de bloques correcto)
+[INFO] 16:10:49:369 [File System]/(12478:12480): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 16:10:56:222 [File System]/(12478:12481): Cliente conectado a Kernel
+[INFO] 16:10:56:223 [File System]/(12478:12481): ::::::::::: KERNEL CONECTADO ::::::::::::
+[INFO] 16:10:59:995 [File System]/(12478:12480): Se recibio algo de MEMORIA
+[INFO] 16:10:59:995 [File System]/(12478:12480): entro a PETICION_ASIGNACION_BLOQUE_SWAP_FM
+[INFO] 16:10:59:995 [File System]/(12478:12480): recibo buffer
+[WARNING] 16:10:59:995 [File System]/(12478:12480): inicio atender_asignacion_de_bloques_por_creacion_de_proceso
+[WARNING] 16:10:59:995 [File System]/(12478:12480): pre lista de bloques
+[WARNING] 16:10:59:995 [File System]/(12478:12480): inicio swap_obtener_n_cantidad_de_bloques: 0
+[WARNING] 16:11:05:998 [File System]/(12478:12480): fin swap_obtener_n_cantidad_de_bloques
+[WARNING] 16:11:05:998 [File System]/(12478:12480): post lista de bloques
+[WARNING] 16:11:05:998 [File System]/(12478:12480): inicio enviar_lista_bloques_a_memoria
+[INFO] 16:11:05:998 [File System]/(12478:12480): >>>>>nro_B:0
+[INFO] 16:11:05:998 [File System]/(12478:12480): >>>>>nro_B:1
+[INFO] 16:11:05:998 [File System]/(12478:12480): >>>>>nro_B:2
+[INFO] 16:11:05:999 [File System]/(12478:12480): >>>>>nro_B:3
+[WARNING] 16:11:05:999 [File System]/(12478:12480): >>>>>ENVIADO a M:4
+[WARNING] 16:11:05:999 [File System]/(12478:12480): fin enviar_lista_bloques_a_memoria
+[WARNING] 16:11:05:999 [File System]/(12478:12480): fin atender_asignacion_de_bloques_por_creacion_de_proceso
+[WARNING] 16:11:09:006 [File System]/(12478:12506): inicio atender_f_open_de_kernel
+[WARNING] 16:11:09:006 [File System]/(12478:12506): inicio obtener_fcb
+[WARNING] 16:11:09:006 [File System]/(12478:12506): fin obtener_fcb
+[INFO] 16:11:09:006 [File System]/(12478:12506): El archivo solicitado no existe
+[WARNING] 16:11:09:006 [File System]/(12478:12506): inicio enviar_rta_f_open_a_kernel
+[WARNING] 16:11:09:006 [File System]/(12478:12506): fin enviar_rta_f_open_a_kernel
+[WARNING] 16:11:09:006 [File System]/(12478:12506): fin atender_f_open_de_kernel
+[WARNING] 16:11:09:006 [File System]/(12478:12507): inicio atender_f_open_de_kernel
+[WARNING] 16:11:09:006 [File System]/(12478:12507): inicio obtener_fcb
+[WARNING] 16:11:09:006 [File System]/(12478:12507): fin obtener_fcb
+[WARNING] 16:11:09:006 [File System]/(12478:12507): inicio crear_fcb
+[INFO] 16:11:09:006 [File System]/(12478:12507): AA_1
+[INFO] 16:11:09:006 [File System]/(12478:12507): AA_2
+[INFO] 16:11:09:006 [File System]/(12478:12507): AA_3
+[INFO] 16:11:09:006 [File System]/(12478:12507): AA_4
+[INFO] 16:11:09:006 [File System]/(12478:12507): AA_5
+[INFO] 16:11:09:006 [File System]/(12478:12507): AA_6
+[INFO] 16:11:09:006 [File System]/(12478:12507): AA_7
+[INFO] 16:11:09:006 [File System]/(12478:12507): AA_8
+[INFO] 16:11:09:006 [File System]/(12478:12507): AA_11
+[INFO] 16:11:09:006 [File System]/(12478:12507): AA_12
+[INFO] 16:11:09:006 [File System]/(12478:12507): AA_13
+[INFO] 16:11:09:006 [File System]/(12478:12507): AA_14 Save
+[WARNING] 16:11:09:007 [File System]/(12478:12507): fin crear_fcb
+[WARNING] 16:11:09:007 [File System]/(12478:12507): inicio enviar_rta_f_open_a_kernel
+[WARNING] 16:11:09:007 [File System]/(12478:12507): fin enviar_rta_f_open_a_kernel
+[WARNING] 16:11:09:007 [File System]/(12478:12507): fin atender_f_open_de_kernel
+[WARNING] 16:11:09:510 [File System]/(12478:12508): inicio atender_f_truncate_de_kernel
+[WARNING] 16:11:09:510 [File System]/(12478:12508): inicio obtener_fcb
+[WARNING] 16:11:09:511 [File System]/(12478:12508): inicio setear_size_de_una_fcb
+[WARNING] 16:11:09:511 [File System]/(12478:12508): fin setear_size_de_una_fcb
+[WARNING] 16:11:09:512 [File System]/(12478:12508): inicio obtener_n_cantidad_de_bloques_libres_de_tabla_fat
+[WARNING] 16:11:12:021 [File System]/(12478:12508): fin obtener_n_cantidad_de_bloques_libres_de_tabla_fat
+[WARNING] 16:11:12:021 [File System]/(12478:12508): inicio cargar_secuencia_de_bloques_asignados_a_tabla_fat
+[WARNING] 16:11:14:025 [File System]/(12478:12508): fin cargar_secuencia_de_bloques_asignados_a_tabla_fat
+[WARNING] 16:11:14:026 [File System]/(12478:12508): inicio asignar_mas_nro_de_bloque_a_la_secuencia_de_tabla_fat
+[WARNING] 16:11:14:026 [File System]/(12478:12508): inicio obtener_secuencia_de_bloques_de_archivo
+[WARNING] 16:11:16:031 [File System]/(12478:12508): fin obtener_secuencia_de_bloques_de_archivo
+[WARNING] 16:11:16:031 [File System]/(12478:12508): inicio obtener_n_cantidad_de_bloques_libres_de_tabla_fat
+[WARNING] 16:11:20:539 [File System]/(12478:12508): fin obtener_n_cantidad_de_bloques_libres_de_tabla_fat
+[WARNING] 16:11:22:543 [File System]/(12478:12508): fin asignar_mas_nro_de_bloque_a_la_secuencia_de_tabla_fat
+[WARNING] 16:11:22:543 [File System]/(12478:12508): inicio enviar_rta_f_truncate_a_kernel
+[WARNING] 16:11:22:543 [File System]/(12478:12508): fin enviar_rta_f_truncate_a_kernel
+[WARNING] 16:11:22:543 [File System]/(12478:12508): fin atender_f_truncate_de_kernel
+[INFO] 16:11:24:551 [File System]/(12478:12480): Se recibio algo de MEMORIA
+[WARNING] 16:11:24:551 [File System]/(12478:12480): inicio atender_pedido_de_lectura_de_pag_swap
+[WARNING] 16:11:24:551 [File System]/(12478:12480): SWAP_PAGEFAULT: <PID:1> <Nro_PAG:0> <POS_SWAP:0>
+[WARNING] 16:11:24:551 [File System]/(12478:12480): inicio obtener_bloque
+[WARNING] 16:11:26:054 [File System]/(12478:12480): fin obtener_bloque
+[WARNING] 16:11:26:055 [File System]/(12478:12480): inicio enviar_bloque_pagina_a_memoria
+[WARNING] 16:11:26:055 [File System]/(12478:12480): fin enviar_bloque_pagina_a_memoria
+[WARNING] 16:11:26:055 [File System]/(12478:12480): fin atender_pedido_de_lectura_de_pag_swap
+[ERROR] 16:11:36:656 [File System]/(12478:12481): [DESCONEXION]: KERNEL
+[WARNING] 16:14:37:237 [File System]/(13099:13099): inicio crear_fat
+[WARNING] 16:14:37:237 [File System]/(13099:13099): fin crear_fat(mmapeo la tabla fat joya)
+[WARNING] 16:14:37:237 [File System]/(13099:13099): inicio inicializar_archivo_de_bloques
+[WARNING] 16:14:37:238 [File System]/(13099:13099): fin inicializar_archivo_de_bloques(mmapeo de bloques correcto)
+[INFO] 16:14:37:238 [File System]/(13099:13101): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 16:14:38:825 [File System]/(13099:13102): Cliente conectado a Kernel
+[INFO] 16:14:38:825 [File System]/(13099:13102): ::::::::::: KERNEL CONECTADO ::::::::::::
+[INFO] 16:14:42:542 [File System]/(13099:13101): Se recibio algo de MEMORIA
+[INFO] 16:14:42:542 [File System]/(13099:13101): entro a PETICION_ASIGNACION_BLOQUE_SWAP_FM
+[INFO] 16:14:42:542 [File System]/(13099:13101): recibo buffer
+[WARNING] 16:14:42:542 [File System]/(13099:13101): inicio atender_asignacion_de_bloques_por_creacion_de_proceso
+[WARNING] 16:14:42:542 [File System]/(13099:13101): pre lista de bloques
+[WARNING] 16:14:42:542 [File System]/(13099:13101): inicio swap_obtener_n_cantidad_de_bloques: 0
+[WARNING] 16:14:48:545 [File System]/(13099:13101): fin swap_obtener_n_cantidad_de_bloques
+[WARNING] 16:14:48:546 [File System]/(13099:13101): post lista de bloques
+[WARNING] 16:14:48:546 [File System]/(13099:13101): inicio enviar_lista_bloques_a_memoria
+[INFO] 16:14:48:546 [File System]/(13099:13101): >>>>>nro_B:0
+[INFO] 16:14:48:546 [File System]/(13099:13101): >>>>>nro_B:1
+[INFO] 16:14:48:546 [File System]/(13099:13101): >>>>>nro_B:2
+[INFO] 16:14:48:546 [File System]/(13099:13101): >>>>>nro_B:3
+[WARNING] 16:14:48:546 [File System]/(13099:13101): >>>>>ENVIADO a M:4
+[WARNING] 16:14:48:546 [File System]/(13099:13101): fin enviar_lista_bloques_a_memoria
+[WARNING] 16:14:48:546 [File System]/(13099:13101): fin atender_asignacion_de_bloques_por_creacion_de_proceso
+[WARNING] 16:14:51:553 [File System]/(13099:13120): inicio atender_f_open_de_kernel
+[WARNING] 16:14:51:553 [File System]/(13099:13120): inicio obtener_fcb
+[WARNING] 16:14:51:553 [File System]/(13099:13120): fin obtener_fcb
+[INFO] 16:14:51:553 [File System]/(13099:13120): El archivo solicitado no existe
+[WARNING] 16:14:51:553 [File System]/(13099:13120): inicio enviar_rta_f_open_a_kernel
+[WARNING] 16:14:51:553 [File System]/(13099:13120): fin enviar_rta_f_open_a_kernel
+[WARNING] 16:14:51:553 [File System]/(13099:13120): fin atender_f_open_de_kernel
+[WARNING] 16:14:51:553 [File System]/(13099:13121): inicio atender_f_open_de_kernel
+[WARNING] 16:14:51:553 [File System]/(13099:13121): inicio obtener_fcb
+[WARNING] 16:14:51:553 [File System]/(13099:13121): fin obtener_fcb
+[WARNING] 16:14:51:553 [File System]/(13099:13121): inicio crear_fcb
+[INFO] 16:14:51:553 [File System]/(13099:13121): AA_1
+[INFO] 16:14:51:553 [File System]/(13099:13121): AA_2
+[INFO] 16:14:51:553 [File System]/(13099:13121): AA_3
+[INFO] 16:14:51:553 [File System]/(13099:13121): AA_4
+[INFO] 16:14:51:553 [File System]/(13099:13121): AA_5
+[INFO] 16:14:51:553 [File System]/(13099:13121): AA_6
+[INFO] 16:14:51:553 [File System]/(13099:13121): AA_7
+[INFO] 16:14:51:553 [File System]/(13099:13121): AA_8
+[INFO] 16:14:51:553 [File System]/(13099:13121): AA_11
+[INFO] 16:14:51:553 [File System]/(13099:13121): AA_12
+[INFO] 16:14:51:553 [File System]/(13099:13121): AA_13
+[INFO] 16:14:51:553 [File System]/(13099:13121): AA_14 Save
+[WARNING] 16:14:51:553 [File System]/(13099:13121): fin crear_fcb
+[WARNING] 16:14:51:553 [File System]/(13099:13121): inicio enviar_rta_f_open_a_kernel
+[WARNING] 16:14:51:554 [File System]/(13099:13121): fin enviar_rta_f_open_a_kernel
+[WARNING] 16:14:51:554 [File System]/(13099:13121): fin atender_f_open_de_kernel
+[WARNING] 16:14:52:070 [File System]/(13099:13122): inicio atender_f_truncate_de_kernel
+[WARNING] 16:14:52:070 [File System]/(13099:13122): inicio obtener_fcb
+[WARNING] 16:14:52:070 [File System]/(13099:13122): inicio setear_size_de_una_fcb
+[WARNING] 16:14:52:070 [File System]/(13099:13122): fin setear_size_de_una_fcb
+[WARNING] 16:14:52:070 [File System]/(13099:13122): inicio obtener_n_cantidad_de_bloques_libres_de_tabla_fat
+[WARNING] 16:14:58:587 [File System]/(13099:13122): fin obtener_n_cantidad_de_bloques_libres_de_tabla_fat
+[WARNING] 16:14:58:587 [File System]/(13099:13122): inicio cargar_secuencia_de_bloques_asignados_a_tabla_fat
+[WARNING] 16:15:00:595 [File System]/(13099:13122): fin cargar_secuencia_de_bloques_asignados_a_tabla_fat
+[WARNING] 16:15:00:595 [File System]/(13099:13122): inicio asignar_mas_nro_de_bloque_a_la_secuencia_de_tabla_fat
+[WARNING] 16:15:00:596 [File System]/(13099:13122): inicio obtener_secuencia_de_bloques_de_archivo
+[WARNING] 16:15:02:601 [File System]/(13099:13122): fin obtener_secuencia_de_bloques_de_archivo
+[WARNING] 16:15:02:601 [File System]/(13099:13122): inicio obtener_n_cantidad_de_bloques_libres_de_tabla_fat
+[WARNING] 16:15:11:112 [File System]/(13099:13122): fin obtener_n_cantidad_de_bloques_libres_de_tabla_fat
+[WARNING] 16:15:13:113 [File System]/(13099:13122): fin asignar_mas_nro_de_bloque_a_la_secuencia_de_tabla_fat
+[WARNING] 16:15:13:113 [File System]/(13099:13122): inicio enviar_rta_f_truncate_a_kernel
+[WARNING] 16:15:13:113 [File System]/(13099:13122): fin enviar_rta_f_truncate_a_kernel
+[WARNING] 16:15:13:113 [File System]/(13099:13122): fin atender_f_truncate_de_kernel
+[ERROR] 16:15:20:714 [File System]/(13099:13102): [DESCONEXION]: KERNEL
+[WARNING] 16:20:08:981 [File System]/(14162:14162): inicio crear_fat
+[WARNING] 16:20:08:983 [File System]/(14162:14162): fin crear_fat(mmapeo la tabla fat joya)
+[WARNING] 16:20:08:983 [File System]/(14162:14162): inicio inicializar_archivo_de_bloques
+[WARNING] 16:20:08:983 [File System]/(14162:14162): fin inicializar_archivo_de_bloques(mmapeo de bloques correcto)
+[INFO] 16:20:08:983 [File System]/(14162:14164): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 16:20:11:620 [File System]/(14162:14165): Cliente conectado a Kernel
+[INFO] 16:20:11:621 [File System]/(14162:14165): ::::::::::: KERNEL CONECTADO ::::::::::::
+[INFO] 16:20:18:571 [File System]/(14162:14164): Se recibio algo de MEMORIA
+[INFO] 16:20:18:571 [File System]/(14162:14164): entro a PETICION_ASIGNACION_BLOQUE_SWAP_FM
+[INFO] 16:20:18:571 [File System]/(14162:14164): recibo buffer
+[WARNING] 16:20:18:571 [File System]/(14162:14164): inicio atender_asignacion_de_bloques_por_creacion_de_proceso
+[WARNING] 16:20:18:571 [File System]/(14162:14164): pre lista de bloques
+[WARNING] 16:20:18:571 [File System]/(14162:14164): inicio swap_obtener_n_cantidad_de_bloques: 0
+[WARNING] 16:20:24:581 [File System]/(14162:14164): fin swap_obtener_n_cantidad_de_bloques
+[WARNING] 16:20:24:581 [File System]/(14162:14164): post lista de bloques
+[WARNING] 16:20:24:581 [File System]/(14162:14164): inicio enviar_lista_bloques_a_memoria
+[INFO] 16:20:24:581 [File System]/(14162:14164): >>>>>nro_B:0
+[INFO] 16:20:24:581 [File System]/(14162:14164): >>>>>nro_B:1
+[INFO] 16:20:24:581 [File System]/(14162:14164): >>>>>nro_B:2
+[INFO] 16:20:24:581 [File System]/(14162:14164): >>>>>nro_B:3
+[WARNING] 16:20:24:581 [File System]/(14162:14164): >>>>>ENVIADO a M:4
+[WARNING] 16:20:24:581 [File System]/(14162:14164): fin enviar_lista_bloques_a_memoria
+[WARNING] 16:20:24:581 [File System]/(14162:14164): fin atender_asignacion_de_bloques_por_creacion_de_proceso
+[WARNING] 16:20:25:592 [File System]/(14162:14185): inicio atender_f_open_de_kernel
+[WARNING] 16:20:25:592 [File System]/(14162:14185): inicio obtener_fcb
+[WARNING] 16:20:25:592 [File System]/(14162:14185): fin obtener_fcb
+[INFO] 16:20:25:592 [File System]/(14162:14185): El archivo solicitado no existe
+[WARNING] 16:20:25:592 [File System]/(14162:14185): inicio enviar_rta_f_open_a_kernel
+[WARNING] 16:20:25:592 [File System]/(14162:14185): fin enviar_rta_f_open_a_kernel
+[WARNING] 16:20:25:592 [File System]/(14162:14185): fin atender_f_open_de_kernel
+[WARNING] 16:20:25:593 [File System]/(14162:14186): inicio atender_f_open_de_kernel
+[WARNING] 16:20:25:593 [File System]/(14162:14186): inicio obtener_fcb
+[WARNING] 16:20:25:593 [File System]/(14162:14186): fin obtener_fcb
+[WARNING] 16:20:25:593 [File System]/(14162:14186): inicio crear_fcb
+[INFO] 16:20:25:593 [File System]/(14162:14186): AA_1
+[INFO] 16:20:25:593 [File System]/(14162:14186): AA_2
+[INFO] 16:20:25:593 [File System]/(14162:14186): AA_3
+[INFO] 16:20:25:593 [File System]/(14162:14186): AA_4
+[INFO] 16:20:25:593 [File System]/(14162:14186): AA_5
+[INFO] 16:20:25:593 [File System]/(14162:14186): AA_6
+[INFO] 16:20:25:593 [File System]/(14162:14186): AA_7
+[INFO] 16:20:25:593 [File System]/(14162:14186): AA_8
+[INFO] 16:20:25:595 [File System]/(14162:14186): AA_11
+[INFO] 16:20:25:595 [File System]/(14162:14186): AA_12
+[INFO] 16:20:25:595 [File System]/(14162:14186): AA_13
+[INFO] 16:20:25:595 [File System]/(14162:14186): AA_14 Save
+[WARNING] 16:20:25:595 [File System]/(14162:14186): fin crear_fcb
+[WARNING] 16:20:25:595 [File System]/(14162:14186): inicio enviar_rta_f_open_a_kernel
+[WARNING] 16:20:25:595 [File System]/(14162:14186): fin enviar_rta_f_open_a_kernel
+[WARNING] 16:20:25:595 [File System]/(14162:14186): fin atender_f_open_de_kernel
+[WARNING] 16:20:26:100 [File System]/(14162:14187): inicio atender_f_truncate_de_kernel
+[WARNING] 16:20:26:100 [File System]/(14162:14187): inicio obtener_fcb
+[WARNING] 16:20:26:100 [File System]/(14162:14187): inicio setear_size_de_una_fcb
+[WARNING] 16:20:26:100 [File System]/(14162:14187): fin setear_size_de_una_fcb
+[WARNING] 16:20:26:100 [File System]/(14162:14187): inicio obtener_n_cantidad_de_bloques_libres_de_tabla_fat
+[WARNING] 16:20:36:642 [File System]/(14162:14187): fin obtener_n_cantidad_de_bloques_libres_de_tabla_fat
+[WARNING] 16:20:36:642 [File System]/(14162:14187): inicio cargar_secuencia_de_bloques_asignados_a_tabla_fat
+[WARNING] 16:20:38:651 [File System]/(14162:14187): fin cargar_secuencia_de_bloques_asignados_a_tabla_fat
+[WARNING] 16:20:38:651 [File System]/(14162:14187): inicio asignar_mas_nro_de_bloque_a_la_secuencia_de_tabla_fat
+[WARNING] 16:20:38:651 [File System]/(14162:14187): inicio obtener_secuencia_de_bloques_de_archivo
+[WARNING] 16:20:40:654 [File System]/(14162:14187): fin obtener_secuencia_de_bloques_de_archivo
+[WARNING] 16:20:40:654 [File System]/(14162:14187): inicio obtener_n_cantidad_de_bloques_libres_de_tabla_fat
+[WARNING] 16:20:53:185 [File System]/(14162:14187): fin obtener_n_cantidad_de_bloques_libres_de_tabla_fat
+[WARNING] 16:20:55:189 [File System]/(14162:14187): fin asignar_mas_nro_de_bloque_a_la_secuencia_de_tabla_fat
+[WARNING] 16:20:55:189 [File System]/(14162:14187): inicio enviar_rta_f_truncate_a_kernel
+[WARNING] 16:20:55:189 [File System]/(14162:14187): fin enviar_rta_f_truncate_a_kernel
+[WARNING] 16:20:55:189 [File System]/(14162:14187): fin atender_f_truncate_de_kernel
+[INFO] 16:20:57:196 [File System]/(14162:14164): Se recibio algo de MEMORIA
+[WARNING] 16:20:57:196 [File System]/(14162:14164): inicio atender_pedido_de_lectura_de_pag_swap
+[WARNING] 16:20:57:196 [File System]/(14162:14164): SWAP_PAGEFAULT: <PID:1> <Nro_PAG:0> <POS_SWAP:0>
+[WARNING] 16:20:57:196 [File System]/(14162:14164): inicio obtener_bloque
+[WARNING] 16:20:58:697 [File System]/(14162:14164): fin obtener_bloque
+[WARNING] 16:20:58:697 [File System]/(14162:14164): inicio enviar_bloque_pagina_a_memoria
+[WARNING] 16:20:58:697 [File System]/(14162:14164): fin enviar_bloque_pagina_a_memoria
+[WARNING] 16:20:58:697 [File System]/(14162:14164): fin atender_pedido_de_lectura_de_pag_swap
+[ERROR] 16:21:03:491 [File System]/(14162:14165): [DESCONEXION]: KERNEL
+[WARNING] 16:24:47:202 [File System]/(14465:14465): inicio crear_fat
+[WARNING] 16:24:47:202 [File System]/(14465:14465): fin crear_fat(mmapeo la tabla fat joya)
+[WARNING] 16:24:47:202 [File System]/(14465:14465): inicio inicializar_archivo_de_bloques
+[WARNING] 16:24:47:202 [File System]/(14465:14465): fin inicializar_archivo_de_bloques(mmapeo de bloques correcto)
+[INFO] 16:24:47:202 [File System]/(14465:14467): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 16:24:50:094 [File System]/(14465:14468): Cliente conectado a Kernel
+[INFO] 16:24:50:095 [File System]/(14465:14468): ::::::::::: KERNEL CONECTADO ::::::::::::
+[WARNING] 16:25:02:951 [File System]/(14487:14487): inicio crear_fat
+[WARNING] 16:25:02:951 [File System]/(14487:14487): fin crear_fat(mmapeo la tabla fat joya)
+[WARNING] 16:25:02:951 [File System]/(14487:14487): inicio inicializar_archivo_de_bloques
+[WARNING] 16:25:02:952 [File System]/(14487:14487): fin inicializar_archivo_de_bloques(mmapeo de bloques correcto)
+[INFO] 16:25:02:952 [File System]/(14487:14489): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 16:25:18:950 [File System]/(14487:14490): Cliente conectado a Kernel
+[INFO] 16:25:18:951 [File System]/(14487:14490): ::::::::::: KERNEL CONECTADO ::::::::::::
+[INFO] 16:25:25:541 [File System]/(14487:14489): Se recibio algo de MEMORIA
+[INFO] 16:25:25:541 [File System]/(14487:14489): entro a PETICION_ASIGNACION_BLOQUE_SWAP_FM
+[INFO] 16:25:25:541 [File System]/(14487:14489): recibo buffer
+[WARNING] 16:25:25:541 [File System]/(14487:14489): inicio atender_asignacion_de_bloques_por_creacion_de_proceso
+[WARNING] 16:25:25:541 [File System]/(14487:14489): pre lista de bloques
+[WARNING] 16:25:25:541 [File System]/(14487:14489): inicio swap_obtener_n_cantidad_de_bloques: 0
+[WARNING] 16:25:31:545 [File System]/(14487:14489): fin swap_obtener_n_cantidad_de_bloques
+[WARNING] 16:25:31:545 [File System]/(14487:14489): post lista de bloques
+[WARNING] 16:25:31:545 [File System]/(14487:14489): inicio enviar_lista_bloques_a_memoria
+[INFO] 16:25:31:545 [File System]/(14487:14489): >>>>>nro_B:0
+[INFO] 16:25:31:545 [File System]/(14487:14489): >>>>>nro_B:1
+[INFO] 16:25:31:545 [File System]/(14487:14489): >>>>>nro_B:2
+[INFO] 16:25:31:545 [File System]/(14487:14489): >>>>>nro_B:3
+[WARNING] 16:25:31:545 [File System]/(14487:14489): >>>>>ENVIADO a M:4
+[WARNING] 16:25:31:545 [File System]/(14487:14489): fin enviar_lista_bloques_a_memoria
+[WARNING] 16:25:31:545 [File System]/(14487:14489): fin atender_asignacion_de_bloques_por_creacion_de_proceso
+[WARNING] 16:25:32:548 [File System]/(14487:14519): inicio atender_f_open_de_kernel
+[WARNING] 16:25:32:548 [File System]/(14487:14519): inicio obtener_fcb
+[WARNING] 16:25:32:548 [File System]/(14487:14519): fin obtener_fcb
+[INFO] 16:25:32:548 [File System]/(14487:14519): El archivo solicitado no existe
+[WARNING] 16:25:32:548 [File System]/(14487:14519): inicio enviar_rta_f_open_a_kernel
+[WARNING] 16:25:32:548 [File System]/(14487:14519): fin enviar_rta_f_open_a_kernel
+[WARNING] 16:25:32:549 [File System]/(14487:14519): fin atender_f_open_de_kernel
+[WARNING] 16:25:32:549 [File System]/(14487:14520): inicio atender_f_open_de_kernel
+[WARNING] 16:25:32:549 [File System]/(14487:14520): inicio obtener_fcb
+[WARNING] 16:25:32:549 [File System]/(14487:14520): fin obtener_fcb
+[WARNING] 16:25:32:549 [File System]/(14487:14520): inicio crear_fcb
+[INFO] 16:25:32:549 [File System]/(14487:14520): AA_1
+[INFO] 16:25:32:549 [File System]/(14487:14520): AA_2
+[INFO] 16:25:32:549 [File System]/(14487:14520): AA_3
+[INFO] 16:25:32:549 [File System]/(14487:14520): AA_4
+[INFO] 16:25:32:549 [File System]/(14487:14520): AA_5
+[INFO] 16:25:32:549 [File System]/(14487:14520): AA_6
+[INFO] 16:25:32:549 [File System]/(14487:14520): AA_7
+[INFO] 16:25:32:549 [File System]/(14487:14520): AA_8
+[INFO] 16:25:32:549 [File System]/(14487:14520): AA_11
+[INFO] 16:25:32:549 [File System]/(14487:14520): AA_12
+[INFO] 16:25:32:549 [File System]/(14487:14520): AA_13
+[INFO] 16:25:32:549 [File System]/(14487:14520): AA_14 Save
+[WARNING] 16:25:32:550 [File System]/(14487:14520): fin crear_fcb
+[WARNING] 16:25:32:550 [File System]/(14487:14520): inicio enviar_rta_f_open_a_kernel
+[WARNING] 16:25:32:550 [File System]/(14487:14520): fin enviar_rta_f_open_a_kernel
+[WARNING] 16:25:32:550 [File System]/(14487:14520): fin atender_f_open_de_kernel
+[WARNING] 16:25:33:052 [File System]/(14487:14521): inicio atender_f_truncate_de_kernel
+[WARNING] 16:25:33:052 [File System]/(14487:14521): inicio obtener_fcb
+[WARNING] 16:25:33:052 [File System]/(14487:14521): inicio setear_size_de_una_fcb
+[WARNING] 16:25:33:052 [File System]/(14487:14521): fin setear_size_de_una_fcb
+[WARNING] 16:25:33:053 [File System]/(14487:14521): inicio obtener_n_cantidad_de_bloques_libres_de_tabla_fat
+[WARNING] 16:25:47:589 [File System]/(14487:14521): fin obtener_n_cantidad_de_bloques_libres_de_tabla_fat
+[WARNING] 16:25:47:589 [File System]/(14487:14521): inicio cargar_secuencia_de_bloques_asignados_a_tabla_fat
+[WARNING] 16:25:49:594 [File System]/(14487:14521): fin cargar_secuencia_de_bloques_asignados_a_tabla_fat
+[WARNING] 16:25:49:594 [File System]/(14487:14521): inicio asignar_mas_nro_de_bloque_a_la_secuencia_de_tabla_fat
+[WARNING] 16:25:49:594 [File System]/(14487:14521): inicio obtener_secuencia_de_bloques_de_archivo
+[WARNING] 16:25:51:597 [File System]/(14487:14521): fin obtener_secuencia_de_bloques_de_archivo
+[WARNING] 16:25:51:597 [File System]/(14487:14521): inicio obtener_n_cantidad_de_bloques_libres_de_tabla_fat
+[WARNING] 16:26:08:124 [File System]/(14487:14521): fin obtener_n_cantidad_de_bloques_libres_de_tabla_fat
+[WARNING] 16:26:10:131 [File System]/(14487:14521): fin asignar_mas_nro_de_bloque_a_la_secuencia_de_tabla_fat
+[WARNING] 16:26:10:131 [File System]/(14487:14521): inicio enviar_rta_f_truncate_a_kernel
+[WARNING] 16:26:10:131 [File System]/(14487:14521): fin enviar_rta_f_truncate_a_kernel
+[WARNING] 16:26:10:131 [File System]/(14487:14521): fin atender_f_truncate_de_kernel
+[ERROR] 16:26:11:718 [File System]/(14487:14490): [DESCONEXION]: KERNEL
+[WARNING] 16:29:43:169 [File System]/(14659:14659): inicio crear_fat
+[WARNING] 16:29:43:169 [File System]/(14659:14659): fin crear_fat(mmapeo la tabla fat joya)
+[WARNING] 16:29:43:169 [File System]/(14659:14659): inicio inicializar_archivo_de_bloques
+[WARNING] 16:29:43:169 [File System]/(14659:14659): fin inicializar_archivo_de_bloques(mmapeo de bloques correcto)
+[INFO] 16:29:43:170 [File System]/(14659:14660): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 16:29:45:260 [File System]/(14659:14662): Cliente conectado a Kernel
+[INFO] 16:29:45:261 [File System]/(14659:14662): ::::::::::: KERNEL CONECTADO ::::::::::::
+[INFO] 16:29:53:508 [File System]/(14659:14660): Se recibio algo de MEMORIA
+[INFO] 16:29:53:508 [File System]/(14659:14660): entro a PETICION_ASIGNACION_BLOQUE_SWAP_FM
+[INFO] 16:29:53:508 [File System]/(14659:14660): recibo buffer
+[WARNING] 16:29:53:508 [File System]/(14659:14660): inicio atender_asignacion_de_bloques_por_creacion_de_proceso
+[WARNING] 16:29:53:508 [File System]/(14659:14660): pre lista de bloques
+[WARNING] 16:29:53:508 [File System]/(14659:14660): inicio swap_obtener_n_cantidad_de_bloques: 0
+[WARNING] 16:29:59:509 [File System]/(14659:14660): fin swap_obtener_n_cantidad_de_bloques
+[WARNING] 16:29:59:509 [File System]/(14659:14660): post lista de bloques
+[WARNING] 16:29:59:509 [File System]/(14659:14660): inicio enviar_lista_bloques_a_memoria
+[INFO] 16:29:59:509 [File System]/(14659:14660): >>>>>nro_B:0
+[INFO] 16:29:59:509 [File System]/(14659:14660): >>>>>nro_B:1
+[INFO] 16:29:59:509 [File System]/(14659:14660): >>>>>nro_B:2
+[INFO] 16:29:59:509 [File System]/(14659:14660): >>>>>nro_B:3
+[WARNING] 16:29:59:509 [File System]/(14659:14660): >>>>>ENVIADO a M:4
+[WARNING] 16:29:59:509 [File System]/(14659:14660): fin enviar_lista_bloques_a_memoria
+[WARNING] 16:29:59:509 [File System]/(14659:14660): fin atender_asignacion_de_bloques_por_creacion_de_proceso
+[WARNING] 16:30:00:512 [File System]/(14659:14681): inicio atender_f_open_de_kernel
+[WARNING] 16:30:00:512 [File System]/(14659:14681): inicio obtener_fcb
+[WARNING] 16:30:00:512 [File System]/(14659:14681): fin obtener_fcb
+[INFO] 16:30:00:512 [File System]/(14659:14681): El archivo solicitado no existe
+[WARNING] 16:30:00:512 [File System]/(14659:14681): inicio enviar_rta_f_open_a_kernel
+[WARNING] 16:30:00:512 [File System]/(14659:14681): fin enviar_rta_f_open_a_kernel
+[WARNING] 16:30:00:512 [File System]/(14659:14681): fin atender_f_open_de_kernel
+[WARNING] 16:30:00:512 [File System]/(14659:14682): inicio atender_f_open_de_kernel
+[WARNING] 16:30:00:512 [File System]/(14659:14682): inicio obtener_fcb
+[WARNING] 16:30:00:512 [File System]/(14659:14682): fin obtener_fcb
+[WARNING] 16:30:00:512 [File System]/(14659:14682): inicio crear_fcb
+[INFO] 16:30:00:512 [File System]/(14659:14682): AA_1
+[INFO] 16:30:00:512 [File System]/(14659:14682): AA_2
+[INFO] 16:30:00:512 [File System]/(14659:14682): AA_3
+[INFO] 16:30:00:512 [File System]/(14659:14682): AA_4
+[INFO] 16:30:00:512 [File System]/(14659:14682): AA_5
+[INFO] 16:30:00:512 [File System]/(14659:14682): AA_6
+[INFO] 16:30:00:512 [File System]/(14659:14682): AA_7
+[INFO] 16:30:00:512 [File System]/(14659:14682): AA_8
+[INFO] 16:30:00:512 [File System]/(14659:14682): AA_11
+[INFO] 16:30:00:512 [File System]/(14659:14682): AA_12
+[INFO] 16:30:00:512 [File System]/(14659:14682): AA_13
+[INFO] 16:30:00:512 [File System]/(14659:14682): AA_14 Save
+[WARNING] 16:30:00:513 [File System]/(14659:14682): fin crear_fcb
+[WARNING] 16:30:00:513 [File System]/(14659:14682): inicio enviar_rta_f_open_a_kernel
+[WARNING] 16:30:00:513 [File System]/(14659:14682): fin enviar_rta_f_open_a_kernel
+[WARNING] 16:30:00:513 [File System]/(14659:14682): fin atender_f_open_de_kernel
+[WARNING] 16:30:01:014 [File System]/(14659:14683): inicio atender_f_truncate_de_kernel
+[WARNING] 16:30:01:014 [File System]/(14659:14683): inicio obtener_fcb
+[WARNING] 16:30:01:014 [File System]/(14659:14683): inicio setear_size_de_una_fcb
+[WARNING] 16:30:01:014 [File System]/(14659:14683): fin setear_size_de_una_fcb
+[WARNING] 16:30:01:015 [File System]/(14659:14683): inicio obtener_n_cantidad_de_bloques_libres_de_tabla_fat
+[WARNING] 16:30:19:829 [File System]/(14659:14683): fin obtener_n_cantidad_de_bloques_libres_de_tabla_fat
+[WARNING] 16:30:19:829 [File System]/(14659:14683): inicio cargar_secuencia_de_bloques_asignados_a_tabla_fat
+[WARNING] 16:30:21:858 [File System]/(14659:14683): fin cargar_secuencia_de_bloques_asignados_a_tabla_fat
+[WARNING] 16:30:21:858 [File System]/(14659:14683): inicio asignar_mas_nro_de_bloque_a_la_secuencia_de_tabla_fat
+[WARNING] 16:30:21:859 [File System]/(14659:14683): inicio obtener_secuencia_de_bloques_de_archivo
+[WARNING] 16:30:23:889 [File System]/(14659:14683): fin obtener_secuencia_de_bloques_de_archivo
+[WARNING] 16:30:23:890 [File System]/(14659:14683): inicio obtener_n_cantidad_de_bloques_libres_de_tabla_fat
+[WARNING] 16:30:44:420 [File System]/(14659:14683): fin obtener_n_cantidad_de_bloques_libres_de_tabla_fat
+[WARNING] 16:30:46:471 [File System]/(14659:14683): fin asignar_mas_nro_de_bloque_a_la_secuencia_de_tabla_fat
+[WARNING] 16:30:46:471 [File System]/(14659:14683): inicio enviar_rta_f_truncate_a_kernel
+[WARNING] 16:30:46:471 [File System]/(14659:14683): fin enviar_rta_f_truncate_a_kernel
+[WARNING] 16:30:46:471 [File System]/(14659:14683): fin atender_f_truncate_de_kernel
+[INFO] 16:30:48:568 [File System]/(14659:14660): Se recibio algo de MEMORIA
+[WARNING] 16:30:48:568 [File System]/(14659:14660): inicio atender_pedido_de_lectura_de_pag_swap
+[WARNING] 16:30:48:568 [File System]/(14659:14660): SWAP_PAGEFAULT: <PID:1> <Nro_PAG:0> <POS_SWAP:0>
+[WARNING] 16:30:48:568 [File System]/(14659:14660): inicio obtener_bloque
+[WARNING] 16:30:50:069 [File System]/(14659:14660): fin obtener_bloque
+[WARNING] 16:30:50:069 [File System]/(14659:14660): inicio enviar_bloque_pagina_a_memoria
+[WARNING] 16:30:50:069 [File System]/(14659:14660): fin enviar_bloque_pagina_a_memoria
+[WARNING] 16:30:50:069 [File System]/(14659:14660): fin atender_pedido_de_lectura_de_pag_swap
+[ERROR] 16:30:54:709 [File System]/(14659:14662): [DESCONEXION]: KERNEL

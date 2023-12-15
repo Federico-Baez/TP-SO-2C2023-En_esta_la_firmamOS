@@ -10,7 +10,7 @@ t_list* obtener_n_cantidad_de_bloques_libres_de_tabla_fat(int cant_bloques){
 	uint32_t i = 0;
 
 	while(i<sizeArrayFat && list_size(una_lista)<cant_bloques){
-		log_info(filesystem_log_obligatorio, "Acceso FAT - Entrada: <%d> - Valor: <%d>", i, tablaFatEnMemoria[i]);
+//		log_info(filesystem_log_obligatorio, "Acceso FAT - Entrada: <%d> - Valor: <%d>", i, tablaFatEnMemoria[i]);
 		usleep(RETARDO_ACCESO_FAT*1000);
 		if(tablaFatEnMemoria[i]==0){
 			uint32_t* aux = malloc(sizeof(uint32_t));

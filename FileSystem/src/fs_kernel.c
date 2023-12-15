@@ -34,6 +34,13 @@ void atender_f_open_de_kernel(t_buffer* un_buffer){
 	log_warning(filesystem_logger, "fin atender_f_open_de_kernel");
 }
 
+static void destruir_bloques_libres(t_list* lista_bloques_libres_asignadose){
+	void __eliminar_nodo_recurso(uint32_t* un_valor){
+		free(un_valor);
+	}
+	list_destroy_and_destroy_elements(lista_bloques_libres_asignadose, (void*)__eliminar_nodo_recurso);
+}
+
 void atender_f_truncate_de_kernel(t_buffer* un_buffer){
 	log_warning(filesystem_logger, "inicio atender_f_truncate_de_kernel");
 	char* nombre_archivo = recibir_string_del_buffer(un_buffer);
@@ -45,6 +52,19 @@ void atender_f_truncate_de_kernel(t_buffer* un_buffer){
 	fcb->tamanio = tamanio_nuevo;
 
 	setear_size_de_una_fcb(fcb, tamanio_nuevo);
+
+	int cantidad_bloques = fcb->tamanio / TAM_BLOQUE;
+
+	t_list* lista_bloques_libres_asignados = obtener_n_cantidad_de_bloques_libres_de_tabla_fat(cantidad_bloques);
+	cargar_secuencia_de_bloques_asignados_a_tabla_fat(lista_bloques_libres_asignados);
+	fcb->bloque_inicial = *((int*)list_get(lista_bloques_libres_asignados, 0));
+
+	char* bloque_inicial = malloc(10);
+	sprintf(bloque_inicial, "%d", fcb->bloque_inicial);
+
+	config_set_value(fcb->archivo_fcb, "BLOQUE_INICIAL", bloque_inicial);
+	config_save(fcb->archivo_fcb);
+
 	//int diferencia_tamanio = 0;
 	int cantidad_bloques_viejos = tamanio_viejo / TAM_BLOQUE;
 	int cantidad_bloques_nuevos = tamanio_nuevo / TAM_BLOQUE;
@@ -66,8 +86,11 @@ void atender_f_truncate_de_kernel(t_buffer* un_buffer){
 	log_info(filesystem_log_obligatorio, "Truncar Archivo: %s - Tamaño: %d", nombre_archivo, tamanio_nuevo);
 	enviar_rta_f_truncate_a_kernel(pid_process);
 	free(un_buffer);
+	destruir_bloques_libres(lista_bloques_libres_asignados);
 	log_warning(filesystem_logger, "fin atender_f_truncate_de_kernel");
 }
+
+
 
 void atender_f_read_de_kernel(t_buffer* un_buffer){
 	log_warning(filesystem_logger, "inicio atender_f_read_de_kernel");

@@ -8,13 +8,9 @@ extern const uint32_t EOF_FS;
 
 typedef struct{
 	char* nombre;
-	t_config* archivo_fcb;
-}t_archivo_fcb;
-
-typedef struct{
-	char* nombre;
 	int tamanio;
 	int bloque_inicial;
+	t_config* archivo_fcb;
 }t_fcb;
 
 extern int tamanio_archivo_bloques;

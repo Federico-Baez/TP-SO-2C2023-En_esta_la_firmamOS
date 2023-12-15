@@ -1,0 +1,4 @@
+F_OPEN consolas W
+F_TRUNCATE consolas 64
+F_SEEK consolas 0
+F_WRITE consolas 0

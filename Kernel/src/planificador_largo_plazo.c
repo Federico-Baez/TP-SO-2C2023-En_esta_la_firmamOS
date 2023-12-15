@@ -2,14 +2,13 @@
 
 
 void plp_planifica(){
-//	bool llamar_pcp = false;
-
-	//Fijarse si la lista NEW tiene elementos, Si tiene elementos, sacar al 1ro
-	pthread_mutex_lock(&mutex_core);
 	t_pcb* un_pcb = NULL;
-	//sacar un elemento y agregarlo a READY solo si GMMP lo permite
+
+	pthread_mutex_lock(&mutex_core);
 	pthread_mutex_lock(&mutex_lista_new);
 	if(GRADO_MULTIPROGRAMACION_INI > procesos_en_core && !list_is_empty(lista_new)){
+		log_info(kernel_logger, "Entre al IF");
+
 		//Remover PCB de NEW si existen elementos
 		un_pcb = list_remove(lista_new, 0); //Sale por FIFO
 

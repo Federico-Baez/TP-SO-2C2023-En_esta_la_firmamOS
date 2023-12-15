@@ -22,6 +22,7 @@ int main(int argc, char** argv) {
 
 	//log_info(filesystem_logger, "Servidor listo para recibir a Kernel\n");
 
+
 	inicializar_archivos();
 
 	pthread_t hilo_kernel, hilo_memoria;
@@ -53,6 +54,7 @@ void leer_config(t_config* config){
 }
 
 void inicializar_archivos(){
+	lista_struct_fcbs = list_create();
 	crear_fat();
 	inicializar_archivo_de_bloques();
 }
@@ -126,19 +128,14 @@ void inicializar_archivo_de_bloques(){
 //}
 
 void destruir_fcb(t_fcb* fcb){
+	config_destroy(fcb->archivo_fcb);
+	free(fcb->nombre);
 	free(fcb);
-	fcb = NULL;
 }
 
-void destruir_archivo_fcb(t_archivo_fcb* archivo_fcb){
-	config_destroy(archivo_fcb->archivo_fcb);
-	free(archivo_fcb);
-	archivo_fcb = NULL;
-}
 
 void destruir_listas_fcbs(){
 	list_destroy_and_destroy_elements(lista_struct_fcbs, (void*) destruir_fcb);
-	list_destroy_and_destroy_elements(lista_configs_fcbs, (void*) destruir_archivo_fcb);
 }
 
 void finalizar_filesystem(){
@@ -147,8 +144,7 @@ void finalizar_filesystem(){
 	close(fd_archivoTablaFAT);
 	close(fd_archivoBloques);
 
-	list_destroy(lista_struct_fcbs);
-	list_destroy(lista_configs_fcbs);
+//	list_destroy(lista_struct_fcbs);
 	bitarray_destroy(bitmapSWAP);
 
 	log_destroy(filesystem_logger);
@@ -215,7 +211,7 @@ void atender_filesystem_kernel(){
 			break;
 		}
 
-		free(unBuffer); // [Ojo] controlar esto porque puede romper si libero antes
+//		free(unBuffer); // [Ojo] controlar esto porque puede romper si libero antes
 	}
 	log_info(filesystem_logger, "Saliendo del hilo de FILESYSTEM - KERNEL");
 }

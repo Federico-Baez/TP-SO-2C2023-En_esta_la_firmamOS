@@ -3584,3 +3584,716 @@
 [INFO] 07:59:30:940 [Memoria- Log obligatorio]/(36934:36945): SWAP IN - PID: <3> - Marco: <1> - Page In: <3>-<2>
 [INFO] 07:59:30:940 [Memoria- Log obligatorio]/(36934:36945): PID: <2> - Tamaño: <4>
 [INFO] 07:59:35:792 [Memoria- Log obligatorio]/(36934:36945): PID: <3> - Tamaño: <4>
+[INFO] 13:47:49:774 [Memoria- Log obligatorio]/(3392:3413): PID: <1> - Tamaño: <4>
+[INFO] 13:47:56:787 [Memoria- Log obligatorio]/(3392:3413): PID: <1> - Tamaño: <4>
+[INFO] 13:48:46:750 [Memoria- Log obligatorio]/(3392:3413): PID: <2> - Tamaño: <4>
+[INFO] 13:48:53:767 [Memoria- Log obligatorio]/(3392:3407): <PID:2> <IP:0> <SET CX 20>
+[INFO] 13:48:54:272 [Memoria- Log obligatorio]/(3392:3407): <PID:2> <IP:1> <SET AX 1>
+[INFO] 13:48:54:772 [Memoria- Log obligatorio]/(3392:3407): <PID:2> <IP:2> <MOV_OUT 0 CX>
+[WARNING] 13:48:55:274 [Memoria- Log obligatorio]/(3392:3407): PAGEFAULT <PID:2> <Pag:0>
+[INFO] 13:48:55:778 [Memoria- Log obligatorio]/(3392:3413): PID: <2> - Pagina: <0> - Marco: <0>
+[INFO] 13:48:56:279 [Memoria- Log obligatorio]/(3392:3413): SWAP IN - PID: <2> - Marco: <0> - Page In: <2>-<0>
+[INFO] 13:48:57:781 [Memoria- Log obligatorio]/(3392:3398): PID: <2> - Pagina: <0> - Marco: <0>
+[INFO] 13:48:57:781 [Memoria- Log obligatorio]/(3392:3398): PID: <2> - Accion: <ESCRIBIR> - Direccion fisica: <0>
+[INFO] 13:49:01:282 [Memoria- Log obligatorio]/(3392:3407): <PID:2> <IP:2> <MOV_OUT 0 CX>
+[INFO] 13:49:01:784 [Memoria- Log obligatorio]/(3392:3407): PID: <2> - Pagina: <0> - Marco: <0>
+[INFO] 13:49:01:785 [Memoria- Log obligatorio]/(3392:3407): PAGINA ENCONTRADA <PID:2> <Pag:0> <Marco:0>
+[INFO] 13:49:02:286 [Memoria- Log obligatorio]/(3392:3407): PID: <2> - Accion: <ESCRIBIR> - Direccion fisica: <0>
+[INFO] 13:49:02:286 [Memoria- Log obligatorio]/(3392:3407): ESCRITO <PID:2> <dir_fisi:0> <VALOR:20>
+[INFO] 13:49:02:790 [Memoria- Log obligatorio]/(3392:3407): <PID:2> <IP:3> <MOV_OUT 16 CX>
+[WARNING] 13:49:03:297 [Memoria- Log obligatorio]/(3392:3407): PAGEFAULT <PID:2> <Pag:1>
+[INFO] 13:49:03:800 [Memoria- Log obligatorio]/(3392:3413): PID: <2> - Pagina: <1> - Marco: <1>
+[INFO] 13:49:04:302 [Memoria- Log obligatorio]/(3392:3413): SWAP IN - PID: <2> - Marco: <1> - Page In: <2>-<1>
+[INFO] 13:49:05:802 [Memoria- Log obligatorio]/(3392:3398): PID: <2> - Pagina: <1> - Marco: <1>
+[INFO] 13:49:05:802 [Memoria- Log obligatorio]/(3392:3398): PID: <2> - Accion: <ESCRIBIR> - Direccion fisica: <16>
+[INFO] 13:49:09:310 [Memoria- Log obligatorio]/(3392:3407): <PID:2> <IP:3> <MOV_OUT 16 CX>
+[INFO] 13:49:09:811 [Memoria- Log obligatorio]/(3392:3407): PID: <2> - Pagina: <1> - Marco: <1>
+[INFO] 13:49:09:811 [Memoria- Log obligatorio]/(3392:3407): PAGINA ENCONTRADA <PID:2> <Pag:1> <Marco:1>
+[INFO] 13:49:10:313 [Memoria- Log obligatorio]/(3392:3407): PID: <2> - Accion: <ESCRIBIR> - Direccion fisica: <16>
+[INFO] 13:49:10:313 [Memoria- Log obligatorio]/(3392:3407): ESCRITO <PID:2> <dir_fisi:16> <VALOR:20>
+[INFO] 13:49:10:816 [Memoria- Log obligatorio]/(3392:3407): <PID:2> <IP:4> <MOV_OUT 32 CX>
+[WARNING] 13:49:11:317 [Memoria- Log obligatorio]/(3392:3407): PAGEFAULT <PID:2> <Pag:2>
+[INFO] 13:49:11:820 [Memoria- Log obligatorio]/(3392:3413): PID: <2> - Tamaño: <4>
+[INFO] 13:49:45:598 [Memoria- Log obligatorio]/(3392:3413): PID: <3> - Tamaño: <4>
+[INFO] 13:49:52:611 [Memoria- Log obligatorio]/(3392:3407): <PID:3> <IP:0> <SET AX 1>
+[INFO] 13:49:53:111 [Memoria- Log obligatorio]/(3392:3407): <PID:3> <IP:1> <SET BX 1>
+[INFO] 13:49:53:614 [Memoria- Log obligatorio]/(3392:3407): <PID:3> <IP:2> <SUM AX BX>
+[INFO] 13:49:54:116 [Memoria- Log obligatorio]/(3392:3407): <PID:3> <IP:3> <SUM AX BX>
+[INFO] 13:49:54:617 [Memoria- Log obligatorio]/(3392:3407): <PID:3> <IP:4> <SUM AX BX>
+[INFO] 13:49:55:126 [Memoria- Log obligatorio]/(3392:3407): <PID:3> <IP:5> <SUM AX BX>
+[INFO] 13:49:55:629 [Memoria- Log obligatorio]/(3392:3407): <PID:3> <IP:6> <SUM AX BX>
+[INFO] 13:49:56:130 [Memoria- Log obligatorio]/(3392:3407): <PID:3> <IP:7> <SUM AX BX>
+[INFO] 13:49:56:630 [Memoria- Log obligatorio]/(3392:3407): <PID:3> <IP:8> <SUM AX BX>
+[INFO] 13:49:57:130 [Memoria- Log obligatorio]/(3392:3407): <PID:3> <IP:9> <SUM AX BX>
+[INFO] 13:49:57:634 [Memoria- Log obligatorio]/(3392:3413): PID: <3> - Tamaño: <4>
+[INFO] 13:52:20:030 [Memoria- Log obligatorio]/(3455:3466): PID: <1> - Tamaño: <4>
+[INFO] 13:52:27:054 [Memoria- Log obligatorio]/(3455:3466): PID: <2> - Tamaño: <4>
+[INFO] 13:52:27:054 [Memoria- Log obligatorio]/(3455:3464): <PID:1> <IP:0> <SET CX 20>
+[INFO] 13:52:27:580 [Memoria- Log obligatorio]/(3455:3464): <PID:1> <IP:1> <SET AX 1>
+[INFO] 13:52:28:080 [Memoria- Log obligatorio]/(3455:3464): <PID:1> <IP:2> <MOV_OUT 0 CX>
+[WARNING] 13:52:28:609 [Memoria- Log obligatorio]/(3455:3464): PAGEFAULT <PID:1> <Pag:0>
+[INFO] 13:52:34:089 [Memoria- Log obligatorio]/(3455:3466): PID: <1> - Pagina: <0> - Marco: <0>
+[INFO] 13:52:34:090 [Memoria- Log obligatorio]/(3455:3464): <PID:2> <IP:0> <SET CX 20>
+[INFO] 13:52:34:590 [Memoria- Log obligatorio]/(3455:3466): SWAP IN - PID: <1> - Marco: <0> - Page In: <1>-<0>
+[INFO] 13:52:34:590 [Memoria- Log obligatorio]/(3455:3466): PID: <3> - Tamaño: <4>
+[INFO] 13:52:34:590 [Memoria- Log obligatorio]/(3455:3464): <PID:2> <IP:1> <SET AX 1>
+[INFO] 13:52:35:091 [Memoria- Log obligatorio]/(3455:3464): <PID:2> <IP:2> <MOV_OUT 0 CX>
+[WARNING] 13:52:35:594 [Memoria- Log obligatorio]/(3455:3464): PAGEFAULT <PID:2> <Pag:0>
+[INFO] 13:52:36:091 [Memoria- Log obligatorio]/(3455:3457): PID: <1> - Pagina: <0> - Marco: <0>
+[INFO] 13:52:36:091 [Memoria- Log obligatorio]/(3455:3457): PID: <1> - Accion: <ESCRIBIR> - Direccion fisica: <0>
+[INFO] 13:52:39:593 [Memoria- Log obligatorio]/(3455:3464): <PID:1> <IP:2> <MOV_OUT 0 CX>
+[INFO] 13:52:40:098 [Memoria- Log obligatorio]/(3455:3464): PID: <1> - Pagina: <0> - Marco: <0>
+[INFO] 13:52:40:098 [Memoria- Log obligatorio]/(3455:3464): PAGINA ENCONTRADA <PID:1> <Pag:0> <Marco:0>
+[INFO] 13:52:40:599 [Memoria- Log obligatorio]/(3455:3464): PID: <1> - Accion: <ESCRIBIR> - Direccion fisica: <0>
+[INFO] 13:52:40:599 [Memoria- Log obligatorio]/(3455:3464): ESCRITO <PID:1> <dir_fisi:0> <VALOR:20>
+[INFO] 13:52:41:106 [Memoria- Log obligatorio]/(3455:3464): <PID:1> <IP:3> <MOV_OUT 16 CX>
+[WARNING] 13:52:41:608 [Memoria- Log obligatorio]/(3455:3464): PAGEFAULT <PID:1> <Pag:1>
+[INFO] 13:52:42:600 [Memoria- Log obligatorio]/(3455:3466): PID: <2> - Pagina: <0> - Marco: <1>
+[INFO] 13:52:42:600 [Memoria- Log obligatorio]/(3455:3464): <PID:3> <IP:0> <SET CX 20>
+[INFO] 13:52:43:102 [Memoria- Log obligatorio]/(3455:3466): SWAP IN - PID: <2> - Marco: <1> - Page In: <2>-<0>
+[INFO] 13:52:43:102 [Memoria- Log obligatorio]/(3455:3464): <PID:3> <IP:1> <SET AX 1>
+[INFO] 13:52:43:103 [Memoria- Log obligatorio]/(3455:3466): PID: <4> - Tamaño: <4>
+[INFO] 13:52:43:603 [Memoria- Log obligatorio]/(3455:3464): <PID:3> <IP:2> <MOV_OUT 0 CX>
+[WARNING] 13:52:44:106 [Memoria- Log obligatorio]/(3455:3464): PAGEFAULT <PID:3> <Pag:0>
+[INFO] 13:52:44:604 [Memoria- Log obligatorio]/(3455:3457): PID: <2> - Pagina: <0> - Marco: <1>
+[INFO] 13:52:44:604 [Memoria- Log obligatorio]/(3455:3457): PID: <2> - Accion: <ESCRIBIR> - Direccion fisica: <16>
+[INFO] 13:52:48:111 [Memoria- Log obligatorio]/(3455:3464): <PID:2> <IP:2> <MOV_OUT 0 CX>
+[INFO] 13:52:48:612 [Memoria- Log obligatorio]/(3455:3464): PID: <2> - Pagina: <0> - Marco: <1>
+[INFO] 13:52:48:612 [Memoria- Log obligatorio]/(3455:3464): PAGINA ENCONTRADA <PID:2> <Pag:0> <Marco:1>
+[INFO] 13:52:49:113 [Memoria- Log obligatorio]/(3455:3464): PID: <2> - Accion: <ESCRIBIR> - Direccion fisica: <16>
+[INFO] 13:52:49:113 [Memoria- Log obligatorio]/(3455:3464): ESCRITO <PID:2> <dir_fisi:16> <VALOR:20>
+[INFO] 13:52:49:614 [Memoria- Log obligatorio]/(3455:3464): <PID:2> <IP:3> <MOV_OUT 16 CX>
+[WARNING] 13:52:50:154 [Memoria- Log obligatorio]/(3455:3464): PAGEFAULT <PID:2> <Pag:1>
+[INFO] 13:52:51:126 [Memoria- Log obligatorio]/(3455:3466): PID: <1> - Pagina: <1> - Marco: <2>
+[INFO] 13:52:51:128 [Memoria- Log obligatorio]/(3455:3464): <PID:4> <IP:0> <SET CX 20>
+[INFO] 13:52:51:628 [Memoria- Log obligatorio]/(3455:3466): SWAP IN - PID: <1> - Marco: <2> - Page In: <1>-<1>
+[INFO] 13:52:51:629 [Memoria- Log obligatorio]/(3455:3464): <PID:4> <IP:1> <SET AX 1>
+[INFO] 13:52:52:131 [Memoria- Log obligatorio]/(3455:3464): <PID:4> <IP:2> <MOV_OUT 0 CX>
+[WARNING] 13:52:52:636 [Memoria- Log obligatorio]/(3455:3464): PAGEFAULT <PID:4> <Pag:0>
+[INFO] 13:52:53:131 [Memoria- Log obligatorio]/(3455:3457): PID: <1> - Pagina: <1> - Marco: <2>
+[INFO] 13:52:53:131 [Memoria- Log obligatorio]/(3455:3457): PID: <1> - Accion: <ESCRIBIR> - Direccion fisica: <32>
+[INFO] 13:52:56:634 [Memoria- Log obligatorio]/(3455:3466): PID: <3> - Pagina: <0> - Marco: <3>
+[INFO] 13:52:56:634 [Memoria- Log obligatorio]/(3455:3464): <PID:1> <IP:3> <MOV_OUT 16 CX>
+[INFO] 13:52:57:134 [Memoria- Log obligatorio]/(3455:3466): SWAP IN - PID: <3> - Marco: <3> - Page In: <3>-<0>
+[INFO] 13:52:57:135 [Memoria- Log obligatorio]/(3455:3464): PID: <1> - Pagina: <1> - Marco: <2>
+[INFO] 13:52:57:135 [Memoria- Log obligatorio]/(3455:3464): PAGINA ENCONTRADA <PID:1> <Pag:1> <Marco:2>
+[INFO] 13:52:57:636 [Memoria- Log obligatorio]/(3455:3464): PID: <1> - Accion: <ESCRIBIR> - Direccion fisica: <32>
+[INFO] 13:52:57:636 [Memoria- Log obligatorio]/(3455:3464): ESCRITO <PID:1> <dir_fisi:32> <VALOR:20>
+[INFO] 13:52:58:138 [Memoria- Log obligatorio]/(3455:3464): <PID:1> <IP:4> <MOV_OUT 32 CX>
+[INFO] 13:52:58:643 [Memoria- Log obligatorio]/(3455:3457): PID: <3> - Pagina: <0> - Marco: <3>
+[INFO] 13:52:58:643 [Memoria- Log obligatorio]/(3455:3457): PID: <3> - Accion: <ESCRIBIR> - Direccion fisica: <48>
+[WARNING] 13:52:58:644 [Memoria- Log obligatorio]/(3455:3464): PAGEFAULT <PID:1> <Pag:2>
+[INFO] 13:53:02:155 [Memoria- Log obligatorio]/(3455:3466): PID: <1> - Pagina: <0> - Marco: <0>
+[INFO] 13:53:02:155 [Memoria- Log obligatorio]/(3455:3466): PID: <2> - Pagina: <1> - Marco: <0>
+[INFO] 13:53:02:155 [Memoria- Log obligatorio]/(3455:3464): <PID:3> <IP:2> <MOV_OUT 0 CX>
+[INFO] 13:53:02:660 [Memoria- Log obligatorio]/(3455:3466): SWAP IN - PID: <2> - Marco: <0> - Page In: <2>-<1>
+[INFO] 13:53:02:660 [Memoria- Log obligatorio]/(3455:3466): REEMPLAZO - Marco: <0> - Page Out: <1>-<0> - Page In: <2>-<1>
+[INFO] 13:53:02:660 [Memoria- Log obligatorio]/(3455:3464): PID: <3> - Pagina: <0> - Marco: <3>
+[INFO] 13:53:02:660 [Memoria- Log obligatorio]/(3455:3464): PAGINA ENCONTRADA <PID:3> <Pag:0> <Marco:3>
+[INFO] 13:53:03:172 [Memoria- Log obligatorio]/(3455:3464): PID: <3> - Accion: <ESCRIBIR> - Direccion fisica: <48>
+[INFO] 13:53:03:172 [Memoria- Log obligatorio]/(3455:3464): ESCRITO <PID:3> <dir_fisi:48> <VALOR:20>
+[INFO] 13:53:03:676 [Memoria- Log obligatorio]/(3455:3464): <PID:3> <IP:3> <MOV_OUT 16 CX>
+[INFO] 13:53:04:161 [Memoria- Log obligatorio]/(3455:3457): PID: <2> - Pagina: <1> - Marco: <0>
+[INFO] 13:53:04:161 [Memoria- Log obligatorio]/(3455:3457): PID: <2> - Accion: <ESCRIBIR> - Direccion fisica: <0>
+[WARNING] 13:53:04:176 [Memoria- Log obligatorio]/(3455:3464): PAGEFAULT <PID:3> <Pag:1>
+[INFO] 13:53:07:663 [Memoria- Log obligatorio]/(3455:3466): PID: <2> - Pagina: <0> - Marco: <1>
+[INFO] 13:53:07:663 [Memoria- Log obligatorio]/(3455:3466): PID: <4> - Pagina: <0> - Marco: <1>
+[INFO] 13:53:07:663 [Memoria- Log obligatorio]/(3455:3464): <PID:2> <IP:3> <MOV_OUT 16 CX>
+[INFO] 13:53:08:163 [Memoria- Log obligatorio]/(3455:3466): SWAP IN - PID: <4> - Marco: <1> - Page In: <4>-<0>
+[INFO] 13:53:08:163 [Memoria- Log obligatorio]/(3455:3466): REEMPLAZO - Marco: <1> - Page Out: <2>-<0> - Page In: <4>-<0>
+[INFO] 13:53:08:164 [Memoria- Log obligatorio]/(3455:3464): PID: <2> - Pagina: <1> - Marco: <0>
+[INFO] 13:53:08:164 [Memoria- Log obligatorio]/(3455:3464): PAGINA ENCONTRADA <PID:2> <Pag:1> <Marco:0>
+[INFO] 13:53:08:666 [Memoria- Log obligatorio]/(3455:3464): PID: <2> - Accion: <ESCRIBIR> - Direccion fisica: <0>
+[INFO] 13:53:08:666 [Memoria- Log obligatorio]/(3455:3464): ESCRITO <PID:2> <dir_fisi:0> <VALOR:20>
+[INFO] 13:53:09:187 [Memoria- Log obligatorio]/(3455:3464): <PID:2> <IP:4> <MOV_OUT 32 CX>
+[INFO] 13:53:09:668 [Memoria- Log obligatorio]/(3455:3457): PID: <4> - Pagina: <0> - Marco: <1>
+[INFO] 13:53:09:668 [Memoria- Log obligatorio]/(3455:3457): PID: <4> - Accion: <ESCRIBIR> - Direccion fisica: <16>
+[WARNING] 13:53:09:688 [Memoria- Log obligatorio]/(3455:3464): PAGEFAULT <PID:2> <Pag:2>
+[INFO] 13:53:13:170 [Memoria- Log obligatorio]/(3455:3466): PID: <1> - Pagina: <1> - Marco: <2>
+[INFO] 13:53:13:171 [Memoria- Log obligatorio]/(3455:3466): PID: <1> - Pagina: <2> - Marco: <2>
+[INFO] 13:53:13:171 [Memoria- Log obligatorio]/(3455:3464): <PID:4> <IP:2> <MOV_OUT 0 CX>
+[INFO] 13:53:13:671 [Memoria- Log obligatorio]/(3455:3466): SWAP IN - PID: <1> - Marco: <2> - Page In: <1>-<2>
+[INFO] 13:53:13:671 [Memoria- Log obligatorio]/(3455:3466): REEMPLAZO - Marco: <2> - Page Out: <1>-<1> - Page In: <1>-<2>
+[INFO] 13:53:13:671 [Memoria- Log obligatorio]/(3455:3464): PID: <4> - Pagina: <0> - Marco: <1>
+[INFO] 13:53:13:671 [Memoria- Log obligatorio]/(3455:3464): PAGINA ENCONTRADA <PID:4> <Pag:0> <Marco:1>
+[INFO] 13:53:14:176 [Memoria- Log obligatorio]/(3455:3464): PID: <4> - Accion: <ESCRIBIR> - Direccion fisica: <16>
+[INFO] 13:53:14:176 [Memoria- Log obligatorio]/(3455:3464): ESCRITO <PID:4> <dir_fisi:16> <VALOR:20>
+[INFO] 13:53:14:677 [Memoria- Log obligatorio]/(3455:3464): <PID:4> <IP:3> <MOV_OUT 16 CX>
+[INFO] 13:53:15:175 [Memoria- Log obligatorio]/(3455:3457): PID: <1> - Pagina: <2> - Marco: <2>
+[INFO] 13:53:15:175 [Memoria- Log obligatorio]/(3455:3457): PID: <1> - Accion: <ESCRIBIR> - Direccion fisica: <32>
+[WARNING] 13:53:15:178 [Memoria- Log obligatorio]/(3455:3464): PAGEFAULT <PID:4> <Pag:1>
+[INFO] 13:53:18:679 [Memoria- Log obligatorio]/(3455:3466): PID: <3> - Pagina: <0> - Marco: <3>
+[INFO] 13:53:18:679 [Memoria- Log obligatorio]/(3455:3466): PID: <3> - Pagina: <1> - Marco: <3>
+[INFO] 13:53:18:679 [Memoria- Log obligatorio]/(3455:3464): <PID:1> <IP:4> <MOV_OUT 32 CX>
+[INFO] 13:53:19:180 [Memoria- Log obligatorio]/(3455:3466): SWAP IN - PID: <3> - Marco: <3> - Page In: <3>-<1>
+[INFO] 13:53:19:180 [Memoria- Log obligatorio]/(3455:3466): REEMPLAZO - Marco: <3> - Page Out: <3>-<0> - Page In: <3>-<1>
+[INFO] 13:53:19:180 [Memoria- Log obligatorio]/(3455:3464): PID: <1> - Pagina: <2> - Marco: <2>
+[INFO] 13:53:19:180 [Memoria- Log obligatorio]/(3455:3464): PAGINA ENCONTRADA <PID:1> <Pag:2> <Marco:2>
+[INFO] 13:53:19:683 [Memoria- Log obligatorio]/(3455:3464): PID: <1> - Accion: <ESCRIBIR> - Direccion fisica: <32>
+[INFO] 13:53:19:683 [Memoria- Log obligatorio]/(3455:3464): ESCRITO <PID:1> <dir_fisi:32> <VALOR:20>
+[INFO] 13:53:20:184 [Memoria- Log obligatorio]/(3455:3464): <PID:1> <IP:5> <MOV_OUT 48 CX>
+[INFO] 13:53:20:680 [Memoria- Log obligatorio]/(3455:3457): PID: <3> - Pagina: <1> - Marco: <3>
+[INFO] 13:53:20:680 [Memoria- Log obligatorio]/(3455:3457): PID: <3> - Accion: <ESCRIBIR> - Direccion fisica: <48>
+[WARNING] 13:53:20:686 [Memoria- Log obligatorio]/(3455:3464): PAGEFAULT <PID:1> <Pag:3>
+[INFO] 13:53:24:184 [Memoria- Log obligatorio]/(3455:3466): PID: <2> - Pagina: <1> - Marco: <0>
+[INFO] 13:53:24:184 [Memoria- Log obligatorio]/(3455:3466): PID: <2> - Pagina: <2> - Marco: <0>
+[INFO] 13:53:24:184 [Memoria- Log obligatorio]/(3455:3464): <PID:3> <IP:3> <MOV_OUT 16 CX>
+[INFO] 13:53:24:690 [Memoria- Log obligatorio]/(3455:3466): SWAP IN - PID: <2> - Marco: <0> - Page In: <2>-<2>
+[INFO] 13:53:24:690 [Memoria- Log obligatorio]/(3455:3466): REEMPLAZO - Marco: <0> - Page Out: <2>-<1> - Page In: <2>-<2>
+[INFO] 13:53:24:691 [Memoria- Log obligatorio]/(3455:3464): PID: <3> - Pagina: <1> - Marco: <3>
+[INFO] 13:53:24:691 [Memoria- Log obligatorio]/(3455:3464): PAGINA ENCONTRADA <PID:3> <Pag:1> <Marco:3>
+[INFO] 13:53:25:201 [Memoria- Log obligatorio]/(3455:3464): PID: <3> - Accion: <ESCRIBIR> - Direccion fisica: <48>
+[INFO] 13:53:25:201 [Memoria- Log obligatorio]/(3455:3464): ESCRITO <PID:3> <dir_fisi:48> <VALOR:20>
+[INFO] 13:53:25:703 [Memoria- Log obligatorio]/(3455:3464): <PID:3> <IP:4> <MOV_OUT 32 CX>
+[INFO] 13:53:26:228 [Memoria- Log obligatorio]/(3455:3457): PID: <2> - Pagina: <2> - Marco: <0>
+[INFO] 13:53:26:228 [Memoria- Log obligatorio]/(3455:3457): PID: <2> - Accion: <ESCRIBIR> - Direccion fisica: <0>
+[WARNING] 13:53:26:228 [Memoria- Log obligatorio]/(3455:3464): PAGEFAULT <PID:3> <Pag:2>
+[INFO] 13:53:29:729 [Memoria- Log obligatorio]/(3455:3466): PID: <4> - Pagina: <0> - Marco: <1>
+[INFO] 13:53:29:729 [Memoria- Log obligatorio]/(3455:3466): PID: <4> - Pagina: <1> - Marco: <1>
+[INFO] 13:53:29:730 [Memoria- Log obligatorio]/(3455:3464): <PID:2> <IP:4> <MOV_OUT 32 CX>
+[INFO] 13:53:30:235 [Memoria- Log obligatorio]/(3455:3466): SWAP IN - PID: <4> - Marco: <1> - Page In: <4>-<1>
+[INFO] 13:53:30:235 [Memoria- Log obligatorio]/(3455:3466): REEMPLAZO - Marco: <1> - Page Out: <4>-<0> - Page In: <4>-<1>
+[INFO] 13:53:30:235 [Memoria- Log obligatorio]/(3455:3464): PID: <2> - Pagina: <2> - Marco: <0>
+[INFO] 13:53:30:235 [Memoria- Log obligatorio]/(3455:3464): PAGINA ENCONTRADA <PID:2> <Pag:2> <Marco:0>
+[INFO] 13:53:30:744 [Memoria- Log obligatorio]/(3455:3464): PID: <2> - Accion: <ESCRIBIR> - Direccion fisica: <0>
+[INFO] 13:53:30:744 [Memoria- Log obligatorio]/(3455:3464): ESCRITO <PID:2> <dir_fisi:0> <VALOR:20>
+[INFO] 13:53:31:245 [Memoria- Log obligatorio]/(3455:3464): <PID:2> <IP:5> <MOV_OUT 48 CX>
+[INFO] 13:53:31:736 [Memoria- Log obligatorio]/(3455:3457): PID: <4> - Pagina: <1> - Marco: <1>
+[INFO] 13:53:31:736 [Memoria- Log obligatorio]/(3455:3457): PID: <4> - Accion: <ESCRIBIR> - Direccion fisica: <16>
+[WARNING] 13:53:31:746 [Memoria- Log obligatorio]/(3455:3464): PAGEFAULT <PID:2> <Pag:3>
+[INFO] 13:53:35:239 [Memoria- Log obligatorio]/(3455:3466): PID: <1> - Pagina: <2> - Marco: <2>
+[INFO] 13:53:35:239 [Memoria- Log obligatorio]/(3455:3466): PID: <1> - Pagina: <3> - Marco: <2>
+[INFO] 13:53:35:239 [Memoria- Log obligatorio]/(3455:3464): <PID:4> <IP:3> <MOV_OUT 16 CX>
+[INFO] 13:53:35:740 [Memoria- Log obligatorio]/(3455:3466): SWAP IN - PID: <1> - Marco: <2> - Page In: <1>-<3>
+[INFO] 13:53:35:740 [Memoria- Log obligatorio]/(3455:3466): REEMPLAZO - Marco: <2> - Page Out: <1>-<2> - Page In: <1>-<3>
+[INFO] 13:53:35:740 [Memoria- Log obligatorio]/(3455:3464): PID: <4> - Pagina: <1> - Marco: <1>
+[INFO] 13:53:35:740 [Memoria- Log obligatorio]/(3455:3464): PAGINA ENCONTRADA <PID:4> <Pag:1> <Marco:1>
+[INFO] 13:53:36:241 [Memoria- Log obligatorio]/(3455:3464): PID: <4> - Accion: <ESCRIBIR> - Direccion fisica: <16>
+[INFO] 13:53:36:241 [Memoria- Log obligatorio]/(3455:3464): ESCRITO <PID:4> <dir_fisi:16> <VALOR:20>
+[INFO] 13:53:36:742 [Memoria- Log obligatorio]/(3455:3464): <PID:4> <IP:4> <MOV_OUT 32 CX>
+[INFO] 13:53:37:240 [Memoria- Log obligatorio]/(3455:3457): PID: <1> - Pagina: <3> - Marco: <2>
+[INFO] 13:53:37:240 [Memoria- Log obligatorio]/(3455:3457): PID: <1> - Accion: <ESCRIBIR> - Direccion fisica: <32>
+[WARNING] 13:53:37:243 [Memoria- Log obligatorio]/(3455:3464): PAGEFAULT <PID:4> <Pag:2>
+[INFO] 13:53:40:742 [Memoria- Log obligatorio]/(3455:3466): PID: <3> - Pagina: <1> - Marco: <3>
+[INFO] 13:53:40:742 [Memoria- Log obligatorio]/(3455:3466): PID: <3> - Pagina: <2> - Marco: <3>
+[INFO] 13:53:40:742 [Memoria- Log obligatorio]/(3455:3464): <PID:1> <IP:5> <MOV_OUT 48 CX>
+[INFO] 13:53:41:244 [Memoria- Log obligatorio]/(3455:3464): PID: <1> - Pagina: <3> - Marco: <2>
+[INFO] 13:53:41:244 [Memoria- Log obligatorio]/(3455:3466): SWAP IN - PID: <3> - Marco: <3> - Page In: <3>-<2>
+[INFO] 13:53:41:244 [Memoria- Log obligatorio]/(3455:3466): REEMPLAZO - Marco: <3> - Page Out: <3>-<1> - Page In: <3>-<2>
+[INFO] 13:53:41:244 [Memoria- Log obligatorio]/(3455:3464): PAGINA ENCONTRADA <PID:1> <Pag:3> <Marco:2>
+[INFO] 13:53:41:745 [Memoria- Log obligatorio]/(3455:3464): PID: <1> - Accion: <ESCRIBIR> - Direccion fisica: <32>
+[INFO] 13:53:41:745 [Memoria- Log obligatorio]/(3455:3464): ESCRITO <PID:1> <dir_fisi:32> <VALOR:20>
+[INFO] 13:53:42:250 [Memoria- Log obligatorio]/(3455:3464): <PID:1> <IP:6> <SUB CX AX>
+[INFO] 13:53:42:750 [Memoria- Log obligatorio]/(3455:3457): PID: <3> - Pagina: <2> - Marco: <3>
+[INFO] 13:53:42:750 [Memoria- Log obligatorio]/(3455:3457): PID: <3> - Accion: <ESCRIBIR> - Direccion fisica: <48>
+[INFO] 13:53:42:751 [Memoria- Log obligatorio]/(3455:3464): <PID:1> <IP:7> <JNZ CX 2>
+[INFO] 13:53:43:331 [Memoria- Log obligatorio]/(3455:3464): <PID:1> <IP:2> <MOV_OUT 0 CX>
+[WARNING] 13:53:43:835 [Memoria- Log obligatorio]/(3455:3464): PAGEFAULT <PID:1> <Pag:0>
+[INFO] 13:53:46:252 [Memoria- Log obligatorio]/(3455:3466): PID: <2> - Pagina: <2> - Marco: <0>
+[INFO] 13:53:46:253 [Memoria- Log obligatorio]/(3455:3464): <PID:3> <IP:4> <MOV_OUT 32 CX>
+[INFO] 13:53:46:254 [Memoria- Log obligatorio]/(3455:3466): PID: <2> - Pagina: <3> - Marco: <0>
+[INFO] 13:53:46:755 [Memoria- Log obligatorio]/(3455:3464): PID: <3> - Pagina: <2> - Marco: <3>
+[INFO] 13:53:46:755 [Memoria- Log obligatorio]/(3455:3464): PAGINA ENCONTRADA <PID:3> <Pag:2> <Marco:3>
+[INFO] 13:53:46:755 [Memoria- Log obligatorio]/(3455:3466): SWAP IN - PID: <2> - Marco: <0> - Page In: <2>-<3>
+[INFO] 13:53:46:755 [Memoria- Log obligatorio]/(3455:3466): REEMPLAZO - Marco: <0> - Page Out: <2>-<2> - Page In: <2>-<3>
+[INFO] 13:53:47:255 [Memoria- Log obligatorio]/(3455:3464): PID: <3> - Accion: <ESCRIBIR> - Direccion fisica: <48>
+[INFO] 13:53:47:255 [Memoria- Log obligatorio]/(3455:3464): ESCRITO <PID:3> <dir_fisi:48> <VALOR:20>
+[INFO] 13:53:47:756 [Memoria- Log obligatorio]/(3455:3464): <PID:3> <IP:5> <MOV_OUT 48 CX>
+[WARNING] 13:53:48:258 [Memoria- Log obligatorio]/(3455:3464): PAGEFAULT <PID:3> <Pag:3>
+[INFO] 13:53:48:259 [Memoria- Log obligatorio]/(3455:3457): PID: <2> - Pagina: <3> - Marco: <0>
+[INFO] 13:53:48:259 [Memoria- Log obligatorio]/(3455:3457): PID: <2> - Accion: <ESCRIBIR> - Direccion fisica: <0>
+[INFO] 13:53:51:770 [Memoria- Log obligatorio]/(3455:3466): PID: <4> - Pagina: <1> - Marco: <1>
+[INFO] 13:53:51:770 [Memoria- Log obligatorio]/(3455:3466): PID: <4> - Pagina: <2> - Marco: <1>
+[INFO] 13:53:51:770 [Memoria- Log obligatorio]/(3455:3464): <PID:2> <IP:5> <MOV_OUT 48 CX>
+[INFO] 13:53:52:271 [Memoria- Log obligatorio]/(3455:3464): PID: <2> - Pagina: <3> - Marco: <0>
+[INFO] 13:53:52:271 [Memoria- Log obligatorio]/(3455:3464): PAGINA ENCONTRADA <PID:2> <Pag:3> <Marco:0>
+[INFO] 13:53:52:274 [Memoria- Log obligatorio]/(3455:3466): SWAP IN - PID: <4> - Marco: <1> - Page In: <4>-<2>
+[INFO] 13:53:52:274 [Memoria- Log obligatorio]/(3455:3466): REEMPLAZO - Marco: <1> - Page Out: <4>-<1> - Page In: <4>-<2>
+[INFO] 13:53:52:771 [Memoria- Log obligatorio]/(3455:3464): PID: <2> - Accion: <ESCRIBIR> - Direccion fisica: <0>
+[INFO] 13:53:52:771 [Memoria- Log obligatorio]/(3455:3464): ESCRITO <PID:2> <dir_fisi:0> <VALOR:20>
+[INFO] 13:53:53:284 [Memoria- Log obligatorio]/(3455:3464): <PID:2> <IP:6> <SUB CX AX>
+[INFO] 13:53:53:775 [Memoria- Log obligatorio]/(3455:3457): PID: <4> - Pagina: <2> - Marco: <1>
+[INFO] 13:53:53:775 [Memoria- Log obligatorio]/(3455:3457): PID: <4> - Accion: <ESCRIBIR> - Direccion fisica: <16>
+[INFO] 13:53:53:786 [Memoria- Log obligatorio]/(3455:3464): <PID:2> <IP:7> <JNZ CX 2>
+[INFO] 13:53:54:287 [Memoria- Log obligatorio]/(3455:3464): <PID:2> <IP:2> <MOV_OUT 0 CX>
+[WARNING] 13:53:54:842 [Memoria- Log obligatorio]/(3455:3464): PAGEFAULT <PID:2> <Pag:0>
+[INFO] 13:53:57:279 [Memoria- Log obligatorio]/(3455:3466): PID: <1> - Pagina: <3> - Marco: <2>
+[INFO] 13:53:57:279 [Memoria- Log obligatorio]/(3455:3466): PID: <1> - Pagina: <0> - Marco: <2>
+[INFO] 13:53:57:780 [Memoria- Log obligatorio]/(3455:3466): SWAP IN - PID: <1> - Marco: <2> - Page In: <1>-<0>
+[INFO] 13:53:57:780 [Memoria- Log obligatorio]/(3455:3466): REEMPLAZO - Marco: <2> - Page Out: <1>-<3> - Page In: <1>-<0>
+[INFO] 13:53:59:281 [Memoria- Log obligatorio]/(3455:3457): PID: <1> - Pagina: <0> - Marco: <2>
+[INFO] 13:53:59:281 [Memoria- Log obligatorio]/(3455:3457): PID: <1> - Accion: <ESCRIBIR> - Direccion fisica: <32>
+[INFO] 13:54:02:784 [Memoria- Log obligatorio]/(3455:3466): PID: <3> - Pagina: <2> - Marco: <3>
+[INFO] 13:54:02:784 [Memoria- Log obligatorio]/(3455:3466): PID: <3> - Pagina: <3> - Marco: <3>
+[INFO] 13:54:03:286 [Memoria- Log obligatorio]/(3455:3466): SWAP IN - PID: <3> - Marco: <3> - Page In: <3>-<3>
+[INFO] 13:54:03:286 [Memoria- Log obligatorio]/(3455:3466): REEMPLAZO - Marco: <3> - Page Out: <3>-<2> - Page In: <3>-<3>
+[INFO] 13:54:04:786 [Memoria- Log obligatorio]/(3455:3457): PID: <3> - Pagina: <3> - Marco: <3>
+[INFO] 13:54:04:786 [Memoria- Log obligatorio]/(3455:3457): PID: <3> - Accion: <ESCRIBIR> - Direccion fisica: <48>
+[INFO] 13:55:17:322 [Memoria- Log obligatorio]/(3455:3466): PID: <2> - Pagina: <3> - Marco: <0>
+[INFO] 13:55:17:322 [Memoria- Log obligatorio]/(3455:3466): PID: <2> - Pagina: <0> - Marco: <0>
+[INFO] 13:55:17:844 [Memoria- Log obligatorio]/(3455:3466): SWAP IN - PID: <2> - Marco: <0> - Page In: <2>-<0>
+[INFO] 13:55:17:844 [Memoria- Log obligatorio]/(3455:3466): REEMPLAZO - Marco: <0> - Page Out: <2>-<3> - Page In: <2>-<0>
+[INFO] 13:55:17:844 [Memoria- Log obligatorio]/(3455:3466): PID: <3> - Tamaño: <4>
+[INFO] 13:55:18:345 [Memoria- Log obligatorio]/(3455:3466): PID: <4> - Tamaño: <4>
+[INFO] 13:55:18:846 [Memoria- Log obligatorio]/(3455:3466): PID: <1> - Tamaño: <4>
+[INFO] 13:55:19:346 [Memoria- Log obligatorio]/(3455:3457): PID: <2> - Pagina: <0> - Marco: <0>
+[INFO] 13:55:19:346 [Memoria- Log obligatorio]/(3455:3457): PID: <2> - Accion: <ESCRIBIR> - Direccion fisica: <0>
+[INFO] 13:55:20:268 [Memoria- Log obligatorio]/(3455:3466): PID: <2> - Tamaño: <4>
+[INFO] 14:02:38:177 [Memoria- Log obligatorio]/(4399:4410): PID: <1> - Tamaño: <4>
+[INFO] 14:02:45:181 [Memoria- Log obligatorio]/(4399:4410): PID: <2> - Tamaño: <4>
+[INFO] 14:02:45:181 [Memoria- Log obligatorio]/(4399:4408): <PID:1> <IP:0> <SET CX 20>
+[INFO] 14:02:45:713 [Memoria- Log obligatorio]/(4399:4408): <PID:1> <IP:1> <SET AX 1>
+[INFO] 14:02:46:214 [Memoria- Log obligatorio]/(4399:4408): <PID:1> <IP:2> <MOV_OUT 0 CX>
+[WARNING] 14:02:46:718 [Memoria- Log obligatorio]/(4399:4408): PAGEFAULT <PID:1> <Pag:0>
+[INFO] 14:02:52:237 [Memoria- Log obligatorio]/(4399:4410): PID: <1> - Pagina: <0> - Marco: <0>
+[INFO] 14:02:52:237 [Memoria- Log obligatorio]/(4399:4408): <PID:2> <IP:0> <SET CX 20>
+[INFO] 14:02:52:738 [Memoria- Log obligatorio]/(4399:4410): SWAP IN - PID: <1> - Marco: <0> - Page In: <1>-<0>
+[INFO] 14:02:52:738 [Memoria- Log obligatorio]/(4399:4410): PID: <3> - Tamaño: <4>
+[INFO] 14:02:52:738 [Memoria- Log obligatorio]/(4399:4408): <PID:2> <IP:1> <SET AX 1>
+[INFO] 14:02:53:251 [Memoria- Log obligatorio]/(4399:4408): <PID:2> <IP:2> <MOV_OUT 0 CX>
+[WARNING] 14:02:53:752 [Memoria- Log obligatorio]/(4399:4408): PAGEFAULT <PID:2> <Pag:0>
+[INFO] 14:02:54:262 [Memoria- Log obligatorio]/(4399:4401): PID: <1> - Pagina: <0> - Marco: <0>
+[INFO] 14:02:54:262 [Memoria- Log obligatorio]/(4399:4401): PID: <1> - Accion: <ESCRIBIR> - Direccion fisica: <0>
+[INFO] 14:02:57:767 [Memoria- Log obligatorio]/(4399:4408): <PID:1> <IP:2> <MOV_OUT 0 CX>
+[INFO] 14:02:58:309 [Memoria- Log obligatorio]/(4399:4408): PID: <1> - Pagina: <0> - Marco: <0>
+[INFO] 14:02:58:309 [Memoria- Log obligatorio]/(4399:4408): PAGINA ENCONTRADA <PID:1> <Pag:0> <Marco:0>
+[INFO] 14:02:58:823 [Memoria- Log obligatorio]/(4399:4408): PID: <1> - Accion: <ESCRIBIR> - Direccion fisica: <0>
+[INFO] 14:02:58:823 [Memoria- Log obligatorio]/(4399:4408): ESCRITO <PID:1> <dir_fisi:0> <VALOR:20>
+[INFO] 14:02:59:333 [Memoria- Log obligatorio]/(4399:4408): <PID:1> <IP:3> <MOV_OUT 16 CX>
+[WARNING] 14:02:59:836 [Memoria- Log obligatorio]/(4399:4408): PAGEFAULT <PID:1> <Pag:1>
+[INFO] 14:03:00:835 [Memoria- Log obligatorio]/(4399:4410): PID: <2> - Pagina: <0> - Marco: <1>
+[INFO] 14:03:00:836 [Memoria- Log obligatorio]/(4399:4408): <PID:3> <IP:0> <SET CX 20>
+[INFO] 14:03:01:338 [Memoria- Log obligatorio]/(4399:4410): SWAP IN - PID: <2> - Marco: <1> - Page In: <2>-<0>
+[INFO] 14:03:01:338 [Memoria- Log obligatorio]/(4399:4410): PID: <4> - Tamaño: <4>
+[INFO] 14:03:01:338 [Memoria- Log obligatorio]/(4399:4408): <PID:3> <IP:1> <SET AX 1>
+[INFO] 14:03:01:839 [Memoria- Log obligatorio]/(4399:4408): <PID:3> <IP:2> <MOV_OUT 0 CX>
+[WARNING] 14:03:02:341 [Memoria- Log obligatorio]/(4399:4408): PAGEFAULT <PID:3> <Pag:0>
+[INFO] 14:03:02:842 [Memoria- Log obligatorio]/(4399:4401): PID: <2> - Pagina: <0> - Marco: <1>
+[INFO] 14:03:02:842 [Memoria- Log obligatorio]/(4399:4401): PID: <2> - Accion: <ESCRIBIR> - Direccion fisica: <16>
+[INFO] 14:03:06:347 [Memoria- Log obligatorio]/(4399:4408): <PID:2> <IP:2> <MOV_OUT 0 CX>
+[INFO] 14:03:06:848 [Memoria- Log obligatorio]/(4399:4408): PID: <2> - Pagina: <0> - Marco: <1>
+[INFO] 14:03:06:848 [Memoria- Log obligatorio]/(4399:4408): PAGINA ENCONTRADA <PID:2> <Pag:0> <Marco:1>
+[INFO] 14:03:07:349 [Memoria- Log obligatorio]/(4399:4408): PID: <2> - Accion: <ESCRIBIR> - Direccion fisica: <16>
+[INFO] 14:03:07:349 [Memoria- Log obligatorio]/(4399:4408): ESCRITO <PID:2> <dir_fisi:16> <VALOR:20>
+[INFO] 14:03:07:937 [Memoria- Log obligatorio]/(4399:4408): <PID:2> <IP:3> <MOV_OUT 16 CX>
+[WARNING] 14:03:08:450 [Memoria- Log obligatorio]/(4399:4408): PAGEFAULT <PID:2> <Pag:1>
+[INFO] 14:03:09:350 [Memoria- Log obligatorio]/(4399:4410): PID: <1> - Pagina: <1> - Marco: <2>
+[INFO] 14:03:09:350 [Memoria- Log obligatorio]/(4399:4408): <PID:4> <IP:0> <SET CX 20>
+[INFO] 14:03:09:852 [Memoria- Log obligatorio]/(4399:4410): SWAP IN - PID: <1> - Marco: <2> - Page In: <1>-<1>
+[INFO] 14:03:09:852 [Memoria- Log obligatorio]/(4399:4408): <PID:4> <IP:1> <SET AX 1>
+[INFO] 14:03:10:353 [Memoria- Log obligatorio]/(4399:4408): <PID:4> <IP:2> <MOV_OUT 0 CX>
+[WARNING] 14:03:10:854 [Memoria- Log obligatorio]/(4399:4408): PAGEFAULT <PID:4> <Pag:0>
+[INFO] 14:03:11:353 [Memoria- Log obligatorio]/(4399:4401): PID: <1> - Pagina: <1> - Marco: <2>
+[INFO] 14:03:11:354 [Memoria- Log obligatorio]/(4399:4401): PID: <1> - Accion: <ESCRIBIR> - Direccion fisica: <32>
+[INFO] 14:03:14:858 [Memoria- Log obligatorio]/(4399:4410): PID: <3> - Pagina: <0> - Marco: <3>
+[INFO] 14:03:14:858 [Memoria- Log obligatorio]/(4399:4408): <PID:1> <IP:3> <MOV_OUT 16 CX>
+[INFO] 14:03:15:359 [Memoria- Log obligatorio]/(4399:4410): SWAP IN - PID: <3> - Marco: <3> - Page In: <3>-<0>
+[INFO] 14:03:15:360 [Memoria- Log obligatorio]/(4399:4408): PID: <1> - Pagina: <1> - Marco: <2>
+[INFO] 14:03:15:360 [Memoria- Log obligatorio]/(4399:4408): PAGINA ENCONTRADA <PID:1> <Pag:1> <Marco:2>
+[INFO] 14:03:15:863 [Memoria- Log obligatorio]/(4399:4408): PID: <1> - Accion: <ESCRIBIR> - Direccion fisica: <32>
+[INFO] 14:03:15:863 [Memoria- Log obligatorio]/(4399:4408): ESCRITO <PID:1> <dir_fisi:32> <VALOR:20>
+[INFO] 14:03:16:364 [Memoria- Log obligatorio]/(4399:4408): <PID:1> <IP:4> <MOV_OUT 32 CX>
+[INFO] 14:03:16:860 [Memoria- Log obligatorio]/(4399:4401): PID: <3> - Pagina: <0> - Marco: <3>
+[INFO] 14:03:16:860 [Memoria- Log obligatorio]/(4399:4401): PID: <3> - Accion: <ESCRIBIR> - Direccion fisica: <48>
+[WARNING] 14:03:16:865 [Memoria- Log obligatorio]/(4399:4408): PAGEFAULT <PID:1> <Pag:2>
+[INFO] 14:03:20:373 [Memoria- Log obligatorio]/(4399:4410): PID: <1> - Pagina: <0> - Marco: <0>
+[INFO] 14:03:20:373 [Memoria- Log obligatorio]/(4399:4410): PID: <2> - Pagina: <1> - Marco: <0>
+[INFO] 14:03:20:873 [Memoria- Log obligatorio]/(4399:4410): SWAP IN - PID: <2> - Marco: <0> - Page In: <2>-<1>
+[INFO] 14:03:20:874 [Memoria- Log obligatorio]/(4399:4410): REEMPLAZO - Marco: <0> - Page Out: <1>-<0> - Page In: <2>-<1>
+[INFO] 14:03:22:374 [Memoria- Log obligatorio]/(4399:4401): PID: <2> - Pagina: <1> - Marco: <0>
+[INFO] 14:03:22:374 [Memoria- Log obligatorio]/(4399:4401): PID: <2> - Accion: <ESCRIBIR> - Direccion fisica: <0>
+[INFO] 14:03:25:876 [Memoria- Log obligatorio]/(4399:4410): PID: <2> - Pagina: <0> - Marco: <1>
+[INFO] 14:03:25:876 [Memoria- Log obligatorio]/(4399:4410): PID: <4> - Pagina: <0> - Marco: <1>
+[INFO] 14:03:26:382 [Memoria- Log obligatorio]/(4399:4410): SWAP IN - PID: <4> - Marco: <1> - Page In: <4>-<0>
+[INFO] 14:03:26:382 [Memoria- Log obligatorio]/(4399:4410): REEMPLAZO - Marco: <1> - Page Out: <2>-<0> - Page In: <4>-<0>
+[INFO] 14:03:27:883 [Memoria- Log obligatorio]/(4399:4401): PID: <4> - Pagina: <0> - Marco: <1>
+[INFO] 14:03:27:883 [Memoria- Log obligatorio]/(4399:4401): PID: <4> - Accion: <ESCRIBIR> - Direccion fisica: <16>
+[INFO] 14:03:31:386 [Memoria- Log obligatorio]/(4399:4410): PID: <1> - Pagina: <1> - Marco: <2>
+[INFO] 14:03:31:386 [Memoria- Log obligatorio]/(4399:4410): PID: <1> - Pagina: <2> - Marco: <2>
+[INFO] 14:03:31:888 [Memoria- Log obligatorio]/(4399:4410): SWAP IN - PID: <1> - Marco: <2> - Page In: <1>-<2>
+[INFO] 14:03:31:888 [Memoria- Log obligatorio]/(4399:4410): REEMPLAZO - Marco: <2> - Page Out: <1>-<1> - Page In: <1>-<2>
+[INFO] 14:03:33:390 [Memoria- Log obligatorio]/(4399:4401): PID: <1> - Pagina: <2> - Marco: <2>
+[INFO] 14:03:33:390 [Memoria- Log obligatorio]/(4399:4401): PID: <1> - Accion: <ESCRIBIR> - Direccion fisica: <32>
+[INFO] 14:04:37:227 [Memoria- Log obligatorio]/(4399:4410): PID: <1> - Tamaño: <4>
+[INFO] 14:04:37:729 [Memoria- Log obligatorio]/(4399:4410): PID: <2> - Tamaño: <4>
+[INFO] 14:04:38:232 [Memoria- Log obligatorio]/(4399:4410): PID: <3> - Tamaño: <4>
+[INFO] 14:04:38:734 [Memoria- Log obligatorio]/(4399:4410): PID: <4> - Tamaño: <4>
+[INFO] 14:05:50:172 [Memoria- Log obligatorio]/(4399:4410): PID: <5> - Tamaño: <4>
+[INFO] 14:05:57:204 [Memoria- Log obligatorio]/(4399:4408): <PID:5> <IP:0> <SET CX 20>
+[INFO] 14:05:57:204 [Memoria- Log obligatorio]/(4399:4410): PID: <6> - Tamaño: <4>
+[INFO] 14:05:57:705 [Memoria- Log obligatorio]/(4399:4408): <PID:5> <IP:1> <SET AX 1>
+[INFO] 14:05:58:206 [Memoria- Log obligatorio]/(4399:4408): <PID:5> <IP:2> <MOV_OUT 0 CX>
+[WARNING] 14:05:58:747 [Memoria- Log obligatorio]/(4399:4408): PAGEFAULT <PID:5> <Pag:0>
+[INFO] 14:06:04:231 [Memoria- Log obligatorio]/(4399:4410): PID: <5> - Pagina: <0> - Marco: <0>
+[INFO] 14:06:04:232 [Memoria- Log obligatorio]/(4399:4408): <PID:6> <IP:0> <SET CX 20>
+[INFO] 14:06:04:732 [Memoria- Log obligatorio]/(4399:4410): SWAP IN - PID: <5> - Marco: <0> - Page In: <5>-<0>
+[INFO] 14:06:04:732 [Memoria- Log obligatorio]/(4399:4410): PID: <7> - Tamaño: <4>
+[INFO] 14:06:04:733 [Memoria- Log obligatorio]/(4399:4408): <PID:6> <IP:1> <SET AX 1>
+[INFO] 14:06:05:235 [Memoria- Log obligatorio]/(4399:4408): <PID:6> <IP:2> <MOV_OUT 0 CX>
+[WARNING] 14:06:05:737 [Memoria- Log obligatorio]/(4399:4408): PAGEFAULT <PID:6> <Pag:0>
+[INFO] 14:06:06:232 [Memoria- Log obligatorio]/(4399:4401): PID: <5> - Pagina: <0> - Marco: <0>
+[INFO] 14:06:06:232 [Memoria- Log obligatorio]/(4399:4401): PID: <5> - Accion: <ESCRIBIR> - Direccion fisica: <0>
+[INFO] 14:06:09:748 [Memoria- Log obligatorio]/(4399:4408): <PID:5> <IP:2> <MOV_OUT 0 CX>
+[INFO] 14:06:10:249 [Memoria- Log obligatorio]/(4399:4408): PID: <5> - Pagina: <0> - Marco: <0>
+[INFO] 14:06:10:249 [Memoria- Log obligatorio]/(4399:4408): PAGINA ENCONTRADA <PID:5> <Pag:0> <Marco:0>
+[INFO] 14:06:10:750 [Memoria- Log obligatorio]/(4399:4408): PID: <5> - Accion: <ESCRIBIR> - Direccion fisica: <0>
+[INFO] 14:06:10:750 [Memoria- Log obligatorio]/(4399:4408): ESCRITO <PID:5> <dir_fisi:0> <VALOR:20>
+[INFO] 14:06:11:251 [Memoria- Log obligatorio]/(4399:4408): <PID:5> <IP:3> <MOV_OUT 16 CX>
+[WARNING] 14:06:11:752 [Memoria- Log obligatorio]/(4399:4408): PAGEFAULT <PID:5> <Pag:1>
+[INFO] 14:06:12:757 [Memoria- Log obligatorio]/(4399:4410): PID: <6> - Pagina: <0> - Marco: <1>
+[INFO] 14:06:12:758 [Memoria- Log obligatorio]/(4399:4408): <PID:7> <IP:0> <SET CX 20>
+[INFO] 14:06:13:262 [Memoria- Log obligatorio]/(4399:4408): <PID:7> <IP:1> <SET AX 1>
+[INFO] 14:06:13:262 [Memoria- Log obligatorio]/(4399:4410): SWAP IN - PID: <6> - Marco: <1> - Page In: <6>-<0>
+[INFO] 14:06:13:262 [Memoria- Log obligatorio]/(4399:4410): PID: <8> - Tamaño: <4>
+[INFO] 14:06:13:762 [Memoria- Log obligatorio]/(4399:4408): <PID:7> <IP:2> <MOV_OUT 0 CX>
+[WARNING] 14:06:14:263 [Memoria- Log obligatorio]/(4399:4408): PAGEFAULT <PID:7> <Pag:0>
+[INFO] 14:06:14:762 [Memoria- Log obligatorio]/(4399:4401): PID: <6> - Pagina: <0> - Marco: <1>
+[INFO] 14:06:14:762 [Memoria- Log obligatorio]/(4399:4401): PID: <6> - Accion: <ESCRIBIR> - Direccion fisica: <16>
+[INFO] 14:06:18:265 [Memoria- Log obligatorio]/(4399:4408): <PID:6> <IP:2> <MOV_OUT 0 CX>
+[INFO] 14:06:18:766 [Memoria- Log obligatorio]/(4399:4408): PID: <6> - Pagina: <0> - Marco: <1>
+[INFO] 14:06:18:766 [Memoria- Log obligatorio]/(4399:4408): PAGINA ENCONTRADA <PID:6> <Pag:0> <Marco:1>
+[INFO] 14:06:19:268 [Memoria- Log obligatorio]/(4399:4408): PID: <6> - Accion: <ESCRIBIR> - Direccion fisica: <16>
+[INFO] 14:06:19:268 [Memoria- Log obligatorio]/(4399:4408): ESCRITO <PID:6> <dir_fisi:16> <VALOR:20>
+[INFO] 14:06:19:773 [Memoria- Log obligatorio]/(4399:4408): <PID:6> <IP:3> <MOV_OUT 16 CX>
+[WARNING] 14:06:20:275 [Memoria- Log obligatorio]/(4399:4408): PAGEFAULT <PID:6> <Pag:1>
+[INFO] 14:06:21:268 [Memoria- Log obligatorio]/(4399:4410): PID: <5> - Pagina: <1> - Marco: <2>
+[INFO] 14:06:21:269 [Memoria- Log obligatorio]/(4399:4408): <PID:8> <IP:0> <SET CX 20>
+[INFO] 14:06:21:768 [Memoria- Log obligatorio]/(4399:4410): SWAP IN - PID: <5> - Marco: <2> - Page In: <5>-<1>
+[INFO] 14:06:21:770 [Memoria- Log obligatorio]/(4399:4408): <PID:8> <IP:1> <SET AX 1>
+[INFO] 14:06:22:275 [Memoria- Log obligatorio]/(4399:4408): <PID:8> <IP:2> <MOV_OUT 0 CX>
+[WARNING] 14:06:22:777 [Memoria- Log obligatorio]/(4399:4408): PAGEFAULT <PID:8> <Pag:0>
+[INFO] 14:06:23:269 [Memoria- Log obligatorio]/(4399:4401): PID: <5> - Pagina: <1> - Marco: <2>
+[INFO] 14:06:23:269 [Memoria- Log obligatorio]/(4399:4401): PID: <5> - Accion: <ESCRIBIR> - Direccion fisica: <32>
+[INFO] 14:06:26:771 [Memoria- Log obligatorio]/(4399:4408): <PID:5> <IP:3> <MOV_OUT 16 CX>
+[INFO] 14:06:26:771 [Memoria- Log obligatorio]/(4399:4410): PID: <7> - Pagina: <0> - Marco: <3>
+[INFO] 14:06:27:272 [Memoria- Log obligatorio]/(4399:4408): PID: <5> - Pagina: <1> - Marco: <2>
+[INFO] 14:06:27:272 [Memoria- Log obligatorio]/(4399:4408): PAGINA ENCONTRADA <PID:5> <Pag:1> <Marco:2>
+[INFO] 14:06:27:272 [Memoria- Log obligatorio]/(4399:4410): SWAP IN - PID: <7> - Marco: <3> - Page In: <7>-<0>
+[INFO] 14:06:27:772 [Memoria- Log obligatorio]/(4399:4408): PID: <5> - Accion: <ESCRIBIR> - Direccion fisica: <32>
+[INFO] 14:06:27:772 [Memoria- Log obligatorio]/(4399:4408): ESCRITO <PID:5> <dir_fisi:32> <VALOR:20>
+[INFO] 14:06:28:273 [Memoria- Log obligatorio]/(4399:4408): <PID:5> <IP:4> <MOV_OUT 32 CX>
+[INFO] 14:06:28:773 [Memoria- Log obligatorio]/(4399:4401): PID: <7> - Pagina: <0> - Marco: <3>
+[INFO] 14:06:28:773 [Memoria- Log obligatorio]/(4399:4401): PID: <7> - Accion: <ESCRIBIR> - Direccion fisica: <48>
+[WARNING] 14:06:28:773 [Memoria- Log obligatorio]/(4399:4408): PAGEFAULT <PID:5> <Pag:2>
+[INFO] 14:06:32:274 [Memoria- Log obligatorio]/(4399:4410): PID: <5> - Pagina: <0> - Marco: <0>
+[INFO] 14:06:32:274 [Memoria- Log obligatorio]/(4399:4410): PID: <6> - Pagina: <1> - Marco: <0>
+[INFO] 14:06:32:775 [Memoria- Log obligatorio]/(4399:4410): SWAP IN - PID: <6> - Marco: <0> - Page In: <6>-<1>
+[INFO] 14:06:32:775 [Memoria- Log obligatorio]/(4399:4410): REEMPLAZO - Marco: <0> - Page Out: <5>-<0> - Page In: <6>-<1>
+[INFO] 14:06:34:276 [Memoria- Log obligatorio]/(4399:4401): PID: <6> - Pagina: <1> - Marco: <0>
+[INFO] 14:06:34:277 [Memoria- Log obligatorio]/(4399:4401): PID: <6> - Accion: <ESCRIBIR> - Direccion fisica: <0>
+[INFO] 14:06:37:778 [Memoria- Log obligatorio]/(4399:4410): PID: <6> - Pagina: <0> - Marco: <1>
+[INFO] 14:06:37:778 [Memoria- Log obligatorio]/(4399:4410): PID: <8> - Pagina: <0> - Marco: <1>
+[INFO] 14:06:38:279 [Memoria- Log obligatorio]/(4399:4410): SWAP IN - PID: <8> - Marco: <1> - Page In: <8>-<0>
+[INFO] 14:06:38:279 [Memoria- Log obligatorio]/(4399:4410): REEMPLAZO - Marco: <1> - Page Out: <6>-<0> - Page In: <8>-<0>
+[INFO] 14:06:39:780 [Memoria- Log obligatorio]/(4399:4401): PID: <8> - Pagina: <0> - Marco: <1>
+[INFO] 14:06:39:780 [Memoria- Log obligatorio]/(4399:4401): PID: <8> - Accion: <ESCRIBIR> - Direccion fisica: <16>
+[INFO] 14:06:47:736 [Memoria- Log obligatorio]/(4399:4410): PID: <5> - Pagina: <1> - Marco: <2>
+[INFO] 14:06:47:736 [Memoria- Log obligatorio]/(4399:4408): <PID:7> <IP:2> <MOV_OUT 0 CX>
+[INFO] 14:06:47:736 [Memoria- Log obligatorio]/(4399:4410): PID: <5> - Pagina: <2> - Marco: <2>
+[INFO] 14:06:48:237 [Memoria- Log obligatorio]/(4399:4410): SWAP IN - PID: <5> - Marco: <2> - Page In: <5>-<2>
+[INFO] 14:06:48:237 [Memoria- Log obligatorio]/(4399:4410): REEMPLAZO - Marco: <2> - Page Out: <5>-<1> - Page In: <5>-<2>
+[INFO] 14:06:48:237 [Memoria- Log obligatorio]/(4399:4408): PID: <7> - Pagina: <0> - Marco: <3>
+[INFO] 14:06:48:237 [Memoria- Log obligatorio]/(4399:4408): PAGINA ENCONTRADA <PID:7> <Pag:0> <Marco:3>
+[INFO] 14:06:48:738 [Memoria- Log obligatorio]/(4399:4408): PID: <7> - Accion: <ESCRIBIR> - Direccion fisica: <48>
+[INFO] 14:06:48:738 [Memoria- Log obligatorio]/(4399:4408): ESCRITO <PID:7> <dir_fisi:48> <VALOR:20>
+[INFO] 14:06:49:239 [Memoria- Log obligatorio]/(4399:4408): <PID:7> <IP:3> <MOV_OUT 16 CX>
+[INFO] 14:06:49:737 [Memoria- Log obligatorio]/(4399:4401): PID: <5> - Pagina: <2> - Marco: <2>
+[INFO] 14:06:49:737 [Memoria- Log obligatorio]/(4399:4401): PID: <5> - Accion: <ESCRIBIR> - Direccion fisica: <32>
+[WARNING] 14:06:49:739 [Memoria- Log obligatorio]/(4399:4408): PAGEFAULT <PID:7> <Pag:1>
+[INFO] 14:06:53:241 [Memoria- Log obligatorio]/(4399:4408): <PID:6> <IP:3> <MOV_OUT 16 CX>
+[INFO] 14:06:53:241 [Memoria- Log obligatorio]/(4399:4410): PID: <6> - Pagina: <1> - Marco: <0>
+[INFO] 14:06:53:241 [Memoria- Log obligatorio]/(4399:4410): PID: <7> - Pagina: <1> - Marco: <0>
+[INFO] 14:06:53:742 [Memoria- Log obligatorio]/(4399:4410): SWAP IN - PID: <7> - Marco: <0> - Page In: <7>-<1>
+[INFO] 14:06:53:742 [Memoria- Log obligatorio]/(4399:4410): REEMPLAZO - Marco: <0> - Page Out: <6>-<1> - Page In: <7>-<1>
+[WARNING] 14:06:53:742 [Memoria- Log obligatorio]/(4399:4408): PAGEFAULT <PID:6> <Pag:1>
+[INFO] 14:06:55:252 [Memoria- Log obligatorio]/(4399:4401): PID: <7> - Pagina: <1> - Marco: <0>
+[INFO] 14:06:55:252 [Memoria- Log obligatorio]/(4399:4401): PID: <7> - Accion: <ESCRIBIR> - Direccion fisica: <0>
+[INFO] 14:06:58:754 [Memoria- Log obligatorio]/(4399:4410): PID: <8> - Pagina: <0> - Marco: <1>
+[INFO] 14:06:58:754 [Memoria- Log obligatorio]/(4399:4410): PID: <6> - Pagina: <1> - Marco: <1>
+[INFO] 14:06:59:259 [Memoria- Log obligatorio]/(4399:4410): SWAP IN - PID: <6> - Marco: <1> - Page In: <6>-<1>
+[INFO] 14:06:59:259 [Memoria- Log obligatorio]/(4399:4410): REEMPLAZO - Marco: <1> - Page Out: <8>-<0> - Page In: <6>-<1>
+[INFO] 14:07:00:763 [Memoria- Log obligatorio]/(4399:4401): PID: <6> - Pagina: <1> - Marco: <1>
+[INFO] 14:07:00:763 [Memoria- Log obligatorio]/(4399:4401): PID: <6> - Accion: <ESCRIBIR> - Direccion fisica: <16>
+[INFO] 14:07:11:867 [Memoria- Log obligatorio]/(4399:4408): <PID:8> <IP:2> <MOV_OUT 0 CX>
+[WARNING] 14:07:12:368 [Memoria- Log obligatorio]/(4399:4408): PAGEFAULT <PID:8> <Pag:0>
+[INFO] 14:07:12:871 [Memoria- Log obligatorio]/(4399:4410): PID: <7> - Pagina: <0> - Marco: <3>
+[INFO] 14:07:12:871 [Memoria- Log obligatorio]/(4399:4410): PID: <8> - Pagina: <0> - Marco: <3>
+[INFO] 14:07:13:371 [Memoria- Log obligatorio]/(4399:4410): SWAP IN - PID: <8> - Marco: <3> - Page In: <8>-<0>
+[INFO] 14:07:13:371 [Memoria- Log obligatorio]/(4399:4410): REEMPLAZO - Marco: <3> - Page Out: <7>-<0> - Page In: <8>-<0>
+[INFO] 14:07:14:874 [Memoria- Log obligatorio]/(4399:4401): PID: <8> - Pagina: <0> - Marco: <3>
+[INFO] 14:07:14:874 [Memoria- Log obligatorio]/(4399:4401): PID: <8> - Accion: <ESCRIBIR> - Direccion fisica: <48>
+[INFO] 14:07:31:856 [Memoria- Log obligatorio]/(4399:4408): <PID:5> <IP:4> <MOV_OUT 32 CX>
+[INFO] 14:07:32:357 [Memoria- Log obligatorio]/(4399:4408): PID: <5> - Pagina: <2> - Marco: <2>
+[INFO] 14:07:32:357 [Memoria- Log obligatorio]/(4399:4408): PAGINA ENCONTRADA <PID:5> <Pag:2> <Marco:2>
+[INFO] 14:07:32:866 [Memoria- Log obligatorio]/(4399:4408): PID: <5> - Accion: <ESCRIBIR> - Direccion fisica: <32>
+[INFO] 14:07:32:866 [Memoria- Log obligatorio]/(4399:4408): ESCRITO <PID:5> <dir_fisi:32> <VALOR:20>
+[INFO] 14:07:33:382 [Memoria- Log obligatorio]/(4399:4408): <PID:5> <IP:5> <MOV_OUT 48 CX>
+[WARNING] 14:07:33:928 [Memoria- Log obligatorio]/(4399:4408): PAGEFAULT <PID:5> <Pag:3>
+[INFO] 14:07:50:190 [Memoria- Log obligatorio]/(4399:4410): PID: <7> - Pagina: <1> - Marco: <0>
+[INFO] 14:07:50:190 [Memoria- Log obligatorio]/(4399:4410): PID: <5> - Pagina: <3> - Marco: <0>
+[INFO] 14:07:50:691 [Memoria- Log obligatorio]/(4399:4410): SWAP IN - PID: <5> - Marco: <0> - Page In: <5>-<3>
+[INFO] 14:07:50:691 [Memoria- Log obligatorio]/(4399:4410): REEMPLAZO - Marco: <0> - Page Out: <7>-<1> - Page In: <5>-<3>
+[INFO] 14:07:52:196 [Memoria- Log obligatorio]/(4399:4401): PID: <5> - Pagina: <3> - Marco: <0>
+[INFO] 14:07:52:196 [Memoria- Log obligatorio]/(4399:4401): PID: <5> - Accion: <ESCRIBIR> - Direccion fisica: <0>
+[INFO] 14:07:55:699 [Memoria- Log obligatorio]/(4399:4408): <PID:7> <IP:3> <MOV_OUT 16 CX>
+[WARNING] 14:07:56:205 [Memoria- Log obligatorio]/(4399:4408): PAGEFAULT <PID:7> <Pag:1>
+[INFO] 14:07:56:709 [Memoria- Log obligatorio]/(4399:4410): PID: <6> - Pagina: <1> - Marco: <1>
+[INFO] 14:07:56:709 [Memoria- Log obligatorio]/(4399:4410): PID: <7> - Pagina: <1> - Marco: <1>
+[INFO] 14:07:57:212 [Memoria- Log obligatorio]/(4399:4410): SWAP IN - PID: <7> - Marco: <1> - Page In: <7>-<1>
+[INFO] 14:07:57:212 [Memoria- Log obligatorio]/(4399:4410): REEMPLAZO - Marco: <1> - Page Out: <6>-<1> - Page In: <7>-<1>
+[INFO] 14:07:58:713 [Memoria- Log obligatorio]/(4399:4401): PID: <7> - Pagina: <1> - Marco: <1>
+[INFO] 14:07:58:713 [Memoria- Log obligatorio]/(4399:4401): PID: <7> - Accion: <ESCRIBIR> - Direccion fisica: <16>
+[INFO] 14:08:02:215 [Memoria- Log obligatorio]/(4399:4408): <PID:6> <IP:3> <MOV_OUT 16 CX>
+[WARNING] 14:08:02:716 [Memoria- Log obligatorio]/(4399:4408): PAGEFAULT <PID:6> <Pag:1>
+[INFO] 14:08:03:218 [Memoria- Log obligatorio]/(4399:4410): PID: <8> - Pagina: <0> - Marco: <3>
+[INFO] 14:08:03:218 [Memoria- Log obligatorio]/(4399:4410): PID: <6> - Pagina: <1> - Marco: <3>
+[INFO] 14:08:03:724 [Memoria- Log obligatorio]/(4399:4410): SWAP IN - PID: <6> - Marco: <3> - Page In: <6>-<1>
+[INFO] 14:08:03:724 [Memoria- Log obligatorio]/(4399:4410): REEMPLAZO - Marco: <3> - Page Out: <8>-<0> - Page In: <6>-<1>
+[INFO] 14:08:05:226 [Memoria- Log obligatorio]/(4399:4401): PID: <6> - Pagina: <1> - Marco: <3>
+[INFO] 14:08:05:226 [Memoria- Log obligatorio]/(4399:4401): PID: <6> - Accion: <ESCRIBIR> - Direccion fisica: <48>
+[INFO] 14:08:08:728 [Memoria- Log obligatorio]/(4399:4408): <PID:8> <IP:2> <MOV_OUT 0 CX>
+[WARNING] 14:08:09:231 [Memoria- Log obligatorio]/(4399:4408): PAGEFAULT <PID:8> <Pag:0>
+[INFO] 14:08:09:735 [Memoria- Log obligatorio]/(4399:4410): PID: <5> - Pagina: <2> - Marco: <2>
+[INFO] 14:08:09:735 [Memoria- Log obligatorio]/(4399:4410): PID: <8> - Pagina: <0> - Marco: <2>
+[INFO] 14:08:10:241 [Memoria- Log obligatorio]/(4399:4410): SWAP IN - PID: <8> - Marco: <2> - Page In: <8>-<0>
+[INFO] 14:08:10:241 [Memoria- Log obligatorio]/(4399:4410): REEMPLAZO - Marco: <2> - Page Out: <5>-<2> - Page In: <8>-<0>
+[INFO] 14:08:11:751 [Memoria- Log obligatorio]/(4399:4401): PID: <8> - Pagina: <0> - Marco: <2>
+[INFO] 14:08:11:751 [Memoria- Log obligatorio]/(4399:4401): PID: <8> - Accion: <ESCRIBIR> - Direccion fisica: <32>
+[INFO] 14:08:15:253 [Memoria- Log obligatorio]/(4399:4408): <PID:5> <IP:5> <MOV_OUT 48 CX>
+[INFO] 14:08:15:770 [Memoria- Log obligatorio]/(4399:4408): PID: <5> - Pagina: <3> - Marco: <0>
+[INFO] 14:08:15:770 [Memoria- Log obligatorio]/(4399:4408): PAGINA ENCONTRADA <PID:5> <Pag:3> <Marco:0>
+[INFO] 14:08:16:271 [Memoria- Log obligatorio]/(4399:4408): PID: <5> - Accion: <ESCRIBIR> - Direccion fisica: <0>
+[INFO] 14:08:16:271 [Memoria- Log obligatorio]/(4399:4408): ESCRITO <PID:5> <dir_fisi:0> <VALOR:20>
+[INFO] 14:08:16:772 [Memoria- Log obligatorio]/(4399:4408): <PID:5> <IP:6> <SUB CX AX>
+[INFO] 14:08:17:274 [Memoria- Log obligatorio]/(4399:4408): <PID:5> <IP:7> <JNZ CX 2>
+[INFO] 14:08:17:778 [Memoria- Log obligatorio]/(4399:4408): <PID:5> <IP:2> <MOV_OUT 0 CX>
+[WARNING] 14:08:18:282 [Memoria- Log obligatorio]/(4399:4408): PAGEFAULT <PID:5> <Pag:0>
+[INFO] 14:11:53:977 [Memoria- Log obligatorio]/(4399:4410): PID: <6> - Tamaño: <4>
+[INFO] 14:11:54:478 [Memoria- Log obligatorio]/(4399:4410): PID: <5> - Tamaño: <4>
+[INFO] 14:11:54:991 [Memoria- Log obligatorio]/(4399:4410): PID: <7> - Tamaño: <4>
+[INFO] 14:11:55:492 [Memoria- Log obligatorio]/(4399:4410): PID: <8> - Tamaño: <4>
+[INFO] 14:15:35:934 [Memoria- Log obligatorio]/(4399:4573): PID: <1> - Tamaño: <4>
+[INFO] 14:16:33:109 [Memoria- Log obligatorio]/(4632:4643): PID: <1> - Tamaño: <4>
+[INFO] 14:16:40:124 [Memoria- Log obligatorio]/(4632:4641): <PID:1> <IP:0> <SET AX 83>
+[INFO] 14:16:40:626 [Memoria- Log obligatorio]/(4632:4641): <PID:1> <IP:1> <SET BX 79>
+[INFO] 14:16:41:134 [Memoria- Log obligatorio]/(4632:4641): <PID:1> <IP:2> <SET CX 78>
+[INFO] 14:16:41:634 [Memoria- Log obligatorio]/(4632:4641): <PID:1> <IP:3> <SET DX 89>
+[INFO] 14:16:42:139 [Memoria- Log obligatorio]/(4632:4641): <PID:1> <IP:4> <F_OPEN consolas W>
+[INFO] 14:21:00:509 [Memoria- Log obligatorio]/(5202:5235): PID: <1> - Tamaño: <4>
+[INFO] 14:21:07:514 [Memoria- Log obligatorio]/(5202:5212): <PID:1> <IP:0> <SET AX 83>
+[INFO] 14:21:08:016 [Memoria- Log obligatorio]/(5202:5212): <PID:1> <IP:1> <SET BX 79>
+[INFO] 14:21:08:516 [Memoria- Log obligatorio]/(5202:5212): <PID:1> <IP:2> <SET CX 78>
+[INFO] 14:21:09:017 [Memoria- Log obligatorio]/(5202:5212): <PID:1> <IP:3> <SET DX 89>
+[INFO] 14:21:09:517 [Memoria- Log obligatorio]/(5202:5212): <PID:1> <IP:4> <F_OPEN consolas W>
+[INFO] 14:24:34:807 [Memoria- Log obligatorio]/(5202:5593): PID: <1> - Tamaño: <4>
+[INFO] 14:24:41:826 [Memoria- Log obligatorio]/(5202:5591): <PID:1> <IP:0> <SET AX 83>
+[INFO] 14:24:42:327 [Memoria- Log obligatorio]/(5202:5591): <PID:1> <IP:1> <SET BX 79>
+[INFO] 14:24:42:827 [Memoria- Log obligatorio]/(5202:5591): <PID:1> <IP:2> <SET CX 78>
+[INFO] 14:24:43:328 [Memoria- Log obligatorio]/(5202:5591): <PID:1> <IP:3> <SET DX 89>
+[INFO] 14:24:43:828 [Memoria- Log obligatorio]/(5202:5591): <PID:1> <IP:4> <F_OPEN consolas W>
+[INFO] 14:26:00:134 [Memoria- Log obligatorio]/(5202:5649): PID: <1> - Tamaño: <4>
+[INFO] 14:26:07:172 [Memoria- Log obligatorio]/(5202:5647): <PID:1> <IP:0> <SET AX 83>
+[INFO] 14:26:07:675 [Memoria- Log obligatorio]/(5202:5647): <PID:1> <IP:1> <SET BX 79>
+[INFO] 14:26:08:176 [Memoria- Log obligatorio]/(5202:5647): <PID:1> <IP:2> <SET CX 78>
+[INFO] 14:26:08:678 [Memoria- Log obligatorio]/(5202:5647): <PID:1> <IP:3> <SET DX 89>
+[INFO] 14:26:09:178 [Memoria- Log obligatorio]/(5202:5647): <PID:1> <IP:4> <F_OPEN consolas W>
+[INFO] 14:27:20:032 [Memoria- Log obligatorio]/(5202:5849): PID: <1> - Tamaño: <4>
+[INFO] 14:27:27:070 [Memoria- Log obligatorio]/(5202:5847): <PID:1> <IP:0> <SET AX 83>
+[INFO] 14:27:27:578 [Memoria- Log obligatorio]/(5202:5847): <PID:1> <IP:1> <SET BX 79>
+[INFO] 14:27:28:078 [Memoria- Log obligatorio]/(5202:5847): <PID:1> <IP:2> <SET CX 78>
+[INFO] 14:27:28:579 [Memoria- Log obligatorio]/(5202:5847): <PID:1> <IP:3> <SET DX 89>
+[INFO] 14:27:29:080 [Memoria- Log obligatorio]/(5202:5847): <PID:1> <IP:4> <F_OPEN consolas W>
+[INFO] 14:30:40:976 [Memoria- Log obligatorio]/(5979:5990): PID: <1> - Tamaño: <4>
+[INFO] 14:30:47:982 [Memoria- Log obligatorio]/(5979:5988): <PID:1> <IP:0> <SET AX 83>
+[INFO] 14:30:48:484 [Memoria- Log obligatorio]/(5979:5988): <PID:1> <IP:1> <SET BX 79>
+[INFO] 14:30:48:984 [Memoria- Log obligatorio]/(5979:5988): <PID:1> <IP:2> <SET CX 78>
+[INFO] 14:30:49:497 [Memoria- Log obligatorio]/(5979:5988): <PID:1> <IP:3> <SET DX 89>
+[INFO] 14:30:49:998 [Memoria- Log obligatorio]/(5979:5988): <PID:1> <IP:4> <F_OPEN consolas W>
+[INFO] 14:32:42:021 [Memoria- Log obligatorio]/(5979:6264): PID: <1> - Tamaño: <4>
+[INFO] 14:32:49:036 [Memoria- Log obligatorio]/(5979:6252): <PID:1> <IP:0> <SET AX 83>
+[INFO] 14:32:49:543 [Memoria- Log obligatorio]/(5979:6252): <PID:1> <IP:1> <SET BX 79>
+[INFO] 14:32:50:046 [Memoria- Log obligatorio]/(5979:6252): <PID:1> <IP:2> <SET CX 78>
+[INFO] 14:32:50:547 [Memoria- Log obligatorio]/(5979:6252): <PID:1> <IP:3> <SET DX 89>
+[INFO] 14:32:51:048 [Memoria- Log obligatorio]/(5979:6252): <PID:1> <IP:4> <F_OPEN consolas W>
+[INFO] 14:32:51:558 [Memoria- Log obligatorio]/(5979:6252): <PID:1> <IP:5> <F_TRUNCATE consolas 64>
+[INFO] 14:41:54:447 [Memoria- Log obligatorio]/(5979:7035): PID: <1> - Tamaño: <4>
+[INFO] 14:42:01:465 [Memoria- Log obligatorio]/(5979:7029): <PID:1> <IP:0> <SET AX 83>
+[INFO] 14:42:01:975 [Memoria- Log obligatorio]/(5979:7029): <PID:1> <IP:1> <SET BX 79>
+[INFO] 14:42:02:480 [Memoria- Log obligatorio]/(5979:7029): <PID:1> <IP:2> <SET CX 78>
+[INFO] 14:42:02:990 [Memoria- Log obligatorio]/(5979:7029): <PID:1> <IP:3> <SET DX 89>
+[INFO] 14:42:03:491 [Memoria- Log obligatorio]/(5979:7029): <PID:1> <IP:4> <F_OPEN consolas W>
+[INFO] 14:42:03:997 [Memoria- Log obligatorio]/(5979:7029): <PID:1> <IP:5> <F_TRUNCATE consolas 64>
+[INFO] 14:42:11:640 [Memoria- Log obligatorio]/(5979:7029): <PID:1> <IP:6> <F_SEEK consolas 0>
+[INFO] 14:42:12:142 [Memoria- Log obligatorio]/(5979:7029): <PID:1> <IP:7> <MOV_OUT 0 AX>
+[WARNING] 14:42:12:642 [Memoria- Log obligatorio]/(5979:7029): PAGEFAULT <PID:1> <Pag:0>
+[INFO] 14:42:13:144 [Memoria- Log obligatorio]/(5979:7035): PID: <1> - Pagina: <0> - Marco: <0>
+[INFO] 14:42:13:645 [Memoria- Log obligatorio]/(5979:7035): SWAP IN - PID: <1> - Marco: <0> - Page In: <1>-<0>
+[INFO] 14:42:15:146 [Memoria- Log obligatorio]/(5979:7031): PID: <1> - Pagina: <0> - Marco: <0>
+[INFO] 14:42:15:147 [Memoria- Log obligatorio]/(5979:7031): PID: <1> - Accion: <ESCRIBIR> - Direccion fisica: <0>
+[INFO] 14:42:18:653 [Memoria- Log obligatorio]/(5979:7029): <PID:1> <IP:7> <MOV_OUT 0 AX>
+[INFO] 14:42:19:154 [Memoria- Log obligatorio]/(5979:7029): PID: <1> - Pagina: <0> - Marco: <0>
+[INFO] 14:42:19:154 [Memoria- Log obligatorio]/(5979:7029): PAGINA ENCONTRADA <PID:1> <Pag:0> <Marco:0>
+[INFO] 14:42:19:655 [Memoria- Log obligatorio]/(5979:7029): PID: <1> - Accion: <ESCRIBIR> - Direccion fisica: <0>
+[INFO] 14:42:19:655 [Memoria- Log obligatorio]/(5979:7029): ESCRITO <PID:1> <dir_fisi:0> <VALOR:83>
+[INFO] 14:42:20:157 [Memoria- Log obligatorio]/(5979:7029): <PID:1> <IP:8> <MOV_OUT 4 BX>
+[INFO] 14:42:20:660 [Memoria- Log obligatorio]/(5979:7029): PID: <1> - Pagina: <0> - Marco: <0>
+[INFO] 14:42:20:661 [Memoria- Log obligatorio]/(5979:7029): PAGINA ENCONTRADA <PID:1> <Pag:0> <Marco:0>
+[INFO] 14:42:21:162 [Memoria- Log obligatorio]/(5979:7029): PID: <1> - Accion: <ESCRIBIR> - Direccion fisica: <4>
+[INFO] 14:42:21:162 [Memoria- Log obligatorio]/(5979:7029): ESCRITO <PID:1> <dir_fisi:4> <VALOR:79>
+[INFO] 14:42:21:666 [Memoria- Log obligatorio]/(5979:7029): <PID:1> <IP:9> <MOV_OUT 8 CX>
+[INFO] 14:42:22:179 [Memoria- Log obligatorio]/(5979:7029): PID: <1> - Pagina: <0> - Marco: <0>
+[INFO] 14:42:22:179 [Memoria- Log obligatorio]/(5979:7029): PAGINA ENCONTRADA <PID:1> <Pag:0> <Marco:0>
+[INFO] 14:42:22:681 [Memoria- Log obligatorio]/(5979:7029): PID: <1> - Accion: <ESCRIBIR> - Direccion fisica: <8>
+[INFO] 14:42:22:681 [Memoria- Log obligatorio]/(5979:7029): ESCRITO <PID:1> <dir_fisi:8> <VALOR:78>
+[INFO] 14:42:23:192 [Memoria- Log obligatorio]/(5979:7029): <PID:1> <IP:10> <MOV_OUT 12 DX>
+[INFO] 14:42:23:693 [Memoria- Log obligatorio]/(5979:7029): PID: <1> - Pagina: <0> - Marco: <0>
+[INFO] 14:42:23:693 [Memoria- Log obligatorio]/(5979:7029): PAGINA ENCONTRADA <PID:1> <Pag:0> <Marco:0>
+[INFO] 14:42:24:199 [Memoria- Log obligatorio]/(5979:7029): PID: <1> - Accion: <ESCRIBIR> - Direccion fisica: <12>
+[INFO] 14:42:24:199 [Memoria- Log obligatorio]/(5979:7029): ESCRITO <PID:1> <dir_fisi:12> <VALOR:89>
+[INFO] 14:42:24:708 [Memoria- Log obligatorio]/(5979:7029): <PID:1> <IP:11> <F_WRITE consolas 0>
+[INFO] 14:42:25:209 [Memoria- Log obligatorio]/(5979:7029): PID: <1> - Pagina: <0> - Marco: <0>
+[INFO] 14:42:25:209 [Memoria- Log obligatorio]/(5979:7029): PAGINA ENCONTRADA <PID:1> <Pag:0> <Marco:0>
+[INFO] 15:58:48:321 [Memoria- Log obligatorio]/(10976:11719): PID: <1> - Tamaño: <4>
+[INFO] 15:58:55:362 [Memoria- Log obligatorio]/(10976:11717): <PID:1> <IP:0> <SET AX 83>
+[INFO] 15:58:55:863 [Memoria- Log obligatorio]/(10976:11717): <PID:1> <IP:1> <SET BX 79>
+[INFO] 15:58:56:371 [Memoria- Log obligatorio]/(10976:11717): <PID:1> <IP:2> <SET CX 78>
+[INFO] 15:58:56:871 [Memoria- Log obligatorio]/(10976:11717): <PID:1> <IP:3> <SET DX 89>
+[INFO] 15:58:57:372 [Memoria- Log obligatorio]/(10976:11717): <PID:1> <IP:4> <F_OPEN consolas W>
+[INFO] 16:01:59:589 [Memoria- Log obligatorio]/(10976:11944): PID: <1> - Tamaño: <4>
+[INFO] 16:02:06:599 [Memoria- Log obligatorio]/(10976:11942): <PID:1> <IP:0> <SET AX 83>
+[INFO] 16:02:07:107 [Memoria- Log obligatorio]/(10976:11942): <PID:1> <IP:1> <SET BX 79>
+[INFO] 16:02:07:614 [Memoria- Log obligatorio]/(10976:11942): <PID:1> <IP:2> <SET CX 78>
+[INFO] 16:02:08:116 [Memoria- Log obligatorio]/(10976:11942): <PID:1> <IP:3> <SET DX 89>
+[INFO] 16:02:08:623 [Memoria- Log obligatorio]/(10976:11942): <PID:1> <IP:4> <F_OPEN consolas W>
+[INFO] 16:02:09:126 [Memoria- Log obligatorio]/(10976:11942): <PID:1> <IP:5> <F_TRUNCATE consolas 64>
+[INFO] 16:02:30:681 [Memoria- Log obligatorio]/(10976:11942): <PID:1> <IP:6> <F_SEEK consolas 0>
+[INFO] 16:02:31:182 [Memoria- Log obligatorio]/(10976:11942): <PID:1> <IP:7> <MOV_OUT 0 AX>
+[WARNING] 16:02:31:683 [Memoria- Log obligatorio]/(10976:11942): PAGEFAULT <PID:1> <Pag:0>
+[INFO] 16:02:32:184 [Memoria- Log obligatorio]/(10976:11944): PID: <1> - Pagina: <0> - Marco: <0>
+[INFO] 16:02:32:685 [Memoria- Log obligatorio]/(10976:11944): SWAP IN - PID: <1> - Marco: <0> - Page In: <1>-<0>
+[INFO] 16:02:34:186 [Memoria- Log obligatorio]/(10976:11935): PID: <1> - Pagina: <0> - Marco: <0>
+[INFO] 16:02:34:186 [Memoria- Log obligatorio]/(10976:11935): PID: <1> - Accion: <ESCRIBIR> - Direccion fisica: <0>
+[INFO] 16:02:37:688 [Memoria- Log obligatorio]/(10976:11942): <PID:1> <IP:7> <MOV_OUT 0 AX>
+[INFO] 16:02:38:189 [Memoria- Log obligatorio]/(10976:11942): PID: <1> - Pagina: <0> - Marco: <0>
+[INFO] 16:02:38:190 [Memoria- Log obligatorio]/(10976:11942): PAGINA ENCONTRADA <PID:1> <Pag:0> <Marco:0>
+[INFO] 16:02:38:691 [Memoria- Log obligatorio]/(10976:11942): PID: <1> - Accion: <ESCRIBIR> - Direccion fisica: <0>
+[INFO] 16:02:38:691 [Memoria- Log obligatorio]/(10976:11942): ESCRITO <PID:1> <dir_fisi:0> <VALOR:83>
+[INFO] 16:02:39:192 [Memoria- Log obligatorio]/(10976:11942): <PID:1> <IP:8> <MOV_OUT 4 BX>
+[INFO] 16:02:39:694 [Memoria- Log obligatorio]/(10976:11942): PID: <1> - Pagina: <0> - Marco: <0>
+[INFO] 16:02:39:694 [Memoria- Log obligatorio]/(10976:11942): PAGINA ENCONTRADA <PID:1> <Pag:0> <Marco:0>
+[INFO] 16:02:40:196 [Memoria- Log obligatorio]/(10976:11942): PID: <1> - Accion: <ESCRIBIR> - Direccion fisica: <4>
+[INFO] 16:02:40:196 [Memoria- Log obligatorio]/(10976:11942): ESCRITO <PID:1> <dir_fisi:4> <VALOR:79>
+[INFO] 16:02:40:706 [Memoria- Log obligatorio]/(10976:11942): <PID:1> <IP:9> <MOV_OUT 8 CX>
+[INFO] 16:02:41:207 [Memoria- Log obligatorio]/(10976:11942): PID: <1> - Pagina: <0> - Marco: <0>
+[INFO] 16:02:41:207 [Memoria- Log obligatorio]/(10976:11942): PAGINA ENCONTRADA <PID:1> <Pag:0> <Marco:0>
+[INFO] 16:02:41:712 [Memoria- Log obligatorio]/(10976:11942): PID: <1> - Accion: <ESCRIBIR> - Direccion fisica: <8>
+[INFO] 16:02:41:712 [Memoria- Log obligatorio]/(10976:11942): ESCRITO <PID:1> <dir_fisi:8> <VALOR:78>
+[INFO] 16:02:42:214 [Memoria- Log obligatorio]/(10976:11942): <PID:1> <IP:10> <MOV_OUT 12 DX>
+[INFO] 16:02:42:715 [Memoria- Log obligatorio]/(10976:11942): PID: <1> - Pagina: <0> - Marco: <0>
+[INFO] 16:02:42:716 [Memoria- Log obligatorio]/(10976:11942): PAGINA ENCONTRADA <PID:1> <Pag:0> <Marco:0>
+[INFO] 16:02:43:239 [Memoria- Log obligatorio]/(10976:11942): PID: <1> - Accion: <ESCRIBIR> - Direccion fisica: <12>
+[INFO] 16:02:43:239 [Memoria- Log obligatorio]/(10976:11942): ESCRITO <PID:1> <dir_fisi:12> <VALOR:89>
+[INFO] 16:02:43:744 [Memoria- Log obligatorio]/(10976:11942): <PID:1> <IP:11> <F_WRITE consolas 0>
+[INFO] 16:02:44:244 [Memoria- Log obligatorio]/(10976:11942): PID: <1> - Pagina: <0> - Marco: <0>
+[INFO] 16:02:44:244 [Memoria- Log obligatorio]/(10976:11942): PAGINA ENCONTRADA <PID:1> <Pag:0> <Marco:0>
+[INFO] 16:10:59:494 [Memoria- Log obligatorio]/(12477:12496): PID: <1> - Tamaño: <4>
+[INFO] 16:11:06:502 [Memoria- Log obligatorio]/(12477:12486): <PID:1> <IP:0> <SET AX 83>
+[INFO] 16:11:07:002 [Memoria- Log obligatorio]/(12477:12486): <PID:1> <IP:1> <SET BX 79>
+[INFO] 16:11:07:503 [Memoria- Log obligatorio]/(12477:12486): <PID:1> <IP:2> <SET CX 78>
+[INFO] 16:11:08:005 [Memoria- Log obligatorio]/(12477:12486): <PID:1> <IP:3> <SET DX 89>
+[INFO] 16:11:08:505 [Memoria- Log obligatorio]/(12477:12486): <PID:1> <IP:4> <F_OPEN consolas W>
+[INFO] 16:11:09:008 [Memoria- Log obligatorio]/(12477:12486): <PID:1> <IP:5> <F_TRUNCATE consolas 64>
+[INFO] 16:11:22:544 [Memoria- Log obligatorio]/(12477:12486): <PID:1> <IP:6> <F_SEEK consolas 0>
+[INFO] 16:11:23:045 [Memoria- Log obligatorio]/(12477:12486): <PID:1> <IP:7> <MOV_OUT 0 AX>
+[WARNING] 16:11:23:545 [Memoria- Log obligatorio]/(12477:12486): PAGEFAULT <PID:1> <Pag:0>
+[INFO] 16:11:24:047 [Memoria- Log obligatorio]/(12477:12496): PID: <1> - Pagina: <0> - Marco: <0>
+[INFO] 16:11:24:551 [Memoria- Log obligatorio]/(12477:12496): SWAP IN - PID: <1> - Marco: <0> - Page In: <1>-<0>
+[INFO] 16:11:26:055 [Memoria- Log obligatorio]/(12477:12479): PID: <1> - Pagina: <0> - Marco: <0>
+[INFO] 16:11:26:055 [Memoria- Log obligatorio]/(12477:12479): PID: <1> - Accion: <ESCRIBIR> - Direccion fisica: <0>
+[INFO] 16:11:29:557 [Memoria- Log obligatorio]/(12477:12486): <PID:1> <IP:7> <MOV_OUT 0 AX>
+[INFO] 16:11:30:058 [Memoria- Log obligatorio]/(12477:12486): PID: <1> - Pagina: <0> - Marco: <0>
+[INFO] 16:11:30:058 [Memoria- Log obligatorio]/(12477:12486): PAGINA ENCONTRADA <PID:1> <Pag:0> <Marco:0>
+[INFO] 16:11:30:558 [Memoria- Log obligatorio]/(12477:12486): PID: <1> - Accion: <ESCRIBIR> - Direccion fisica: <0>
+[INFO] 16:11:30:558 [Memoria- Log obligatorio]/(12477:12486): ESCRITO <PID:1> <dir_fisi:0> <VALOR:83>
+[INFO] 16:11:31:060 [Memoria- Log obligatorio]/(12477:12486): <PID:1> <IP:8> <MOV_OUT 4 BX>
+[INFO] 16:11:31:561 [Memoria- Log obligatorio]/(12477:12486): PID: <1> - Pagina: <0> - Marco: <0>
+[INFO] 16:11:31:561 [Memoria- Log obligatorio]/(12477:12486): PAGINA ENCONTRADA <PID:1> <Pag:0> <Marco:0>
+[INFO] 16:11:32:062 [Memoria- Log obligatorio]/(12477:12486): PID: <1> - Accion: <ESCRIBIR> - Direccion fisica: <4>
+[INFO] 16:11:32:062 [Memoria- Log obligatorio]/(12477:12486): ESCRITO <PID:1> <dir_fisi:4> <VALOR:79>
+[INFO] 16:11:32:563 [Memoria- Log obligatorio]/(12477:12486): <PID:1> <IP:9> <MOV_OUT 8 CX>
+[INFO] 16:11:33:066 [Memoria- Log obligatorio]/(12477:12486): PID: <1> - Pagina: <0> - Marco: <0>
+[INFO] 16:11:33:066 [Memoria- Log obligatorio]/(12477:12486): PAGINA ENCONTRADA <PID:1> <Pag:0> <Marco:0>
+[INFO] 16:11:33:567 [Memoria- Log obligatorio]/(12477:12486): PID: <1> - Accion: <ESCRIBIR> - Direccion fisica: <8>
+[INFO] 16:11:33:567 [Memoria- Log obligatorio]/(12477:12486): ESCRITO <PID:1> <dir_fisi:8> <VALOR:78>
+[INFO] 16:11:34:069 [Memoria- Log obligatorio]/(12477:12486): <PID:1> <IP:10> <MOV_OUT 12 DX>
+[INFO] 16:11:34:570 [Memoria- Log obligatorio]/(12477:12486): PID: <1> - Pagina: <0> - Marco: <0>
+[INFO] 16:11:34:570 [Memoria- Log obligatorio]/(12477:12486): PAGINA ENCONTRADA <PID:1> <Pag:0> <Marco:0>
+[INFO] 16:11:35:071 [Memoria- Log obligatorio]/(12477:12486): PID: <1> - Accion: <ESCRIBIR> - Direccion fisica: <12>
+[INFO] 16:11:35:071 [Memoria- Log obligatorio]/(12477:12486): ESCRITO <PID:1> <dir_fisi:12> <VALOR:89>
+[INFO] 16:11:35:575 [Memoria- Log obligatorio]/(12477:12486): <PID:1> <IP:11> <F_WRITE consolas 0>
+[INFO] 16:11:36:076 [Memoria- Log obligatorio]/(12477:12486): PID: <1> - Pagina: <0> - Marco: <0>
+[INFO] 16:11:36:076 [Memoria- Log obligatorio]/(12477:12486): PAGINA ENCONTRADA <PID:1> <Pag:0> <Marco:0>
+[INFO] 16:14:42:041 [Memoria- Log obligatorio]/(12477:13109): PID: <1> - Tamaño: <4>
+[INFO] 16:14:49:048 [Memoria- Log obligatorio]/(12477:13107): <PID:1> <IP:0> <SET AX 83>
+[INFO] 16:14:49:549 [Memoria- Log obligatorio]/(12477:13107): <PID:1> <IP:1> <SET BX 79>
+[INFO] 16:14:50:050 [Memoria- Log obligatorio]/(12477:13107): <PID:1> <IP:2> <SET CX 78>
+[INFO] 16:14:50:550 [Memoria- Log obligatorio]/(12477:13107): <PID:1> <IP:3> <SET DX 89>
+[INFO] 16:14:51:051 [Memoria- Log obligatorio]/(12477:13107): <PID:1> <IP:4> <F_OPEN consolas W>
+[INFO] 16:14:51:554 [Memoria- Log obligatorio]/(12477:13107): <PID:1> <IP:5> <F_TRUNCATE consolas 64>
+[INFO] 16:15:13:114 [Memoria- Log obligatorio]/(12477:13107): <PID:1> <IP:6> <F_SEEK consolas 0>
+[INFO] 16:15:13:616 [Memoria- Log obligatorio]/(12477:13107): <PID:1> <IP:7> <MOV_OUT 0 AX>
+[INFO] 16:15:14:117 [Memoria- Log obligatorio]/(12477:13107): PID: <1> - Pagina: <0> - Marco: <0>
+[INFO] 16:15:14:117 [Memoria- Log obligatorio]/(12477:13107): PAGINA ENCONTRADA <PID:1> <Pag:0> <Marco:0>
+[INFO] 16:15:14:618 [Memoria- Log obligatorio]/(12477:13107): PID: <1> - Accion: <ESCRIBIR> - Direccion fisica: <0>
+[INFO] 16:15:14:618 [Memoria- Log obligatorio]/(12477:13107): ESCRITO <PID:1> <dir_fisi:0> <VALOR:83>
+[INFO] 16:15:15:119 [Memoria- Log obligatorio]/(12477:13107): <PID:1> <IP:8> <MOV_OUT 4 BX>
+[INFO] 16:15:15:620 [Memoria- Log obligatorio]/(12477:13107): PID: <1> - Pagina: <0> - Marco: <0>
+[INFO] 16:15:15:620 [Memoria- Log obligatorio]/(12477:13107): PAGINA ENCONTRADA <PID:1> <Pag:0> <Marco:0>
+[INFO] 16:15:16:120 [Memoria- Log obligatorio]/(12477:13107): PID: <1> - Accion: <ESCRIBIR> - Direccion fisica: <4>
+[INFO] 16:15:16:121 [Memoria- Log obligatorio]/(12477:13107): ESCRITO <PID:1> <dir_fisi:4> <VALOR:79>
+[INFO] 16:15:16:626 [Memoria- Log obligatorio]/(12477:13107): <PID:1> <IP:9> <MOV_OUT 8 CX>
+[INFO] 16:15:17:127 [Memoria- Log obligatorio]/(12477:13107): PID: <1> - Pagina: <0> - Marco: <0>
+[INFO] 16:15:17:127 [Memoria- Log obligatorio]/(12477:13107): PAGINA ENCONTRADA <PID:1> <Pag:0> <Marco:0>
+[INFO] 16:15:17:627 [Memoria- Log obligatorio]/(12477:13107): PID: <1> - Accion: <ESCRIBIR> - Direccion fisica: <8>
+[INFO] 16:15:17:627 [Memoria- Log obligatorio]/(12477:13107): ESCRITO <PID:1> <dir_fisi:8> <VALOR:78>
+[INFO] 16:15:18:129 [Memoria- Log obligatorio]/(12477:13107): <PID:1> <IP:10> <MOV_OUT 12 DX>
+[INFO] 16:15:18:632 [Memoria- Log obligatorio]/(12477:13107): PID: <1> - Pagina: <0> - Marco: <0>
+[INFO] 16:15:18:632 [Memoria- Log obligatorio]/(12477:13107): PAGINA ENCONTRADA <PID:1> <Pag:0> <Marco:0>
+[INFO] 16:15:19:133 [Memoria- Log obligatorio]/(12477:13107): PID: <1> - Accion: <ESCRIBIR> - Direccion fisica: <12>
+[INFO] 16:15:19:133 [Memoria- Log obligatorio]/(12477:13107): ESCRITO <PID:1> <dir_fisi:12> <VALOR:89>
+[INFO] 16:15:19:634 [Memoria- Log obligatorio]/(12477:13107): <PID:1> <IP:11> <F_WRITE consolas 0>
+[INFO] 16:15:20:135 [Memoria- Log obligatorio]/(12477:13107): PID: <1> - Pagina: <0> - Marco: <0>
+[INFO] 16:15:20:135 [Memoria- Log obligatorio]/(12477:13107): PAGINA ENCONTRADA <PID:1> <Pag:0> <Marco:0>
+[INFO] 16:20:18:068 [Memoria- Log obligatorio]/(14161:14172): PID: <1> - Tamaño: <4>
+[INFO] 16:20:25:088 [Memoria- Log obligatorio]/(14161:14170): <PID:1> <IP:0> <F_OPEN consolas W>
+[INFO] 16:20:25:596 [Memoria- Log obligatorio]/(14161:14170): <PID:1> <IP:1> <F_TRUNCATE consolas 64>
+[INFO] 16:20:55:189 [Memoria- Log obligatorio]/(14161:14170): <PID:1> <IP:2> <F_SEEK consolas 0>
+[INFO] 16:20:55:691 [Memoria- Log obligatorio]/(14161:14170): <PID:1> <IP:3> <F_WRITE consolas 0>
+[WARNING] 16:20:56:194 [Memoria- Log obligatorio]/(14161:14170): PAGEFAULT <PID:1> <Pag:0>
+[INFO] 16:20:56:695 [Memoria- Log obligatorio]/(14161:14172): PID: <1> - Pagina: <0> - Marco: <0>
+[INFO] 16:20:57:196 [Memoria- Log obligatorio]/(14161:14172): SWAP IN - PID: <1> - Marco: <0> - Page In: <1>-<0>
+[INFO] 16:20:58:697 [Memoria- Log obligatorio]/(14161:14163): PID: <1> - Pagina: <0> - Marco: <0>
+[INFO] 16:20:58:697 [Memoria- Log obligatorio]/(14161:14163): PID: <1> - Accion: <ESCRIBIR> - Direccion fisica: <0>
+[INFO] 16:21:02:199 [Memoria- Log obligatorio]/(14161:14170): <PID:1> <IP:3> <F_WRITE consolas 0>
+[INFO] 16:21:02:700 [Memoria- Log obligatorio]/(14161:14170): PID: <1> - Pagina: <0> - Marco: <0>
+[INFO] 16:21:02:700 [Memoria- Log obligatorio]/(14161:14170): PAGINA ENCONTRADA <PID:1> <Pag:0> <Marco:0>
+[INFO] 16:25:25:040 [Memoria- Log obligatorio]/(14161:14507): PID: <1> - Tamaño: <4>
+[INFO] 16:25:32:047 [Memoria- Log obligatorio]/(14161:14495): <PID:1> <IP:0> <F_OPEN consolas W>
+[INFO] 16:25:32:550 [Memoria- Log obligatorio]/(14161:14495): <PID:1> <IP:1> <F_TRUNCATE consolas 64>
+[INFO] 16:26:10:132 [Memoria- Log obligatorio]/(14161:14495): <PID:1> <IP:2> <F_SEEK consolas 0>
+[INFO] 16:26:10:633 [Memoria- Log obligatorio]/(14161:14495): <PID:1> <IP:3> <F_WRITE consolas 0>
+[INFO] 16:26:11:134 [Memoria- Log obligatorio]/(14161:14495): PID: <1> - Pagina: <0> - Marco: <0>
+[INFO] 16:26:11:134 [Memoria- Log obligatorio]/(14161:14495): PAGINA ENCONTRADA <PID:1> <Pag:0> <Marco:0>
+[INFO] 16:29:53:007 [Memoria- Log obligatorio]/(14658:14669): PID: <1> - Tamaño: <4>
+[INFO] 16:30:00:011 [Memoria- Log obligatorio]/(14658:14667): <PID:1> <IP:0> <F_OPEN consolas W>
+[INFO] 16:30:00:513 [Memoria- Log obligatorio]/(14658:14667): <PID:1> <IP:1> <F_TRUNCATE consolas 64>
+[INFO] 16:30:46:472 [Memoria- Log obligatorio]/(14658:14667): <PID:1> <IP:2> <F_SEEK consolas 0>
+[INFO] 16:30:47:019 [Memoria- Log obligatorio]/(14658:14667): <PID:1> <IP:3> <F_WRITE consolas 0>
+[WARNING] 16:30:47:550 [Memoria- Log obligatorio]/(14658:14667): PAGEFAULT <PID:1> <Pag:0>
+[INFO] 16:30:48:067 [Memoria- Log obligatorio]/(14658:14669): PID: <1> - Pagina: <0> - Marco: <0>
+[INFO] 16:30:48:568 [Memoria- Log obligatorio]/(14658:14669): SWAP IN - PID: <1> - Marco: <0> - Page In: <1>-<0>
+[INFO] 16:30:50:069 [Memoria- Log obligatorio]/(14658:14661): PID: <1> - Pagina: <0> - Marco: <0>
+[INFO] 16:30:50:070 [Memoria- Log obligatorio]/(14658:14661): PID: <1> - Accion: <ESCRIBIR> - Direccion fisica: <0>
+[INFO] 16:30:53:578 [Memoria- Log obligatorio]/(14658:14667): <PID:1> <IP:3> <F_WRITE consolas 0>
+[INFO] 16:30:54:100 [Memoria- Log obligatorio]/(14658:14667): PID: <1> - Pagina: <0> - Marco: <0>
+[INFO] 16:30:54:100 [Memoria- Log obligatorio]/(14658:14667): PAGINA ENCONTRADA <PID:1> <Pag:0> <Marco:0>
