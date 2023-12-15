@@ -20,6 +20,15 @@
 #include <pthread.h>
 #include "protocolo.h"
 #include "socket.h"
+#include <semaphore.h>
+#include <math.h>
+#include <commons/bitarray.h>
+#include <unistd.h>
+#include <sys/mman.h>
+#include <fcntl.h>
+
+
+
 
 //Manejo de instrucciones del Kernel
 typedef enum{

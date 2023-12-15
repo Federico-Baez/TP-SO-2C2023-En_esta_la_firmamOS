@@ -37,13 +37,14 @@ t_list* lista_configs_fcbs;
 int fd_archivoTablaFAT;
 int fd_archivoBloques;
 
-void* bitmap_swap;
+char* bitmap_swap;
 t_bitarray* bitmapSWAP;
 
 uint32_t* tablaFatEnMemoria;
-void* archivoBloquesEnMemoria;
+void* bloquesEnMemoria;
 void* bloquesFATEnMemoria;
 void* bloquesSwapEnMemoria;
+
 
 void leer_config(t_config* config);
 void iterator(char* value);

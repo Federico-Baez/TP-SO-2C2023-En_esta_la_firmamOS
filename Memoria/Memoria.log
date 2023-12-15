@@ -1274,3 +1274,111 @@
 [INFO] 00:10:48:857 [Memoria]/(115529:115529): Se carga la instrucción F_CLOSE ARCHIVO
 
 [INFO] 00:10:48:857 [Memoria]/(115529:115529): Se carga la instrucción EXIT
+[ERROR] 22:53:00:377 [Memoria]/(5382:5382): No se encontro el path 
+.
+[ERROR] 22:54:24:352 [Memoria]/(5405:5405): No se encontro el path 
+.
+[ERROR] 22:55:30:183 [Memoria]/(5419:5419): No se encontro el path 
+.
+[ERROR] 22:57:38:735 [Memoria]/(5465:5465): No se encontro el path 
+.
+[ERROR] 22:57:42:531 [Memoria]/(5467:5467): No se encontro el path 
+.
+[INFO] 22:57:49:890 [Memoria]/(5469:5469): Se inicia memoria con Paginacion.
+
+[INFO] 22:57:49:890 [Memoria]/(5469:5469): Algoritmo de reemplazo a usar: FIFO
+
+[INFO] 22:57:49:890 [Memoria]/(5469:5469): Iniciando servidor Memoria
+[INFO] 22:58:56:317 [Memoria]/(5469:5469): Cliente conectado a Memoria
+[INFO] 22:58:56:317 [Memoria]/(5469:5469): [THREAD] Creo hilo para atender
+[INFO] 22:58:56:317 [Memoria]/(5469:5478): !!!!! FILESYSTEM CONECTADO !!!!!
+[INFO] 22:59:06:499 [Memoria]/(5469:5469): Cliente conectado a Memoria
+[INFO] 22:59:06:499 [Memoria]/(5469:5469): [THREAD] Creo hilo para atender
+[INFO] 22:59:06:500 [Memoria]/(5469:5486): !!!!! CPU CONECTADO !!!!!
+[INFO] 22:59:59:943 [Memoria]/(5469:5469): Cliente conectado a Memoria
+[INFO] 22:59:59:943 [Memoria]/(5469:5469): [THREAD] Creo hilo para atender
+[INFO] 22:59:59:943 [Memoria]/(5469:5510): !!!!! KERNEL CONECTADO !!!!!
+[INFO] 23:00:56:071 [Memoria]/(5469:5510): [Kernel] -> Peticion de creacion de proceso nuevo
+[INFO] 23:00:56:071 [Memoria]/(5469:5510): Intruccion: [SET AX 1]
+[INFO] 23:00:56:071 [Memoria]/(5469:5510): Intruccion: [SET BX 1]
+[INFO] 23:00:56:071 [Memoria]/(5469:5510): Intruccion: [SLEEP 10]
+[INFO] 23:00:56:071 [Memoria]/(5469:5510): Intruccion: [SUM AX BX]
+[INFO] 23:00:56:071 [Memoria]/(5469:5510): Intruccion: [SUB AX BX]
+[INFO] 23:00:56:071 [Memoria]/(5469:5510): Intruccion: [EXIT]
+[INFO] 23:00:56:071 [Memoria]/(5469:5510): Intruccion: [WAIT RECURSO_1]
+[INFO] 23:00:56:071 [Memoria]/(5469:5510): Intruccion: [SIGNAL RECURSO_1]
+[INFO] 23:00:56:071 [Memoria]/(5469:5510): Intruccion: [F_OPEN ARCHIVO W]
+[INFO] 23:00:56:071 [Memoria]/(5469:5510): Intruccion: [F_TRUNCATE ARCHIVO 64]
+[INFO] 23:00:56:071 [Memoria]/(5469:5510): Intruccion: [F_SEEK ARCHIVO 8]
+[INFO] 23:00:56:071 [Memoria]/(5469:5510): Intruccion: [F_WRITE ARCHIVO 0]
+[INFO] 23:00:56:071 [Memoria]/(5469:5510): Intruccion: [F_READ ARCHIVO 0]
+[INFO] 23:00:56:071 [Memoria]/(5469:5510): Intruccion: [F_CLOSE ARCHIVO]
+[ERROR] 23:00:57:175 [Memoria]/(5469:5478): [DESCONEXION]: FILESYSTEM
+[ERROR] 23:00:57:182 [Memoria]/(5469:5486): [DESCONEXION]: CPU
+[ERROR] 23:00:58:074 [Memoria]/(5469:5510): [DESCONEXION]: KERNEL
+[INFO] 23:07:09:625 [Memoria]/(6092:6092): Se inicia memoria con Paginacion.
+
+[INFO] 23:07:09:626 [Memoria]/(6092:6092): Algoritmo de reemplazo a usar: FIFO
+
+[INFO] 23:07:09:626 [Memoria]/(6092:6092): Iniciando servidor Memoria
+[INFO] 23:07:14:998 [Memoria]/(6092:6092): Cliente conectado a Memoria
+[INFO] 23:07:14:998 [Memoria]/(6092:6092): [THREAD] Creo hilo para atender
+[INFO] 23:07:14:999 [Memoria]/(6092:6094): !!!!! FILESYSTEM CONECTADO !!!!!
+[INFO] 23:07:17:519 [Memoria]/(6092:6092): Cliente conectado a Memoria
+[INFO] 23:07:17:519 [Memoria]/(6092:6092): [THREAD] Creo hilo para atender
+[INFO] 23:07:17:520 [Memoria]/(6092:6101): !!!!! CPU CONECTADO !!!!!
+[INFO] 23:07:19:179 [Memoria]/(6092:6092): Cliente conectado a Memoria
+[INFO] 23:07:19:179 [Memoria]/(6092:6092): [THREAD] Creo hilo para atender
+[INFO] 23:07:19:179 [Memoria]/(6092:6103): !!!!! KERNEL CONECTADO !!!!!
+[INFO] 23:07:26:692 [Memoria]/(6092:6103): [Kernel] -> Peticion de creacion de proceso nuevo
+[INFO] 23:07:26:692 [Memoria]/(6092:6103): Intruccion: [SET AX 1]
+[INFO] 23:07:26:692 [Memoria]/(6092:6103): Intruccion: [SET BX 1]
+[INFO] 23:07:26:692 [Memoria]/(6092:6103): Intruccion: [SLEEP 10]
+[INFO] 23:07:26:692 [Memoria]/(6092:6103): Intruccion: [SUM AX BX]
+[INFO] 23:07:26:692 [Memoria]/(6092:6103): Intruccion: [SUB AX BX]
+[INFO] 23:07:26:692 [Memoria]/(6092:6103): Intruccion: [EXIT]
+[INFO] 23:07:26:692 [Memoria]/(6092:6103): Intruccion: [WAIT RECURSO_1]
+[INFO] 23:07:26:692 [Memoria]/(6092:6103): Intruccion: [SIGNAL RECURSO_1]
+[INFO] 23:07:26:692 [Memoria]/(6092:6103): Intruccion: [F_OPEN ARCHIVO W]
+[INFO] 23:07:26:692 [Memoria]/(6092:6103): Intruccion: [F_TRUNCATE ARCHIVO 64]
+[INFO] 23:07:26:692 [Memoria]/(6092:6103): Intruccion: [F_SEEK ARCHIVO 8]
+[INFO] 23:07:26:692 [Memoria]/(6092:6103): Intruccion: [F_WRITE ARCHIVO 0]
+[INFO] 23:07:26:692 [Memoria]/(6092:6103): Intruccion: [F_READ ARCHIVO 0]
+[INFO] 23:07:26:692 [Memoria]/(6092:6103): Intruccion: [F_CLOSE ARCHIVO]
+[ERROR] 23:07:27:803 [Memoria]/(6092:6094): [DESCONEXION]: FILESYSTEM
+[ERROR] 23:07:27:804 [Memoria]/(6092:6101): [DESCONEXION]: CPU
+[ERROR] 23:07:28:699 [Memoria]/(6092:6103): [DESCONEXION]: KERNEL
+[INFO] 23:09:06:649 [Memoria]/(6319:6319): Se inicia memoria con Paginacion.
+
+[INFO] 23:09:06:649 [Memoria]/(6319:6319): Algoritmo de reemplazo a usar: FIFO
+
+[INFO] 23:09:06:650 [Memoria]/(6319:6319): Iniciando servidor Memoria
+[INFO] 23:09:08:034 [Memoria]/(6319:6319): Cliente conectado a Memoria
+[INFO] 23:09:08:035 [Memoria]/(6319:6319): [THREAD] Creo hilo para atender
+[INFO] 23:09:08:035 [Memoria]/(6319:6323): !!!!! FILESYSTEM CONECTADO !!!!!
+[INFO] 23:09:09:274 [Memoria]/(6319:6319): Cliente conectado a Memoria
+[INFO] 23:09:09:274 [Memoria]/(6319:6319): [THREAD] Creo hilo para atender
+[INFO] 23:09:09:275 [Memoria]/(6319:6328): !!!!! CPU CONECTADO !!!!!
+[INFO] 23:09:10:403 [Memoria]/(6319:6319): Cliente conectado a Memoria
+[INFO] 23:09:10:403 [Memoria]/(6319:6319): [THREAD] Creo hilo para atender
+[INFO] 23:09:10:404 [Memoria]/(6319:6330): !!!!! KERNEL CONECTADO !!!!!
+[INFO] 23:09:16:585 [Memoria]/(6319:6330): [Kernel] -> Peticion de creacion de proceso nuevo
+[INFO] 23:09:16:585 [Memoria]/(6319:6330): Intruccion: [SET AX 1]
+[INFO] 23:09:16:585 [Memoria]/(6319:6330): Intruccion: [SET BX 1]
+[INFO] 23:09:16:585 [Memoria]/(6319:6330): Intruccion: [SLEEP 10]
+[INFO] 23:09:16:585 [Memoria]/(6319:6330): Intruccion: [SUM AX BX]
+[INFO] 23:09:16:585 [Memoria]/(6319:6330): Intruccion: [SUB AX BX]
+[INFO] 23:09:16:585 [Memoria]/(6319:6330): Intruccion: [EXIT]
+[INFO] 23:09:16:585 [Memoria]/(6319:6330): Intruccion: [WAIT RECURSO_1]
+[INFO] 23:09:16:585 [Memoria]/(6319:6330): Intruccion: [SIGNAL RECURSO_1]
+[INFO] 23:09:16:585 [Memoria]/(6319:6330): Intruccion: [F_OPEN ARCHIVO W]
+[INFO] 23:09:16:585 [Memoria]/(6319:6330): Intruccion: [F_TRUNCATE ARCHIVO 64]
+[INFO] 23:09:16:585 [Memoria]/(6319:6330): Intruccion: [F_SEEK ARCHIVO 8]
+[INFO] 23:09:16:585 [Memoria]/(6319:6330): Intruccion: [F_WRITE ARCHIVO 0]
+[INFO] 23:09:16:585 [Memoria]/(6319:6330): Intruccion: [F_READ ARCHIVO 0]
+[INFO] 23:09:16:585 [Memoria]/(6319:6330): Intruccion: [F_CLOSE ARCHIVO]
+[ERROR] 23:09:17:709 [Memoria]/(6319:6323): [DESCONEXION]: FILESYSTEM
+[ERROR] 23:09:17:710 [Memoria]/(6319:6328): [DESCONEXION]: CPU
+[ERROR] 23:09:18:586 [Memoria]/(6319:6330): [DESCONEXION]: KERNEL
+[ERROR] 23:11:26:243 [Memoria]/(6387:6387): No se encontro el path 
+.

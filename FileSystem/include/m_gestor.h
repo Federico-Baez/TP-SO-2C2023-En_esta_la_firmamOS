@@ -1,25 +1,8 @@
 #ifndef M_GESTOR_H_
 #define M_GESTOR_H_
 
-#include <protocolo.h>
-#include <socket.h>
 #include <shared.h>
 
-#include <commons/log.h>
-#include <commons/config.h>
-#include <commons/collections/list.h>
-#include <commons/bitarray.h>
-#include <commons/temporal.h>
-#include <commons/string.h>
-
-#include <pthread.h>
-
-#include <stdlib.h>
-#include <unistd.h>
-#include <fcntl.h>
-#include <sys/mman.h>
-
-#include <math.h>
 
 extern const uint32_t EOF_FS;
 
@@ -42,11 +25,11 @@ extern t_list* lista_configs_fcbs;
 extern int fd_archivoTablaFAT;
 extern int fd_archivoBloques;
 
-extern void* bitmap_swap;
+extern char* bitmap_swap;
 extern t_bitarray* bitmapSWAP;
 
 extern uint32_t* tablaFatEnMemoria;
-extern void* archivoBloquesEnMemoria;
+extern void* bloquesEnMemoria;
 extern void* bloquesFATEnMemoria;
 extern void* bloquesSwapEnMemoria;
 

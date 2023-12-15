@@ -9,3 +9,19 @@
 
 [INFO] 02:24:42:280 [File System]/(4850:4850): Cliente conectado a Kernel
 [WARNING] 02:24:42:280 [File System]/(4850:4850): Operacion desconocida. No quieras meter la pata
+[ERROR] 22:55:06:029 [File System]/(5410:5410): No se encontro el path del config
+
+[ERROR] 22:58:42:434 [File System]/(5473:5473): No se encontro el path del config
+
+[INFO] 22:58:56:317 [File System]/(5477:5479): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 22:59:59:943 [File System]/(5477:5480): Cliente conectado a Kernel
+[INFO] 22:59:59:943 [File System]/(5477:5480): ::::::::::: KERNEL CONECTADO ::::::::::::
+[INFO] 23:00:57:073 [File System]/(5477:5479): Se recibio algo de MEMORIA
+[INFO] 23:07:14:999 [File System]/(6093:6095): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 23:07:19:179 [File System]/(6093:6096): Cliente conectado a Kernel
+[INFO] 23:07:19:179 [File System]/(6093:6096): ::::::::::: KERNEL CONECTADO ::::::::::::
+[INFO] 23:07:27:694 [File System]/(6093:6095): Se recibio algo de MEMORIA
+[INFO] 23:09:08:035 [File System]/(6320:6321): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 23:09:10:403 [File System]/(6320:6322): Cliente conectado a Kernel
+[INFO] 23:09:10:404 [File System]/(6320:6322): ::::::::::: KERNEL CONECTADO ::::::::::::
+[INFO] 23:09:17:585 [File System]/(6320:6321): Se recibio algo de MEMORIA

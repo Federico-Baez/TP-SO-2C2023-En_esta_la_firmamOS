@@ -1,6 +1,3 @@
-#include <stdio.h>
-#include <stdlib.h>
-
 #include "../include/FileSystem.h"
 
 int main(int argc, char** argv) {
@@ -25,6 +22,8 @@ int main(int argc, char** argv) {
 
 	//log_info(filesystem_logger, "Servidor listo para recibir a Kernel\n");
 
+	inicializar_archivos();
+
 	pthread_t hilo_kernel, hilo_memoria;
 
 	pthread_create(&hilo_memoria, NULL, (void*)atender_memoria, NULL);
@@ -33,6 +32,8 @@ int main(int argc, char** argv) {
 
 	pthread_create(&hilo_kernel, NULL, (void*)atender_filesystem_kernel, NULL);
 	pthread_join(hilo_kernel, NULL);
+
+	finalizar_filesystem();
 
 	return EXIT_SUCCESS;
 }
@@ -57,13 +58,14 @@ void inicializar_archivos(){
 }
 
 void crear_fat(){
-	fd_archivoTablaFAT = open(PATH_FAT, O_RDWR);
+	fd_archivoTablaFAT = open(PATH_FAT, O_CREAT | O_RDWR, S_IRUSR | S_IWUSR);
 	tamanio_fat = (CANT_BLOQUES_TOTAL - CANT_BLOQUES_SWAP) * sizeof(uint32_t);
-
-	if (fd_archivoTablaFAT == -1) {
-		fd_archivoTablaFAT = open(PATH_FAT, O_CREAT | O_RDWR);
-		ftruncate(fd_archivoTablaFAT, tamanio_fat);
-	}
+	ftruncate(fd_archivoTablaFAT, tamanio_fat);
+//	if (fd_archivoTablaFAT == -1) {
+//		log_warning(filesystem_logger, "Entro al crear archivo");
+//		fd_archivoTablaFAT = open(PATH_FAT, O_CREAT | O_RDWR);
+//		ftruncate(fd_archivoTablaFAT, tamanio_fat);
+//	}
 
 	tablaFatEnMemoria = mmap(NULL, tamanio_fat, PROT_READ | PROT_WRITE, MAP_SHARED, fd_archivoTablaFAT, 0);
 
@@ -76,37 +78,45 @@ void crear_fat(){
 }
 
 void inicializar_archivo_de_bloques(){
-	fd_archivoBloques = open(PATH_BLOQUES, O_RDWR);
+	fd_archivoBloques = open(PATH_BLOQUES, O_CREAT | O_RDWR, S_IRUSR | S_IWUSR);
 	tamanio_archivo_bloques = CANT_BLOQUES_TOTAL * TAM_BLOQUE;
+	ftruncate(fd_archivoBloques, tamanio_archivo_bloques);
+//	if(fd_archivoBloques == -1){
+//		fd_archivoBloques = open(PATH_BLOQUES, O_CREAT | O_RDWR);
+//		ftruncate(fd_archivoBloques, tamanio_archivo_bloques);
+//	}
+//	mapear_bloques_swap(fd_archivoBloques);
+//	mapear_bloques_de_archivo(fd_archivoBloques);
 
-	if(fd_archivoBloques == -1){
-		fd_archivoBloques = open(PATH_BLOQUES, O_CREAT | O_RDWR);
-		ftruncate(fd_archivoBloques, tamanio_archivo_bloques);
-	}
-
-	mapear_bloques_swap(fd_archivoBloques);
-	mapear_bloques_de_archivo(fd_archivoBloques);
-}
-
-void mapear_bloques_swap(int fd){
+	bitmap_swap = malloc(CANT_BLOQUES_SWAP/8);
 	bitmapSWAP = bitarray_create_with_mode(bitmap_swap, CANT_BLOQUES_SWAP/8, LSB_FIRST);
-
-	bloquesSwapEnMemoria = mmap(NULL, CANT_BLOQUES_SWAP*TAM_BLOQUE, PROT_READ | PROT_WRITE, MAP_SHARED, fd, 0);
-
-	if (bloquesSwapEnMemoria == MAP_FAILED) {
+	bloquesEnMemoria = mmap(NULL, CANT_BLOQUES_TOTAL*TAM_BLOQUE, PROT_READ | PROT_WRITE, MAP_SHARED, fd_archivoBloques, 0);
+	if (bloquesEnMemoria == MAP_FAILED) {
 		log_error(filesystem_logger, "Error al mapear los bloques SWAP");
 		exit(1);
 	}
+	log_warning(filesystem_logger, "mmapeo joya");
 }
 
-void mapear_bloques_de_archivo(int fd){
-	bloquesFATEnMemoria = mmap(NULL, (CANT_BLOQUES_TOTAL - CANT_BLOQUES_SWAP)*TAM_BLOQUE, PROT_READ | PROT_WRITE, MAP_SHARED, fd, CANT_BLOQUES_SWAP*TAM_BLOQUE);
-
-	if (bloquesFATEnMemoria == MAP_FAILED) {
-		log_error(filesystem_logger, "Error al mapear los bloques de archivo");
-		exit(1);
-	}
-}
+//void mapear_bloques_swap(int fd){
+//	bitmap_swap = malloc(CANT_BLOQUES_SWAP/8);
+//	bitmapSWAP = bitarray_create_with_mode(bitmap_swap, CANT_BLOQUES_SWAP/8, LSB_FIRST);
+//	bloquesSwapEnMemoria = mmap(NULL, CANT_BLOQUES_SWAP*TAM_BLOQUE, PROT_READ | PROT_WRITE, MAP_SHARED, fd, 0);
+//	if (bloquesSwapEnMemoria == MAP_FAILED) {
+//		log_error(filesystem_logger, "Error al mapear los bloques SWAP");
+//		exit(1);
+//	}
+//}
+//
+//void mapear_bloques_de_archivo(int fd){
+//	off_t offsetFAT = CANT_BLOQUES_SWAP*TAM_BLOQUE;
+//	bloquesFATEnMemoria = mmap(NULL, (CANT_BLOQUES_TOTAL - CANT_BLOQUES_SWAP)*TAM_BLOQUE, PROT_READ | PROT_WRITE, MAP_SHARED, fd, offsetFAT);
+//
+//	if (bloquesFATEnMemoria == MAP_FAILED) {
+//		log_error(filesystem_logger, "Error al mapear los bloques de archivo");
+//		exit(1);
+//	}
+//}
 
 void destruir_fcb(t_fcb* fcb){
 	free(fcb);
@@ -218,7 +228,9 @@ void atender_memoria(){
 		switch (cod_op) {
 		case PETICION_ASIGNACION_BLOQUE_SWAP_FM:
 			//[int pid][int catn_bloques]
+			log_info(filesystem_logger, "entro a PETICION_ASIGNACION_BLOQUE_SWAP_FM");
 			unBuffer = recibiendo_super_paquete(fd_memoria);
+			log_info(filesystem_logger, "recibo buffer");
 			atender_asignacion_de_bloques_por_creacion_de_proceso(unBuffer);
 
 			break;

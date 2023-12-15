@@ -26,3 +26,25 @@
 
 [ERROR] 02:19:29:072 [CPU]/(4874:4874): No se encontro el path del config
 
+[ERROR] 22:39:41:017 [CPU]/(4873:4873): No se encontro el path del config
+
+[ERROR] 22:54:00:259 [CPU]/(5403:5403): No se encontro el path del config
+
+[INFO] 22:59:06:500 [CPU]/(5482:5483): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 22:59:59:943 [CPU]/(5482:5485): Cliente conectado a Kernel por dispatch
+[INFO] 22:59:59:943 [CPU]/(5482:5484): Cliente conectado a Kernel por interrupt
+[INFO] 22:59:59:944 [CPU]/(5482:5485): ::::::::::: KERNEL CONECTADO POR DISPATCH ::::::::::::
+[INFO] 22:59:59:944 [CPU]/(5482:5484): ::::::::::: KERNEL CONECTADO POR INTERRUPT ::::::::::::
+[ERROR] 23:00:57:176 [CPU]/(5482:5484): [DESCONEXION]: KERNEL_Interrupt
+[INFO] 23:07:17:519 [CPU]/(6097:6098): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 23:07:19:179 [CPU]/(6097:6100): Cliente conectado a Kernel por dispatch
+[INFO] 23:07:19:179 [CPU]/(6097:6099): Cliente conectado a Kernel por interrupt
+[INFO] 23:07:19:180 [CPU]/(6097:6100): ::::::::::: KERNEL CONECTADO POR DISPATCH ::::::::::::
+[INFO] 23:07:19:180 [CPU]/(6097:6099): ::::::::::: KERNEL CONECTADO POR INTERRUPT ::::::::::::
+[ERROR] 23:07:27:804 [CPU]/(6097:6099): [DESCONEXION]: KERNEL_Interrupt
+[INFO] 23:09:09:275 [CPU]/(6324:6325): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 23:09:10:402 [CPU]/(6324:6327): Cliente conectado a Kernel por dispatch
+[INFO] 23:09:10:403 [CPU]/(6324:6326): Cliente conectado a Kernel por interrupt
+[INFO] 23:09:10:404 [CPU]/(6324:6327): ::::::::::: KERNEL CONECTADO POR DISPATCH ::::::::::::
+[INFO] 23:09:10:404 [CPU]/(6324:6326): ::::::::::: KERNEL CONECTADO POR INTERRUPT ::::::::::::
+[ERROR] 23:09:17:709 [CPU]/(6324:6326): [DESCONEXION]: KERNEL_Interrupt

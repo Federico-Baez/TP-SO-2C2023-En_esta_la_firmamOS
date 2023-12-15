@@ -7,9 +7,10 @@ void atender_asignacion_de_bloques_por_creacion_de_proceso(t_buffer* un_buffer){
 	int pid = recibir_int_del_buffer(un_buffer);
 	int cant_bloques = recibir_int_del_buffer(un_buffer);
 
+	log_warning(filesystem_logger, "pre lista de bloques");
 	//Pedirle al modulo tabla_fat.c
 	t_list* una_lista_bloques = swap_obtener_n_cantidad_de_bloques(cant_bloques);
-
+	log_warning(filesystem_logger, "post lista de bloques");
 	enviar_lista_bloques_a_memoria(pid, una_lista_bloques);
 
 	//Lierar lista de la memoria
