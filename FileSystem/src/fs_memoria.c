@@ -101,10 +101,12 @@ void  enviar_lista_bloques_a_memoria(int pid, t_list* lista_bloques){
 
 	for(int i=0; i<list_size(lista_bloques); i++){
 		int* nro_bloque = list_get(lista_bloques, i);
+		log_info(filesystem_logger, ">>>>>nro_B:%d", *nro_bloque);
 		cargar_int_al_super_paquete(un_paquete, *nro_bloque);
 	}
 
 	enviar_paquete(un_paquete, fd_memoria);
+	log_warning(filesystem_logger, ">>>>>ENVIADO a M:%d", list_size(lista_bloques));
 	eliminar_paquete(un_paquete);
 	log_warning(filesystem_logger, "fin enviar_lista_bloques_a_memoria");
 }

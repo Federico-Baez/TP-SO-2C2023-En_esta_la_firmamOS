@@ -1636,3 +1636,1862 @@
 [WARNING] 04:16:57:341 [CPU]/(19588:19616): Proceso_desalojado <PID:1>
 [INFO] 04:16:57:341 [CPU]/(19588:19616): Todo el contexto se elimino correctamente .....
 [ERROR] 04:16:57:465 [CPU]/(19588:19589): [DESCONEXION]: MEMORIA
+[INFO] 04:38:38:724 [CPU]/(4694:4695): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 04:41:11:405 [CPU]/(4759:4760): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 04:41:44:009 [CPU]/(4759:4762): Cliente conectado a Kernel por dispatch
+[INFO] 04:41:44:010 [CPU]/(4759:4761): Cliente conectado a Kernel por interrupt
+[INFO] 04:41:44:012 [CPU]/(4759:4762): ::::::::::: KERNEL CONECTADO POR DISPATCH ::::::::::::
+[INFO] 04:41:44:013 [CPU]/(4759:4761): ::::::::::: KERNEL CONECTADO POR INTERRUPT ::::::::::::
+[INFO] 04:53:39:082 [CPU]/(4759:5039): [PID: 1][PC: 0][Registros: 4|0|4|0]
+[INFO] 04:53:39:588 [CPU]/(4759:4760): Instruccion recibida: [SET AX 1]
+[INFO] 04:53:40:099 [CPU]/(4759:4760): Instruccion recibida: [MOV_OUT 0 AX]
+[INFO] 04:53:41:109 [CPU]/(4759:5039): Elimino paquete
+[WARNING] 04:53:41:109 [CPU]/(4759:5039): Proceso_desalojado <PID:1>
+[INFO] 04:53:41:109 [CPU]/(4759:5039): Todo el contexto se elimino correctamente .....
+[INFO] 04:53:52:640 [CPU]/(4759:5042): [PID: 1][PC: 1][Registros: 4|0|4|0]
+[INFO] 04:53:53:143 [CPU]/(4759:4760): Instruccion recibida: [MOV_OUT 0 AX]
+[INFO] 04:53:54:650 [CPU]/(4759:4760): Instruccion recibida: [MOV_OUT 16 AX]
+[INFO] 04:53:55:659 [CPU]/(4759:5042): Elimino paquete
+[WARNING] 04:53:55:660 [CPU]/(4759:5042): Proceso_desalojado <PID:1>
+[INFO] 04:53:55:660 [CPU]/(4759:5042): Todo el contexto se elimino correctamente .....
+[INFO] 04:53:58:174 [CPU]/(4759:5045): [PID: 1][PC: 2][Registros: 4|4|4|0]
+[INFO] 04:53:58:675 [CPU]/(4759:4760): Instruccion recibida: [MOV_OUT 16 AX]
+[INFO] 04:54:00:193 [CPU]/(4759:4760): Instruccion recibida: [MOV_OUT 32 AX]
+[INFO] 04:54:01:205 [CPU]/(4759:5045): Elimino paquete
+[WARNING] 04:54:01:205 [CPU]/(4759:5045): Proceso_desalojado <PID:1>
+[INFO] 04:54:01:205 [CPU]/(4759:5045): Todo el contexto se elimino correctamente .....
+[INFO] 04:54:03:712 [CPU]/(4759:5048): [PID: 1][PC: 3][Registros: 4|4|4|4]
+[INFO] 04:54:04:214 [CPU]/(4759:4760): Instruccion recibida: [MOV_OUT 32 AX]
+[INFO] 04:54:05:725 [CPU]/(4759:4760): Instruccion recibida: [MOV_OUT 48 AX]
+[INFO] 04:54:06:731 [CPU]/(4759:5048): Elimino paquete
+[WARNING] 04:54:06:731 [CPU]/(4759:5048): Proceso_desalojado <PID:1>
+[INFO] 04:54:06:731 [CPU]/(4759:5048): Todo el contexto se elimino correctamente .....
+[INFO] 04:54:09:241 [CPU]/(4759:5051): [PID: 1][PC: 4][Registros: 4|4|4|4]
+[INFO] 04:54:09:743 [CPU]/(4759:4760): Instruccion recibida: [MOV_OUT 48 AX]
+[INFO] 04:54:11:257 [CPU]/(4759:4760): Instruccion recibida: [MOV_IN DX 16]
+[INFO] 04:54:12:775 [CPU]/(4759:4760): Instruccion recibida: [MOV_IN CX 32]
+[INFO] 04:54:14:280 [CPU]/(4759:4760): Instruccion recibida: [SET BX 2]
+[INFO] 04:54:14:781 [CPU]/(4759:4760): Instruccion recibida: [MOV_OUT 64 BX]
+[INFO] 04:54:15:787 [CPU]/(4759:5051): Elimino paquete
+[WARNING] 04:54:15:787 [CPU]/(4759:5051): Proceso_desalojado <PID:1>
+[INFO] 04:54:15:787 [CPU]/(4759:5051): Todo el contexto se elimino correctamente .....
+[ERROR] 04:54:15:895 [CPU]/(4759:4760): [DESCONEXION]: MEMORIA
+[INFO] 04:55:30:314 [CPU]/(5078:5079): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 04:55:38:437 [CPU]/(5078:5081): Cliente conectado a Kernel por dispatch
+[INFO] 04:55:38:437 [CPU]/(5078:5080): Cliente conectado a Kernel por interrupt
+[INFO] 04:55:38:440 [CPU]/(5078:5081): ::::::::::: KERNEL CONECTADO POR DISPATCH ::::::::::::
+[INFO] 04:55:38:441 [CPU]/(5078:5080): ::::::::::: KERNEL CONECTADO POR INTERRUPT ::::::::::::
+[INFO] 04:55:45:902 [CPU]/(5078:5098): [PID: 1][PC: 0][Registros: 4|0|4|0]
+[INFO] 04:55:46:409 [CPU]/(5078:5079): Instruccion recibida: [SET AX 1]
+[INFO] 04:55:46:911 [CPU]/(5078:5079): Instruccion recibida: [MOV_OUT 0 AX]
+[INFO] 04:55:47:924 [CPU]/(5078:5098): Elimino paquete
+[WARNING] 04:55:47:924 [CPU]/(5078:5098): Proceso_desalojado <PID:1>
+[INFO] 04:55:47:924 [CPU]/(5078:5098): Todo el contexto se elimino correctamente .....
+[INFO] 04:55:59:428 [CPU]/(5078:5101): [PID: 1][PC: 1][Registros: 4|0|4|0]
+[INFO] 04:55:59:935 [CPU]/(5078:5079): Instruccion recibida: [MOV_OUT 0 AX]
+[INFO] 04:56:01:451 [CPU]/(5078:5079): Instruccion recibida: [MOV_OUT 16 AX]
+[INFO] 04:56:02:456 [CPU]/(5078:5101): Elimino paquete
+[WARNING] 04:56:02:456 [CPU]/(5078:5101): Proceso_desalojado <PID:1>
+[INFO] 04:56:02:456 [CPU]/(5078:5101): Todo el contexto se elimino correctamente .....
+[INFO] 04:56:04:973 [CPU]/(5078:5104): [PID: 1][PC: 2][Registros: 4|4|4|0]
+[INFO] 04:56:05:478 [CPU]/(5078:5079): Instruccion recibida: [MOV_OUT 16 AX]
+[INFO] 04:56:06:988 [CPU]/(5078:5079): Instruccion recibida: [MOV_OUT 32 AX]
+[INFO] 04:56:08:001 [CPU]/(5078:5104): Elimino paquete
+[WARNING] 04:56:08:001 [CPU]/(5078:5104): Proceso_desalojado <PID:1>
+[INFO] 04:56:08:001 [CPU]/(5078:5104): Todo el contexto se elimino correctamente .....
+[INFO] 04:56:10:526 [CPU]/(5078:5107): [PID: 1][PC: 3][Registros: 4|4|4|4]
+[INFO] 04:56:11:028 [CPU]/(5078:5079): Instruccion recibida: [MOV_OUT 32 AX]
+[INFO] 04:56:12:555 [CPU]/(5078:5079): Instruccion recibida: [MOV_OUT 48 AX]
+[INFO] 04:56:13:563 [CPU]/(5078:5107): Elimino paquete
+[WARNING] 04:56:13:563 [CPU]/(5078:5107): Proceso_desalojado <PID:1>
+[INFO] 04:56:13:563 [CPU]/(5078:5107): Todo el contexto se elimino correctamente .....
+[INFO] 04:56:16:072 [CPU]/(5078:5110): [PID: 1][PC: 4][Registros: 4|4|4|4]
+[INFO] 04:56:16:578 [CPU]/(5078:5079): Instruccion recibida: [MOV_OUT 48 AX]
+[INFO] 04:56:18:089 [CPU]/(5078:5079): Instruccion recibida: [MOV_IN DX 16]
+[INFO] 04:56:19:610 [CPU]/(5078:5079): Instruccion recibida: [MOV_IN CX 32]
+[INFO] 04:56:21:118 [CPU]/(5078:5079): Instruccion recibida: [SET BX 2]
+[INFO] 04:56:21:622 [CPU]/(5078:5079): Instruccion recibida: [MOV_OUT 64 BX]
+[INFO] 04:56:22:644 [CPU]/(5078:5110): Elimino paquete
+[WARNING] 04:56:22:645 [CPU]/(5078:5110): Proceso_desalojado <PID:1>
+[INFO] 04:56:22:645 [CPU]/(5078:5110): Todo el contexto se elimino correctamente .....
+[ERROR] 04:56:22:746 [CPU]/(5078:5079): [DESCONEXION]: MEMORIA
+[INFO] 04:59:46:635 [CPU]/(5116:5117): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 04:59:54:647 [CPU]/(5116:5119): Cliente conectado a Kernel por dispatch
+[INFO] 04:59:54:648 [CPU]/(5116:5118): Cliente conectado a Kernel por interrupt
+[INFO] 04:59:54:650 [CPU]/(5116:5119): ::::::::::: KERNEL CONECTADO POR DISPATCH ::::::::::::
+[INFO] 04:59:54:651 [CPU]/(5116:5118): ::::::::::: KERNEL CONECTADO POR INTERRUPT ::::::::::::
+[INFO] 05:00:04:603 [CPU]/(5116:5136): [PID: 1][PC: 0][Registros: 4|0|4|0]
+[INFO] 05:00:05:104 [CPU]/(5116:5117): Instruccion recibida: [SET AX 1]
+[INFO] 05:00:05:608 [CPU]/(5116:5117): Instruccion recibida: [MOV_OUT 0 AX]
+[INFO] 05:00:06:612 [CPU]/(5116:5136): Elimino paquete
+[WARNING] 05:00:06:612 [CPU]/(5116:5136): Proceso_desalojado <PID:1>
+[INFO] 05:00:06:612 [CPU]/(5116:5136): Todo el contexto se elimino correctamente .....
+[ERROR] 05:00:08:193 [CPU]/(5116:5118): [DESCONEXION]: KERNEL_Interrupt
+[INFO] 05:05:10:271 [CPU]/(5272:5273): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 05:05:14:458 [CPU]/(5272:5275): Cliente conectado a Kernel por dispatch
+[INFO] 05:05:14:458 [CPU]/(5272:5274): Cliente conectado a Kernel por interrupt
+[INFO] 05:05:14:460 [CPU]/(5272:5275): ::::::::::: KERNEL CONECTADO POR DISPATCH ::::::::::::
+[INFO] 05:05:14:460 [CPU]/(5272:5274): ::::::::::: KERNEL CONECTADO POR INTERRUPT ::::::::::::
+[INFO] 05:05:23:932 [CPU]/(5272:5290): [PID: 1][PC: 0][Registros: 4|0|4|0]
+[INFO] 05:05:24:444 [CPU]/(5272:5273): Instruccion recibida: [SET AX 1]
+[INFO] 05:05:24:946 [CPU]/(5272:5273): Instruccion recibida: [MOV_OUT 0 AX]
+[INFO] 05:05:25:950 [CPU]/(5272:5290): Elimino paquete
+[WARNING] 05:05:25:950 [CPU]/(5272:5290): Proceso_desalojado <PID:1>
+[INFO] 05:05:25:950 [CPU]/(5272:5290): Todo el contexto se elimino correctamente .....
+[INFO] 05:05:37:480 [CPU]/(5272:5294): [PID: 1][PC: 1][Registros: 4|0|4|0]
+[INFO] 05:05:37:981 [CPU]/(5272:5273): Instruccion recibida: [MOV_OUT 0 AX]
+[INFO] 05:05:39:509 [CPU]/(5272:5273): Instruccion recibida: [MOV_OUT 16 AX]
+[ERROR] 05:05:39:510 [CPU]/(5272:5274): [DESCONEXION]: KERNEL_Interrupt
+[ERROR] 05:05:39:511 [CPU]/(5272:5275): [DESCONEXION]: KERNEL_Dispatch
+[INFO] 05:18:45:948 [CPU]/(5537:5538): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 05:18:50:730 [CPU]/(5537:5540): Cliente conectado a Kernel por dispatch
+[INFO] 05:18:50:730 [CPU]/(5537:5539): Cliente conectado a Kernel por interrupt
+[INFO] 05:18:50:732 [CPU]/(5537:5540): ::::::::::: KERNEL CONECTADO POR DISPATCH ::::::::::::
+[INFO] 05:18:50:733 [CPU]/(5537:5539): ::::::::::: KERNEL CONECTADO POR INTERRUPT ::::::::::::
+[INFO] 05:18:58:945 [CPU]/(5537:5558): [PID: 1][PC: 0][Registros: 4|0|4|0]
+[INFO] 05:18:59:450 [CPU]/(5537:5538): Instruccion recibida: [SET AX 1]
+[INFO] 05:18:59:954 [CPU]/(5537:5538): Instruccion recibida: [MOV_OUT 0 AX]
+[INFO] 05:19:00:960 [CPU]/(5537:5558): Elimino paquete
+[WARNING] 05:19:00:960 [CPU]/(5537:5558): Proceso_desalojado <PID:1>
+[INFO] 05:19:00:960 [CPU]/(5537:5558): Todo el contexto se elimino correctamente .....
+[INFO] 05:19:12:465 [CPU]/(5537:5561): [PID: 1][PC: 1][Registros: 4|0|4|0]
+[INFO] 05:19:12:970 [CPU]/(5537:5538): Instruccion recibida: [MOV_OUT 0 AX]
+[INFO] 05:19:14:490 [CPU]/(5537:5538): Instruccion recibida: [MOV_OUT 16 AX]
+[INFO] 05:19:15:498 [CPU]/(5537:5561): Elimino paquete
+[WARNING] 05:19:15:498 [CPU]/(5537:5561): Proceso_desalojado <PID:1>
+[INFO] 05:19:15:498 [CPU]/(5537:5561): Todo el contexto se elimino correctamente .....
+[INFO] 05:19:18:013 [CPU]/(5537:5564): [PID: 1][PC: 2][Registros: 4|4|4|0]
+[INFO] 05:19:18:516 [CPU]/(5537:5538): Instruccion recibida: [MOV_OUT 16 AX]
+[INFO] 05:19:20:026 [CPU]/(5537:5538): Instruccion recibida: [MOV_OUT 32 AX]
+[INFO] 05:19:21:030 [CPU]/(5537:5564): Elimino paquete
+[WARNING] 05:19:21:030 [CPU]/(5537:5564): Proceso_desalojado <PID:1>
+[INFO] 05:19:21:030 [CPU]/(5537:5564): Todo el contexto se elimino correctamente .....
+[INFO] 05:19:23:545 [CPU]/(5537:5567): [PID: 1][PC: 3][Registros: 4|4|4|4]
+[INFO] 05:19:24:053 [CPU]/(5537:5538): Instruccion recibida: [MOV_OUT 32 AX]
+[INFO] 05:19:25:567 [CPU]/(5537:5538): Instruccion recibida: [MOV_OUT 48 AX]
+[INFO] 05:19:26:577 [CPU]/(5537:5567): Elimino paquete
+[WARNING] 05:19:26:577 [CPU]/(5537:5567): Proceso_desalojado <PID:1>
+[INFO] 05:19:26:577 [CPU]/(5537:5567): Todo el contexto se elimino correctamente .....
+[INFO] 05:19:29:095 [CPU]/(5537:5569): [PID: 1][PC: 4][Registros: 4|4|4|4]
+[INFO] 05:19:29:596 [CPU]/(5537:5538): Instruccion recibida: [MOV_OUT 48 AX]
+[INFO] 05:19:31:105 [CPU]/(5537:5538): Instruccion recibida: [MOV_IN DX 16]
+[INFO] 05:19:32:617 [CPU]/(5537:5538): Instruccion recibida: [MOV_IN CX 32]
+[INFO] 05:19:34:124 [CPU]/(5537:5538): Instruccion recibida: [SET BX 2]
+[INFO] 05:19:34:625 [CPU]/(5537:5538): Instruccion recibida: [MOV_OUT 64 BX]
+[INFO] 05:19:35:648 [CPU]/(5537:5569): Elimino paquete
+[WARNING] 05:19:35:648 [CPU]/(5537:5569): Proceso_desalojado <PID:1>
+[INFO] 05:19:35:648 [CPU]/(5537:5569): Todo el contexto se elimino correctamente .....
+[ERROR] 05:19:35:758 [CPU]/(5537:5538): [DESCONEXION]: MEMORIA
+[INFO] 05:20:08:747 [CPU]/(5574:5575): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 05:20:11:837 [CPU]/(5574:5577): Cliente conectado a Kernel por dispatch
+[INFO] 05:20:11:837 [CPU]/(5574:5576): Cliente conectado a Kernel por interrupt
+[INFO] 05:20:11:838 [CPU]/(5574:5577): ::::::::::: KERNEL CONECTADO POR DISPATCH ::::::::::::
+[INFO] 05:20:11:839 [CPU]/(5574:5576): ::::::::::: KERNEL CONECTADO POR INTERRUPT ::::::::::::
+[INFO] 05:20:21:120 [CPU]/(5574:5594): [PID: 1][PC: 0][Registros: 4|0|4|0]
+[INFO] 05:20:21:621 [CPU]/(5574:5575): Instruccion recibida: [SET AX 1]
+[INFO] 05:20:22:125 [CPU]/(5574:5575): Instruccion recibida: [MOV_OUT 0 AX]
+[ERROR] 05:20:23:026 [CPU]/(5574:5576): [DESCONEXION]: KERNEL_Interrupt
+[INFO] 05:28:19:930 [CPU]/(5790:5791): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 05:28:23:912 [CPU]/(5790:5792): Cliente conectado a Kernel por interrupt
+[INFO] 05:28:23:912 [CPU]/(5790:5793): Cliente conectado a Kernel por dispatch
+[INFO] 05:28:23:913 [CPU]/(5790:5793): ::::::::::: KERNEL CONECTADO POR DISPATCH ::::::::::::
+[INFO] 05:28:23:913 [CPU]/(5790:5792): ::::::::::: KERNEL CONECTADO POR INTERRUPT ::::::::::::
+[INFO] 05:28:44:676 [CPU]/(5790:5811): [PID: 1][PC: 0][Registros: 4|0|4|0]
+[INFO] 05:28:45:178 [CPU]/(5790:5791): Instruccion recibida: [SET AX 1]
+[INFO] 05:28:45:688 [CPU]/(5790:5791): Instruccion recibida: [MOV_OUT 0 AX]
+[INFO] 05:28:46:692 [CPU]/(5790:5811): Elimino paquete
+[WARNING] 05:28:46:692 [CPU]/(5790:5811): Proceso_desalojado <PID:1>
+[INFO] 05:28:46:692 [CPU]/(5790:5811): Todo el contexto se elimino correctamente .....
+[INFO] 05:28:49:198 [CPU]/(5790:5813): [PID: 1][PC: 1][Registros: 4|0|4|0]
+[INFO] 05:28:49:699 [CPU]/(5790:5791): Instruccion recibida: [MOV_OUT 0 AX]
+[INFO] 05:28:51:207 [CPU]/(5790:5791): Instruccion recibida: [MOV_OUT 16 AX]
+[ERROR] 05:28:51:831 [CPU]/(5790:5792): [DESCONEXION]: KERNEL_Interrupt
+[INFO] 05:36:31:705 [CPU]/(6016:6017): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 05:36:35:304 [CPU]/(6016:6019): Cliente conectado a Kernel por dispatch
+[INFO] 05:36:35:304 [CPU]/(6016:6018): Cliente conectado a Kernel por interrupt
+[INFO] 05:36:35:305 [CPU]/(6016:6019): ::::::::::: KERNEL CONECTADO POR DISPATCH ::::::::::::
+[INFO] 05:36:35:306 [CPU]/(6016:6018): ::::::::::: KERNEL CONECTADO POR INTERRUPT ::::::::::::
+[INFO] 05:36:54:269 [CPU]/(6016:6037): [PID: 1][PC: 0][Registros: 4|0|4|0]
+[INFO] 05:36:54:770 [CPU]/(6016:6017): Instruccion recibida: [SET AX 1]
+[INFO] 05:36:55:282 [CPU]/(6016:6017): Instruccion recibida: [MOV_OUT 0 AX]
+[INFO] 05:36:56:287 [CPU]/(6016:6037): Elimino paquete
+[WARNING] 05:36:56:287 [CPU]/(6016:6037): Proceso_desalojado <PID:1>
+[INFO] 05:36:56:287 [CPU]/(6016:6037): Todo el contexto se elimino correctamente .....
+[ERROR] 05:36:58:698 [CPU]/(6016:6018): [DESCONEXION]: KERNEL_Interrupt
+[INFO] 05:50:51:137 [CPU]/(6126:6127): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 05:50:56:773 [CPU]/(6126:6129): Cliente conectado a Kernel por dispatch
+[INFO] 05:50:56:773 [CPU]/(6126:6128): Cliente conectado a Kernel por interrupt
+[INFO] 05:50:56:775 [CPU]/(6126:6129): ::::::::::: KERNEL CONECTADO POR DISPATCH ::::::::::::
+[INFO] 05:50:56:776 [CPU]/(6126:6128): ::::::::::: KERNEL CONECTADO POR INTERRUPT ::::::::::::
+[INFO] 05:51:16:866 [CPU]/(6126:6147): [PID: 1][PC: 0][Registros: 4|0|4|0]
+[INFO] 05:51:17:369 [CPU]/(6126:6127): Instruccion recibida: [SET AX 1]
+[INFO] 05:51:17:873 [CPU]/(6126:6127): Instruccion recibida: [MOV_OUT 0 AX]
+[ERROR] 05:51:18:375 [CPU]/(6126:6147): >>>>>>< Nro_marco:-1
+[INFO] 05:51:18:376 [CPU]/(6126:6147): Elimino paquete
+[WARNING] 05:51:18:376 [CPU]/(6126:6147): Proceso_desalojado <PID:1>
+[INFO] 05:51:18:376 [CPU]/(6126:6147): Todo el contexto se elimino correctamente .....
+[INFO] 05:51:20:883 [CPU]/(6126:6150): [PID: 1][PC: 1][Registros: 4|0|4|0]
+[INFO] 05:51:21:385 [CPU]/(6126:6127): Instruccion recibida: [MOV_OUT 0 AX]
+[ERROR] 05:51:21:887 [CPU]/(6126:6150): >>>>>>< Nro_marco:0
+[INFO] 05:51:22:895 [CPU]/(6126:6127): Instruccion recibida: [MOV_OUT 16 AX]
+[ERROR] 05:51:23:249 [CPU]/(6126:6129): [DESCONEXION]: KERNEL_Dispatch
+[INFO] 06:09:47:213 [CPU]/(6516:6517): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 06:09:52:565 [CPU]/(6516:6519): Cliente conectado a Kernel por dispatch
+[INFO] 06:09:52:565 [CPU]/(6516:6518): Cliente conectado a Kernel por interrupt
+[INFO] 06:09:52:567 [CPU]/(6516:6519): ::::::::::: KERNEL CONECTADO POR DISPATCH ::::::::::::
+[INFO] 06:09:52:567 [CPU]/(6516:6518): ::::::::::: KERNEL CONECTADO POR INTERRUPT ::::::::::::
+[INFO] 06:10:12:803 [CPU]/(6516:6538): [PID: 1][PC: 0][Registros: 4|0|4|0]
+[INFO] 06:10:13:304 [CPU]/(6516:6517): Instruccion recibida: [SET AX 1]
+[INFO] 06:10:13:808 [CPU]/(6516:6517): Instruccion recibida: [MOV_OUT 0 AX]
+[ERROR] 06:10:14:312 [CPU]/(6516:6538): >>>>>>< Nro_marco:-1
+[INFO] 06:10:14:313 [CPU]/(6516:6538): Elimino paquete
+[WARNING] 06:10:14:313 [CPU]/(6516:6538): Proceso_desalojado <PID:1>
+[INFO] 06:10:14:313 [CPU]/(6516:6538): Todo el contexto se elimino correctamente .....
+[INFO] 06:10:19:889 [CPU]/(6516:6541): [PID: 1][PC: 1][Registros: 4|0|4|0]
+[INFO] 06:10:20:392 [CPU]/(6516:6517): Instruccion recibida: [MOV_OUT 0 AX]
+[ERROR] 06:10:20:898 [CPU]/(6516:6541): >>>>>>< Nro_marco:0
+[INFO] 06:10:21:908 [CPU]/(6516:6517): Instruccion recibida: [MOV_OUT 16 AX]
+[ERROR] 06:10:22:409 [CPU]/(6516:6541): >>>>>>< Nro_marco:-1
+[INFO] 06:10:22:410 [CPU]/(6516:6541): Elimino paquete
+[WARNING] 06:10:22:410 [CPU]/(6516:6541): Proceso_desalojado <PID:1>
+[INFO] 06:10:22:410 [CPU]/(6516:6541): Todo el contexto se elimino correctamente .....
+[INFO] 06:10:27:922 [CPU]/(6516:6544): [PID: 1][PC: 2][Registros: 4|4|4|0]
+[INFO] 06:10:28:425 [CPU]/(6516:6517): Instruccion recibida: [MOV_OUT 16 AX]
+[ERROR] 06:10:28:931 [CPU]/(6516:6544): >>>>>>< Nro_marco:1
+[INFO] 06:10:29:933 [CPU]/(6516:6517): Instruccion recibida: [MOV_OUT 32 AX]
+[ERROR] 06:10:30:439 [CPU]/(6516:6544): >>>>>>< Nro_marco:-1
+[INFO] 06:10:30:440 [CPU]/(6516:6544): Elimino paquete
+[WARNING] 06:10:30:440 [CPU]/(6516:6544): Proceso_desalojado <PID:1>
+[INFO] 06:10:30:440 [CPU]/(6516:6544): Todo el contexto se elimino correctamente .....
+[INFO] 06:10:35:952 [CPU]/(6516:6547): [PID: 1][PC: 3][Registros: 4|4|4|4]
+[INFO] 06:10:36:454 [CPU]/(6516:6517): Instruccion recibida: [MOV_OUT 32 AX]
+[ERROR] 06:10:36:957 [CPU]/(6516:6547): >>>>>>< Nro_marco:2
+[INFO] 06:10:37:962 [CPU]/(6516:6517): Instruccion recibida: [MOV_OUT 48 AX]
+[ERROR] 06:10:38:465 [CPU]/(6516:6547): >>>>>>< Nro_marco:-1
+[INFO] 06:10:38:465 [CPU]/(6516:6547): Elimino paquete
+[WARNING] 06:10:38:465 [CPU]/(6516:6547): Proceso_desalojado <PID:1>
+[INFO] 06:10:38:466 [CPU]/(6516:6547): Todo el contexto se elimino correctamente .....
+[INFO] 06:10:43:970 [CPU]/(6516:6550): [PID: 1][PC: 4][Registros: 4|4|4|4]
+[INFO] 06:10:44:471 [CPU]/(6516:6517): Instruccion recibida: [MOV_OUT 48 AX]
+[ERROR] 06:10:44:975 [CPU]/(6516:6550): >>>>>>< Nro_marco:3
+[INFO] 06:10:45:977 [CPU]/(6516:6517): Instruccion recibida: [MOV_IN DX 16]
+[ERROR] 06:10:46:478 [CPU]/(6516:6550): >>>>>>< Nro_marco:1
+[INFO] 06:10:47:486 [CPU]/(6516:6517): Instruccion recibida: [MOV_IN CX 32]
+[ERROR] 06:10:47:989 [CPU]/(6516:6550): >>>>>>< Nro_marco:2
+[INFO] 06:10:48:990 [CPU]/(6516:6517): Instruccion recibida: [SET BX 2]
+[INFO] 06:10:49:491 [CPU]/(6516:6517): Instruccion recibida: [MOV_OUT 64 BX]
+[ERROR] 06:10:49:992 [CPU]/(6516:6550): >>>>>>< Nro_marco:-1
+[INFO] 06:10:49:992 [CPU]/(6516:6550): Elimino paquete
+[WARNING] 06:10:49:993 [CPU]/(6516:6550): Proceso_desalojado <PID:1>
+[INFO] 06:10:49:993 [CPU]/(6516:6550): Todo el contexto se elimino correctamente .....
+[ERROR] 06:10:50:137 [CPU]/(6516:6517): [DESCONEXION]: MEMORIA
+[INFO] 06:19:52:521 [CPU]/(6739:6740): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 06:19:56:237 [CPU]/(6739:6741): Cliente conectado a Kernel por interrupt
+[INFO] 06:19:56:237 [CPU]/(6739:6742): Cliente conectado a Kernel por dispatch
+[INFO] 06:19:56:238 [CPU]/(6739:6742): ::::::::::: KERNEL CONECTADO POR DISPATCH ::::::::::::
+[INFO] 06:19:56:239 [CPU]/(6739:6741): ::::::::::: KERNEL CONECTADO POR INTERRUPT ::::::::::::
+[INFO] 06:20:26:117 [CPU]/(6739:6760): [PID: 1][PC: 0][Registros: 4|0|4|0]
+[INFO] 06:20:26:622 [CPU]/(6739:6740): Instruccion recibida: [SET AX 1]
+[INFO] 06:20:27:126 [CPU]/(6739:6740): Instruccion recibida: [MOV_OUT 0 AX]
+[ERROR] 06:20:27:629 [CPU]/(6739:6760): >>>>>>< Nro_marco:-1
+[INFO] 06:20:27:630 [CPU]/(6739:6760): Elimino paquete
+[WARNING] 06:20:27:630 [CPU]/(6739:6760): Proceso_desalojado <PID:1>
+[INFO] 06:20:27:630 [CPU]/(6739:6760): Todo el contexto se elimino correctamente .....
+[INFO] 06:20:33:152 [CPU]/(6739:6763): [PID: 1][PC: 1][Registros: 4|0|4|0]
+[INFO] 06:20:33:655 [CPU]/(6739:6740): Instruccion recibida: [MOV_OUT 0 AX]
+[ERROR] 06:20:34:166 [CPU]/(6739:6763): >>>>>>< Nro_marco:0
+[INFO] 06:20:35:225 [CPU]/(6739:6740): Instruccion recibida: [MOV_OUT 16 AX]
+[ERROR] 06:20:35:728 [CPU]/(6739:6763): >>>>>>< Nro_marco:-1
+[INFO] 06:20:35:729 [CPU]/(6739:6763): Elimino paquete
+[WARNING] 06:20:35:729 [CPU]/(6739:6763): Proceso_desalojado <PID:1>
+[INFO] 06:20:35:729 [CPU]/(6739:6763): Todo el contexto se elimino correctamente .....
+[INFO] 06:20:41:260 [CPU]/(6739:6766): [PID: 1][PC: 2][Registros: 4|4|4|0]
+[INFO] 06:20:41:764 [CPU]/(6739:6740): Instruccion recibida: [MOV_OUT 16 AX]
+[ERROR] 06:20:42:276 [CPU]/(6739:6766): >>>>>>< Nro_marco:1
+[INFO] 06:20:43:280 [CPU]/(6739:6740): Instruccion recibida: [MOV_OUT 32 AX]
+[ERROR] 06:20:43:783 [CPU]/(6739:6766): >>>>>>< Nro_marco:-1
+[INFO] 06:20:43:784 [CPU]/(6739:6766): Elimino paquete
+[WARNING] 06:20:43:784 [CPU]/(6739:6766): Proceso_desalojado <PID:1>
+[INFO] 06:20:43:784 [CPU]/(6739:6766): Todo el contexto se elimino correctamente .....
+[INFO] 06:20:49:296 [CPU]/(6739:6769): [PID: 1][PC: 3][Registros: 4|4|4|4]
+[INFO] 06:20:49:802 [CPU]/(6739:6740): Instruccion recibida: [MOV_OUT 32 AX]
+[ERROR] 06:20:50:309 [CPU]/(6739:6769): >>>>>>< Nro_marco:2
+[INFO] 06:20:51:317 [CPU]/(6739:6740): Instruccion recibida: [MOV_OUT 48 AX]
+[ERROR] 06:20:51:818 [CPU]/(6739:6769): >>>>>>< Nro_marco:-1
+[INFO] 06:20:51:818 [CPU]/(6739:6769): Elimino paquete
+[WARNING] 06:20:51:818 [CPU]/(6739:6769): Proceso_desalojado <PID:1>
+[INFO] 06:20:51:818 [CPU]/(6739:6769): Todo el contexto se elimino correctamente .....
+[INFO] 06:20:57:330 [CPU]/(6739:6772): [PID: 1][PC: 4][Registros: 4|4|4|4]
+[INFO] 06:20:57:834 [CPU]/(6739:6740): Instruccion recibida: [MOV_OUT 48 AX]
+[ERROR] 06:20:58:336 [CPU]/(6739:6772): >>>>>>< Nro_marco:3
+[INFO] 06:20:59:341 [CPU]/(6739:6740): Instruccion recibida: [MOV_IN DX 16]
+[ERROR] 06:20:59:842 [CPU]/(6739:6772): >>>>>>< Nro_marco:1
+[INFO] 06:21:00:847 [CPU]/(6739:6740): Instruccion recibida: [MOV_IN CX 32]
+[ERROR] 06:21:01:357 [CPU]/(6739:6772): >>>>>>< Nro_marco:2
+[INFO] 06:21:02:380 [CPU]/(6739:6740): Instruccion recibida: [SET BX 2]
+[INFO] 06:21:02:890 [CPU]/(6739:6740): Instruccion recibida: [MOV_OUT 64 BX]
+[ERROR] 06:21:03:395 [CPU]/(6739:6772): >>>>>>< Nro_marco:-1
+[INFO] 06:21:03:395 [CPU]/(6739:6772): Elimino paquete
+[WARNING] 06:21:03:395 [CPU]/(6739:6772): Proceso_desalojado <PID:1>
+[INFO] 06:21:03:395 [CPU]/(6739:6772): Todo el contexto se elimino correctamente .....
+[ERROR] 06:21:03:495 [CPU]/(6739:6740): [DESCONEXION]: MEMORIA
+[INFO] 06:25:58:756 [CPU]/(6820:6821): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 06:26:11:209 [CPU]/(6820:6823): Cliente conectado a Kernel por dispatch
+[INFO] 06:26:11:209 [CPU]/(6820:6822): Cliente conectado a Kernel por interrupt
+[INFO] 06:26:11:211 [CPU]/(6820:6823): ::::::::::: KERNEL CONECTADO POR DISPATCH ::::::::::::
+[INFO] 06:26:11:211 [CPU]/(6820:6822): ::::::::::: KERNEL CONECTADO POR INTERRUPT ::::::::::::
+[INFO] 06:26:31:344 [CPU]/(6820:6843): [PID: 1][PC: 0][Registros: 4|0|4|0]
+[INFO] 06:26:31:854 [CPU]/(6820:6821): Instruccion recibida: [SET AX 1]
+[INFO] 06:26:32:358 [CPU]/(6820:6821): Instruccion recibida: [MOV_OUT 0 AX]
+[ERROR] 06:26:32:861 [CPU]/(6820:6843): >>>>>>< Nro_marco:-1
+[INFO] 06:26:32:861 [CPU]/(6820:6843): Elimino paquete
+[WARNING] 06:26:32:861 [CPU]/(6820:6843): Proceso_desalojado <PID:1>
+[INFO] 06:26:32:861 [CPU]/(6820:6843): Todo el contexto se elimino correctamente .....
+[INFO] 06:26:40:426 [CPU]/(6820:6846): [PID: 1][PC: 1][Registros: 4|0|4|0]
+[INFO] 06:26:40:953 [CPU]/(6820:6821): Instruccion recibida: [MOV_OUT 0 AX]
+[ERROR] 06:26:41:476 [CPU]/(6820:6846): >>>>>>< Nro_marco:0
+[INFO] 06:26:42:480 [CPU]/(6820:6821): Instruccion recibida: [MOV_OUT 16 AX]
+[ERROR] 06:26:42:986 [CPU]/(6820:6846): >>>>>>< Nro_marco:-1
+[INFO] 06:26:42:986 [CPU]/(6820:6846): Elimino paquete
+[WARNING] 06:26:42:986 [CPU]/(6820:6846): Proceso_desalojado <PID:1>
+[INFO] 06:26:42:986 [CPU]/(6820:6846): Todo el contexto se elimino correctamente .....
+[INFO] 06:26:50:496 [CPU]/(6820:6849): [PID: 1][PC: 2][Registros: 4|4|4|0]
+[INFO] 06:26:50:999 [CPU]/(6820:6821): Instruccion recibida: [MOV_OUT 16 AX]
+[ERROR] 06:26:51:506 [CPU]/(6820:6849): >>>>>>< Nro_marco:1
+[INFO] 06:26:52:518 [CPU]/(6820:6821): Instruccion recibida: [MOV_OUT 32 AX]
+[ERROR] 06:26:53:034 [CPU]/(6820:6849): >>>>>>< Nro_marco:-1
+[INFO] 06:26:53:034 [CPU]/(6820:6849): Elimino paquete
+[WARNING] 06:26:53:034 [CPU]/(6820:6849): Proceso_desalojado <PID:1>
+[INFO] 06:26:53:034 [CPU]/(6820:6849): Todo el contexto se elimino correctamente .....
+[INFO] 06:27:00:561 [CPU]/(6820:6851): [PID: 1][PC: 3][Registros: 4|4|4|4]
+[INFO] 06:27:01:070 [CPU]/(6820:6821): Instruccion recibida: [MOV_OUT 32 AX]
+[ERROR] 06:27:01:573 [CPU]/(6820:6851): >>>>>>< Nro_marco:2
+[INFO] 06:27:02:583 [CPU]/(6820:6821): Instruccion recibida: [MOV_OUT 48 AX]
+[ERROR] 06:27:03:088 [CPU]/(6820:6851): >>>>>>< Nro_marco:-1
+[INFO] 06:27:03:089 [CPU]/(6820:6851): Elimino paquete
+[WARNING] 06:27:03:089 [CPU]/(6820:6851): Proceso_desalojado <PID:1>
+[INFO] 06:27:03:089 [CPU]/(6820:6851): Todo el contexto se elimino correctamente .....
+[INFO] 06:27:10:604 [CPU]/(6820:6855): [PID: 1][PC: 4][Registros: 4|4|4|4]
+[INFO] 06:27:11:106 [CPU]/(6820:6821): Instruccion recibida: [MOV_OUT 48 AX]
+[ERROR] 06:27:11:616 [CPU]/(6820:6855): >>>>>>< Nro_marco:3
+[INFO] 06:27:12:620 [CPU]/(6820:6821): Instruccion recibida: [MOV_IN DX 16]
+[ERROR] 06:27:13:125 [CPU]/(6820:6855): >>>>>>< Nro_marco:1
+[INFO] 06:27:14:129 [CPU]/(6820:6821): Instruccion recibida: [MOV_IN CX 32]
+[ERROR] 06:27:14:635 [CPU]/(6820:6855): >>>>>>< Nro_marco:2
+[INFO] 06:27:15:640 [CPU]/(6820:6821): Instruccion recibida: [SET BX 2]
+[INFO] 06:27:16:143 [CPU]/(6820:6821): Instruccion recibida: [MOV_OUT 64 BX]
+[ERROR] 06:27:16:650 [CPU]/(6820:6855): >>>>>>< Nro_marco:-1
+[INFO] 06:27:16:650 [CPU]/(6820:6855): Elimino paquete
+[WARNING] 06:27:16:651 [CPU]/(6820:6855): Proceso_desalojado <PID:1>
+[INFO] 06:27:16:651 [CPU]/(6820:6855): Todo el contexto se elimino correctamente .....
+[ERROR] 06:27:16:768 [CPU]/(6820:6821): [DESCONEXION]: MEMORIA
+[INFO] 06:31:35:197 [CPU]/(6955:6956): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 06:31:39:643 [CPU]/(6955:6958): Cliente conectado a Kernel por dispatch
+[INFO] 06:31:39:643 [CPU]/(6955:6957): Cliente conectado a Kernel por interrupt
+[INFO] 06:31:39:645 [CPU]/(6955:6958): ::::::::::: KERNEL CONECTADO POR DISPATCH ::::::::::::
+[INFO] 06:31:39:646 [CPU]/(6955:6957): ::::::::::: KERNEL CONECTADO POR INTERRUPT ::::::::::::
+[INFO] 06:31:58:316 [CPU]/(6955:6975): [PID: 1][PC: 0][Registros: 4|0|4|0]
+[INFO] 06:31:58:817 [CPU]/(6955:6956): Instruccion recibida: [SET AX 1]
+[INFO] 06:31:59:322 [CPU]/(6955:6956): Instruccion recibida: [MOV_OUT 0 AX]
+[ERROR] 06:31:59:825 [CPU]/(6955:6975): >>>>>>< Nro_marco:-1
+[INFO] 06:31:59:825 [CPU]/(6955:6975): Elimino paquete
+[WARNING] 06:31:59:825 [CPU]/(6955:6975): Proceso_desalojado <PID:1>
+[INFO] 06:31:59:825 [CPU]/(6955:6975): Todo el contexto se elimino correctamente .....
+[INFO] 06:32:07:351 [CPU]/(6955:6978): [PID: 1][PC: 1][Registros: 4|0|4|0]
+[INFO] 06:32:07:852 [CPU]/(6955:6956): Instruccion recibida: [MOV_OUT 0 AX]
+[ERROR] 06:32:08:358 [CPU]/(6955:6978): >>>>>>< Nro_marco:0
+[INFO] 06:32:09:377 [CPU]/(6955:6956): Instruccion recibida: [MOV_OUT 16 AX]
+[ERROR] 06:32:09:884 [CPU]/(6955:6978): >>>>>>< Nro_marco:-1
+[INFO] 06:32:09:884 [CPU]/(6955:6978): Elimino paquete
+[WARNING] 06:32:09:884 [CPU]/(6955:6978): Proceso_desalojado <PID:1>
+[INFO] 06:32:09:884 [CPU]/(6955:6978): Todo el contexto se elimino correctamente .....
+[INFO] 06:32:17:401 [CPU]/(6955:6981): [PID: 1][PC: 2][Registros: 4|4|4|0]
+[INFO] 06:32:17:904 [CPU]/(6955:6956): Instruccion recibida: [MOV_OUT 16 AX]
+[ERROR] 06:32:18:408 [CPU]/(6955:6981): >>>>>>< Nro_marco:1
+[INFO] 06:32:19:419 [CPU]/(6955:6956): Instruccion recibida: [MOV_OUT 32 AX]
+[ERROR] 06:32:19:921 [CPU]/(6955:6981): >>>>>>< Nro_marco:-1
+[INFO] 06:32:19:921 [CPU]/(6955:6981): Elimino paquete
+[WARNING] 06:32:19:921 [CPU]/(6955:6981): Proceso_desalojado <PID:1>
+[INFO] 06:32:19:922 [CPU]/(6955:6981): Todo el contexto se elimino correctamente .....
+[INFO] 06:32:27:439 [CPU]/(6955:6983): [PID: 1][PC: 3][Registros: 4|4|4|4]
+[INFO] 06:32:27:945 [CPU]/(6955:6956): Instruccion recibida: [MOV_OUT 32 AX]
+[ERROR] 06:32:28:449 [CPU]/(6955:6983): >>>>>>< Nro_marco:2
+[INFO] 06:32:29:454 [CPU]/(6955:6956): Instruccion recibida: [MOV_OUT 48 AX]
+[ERROR] 06:32:29:956 [CPU]/(6955:6983): >>>>>>< Nro_marco:-1
+[INFO] 06:32:29:957 [CPU]/(6955:6983): Elimino paquete
+[WARNING] 06:32:29:957 [CPU]/(6955:6983): Proceso_desalojado <PID:1>
+[INFO] 06:32:29:957 [CPU]/(6955:6983): Todo el contexto se elimino correctamente .....
+[INFO] 06:32:37:481 [CPU]/(6955:6987): [PID: 1][PC: 4][Registros: 4|4|4|4]
+[INFO] 06:32:37:993 [CPU]/(6955:6956): Instruccion recibida: [MOV_OUT 48 AX]
+[ERROR] 06:32:38:499 [CPU]/(6955:6987): >>>>>>< Nro_marco:3
+[INFO] 06:32:39:511 [CPU]/(6955:6956): Instruccion recibida: [MOV_IN DX 16]
+[ERROR] 06:32:40:019 [CPU]/(6955:6987): >>>>>>< Nro_marco:1
+[INFO] 06:32:41:023 [CPU]/(6955:6956): Instruccion recibida: [MOV_IN CX 32]
+[ERROR] 06:32:41:527 [CPU]/(6955:6987): >>>>>>< Nro_marco:2
+[INFO] 06:32:42:566 [CPU]/(6955:6956): Instruccion recibida: [SET BX 2]
+[INFO] 06:32:43:069 [CPU]/(6955:6956): Instruccion recibida: [MOV_OUT 64 BX]
+[ERROR] 06:32:43:574 [CPU]/(6955:6987): >>>>>>< Nro_marco:-1
+[INFO] 06:32:43:576 [CPU]/(6955:6987): Elimino paquete
+[WARNING] 06:32:43:576 [CPU]/(6955:6987): Proceso_desalojado <PID:1>
+[INFO] 06:32:43:576 [CPU]/(6955:6987): Todo el contexto se elimino correctamente .....
+[ERROR] 06:32:43:737 [CPU]/(6955:6956): [DESCONEXION]: MEMORIA
+[INFO] 06:43:41:750 [CPU]/(7384:7385): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 06:44:32:830 [CPU]/(7384:7387): Cliente conectado a Kernel por dispatch
+[INFO] 06:44:32:837 [CPU]/(7384:7386): Cliente conectado a Kernel por interrupt
+[INFO] 06:44:32:909 [CPU]/(7384:7387): ::::::::::: KERNEL CONECTADO POR DISPATCH ::::::::::::
+[INFO] 06:44:32:914 [CPU]/(7384:7386): ::::::::::: KERNEL CONECTADO POR INTERRUPT ::::::::::::
+[INFO] 06:44:54:122 [CPU]/(7384:19861): [PID: 1][PC: 0][Registros: 4|0|4|0]
+[INFO] 06:44:54:627 [CPU]/(7384:7385): Instruccion recibida: [SET AX 1]
+[INFO] 06:44:55:129 [CPU]/(7384:7385): Instruccion recibida: [MOV_OUT 0 AX]
+[ERROR] 06:44:55:637 [CPU]/(7384:19861): >>>>>>< Nro_marco:-1
+[INFO] 06:44:55:637 [CPU]/(7384:19861): Elimino paquete
+[WARNING] 06:44:55:637 [CPU]/(7384:19861): Proceso_desalojado <PID:1>
+[INFO] 06:44:55:637 [CPU]/(7384:19861): Todo el contexto se elimino correctamente .....
+[INFO] 06:45:03:157 [CPU]/(7384:20023): [PID: 1][PC: 1][Registros: 4|0|4|0]
+[INFO] 06:45:03:658 [CPU]/(7384:7385): Instruccion recibida: [MOV_OUT 0 AX]
+[ERROR] 06:45:04:173 [CPU]/(7384:20023): >>>>>>< Nro_marco:0
+[INFO] 06:45:05:177 [CPU]/(7384:7385): Instruccion recibida: [MOV_OUT 16 AX]
+[ERROR] 06:45:05:678 [CPU]/(7384:20023): >>>>>>< Nro_marco:-1
+[INFO] 06:45:05:678 [CPU]/(7384:20023): Elimino paquete
+[WARNING] 06:45:05:678 [CPU]/(7384:20023): Proceso_desalojado <PID:1>
+[INFO] 06:45:05:678 [CPU]/(7384:20023): Todo el contexto se elimino correctamente .....
+[INFO] 06:45:13:186 [CPU]/(7384:22671): [PID: 1][PC: 2][Registros: 4|4|4|0]
+[INFO] 06:45:13:689 [CPU]/(7384:7385): Instruccion recibida: [MOV_OUT 16 AX]
+[ERROR] 06:45:14:202 [CPU]/(7384:22671): >>>>>>< Nro_marco:1
+[INFO] 06:45:15:204 [CPU]/(7384:7385): Instruccion recibida: [MOV_OUT 32 AX]
+[ERROR] 06:45:15:705 [CPU]/(7384:22671): >>>>>>< Nro_marco:-1
+[INFO] 06:45:15:705 [CPU]/(7384:22671): Elimino paquete
+[WARNING] 06:45:15:705 [CPU]/(7384:22671): Proceso_desalojado <PID:1>
+[INFO] 06:45:15:705 [CPU]/(7384:22671): Todo el contexto se elimino correctamente .....
+[INFO] 06:45:23:217 [CPU]/(7384:25645): [PID: 1][PC: 3][Registros: 4|4|4|4]
+[INFO] 06:45:23:718 [CPU]/(7384:7385): Instruccion recibida: [MOV_OUT 32 AX]
+[ERROR] 06:45:24:220 [CPU]/(7384:25645): >>>>>>< Nro_marco:2
+[INFO] 06:45:25:263 [CPU]/(7384:7385): Instruccion recibida: [MOV_OUT 48 AX]
+[ERROR] 06:45:25:771 [CPU]/(7384:25645): >>>>>>< Nro_marco:-1
+[INFO] 06:45:25:772 [CPU]/(7384:25645): Elimino paquete
+[WARNING] 06:45:25:772 [CPU]/(7384:25645): Proceso_desalojado <PID:1>
+[INFO] 06:45:25:772 [CPU]/(7384:25645): Todo el contexto se elimino correctamente .....
+[INFO] 06:45:33:285 [CPU]/(7384:28025): [PID: 1][PC: 4][Registros: 4|4|4|4]
+[INFO] 06:45:33:787 [CPU]/(7384:7385): Instruccion recibida: [MOV_OUT 48 AX]
+[ERROR] 06:45:34:290 [CPU]/(7384:28025): >>>>>>< Nro_marco:3
+[INFO] 06:45:35:292 [CPU]/(7384:7385): Instruccion recibida: [MOV_IN DX 16]
+[ERROR] 06:45:35:793 [CPU]/(7384:28025): >>>>>>< Nro_marco:1
+[INFO] 06:45:36:803 [CPU]/(7384:7385): Instruccion recibida: [MOV_IN CX 32]
+[ERROR] 06:45:37:305 [CPU]/(7384:28025): >>>>>>< Nro_marco:2
+[INFO] 06:45:38:312 [CPU]/(7384:7385): Instruccion recibida: [SET BX 2]
+[INFO] 06:45:38:813 [CPU]/(7384:7385): Instruccion recibida: [MOV_OUT 64 BX]
+[ERROR] 06:45:39:314 [CPU]/(7384:28025): >>>>>>< Nro_marco:-1
+[INFO] 06:45:39:314 [CPU]/(7384:28025): Elimino paquete
+[WARNING] 06:45:39:314 [CPU]/(7384:28025): Proceso_desalojado <PID:1>
+[INFO] 06:45:39:314 [CPU]/(7384:28025): Todo el contexto se elimino correctamente .....
+[ERROR] 06:45:39:913 [CPU]/(7384:7385): [DESCONEXION]: MEMORIA
+[INFO] 06:49:03:179 [CPU]/(35638:35639): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 06:49:07:654 [CPU]/(35638:35640): Cliente conectado a Kernel por interrupt
+[INFO] 06:49:07:654 [CPU]/(35638:35641): Cliente conectado a Kernel por dispatch
+[INFO] 06:49:07:656 [CPU]/(35638:35641): ::::::::::: KERNEL CONECTADO POR DISPATCH ::::::::::::
+[INFO] 06:49:07:657 [CPU]/(35638:35640): ::::::::::: KERNEL CONECTADO POR INTERRUPT ::::::::::::
+[INFO] 06:49:25:972 [CPU]/(35638:35659): [PID: 1][PC: 0][Registros: 4|0|4|0]
+[INFO] 06:49:26:476 [CPU]/(35638:35639): Instruccion recibida: [SET AX 1]
+[INFO] 06:49:26:978 [CPU]/(35638:35639): Instruccion recibida: [MOV_OUT 0 AX]
+[ERROR] 06:49:27:488 [CPU]/(35638:35659): >>>>>>< Nro_marco:-1
+[INFO] 06:49:27:488 [CPU]/(35638:35659): Elimino paquete
+[WARNING] 06:49:27:488 [CPU]/(35638:35659): Proceso_desalojado <PID:1>
+[INFO] 06:49:27:488 [CPU]/(35638:35659): Todo el contexto se elimino correctamente .....
+[INFO] 06:49:35:047 [CPU]/(35638:35662): [PID: 1][PC: 1][Registros: 4|0|4|0]
+[INFO] 06:49:35:549 [CPU]/(35638:35639): Instruccion recibida: [MOV_OUT 0 AX]
+[ERROR] 06:49:36:051 [CPU]/(35638:35662): >>>>>>< Nro_marco:0
+[INFO] 06:49:37:064 [CPU]/(35638:35639): Instruccion recibida: [MOV_OUT 16 AX]
+[ERROR] 06:49:37:567 [CPU]/(35638:35662): >>>>>>< Nro_marco:-1
+[INFO] 06:49:37:567 [CPU]/(35638:35662): Elimino paquete
+[WARNING] 06:49:37:567 [CPU]/(35638:35662): Proceso_desalojado <PID:1>
+[INFO] 06:49:37:567 [CPU]/(35638:35662): Todo el contexto se elimino correctamente .....
+[INFO] 06:49:45:103 [CPU]/(35638:35664): [PID: 1][PC: 2][Registros: 4|4|4|0]
+[INFO] 06:49:45:610 [CPU]/(35638:35639): Instruccion recibida: [MOV_OUT 16 AX]
+[ERROR] 06:49:46:113 [CPU]/(35638:35664): >>>>>>< Nro_marco:1
+[INFO] 06:49:47:117 [CPU]/(35638:35639): Instruccion recibida: [MOV_OUT 32 AX]
+[ERROR] 06:49:47:649 [CPU]/(35638:35664): >>>>>>< Nro_marco:-1
+[INFO] 06:49:47:650 [CPU]/(35638:35664): Elimino paquete
+[WARNING] 06:49:47:650 [CPU]/(35638:35664): Proceso_desalojado <PID:1>
+[INFO] 06:49:47:650 [CPU]/(35638:35664): Todo el contexto se elimino correctamente .....
+[INFO] 06:49:55:172 [CPU]/(35638:35668): [PID: 1][PC: 3][Registros: 4|4|4|4]
+[INFO] 06:49:55:674 [CPU]/(35638:35639): Instruccion recibida: [MOV_OUT 32 AX]
+[ERROR] 06:49:56:177 [CPU]/(35638:35668): >>>>>>< Nro_marco:2
+[INFO] 06:49:57:184 [CPU]/(35638:35639): Instruccion recibida: [MOV_OUT 48 AX]
+[ERROR] 06:49:57:689 [CPU]/(35638:35668): >>>>>>< Nro_marco:-1
+[INFO] 06:49:57:690 [CPU]/(35638:35668): Elimino paquete
+[WARNING] 06:49:57:690 [CPU]/(35638:35668): Proceso_desalojado <PID:1>
+[INFO] 06:49:57:690 [CPU]/(35638:35668): Todo el contexto se elimino correctamente .....
+[INFO] 06:50:05:200 [CPU]/(35638:35671): [PID: 1][PC: 4][Registros: 4|4|4|4]
+[INFO] 06:50:05:702 [CPU]/(35638:35639): Instruccion recibida: [MOV_OUT 48 AX]
+[ERROR] 06:50:06:205 [CPU]/(35638:35671): >>>>>>< Nro_marco:3
+[INFO] 06:50:07:210 [CPU]/(35638:35639): Instruccion recibida: [MOV_IN DX 16]
+[ERROR] 06:50:07:713 [CPU]/(35638:35671): >>>>>>< Nro_marco:1
+[INFO] 06:50:08:717 [CPU]/(35638:35639): Instruccion recibida: [MOV_IN CX 32]
+[ERROR] 06:50:09:219 [CPU]/(35638:35671): >>>>>>< Nro_marco:2
+[INFO] 06:50:10:226 [CPU]/(35638:35639): Instruccion recibida: [SET BX 2]
+[INFO] 06:50:10:728 [CPU]/(35638:35639): Instruccion recibida: [MOV_OUT 64 BX]
+[ERROR] 06:50:11:233 [CPU]/(35638:35671): >>>>>>< Nro_marco:-1
+[INFO] 06:50:11:233 [CPU]/(35638:35671): Elimino paquete
+[WARNING] 06:50:11:233 [CPU]/(35638:35671): Proceso_desalojado <PID:1>
+[INFO] 06:50:11:233 [CPU]/(35638:35671): Todo el contexto se elimino correctamente .....
+[ERROR] 06:50:11:349 [CPU]/(35638:35639): [DESCONEXION]: MEMORIA
+[INFO] 06:51:14:661 [CPU]/(35698:35699): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 06:51:20:110 [CPU]/(35698:35701): Cliente conectado a Kernel por dispatch
+[INFO] 06:51:20:110 [CPU]/(35698:35700): Cliente conectado a Kernel por interrupt
+[INFO] 06:51:20:112 [CPU]/(35698:35701): ::::::::::: KERNEL CONECTADO POR DISPATCH ::::::::::::
+[INFO] 06:51:20:116 [CPU]/(35698:35700): ::::::::::: KERNEL CONECTADO POR INTERRUPT ::::::::::::
+[INFO] 06:51:56:414 [CPU]/(35698:35720): [PID: 1][PC: 0][Registros: 4|0|4|0]
+[INFO] 06:51:56:917 [CPU]/(35698:35699): Instruccion recibida: [SET AX 1]
+[INFO] 06:51:57:419 [CPU]/(35698:35699): Instruccion recibida: [MOV_OUT 0 AX]
+[ERROR] 06:51:57:941 [CPU]/(35698:35720): >>>>>>< Nro_marco:-1
+[INFO] 06:51:57:942 [CPU]/(35698:35720): Elimino paquete
+[WARNING] 06:51:57:943 [CPU]/(35698:35720): Proceso_desalojado <PID:1>
+[INFO] 06:51:57:943 [CPU]/(35698:35720): Todo el contexto se elimino correctamente .....
+[INFO] 06:52:05:467 [CPU]/(35698:35722): [PID: 1][PC: 1][Registros: 4|0|4|0]
+[INFO] 06:52:05:968 [CPU]/(35698:35699): Instruccion recibida: [MOV_OUT 0 AX]
+[ERROR] 06:52:06:471 [CPU]/(35698:35722): >>>>>>< Nro_marco:0
+[INFO] 06:52:07:478 [CPU]/(35698:35699): Instruccion recibida: [MOV_OUT 16 AX]
+[ERROR] 06:52:07:984 [CPU]/(35698:35722): >>>>>>< Nro_marco:-1
+[INFO] 06:52:07:984 [CPU]/(35698:35722): Elimino paquete
+[WARNING] 06:52:07:984 [CPU]/(35698:35722): Proceso_desalojado <PID:1>
+[INFO] 06:52:07:984 [CPU]/(35698:35722): Todo el contexto se elimino correctamente .....
+[INFO] 06:52:15:516 [CPU]/(35698:35725): [PID: 1][PC: 2][Registros: 4|4|4|0]
+[INFO] 06:52:16:018 [CPU]/(35698:35699): Instruccion recibida: [MOV_OUT 16 AX]
+[ERROR] 06:52:16:520 [CPU]/(35698:35725): >>>>>>< Nro_marco:1
+[INFO] 06:52:17:527 [CPU]/(35698:35699): Instruccion recibida: [MOV_OUT 32 AX]
+[ERROR] 06:52:18:030 [CPU]/(35698:35725): >>>>>>< Nro_marco:-1
+[INFO] 06:52:18:030 [CPU]/(35698:35725): Elimino paquete
+[WARNING] 06:52:18:030 [CPU]/(35698:35725): Proceso_desalojado <PID:1>
+[INFO] 06:52:18:030 [CPU]/(35698:35725): Todo el contexto se elimino correctamente .....
+[INFO] 06:52:25:543 [CPU]/(35698:35729): [PID: 1][PC: 3][Registros: 4|4|4|4]
+[INFO] 06:52:26:044 [CPU]/(35698:35699): Instruccion recibida: [MOV_OUT 32 AX]
+[ERROR] 06:52:26:546 [CPU]/(35698:35729): >>>>>>< Nro_marco:2
+[INFO] 06:52:27:551 [CPU]/(35698:35699): Instruccion recibida: [MOV_OUT 48 AX]
+[ERROR] 06:52:28:057 [CPU]/(35698:35729): >>>>>>< Nro_marco:-1
+[INFO] 06:52:28:058 [CPU]/(35698:35729): Elimino paquete
+[WARNING] 06:52:28:058 [CPU]/(35698:35729): Proceso_desalojado <PID:1>
+[INFO] 06:52:28:058 [CPU]/(35698:35729): Todo el contexto se elimino correctamente .....
+[INFO] 06:52:35:572 [CPU]/(35698:35732): [PID: 1][PC: 4][Registros: 4|4|4|4]
+[INFO] 06:52:36:076 [CPU]/(35698:35699): Instruccion recibida: [MOV_OUT 48 AX]
+[ERROR] 06:52:36:580 [CPU]/(35698:35732): >>>>>>< Nro_marco:3
+[INFO] 06:52:37:592 [CPU]/(35698:35699): Instruccion recibida: [MOV_IN DX 16]
+[ERROR] 06:52:38:108 [CPU]/(35698:35732): >>>>>>< Nro_marco:1
+[INFO] 06:52:39:123 [CPU]/(35698:35699): Instruccion recibida: [MOV_IN CX 32]
+[ERROR] 06:52:39:628 [CPU]/(35698:35732): >>>>>>< Nro_marco:2
+[INFO] 06:52:40:649 [CPU]/(35698:35699): Instruccion recibida: [SET BX 2]
+[INFO] 06:52:41:157 [CPU]/(35698:35699): Instruccion recibida: [MOV_OUT 64 BX]
+[ERROR] 06:52:41:663 [CPU]/(35698:35732): >>>>>>< Nro_marco:-1
+[INFO] 06:52:41:663 [CPU]/(35698:35732): Elimino paquete
+[WARNING] 06:52:41:663 [CPU]/(35698:35732): Proceso_desalojado <PID:1>
+[INFO] 06:52:41:663 [CPU]/(35698:35732): Todo el contexto se elimino correctamente .....
+[INFO] 06:52:49:179 [CPU]/(35698:35735): [PID: 1][PC: 8][Registros: 4|4|4|0]
+[INFO] 06:52:49:687 [CPU]/(35698:35699): Instruccion recibida: [MOV_OUT 64 BX]
+[ERROR] 06:52:50:196 [CPU]/(35698:35735): >>>>>>< Nro_marco:0
+[INFO] 06:52:51:203 [CPU]/(35698:35699): Instruccion recibida: [MOV_OUT 80 BX]
+[ERROR] 06:52:51:706 [CPU]/(35698:35735): >>>>>>< Nro_marco:-1
+[INFO] 06:52:51:706 [CPU]/(35698:35735): Elimino paquete
+[WARNING] 06:52:51:706 [CPU]/(35698:35735): Proceso_desalojado <PID:1>
+[INFO] 06:52:51:706 [CPU]/(35698:35735): Todo el contexto se elimino correctamente .....
+[INFO] 06:52:59:228 [CPU]/(35698:35738): [PID: 1][PC: 9][Registros: 4|4|4|4]
+[INFO] 06:52:59:731 [CPU]/(35698:35699): Instruccion recibida: [MOV_OUT 80 BX]
+[ERROR] 06:53:00:234 [CPU]/(35698:35738): >>>>>>< Nro_marco:1
+[INFO] 06:53:01:236 [CPU]/(35698:35699): Instruccion recibida: [MOV_OUT 96 BX]
+[ERROR] 06:53:01:738 [CPU]/(35698:35738): >>>>>>< Nro_marco:-1
+[INFO] 06:53:01:738 [CPU]/(35698:35738): Elimino paquete
+[WARNING] 06:53:01:738 [CPU]/(35698:35738): Proceso_desalojado <PID:1>
+[INFO] 06:53:01:738 [CPU]/(35698:35738): Todo el contexto se elimino correctamente .....
+[INFO] 06:53:09:275 [CPU]/(35698:35741): [PID: 1][PC: 10][Registros: 4|4|4|4]
+[INFO] 06:53:09:788 [CPU]/(35698:35699): Instruccion recibida: [MOV_OUT 96 BX]
+[ERROR] 06:53:10:290 [CPU]/(35698:35741): >>>>>>< Nro_marco:2
+[INFO] 06:53:11:294 [CPU]/(35698:35699): Instruccion recibida: [MOV_OUT 112 BX]
+[ERROR] 06:53:11:798 [CPU]/(35698:35741): >>>>>>< Nro_marco:-1
+[INFO] 06:53:11:799 [CPU]/(35698:35741): Elimino paquete
+[WARNING] 06:53:11:799 [CPU]/(35698:35741): Proceso_desalojado <PID:1>
+[INFO] 06:53:11:799 [CPU]/(35698:35741): Todo el contexto se elimino correctamente .....
+[INFO] 06:53:19:314 [CPU]/(35698:35743): [PID: 1][PC: 11][Registros: 4|4|4|4]
+[INFO] 06:53:19:818 [CPU]/(35698:35699): Instruccion recibida: [MOV_OUT 112 BX]
+[ERROR] 06:53:20:320 [CPU]/(35698:35743): >>>>>>< Nro_marco:3
+[INFO] 06:53:21:334 [CPU]/(35698:35699): Instruccion recibida: [EXIT]
+[INFO] 06:53:21:335 [CPU]/(35698:35743): Elimino paquete
+[WARNING] 06:53:21:335 [CPU]/(35698:35743): Proceso_desalojado <PID:1>
+[INFO] 06:53:21:335 [CPU]/(35698:35743): Todo el contexto se elimino correctamente .....
+[ERROR] 06:54:20:486 [CPU]/(35698:35701): [DESCONEXION]: KERNEL_Dispatch
+[INFO] 06:55:06:401 [CPU]/(35767:35768): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 06:55:10:068 [CPU]/(35767:35770): Cliente conectado a Kernel por dispatch
+[INFO] 06:55:10:068 [CPU]/(35767:35769): Cliente conectado a Kernel por interrupt
+[INFO] 06:55:10:070 [CPU]/(35767:35770): ::::::::::: KERNEL CONECTADO POR DISPATCH ::::::::::::
+[INFO] 06:55:10:071 [CPU]/(35767:35769): ::::::::::: KERNEL CONECTADO POR INTERRUPT ::::::::::::
+[INFO] 06:55:29:500 [CPU]/(35767:35787): [PID: 1][PC: 0][Registros: 4|0|4|0]
+[INFO] 06:55:30:010 [CPU]/(35767:35768): Instruccion recibida: [SET AX 1]
+[INFO] 06:55:30:515 [CPU]/(35767:35768): Instruccion recibida: [MOV_OUT 0 AX]
+[ERROR] 06:55:31:024 [CPU]/(35767:35787): >>>>>>< Nro_marco:-1
+[INFO] 06:55:31:025 [CPU]/(35767:35787): Elimino paquete
+[WARNING] 06:55:31:025 [CPU]/(35767:35787): Proceso_desalojado <PID:1>
+[INFO] 06:55:31:025 [CPU]/(35767:35787): Todo el contexto se elimino correctamente .....
+[INFO] 06:55:36:537 [CPU]/(35767:35790): [PID: 1][PC: 1][Registros: 4|0|4|0]
+[INFO] 06:55:37:041 [CPU]/(35767:35768): Instruccion recibida: [MOV_OUT 0 AX]
+[ERROR] 06:55:37:544 [CPU]/(35767:35790): >>>>>>< Nro_marco:0
+[INFO] 06:55:38:555 [CPU]/(35767:35768): Instruccion recibida: [MOV_OUT 16 AX]
+[ERROR] 06:55:39:059 [CPU]/(35767:35790): >>>>>>< Nro_marco:-1
+[INFO] 06:55:39:060 [CPU]/(35767:35790): Elimino paquete
+[WARNING] 06:55:39:060 [CPU]/(35767:35790): Proceso_desalojado <PID:1>
+[INFO] 06:55:39:060 [CPU]/(35767:35790): Todo el contexto se elimino correctamente .....
+[INFO] 06:55:44:580 [CPU]/(35767:35793): [PID: 1][PC: 2][Registros: 4|4|4|0]
+[INFO] 06:55:45:091 [CPU]/(35767:35768): Instruccion recibida: [MOV_OUT 16 AX]
+[ERROR] 06:55:45:601 [CPU]/(35767:35793): >>>>>>< Nro_marco:1
+[INFO] 06:55:46:635 [CPU]/(35767:35768): Instruccion recibida: [MOV_OUT 32 AX]
+[ERROR] 06:55:47:140 [CPU]/(35767:35793): >>>>>>< Nro_marco:-1
+[INFO] 06:55:47:140 [CPU]/(35767:35793): Elimino paquete
+[WARNING] 06:55:47:140 [CPU]/(35767:35793): Proceso_desalojado <PID:1>
+[INFO] 06:55:47:140 [CPU]/(35767:35793): Todo el contexto se elimino correctamente .....
+[INFO] 06:55:52:658 [CPU]/(35767:35796): [PID: 1][PC: 3][Registros: 4|4|4|4]
+[INFO] 06:55:53:160 [CPU]/(35767:35768): Instruccion recibida: [MOV_OUT 32 AX]
+[ERROR] 06:55:53:663 [CPU]/(35767:35796): >>>>>>< Nro_marco:2
+[INFO] 06:55:54:667 [CPU]/(35767:35768): Instruccion recibida: [MOV_OUT 48 AX]
+[ERROR] 06:55:55:171 [CPU]/(35767:35796): >>>>>>< Nro_marco:-1
+[INFO] 06:55:55:171 [CPU]/(35767:35796): Elimino paquete
+[WARNING] 06:55:55:171 [CPU]/(35767:35796): Proceso_desalojado <PID:1>
+[INFO] 06:55:55:171 [CPU]/(35767:35796): Todo el contexto se elimino correctamente .....
+[INFO] 06:56:00:682 [CPU]/(35767:35799): [PID: 1][PC: 4][Registros: 4|4|4|4]
+[INFO] 06:56:01:183 [CPU]/(35767:35768): Instruccion recibida: [MOV_OUT 48 AX]
+[ERROR] 06:56:01:686 [CPU]/(35767:35799): >>>>>>< Nro_marco:3
+[INFO] 06:56:02:689 [CPU]/(35767:35768): Instruccion recibida: [MOV_IN DX 16]
+[ERROR] 06:56:03:195 [CPU]/(35767:35799): >>>>>>< Nro_marco:1
+[INFO] 06:56:04:200 [CPU]/(35767:35768): Instruccion recibida: [MOV_IN CX 32]
+[ERROR] 06:56:04:702 [CPU]/(35767:35799): >>>>>>< Nro_marco:2
+[INFO] 06:56:05:707 [CPU]/(35767:35768): Instruccion recibida: [SET BX 2]
+[INFO] 06:56:06:214 [CPU]/(35767:35768): Instruccion recibida: [MOV_OUT 64 BX]
+[ERROR] 06:56:06:720 [CPU]/(35767:35799): >>>>>>< Nro_marco:-1
+[INFO] 06:56:06:720 [CPU]/(35767:35799): Elimino paquete
+[WARNING] 06:56:06:720 [CPU]/(35767:35799): Proceso_desalojado <PID:1>
+[INFO] 06:56:06:720 [CPU]/(35767:35799): Todo el contexto se elimino correctamente .....
+[INFO] 06:56:12:239 [CPU]/(35767:35802): [PID: 1][PC: 8][Registros: 4|4|4|0]
+[INFO] 06:56:12:746 [CPU]/(35767:35768): Instruccion recibida: [MOV_OUT 64 BX]
+[ERROR] 06:56:13:253 [CPU]/(35767:35802): >>>>>>< Nro_marco:0
+[INFO] 06:56:14:257 [CPU]/(35767:35768): Instruccion recibida: [MOV_OUT 80 BX]
+[ERROR] 06:56:14:763 [CPU]/(35767:35802): >>>>>>< Nro_marco:-1
+[INFO] 06:56:14:764 [CPU]/(35767:35802): Elimino paquete
+[WARNING] 06:56:14:764 [CPU]/(35767:35802): Proceso_desalojado <PID:1>
+[INFO] 06:56:14:764 [CPU]/(35767:35802): Todo el contexto se elimino correctamente .....
+[INFO] 06:56:20:288 [CPU]/(35767:35805): [PID: 1][PC: 9][Registros: 4|4|4|4]
+[INFO] 06:56:20:795 [CPU]/(35767:35768): Instruccion recibida: [MOV_OUT 80 BX]
+[ERROR] 06:56:21:297 [CPU]/(35767:35805): >>>>>>< Nro_marco:3
+[INFO] 06:56:22:302 [CPU]/(35767:35768): Instruccion recibida: [MOV_OUT 96 BX]
+[ERROR] 06:56:22:804 [CPU]/(35767:35805): >>>>>>< Nro_marco:-1
+[INFO] 06:56:22:805 [CPU]/(35767:35805): Elimino paquete
+[WARNING] 06:56:22:805 [CPU]/(35767:35805): Proceso_desalojado <PID:1>
+[INFO] 06:56:22:805 [CPU]/(35767:35805): Todo el contexto se elimino correctamente .....
+[INFO] 06:56:28:322 [CPU]/(35767:35808): [PID: 1][PC: 10][Registros: 4|4|4|4]
+[INFO] 06:56:28:827 [CPU]/(35767:35768): Instruccion recibida: [MOV_OUT 96 BX]
+[ERROR] 06:56:29:329 [CPU]/(35767:35808): >>>>>>< Nro_marco:1
+[INFO] 06:56:30:337 [CPU]/(35767:35768): Instruccion recibida: [MOV_OUT 112 BX]
+[ERROR] 06:56:30:840 [CPU]/(35767:35808): >>>>>>< Nro_marco:-1
+[INFO] 06:56:30:841 [CPU]/(35767:35808): Elimino paquete
+[WARNING] 06:56:30:841 [CPU]/(35767:35808): Proceso_desalojado <PID:1>
+[INFO] 06:56:30:841 [CPU]/(35767:35808): Todo el contexto se elimino correctamente .....
+[INFO] 06:56:36:349 [CPU]/(35767:35811): [PID: 1][PC: 11][Registros: 4|4|4|4]
+[INFO] 06:56:36:855 [CPU]/(35767:35768): Instruccion recibida: [MOV_OUT 112 BX]
+[ERROR] 06:56:37:367 [CPU]/(35767:35811): >>>>>>< Nro_marco:2
+[INFO] 06:56:38:389 [CPU]/(35767:35768): Instruccion recibida: [EXIT]
+[INFO] 06:56:38:389 [CPU]/(35767:35811): Elimino paquete
+[WARNING] 06:56:38:389 [CPU]/(35767:35811): Proceso_desalojado <PID:1>
+[INFO] 06:56:38:389 [CPU]/(35767:35811): Todo el contexto se elimino correctamente .....
+[INFO] 06:57:07:668 [CPU]/(35767:35818): [PID: 2][PC: 0][Registros: 4|0|4|0]
+[INFO] 06:57:08:169 [CPU]/(35767:35768): Instruccion recibida: [SET AX 1]
+[INFO] 06:57:08:675 [CPU]/(35767:35768): Instruccion recibida: [MOV_OUT 0 AX]
+[ERROR] 06:57:09:180 [CPU]/(35767:35818): >>>>>>< Nro_marco:-1
+[INFO] 06:57:09:180 [CPU]/(35767:35818): Elimino paquete
+[WARNING] 06:57:09:180 [CPU]/(35767:35818): Proceso_desalojado <PID:2>
+[INFO] 06:57:09:180 [CPU]/(35767:35818): Todo el contexto se elimino correctamente .....
+[INFO] 06:57:20:729 [CPU]/(35767:35821): [PID: 3][PC: 0][Registros: 4|0|4|0]
+[INFO] 06:57:21:230 [CPU]/(35767:35768): Instruccion recibida: [SET AX 1]
+[INFO] 06:57:21:732 [CPU]/(35767:35768): Instruccion recibida: [MOV_OUT 0 AX]
+[ERROR] 06:57:22:232 [CPU]/(35767:35821): >>>>>>< Nro_marco:-1
+[INFO] 06:57:22:232 [CPU]/(35767:35821): Elimino paquete
+[WARNING] 06:57:22:233 [CPU]/(35767:35821): Proceso_desalojado <PID:3>
+[INFO] 06:57:22:233 [CPU]/(35767:35821): Todo el contexto se elimino correctamente .....
+[INFO] 06:57:26:245 [CPU]/(35767:35824): [PID: 2][PC: 1][Registros: 4|0|4|0]
+[INFO] 06:57:26:752 [CPU]/(35767:35768): Instruccion recibida: [MOV_OUT 0 AX]
+[ERROR] 06:57:27:254 [CPU]/(35767:35824): >>>>>>< Nro_marco:0
+[INFO] 06:57:28:261 [CPU]/(35767:35768): Instruccion recibida: [MOV_OUT 16 AX]
+[ERROR] 06:57:28:763 [CPU]/(35767:35824): >>>>>>< Nro_marco:-1
+[INFO] 06:57:28:763 [CPU]/(35767:35824): Elimino paquete
+[WARNING] 06:57:28:763 [CPU]/(35767:35824): Proceso_desalojado <PID:2>
+[INFO] 06:57:28:763 [CPU]/(35767:35824): Todo el contexto se elimino correctamente .....
+[INFO] 06:57:35:277 [CPU]/(35767:35827): [PID: 4][PC: 0][Registros: 4|0|4|0]
+[INFO] 06:57:35:780 [CPU]/(35767:35768): Instruccion recibida: [SET AX 1]
+[INFO] 06:57:36:282 [CPU]/(35767:35768): Instruccion recibida: [MOV_OUT 0 AX]
+[ERROR] 06:57:36:791 [CPU]/(35767:35827): >>>>>>< Nro_marco:-1
+[INFO] 06:57:36:791 [CPU]/(35767:35827): Elimino paquete
+[WARNING] 06:57:36:791 [CPU]/(35767:35827): Proceso_desalojado <PID:4>
+[INFO] 06:57:36:791 [CPU]/(35767:35827): Todo el contexto se elimino correctamente .....
+[INFO] 06:57:40:788 [CPU]/(35767:35830): [PID: 3][PC: 1][Registros: 4|0|4|0]
+[INFO] 06:57:41:294 [CPU]/(35767:35768): Instruccion recibida: [MOV_OUT 0 AX]
+[ERROR] 06:57:41:803 [CPU]/(35767:35830): >>>>>>< Nro_marco:1
+[INFO] 06:57:42:838 [CPU]/(35767:35768): Instruccion recibida: [MOV_OUT 16 AX]
+[ERROR] 06:57:43:345 [CPU]/(35767:35830): >>>>>>< Nro_marco:-1
+[INFO] 06:57:43:345 [CPU]/(35767:35830): Elimino paquete
+[WARNING] 06:57:43:345 [CPU]/(35767:35830): Proceso_desalojado <PID:3>
+[INFO] 06:57:43:345 [CPU]/(35767:35830): Todo el contexto se elimino correctamente .....
+[INFO] 06:57:49:808 [CPU]/(35767:35833): [PID: 5][PC: 0][Registros: 4|0|4|0]
+[INFO] 06:57:50:311 [CPU]/(35767:35768): Instruccion recibida: [SET AX 1]
+[INFO] 06:57:50:817 [CPU]/(35767:35768): Instruccion recibida: [MOV_OUT 0 AX]
+[ERROR] 06:57:51:324 [CPU]/(35767:35833): >>>>>>< Nro_marco:-1
+[INFO] 06:57:51:324 [CPU]/(35767:35833): Elimino paquete
+[WARNING] 06:57:51:324 [CPU]/(35767:35833): Proceso_desalojado <PID:5>
+[INFO] 06:57:51:324 [CPU]/(35767:35833): Todo el contexto se elimino correctamente .....
+[INFO] 06:57:55:328 [CPU]/(35767:35836): [PID: 2][PC: 2][Registros: 4|4|4|0]
+[INFO] 06:57:55:832 [CPU]/(35767:35768): Instruccion recibida: [MOV_OUT 16 AX]
+[ERROR] 06:57:56:370 [CPU]/(35767:35836): >>>>>>< Nro_marco:2
+[INFO] 06:57:57:378 [CPU]/(35767:35768): Instruccion recibida: [MOV_OUT 32 AX]
+[ERROR] 06:57:57:878 [CPU]/(35767:35836): >>>>>>< Nro_marco:-1
+[INFO] 06:57:57:879 [CPU]/(35767:35836): Elimino paquete
+[WARNING] 06:57:57:879 [CPU]/(35767:35836): Proceso_desalojado <PID:2>
+[INFO] 06:57:57:879 [CPU]/(35767:35836): Todo el contexto se elimino correctamente .....
+[INFO] 06:58:00:851 [CPU]/(35767:35839): [PID: 4][PC: 1][Registros: 4|0|4|0]
+[INFO] 06:58:01:354 [CPU]/(35767:35768): Instruccion recibida: [MOV_OUT 0 AX]
+[ERROR] 06:58:01:857 [CPU]/(35767:35839): >>>>>>< Nro_marco:3
+[INFO] 06:58:02:867 [CPU]/(35767:35768): Instruccion recibida: [MOV_OUT 16 AX]
+[ERROR] 06:58:03:369 [CPU]/(35767:35839): >>>>>>< Nro_marco:-1
+[INFO] 06:58:03:369 [CPU]/(35767:35839): Elimino paquete
+[WARNING] 06:58:03:369 [CPU]/(35767:35839): Proceso_desalojado <PID:4>
+[INFO] 06:58:03:369 [CPU]/(35767:35839): Todo el contexto se elimino correctamente .....
+[INFO] 06:58:06:379 [CPU]/(35767:35842): [PID: 3][PC: 2][Registros: 4|4|4|0]
+[INFO] 06:58:06:883 [CPU]/(35767:35768): Instruccion recibida: [MOV_OUT 16 AX]
+[ERROR] 06:58:07:403 [CPU]/(35767:35842): >>>>>>< Nro_marco:0
+[INFO] 06:58:08:405 [CPU]/(35767:35768): Instruccion recibida: [MOV_OUT 32 AX]
+[ERROR] 06:58:08:909 [CPU]/(35767:35842): >>>>>>< Nro_marco:-1
+[INFO] 06:58:08:909 [CPU]/(35767:35842): Elimino paquete
+[WARNING] 06:58:08:909 [CPU]/(35767:35842): Proceso_desalojado <PID:3>
+[INFO] 06:58:08:909 [CPU]/(35767:35842): Todo el contexto se elimino correctamente .....
+[INFO] 06:58:11:889 [CPU]/(35767:35845): [PID: 5][PC: 1][Registros: 4|0|4|0]
+[INFO] 06:58:12:390 [CPU]/(35767:35768): Instruccion recibida: [MOV_OUT 0 AX]
+[ERROR] 06:58:12:895 [CPU]/(35767:35845): >>>>>>< Nro_marco:1
+[INFO] 06:58:13:912 [CPU]/(35767:35768): Instruccion recibida: [MOV_OUT 16 AX]
+[ERROR] 06:58:14:414 [CPU]/(35767:35845): >>>>>>< Nro_marco:-1
+[INFO] 06:58:14:414 [CPU]/(35767:35845): Elimino paquete
+[WARNING] 06:58:14:414 [CPU]/(35767:35845): Proceso_desalojado <PID:5>
+[INFO] 06:58:14:414 [CPU]/(35767:35845): Todo el contexto se elimino correctamente .....
+[INFO] 06:58:17:414 [CPU]/(35767:35847): [PID: 2][PC: 3][Registros: 4|4|4|4]
+[INFO] 06:58:17:915 [CPU]/(35767:35768): Instruccion recibida: [MOV_OUT 32 AX]
+[ERROR] 06:58:18:417 [CPU]/(35767:35847): >>>>>>< Nro_marco:2
+[INFO] 06:58:19:431 [CPU]/(35767:35768): Instruccion recibida: [MOV_OUT 48 AX]
+[ERROR] 06:58:19:937 [CPU]/(35767:35847): >>>>>>< Nro_marco:-1
+[INFO] 06:58:19:938 [CPU]/(35767:35847): Elimino paquete
+[WARNING] 06:58:19:938 [CPU]/(35767:35847): Proceso_desalojado <PID:2>
+[INFO] 06:58:19:938 [CPU]/(35767:35847): Todo el contexto se elimino correctamente .....
+[INFO] 06:58:22:923 [CPU]/(35767:35850): [PID: 4][PC: 2][Registros: 4|4|4|0]
+[INFO] 06:58:23:427 [CPU]/(35767:35768): Instruccion recibida: [MOV_OUT 16 AX]
+[ERROR] 06:58:23:928 [CPU]/(35767:35850): >>>>>>< Nro_marco:3
+[INFO] 06:58:24:930 [CPU]/(35767:35768): Instruccion recibida: [MOV_OUT 32 AX]
+[ERROR] 06:58:25:453 [CPU]/(35767:35850): >>>>>>< Nro_marco:-1
+[INFO] 06:58:25:453 [CPU]/(35767:35850): Elimino paquete
+[WARNING] 06:58:25:454 [CPU]/(35767:35850): Proceso_desalojado <PID:4>
+[INFO] 06:58:25:454 [CPU]/(35767:35850): Todo el contexto se elimino correctamente .....
+[INFO] 06:58:28:445 [CPU]/(35767:35853): [PID: 3][PC: 3][Registros: 4|4|4|4]
+[INFO] 06:58:28:947 [CPU]/(35767:35768): Instruccion recibida: [MOV_OUT 32 AX]
+[ERROR] 06:58:29:453 [CPU]/(35767:35853): >>>>>>< Nro_marco:0
+[INFO] 06:58:30:460 [CPU]/(35767:35768): Instruccion recibida: [MOV_OUT 48 AX]
+[ERROR] 06:58:30:961 [CPU]/(35767:35853): >>>>>>< Nro_marco:-1
+[INFO] 06:58:30:961 [CPU]/(35767:35853): Elimino paquete
+[WARNING] 06:58:30:961 [CPU]/(35767:35853): Proceso_desalojado <PID:3>
+[INFO] 06:58:30:961 [CPU]/(35767:35853): Todo el contexto se elimino correctamente .....
+[INFO] 06:58:33:959 [CPU]/(35767:35857): [PID: 5][PC: 2][Registros: 4|4|4|0]
+[INFO] 06:58:34:461 [CPU]/(35767:35768): Instruccion recibida: [MOV_OUT 16 AX]
+[ERROR] 06:58:34:962 [CPU]/(35767:35857): >>>>>>< Nro_marco:1
+[INFO] 06:58:35:965 [CPU]/(35767:35768): Instruccion recibida: [MOV_OUT 32 AX]
+[ERROR] 06:58:36:476 [CPU]/(35767:35857): >>>>>>< Nro_marco:-1
+[INFO] 06:58:36:476 [CPU]/(35767:35857): Elimino paquete
+[WARNING] 06:58:36:476 [CPU]/(35767:35857): Proceso_desalojado <PID:5>
+[INFO] 06:58:36:476 [CPU]/(35767:35857): Todo el contexto se elimino correctamente .....
+[INFO] 06:58:39:466 [CPU]/(35767:35860): [PID: 2][PC: 4][Registros: 4|4|4|4]
+[INFO] 06:58:39:980 [CPU]/(35767:35768): Instruccion recibida: [MOV_OUT 48 AX]
+[ERROR] 06:58:40:485 [CPU]/(35767:35860): >>>>>>< Nro_marco:2
+[INFO] 06:58:41:490 [CPU]/(35767:35768): Instruccion recibida: [MOV_IN DX 16]
+[ERROR] 06:58:41:992 [CPU]/(35767:35860): >>>>>>< Nro_marco:-1
+[INFO] 06:58:41:993 [CPU]/(35767:35860): Elimino paquete
+[WARNING] 06:58:41:993 [CPU]/(35767:35860): Proceso_desalojado <PID:2>
+[INFO] 06:58:41:993 [CPU]/(35767:35860): Todo el contexto se elimino correctamente .....
+[INFO] 06:58:44:993 [CPU]/(35767:35863): [PID: 4][PC: 3][Registros: 4|4|4|4]
+[INFO] 06:58:45:494 [CPU]/(35767:35768): Instruccion recibida: [MOV_OUT 32 AX]
+[ERROR] 06:58:45:995 [CPU]/(35767:35863): >>>>>>< Nro_marco:3
+[INFO] 06:58:46:999 [CPU]/(35767:35768): Instruccion recibida: [MOV_OUT 48 AX]
+[ERROR] 06:58:47:501 [CPU]/(35767:35863): >>>>>>< Nro_marco:-1
+[INFO] 06:58:47:502 [CPU]/(35767:35863): Elimino paquete
+[WARNING] 06:58:47:502 [CPU]/(35767:35863): Proceso_desalojado <PID:4>
+[INFO] 06:58:47:502 [CPU]/(35767:35863): Todo el contexto se elimino correctamente .....
+[INFO] 06:58:50:510 [CPU]/(35767:35865): [PID: 3][PC: 4][Registros: 4|4|4|4]
+[INFO] 06:58:51:012 [CPU]/(35767:35768): Instruccion recibida: [MOV_OUT 48 AX]
+[ERROR] 06:58:51:516 [CPU]/(35767:35865): >>>>>>< Nro_marco:0
+[INFO] 06:58:52:525 [CPU]/(35767:35768): Instruccion recibida: [MOV_IN DX 16]
+[ERROR] 06:58:53:039 [CPU]/(35767:35865): >>>>>>< Nro_marco:-1
+[INFO] 06:58:53:040 [CPU]/(35767:35865): Elimino paquete
+[WARNING] 06:58:53:040 [CPU]/(35767:35865): Proceso_desalojado <PID:3>
+[INFO] 06:58:53:040 [CPU]/(35767:35865): Todo el contexto se elimino correctamente .....
+[INFO] 06:58:56:022 [CPU]/(35767:35877): [PID: 5][PC: 3][Registros: 4|4|4|4]
+[INFO] 06:58:56:525 [CPU]/(35767:35768): Instruccion recibida: [MOV_OUT 32 AX]
+[ERROR] 06:58:57:027 [CPU]/(35767:35877): >>>>>>< Nro_marco:1
+[INFO] 06:58:58:030 [CPU]/(35767:35768): Instruccion recibida: [MOV_OUT 48 AX]
+[ERROR] 06:58:58:535 [CPU]/(35767:35877): >>>>>>< Nro_marco:-1
+[INFO] 06:58:58:536 [CPU]/(35767:35877): Elimino paquete
+[WARNING] 06:58:58:536 [CPU]/(35767:35877): Proceso_desalojado <PID:5>
+[INFO] 06:58:58:536 [CPU]/(35767:35877): Todo el contexto se elimino correctamente .....
+[INFO] 06:59:01:538 [CPU]/(35767:35881): [PID: 2][PC: 5][Registros: 4|4|4|4]
+[INFO] 06:59:02:045 [CPU]/(35767:35768): Instruccion recibida: [MOV_IN DX 16]
+[ERROR] 06:59:02:548 [CPU]/(35767:35881): >>>>>>< Nro_marco:2
+[INFO] 06:59:03:551 [CPU]/(35767:35768): Instruccion recibida: [MOV_IN CX 32]
+[ERROR] 06:59:04:059 [CPU]/(35767:35881): >>>>>>< Nro_marco:-1
+[INFO] 06:59:04:059 [CPU]/(35767:35881): Elimino paquete
+[WARNING] 06:59:04:059 [CPU]/(35767:35881): Proceso_desalojado <PID:2>
+[INFO] 06:59:04:059 [CPU]/(35767:35881): Todo el contexto se elimino correctamente .....
+[INFO] 06:59:07:054 [CPU]/(35767:35884): [PID: 4][PC: 4][Registros: 4|4|4|4]
+[INFO] 06:59:07:556 [CPU]/(35767:35768): Instruccion recibida: [MOV_OUT 48 AX]
+[ERROR] 06:59:08:064 [CPU]/(35767:35884): >>>>>>< Nro_marco:3
+[INFO] 06:59:09:097 [CPU]/(35767:35768): Instruccion recibida: [MOV_IN DX 16]
+[ERROR] 06:59:09:599 [CPU]/(35767:35884): >>>>>>< Nro_marco:-1
+[INFO] 06:59:09:599 [CPU]/(35767:35884): Elimino paquete
+[WARNING] 06:59:09:599 [CPU]/(35767:35884): Proceso_desalojado <PID:4>
+[INFO] 06:59:09:599 [CPU]/(35767:35884): Todo el contexto se elimino correctamente .....
+[INFO] 06:59:12:564 [CPU]/(35767:35887): [PID: 3][PC: 5][Registros: 4|4|4|4]
+[INFO] 06:59:13:069 [CPU]/(35767:35768): Instruccion recibida: [MOV_IN DX 16]
+[ERROR] 06:59:13:579 [CPU]/(35767:35887): >>>>>>< Nro_marco:0
+[INFO] 06:59:14:589 [CPU]/(35767:35768): Instruccion recibida: [MOV_IN CX 32]
+[ERROR] 06:59:15:095 [CPU]/(35767:35887): >>>>>>< Nro_marco:-1
+[INFO] 06:59:15:096 [CPU]/(35767:35887): Elimino paquete
+[WARNING] 06:59:15:096 [CPU]/(35767:35887): Proceso_desalojado <PID:3>
+[INFO] 06:59:15:096 [CPU]/(35767:35887): Todo el contexto se elimino correctamente .....
+[INFO] 06:59:18:084 [CPU]/(35767:35889): [PID: 5][PC: 4][Registros: 4|4|4|4]
+[INFO] 06:59:18:593 [CPU]/(35767:35768): Instruccion recibida: [MOV_OUT 48 AX]
+[ERROR] 06:59:19:101 [CPU]/(35767:35889): >>>>>>< Nro_marco:1
+[INFO] 06:59:20:107 [CPU]/(35767:35768): Instruccion recibida: [MOV_IN DX 16]
+[ERROR] 06:59:20:609 [CPU]/(35767:35889): >>>>>>< Nro_marco:-1
+[INFO] 06:59:20:609 [CPU]/(35767:35889): Elimino paquete
+[WARNING] 06:59:20:609 [CPU]/(35767:35889): Proceso_desalojado <PID:5>
+[INFO] 06:59:20:609 [CPU]/(35767:35889): Todo el contexto se elimino correctamente .....
+[INFO] 06:59:23:621 [CPU]/(35767:35893): [PID: 2][PC: 6][Registros: 4|4|4|4]
+[INFO] 06:59:24:125 [CPU]/(35767:35768): Instruccion recibida: [MOV_IN CX 32]
+[ERROR] 06:59:24:628 [CPU]/(35767:35893): >>>>>>< Nro_marco:2
+[INFO] 06:59:25:630 [CPU]/(35767:35768): Instruccion recibida: [SET BX 2]
+[INFO] 06:59:26:141 [CPU]/(35767:35768): Instruccion recibida: [MOV_OUT 64 BX]
+[ERROR] 06:59:26:644 [CPU]/(35767:35893): >>>>>>< Nro_marco:-1
+[INFO] 06:59:26:650 [CPU]/(35767:35893): Elimino paquete
+[WARNING] 06:59:26:650 [CPU]/(35767:35893): Proceso_desalojado <PID:2>
+[INFO] 06:59:26:650 [CPU]/(35767:35893): Todo el contexto se elimino correctamente .....
+[INFO] 06:59:29:144 [CPU]/(35767:35897): [PID: 4][PC: 5][Registros: 4|4|4|4]
+[INFO] 06:59:29:649 [CPU]/(35767:35768): Instruccion recibida: [MOV_IN DX 16]
+[ERROR] 06:59:30:150 [CPU]/(35767:35897): >>>>>>< Nro_marco:3
+[INFO] 06:59:31:157 [CPU]/(35767:35768): Instruccion recibida: [MOV_IN CX 32]
+[ERROR] 06:59:31:659 [CPU]/(35767:35897): >>>>>>< Nro_marco:-1
+[INFO] 06:59:31:659 [CPU]/(35767:35897): Elimino paquete
+[WARNING] 06:59:31:659 [CPU]/(35767:35897): Proceso_desalojado <PID:4>
+[INFO] 06:59:31:659 [CPU]/(35767:35897): Todo el contexto se elimino correctamente .....
+[INFO] 06:59:34:658 [CPU]/(35767:35900): [PID: 3][PC: 6][Registros: 4|4|4|4]
+[INFO] 06:59:35:160 [CPU]/(35767:35768): Instruccion recibida: [MOV_IN CX 32]
+[ERROR] 06:59:35:662 [CPU]/(35767:35900): >>>>>>< Nro_marco:0
+[INFO] 06:59:36:675 [CPU]/(35767:35768): Instruccion recibida: [SET BX 2]
+[INFO] 06:59:37:177 [CPU]/(35767:35768): Instruccion recibida: [MOV_OUT 64 BX]
+[ERROR] 06:59:37:679 [CPU]/(35767:35900): >>>>>>< Nro_marco:-1
+[INFO] 06:59:37:679 [CPU]/(35767:35900): Elimino paquete
+[WARNING] 06:59:37:680 [CPU]/(35767:35900): Proceso_desalojado <PID:3>
+[INFO] 06:59:37:680 [CPU]/(35767:35900): Todo el contexto se elimino correctamente .....
+[INFO] 06:59:40:234 [CPU]/(35767:35903): [PID: 5][PC: 5][Registros: 4|4|4|4]
+[INFO] 06:59:40:736 [CPU]/(35767:35768): Instruccion recibida: [MOV_IN DX 16]
+[ERROR] 06:59:41:240 [CPU]/(35767:35903): >>>>>>< Nro_marco:1
+[INFO] 06:59:42:245 [CPU]/(35767:35768): Instruccion recibida: [MOV_IN CX 32]
+[ERROR] 06:59:42:749 [CPU]/(35767:35903): >>>>>>< Nro_marco:-1
+[INFO] 06:59:42:749 [CPU]/(35767:35903): Elimino paquete
+[WARNING] 06:59:42:749 [CPU]/(35767:35903): Proceso_desalojado <PID:5>
+[INFO] 06:59:42:749 [CPU]/(35767:35903): Todo el contexto se elimino correctamente .....
+[INFO] 06:59:45:741 [CPU]/(35767:35905): [PID: 2][PC: 8][Registros: 4|4|4|0]
+[INFO] 06:59:46:248 [CPU]/(35767:35768): Instruccion recibida: [MOV_OUT 64 BX]
+[ERROR] 06:59:46:751 [CPU]/(35767:35905): >>>>>>< Nro_marco:2
+[INFO] 06:59:47:755 [CPU]/(35767:35768): Instruccion recibida: [MOV_OUT 80 BX]
+[ERROR] 06:59:48:258 [CPU]/(35767:35905): >>>>>>< Nro_marco:-1
+[INFO] 06:59:48:258 [CPU]/(35767:35905): Elimino paquete
+[WARNING] 06:59:48:258 [CPU]/(35767:35905): Proceso_desalojado <PID:2>
+[INFO] 06:59:48:258 [CPU]/(35767:35905): Todo el contexto se elimino correctamente .....
+[INFO] 06:59:51:257 [CPU]/(35767:35909): [PID: 4][PC: 6][Registros: 4|4|4|4]
+[INFO] 06:59:51:759 [CPU]/(35767:35768): Instruccion recibida: [MOV_IN CX 32]
+[ERROR] 06:59:52:267 [CPU]/(35767:35909): >>>>>>< Nro_marco:3
+[INFO] 06:59:53:275 [CPU]/(35767:35768): Instruccion recibida: [SET BX 2]
+[INFO] 06:59:53:778 [CPU]/(35767:35768): Instruccion recibida: [MOV_OUT 64 BX]
+[ERROR] 06:59:54:280 [CPU]/(35767:35909): >>>>>>< Nro_marco:-1
+[INFO] 06:59:54:280 [CPU]/(35767:35909): Elimino paquete
+[WARNING] 06:59:54:280 [CPU]/(35767:35909): Proceso_desalojado <PID:4>
+[INFO] 06:59:54:280 [CPU]/(35767:35909): Todo el contexto se elimino correctamente .....
+[WARNING] 06:59:54:392 [CPU]/(35767:35770): Operacion desconocida KERNEL_Dispatch
+[WARNING] 06:59:54:392 [CPU]/(35767:35770): Operacion desconocida KERNEL_Dispatch
+[WARNING] 06:59:54:392 [CPU]/(35767:35770): Operacion desconocida KERNEL_Dispatch
+[ERROR] 06:59:54:392 [CPU]/(35767:35769): [DESCONEXION]: KERNEL_Interrupt
+[WARNING] 06:59:54:392 [CPU]/(35767:35770): Operacion desconocida KERNEL_Dispatch
+[WARNING] 06:59:54:392 [CPU]/(35767:35770): Operacion desconocida KERNEL_Dispatch
+[WARNING] 06:59:54:392 [CPU]/(35767:35770): Operacion desconocida KERNEL_Dispatch
+[WARNING] 06:59:54:392 [CPU]/(35767:35770): Operacion desconocida KERNEL_Dispatch
+[WARNING] 06:59:54:392 [CPU]/(35767:35770): Operacion desconocida KERNEL_Dispatch
+[WARNING] 06:59:54:392 [CPU]/(35767:35770): Operacion desconocida KERNEL_Dispatch
+[WARNING] 06:59:54:392 [CPU]/(35767:35770): Operacion desconocida KERNEL_Dispatch
+[WARNING] 06:59:54:392 [CPU]/(35767:35770): Operacion desconocida KERNEL_Dispatch
+[WARNING] 06:59:54:392 [CPU]/(35767:35770): Operacion desconocida KERNEL_Dispatch
+[WARNING] 06:59:54:392 [CPU]/(35767:35770): Operacion desconocida KERNEL_Dispatch
+[WARNING] 06:59:54:392 [CPU]/(35767:35770): Operacion desconocida KERNEL_Dispatch
+[WARNING] 06:59:54:392 [CPU]/(35767:35770): Operacion desconocida KERNEL_Dispatch
+[WARNING] 06:59:54:392 [CPU]/(35767:35770): Operacion desconocida KERNEL_Dispatch
+[WARNING] 06:59:54:392 [CPU]/(35767:35770): Operacion desconocida KERNEL_Dispatch
+[INFO] 07:00:09:323 [CPU]/(35912:35913): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 07:00:19:213 [CPU]/(35912:35915): Cliente conectado a Kernel por dispatch
+[INFO] 07:00:19:213 [CPU]/(35912:35914): Cliente conectado a Kernel por interrupt
+[INFO] 07:00:19:216 [CPU]/(35912:35915): ::::::::::: KERNEL CONECTADO POR DISPATCH ::::::::::::
+[INFO] 07:00:19:216 [CPU]/(35912:35914): ::::::::::: KERNEL CONECTADO POR INTERRUPT ::::::::::::
+[ERROR] 07:00:36:417 [CPU]/(35912:35914): [DESCONEXION]: KERNEL_Interrupt
+[INFO] 07:01:15:006 [CPU]/(35960:35961): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 07:01:18:714 [CPU]/(35960:35963): Cliente conectado a Kernel por dispatch
+[INFO] 07:01:18:714 [CPU]/(35960:35962): Cliente conectado a Kernel por interrupt
+[INFO] 07:01:18:716 [CPU]/(35960:35963): ::::::::::: KERNEL CONECTADO POR DISPATCH ::::::::::::
+[INFO] 07:01:18:716 [CPU]/(35960:35962): ::::::::::: KERNEL CONECTADO POR INTERRUPT ::::::::::::
+[INFO] 07:03:22:907 [CPU]/(35960:35989): [PID: 1][PC: 0][Registros: 4|0|4|0]
+[INFO] 07:03:23:409 [CPU]/(35960:35961): Instruccion recibida: [SET CX 20]
+[INFO] 07:03:23:910 [CPU]/(35960:35961): Instruccion recibida: [SET AX 1]
+[INFO] 07:03:24:412 [CPU]/(35960:35961): Instruccion recibida: [MOV_OUT 0 CX]
+[ERROR] 07:03:24:914 [CPU]/(35960:35989): >>>>>>< Nro_marco:-1
+[INFO] 07:03:24:914 [CPU]/(35960:35989): Elimino paquete
+[WARNING] 07:03:24:915 [CPU]/(35960:35989): Proceso_desalojado <PID:1>
+[INFO] 07:03:24:915 [CPU]/(35960:35989): Todo el contexto se elimino correctamente .....
+[INFO] 07:03:29:920 [CPU]/(35960:35992): [PID: 2][PC: 0][Registros: 4|0|4|0]
+[INFO] 07:03:30:422 [CPU]/(35960:35961): Instruccion recibida: [SET CX 20]
+[INFO] 07:03:30:924 [CPU]/(35960:35961): Instruccion recibida: [SET AX 1]
+[INFO] 07:03:31:429 [CPU]/(35960:35961): Instruccion recibida: [MOV_OUT 0 CX]
+[ERROR] 07:03:31:932 [CPU]/(35960:35992): >>>>>>< Nro_marco:-1
+[INFO] 07:03:31:932 [CPU]/(35960:35992): Elimino paquete
+[WARNING] 07:03:31:932 [CPU]/(35960:35992): Proceso_desalojado <PID:2>
+[INFO] 07:03:31:932 [CPU]/(35960:35992): Todo el contexto se elimino correctamente .....
+[INFO] 07:03:35:426 [CPU]/(35960:35995): [PID: 1][PC: 2][Registros: 4|0|4|0]
+[INFO] 07:03:35:927 [CPU]/(35960:35961): Instruccion recibida: [MOV_OUT 0 CX]
+[ERROR] 07:03:36:431 [CPU]/(35960:35995): >>>>>>< Nro_marco:0
+[INFO] 07:03:37:443 [CPU]/(35960:35961): Instruccion recibida: [MOV_OUT 16 CX]
+[ERROR] 07:03:37:948 [CPU]/(35960:35995): >>>>>>< Nro_marco:-1
+[INFO] 07:03:37:948 [CPU]/(35960:35995): Elimino paquete
+[WARNING] 07:03:37:948 [CPU]/(35960:35995): Proceso_desalojado <PID:1>
+[INFO] 07:03:37:948 [CPU]/(35960:35995): Todo el contexto se elimino correctamente .....
+[INFO] 07:03:38:436 [CPU]/(35960:35998): [PID: 3][PC: 0][Registros: 4|0|4|0]
+[INFO] 07:03:38:937 [CPU]/(35960:35961): Instruccion recibida: [SET CX 20]
+[INFO] 07:03:39:439 [CPU]/(35960:35961): Instruccion recibida: [SET AX 1]
+[INFO] 07:03:39:942 [CPU]/(35960:35961): Instruccion recibida: [MOV_OUT 0 CX]
+[ERROR] 07:03:40:450 [CPU]/(35960:35998): >>>>>>< Nro_marco:-1
+[INFO] 07:03:40:451 [CPU]/(35960:35998): Elimino paquete
+[WARNING] 07:03:40:451 [CPU]/(35960:35998): Proceso_desalojado <PID:3>
+[INFO] 07:03:40:451 [CPU]/(35960:35998): Todo el contexto se elimino correctamente .....
+[INFO] 07:03:43:963 [CPU]/(35960:36000): [PID: 2][PC: 2][Registros: 4|0|4|0]
+[INFO] 07:03:44:469 [CPU]/(35960:35961): Instruccion recibida: [MOV_OUT 0 CX]
+[ERROR] 07:03:44:973 [CPU]/(35960:36000): >>>>>>< Nro_marco:1
+[INFO] 07:03:45:981 [CPU]/(35960:35961): Instruccion recibida: [MOV_OUT 16 CX]
+[ERROR] 07:03:46:485 [CPU]/(35960:36000): >>>>>>< Nro_marco:-1
+[INFO] 07:03:46:485 [CPU]/(35960:36000): Elimino paquete
+[WARNING] 07:03:46:485 [CPU]/(35960:36000): Proceso_desalojado <PID:2>
+[INFO] 07:03:46:485 [CPU]/(35960:36000): Todo el contexto se elimino correctamente .....
+[INFO] 07:03:46:976 [CPU]/(35960:36004): [PID: 4][PC: 0][Registros: 4|0|4|0]
+[INFO] 07:03:47:477 [CPU]/(35960:35961): Instruccion recibida: [SET CX 20]
+[INFO] 07:03:47:981 [CPU]/(35960:35961): Instruccion recibida: [SET AX 1]
+[INFO] 07:03:48:482 [CPU]/(35960:35961): Instruccion recibida: [MOV_OUT 0 CX]
+[ERROR] 07:03:48:991 [CPU]/(35960:36004): >>>>>>< Nro_marco:-1
+[INFO] 07:03:48:991 [CPU]/(35960:36004): Elimino paquete
+[WARNING] 07:03:48:991 [CPU]/(35960:36004): Proceso_desalojado <PID:4>
+[INFO] 07:03:48:991 [CPU]/(35960:36004): Todo el contexto se elimino correctamente .....
+[INFO] 07:03:52:488 [CPU]/(35960:36007): [PID: 1][PC: 3][Registros: 4|4|4|0]
+[INFO] 07:03:52:990 [CPU]/(35960:35961): Instruccion recibida: [MOV_OUT 16 CX]
+[ERROR] 07:03:53:501 [CPU]/(35960:36007): >>>>>>< Nro_marco:2
+[INFO] 07:03:54:508 [CPU]/(35960:35961): Instruccion recibida: [MOV_OUT 32 CX]
+[ERROR] 07:03:55:016 [CPU]/(35960:36007): >>>>>>< Nro_marco:-1
+[INFO] 07:03:55:017 [CPU]/(35960:36007): Elimino paquete
+[WARNING] 07:03:55:017 [CPU]/(35960:36007): Proceso_desalojado <PID:1>
+[INFO] 07:03:55:017 [CPU]/(35960:36007): Todo el contexto se elimino correctamente .....
+[INFO] 07:03:57:997 [CPU]/(35960:36010): [PID: 3][PC: 2][Registros: 4|0|4|0]
+[INFO] 07:03:58:499 [CPU]/(35960:35961): Instruccion recibida: [MOV_OUT 0 CX]
+[ERROR] 07:03:59:010 [CPU]/(35960:36010): >>>>>>< Nro_marco:3
+[INFO] 07:04:00:017 [CPU]/(35960:35961): Instruccion recibida: [MOV_OUT 16 CX]
+[ERROR] 07:04:00:527 [CPU]/(35960:36010): >>>>>>< Nro_marco:-1
+[INFO] 07:04:00:527 [CPU]/(35960:36010): Elimino paquete
+[WARNING] 07:04:00:527 [CPU]/(35960:36010): Proceso_desalojado <PID:3>
+[INFO] 07:04:00:527 [CPU]/(35960:36010): Todo el contexto se elimino correctamente .....
+[INFO] 07:04:03:501 [CPU]/(35960:36013): [PID: 2][PC: 3][Registros: 4|4|4|0]
+[INFO] 07:04:04:003 [CPU]/(35960:35961): Instruccion recibida: [MOV_OUT 16 CX]
+[ERROR] 07:04:04:513 [CPU]/(35960:36013): >>>>>>< Nro_marco:0
+[INFO] 07:04:05:521 [CPU]/(35960:35961): Instruccion recibida: [MOV_OUT 32 CX]
+[ERROR] 07:04:06:028 [CPU]/(35960:36013): >>>>>>< Nro_marco:-1
+[INFO] 07:04:06:028 [CPU]/(35960:36013): Elimino paquete
+[WARNING] 07:04:06:028 [CPU]/(35960:36013): Proceso_desalojado <PID:2>
+[INFO] 07:04:06:029 [CPU]/(35960:36013): Todo el contexto se elimino correctamente .....
+[INFO] 07:04:09:012 [CPU]/(35960:36015): [PID: 4][PC: 2][Registros: 4|0|4|0]
+[INFO] 07:04:09:515 [CPU]/(35960:35961): Instruccion recibida: [MOV_OUT 0 CX]
+[ERROR] 07:04:10:018 [CPU]/(35960:36015): >>>>>>< Nro_marco:1
+[INFO] 07:04:11:023 [CPU]/(35960:35961): Instruccion recibida: [MOV_OUT 16 CX]
+[ERROR] 07:04:11:524 [CPU]/(35960:36015): >>>>>>< Nro_marco:-1
+[INFO] 07:04:11:525 [CPU]/(35960:36015): Elimino paquete
+[WARNING] 07:04:11:525 [CPU]/(35960:36015): Proceso_desalojado <PID:4>
+[INFO] 07:04:11:525 [CPU]/(35960:36015): Todo el contexto se elimino correctamente .....
+[INFO] 07:04:14:541 [CPU]/(35960:36018): [PID: 1][PC: 4][Registros: 4|4|4|4]
+[INFO] 07:04:15:046 [CPU]/(35960:35961): Instruccion recibida: [MOV_OUT 32 CX]
+[ERROR] 07:04:15:550 [CPU]/(35960:36018): >>>>>>< Nro_marco:2
+[INFO] 07:04:16:554 [CPU]/(35960:35961): Instruccion recibida: [MOV_OUT 48 CX]
+[ERROR] 07:04:17:057 [CPU]/(35960:36018): >>>>>>< Nro_marco:-1
+[INFO] 07:04:17:057 [CPU]/(35960:36018): Elimino paquete
+[WARNING] 07:04:17:057 [CPU]/(35960:36018): Proceso_desalojado <PID:1>
+[INFO] 07:04:17:057 [CPU]/(35960:36018): Todo el contexto se elimino correctamente .....
+[INFO] 07:04:20:058 [CPU]/(35960:36021): [PID: 3][PC: 3][Registros: 4|4|4|0]
+[INFO] 07:04:20:567 [CPU]/(35960:35961): Instruccion recibida: [MOV_OUT 16 CX]
+[ERROR] 07:04:21:081 [CPU]/(35960:36021): >>>>>>< Nro_marco:3
+[INFO] 07:04:22:090 [CPU]/(35960:35961): Instruccion recibida: [MOV_OUT 32 CX]
+[ERROR] 07:04:22:593 [CPU]/(35960:36021): >>>>>>< Nro_marco:-1
+[INFO] 07:04:22:594 [CPU]/(35960:36021): Elimino paquete
+[WARNING] 07:04:22:594 [CPU]/(35960:36021): Proceso_desalojado <PID:3>
+[INFO] 07:04:22:594 [CPU]/(35960:36021): Todo el contexto se elimino correctamente .....
+[INFO] 07:04:25:578 [CPU]/(35960:36025): [PID: 2][PC: 4][Registros: 4|4|4|4]
+[INFO] 07:04:26:091 [CPU]/(35960:35961): Instruccion recibida: [MOV_OUT 32 CX]
+[ERROR] 07:04:26:594 [CPU]/(35960:36025): >>>>>>< Nro_marco:0
+[INFO] 07:04:27:606 [CPU]/(35960:35961): Instruccion recibida: [MOV_OUT 48 CX]
+[ERROR] 07:04:28:109 [CPU]/(35960:36025): >>>>>>< Nro_marco:-1
+[INFO] 07:04:28:109 [CPU]/(35960:36025): Elimino paquete
+[WARNING] 07:04:28:110 [CPU]/(35960:36025): Proceso_desalojado <PID:2>
+[INFO] 07:04:28:110 [CPU]/(35960:36025): Todo el contexto se elimino correctamente .....
+[INFO] 07:04:31:091 [CPU]/(35960:36029): [PID: 4][PC: 3][Registros: 4|4|4|0]
+[INFO] 07:04:31:592 [CPU]/(35960:35961): Instruccion recibida: [MOV_OUT 16 CX]
+[ERROR] 07:04:32:093 [CPU]/(35960:36029): >>>>>>< Nro_marco:1
+[INFO] 07:04:33:096 [CPU]/(35960:35961): Instruccion recibida: [MOV_OUT 32 CX]
+[ERROR] 07:04:33:599 [CPU]/(35960:36029): >>>>>>< Nro_marco:-1
+[INFO] 07:04:33:600 [CPU]/(35960:36029): Elimino paquete
+[WARNING] 07:04:33:600 [CPU]/(35960:36029): Proceso_desalojado <PID:4>
+[INFO] 07:04:33:600 [CPU]/(35960:36029): Todo el contexto se elimino correctamente .....
+[INFO] 07:04:36:602 [CPU]/(35960:36033): [PID: 1][PC: 5][Registros: 4|4|4|4]
+[INFO] 07:04:37:104 [CPU]/(35960:35961): Instruccion recibida: [MOV_OUT 48 CX]
+[ERROR] 07:04:37:610 [CPU]/(35960:36033): >>>>>>< Nro_marco:2
+[INFO] 07:04:38:616 [CPU]/(35960:35961): Instruccion recibida: [SUB CX AX]
+[INFO] 07:04:39:118 [CPU]/(35960:35961): Instruccion recibida: [JNZ CX 2]
+[INFO] 07:04:39:625 [CPU]/(35960:35961): Instruccion recibida: [EXIT]
+[INFO] 07:04:39:626 [CPU]/(35960:36033): Elimino paquete
+[WARNING] 07:04:39:626 [CPU]/(35960:36033): Proceso_desalojado <PID:1>
+[INFO] 07:04:39:626 [CPU]/(35960:36033): Todo el contexto se elimino correctamente .....
+[INFO] 07:04:42:111 [CPU]/(35960:36035): [PID: 3][PC: 4][Registros: 4|4|4|4]
+[INFO] 07:04:42:614 [CPU]/(35960:35961): Instruccion recibida: [MOV_OUT 32 CX]
+[ERROR] 07:04:43:116 [CPU]/(35960:36035): >>>>>>< Nro_marco:3
+[INFO] 07:04:44:122 [CPU]/(35960:35961): Instruccion recibida: [MOV_OUT 48 CX]
+[ERROR] 07:04:44:634 [CPU]/(35960:36035): >>>>>>< Nro_marco:-1
+[INFO] 07:04:44:634 [CPU]/(35960:36035): Elimino paquete
+[WARNING] 07:04:44:634 [CPU]/(35960:36035): Proceso_desalojado <PID:3>
+[INFO] 07:04:44:634 [CPU]/(35960:36035): Todo el contexto se elimino correctamente .....
+[INFO] 07:04:50:652 [CPU]/(35960:36038): [PID: 2][PC: 5][Registros: 4|4|4|4]
+[INFO] 07:04:51:155 [CPU]/(35960:35961): Instruccion recibida: [MOV_OUT 48 CX]
+[ERROR] 07:04:51:657 [CPU]/(35960:36038): >>>>>>< Nro_marco:2
+[INFO] 07:04:52:664 [CPU]/(35960:35961): Instruccion recibida: [SUB CX AX]
+[ERROR] 07:04:52:764 [CPU]/(35960:35962): [DESCONEXION]: KERNEL_Interrupt
+[INFO] 07:09:03:306 [CPU]/(36059:36060): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 07:09:07:143 [CPU]/(36059:36062): Cliente conectado a Kernel por dispatch
+[INFO] 07:09:07:143 [CPU]/(36059:36061): Cliente conectado a Kernel por interrupt
+[INFO] 07:09:07:145 [CPU]/(36059:36062): ::::::::::: KERNEL CONECTADO POR DISPATCH ::::::::::::
+[INFO] 07:09:07:146 [CPU]/(36059:36061): ::::::::::: KERNEL CONECTADO POR INTERRUPT ::::::::::::
+[INFO] 07:09:24:360 [CPU]/(36059:36079): [PID: 1][PC: 0][Registros: 4|0|4|0]
+[INFO] 07:09:24:872 [CPU]/(36059:36060): Instruccion recibida: [SET CX 20]
+[INFO] 07:09:25:388 [CPU]/(36059:36060): Instruccion recibida: [SET AX 1]
+[INFO] 07:09:25:895 [CPU]/(36059:36060): Instruccion recibida: [MOV_OUT 0 CX]
+[ERROR] 07:09:26:397 [CPU]/(36059:36079): >>>>>>< Nro_marco:-1
+[INFO] 07:09:26:397 [CPU]/(36059:36079): Elimino paquete
+[WARNING] 07:09:26:397 [CPU]/(36059:36079): Proceso_desalojado <PID:1>
+[INFO] 07:09:26:397 [CPU]/(36059:36079): Todo el contexto se elimino correctamente .....
+[INFO] 07:09:31:907 [CPU]/(36059:36082): [PID: 1][PC: 2][Registros: 4|0|4|0]
+[INFO] 07:09:32:408 [CPU]/(36059:36060): Instruccion recibida: [MOV_OUT 0 CX]
+[ERROR] 07:09:32:910 [CPU]/(36059:36082): >>>>>>< Nro_marco:0
+[INFO] 07:09:33:917 [CPU]/(36059:36060): Instruccion recibida: [MOV_OUT 16 CX]
+[ERROR] 07:09:34:444 [CPU]/(36059:36082): >>>>>>< Nro_marco:-1
+[INFO] 07:09:34:444 [CPU]/(36059:36082): Elimino paquete
+[WARNING] 07:09:34:444 [CPU]/(36059:36082): Proceso_desalojado <PID:1>
+[INFO] 07:09:34:444 [CPU]/(36059:36082): Todo el contexto se elimino correctamente .....
+[INFO] 07:09:39:965 [CPU]/(36059:36086): [PID: 1][PC: 3][Registros: 4|4|4|0]
+[INFO] 07:09:40:471 [CPU]/(36059:36060): Instruccion recibida: [MOV_OUT 16 CX]
+[ERROR] 07:09:40:980 [CPU]/(36059:36086): >>>>>>< Nro_marco:1
+[INFO] 07:09:41:990 [CPU]/(36059:36060): Instruccion recibida: [MOV_OUT 32 CX]
+[ERROR] 07:09:42:494 [CPU]/(36059:36086): >>>>>>< Nro_marco:-1
+[INFO] 07:09:42:494 [CPU]/(36059:36086): Elimino paquete
+[WARNING] 07:09:42:494 [CPU]/(36059:36086): Proceso_desalojado <PID:1>
+[INFO] 07:09:42:494 [CPU]/(36059:36086): Todo el contexto se elimino correctamente .....
+[INFO] 07:09:48:016 [CPU]/(36059:36089): [PID: 1][PC: 4][Registros: 4|4|4|4]
+[INFO] 07:09:48:531 [CPU]/(36059:36060): Instruccion recibida: [MOV_OUT 32 CX]
+[ERROR] 07:09:49:033 [CPU]/(36059:36089): >>>>>>< Nro_marco:2
+[INFO] 07:09:50:038 [CPU]/(36059:36060): Instruccion recibida: [MOV_OUT 48 CX]
+[ERROR] 07:09:50:541 [CPU]/(36059:36089): >>>>>>< Nro_marco:-1
+[INFO] 07:09:50:541 [CPU]/(36059:36089): Elimino paquete
+[WARNING] 07:09:50:541 [CPU]/(36059:36089): Proceso_desalojado <PID:1>
+[INFO] 07:09:50:541 [CPU]/(36059:36089): Todo el contexto se elimino correctamente .....
+[INFO] 07:09:56:082 [CPU]/(36059:36092): [PID: 1][PC: 5][Registros: 4|4|4|4]
+[INFO] 07:09:56:583 [CPU]/(36059:36060): Instruccion recibida: [MOV_OUT 48 CX]
+[ERROR] 07:09:57:091 [CPU]/(36059:36092): >>>>>>< Nro_marco:3
+[INFO] 07:09:58:096 [CPU]/(36059:36060): Instruccion recibida: [SUB CX AX]
+[INFO] 07:09:58:598 [CPU]/(36059:36060): Instruccion recibida: [JNZ CX 2]
+[INFO] 07:09:59:104 [CPU]/(36059:36060): Instruccion recibida: [EXIT]
+[INFO] 07:09:59:105 [CPU]/(36059:36092): Elimino paquete
+[WARNING] 07:09:59:105 [CPU]/(36059:36092): Proceso_desalojado <PID:1>
+[INFO] 07:09:59:105 [CPU]/(36059:36092): Todo el contexto se elimino correctamente .....
+[ERROR] 07:14:42:182 [CPU]/(36059:36061): [DESCONEXION]: KERNEL_Interrupt
+[INFO] 07:14:54:260 [CPU]/(36161:36162): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 07:15:02:243 [CPU]/(36161:36164): Cliente conectado a Kernel por dispatch
+[INFO] 07:15:02:243 [CPU]/(36161:36163): Cliente conectado a Kernel por interrupt
+[INFO] 07:15:02:246 [CPU]/(36161:36164): ::::::::::: KERNEL CONECTADO POR DISPATCH ::::::::::::
+[INFO] 07:15:02:246 [CPU]/(36161:36163): ::::::::::: KERNEL CONECTADO POR INTERRUPT ::::::::::::
+[INFO] 07:15:18:674 [CPU]/(36161:36182): [PID: 1][PC: 0][Registros: 4|0|4|0]
+[INFO] 07:15:19:178 [CPU]/(36161:36162): Instruccion recibida: [SET CX 20]
+[INFO] 07:15:19:685 [CPU]/(36161:36162): Instruccion recibida: [SET AX 1]
+[INFO] 07:15:20:187 [CPU]/(36161:36162): Instruccion recibida: [MOV_OUT 0 CX]
+[ERROR] 07:15:20:692 [CPU]/(36161:36182): >>>>>>< Nro_marco:-1
+[INFO] 07:15:20:692 [CPU]/(36161:36182): Elimino paquete
+[WARNING] 07:15:20:692 [CPU]/(36161:36182): Proceso_desalojado <PID:1>
+[INFO] 07:15:20:692 [CPU]/(36161:36182): Todo el contexto se elimino correctamente .....
+[INFO] 07:15:26:205 [CPU]/(36161:36185): [PID: 1][PC: 2][Registros: 4|0|4|0]
+[INFO] 07:15:26:707 [CPU]/(36161:36162): Instruccion recibida: [MOV_OUT 0 CX]
+[ERROR] 07:15:27:210 [CPU]/(36161:36185): >>>>>>< Nro_marco:0
+[INFO] 07:15:28:222 [CPU]/(36161:36162): Instruccion recibida: [MOV_OUT 16 CX]
+[ERROR] 07:15:28:724 [CPU]/(36161:36185): >>>>>>< Nro_marco:-1
+[INFO] 07:15:28:724 [CPU]/(36161:36185): Elimino paquete
+[WARNING] 07:15:28:724 [CPU]/(36161:36185): Proceso_desalojado <PID:1>
+[INFO] 07:15:28:724 [CPU]/(36161:36185): Todo el contexto se elimino correctamente .....
+[INFO] 07:15:34:233 [CPU]/(36161:36188): [PID: 1][PC: 3][Registros: 4|4|4|0]
+[INFO] 07:15:34:736 [CPU]/(36161:36162): Instruccion recibida: [MOV_OUT 16 CX]
+[ERROR] 07:15:35:239 [CPU]/(36161:36188): >>>>>>< Nro_marco:1
+[INFO] 07:15:36:244 [CPU]/(36161:36162): Instruccion recibida: [MOV_OUT 32 CX]
+[ERROR] 07:15:36:751 [CPU]/(36161:36188): >>>>>>< Nro_marco:-1
+[INFO] 07:15:36:751 [CPU]/(36161:36188): Elimino paquete
+[WARNING] 07:15:36:751 [CPU]/(36161:36188): Proceso_desalojado <PID:1>
+[INFO] 07:15:36:751 [CPU]/(36161:36188): Todo el contexto se elimino correctamente .....
+[INFO] 07:15:42:288 [CPU]/(36161:36191): [PID: 1][PC: 4][Registros: 4|4|4|4]
+[INFO] 07:15:42:792 [CPU]/(36161:36162): Instruccion recibida: [MOV_OUT 32 CX]
+[ERROR] 07:15:43:295 [CPU]/(36161:36191): >>>>>>< Nro_marco:2
+[INFO] 07:15:44:299 [CPU]/(36161:36162): Instruccion recibida: [MOV_OUT 48 CX]
+[ERROR] 07:15:44:805 [CPU]/(36161:36191): >>>>>>< Nro_marco:-1
+[INFO] 07:15:44:806 [CPU]/(36161:36191): Elimino paquete
+[WARNING] 07:15:44:806 [CPU]/(36161:36191): Proceso_desalojado <PID:1>
+[INFO] 07:15:44:806 [CPU]/(36161:36191): Todo el contexto se elimino correctamente .....
+[INFO] 07:15:50:314 [CPU]/(36161:36194): [PID: 1][PC: 5][Registros: 4|4|4|4]
+[INFO] 07:15:50:828 [CPU]/(36161:36162): Instruccion recibida: [MOV_OUT 48 CX]
+[ERROR] 07:15:51:332 [CPU]/(36161:36194): >>>>>>< Nro_marco:3
+[INFO] 07:15:52:336 [CPU]/(36161:36162): Instruccion recibida: [SUB CX AX]
+[INFO] 07:15:52:840 [CPU]/(36161:36162): Instruccion recibida: [JNZ CX 2]
+[INFO] 07:15:52:841 [CPU]/(36161:36194): SALI IF JNZ:8
+[INFO] 07:15:53:367 [CPU]/(36161:36162): Instruccion recibida: [EXIT]
+[INFO] 07:15:53:369 [CPU]/(36161:36194): Elimino paquete
+[WARNING] 07:15:53:369 [CPU]/(36161:36194): Proceso_desalojado <PID:1>
+[INFO] 07:15:53:369 [CPU]/(36161:36194): Todo el contexto se elimino correctamente .....
+[ERROR] 07:17:48:481 [CPU]/(36161:36163): [DESCONEXION]: KERNEL_Interrupt
+[INFO] 07:17:57:644 [CPU]/(36239:36240): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 07:18:02:057 [CPU]/(36239:36243): Cliente conectado a Kernel por dispatch
+[INFO] 07:18:02:057 [CPU]/(36239:36241): Cliente conectado a Kernel por interrupt
+[INFO] 07:18:02:060 [CPU]/(36239:36243): ::::::::::: KERNEL CONECTADO POR DISPATCH ::::::::::::
+[INFO] 07:18:02:060 [CPU]/(36239:36241): ::::::::::: KERNEL CONECTADO POR INTERRUPT ::::::::::::
+[INFO] 07:18:15:573 [CPU]/(36239:36259): [PID: 1][PC: 0][Registros: 4|0|4|0]
+[INFO] 07:18:16:077 [CPU]/(36239:36240): Instruccion recibida: [SET CX 20]
+[INFO] 07:18:16:584 [CPU]/(36239:36240): Instruccion recibida: [SET AX 1]
+[INFO] 07:18:17:087 [CPU]/(36239:36240): Instruccion recibida: [MOV_OUT 0 CX]
+[ERROR] 07:18:17:589 [CPU]/(36239:36259): >>>>>>< Nro_marco:-1
+[INFO] 07:18:17:590 [CPU]/(36239:36259): Elimino paquete
+[WARNING] 07:18:17:591 [CPU]/(36239:36259): Proceso_desalojado <PID:1>
+[INFO] 07:18:17:591 [CPU]/(36239:36259): Todo el contexto se elimino correctamente .....
+[INFO] 07:18:23:108 [CPU]/(36239:36262): [PID: 1][PC: 2][Registros: 4|0|4|0]
+[INFO] 07:18:23:610 [CPU]/(36239:36240): Instruccion recibida: [MOV_OUT 0 CX]
+[ERROR] 07:18:24:112 [CPU]/(36239:36262): >>>>>>< Nro_marco:0
+[INFO] 07:18:25:114 [CPU]/(36239:36240): Instruccion recibida: [MOV_OUT 16 CX]
+[ERROR] 07:18:25:616 [CPU]/(36239:36262): >>>>>>< Nro_marco:-1
+[INFO] 07:18:25:616 [CPU]/(36239:36262): Elimino paquete
+[WARNING] 07:18:25:616 [CPU]/(36239:36262): Proceso_desalojado <PID:1>
+[INFO] 07:18:25:616 [CPU]/(36239:36262): Todo el contexto se elimino correctamente .....
+[INFO] 07:18:31:126 [CPU]/(36239:36265): [PID: 1][PC: 3][Registros: 4|4|4|0]
+[INFO] 07:18:31:630 [CPU]/(36239:36240): Instruccion recibida: [MOV_OUT 16 CX]
+[ERROR] 07:18:32:139 [CPU]/(36239:36265): >>>>>>< Nro_marco:1
+[INFO] 07:18:33:149 [CPU]/(36239:36240): Instruccion recibida: [MOV_OUT 32 CX]
+[ERROR] 07:18:33:652 [CPU]/(36239:36265): >>>>>>< Nro_marco:-1
+[INFO] 07:18:33:652 [CPU]/(36239:36265): Elimino paquete
+[WARNING] 07:18:33:652 [CPU]/(36239:36265): Proceso_desalojado <PID:1>
+[INFO] 07:18:33:652 [CPU]/(36239:36265): Todo el contexto se elimino correctamente .....
+[INFO] 07:18:39:170 [CPU]/(36239:36268): [PID: 1][PC: 4][Registros: 4|4|4|4]
+[INFO] 07:18:39:670 [CPU]/(36239:36240): Instruccion recibida: [MOV_OUT 32 CX]
+[ERROR] 07:18:40:173 [CPU]/(36239:36268): >>>>>>< Nro_marco:2
+[INFO] 07:18:41:178 [CPU]/(36239:36240): Instruccion recibida: [MOV_OUT 48 CX]
+[ERROR] 07:18:41:682 [CPU]/(36239:36268): >>>>>>< Nro_marco:-1
+[INFO] 07:18:41:682 [CPU]/(36239:36268): Elimino paquete
+[WARNING] 07:18:41:682 [CPU]/(36239:36268): Proceso_desalojado <PID:1>
+[INFO] 07:18:41:682 [CPU]/(36239:36268): Todo el contexto se elimino correctamente .....
+[INFO] 07:18:47:196 [CPU]/(36239:36271): [PID: 1][PC: 5][Registros: 4|4|4|4]
+[INFO] 07:18:47:701 [CPU]/(36239:36240): Instruccion recibida: [MOV_OUT 48 CX]
+[ERROR] 07:18:48:204 [CPU]/(36239:36271): >>>>>>< Nro_marco:3
+[INFO] 07:18:49:208 [CPU]/(36239:36240): Instruccion recibida: [SUB CX AX]
+[INFO] 07:18:49:710 [CPU]/(36239:36240): Instruccion recibida: [JNZ CX 2]
+[INFO] 07:18:49:711 [CPU]/(36239:36271): REgistro_referido:0
+[INFO] 07:18:49:711 [CPU]/(36239:36271): SALI IF JNZ:8
+[INFO] 07:18:50:221 [CPU]/(36239:36240): Instruccion recibida: [EXIT]
+[INFO] 07:18:50:221 [CPU]/(36239:36271): Elimino paquete
+[WARNING] 07:18:50:222 [CPU]/(36239:36271): Proceso_desalojado <PID:1>
+[INFO] 07:18:50:222 [CPU]/(36239:36271): Todo el contexto se elimino correctamente .....
+[ERROR] 07:22:55:986 [CPU]/(36239:36241): [DESCONEXION]: KERNEL_Interrupt
+[INFO] 07:23:03:537 [CPU]/(36320:36321): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 07:23:09:830 [CPU]/(36320:36323): Cliente conectado a Kernel por dispatch
+[INFO] 07:23:09:830 [CPU]/(36320:36322): Cliente conectado a Kernel por interrupt
+[INFO] 07:23:09:832 [CPU]/(36320:36323): ::::::::::: KERNEL CONECTADO POR DISPATCH ::::::::::::
+[INFO] 07:23:09:833 [CPU]/(36320:36322): ::::::::::: KERNEL CONECTADO POR INTERRUPT ::::::::::::
+[INFO] 07:23:24:175 [CPU]/(36320:36340): [PID: 1][PC: 0][Registros: 4|0|4|0]
+[INFO] 07:23:24:681 [CPU]/(36320:36321): Instruccion recibida: [SET CX 20]
+[INFO] 07:23:24:682 [CPU]/(36320:36340): AAAA 1
+[INFO] 07:23:24:682 [CPU]/(36320:36340): AAAA 1: 0
+[INFO] 07:23:25:187 [CPU]/(36320:36321): Instruccion recibida: [SET AX 1]
+[INFO] 07:23:25:187 [CPU]/(36320:36340): AAAA 1
+[INFO] 07:23:25:187 [CPU]/(36320:36340): AAAA 1: 0
+[INFO] 07:23:25:696 [CPU]/(36320:36321): Instruccion recibida: [MOV_OUT 0 CX]
+[ERROR] 07:23:26:197 [CPU]/(36320:36340): >>>>>>< Nro_marco:-1
+[INFO] 07:23:26:198 [CPU]/(36320:36340): Elimino paquete
+[WARNING] 07:23:26:198 [CPU]/(36320:36340): Proceso_desalojado <PID:1>
+[INFO] 07:23:26:198 [CPU]/(36320:36340): Todo el contexto se elimino correctamente .....
+[INFO] 07:23:31:717 [CPU]/(36320:36343): [PID: 1][PC: 2][Registros: 4|0|4|0]
+[INFO] 07:23:32:219 [CPU]/(36320:36321): Instruccion recibida: [MOV_OUT 0 CX]
+[ERROR] 07:23:32:720 [CPU]/(36320:36343): >>>>>>< Nro_marco:0
+[INFO] 07:23:33:728 [CPU]/(36320:36321): Instruccion recibida: [MOV_OUT 16 CX]
+[ERROR] 07:23:34:232 [CPU]/(36320:36343): >>>>>>< Nro_marco:-1
+[INFO] 07:23:34:232 [CPU]/(36320:36343): Elimino paquete
+[WARNING] 07:23:34:232 [CPU]/(36320:36343): Proceso_desalojado <PID:1>
+[INFO] 07:23:34:232 [CPU]/(36320:36343): Todo el contexto se elimino correctamente .....
+[ERROR] 07:23:39:471 [CPU]/(36320:36322): [DESCONEXION]: KERNEL_Interrupt
+[INFO] 07:25:41:243 [CPU]/(36419:36420): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 07:25:46:602 [CPU]/(36419:36422): Cliente conectado a Kernel por dispatch
+[INFO] 07:25:46:602 [CPU]/(36419:36421): Cliente conectado a Kernel por interrupt
+[INFO] 07:25:46:604 [CPU]/(36419:36422): ::::::::::: KERNEL CONECTADO POR DISPATCH ::::::::::::
+[INFO] 07:25:46:604 [CPU]/(36419:36421): ::::::::::: KERNEL CONECTADO POR INTERRUPT ::::::::::::
+[INFO] 07:25:59:551 [CPU]/(36419:36439): [PID: 1][PC: 0][Registros: 4|0|4|0]
+[INFO] 07:26:00:053 [CPU]/(36419:36420): Instruccion recibida: [SET CX 20]
+[INFO] 07:26:00:053 [CPU]/(36419:36439): AAAA 1
+[INFO] 07:26:00:053 [CPU]/(36419:36439): AAAA 1: 0
+[INFO] 07:26:00:555 [CPU]/(36419:36420): Instruccion recibida: [SET AX 1]
+[INFO] 07:26:00:555 [CPU]/(36419:36439): AAAA 1
+[INFO] 07:26:00:555 [CPU]/(36419:36439): AAAA 1: 0
+[INFO] 07:26:01:056 [CPU]/(36419:36420): Instruccion recibida: [MOV_OUT 0 CX]
+[ERROR] 07:26:01:559 [CPU]/(36419:36439): >>>>>>< Nro_marco:-1
+[INFO] 07:26:01:559 [CPU]/(36419:36439): Elimino paquete
+[WARNING] 07:26:01:559 [CPU]/(36419:36439): Proceso_desalojado <PID:1>
+[INFO] 07:26:01:559 [CPU]/(36419:36439): Todo el contexto se elimino correctamente .....
+[INFO] 07:26:07:081 [CPU]/(36419:36442): [PID: 1][PC: 2][Registros: 4|0|4|0]
+[INFO] 07:26:07:586 [CPU]/(36419:36420): Instruccion recibida: [MOV_OUT 0 CX]
+[ERROR] 07:26:08:088 [CPU]/(36419:36442): >>>>>>< Nro_marco:0
+[INFO] 07:26:09:095 [CPU]/(36419:36420): Instruccion recibida: [MOV_OUT 16 CX]
+[ERROR] 07:26:09:596 [CPU]/(36419:36442): >>>>>>< Nro_marco:-1
+[INFO] 07:26:09:597 [CPU]/(36419:36442): Elimino paquete
+[WARNING] 07:26:09:597 [CPU]/(36419:36442): Proceso_desalojado <PID:1>
+[INFO] 07:26:09:597 [CPU]/(36419:36442): Todo el contexto se elimino correctamente .....
+[INFO] 07:26:15:111 [CPU]/(36419:36445): [PID: 1][PC: 3][Registros: 4|4|4|0]
+[INFO] 07:26:15:613 [CPU]/(36419:36420): Instruccion recibida: [MOV_OUT 16 CX]
+[ERROR] 07:26:16:119 [CPU]/(36419:36445): >>>>>>< Nro_marco:1
+[INFO] 07:26:17:138 [CPU]/(36419:36420): Instruccion recibida: [MOV_OUT 32 CX]
+[ERROR] 07:26:17:655 [CPU]/(36419:36445): >>>>>>< Nro_marco:-1
+[INFO] 07:26:17:655 [CPU]/(36419:36445): Elimino paquete
+[WARNING] 07:26:17:655 [CPU]/(36419:36445): Proceso_desalojado <PID:1>
+[INFO] 07:26:17:655 [CPU]/(36419:36445): Todo el contexto se elimino correctamente .....
+[INFO] 07:26:23:198 [CPU]/(36419:36448): [PID: 1][PC: 4][Registros: 4|4|4|4]
+[INFO] 07:26:23:699 [CPU]/(36419:36420): Instruccion recibida: [MOV_OUT 32 CX]
+[ERROR] 07:26:24:203 [CPU]/(36419:36448): >>>>>>< Nro_marco:2
+[INFO] 07:26:25:210 [CPU]/(36419:36420): Instruccion recibida: [MOV_OUT 48 CX]
+[ERROR] 07:26:25:714 [CPU]/(36419:36448): >>>>>>< Nro_marco:-1
+[INFO] 07:26:25:715 [CPU]/(36419:36448): Elimino paquete
+[WARNING] 07:26:25:715 [CPU]/(36419:36448): Proceso_desalojado <PID:1>
+[INFO] 07:26:25:715 [CPU]/(36419:36448): Todo el contexto se elimino correctamente .....
+[INFO] 07:26:31:260 [CPU]/(36419:36450): [PID: 1][PC: 5][Registros: 4|4|4|4]
+[INFO] 07:26:31:760 [CPU]/(36419:36420): Instruccion recibida: [MOV_OUT 48 CX]
+[ERROR] 07:26:32:265 [CPU]/(36419:36450): >>>>>>< Nro_marco:3
+[INFO] 07:26:33:279 [CPU]/(36419:36420): Instruccion recibida: [SUB CX AX]
+[INFO] 07:26:33:781 [CPU]/(36419:36420): Instruccion recibida: [JNZ CX 2]
+[INFO] 07:26:33:781 [CPU]/(36419:36450): REgistro_referido:0
+[INFO] 07:26:33:781 [CPU]/(36419:36450): SALI IF JNZ:8
+[INFO] 07:26:34:283 [CPU]/(36419:36420): Instruccion recibida: [EXIT]
+[INFO] 07:26:34:283 [CPU]/(36419:36450): Elimino paquete
+[WARNING] 07:26:34:283 [CPU]/(36419:36450): Proceso_desalojado <PID:1>
+[INFO] 07:26:34:283 [CPU]/(36419:36450): Todo el contexto se elimino correctamente .....
+[ERROR] 07:26:48:361 [CPU]/(36419:36421): [DESCONEXION]: KERNEL_Interrupt
+[INFO] 07:47:48:258 [CPU]/(36871:36872): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 07:47:55:617 [CPU]/(36871:36873): Cliente conectado a Kernel por interrupt
+[INFO] 07:47:55:617 [CPU]/(36871:36874): Cliente conectado a Kernel por dispatch
+[INFO] 07:47:55:620 [CPU]/(36871:36874): ::::::::::: KERNEL CONECTADO POR DISPATCH ::::::::::::
+[INFO] 07:47:55:620 [CPU]/(36871:36873): ::::::::::: KERNEL CONECTADO POR INTERRUPT ::::::::::::
+[INFO] 07:48:16:026 [CPU]/(36871:36891): [PID: 1][PC: 0][Registros: 0|0|0|0]
+[INFO] 07:48:16:530 [CPU]/(36871:36872): Instruccion recibida: [SET CX 20]
+[INFO] 07:48:16:531 [CPU]/(36871:36891): AAAA 1
+[INFO] 07:48:16:531 [CPU]/(36871:36891): AAAA 1: 0
+[INFO] 07:48:17:033 [CPU]/(36871:36872): Instruccion recibida: [SET AX 1]
+[INFO] 07:48:17:033 [CPU]/(36871:36891): AAAA 1
+[INFO] 07:48:17:033 [CPU]/(36871:36891): AAAA 1: 0
+[INFO] 07:48:17:534 [CPU]/(36871:36872): Instruccion recibida: [MOV_OUT 0 CX]
+[ERROR] 07:48:18:038 [CPU]/(36871:36891): >>>>>>< Nro_marco:-1
+[INFO] 07:48:18:038 [CPU]/(36871:36891): Elimino paquete
+[WARNING] 07:48:18:038 [CPU]/(36871:36891): Proceso_desalojado <PID:1>
+[INFO] 07:48:18:038 [CPU]/(36871:36891): Todo el contexto se elimino correctamente .....
+[INFO] 07:48:23:544 [CPU]/(36871:36894): [PID: 1][PC: 2][Registros: 0|0|0|0]
+[INFO] 07:48:24:047 [CPU]/(36871:36872): Instruccion recibida: [MOV_OUT 0 CX]
+[ERROR] 07:48:24:549 [CPU]/(36871:36894): >>>>>>< Nro_marco:0
+[INFO] 07:48:25:554 [CPU]/(36871:36872): Instruccion recibida: [MOV_OUT 16 CX]
+[ERROR] 07:48:26:057 [CPU]/(36871:36894): >>>>>>< Nro_marco:-1
+[INFO] 07:48:26:057 [CPU]/(36871:36894): Elimino paquete
+[WARNING] 07:48:26:057 [CPU]/(36871:36894): Proceso_desalojado <PID:1>
+[INFO] 07:48:26:057 [CPU]/(36871:36894): Todo el contexto se elimino correctamente .....
+[INFO] 07:48:31:564 [CPU]/(36871:36897): [PID: 1][PC: 3][Registros: 0|0|0|0]
+[INFO] 07:48:32:065 [CPU]/(36871:36872): Instruccion recibida: [MOV_OUT 16 CX]
+[ERROR] 07:48:32:567 [CPU]/(36871:36897): >>>>>>< Nro_marco:1
+[INFO] 07:48:33:575 [CPU]/(36871:36872): Instruccion recibida: [MOV_OUT 32 CX]
+[ERROR] 07:48:34:077 [CPU]/(36871:36897): >>>>>>< Nro_marco:-1
+[INFO] 07:48:34:077 [CPU]/(36871:36897): Elimino paquete
+[WARNING] 07:48:34:077 [CPU]/(36871:36897): Proceso_desalojado <PID:1>
+[INFO] 07:48:34:077 [CPU]/(36871:36897): Todo el contexto se elimino correctamente .....
+[INFO] 07:48:39:587 [CPU]/(36871:36900): [PID: 1][PC: 4][Registros: 0|0|0|0]
+[INFO] 07:48:40:089 [CPU]/(36871:36872): Instruccion recibida: [MOV_OUT 32 CX]
+[ERROR] 07:48:40:596 [CPU]/(36871:36900): >>>>>>< Nro_marco:2
+[INFO] 07:48:41:601 [CPU]/(36871:36872): Instruccion recibida: [MOV_OUT 48 CX]
+[ERROR] 07:48:42:104 [CPU]/(36871:36900): >>>>>>< Nro_marco:-1
+[INFO] 07:48:42:104 [CPU]/(36871:36900): Elimino paquete
+[WARNING] 07:48:42:104 [CPU]/(36871:36900): Proceso_desalojado <PID:1>
+[INFO] 07:48:42:104 [CPU]/(36871:36900): Todo el contexto se elimino correctamente .....
+[INFO] 07:48:47:620 [CPU]/(36871:36903): [PID: 1][PC: 5][Registros: 0|0|0|0]
+[INFO] 07:48:48:121 [CPU]/(36871:36872): Instruccion recibida: [MOV_OUT 48 CX]
+[ERROR] 07:48:48:628 [CPU]/(36871:36903): >>>>>>< Nro_marco:3
+[INFO] 07:48:49:633 [CPU]/(36871:36872): Instruccion recibida: [SUB CX AX]
+[INFO] 07:48:50:134 [CPU]/(36871:36872): Instruccion recibida: [JNZ CX 2]
+[INFO] 07:48:50:134 [CPU]/(36871:36903): REgistro_referido:0
+[INFO] 07:48:50:134 [CPU]/(36871:36903): SALI IF JNZ:8
+[INFO] 07:48:50:635 [CPU]/(36871:36872): Instruccion recibida: [EXIT]
+[INFO] 07:48:50:636 [CPU]/(36871:36903): Elimino paquete
+[WARNING] 07:48:50:636 [CPU]/(36871:36903): Proceso_desalojado <PID:1>
+[INFO] 07:48:50:636 [CPU]/(36871:36903): Todo el contexto se elimino correctamente .....
+[ERROR] 07:48:52:940 [CPU]/(36871:36874): [DESCONEXION]: KERNEL_Dispatch
+[ERROR] 07:48:52:940 [CPU]/(36871:36873): [DESCONEXION]: KERNEL_Interrupt
+[INFO] 07:50:29:657 [CPU]/(36935:36936): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 07:50:37:185 [CPU]/(36935:36938): Cliente conectado a Kernel por dispatch
+[INFO] 07:50:37:185 [CPU]/(36935:36937): Cliente conectado a Kernel por interrupt
+[INFO] 07:50:37:190 [CPU]/(36935:36938): ::::::::::: KERNEL CONECTADO POR DISPATCH ::::::::::::
+[INFO] 07:50:37:191 [CPU]/(36935:36937): ::::::::::: KERNEL CONECTADO POR INTERRUPT ::::::::::::
+[INFO] 07:50:52:053 [CPU]/(36935:36955): [PID: 1][PC: 0][Registros: 0|0|0|0]
+[INFO] 07:50:52:556 [CPU]/(36935:36936): Instruccion recibida: [SET CX 20]
+[INFO] 07:50:52:556 [CPU]/(36935:36955): AAAA 1
+[INFO] 07:50:52:556 [CPU]/(36935:36955): AAAA 1: 20
+[INFO] 07:50:53:058 [CPU]/(36935:36936): Instruccion recibida: [SET AX 1]
+[INFO] 07:50:53:059 [CPU]/(36935:36955): AAAA 1
+[INFO] 07:50:53:059 [CPU]/(36935:36955): AAAA 1: 1
+[INFO] 07:50:53:563 [CPU]/(36935:36936): Instruccion recibida: [MOV_OUT 0 CX]
+[ERROR] 07:50:54:065 [CPU]/(36935:36955): >>>>>>< Nro_marco:-1
+[INFO] 07:50:54:066 [CPU]/(36935:36955): Elimino paquete
+[WARNING] 07:50:54:066 [CPU]/(36935:36955): Proceso_desalojado <PID:1>
+[INFO] 07:50:54:066 [CPU]/(36935:36955): Todo el contexto se elimino correctamente .....
+[INFO] 07:50:59:587 [CPU]/(36935:36957): [PID: 1][PC: 2][Registros: 1|0|20|0]
+[INFO] 07:51:00:088 [CPU]/(36935:36936): Instruccion recibida: [MOV_OUT 0 CX]
+[ERROR] 07:51:00:591 [CPU]/(36935:36957): >>>>>>< Nro_marco:0
+[INFO] 07:51:01:595 [CPU]/(36935:36936): Instruccion recibida: [MOV_OUT 16 CX]
+[ERROR] 07:51:02:104 [CPU]/(36935:36957): >>>>>>< Nro_marco:-1
+[INFO] 07:51:02:105 [CPU]/(36935:36957): Elimino paquete
+[WARNING] 07:51:02:105 [CPU]/(36935:36957): Proceso_desalojado <PID:1>
+[INFO] 07:51:02:105 [CPU]/(36935:36957): Todo el contexto se elimino correctamente .....
+[INFO] 07:51:07:618 [CPU]/(36935:36960): [PID: 1][PC: 3][Registros: 1|0|20|0]
+[INFO] 07:51:08:121 [CPU]/(36935:36936): Instruccion recibida: [MOV_OUT 16 CX]
+[ERROR] 07:51:08:624 [CPU]/(36935:36960): >>>>>>< Nro_marco:1
+[INFO] 07:51:09:627 [CPU]/(36935:36936): Instruccion recibida: [MOV_OUT 32 CX]
+[ERROR] 07:51:10:131 [CPU]/(36935:36960): >>>>>>< Nro_marco:-1
+[INFO] 07:51:10:132 [CPU]/(36935:36960): Elimino paquete
+[WARNING] 07:51:10:132 [CPU]/(36935:36960): Proceso_desalojado <PID:1>
+[INFO] 07:51:10:132 [CPU]/(36935:36960): Todo el contexto se elimino correctamente .....
+[INFO] 07:51:15:653 [CPU]/(36935:36964): [PID: 1][PC: 4][Registros: 1|0|20|0]
+[INFO] 07:51:16:156 [CPU]/(36935:36936): Instruccion recibida: [MOV_OUT 32 CX]
+[ERROR] 07:51:16:694 [CPU]/(36935:36964): >>>>>>< Nro_marco:2
+[INFO] 07:51:17:702 [CPU]/(36935:36936): Instruccion recibida: [MOV_OUT 48 CX]
+[ERROR] 07:51:18:205 [CPU]/(36935:36964): >>>>>>< Nro_marco:-1
+[INFO] 07:51:18:205 [CPU]/(36935:36964): Elimino paquete
+[WARNING] 07:51:18:205 [CPU]/(36935:36964): Proceso_desalojado <PID:1>
+[INFO] 07:51:18:205 [CPU]/(36935:36964): Todo el contexto se elimino correctamente .....
+[INFO] 07:51:23:729 [CPU]/(36935:36967): [PID: 1][PC: 5][Registros: 1|0|20|0]
+[INFO] 07:51:24:230 [CPU]/(36935:36936): Instruccion recibida: [MOV_OUT 48 CX]
+[ERROR] 07:51:24:732 [CPU]/(36935:36967): >>>>>>< Nro_marco:3
+[INFO] 07:51:25:739 [CPU]/(36935:36936): Instruccion recibida: [SUB CX AX]
+[INFO] 07:51:26:241 [CPU]/(36935:36936): Instruccion recibida: [JNZ CX 2]
+[INFO] 07:51:26:241 [CPU]/(36935:36967): REgistro_referido:19
+[INFO] 07:51:26:241 [CPU]/(36935:36967): Entre IF JNZ:
+[INFO] 07:51:26:241 [CPU]/(36935:36967): SALI IF JNZ:2
+[INFO] 07:51:26:743 [CPU]/(36935:36936): Instruccion recibida: [MOV_OUT 0 CX]
+[ERROR] 07:51:27:246 [CPU]/(36935:36967): >>>>>>< Nro_marco:0
+[INFO] 07:51:28:250 [CPU]/(36935:36936): Instruccion recibida: [MOV_OUT 16 CX]
+[ERROR] 07:51:28:753 [CPU]/(36935:36967): >>>>>>< Nro_marco:1
+[INFO] 07:51:29:758 [CPU]/(36935:36936): Instruccion recibida: [MOV_OUT 32 CX]
+[ERROR] 07:51:30:260 [CPU]/(36935:36967): >>>>>>< Nro_marco:2
+[INFO] 07:51:31:273 [CPU]/(36935:36936): Instruccion recibida: [MOV_OUT 48 CX]
+[ERROR] 07:51:31:777 [CPU]/(36935:36967): >>>>>>< Nro_marco:3
+[INFO] 07:51:32:782 [CPU]/(36935:36936): Instruccion recibida: [SUB CX AX]
+[INFO] 07:51:33:287 [CPU]/(36935:36936): Instruccion recibida: [JNZ CX 2]
+[INFO] 07:51:33:287 [CPU]/(36935:36967): REgistro_referido:18
+[INFO] 07:51:33:287 [CPU]/(36935:36967): Entre IF JNZ:
+[INFO] 07:51:33:287 [CPU]/(36935:36967): SALI IF JNZ:2
+[INFO] 07:51:33:788 [CPU]/(36935:36936): Instruccion recibida: [MOV_OUT 0 CX]
+[ERROR] 07:51:34:292 [CPU]/(36935:36967): >>>>>>< Nro_marco:0
+[INFO] 07:51:35:297 [CPU]/(36935:36936): Instruccion recibida: [MOV_OUT 16 CX]
+[ERROR] 07:51:35:804 [CPU]/(36935:36967): >>>>>>< Nro_marco:1
+[INFO] 07:51:36:808 [CPU]/(36935:36936): Instruccion recibida: [MOV_OUT 32 CX]
+[ERROR] 07:51:37:311 [CPU]/(36935:36967): >>>>>>< Nro_marco:2
+[INFO] 07:51:38:316 [CPU]/(36935:36936): Instruccion recibida: [MOV_OUT 48 CX]
+[ERROR] 07:51:38:825 [CPU]/(36935:36967): >>>>>>< Nro_marco:3
+[INFO] 07:51:39:831 [CPU]/(36935:36936): Instruccion recibida: [SUB CX AX]
+[INFO] 07:51:40:336 [CPU]/(36935:36936): Instruccion recibida: [JNZ CX 2]
+[INFO] 07:51:40:336 [CPU]/(36935:36967): REgistro_referido:17
+[INFO] 07:51:40:336 [CPU]/(36935:36967): Entre IF JNZ:
+[INFO] 07:51:40:336 [CPU]/(36935:36967): SALI IF JNZ:2
+[INFO] 07:51:40:838 [CPU]/(36935:36936): Instruccion recibida: [MOV_OUT 0 CX]
+[ERROR] 07:51:41:345 [CPU]/(36935:36967): >>>>>>< Nro_marco:0
+[INFO] 07:51:42:356 [CPU]/(36935:36936): Instruccion recibida: [MOV_OUT 16 CX]
+[ERROR] 07:51:42:865 [CPU]/(36935:36967): >>>>>>< Nro_marco:1
+[INFO] 07:51:43:870 [CPU]/(36935:36936): Instruccion recibida: [MOV_OUT 32 CX]
+[ERROR] 07:51:44:375 [CPU]/(36935:36967): >>>>>>< Nro_marco:2
+[INFO] 07:51:45:380 [CPU]/(36935:36936): Instruccion recibida: [MOV_OUT 48 CX]
+[ERROR] 07:51:45:892 [CPU]/(36935:36967): >>>>>>< Nro_marco:3
+[INFO] 07:51:46:899 [CPU]/(36935:36936): Instruccion recibida: [SUB CX AX]
+[INFO] 07:51:47:402 [CPU]/(36935:36936): Instruccion recibida: [JNZ CX 2]
+[INFO] 07:51:47:402 [CPU]/(36935:36967): REgistro_referido:16
+[INFO] 07:51:47:402 [CPU]/(36935:36967): Entre IF JNZ:
+[INFO] 07:51:47:403 [CPU]/(36935:36967): SALI IF JNZ:2
+[INFO] 07:51:47:913 [CPU]/(36935:36936): Instruccion recibida: [MOV_OUT 0 CX]
+[ERROR] 07:51:48:416 [CPU]/(36935:36967): >>>>>>< Nro_marco:0
+[INFO] 07:51:49:421 [CPU]/(36935:36936): Instruccion recibida: [MOV_OUT 16 CX]
+[ERROR] 07:51:49:926 [CPU]/(36935:36967): >>>>>>< Nro_marco:1
+[INFO] 07:51:50:929 [CPU]/(36935:36936): Instruccion recibida: [MOV_OUT 32 CX]
+[ERROR] 07:51:51:493 [CPU]/(36935:36967): >>>>>>< Nro_marco:2
+[INFO] 07:51:52:505 [CPU]/(36935:36936): Instruccion recibida: [MOV_OUT 48 CX]
+[ERROR] 07:51:53:007 [CPU]/(36935:36967): >>>>>>< Nro_marco:3
+[INFO] 07:51:54:013 [CPU]/(36935:36936): Instruccion recibida: [SUB CX AX]
+[INFO] 07:51:54:519 [CPU]/(36935:36936): Instruccion recibida: [JNZ CX 2]
+[INFO] 07:51:54:519 [CPU]/(36935:36967): REgistro_referido:15
+[INFO] 07:51:54:519 [CPU]/(36935:36967): Entre IF JNZ:
+[INFO] 07:51:54:519 [CPU]/(36935:36967): SALI IF JNZ:2
+[INFO] 07:51:55:021 [CPU]/(36935:36936): Instruccion recibida: [MOV_OUT 0 CX]
+[ERROR] 07:51:55:523 [CPU]/(36935:36967): >>>>>>< Nro_marco:0
+[INFO] 07:51:56:527 [CPU]/(36935:36936): Instruccion recibida: [MOV_OUT 16 CX]
+[ERROR] 07:51:57:029 [CPU]/(36935:36967): >>>>>>< Nro_marco:1
+[INFO] 07:51:58:036 [CPU]/(36935:36936): Instruccion recibida: [MOV_OUT 32 CX]
+[ERROR] 07:51:58:537 [CPU]/(36935:36967): >>>>>>< Nro_marco:2
+[INFO] 07:51:59:541 [CPU]/(36935:36936): Instruccion recibida: [MOV_OUT 48 CX]
+[ERROR] 07:52:00:044 [CPU]/(36935:36967): >>>>>>< Nro_marco:3
+[INFO] 07:52:01:049 [CPU]/(36935:36936): Instruccion recibida: [SUB CX AX]
+[INFO] 07:52:01:552 [CPU]/(36935:36936): Instruccion recibida: [JNZ CX 2]
+[INFO] 07:52:01:552 [CPU]/(36935:36967): REgistro_referido:14
+[INFO] 07:52:01:552 [CPU]/(36935:36967): Entre IF JNZ:
+[INFO] 07:52:01:552 [CPU]/(36935:36967): SALI IF JNZ:2
+[INFO] 07:52:02:057 [CPU]/(36935:36936): Instruccion recibida: [MOV_OUT 0 CX]
+[ERROR] 07:52:02:564 [CPU]/(36935:36967): >>>>>>< Nro_marco:0
+[INFO] 07:52:03:574 [CPU]/(36935:36936): Instruccion recibida: [MOV_OUT 16 CX]
+[ERROR] 07:52:04:077 [CPU]/(36935:36967): >>>>>>< Nro_marco:1
+[INFO] 07:52:05:083 [CPU]/(36935:36936): Instruccion recibida: [MOV_OUT 32 CX]
+[ERROR] 07:52:05:587 [CPU]/(36935:36967): >>>>>>< Nro_marco:2
+[INFO] 07:52:06:591 [CPU]/(36935:36936): Instruccion recibida: [MOV_OUT 48 CX]
+[ERROR] 07:52:07:094 [CPU]/(36935:36967): >>>>>>< Nro_marco:3
+[INFO] 07:52:08:103 [CPU]/(36935:36936): Instruccion recibida: [SUB CX AX]
+[INFO] 07:52:08:611 [CPU]/(36935:36936): Instruccion recibida: [JNZ CX 2]
+[INFO] 07:52:08:612 [CPU]/(36935:36967): REgistro_referido:13
+[INFO] 07:52:08:612 [CPU]/(36935:36967): Entre IF JNZ:
+[INFO] 07:52:08:612 [CPU]/(36935:36967): SALI IF JNZ:2
+[INFO] 07:52:09:119 [CPU]/(36935:36936): Instruccion recibida: [MOV_OUT 0 CX]
+[ERROR] 07:52:09:622 [CPU]/(36935:36967): >>>>>>< Nro_marco:0
+[INFO] 07:52:10:624 [CPU]/(36935:36936): Instruccion recibida: [MOV_OUT 16 CX]
+[ERROR] 07:52:11:137 [CPU]/(36935:36967): >>>>>>< Nro_marco:1
+[INFO] 07:52:12:148 [CPU]/(36935:36936): Instruccion recibida: [MOV_OUT 32 CX]
+[ERROR] 07:52:12:651 [CPU]/(36935:36967): >>>>>>< Nro_marco:2
+[INFO] 07:52:13:656 [CPU]/(36935:36936): Instruccion recibida: [MOV_OUT 48 CX]
+[ERROR] 07:52:14:160 [CPU]/(36935:36967): >>>>>>< Nro_marco:3
+[INFO] 07:52:15:166 [CPU]/(36935:36936): Instruccion recibida: [SUB CX AX]
+[INFO] 07:52:15:674 [CPU]/(36935:36936): Instruccion recibida: [JNZ CX 2]
+[INFO] 07:52:15:674 [CPU]/(36935:36967): REgistro_referido:12
+[INFO] 07:52:15:674 [CPU]/(36935:36967): Entre IF JNZ:
+[INFO] 07:52:15:674 [CPU]/(36935:36967): SALI IF JNZ:2
+[INFO] 07:52:16:175 [CPU]/(36935:36936): Instruccion recibida: [MOV_OUT 0 CX]
+[ERROR] 07:52:16:677 [CPU]/(36935:36967): >>>>>>< Nro_marco:0
+[INFO] 07:52:17:689 [CPU]/(36935:36936): Instruccion recibida: [MOV_OUT 16 CX]
+[ERROR] 07:52:18:196 [CPU]/(36935:36967): >>>>>>< Nro_marco:1
+[INFO] 07:52:19:201 [CPU]/(36935:36936): Instruccion recibida: [MOV_OUT 32 CX]
+[ERROR] 07:52:19:703 [CPU]/(36935:36967): >>>>>>< Nro_marco:2
+[INFO] 07:52:20:713 [CPU]/(36935:36936): Instruccion recibida: [MOV_OUT 48 CX]
+[ERROR] 07:52:21:215 [CPU]/(36935:36967): >>>>>>< Nro_marco:3
+[INFO] 07:52:22:233 [CPU]/(36935:36936): Instruccion recibida: [SUB CX AX]
+[INFO] 07:52:22:740 [CPU]/(36935:36936): Instruccion recibida: [JNZ CX 2]
+[INFO] 07:52:22:741 [CPU]/(36935:36967): REgistro_referido:11
+[INFO] 07:52:22:741 [CPU]/(36935:36967): Entre IF JNZ:
+[INFO] 07:52:22:741 [CPU]/(36935:36967): SALI IF JNZ:2
+[INFO] 07:52:23:244 [CPU]/(36935:36936): Instruccion recibida: [MOV_OUT 0 CX]
+[ERROR] 07:52:23:757 [CPU]/(36935:36967): >>>>>>< Nro_marco:0
+[INFO] 07:52:24:763 [CPU]/(36935:36936): Instruccion recibida: [MOV_OUT 16 CX]
+[ERROR] 07:52:25:266 [CPU]/(36935:36967): >>>>>>< Nro_marco:1
+[INFO] 07:52:26:269 [CPU]/(36935:36936): Instruccion recibida: [MOV_OUT 32 CX]
+[ERROR] 07:52:26:771 [CPU]/(36935:36967): >>>>>>< Nro_marco:2
+[INFO] 07:52:27:776 [CPU]/(36935:36936): Instruccion recibida: [MOV_OUT 48 CX]
+[ERROR] 07:52:28:279 [CPU]/(36935:36967): >>>>>>< Nro_marco:3
+[INFO] 07:52:29:283 [CPU]/(36935:36936): Instruccion recibida: [SUB CX AX]
+[INFO] 07:52:29:786 [CPU]/(36935:36936): Instruccion recibida: [JNZ CX 2]
+[INFO] 07:52:29:787 [CPU]/(36935:36967): REgistro_referido:10
+[INFO] 07:52:29:787 [CPU]/(36935:36967): Entre IF JNZ:
+[INFO] 07:52:29:787 [CPU]/(36935:36967): SALI IF JNZ:2
+[INFO] 07:52:30:292 [CPU]/(36935:36936): Instruccion recibida: [MOV_OUT 0 CX]
+[ERROR] 07:52:30:799 [CPU]/(36935:36967): >>>>>>< Nro_marco:0
+[INFO] 07:52:31:820 [CPU]/(36935:36936): Instruccion recibida: [MOV_OUT 16 CX]
+[ERROR] 07:52:32:323 [CPU]/(36935:36967): >>>>>>< Nro_marco:1
+[INFO] 07:52:33:332 [CPU]/(36935:36936): Instruccion recibida: [MOV_OUT 32 CX]
+[ERROR] 07:52:33:840 [CPU]/(36935:36967): >>>>>>< Nro_marco:2
+[INFO] 07:52:34:852 [CPU]/(36935:36936): Instruccion recibida: [MOV_OUT 48 CX]
+[ERROR] 07:52:35:356 [CPU]/(36935:36967): >>>>>>< Nro_marco:3
+[INFO] 07:52:36:367 [CPU]/(36935:36936): Instruccion recibida: [SUB CX AX]
+[INFO] 07:52:36:872 [CPU]/(36935:36936): Instruccion recibida: [JNZ CX 2]
+[INFO] 07:52:36:872 [CPU]/(36935:36967): REgistro_referido:9
+[INFO] 07:52:36:872 [CPU]/(36935:36967): Entre IF JNZ:
+[INFO] 07:52:36:872 [CPU]/(36935:36967): SALI IF JNZ:2
+[INFO] 07:52:37:374 [CPU]/(36935:36936): Instruccion recibida: [MOV_OUT 0 CX]
+[ERROR] 07:52:37:879 [CPU]/(36935:36967): >>>>>>< Nro_marco:0
+[INFO] 07:52:38:892 [CPU]/(36935:36936): Instruccion recibida: [MOV_OUT 16 CX]
+[ERROR] 07:52:39:402 [CPU]/(36935:36967): >>>>>>< Nro_marco:1
+[INFO] 07:52:40:414 [CPU]/(36935:36936): Instruccion recibida: [MOV_OUT 32 CX]
+[ERROR] 07:52:40:921 [CPU]/(36935:36967): >>>>>>< Nro_marco:2
+[INFO] 07:52:41:939 [CPU]/(36935:36936): Instruccion recibida: [MOV_OUT 48 CX]
+[ERROR] 07:52:42:442 [CPU]/(36935:36967): >>>>>>< Nro_marco:3
+[INFO] 07:52:43:452 [CPU]/(36935:36936): Instruccion recibida: [SUB CX AX]
+[INFO] 07:52:43:953 [CPU]/(36935:36936): Instruccion recibida: [JNZ CX 2]
+[INFO] 07:52:43:954 [CPU]/(36935:36967): REgistro_referido:8
+[INFO] 07:52:43:954 [CPU]/(36935:36967): Entre IF JNZ:
+[INFO] 07:52:43:954 [CPU]/(36935:36967): SALI IF JNZ:2
+[INFO] 07:52:44:455 [CPU]/(36935:36936): Instruccion recibida: [MOV_OUT 0 CX]
+[ERROR] 07:52:44:959 [CPU]/(36935:36967): >>>>>>< Nro_marco:0
+[INFO] 07:52:45:964 [CPU]/(36935:36936): Instruccion recibida: [MOV_OUT 16 CX]
+[ERROR] 07:52:46:470 [CPU]/(36935:36967): >>>>>>< Nro_marco:1
+[INFO] 07:52:47:474 [CPU]/(36935:36936): Instruccion recibida: [MOV_OUT 32 CX]
+[ERROR] 07:52:47:975 [CPU]/(36935:36967): >>>>>>< Nro_marco:2
+[INFO] 07:52:48:993 [CPU]/(36935:36936): Instruccion recibida: [MOV_OUT 48 CX]
+[ERROR] 07:52:49:504 [CPU]/(36935:36967): >>>>>>< Nro_marco:3
+[INFO] 07:52:50:507 [CPU]/(36935:36936): Instruccion recibida: [SUB CX AX]
+[INFO] 07:52:51:010 [CPU]/(36935:36936): Instruccion recibida: [JNZ CX 2]
+[INFO] 07:52:51:010 [CPU]/(36935:36967): REgistro_referido:7
+[INFO] 07:52:51:010 [CPU]/(36935:36967): Entre IF JNZ:
+[INFO] 07:52:51:010 [CPU]/(36935:36967): SALI IF JNZ:2
+[INFO] 07:52:51:512 [CPU]/(36935:36936): Instruccion recibida: [MOV_OUT 0 CX]
+[ERROR] 07:52:52:021 [CPU]/(36935:36967): >>>>>>< Nro_marco:0
+[INFO] 07:52:53:025 [CPU]/(36935:36936): Instruccion recibida: [MOV_OUT 16 CX]
+[ERROR] 07:52:53:529 [CPU]/(36935:36967): >>>>>>< Nro_marco:1
+[INFO] 07:52:54:549 [CPU]/(36935:36936): Instruccion recibida: [MOV_OUT 32 CX]
+[ERROR] 07:52:55:053 [CPU]/(36935:36967): >>>>>>< Nro_marco:2
+[INFO] 07:52:56:060 [CPU]/(36935:36936): Instruccion recibida: [MOV_OUT 48 CX]
+[ERROR] 07:52:56:562 [CPU]/(36935:36967): >>>>>>< Nro_marco:3
+[INFO] 07:52:57:566 [CPU]/(36935:36936): Instruccion recibida: [SUB CX AX]
+[INFO] 07:52:58:074 [CPU]/(36935:36936): Instruccion recibida: [JNZ CX 2]
+[INFO] 07:52:58:074 [CPU]/(36935:36967): REgistro_referido:6
+[INFO] 07:52:58:074 [CPU]/(36935:36967): Entre IF JNZ:
+[INFO] 07:52:58:074 [CPU]/(36935:36967): SALI IF JNZ:2
+[INFO] 07:52:58:576 [CPU]/(36935:36936): Instruccion recibida: [MOV_OUT 0 CX]
+[ERROR] 07:52:59:078 [CPU]/(36935:36967): >>>>>>< Nro_marco:0
+[INFO] 07:53:00:088 [CPU]/(36935:36936): Instruccion recibida: [MOV_OUT 16 CX]
+[ERROR] 07:53:00:590 [CPU]/(36935:36967): >>>>>>< Nro_marco:1
+[INFO] 07:53:01:607 [CPU]/(36935:36936): Instruccion recibida: [MOV_OUT 32 CX]
+[ERROR] 07:53:02:119 [CPU]/(36935:36967): >>>>>>< Nro_marco:2
+[INFO] 07:53:03:134 [CPU]/(36935:36936): Instruccion recibida: [MOV_OUT 48 CX]
+[ERROR] 07:53:03:640 [CPU]/(36935:36967): >>>>>>< Nro_marco:3
+[INFO] 07:53:04:646 [CPU]/(36935:36936): Instruccion recibida: [SUB CX AX]
+[INFO] 07:53:05:149 [CPU]/(36935:36936): Instruccion recibida: [JNZ CX 2]
+[INFO] 07:53:05:150 [CPU]/(36935:36967): REgistro_referido:5
+[INFO] 07:53:05:150 [CPU]/(36935:36967): Entre IF JNZ:
+[INFO] 07:53:05:150 [CPU]/(36935:36967): SALI IF JNZ:2
+[INFO] 07:53:05:652 [CPU]/(36935:36936): Instruccion recibida: [MOV_OUT 0 CX]
+[ERROR] 07:53:06:168 [CPU]/(36935:36967): >>>>>>< Nro_marco:0
+[INFO] 07:53:07:172 [CPU]/(36935:36936): Instruccion recibida: [MOV_OUT 16 CX]
+[ERROR] 07:53:07:674 [CPU]/(36935:36967): >>>>>>< Nro_marco:1
+[INFO] 07:53:08:679 [CPU]/(36935:36936): Instruccion recibida: [MOV_OUT 32 CX]
+[ERROR] 07:53:09:191 [CPU]/(36935:36967): >>>>>>< Nro_marco:2
+[INFO] 07:53:10:203 [CPU]/(36935:36936): Instruccion recibida: [MOV_OUT 48 CX]
+[ERROR] 07:53:10:710 [CPU]/(36935:36967): >>>>>>< Nro_marco:3
+[INFO] 07:53:11:717 [CPU]/(36935:36936): Instruccion recibida: [SUB CX AX]
+[INFO] 07:53:12:220 [CPU]/(36935:36936): Instruccion recibida: [JNZ CX 2]
+[INFO] 07:53:12:220 [CPU]/(36935:36967): REgistro_referido:4
+[INFO] 07:53:12:220 [CPU]/(36935:36967): Entre IF JNZ:
+[INFO] 07:53:12:220 [CPU]/(36935:36967): SALI IF JNZ:2
+[INFO] 07:53:12:724 [CPU]/(36935:36936): Instruccion recibida: [MOV_OUT 0 CX]
+[ERROR] 07:53:13:228 [CPU]/(36935:36967): >>>>>>< Nro_marco:0
+[INFO] 07:53:14:237 [CPU]/(36935:36936): Instruccion recibida: [MOV_OUT 16 CX]
+[ERROR] 07:53:14:739 [CPU]/(36935:36967): >>>>>>< Nro_marco:1
+[INFO] 07:53:15:742 [CPU]/(36935:36936): Instruccion recibida: [MOV_OUT 32 CX]
+[ERROR] 07:53:16:245 [CPU]/(36935:36967): >>>>>>< Nro_marco:2
+[INFO] 07:53:17:256 [CPU]/(36935:36936): Instruccion recibida: [MOV_OUT 48 CX]
+[ERROR] 07:53:17:760 [CPU]/(36935:36967): >>>>>>< Nro_marco:3
+[INFO] 07:53:18:772 [CPU]/(36935:36936): Instruccion recibida: [SUB CX AX]
+[INFO] 07:53:19:275 [CPU]/(36935:36936): Instruccion recibida: [JNZ CX 2]
+[INFO] 07:53:19:276 [CPU]/(36935:36967): REgistro_referido:3
+[INFO] 07:53:19:276 [CPU]/(36935:36967): Entre IF JNZ:
+[INFO] 07:53:19:276 [CPU]/(36935:36967): SALI IF JNZ:2
+[INFO] 07:53:19:779 [CPU]/(36935:36936): Instruccion recibida: [MOV_OUT 0 CX]
+[ERROR] 07:53:20:281 [CPU]/(36935:36967): >>>>>>< Nro_marco:0
+[INFO] 07:53:21:285 [CPU]/(36935:36936): Instruccion recibida: [MOV_OUT 16 CX]
+[ERROR] 07:53:21:788 [CPU]/(36935:36967): >>>>>>< Nro_marco:1
+[INFO] 07:53:22:794 [CPU]/(36935:36936): Instruccion recibida: [MOV_OUT 32 CX]
+[ERROR] 07:53:23:299 [CPU]/(36935:36967): >>>>>>< Nro_marco:2
+[INFO] 07:53:24:310 [CPU]/(36935:36936): Instruccion recibida: [MOV_OUT 48 CX]
+[ERROR] 07:53:24:812 [CPU]/(36935:36967): >>>>>>< Nro_marco:3
+[INFO] 07:53:25:823 [CPU]/(36935:36936): Instruccion recibida: [SUB CX AX]
+[INFO] 07:53:26:324 [CPU]/(36935:36936): Instruccion recibida: [JNZ CX 2]
+[INFO] 07:53:26:325 [CPU]/(36935:36967): REgistro_referido:2
+[INFO] 07:53:26:325 [CPU]/(36935:36967): Entre IF JNZ:
+[INFO] 07:53:26:325 [CPU]/(36935:36967): SALI IF JNZ:2
+[INFO] 07:53:26:829 [CPU]/(36935:36936): Instruccion recibida: [MOV_OUT 0 CX]
+[ERROR] 07:53:27:340 [CPU]/(36935:36967): >>>>>>< Nro_marco:0
+[INFO] 07:53:28:344 [CPU]/(36935:36936): Instruccion recibida: [MOV_OUT 16 CX]
+[ERROR] 07:53:28:851 [CPU]/(36935:36967): >>>>>>< Nro_marco:1
+[INFO] 07:53:29:864 [CPU]/(36935:36936): Instruccion recibida: [MOV_OUT 32 CX]
+[ERROR] 07:53:30:368 [CPU]/(36935:36967): >>>>>>< Nro_marco:2
+[INFO] 07:53:31:381 [CPU]/(36935:36936): Instruccion recibida: [MOV_OUT 48 CX]
+[ERROR] 07:53:31:885 [CPU]/(36935:36967): >>>>>>< Nro_marco:3
+[INFO] 07:53:32:890 [CPU]/(36935:36936): Instruccion recibida: [SUB CX AX]
+[INFO] 07:53:33:392 [CPU]/(36935:36936): Instruccion recibida: [JNZ CX 2]
+[INFO] 07:53:33:393 [CPU]/(36935:36967): REgistro_referido:1
+[INFO] 07:53:33:393 [CPU]/(36935:36967): Entre IF JNZ:
+[INFO] 07:53:33:393 [CPU]/(36935:36967): SALI IF JNZ:2
+[INFO] 07:53:33:900 [CPU]/(36935:36936): Instruccion recibida: [MOV_OUT 0 CX]
+[ERROR] 07:53:34:403 [CPU]/(36935:36967): >>>>>>< Nro_marco:0
+[INFO] 07:53:35:412 [CPU]/(36935:36936): Instruccion recibida: [MOV_OUT 16 CX]
+[ERROR] 07:53:35:914 [CPU]/(36935:36967): >>>>>>< Nro_marco:1
+[INFO] 07:53:36:923 [CPU]/(36935:36936): Instruccion recibida: [MOV_OUT 32 CX]
+[ERROR] 07:53:37:426 [CPU]/(36935:36967): >>>>>>< Nro_marco:2
+[INFO] 07:53:38:439 [CPU]/(36935:36936): Instruccion recibida: [MOV_OUT 48 CX]
+[ERROR] 07:53:38:942 [CPU]/(36935:36967): >>>>>>< Nro_marco:3
+[INFO] 07:53:39:946 [CPU]/(36935:36936): Instruccion recibida: [SUB CX AX]
+[INFO] 07:53:40:458 [CPU]/(36935:36936): Instruccion recibida: [JNZ CX 2]
+[INFO] 07:53:40:459 [CPU]/(36935:36967): REgistro_referido:0
+[INFO] 07:53:40:459 [CPU]/(36935:36967): SALI IF JNZ:8
+[INFO] 07:53:40:961 [CPU]/(36935:36936): Instruccion recibida: [EXIT]
+[INFO] 07:53:40:962 [CPU]/(36935:36967): Elimino paquete
+[WARNING] 07:53:40:962 [CPU]/(36935:36967): Proceso_desalojado <PID:1>
+[INFO] 07:53:40:962 [CPU]/(36935:36967): Todo el contexto se elimino correctamente .....
+[INFO] 07:54:34:359 [CPU]/(36935:36979): [PID: 2][PC: 0][Registros: 0|0|0|0]
+[INFO] 07:54:34:861 [CPU]/(36935:36936): Instruccion recibida: [SET CX 20]
+[INFO] 07:54:34:861 [CPU]/(36935:36979): AAAA 1
+[INFO] 07:54:34:861 [CPU]/(36935:36979): AAAA 1: 20
+[INFO] 07:54:35:364 [CPU]/(36935:36936): Instruccion recibida: [SET AX 1]
+[INFO] 07:54:35:364 [CPU]/(36935:36979): AAAA 1
+[INFO] 07:54:35:364 [CPU]/(36935:36979): AAAA 1: 1
+[INFO] 07:54:35:864 [CPU]/(36935:36936): Instruccion recibida: [MOV_OUT 0 CX]
+[ERROR] 07:54:36:367 [CPU]/(36935:36979): >>>>>>< Nro_marco:-1
+[INFO] 07:54:36:367 [CPU]/(36935:36979): Elimino paquete
+[WARNING] 07:54:36:367 [CPU]/(36935:36979): Proceso_desalojado <PID:2>
+[INFO] 07:54:36:367 [CPU]/(36935:36979): Todo el contexto se elimino correctamente .....
+[INFO] 07:54:41:511 [CPU]/(36935:36982): [PID: 3][PC: 0][Registros: 0|0|0|0]
+[INFO] 07:54:42:020 [CPU]/(36935:36936): Instruccion recibida: [SET CX 20]
+[INFO] 07:54:42:020 [CPU]/(36935:36982): AAAA 1
+[INFO] 07:54:42:020 [CPU]/(36935:36982): AAAA 1: 20
+[INFO] 07:54:42:521 [CPU]/(36935:36936): Instruccion recibida: [SET AX 1]
+[INFO] 07:54:42:522 [CPU]/(36935:36982): AAAA 1
+[INFO] 07:54:42:522 [CPU]/(36935:36982): AAAA 1: 1
+[INFO] 07:54:43:027 [CPU]/(36935:36936): Instruccion recibida: [MOV_OUT 0 CX]
+[ERROR] 07:54:43:531 [CPU]/(36935:36982): >>>>>>< Nro_marco:-1
+[INFO] 07:54:43:531 [CPU]/(36935:36982): Elimino paquete
+[WARNING] 07:54:43:531 [CPU]/(36935:36982): Proceso_desalojado <PID:3>
+[INFO] 07:54:43:531 [CPU]/(36935:36982): Todo el contexto se elimino correctamente .....
+[INFO] 07:54:47:024 [CPU]/(36935:36985): [PID: 2][PC: 2][Registros: 1|0|20|0]
+[INFO] 07:54:47:526 [CPU]/(36935:36936): Instruccion recibida: [MOV_OUT 0 CX]
+[ERROR] 07:54:48:028 [CPU]/(36935:36985): >>>>>>< Nro_marco:0
+[INFO] 07:54:49:032 [CPU]/(36935:36936): Instruccion recibida: [MOV_OUT 16 CX]
+[ERROR] 07:54:49:534 [CPU]/(36935:36985): >>>>>>< Nro_marco:-1
+[INFO] 07:54:49:534 [CPU]/(36935:36985): Elimino paquete
+[WARNING] 07:54:49:534 [CPU]/(36935:36985): Proceso_desalojado <PID:2>
+[INFO] 07:54:49:534 [CPU]/(36935:36985): Todo el contexto se elimino correctamente .....
+[INFO] 07:54:50:036 [CPU]/(36935:36988): [PID: 4][PC: 0][Registros: 0|0|0|0]
+[INFO] 07:54:50:540 [CPU]/(36935:36936): Instruccion recibida: [SET CX 20]
+[INFO] 07:54:50:541 [CPU]/(36935:36988): AAAA 1
+[INFO] 07:54:50:541 [CPU]/(36935:36988): AAAA 1: 20
+[INFO] 07:54:51:044 [CPU]/(36935:36936): Instruccion recibida: [SET AX 1]
+[INFO] 07:54:51:044 [CPU]/(36935:36988): AAAA 1
+[INFO] 07:54:51:044 [CPU]/(36935:36988): AAAA 1: 1
+[INFO] 07:54:51:547 [CPU]/(36935:36936): Instruccion recibida: [MOV_OUT 0 CX]
+[ERROR] 07:54:52:058 [CPU]/(36935:36988): >>>>>>< Nro_marco:-1
+[INFO] 07:54:52:058 [CPU]/(36935:36988): Elimino paquete
+[WARNING] 07:54:52:059 [CPU]/(36935:36988): Proceso_desalojado <PID:4>
+[INFO] 07:54:52:059 [CPU]/(36935:36988): Todo el contexto se elimino correctamente .....
+[INFO] 07:54:55:549 [CPU]/(36935:36991): [PID: 3][PC: 2][Registros: 1|0|20|0]
+[INFO] 07:54:56:051 [CPU]/(36935:36936): Instruccion recibida: [MOV_OUT 0 CX]
+[ERROR] 07:54:56:553 [CPU]/(36935:36991): >>>>>>< Nro_marco:1
+[INFO] 07:54:57:558 [CPU]/(36935:36936): Instruccion recibida: [MOV_OUT 16 CX]
+[ERROR] 07:54:58:061 [CPU]/(36935:36991): >>>>>>< Nro_marco:-1
+[INFO] 07:54:58:061 [CPU]/(36935:36991): Elimino paquete
+[WARNING] 07:54:58:062 [CPU]/(36935:36991): Proceso_desalojado <PID:3>
+[INFO] 07:54:58:062 [CPU]/(36935:36991): Todo el contexto se elimino correctamente .....
+[INFO] 07:54:58:560 [CPU]/(36935:36994): [PID: 5][PC: 0][Registros: 0|0|0|0]
+[INFO] 07:54:59:067 [CPU]/(36935:36936): Instruccion recibida: [SET CX 20]
+[INFO] 07:54:59:067 [CPU]/(36935:36994): AAAA 1
+[INFO] 07:54:59:067 [CPU]/(36935:36994): AAAA 1: 20
+[INFO] 07:54:59:573 [CPU]/(36935:36936): Instruccion recibida: [SET AX 1]
+[INFO] 07:54:59:573 [CPU]/(36935:36994): AAAA 1
+[INFO] 07:54:59:573 [CPU]/(36935:36994): AAAA 1: 1
+[INFO] 07:55:00:076 [CPU]/(36935:36936): Instruccion recibida: [MOV_OUT 0 CX]
+[ERROR] 07:55:00:583 [CPU]/(36935:36994): >>>>>>< Nro_marco:-1
+[INFO] 07:55:00:583 [CPU]/(36935:36994): Elimino paquete
+[WARNING] 07:55:00:583 [CPU]/(36935:36994): Proceso_desalojado <PID:5>
+[INFO] 07:55:00:583 [CPU]/(36935:36994): Todo el contexto se elimino correctamente .....
+[INFO] 07:55:04:070 [CPU]/(36935:36997): [PID: 2][PC: 3][Registros: 1|0|20|0]
+[INFO] 07:55:04:575 [CPU]/(36935:36936): Instruccion recibida: [MOV_OUT 16 CX]
+[ERROR] 07:55:05:083 [CPU]/(36935:36997): >>>>>>< Nro_marco:2
+[INFO] 07:55:06:097 [CPU]/(36935:36936): Instruccion recibida: [MOV_OUT 32 CX]
+[ERROR] 07:55:06:613 [CPU]/(36935:36997): >>>>>>< Nro_marco:-1
+[INFO] 07:55:06:613 [CPU]/(36935:36997): Elimino paquete
+[WARNING] 07:55:06:613 [CPU]/(36935:36997): Proceso_desalojado <PID:2>
+[INFO] 07:55:06:613 [CPU]/(36935:36997): Todo el contexto se elimino correctamente .....
+[INFO] 07:55:09:605 [CPU]/(36935:37000): [PID: 4][PC: 2][Registros: 1|0|20|0]
+[INFO] 07:55:10:119 [CPU]/(36935:36936): Instruccion recibida: [MOV_OUT 0 CX]
+[ERROR] 07:55:10:623 [CPU]/(36935:37000): >>>>>>< Nro_marco:3
+[INFO] 07:55:11:626 [CPU]/(36935:36936): Instruccion recibida: [MOV_OUT 16 CX]
+[ERROR] 07:55:12:128 [CPU]/(36935:37000): >>>>>>< Nro_marco:-1
+[INFO] 07:55:12:128 [CPU]/(36935:37000): Elimino paquete
+[WARNING] 07:55:12:128 [CPU]/(36935:37000): Proceso_desalojado <PID:4>
+[INFO] 07:55:12:128 [CPU]/(36935:37000): Todo el contexto se elimino correctamente .....
+[INFO] 07:55:15:147 [CPU]/(36935:37002): [PID: 3][PC: 3][Registros: 1|0|20|0]
+[INFO] 07:55:15:651 [CPU]/(36935:36936): Instruccion recibida: [MOV_OUT 16 CX]
+[ERROR] 07:55:16:153 [CPU]/(36935:37002): >>>>>>< Nro_marco:0
+[INFO] 07:55:17:162 [CPU]/(36935:36936): Instruccion recibida: [MOV_OUT 32 CX]
+[ERROR] 07:55:17:664 [CPU]/(36935:37002): >>>>>>< Nro_marco:-1
+[INFO] 07:55:17:664 [CPU]/(36935:37002): Elimino paquete
+[WARNING] 07:55:17:664 [CPU]/(36935:37002): Proceso_desalojado <PID:3>
+[INFO] 07:55:17:664 [CPU]/(36935:37002): Todo el contexto se elimino correctamente .....
+[INFO] 07:55:20:665 [CPU]/(36935:37006): [PID: 5][PC: 2][Registros: 1|0|20|0]
+[INFO] 07:55:21:169 [CPU]/(36935:36936): Instruccion recibida: [MOV_OUT 0 CX]
+[ERROR] 07:55:21:673 [CPU]/(36935:37006): >>>>>>< Nro_marco:1
+[INFO] 07:55:22:678 [CPU]/(36935:36936): Instruccion recibida: [MOV_OUT 16 CX]
+[ERROR] 07:55:23:183 [CPU]/(36935:37006): >>>>>>< Nro_marco:-1
+[INFO] 07:55:23:183 [CPU]/(36935:37006): Elimino paquete
+[WARNING] 07:55:23:183 [CPU]/(36935:37006): Proceso_desalojado <PID:5>
+[INFO] 07:55:23:183 [CPU]/(36935:37006): Todo el contexto se elimino correctamente .....
+[INFO] 07:55:26:183 [CPU]/(36935:37008): [PID: 2][PC: 4][Registros: 1|0|20|0]
+[INFO] 07:55:26:685 [CPU]/(36935:36936): Instruccion recibida: [MOV_OUT 32 CX]
+[ERROR] 07:55:27:188 [CPU]/(36935:37008): >>>>>>< Nro_marco:2
+[INFO] 07:55:28:193 [CPU]/(36935:36936): Instruccion recibida: [MOV_OUT 48 CX]
+[ERROR] 07:55:28:700 [CPU]/(36935:37008): >>>>>>< Nro_marco:-1
+[INFO] 07:55:28:701 [CPU]/(36935:37008): Elimino paquete
+[WARNING] 07:55:28:701 [CPU]/(36935:37008): Proceso_desalojado <PID:2>
+[INFO] 07:55:28:701 [CPU]/(36935:37008): Todo el contexto se elimino correctamente .....
+[INFO] 07:55:31:699 [CPU]/(36935:37012): [PID: 4][PC: 3][Registros: 1|0|20|0]
+[INFO] 07:55:32:209 [CPU]/(36935:36936): Instruccion recibida: [MOV_OUT 16 CX]
+[ERROR] 07:55:32:710 [CPU]/(36935:37012): >>>>>>< Nro_marco:3
+[INFO] 07:55:33:717 [CPU]/(36935:36936): Instruccion recibida: [MOV_OUT 32 CX]
+[ERROR] 07:55:34:223 [CPU]/(36935:37012): >>>>>>< Nro_marco:-1
+[INFO] 07:55:34:223 [CPU]/(36935:37012): Elimino paquete
+[WARNING] 07:55:34:223 [CPU]/(36935:37012): Proceso_desalojado <PID:4>
+[INFO] 07:55:34:223 [CPU]/(36935:37012): Todo el contexto se elimino correctamente .....
+[INFO] 07:55:37:233 [CPU]/(36935:37015): [PID: 3][PC: 4][Registros: 1|0|20|0]
+[INFO] 07:55:37:735 [CPU]/(36935:36936): Instruccion recibida: [MOV_OUT 32 CX]
+[ERROR] 07:55:38:238 [CPU]/(36935:37015): >>>>>>< Nro_marco:0
+[INFO] 07:55:39:241 [CPU]/(36935:36936): Instruccion recibida: [MOV_OUT 48 CX]
+[ERROR] 07:55:39:744 [CPU]/(36935:37015): >>>>>>< Nro_marco:-1
+[INFO] 07:55:39:745 [CPU]/(36935:37015): Elimino paquete
+[WARNING] 07:55:39:745 [CPU]/(36935:37015): Proceso_desalojado <PID:3>
+[INFO] 07:55:39:745 [CPU]/(36935:37015): Todo el contexto se elimino correctamente .....
+[INFO] 07:55:42:756 [CPU]/(36935:37018): [PID: 5][PC: 3][Registros: 1|0|20|0]
+[INFO] 07:55:43:256 [CPU]/(36935:36936): Instruccion recibida: [MOV_OUT 16 CX]
+[ERROR] 07:55:43:759 [CPU]/(36935:37018): >>>>>>< Nro_marco:1
+[INFO] 07:55:44:761 [CPU]/(36935:36936): Instruccion recibida: [MOV_OUT 32 CX]
+[ERROR] 07:55:45:265 [CPU]/(36935:37018): >>>>>>< Nro_marco:-1
+[INFO] 07:55:45:265 [CPU]/(36935:37018): Elimino paquete
+[WARNING] 07:55:45:265 [CPU]/(36935:37018): Proceso_desalojado <PID:5>
+[INFO] 07:55:45:265 [CPU]/(36935:37018): Todo el contexto se elimino correctamente .....
+[INFO] 07:55:48:260 [CPU]/(36935:37022): [PID: 2][PC: 5][Registros: 1|0|20|0]
+[INFO] 07:55:48:764 [CPU]/(36935:36936): Instruccion recibida: [MOV_OUT 48 CX]
+[ERROR] 07:55:49:267 [CPU]/(36935:37022): >>>>>>< Nro_marco:2
+[INFO] 07:55:50:270 [CPU]/(36935:36936): Instruccion recibida: [SUB CX AX]
+[INFO] 07:55:50:772 [CPU]/(36935:36936): Instruccion recibida: [JNZ CX 2]
+[INFO] 07:55:50:773 [CPU]/(36935:37022): REgistro_referido:19
+[INFO] 07:55:50:773 [CPU]/(36935:37022): Entre IF JNZ:
+[INFO] 07:55:50:773 [CPU]/(36935:37022): SALI IF JNZ:2
+[INFO] 07:55:51:274 [CPU]/(36935:36936): Instruccion recibida: [MOV_OUT 0 CX]
+[ERROR] 07:55:51:783 [CPU]/(36935:37022): >>>>>>< Nro_marco:-1
+[INFO] 07:55:51:783 [CPU]/(36935:37022): Elimino paquete
+[WARNING] 07:55:51:783 [CPU]/(36935:37022): Proceso_desalojado <PID:2>
+[INFO] 07:55:51:783 [CPU]/(36935:37022): Todo el contexto se elimino correctamente .....
+[INFO] 07:55:53:775 [CPU]/(36935:37024): [PID: 4][PC: 4][Registros: 1|0|20|0]
+[INFO] 07:55:54:276 [CPU]/(36935:36936): Instruccion recibida: [MOV_OUT 32 CX]
+[ERROR] 07:55:54:782 [CPU]/(36935:37024): >>>>>>< Nro_marco:3
+[INFO] 07:55:55:785 [CPU]/(36935:36936): Instruccion recibida: [MOV_OUT 48 CX]
+[ERROR] 07:55:56:287 [CPU]/(36935:37024): >>>>>>< Nro_marco:-1
+[INFO] 07:55:56:287 [CPU]/(36935:37024): Elimino paquete
+[WARNING] 07:55:56:287 [CPU]/(36935:37024): Proceso_desalojado <PID:4>
+[INFO] 07:55:56:287 [CPU]/(36935:37024): Todo el contexto se elimino correctamente .....
+[INFO] 07:55:59:284 [CPU]/(36935:37028): [PID: 3][PC: 5][Registros: 1|0|20|0]
+[INFO] 07:55:59:787 [CPU]/(36935:36936): Instruccion recibida: [MOV_OUT 48 CX]
+[ERROR] 07:56:00:292 [CPU]/(36935:37028): >>>>>>< Nro_marco:0
+[INFO] 07:56:01:300 [CPU]/(36935:36936): Instruccion recibida: [SUB CX AX]
+[INFO] 07:56:01:801 [CPU]/(36935:36936): Instruccion recibida: [JNZ CX 2]
+[INFO] 07:56:01:801 [CPU]/(36935:37028): REgistro_referido:19
+[INFO] 07:56:01:801 [CPU]/(36935:37028): Entre IF JNZ:
+[INFO] 07:56:01:801 [CPU]/(36935:37028): SALI IF JNZ:2
+[INFO] 07:56:02:303 [CPU]/(36935:36936): Instruccion recibida: [MOV_OUT 0 CX]
+[ERROR] 07:56:02:806 [CPU]/(36935:37028): >>>>>>< Nro_marco:-1
+[INFO] 07:56:02:806 [CPU]/(36935:37028): Elimino paquete
+[WARNING] 07:56:02:806 [CPU]/(36935:37028): Proceso_desalojado <PID:3>
+[INFO] 07:56:02:806 [CPU]/(36935:37028): Todo el contexto se elimino correctamente .....
+[INFO] 07:56:04:805 [CPU]/(36935:37031): [PID: 5][PC: 4][Registros: 1|0|20|0]
+[INFO] 07:56:05:309 [CPU]/(36935:36936): Instruccion recibida: [MOV_OUT 32 CX]
+[ERROR] 07:56:05:812 [CPU]/(36935:37031): >>>>>>< Nro_marco:1
+[INFO] 07:56:06:827 [CPU]/(36935:36936): Instruccion recibida: [MOV_OUT 48 CX]
+[ERROR] 07:56:07:330 [CPU]/(36935:37031): >>>>>>< Nro_marco:-1
+[INFO] 07:56:07:330 [CPU]/(36935:37031): Elimino paquete
+[WARNING] 07:56:07:331 [CPU]/(36935:37031): Proceso_desalojado <PID:5>
+[INFO] 07:56:07:331 [CPU]/(36935:37031): Todo el contexto se elimino correctamente .....
+[INFO] 07:56:10:313 [CPU]/(36935:37034): [PID: 2][PC: 2][Registros: 1|0|19|0]
+[INFO] 07:56:10:821 [CPU]/(36935:36936): Instruccion recibida: [MOV_OUT 0 CX]
+[ERROR] 07:56:11:326 [CPU]/(36935:37034): >>>>>>< Nro_marco:2
+[INFO] 07:56:12:331 [CPU]/(36935:36936): Instruccion recibida: [MOV_OUT 16 CX]
+[ERROR] 07:56:12:832 [CPU]/(36935:37034): >>>>>>< Nro_marco:-1
+[INFO] 07:56:12:833 [CPU]/(36935:37034): Elimino paquete
+[WARNING] 07:56:12:833 [CPU]/(36935:37034): Proceso_desalojado <PID:2>
+[INFO] 07:56:12:833 [CPU]/(36935:37034): Todo el contexto se elimino correctamente .....
+[INFO] 07:56:15:836 [CPU]/(36935:37036): [PID: 4][PC: 5][Registros: 1|0|20|0]
+[INFO] 07:56:16:337 [CPU]/(36935:36936): Instruccion recibida: [MOV_OUT 48 CX]
+[ERROR] 07:56:16:841 [CPU]/(36935:37036): >>>>>>< Nro_marco:3
+[INFO] 07:56:17:847 [CPU]/(36935:36936): Instruccion recibida: [SUB CX AX]
+[INFO] 07:56:18:350 [CPU]/(36935:36936): Instruccion recibida: [JNZ CX 2]
+[INFO] 07:56:18:350 [CPU]/(36935:37036): REgistro_referido:19
+[INFO] 07:56:18:350 [CPU]/(36935:37036): Entre IF JNZ:
+[INFO] 07:56:18:350 [CPU]/(36935:37036): SALI IF JNZ:2
+[INFO] 07:56:18:853 [CPU]/(36935:36936): Instruccion recibida: [MOV_OUT 0 CX]
+[ERROR] 07:56:19:391 [CPU]/(36935:37036): >>>>>>< Nro_marco:-1
+[INFO] 07:56:19:391 [CPU]/(36935:37036): Elimino paquete
+[WARNING] 07:56:19:391 [CPU]/(36935:37036): Proceso_desalojado <PID:4>
+[INFO] 07:56:19:391 [CPU]/(36935:37036): Todo el contexto se elimino correctamente .....
+[INFO] 07:56:21:347 [CPU]/(36935:37039): [PID: 3][PC: 2][Registros: 1|0|19|0]
+[INFO] 07:56:21:849 [CPU]/(36935:36936): Instruccion recibida: [MOV_OUT 0 CX]
+[ERROR] 07:56:22:350 [CPU]/(36935:37039): >>>>>>< Nro_marco:0
+[INFO] 07:56:23:354 [CPU]/(36935:36936): Instruccion recibida: [MOV_OUT 16 CX]
+[ERROR] 07:56:23:856 [CPU]/(36935:37039): >>>>>>< Nro_marco:-1
+[INFO] 07:56:23:856 [CPU]/(36935:37039): Elimino paquete
+[WARNING] 07:56:23:856 [CPU]/(36935:37039): Proceso_desalojado <PID:3>
+[INFO] 07:56:23:856 [CPU]/(36935:37039): Todo el contexto se elimino correctamente .....
+[INFO] 07:56:26:862 [CPU]/(36935:37043): [PID: 5][PC: 5][Registros: 1|0|20|0]
+[INFO] 07:56:27:364 [CPU]/(36935:36936): Instruccion recibida: [MOV_OUT 48 CX]
+[ERROR] 07:56:27:867 [CPU]/(36935:37043): >>>>>>< Nro_marco:1
+[INFO] 07:56:28:875 [CPU]/(36935:36936): Instruccion recibida: [SUB CX AX]
+[INFO] 07:56:29:377 [CPU]/(36935:36936): Instruccion recibida: [JNZ CX 2]
+[INFO] 07:56:29:377 [CPU]/(36935:37043): REgistro_referido:19
+[INFO] 07:56:29:377 [CPU]/(36935:37043): Entre IF JNZ:
+[INFO] 07:56:29:377 [CPU]/(36935:37043): SALI IF JNZ:2
+[INFO] 07:56:29:879 [CPU]/(36935:36936): Instruccion recibida: [MOV_OUT 0 CX]
+[ERROR] 07:56:30:381 [CPU]/(36935:37043): >>>>>>< Nro_marco:-1
+[INFO] 07:56:30:381 [CPU]/(36935:37043): Elimino paquete
+[WARNING] 07:56:30:381 [CPU]/(36935:37043): Proceso_desalojado <PID:5>
+[INFO] 07:56:30:381 [CPU]/(36935:37043): Todo el contexto se elimino correctamente .....
+[INFO] 07:56:32:374 [CPU]/(36935:37046): [PID: 2][PC: 3][Registros: 1|0|19|0]
+[INFO] 07:56:32:875 [CPU]/(36935:36936): Instruccion recibida: [MOV_OUT 16 CX]
+[ERROR] 07:56:33:377 [CPU]/(36935:37046): >>>>>>< Nro_marco:2
+[INFO] 07:56:34:379 [CPU]/(36935:36936): Instruccion recibida: [MOV_OUT 32 CX]
+[ERROR] 07:56:34:885 [CPU]/(36935:37046): >>>>>>< Nro_marco:-1
+[INFO] 07:56:34:885 [CPU]/(36935:37046): Elimino paquete
+[WARNING] 07:56:34:885 [CPU]/(36935:37046): Proceso_desalojado <PID:2>
+[INFO] 07:56:34:885 [CPU]/(36935:37046): Todo el contexto se elimino correctamente .....
+[INFO] 07:56:37:904 [CPU]/(36935:37049): [PID: 4][PC: 2][Registros: 1|0|19|0]
+[INFO] 07:56:38:407 [CPU]/(36935:36936): Instruccion recibida: [MOV_OUT 0 CX]
+[ERROR] 07:56:38:920 [CPU]/(36935:37049): >>>>>>< Nro_marco:3
+[INFO] 07:56:39:927 [CPU]/(36935:36936): Instruccion recibida: [MOV_OUT 16 CX]
+[ERROR] 07:56:40:431 [CPU]/(36935:37049): >>>>>>< Nro_marco:-1
+[INFO] 07:56:40:431 [CPU]/(36935:37049): Elimino paquete
+[WARNING] 07:56:40:432 [CPU]/(36935:37049): Proceso_desalojado <PID:4>
+[INFO] 07:56:40:432 [CPU]/(36935:37049): Todo el contexto se elimino correctamente .....
+[INFO] 07:56:43:422 [CPU]/(36935:37052): [PID: 3][PC: 3][Registros: 1|0|19|0]
+[INFO] 07:56:43:923 [CPU]/(36935:36936): Instruccion recibida: [MOV_OUT 16 CX]
+[ERROR] 07:56:44:425 [CPU]/(36935:37052): >>>>>>< Nro_marco:0
+[INFO] 07:56:45:429 [CPU]/(36935:36936): Instruccion recibida: [MOV_OUT 32 CX]
+[ERROR] 07:56:45:931 [CPU]/(36935:37052): >>>>>>< Nro_marco:-1
+[INFO] 07:56:45:931 [CPU]/(36935:37052): Elimino paquete
+[WARNING] 07:56:45:931 [CPU]/(36935:37052): Proceso_desalojado <PID:3>
+[INFO] 07:56:45:931 [CPU]/(36935:37052): Todo el contexto se elimino correctamente .....
+[ERROR] 07:59:42:975 [CPU]/(36935:36936): [DESCONEXION]: MEMORIA

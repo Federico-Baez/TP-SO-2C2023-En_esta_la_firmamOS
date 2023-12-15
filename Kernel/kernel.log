@@ -1099,3 +1099,1187 @@
 [INFO] 04:16:57:342 [Kernel]/(19593:19617): Se solicito a Memoria resolver Page FAULT
 [INFO] 04:16:57:465 [Kernel]/(19593:19595): Se recibio algo de MEMORIA
 [ERROR] 04:16:57:465 [Kernel]/(19593:19595): [DESCONEXION]: MEMORIA
+[INFO] 04:41:44:009 [Kernel]/(4771:4771): [RECURSO | 1]
+[INFO] 04:41:44:011 [Kernel]/(4771:4771): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 04:41:44:012 [Kernel]/(4771:4771): HANDSHAKE CON FILESYSTEM [EXITOSO]
+[INFO] 04:41:44:012 [Kernel]/(4771:4771): HANDSHAKE CON CPU_Dispatch [EXITOSO]
+[INFO] 04:41:44:013 [Kernel]/(4771:4771): HANDSHAKE CON CPU_Interrupt [EXITOSO]
+[INFO] 04:53:38:077 [Kernel]/(4771:5037): Se aviso a Memoria del nuevo proceso
+[INFO] 04:53:39:080 [Kernel]/(4771:4773): Se recibio algo de MEMORIA
+[INFO] 04:53:41:110 [Kernel]/(4771:4775): Se recibio algo de CPU_Dispatch
+[WARNING] 04:53:41:110 [Kernel]/(4771:4775): Entre a atender instruccion
+[INFO] 04:53:41:110 [Kernel]/(4771:4775): A2
+[INFO] 04:53:41:110 [Kernel]/(4771:4775): A3
+[INFO] 04:53:41:110 [Kernel]/(4771:4775): A4
+[INFO] 04:53:41:113 [Kernel]/(4771:5040): Se solicito a Memoria resolver Page FAULT
+[INFO] 04:53:52:639 [Kernel]/(4771:4773): Se recibio algo de MEMORIA
+[INFO] 04:53:52:639 [Kernel]/(4771:4773): A2
+[INFO] 04:53:52:639 [Kernel]/(4771:4773): A3
+[INFO] 04:53:52:639 [Kernel]/(4771:4773): A4
+[INFO] 04:53:52:639 [Kernel]/(4771:4773): Memoria soluciono el PAGE FAULT
+[INFO] 04:53:55:659 [Kernel]/(4771:4775): Se recibio algo de CPU_Dispatch
+[WARNING] 04:53:55:659 [Kernel]/(4771:4775): Entre a atender instruccion
+[INFO] 04:53:55:659 [Kernel]/(4771:4775): A2
+[INFO] 04:53:55:659 [Kernel]/(4771:4775): A3
+[INFO] 04:53:55:659 [Kernel]/(4771:4775): A4
+[INFO] 04:53:55:660 [Kernel]/(4771:5043): Se solicito a Memoria resolver Page FAULT
+[INFO] 04:53:58:173 [Kernel]/(4771:4773): Se recibio algo de MEMORIA
+[INFO] 04:53:58:173 [Kernel]/(4771:4773): A2
+[INFO] 04:53:58:173 [Kernel]/(4771:4773): A3
+[INFO] 04:53:58:173 [Kernel]/(4771:4773): A4
+[INFO] 04:53:58:173 [Kernel]/(4771:4773): Memoria soluciono el PAGE FAULT
+[INFO] 04:54:01:205 [Kernel]/(4771:4775): Se recibio algo de CPU_Dispatch
+[WARNING] 04:54:01:205 [Kernel]/(4771:4775): Entre a atender instruccion
+[INFO] 04:54:01:205 [Kernel]/(4771:4775): A2
+[INFO] 04:54:01:205 [Kernel]/(4771:4775): A3
+[INFO] 04:54:01:205 [Kernel]/(4771:4775): A4
+[INFO] 04:54:01:206 [Kernel]/(4771:5046): Se solicito a Memoria resolver Page FAULT
+[INFO] 04:54:03:711 [Kernel]/(4771:4773): Se recibio algo de MEMORIA
+[INFO] 04:54:03:711 [Kernel]/(4771:4773): A2
+[INFO] 04:54:03:711 [Kernel]/(4771:4773): A3
+[INFO] 04:54:03:711 [Kernel]/(4771:4773): A4
+[INFO] 04:54:03:711 [Kernel]/(4771:4773): Memoria soluciono el PAGE FAULT
+[INFO] 04:54:06:731 [Kernel]/(4771:4775): Se recibio algo de CPU_Dispatch
+[WARNING] 04:54:06:731 [Kernel]/(4771:4775): Entre a atender instruccion
+[INFO] 04:54:06:731 [Kernel]/(4771:4775): A2
+[INFO] 04:54:06:731 [Kernel]/(4771:4775): A3
+[INFO] 04:54:06:732 [Kernel]/(4771:4775): A4
+[INFO] 04:54:06:732 [Kernel]/(4771:5049): Se solicito a Memoria resolver Page FAULT
+[INFO] 04:54:09:241 [Kernel]/(4771:4773): Se recibio algo de MEMORIA
+[INFO] 04:54:09:241 [Kernel]/(4771:4773): A2
+[INFO] 04:54:09:241 [Kernel]/(4771:4773): A3
+[INFO] 04:54:09:241 [Kernel]/(4771:4773): A4
+[INFO] 04:54:09:241 [Kernel]/(4771:4773): Memoria soluciono el PAGE FAULT
+[INFO] 04:54:15:787 [Kernel]/(4771:4775): Se recibio algo de CPU_Dispatch
+[WARNING] 04:54:15:787 [Kernel]/(4771:4775): Entre a atender instruccion
+[INFO] 04:54:15:787 [Kernel]/(4771:4775): A2
+[INFO] 04:54:15:787 [Kernel]/(4771:4775): A3
+[INFO] 04:54:15:787 [Kernel]/(4771:4775): A4
+[INFO] 04:54:15:788 [Kernel]/(4771:5052): Se solicito a Memoria resolver Page FAULT
+[INFO] 04:54:15:896 [Kernel]/(4771:4775): Se recibio algo de CPU_Dispatch
+[ERROR] 04:54:15:896 [Kernel]/(4771:4775): [DESCONEXION]: FILESYSTEM
+[INFO] 04:54:15:896 [Kernel]/(4771:4773): Se recibio algo de MEMORIA
+[ERROR] 04:54:15:896 [Kernel]/(4771:4773): [DESCONEXION]: MEMORIA
+[INFO] 04:55:38:437 [Kernel]/(5087:5087): [RECURSO | 1]
+[INFO] 04:55:38:439 [Kernel]/(5087:5087): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 04:55:38:440 [Kernel]/(5087:5087): HANDSHAKE CON FILESYSTEM [EXITOSO]
+[INFO] 04:55:38:441 [Kernel]/(5087:5087): HANDSHAKE CON CPU_Dispatch [EXITOSO]
+[INFO] 04:55:38:441 [Kernel]/(5087:5087): HANDSHAKE CON CPU_Interrupt [EXITOSO]
+[INFO] 04:55:44:896 [Kernel]/(5087:5096): Se aviso a Memoria del nuevo proceso
+[INFO] 04:55:45:901 [Kernel]/(5087:5089): Se recibio algo de MEMORIA
+[INFO] 04:55:47:924 [Kernel]/(5087:5091): Se recibio algo de CPU_Dispatch
+[WARNING] 04:55:47:924 [Kernel]/(5087:5091): Entre a atender instruccion
+[INFO] 04:55:47:924 [Kernel]/(5087:5091): A2
+[INFO] 04:55:47:924 [Kernel]/(5087:5091): A3
+[INFO] 04:55:47:924 [Kernel]/(5087:5091): A4
+[INFO] 04:55:47:924 [Kernel]/(5087:5099): Se solicito a Memoria resolver Page FAULT
+[INFO] 04:55:59:427 [Kernel]/(5087:5089): Se recibio algo de MEMORIA
+[INFO] 04:55:59:427 [Kernel]/(5087:5089): A2
+[INFO] 04:55:59:427 [Kernel]/(5087:5089): A3
+[INFO] 04:55:59:427 [Kernel]/(5087:5089): A4
+[INFO] 04:55:59:428 [Kernel]/(5087:5089): Memoria soluciono el PAGE FAULT
+[INFO] 04:56:02:456 [Kernel]/(5087:5091): Se recibio algo de CPU_Dispatch
+[WARNING] 04:56:02:457 [Kernel]/(5087:5091): Entre a atender instruccion
+[INFO] 04:56:02:457 [Kernel]/(5087:5091): A2
+[INFO] 04:56:02:457 [Kernel]/(5087:5091): A3
+[INFO] 04:56:02:457 [Kernel]/(5087:5091): A4
+[INFO] 04:56:02:458 [Kernel]/(5087:5102): Se solicito a Memoria resolver Page FAULT
+[INFO] 04:56:04:973 [Kernel]/(5087:5089): Se recibio algo de MEMORIA
+[INFO] 04:56:04:973 [Kernel]/(5087:5089): A2
+[INFO] 04:56:04:973 [Kernel]/(5087:5089): A3
+[INFO] 04:56:04:973 [Kernel]/(5087:5089): A4
+[INFO] 04:56:04:973 [Kernel]/(5087:5089): Memoria soluciono el PAGE FAULT
+[INFO] 04:56:08:001 [Kernel]/(5087:5091): Se recibio algo de CPU_Dispatch
+[WARNING] 04:56:08:001 [Kernel]/(5087:5091): Entre a atender instruccion
+[INFO] 04:56:08:001 [Kernel]/(5087:5091): A2
+[INFO] 04:56:08:001 [Kernel]/(5087:5091): A3
+[INFO] 04:56:08:001 [Kernel]/(5087:5091): A4
+[INFO] 04:56:08:001 [Kernel]/(5087:5105): Se solicito a Memoria resolver Page FAULT
+[INFO] 04:56:10:525 [Kernel]/(5087:5089): Se recibio algo de MEMORIA
+[INFO] 04:56:10:526 [Kernel]/(5087:5089): A2
+[INFO] 04:56:10:526 [Kernel]/(5087:5089): A3
+[INFO] 04:56:10:526 [Kernel]/(5087:5089): A4
+[INFO] 04:56:10:526 [Kernel]/(5087:5089): Memoria soluciono el PAGE FAULT
+[INFO] 04:56:13:563 [Kernel]/(5087:5091): Se recibio algo de CPU_Dispatch
+[WARNING] 04:56:13:563 [Kernel]/(5087:5091): Entre a atender instruccion
+[INFO] 04:56:13:563 [Kernel]/(5087:5091): A2
+[INFO] 04:56:13:563 [Kernel]/(5087:5091): A3
+[INFO] 04:56:13:563 [Kernel]/(5087:5091): A4
+[INFO] 04:56:13:564 [Kernel]/(5087:5108): Se solicito a Memoria resolver Page FAULT
+[INFO] 04:56:16:072 [Kernel]/(5087:5089): Se recibio algo de MEMORIA
+[INFO] 04:56:16:072 [Kernel]/(5087:5089): A2
+[INFO] 04:56:16:072 [Kernel]/(5087:5089): A3
+[INFO] 04:56:16:072 [Kernel]/(5087:5089): A4
+[INFO] 04:56:16:072 [Kernel]/(5087:5089): Memoria soluciono el PAGE FAULT
+[INFO] 04:56:22:645 [Kernel]/(5087:5091): Se recibio algo de CPU_Dispatch
+[WARNING] 04:56:22:645 [Kernel]/(5087:5091): Entre a atender instruccion
+[INFO] 04:56:22:645 [Kernel]/(5087:5091): A2
+[INFO] 04:56:22:645 [Kernel]/(5087:5091): A3
+[INFO] 04:56:22:645 [Kernel]/(5087:5091): A4
+[INFO] 04:56:22:646 [Kernel]/(5087:5111): Se solicito a Memoria resolver Page FAULT
+[INFO] 04:56:22:746 [Kernel]/(5087:5089): Se recibio algo de MEMORIA
+[ERROR] 04:56:22:746 [Kernel]/(5087:5089): [DESCONEXION]: MEMORIA
+[INFO] 04:59:54:647 [Kernel]/(5125:5125): [RECURSO | 1]
+[INFO] 04:59:54:648 [Kernel]/(5125:5125): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 04:59:54:649 [Kernel]/(5125:5125): HANDSHAKE CON FILESYSTEM [EXITOSO]
+[INFO] 04:59:54:650 [Kernel]/(5125:5125): HANDSHAKE CON CPU_Dispatch [EXITOSO]
+[INFO] 04:59:54:651 [Kernel]/(5125:5125): HANDSHAKE CON CPU_Interrupt [EXITOSO]
+[ERROR] 04:59:57:438 [Kernel]/(5125:5132): Comando no reconocido
+[INFO] 05:00:03:587 [Kernel]/(5125:5134): Se aviso a Memoria del nuevo proceso
+[INFO] 05:00:04:601 [Kernel]/(5125:5127): Se recibio algo de MEMORIA
+[INFO] 05:00:06:612 [Kernel]/(5125:5129): Se recibio algo de CPU_Dispatch
+[WARNING] 05:00:06:612 [Kernel]/(5125:5129): Entre a atender instruccion
+[INFO] 05:00:06:612 [Kernel]/(5125:5129): A2
+[INFO] 05:00:06:612 [Kernel]/(5125:5129): A3
+[INFO] 05:00:06:612 [Kernel]/(5125:5129): A4
+[INFO] 05:00:06:613 [Kernel]/(5125:5137): Se solicito a Memoria resolver Page FAULT
+[INFO] 05:05:14:457 [Kernel]/(5277:5277): [RECURSO | 1]
+[INFO] 05:05:14:459 [Kernel]/(5277:5277): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 05:05:14:460 [Kernel]/(5277:5277): HANDSHAKE CON FILESYSTEM [EXITOSO]
+[INFO] 05:05:14:460 [Kernel]/(5277:5277): HANDSHAKE CON CPU_Dispatch [EXITOSO]
+[INFO] 05:05:14:461 [Kernel]/(5277:5277): HANDSHAKE CON CPU_Interrupt [EXITOSO]
+[INFO] 05:05:22:921 [Kernel]/(5277:5288): Se aviso a Memoria del nuevo proceso
+[INFO] 05:05:23:930 [Kernel]/(5277:5279): Se recibio algo de MEMORIA
+[INFO] 05:05:25:950 [Kernel]/(5277:5281): Se recibio algo de CPU_Dispatch
+[WARNING] 05:05:25:951 [Kernel]/(5277:5281): Entre a atender instruccion
+[INFO] 05:05:25:951 [Kernel]/(5277:5281): A2
+[INFO] 05:05:25:951 [Kernel]/(5277:5281): A3
+[INFO] 05:05:25:951 [Kernel]/(5277:5281): A4
+[INFO] 05:05:25:952 [Kernel]/(5277:5292): Se solicito a Memoria resolver Page FAULT
+[INFO] 05:05:37:479 [Kernel]/(5277:5279): Se recibio algo de MEMORIA
+[INFO] 05:05:37:479 [Kernel]/(5277:5279): A2
+[INFO] 05:05:37:479 [Kernel]/(5277:5279): A3
+[INFO] 05:05:37:479 [Kernel]/(5277:5279): A4
+[INFO] 05:05:37:480 [Kernel]/(5277:5279): Memoria soluciono el PAGE FAULT
+[INFO] 05:18:50:729 [Kernel]/(5546:5546): [RECURSO | 1]
+[INFO] 05:18:50:731 [Kernel]/(5546:5546): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 05:18:50:732 [Kernel]/(5546:5546): HANDSHAKE CON FILESYSTEM [EXITOSO]
+[INFO] 05:18:50:732 [Kernel]/(5546:5546): HANDSHAKE CON CPU_Dispatch [EXITOSO]
+[INFO] 05:18:50:733 [Kernel]/(5546:5546): HANDSHAKE CON CPU_Interrupt [EXITOSO]
+[INFO] 05:18:57:931 [Kernel]/(5546:5556): Se aviso a Memoria del nuevo proceso
+[INFO] 05:18:58:943 [Kernel]/(5546:5548): Se recibio algo de MEMORIA
+[INFO] 05:19:00:960 [Kernel]/(5546:5550): Se recibio algo de CPU_Dispatch
+[WARNING] 05:19:00:960 [Kernel]/(5546:5550): Entre a atender instruccion
+[INFO] 05:19:00:960 [Kernel]/(5546:5550): A2
+[INFO] 05:19:00:960 [Kernel]/(5546:5550): A3
+[INFO] 05:19:00:960 [Kernel]/(5546:5550): A4
+[INFO] 05:19:00:961 [Kernel]/(5546:5559): Se solicito a Memoria resolver Page FAULT
+[INFO] 05:19:12:464 [Kernel]/(5546:5548): Se recibio algo de MEMORIA
+[INFO] 05:19:12:464 [Kernel]/(5546:5548): A2
+[INFO] 05:19:12:464 [Kernel]/(5546:5548): A3
+[INFO] 05:19:12:464 [Kernel]/(5546:5548): A4
+[INFO] 05:19:12:464 [Kernel]/(5546:5548): Memoria soluciono el PAGE FAULT
+[INFO] 05:19:15:499 [Kernel]/(5546:5550): Se recibio algo de CPU_Dispatch
+[WARNING] 05:19:15:500 [Kernel]/(5546:5550): Entre a atender instruccion
+[INFO] 05:19:15:500 [Kernel]/(5546:5550): A2
+[INFO] 05:19:15:500 [Kernel]/(5546:5550): A3
+[INFO] 05:19:15:500 [Kernel]/(5546:5550): A4
+[INFO] 05:19:15:500 [Kernel]/(5546:5562): Se solicito a Memoria resolver Page FAULT
+[INFO] 05:19:18:012 [Kernel]/(5546:5548): Se recibio algo de MEMORIA
+[INFO] 05:19:18:013 [Kernel]/(5546:5548): A2
+[INFO] 05:19:18:013 [Kernel]/(5546:5548): A3
+[INFO] 05:19:18:013 [Kernel]/(5546:5548): A4
+[INFO] 05:19:18:013 [Kernel]/(5546:5548): Memoria soluciono el PAGE FAULT
+[INFO] 05:19:21:030 [Kernel]/(5546:5550): Se recibio algo de CPU_Dispatch
+[WARNING] 05:19:21:030 [Kernel]/(5546:5550): Entre a atender instruccion
+[INFO] 05:19:21:030 [Kernel]/(5546:5550): A2
+[INFO] 05:19:21:030 [Kernel]/(5546:5550): A3
+[INFO] 05:19:21:030 [Kernel]/(5546:5550): A4
+[INFO] 05:19:21:031 [Kernel]/(5546:5565): Se solicito a Memoria resolver Page FAULT
+[INFO] 05:19:23:544 [Kernel]/(5546:5548): Se recibio algo de MEMORIA
+[INFO] 05:19:23:544 [Kernel]/(5546:5548): A2
+[INFO] 05:19:23:544 [Kernel]/(5546:5548): A3
+[INFO] 05:19:23:545 [Kernel]/(5546:5548): A4
+[INFO] 05:19:23:545 [Kernel]/(5546:5548): Memoria soluciono el PAGE FAULT
+[INFO] 05:19:26:578 [Kernel]/(5546:5550): Se recibio algo de CPU_Dispatch
+[WARNING] 05:19:26:578 [Kernel]/(5546:5550): Entre a atender instruccion
+[INFO] 05:19:26:578 [Kernel]/(5546:5550): A2
+[INFO] 05:19:26:578 [Kernel]/(5546:5550): A3
+[INFO] 05:19:26:578 [Kernel]/(5546:5550): A4
+[INFO] 05:19:26:585 [Kernel]/(5546:5568): Se solicito a Memoria resolver Page FAULT
+[INFO] 05:19:29:095 [Kernel]/(5546:5548): Se recibio algo de MEMORIA
+[INFO] 05:19:29:095 [Kernel]/(5546:5548): A2
+[INFO] 05:19:29:095 [Kernel]/(5546:5548): A3
+[INFO] 05:19:29:095 [Kernel]/(5546:5548): A4
+[INFO] 05:19:29:095 [Kernel]/(5546:5548): Memoria soluciono el PAGE FAULT
+[INFO] 05:19:35:648 [Kernel]/(5546:5550): Se recibio algo de CPU_Dispatch
+[WARNING] 05:19:35:648 [Kernel]/(5546:5550): Entre a atender instruccion
+[INFO] 05:19:35:648 [Kernel]/(5546:5550): A2
+[INFO] 05:19:35:648 [Kernel]/(5546:5550): A3
+[INFO] 05:19:35:648 [Kernel]/(5546:5550): A4
+[INFO] 05:19:35:649 [Kernel]/(5546:5571): Se solicito a Memoria resolver Page FAULT
+[INFO] 05:19:35:758 [Kernel]/(5546:5548): Se recibio algo de MEMORIA
+[ERROR] 05:19:35:758 [Kernel]/(5546:5548): [DESCONEXION]: MEMORIA
+[INFO] 05:20:11:837 [Kernel]/(5583:5583): [RECURSO | 1]
+[INFO] 05:20:11:838 [Kernel]/(5583:5583): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 05:20:11:838 [Kernel]/(5583:5583): HANDSHAKE CON FILESYSTEM [EXITOSO]
+[INFO] 05:20:11:838 [Kernel]/(5583:5583): HANDSHAKE CON CPU_Dispatch [EXITOSO]
+[INFO] 05:20:11:839 [Kernel]/(5583:5583): HANDSHAKE CON CPU_Interrupt [EXITOSO]
+[ERROR] 05:20:14:054 [Kernel]/(5583:5590): Comando no reconocido
+[INFO] 05:20:20:107 [Kernel]/(5583:5592): Se aviso a Memoria del nuevo proceso
+[INFO] 05:20:21:118 [Kernel]/(5583:5585): Se recibio algo de MEMORIA
+[INFO] 05:28:23:911 [Kernel]/(5799:5799): [RECURSO | 1]
+[INFO] 05:28:23:913 [Kernel]/(5799:5799): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 05:28:23:913 [Kernel]/(5799:5799): HANDSHAKE CON FILESYSTEM [EXITOSO]
+[INFO] 05:28:23:913 [Kernel]/(5799:5799): HANDSHAKE CON CPU_Dispatch [EXITOSO]
+[INFO] 05:28:23:913 [Kernel]/(5799:5799): HANDSHAKE CON CPU_Interrupt [EXITOSO]
+[INFO] 05:28:31:645 [Kernel]/(5799:5809): Se aviso a Memoria del nuevo proceso
+[INFO] 05:28:44:675 [Kernel]/(5799:5801): Se recibio algo de MEMORIA
+[INFO] 05:28:46:692 [Kernel]/(5799:5803): Se recibio algo de CPU_Dispatch
+[WARNING] 05:28:46:692 [Kernel]/(5799:5803): Entre a atender instruccion
+[INFO] 05:28:46:692 [Kernel]/(5799:5803): A2
+[INFO] 05:28:46:692 [Kernel]/(5799:5803): A3
+[INFO] 05:28:46:692 [Kernel]/(5799:5803): A4
+[INFO] 05:28:46:692 [Kernel]/(5799:5812): Se solicito a Memoria resolver Page FAULT
+[INFO] 05:28:49:197 [Kernel]/(5799:5801): Se recibio algo de MEMORIA
+[INFO] 05:28:49:197 [Kernel]/(5799:5801): A2
+[INFO] 05:28:49:197 [Kernel]/(5799:5801): A3
+[INFO] 05:28:49:197 [Kernel]/(5799:5801): A4
+[INFO] 05:28:49:197 [Kernel]/(5799:5801): Memoria soluciono el PAGE FAULT
+[INFO] 05:36:35:303 [Kernel]/(6025:6025): [RECURSO | 1]
+[INFO] 05:36:35:304 [Kernel]/(6025:6025): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 05:36:35:305 [Kernel]/(6025:6025): HANDSHAKE CON FILESYSTEM [EXITOSO]
+[INFO] 05:36:35:305 [Kernel]/(6025:6025): HANDSHAKE CON CPU_Dispatch [EXITOSO]
+[INFO] 05:36:35:306 [Kernel]/(6025:6025): HANDSHAKE CON CPU_Interrupt [EXITOSO]
+[INFO] 05:36:41:239 [Kernel]/(6025:6035): Se aviso a Memoria del nuevo proceso
+[INFO] 05:36:54:268 [Kernel]/(6025:6027): Se recibio algo de MEMORIA
+[INFO] 05:36:56:287 [Kernel]/(6025:6029): Se recibio algo de CPU_Dispatch
+[WARNING] 05:36:56:287 [Kernel]/(6025:6029): Entre a atender instruccion
+[INFO] 05:36:56:287 [Kernel]/(6025:6029): A2
+[INFO] 05:36:56:287 [Kernel]/(6025:6029): A3
+[INFO] 05:36:56:287 [Kernel]/(6025:6029): A4
+[INFO] 05:36:56:288 [Kernel]/(6025:6038): Se solicito a Memoria resolver Page FAULT
+[INFO] 05:50:56:773 [Kernel]/(6136:6136): [RECURSO | 1]
+[INFO] 05:50:56:774 [Kernel]/(6136:6136): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 05:50:56:775 [Kernel]/(6136:6136): HANDSHAKE CON FILESYSTEM [EXITOSO]
+[INFO] 05:50:56:775 [Kernel]/(6136:6136): HANDSHAKE CON CPU_Dispatch [EXITOSO]
+[INFO] 05:50:56:776 [Kernel]/(6136:6136): HANDSHAKE CON CPU_Interrupt [EXITOSO]
+[INFO] 05:51:03:826 [Kernel]/(6136:6145): Se aviso a Memoria del nuevo proceso
+[INFO] 05:51:16:865 [Kernel]/(6136:6138): Se recibio algo de MEMORIA
+[INFO] 05:51:18:375 [Kernel]/(6136:6140): Se recibio algo de CPU_Dispatch
+[WARNING] 05:51:18:375 [Kernel]/(6136:6140): Entre a atender instruccion
+[INFO] 05:51:18:375 [Kernel]/(6136:6140): A2
+[INFO] 05:51:18:375 [Kernel]/(6136:6140): A3
+[INFO] 05:51:18:375 [Kernel]/(6136:6140): A4
+[INFO] 05:51:18:376 [Kernel]/(6136:6148): Se solicito a Memoria resolver Page FAULT
+[INFO] 05:51:20:882 [Kernel]/(6136:6138): Se recibio algo de MEMORIA
+[INFO] 05:51:20:882 [Kernel]/(6136:6138): A2
+[INFO] 05:51:20:882 [Kernel]/(6136:6138): A3
+[INFO] 05:51:20:882 [Kernel]/(6136:6138): A4
+[INFO] 05:51:20:883 [Kernel]/(6136:6138): Memoria soluciono el PAGE FAULT
+[INFO] 06:09:52:564 [Kernel]/(6526:6526): [RECURSO | 1]
+[INFO] 06:09:52:565 [Kernel]/(6526:6526): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 06:09:52:566 [Kernel]/(6526:6526): HANDSHAKE CON FILESYSTEM [EXITOSO]
+[INFO] 06:09:52:567 [Kernel]/(6526:6526): HANDSHAKE CON CPU_Dispatch [EXITOSO]
+[INFO] 06:09:52:567 [Kernel]/(6526:6526): HANDSHAKE CON CPU_Interrupt [EXITOSO]
+[INFO] 06:09:59:768 [Kernel]/(6526:6536): Se aviso a Memoria del nuevo proceso
+[INFO] 06:10:12:801 [Kernel]/(6526:6528): Se recibio algo de MEMORIA
+[INFO] 06:10:14:313 [Kernel]/(6526:6530): Se recibio algo de CPU_Dispatch
+[WARNING] 06:10:14:313 [Kernel]/(6526:6530): Entre a atender instruccion
+[INFO] 06:10:14:315 [Kernel]/(6526:6530): A2
+[INFO] 06:10:14:315 [Kernel]/(6526:6530): A3
+[INFO] 06:10:14:315 [Kernel]/(6526:6530): A4
+[INFO] 06:10:14:316 [Kernel]/(6526:6539): Se solicito a Memoria resolver Page FAULT
+[INFO] 06:10:19:888 [Kernel]/(6526:6528): Se recibio algo de MEMORIA
+[INFO] 06:10:19:888 [Kernel]/(6526:6528): A2
+[INFO] 06:10:19:888 [Kernel]/(6526:6528): A3
+[INFO] 06:10:19:888 [Kernel]/(6526:6528): A4
+[INFO] 06:10:19:888 [Kernel]/(6526:6528): Memoria soluciono el PAGE FAULT
+[INFO] 06:10:22:410 [Kernel]/(6526:6530): Se recibio algo de CPU_Dispatch
+[WARNING] 06:10:22:410 [Kernel]/(6526:6530): Entre a atender instruccion
+[INFO] 06:10:22:410 [Kernel]/(6526:6530): A2
+[INFO] 06:10:22:410 [Kernel]/(6526:6530): A3
+[INFO] 06:10:22:410 [Kernel]/(6526:6530): A4
+[INFO] 06:10:22:410 [Kernel]/(6526:6542): Se solicito a Memoria resolver Page FAULT
+[INFO] 06:10:27:921 [Kernel]/(6526:6528): Se recibio algo de MEMORIA
+[INFO] 06:10:27:921 [Kernel]/(6526:6528): A2
+[INFO] 06:10:27:921 [Kernel]/(6526:6528): A3
+[INFO] 06:10:27:921 [Kernel]/(6526:6528): A4
+[INFO] 06:10:27:921 [Kernel]/(6526:6528): Memoria soluciono el PAGE FAULT
+[INFO] 06:10:30:439 [Kernel]/(6526:6530): Se recibio algo de CPU_Dispatch
+[WARNING] 06:10:30:439 [Kernel]/(6526:6530): Entre a atender instruccion
+[INFO] 06:10:30:440 [Kernel]/(6526:6530): A2
+[INFO] 06:10:30:440 [Kernel]/(6526:6530): A3
+[INFO] 06:10:30:440 [Kernel]/(6526:6530): A4
+[INFO] 06:10:30:440 [Kernel]/(6526:6545): Se solicito a Memoria resolver Page FAULT
+[INFO] 06:10:35:950 [Kernel]/(6526:6528): Se recibio algo de MEMORIA
+[INFO] 06:10:35:950 [Kernel]/(6526:6528): A2
+[INFO] 06:10:35:950 [Kernel]/(6526:6528): A3
+[INFO] 06:10:35:950 [Kernel]/(6526:6528): A4
+[INFO] 06:10:35:952 [Kernel]/(6526:6528): Memoria soluciono el PAGE FAULT
+[INFO] 06:10:38:466 [Kernel]/(6526:6530): Se recibio algo de CPU_Dispatch
+[WARNING] 06:10:38:466 [Kernel]/(6526:6530): Entre a atender instruccion
+[INFO] 06:10:38:466 [Kernel]/(6526:6530): A2
+[INFO] 06:10:38:466 [Kernel]/(6526:6530): A3
+[INFO] 06:10:38:466 [Kernel]/(6526:6530): A4
+[INFO] 06:10:38:466 [Kernel]/(6526:6548): Se solicito a Memoria resolver Page FAULT
+[INFO] 06:10:43:969 [Kernel]/(6526:6528): Se recibio algo de MEMORIA
+[INFO] 06:10:43:969 [Kernel]/(6526:6528): A2
+[INFO] 06:10:43:969 [Kernel]/(6526:6528): A3
+[INFO] 06:10:43:969 [Kernel]/(6526:6528): A4
+[INFO] 06:10:43:969 [Kernel]/(6526:6528): Memoria soluciono el PAGE FAULT
+[INFO] 06:10:49:992 [Kernel]/(6526:6530): Se recibio algo de CPU_Dispatch
+[WARNING] 06:10:49:992 [Kernel]/(6526:6530): Entre a atender instruccion
+[INFO] 06:10:49:992 [Kernel]/(6526:6530): A2
+[INFO] 06:10:49:992 [Kernel]/(6526:6530): A3
+[INFO] 06:10:49:992 [Kernel]/(6526:6530): A4
+[INFO] 06:10:49:993 [Kernel]/(6526:6551): Se solicito a Memoria resolver Page FAULT
+[INFO] 06:10:50:136 [Kernel]/(6526:6528): Se recibio algo de MEMORIA
+[ERROR] 06:10:50:136 [Kernel]/(6526:6528): [DESCONEXION]: MEMORIA
+[INFO] 06:19:56:236 [Kernel]/(6748:6748): [RECURSO | 1]
+[INFO] 06:19:56:238 [Kernel]/(6748:6748): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 06:19:56:238 [Kernel]/(6748:6748): HANDSHAKE CON FILESYSTEM [EXITOSO]
+[INFO] 06:19:56:238 [Kernel]/(6748:6748): HANDSHAKE CON CPU_Dispatch [EXITOSO]
+[INFO] 06:19:56:239 [Kernel]/(6748:6748): HANDSHAKE CON CPU_Interrupt [EXITOSO]
+[INFO] 06:20:13:080 [Kernel]/(6748:6758): Se aviso a Memoria del nuevo proceso
+[INFO] 06:20:26:116 [Kernel]/(6748:6750): Se recibio algo de MEMORIA
+[INFO] 06:20:27:630 [Kernel]/(6748:6752): Se recibio algo de CPU_Dispatch
+[WARNING] 06:20:27:630 [Kernel]/(6748:6752): Entre a atender instruccion
+[INFO] 06:20:27:630 [Kernel]/(6748:6752): A2
+[INFO] 06:20:27:630 [Kernel]/(6748:6752): A3
+[INFO] 06:20:27:630 [Kernel]/(6748:6752): A4
+[INFO] 06:20:27:631 [Kernel]/(6748:6761): Se solicito a Memoria resolver Page FAULT
+[INFO] 06:20:33:151 [Kernel]/(6748:6750): Se recibio algo de MEMORIA
+[INFO] 06:20:33:151 [Kernel]/(6748:6750): A2
+[INFO] 06:20:33:151 [Kernel]/(6748:6750): A3
+[INFO] 06:20:33:151 [Kernel]/(6748:6750): A4
+[INFO] 06:20:33:151 [Kernel]/(6748:6750): Memoria soluciono el PAGE FAULT
+[INFO] 06:20:35:729 [Kernel]/(6748:6752): Se recibio algo de CPU_Dispatch
+[WARNING] 06:20:35:729 [Kernel]/(6748:6752): Entre a atender instruccion
+[INFO] 06:20:35:729 [Kernel]/(6748:6752): A2
+[INFO] 06:20:35:729 [Kernel]/(6748:6752): A3
+[INFO] 06:20:35:729 [Kernel]/(6748:6752): A4
+[INFO] 06:20:35:730 [Kernel]/(6748:6764): Se solicito a Memoria resolver Page FAULT
+[INFO] 06:20:41:260 [Kernel]/(6748:6750): Se recibio algo de MEMORIA
+[INFO] 06:20:41:260 [Kernel]/(6748:6750): A2
+[INFO] 06:20:41:260 [Kernel]/(6748:6750): A3
+[INFO] 06:20:41:260 [Kernel]/(6748:6750): A4
+[INFO] 06:20:41:260 [Kernel]/(6748:6750): Memoria soluciono el PAGE FAULT
+[INFO] 06:20:43:784 [Kernel]/(6748:6752): Se recibio algo de CPU_Dispatch
+[WARNING] 06:20:43:784 [Kernel]/(6748:6752): Entre a atender instruccion
+[INFO] 06:20:43:784 [Kernel]/(6748:6752): A2
+[INFO] 06:20:43:784 [Kernel]/(6748:6752): A3
+[INFO] 06:20:43:784 [Kernel]/(6748:6752): A4
+[INFO] 06:20:43:784 [Kernel]/(6748:6767): Se solicito a Memoria resolver Page FAULT
+[INFO] 06:20:49:296 [Kernel]/(6748:6750): Se recibio algo de MEMORIA
+[INFO] 06:20:49:296 [Kernel]/(6748:6750): A2
+[INFO] 06:20:49:296 [Kernel]/(6748:6750): A3
+[INFO] 06:20:49:296 [Kernel]/(6748:6750): A4
+[INFO] 06:20:49:296 [Kernel]/(6748:6750): Memoria soluciono el PAGE FAULT
+[INFO] 06:20:51:818 [Kernel]/(6748:6752): Se recibio algo de CPU_Dispatch
+[WARNING] 06:20:51:819 [Kernel]/(6748:6752): Entre a atender instruccion
+[INFO] 06:20:51:819 [Kernel]/(6748:6752): A2
+[INFO] 06:20:51:819 [Kernel]/(6748:6752): A3
+[INFO] 06:20:51:819 [Kernel]/(6748:6752): A4
+[INFO] 06:20:51:819 [Kernel]/(6748:6770): Se solicito a Memoria resolver Page FAULT
+[INFO] 06:20:57:330 [Kernel]/(6748:6750): Se recibio algo de MEMORIA
+[INFO] 06:20:57:330 [Kernel]/(6748:6750): A2
+[INFO] 06:20:57:330 [Kernel]/(6748:6750): A3
+[INFO] 06:20:57:330 [Kernel]/(6748:6750): A4
+[INFO] 06:20:57:330 [Kernel]/(6748:6750): Memoria soluciono el PAGE FAULT
+[INFO] 06:21:03:395 [Kernel]/(6748:6752): Se recibio algo de CPU_Dispatch
+[WARNING] 06:21:03:395 [Kernel]/(6748:6752): Entre a atender instruccion
+[INFO] 06:21:03:395 [Kernel]/(6748:6752): A2
+[INFO] 06:21:03:395 [Kernel]/(6748:6752): A3
+[INFO] 06:21:03:395 [Kernel]/(6748:6752): A4
+[INFO] 06:21:03:396 [Kernel]/(6748:6773): Se solicito a Memoria resolver Page FAULT
+[INFO] 06:21:03:496 [Kernel]/(6748:6750): Se recibio algo de MEMORIA
+[INFO] 06:21:03:496 [Kernel]/(6748:6752): Se recibio algo de CPU_Dispatch
+[ERROR] 06:21:03:496 [Kernel]/(6748:6752): [DESCONEXION]: FILESYSTEM
+[INFO] 06:26:11:209 [Kernel]/(6831:6831): [RECURSO | 1]
+[INFO] 06:26:11:210 [Kernel]/(6831:6831): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 06:26:11:211 [Kernel]/(6831:6831): HANDSHAKE CON FILESYSTEM [EXITOSO]
+[INFO] 06:26:11:211 [Kernel]/(6831:6831): HANDSHAKE CON CPU_Dispatch [EXITOSO]
+[INFO] 06:26:11:212 [Kernel]/(6831:6831): HANDSHAKE CON CPU_Interrupt [EXITOSO]
+[INFO] 06:26:18:273 [Kernel]/(6831:6841): Se aviso a Memoria del nuevo proceso
+[INFO] 06:26:31:341 [Kernel]/(6831:6833): Se recibio algo de MEMORIA
+[INFO] 06:26:32:861 [Kernel]/(6831:6835): Se recibio algo de CPU_Dispatch
+[WARNING] 06:26:32:861 [Kernel]/(6831:6835): Entre a atender instruccion
+[INFO] 06:26:32:862 [Kernel]/(6831:6844): Se solicito a Memoria resolver Page FAULT
+[INFO] 06:26:38:423 [Kernel]/(6831:6833): Se recibio algo de MEMORIA
+[INFO] 06:26:40:425 [Kernel]/(6831:6833): Memoria soluciono el PAGE FAULT
+[INFO] 06:26:42:987 [Kernel]/(6831:6835): Se recibio algo de CPU_Dispatch
+[WARNING] 06:26:42:987 [Kernel]/(6831:6835): Entre a atender instruccion
+[INFO] 06:26:42:987 [Kernel]/(6831:6847): Se solicito a Memoria resolver Page FAULT
+[INFO] 06:26:48:493 [Kernel]/(6831:6833): Se recibio algo de MEMORIA
+[INFO] 06:26:50:495 [Kernel]/(6831:6833): Memoria soluciono el PAGE FAULT
+[INFO] 06:26:53:035 [Kernel]/(6831:6835): Se recibio algo de CPU_Dispatch
+[WARNING] 06:26:53:035 [Kernel]/(6831:6835): Entre a atender instruccion
+[INFO] 06:26:53:038 [Kernel]/(6831:6850): Se solicito a Memoria resolver Page FAULT
+[INFO] 06:26:58:555 [Kernel]/(6831:6833): Se recibio algo de MEMORIA
+[INFO] 06:27:00:560 [Kernel]/(6831:6833): Memoria soluciono el PAGE FAULT
+[INFO] 06:27:03:088 [Kernel]/(6831:6835): Se recibio algo de CPU_Dispatch
+[WARNING] 06:27:03:089 [Kernel]/(6831:6835): Entre a atender instruccion
+[INFO] 06:27:03:089 [Kernel]/(6831:6853): Se solicito a Memoria resolver Page FAULT
+[INFO] 06:27:08:602 [Kernel]/(6831:6833): Se recibio algo de MEMORIA
+[INFO] 06:27:10:603 [Kernel]/(6831:6833): Memoria soluciono el PAGE FAULT
+[INFO] 06:27:16:651 [Kernel]/(6831:6835): Se recibio algo de CPU_Dispatch
+[WARNING] 06:27:16:651 [Kernel]/(6831:6835): Entre a atender instruccion
+[INFO] 06:27:16:655 [Kernel]/(6831:6856): Se solicito a Memoria resolver Page FAULT
+[INFO] 06:27:16:769 [Kernel]/(6831:6833): Se recibio algo de MEMORIA
+[ERROR] 06:27:16:769 [Kernel]/(6831:6833): [DESCONEXION]: MEMORIA
+[INFO] 06:31:39:643 [Kernel]/(6964:6964): [RECURSO | 1]
+[INFO] 06:31:39:644 [Kernel]/(6964:6964): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 06:31:39:645 [Kernel]/(6964:6964): HANDSHAKE CON FILESYSTEM [EXITOSO]
+[INFO] 06:31:39:645 [Kernel]/(6964:6964): HANDSHAKE CON CPU_Dispatch [EXITOSO]
+[INFO] 06:31:39:646 [Kernel]/(6964:6964): HANDSHAKE CON CPU_Interrupt [EXITOSO]
+[INFO] 06:31:45:265 [Kernel]/(6964:6973): Se aviso a Memoria del nuevo proceso
+[INFO] 06:31:58:313 [Kernel]/(6964:6966): Se recibio algo de MEMORIA
+[INFO] 06:31:59:825 [Kernel]/(6964:6968): Se recibio algo de CPU_Dispatch
+[WARNING] 06:31:59:825 [Kernel]/(6964:6968): Entre a atender instruccion
+[INFO] 06:31:59:826 [Kernel]/(6964:6976): Se solicito a Memoria resolver Page FAULT
+[INFO] 06:32:05:346 [Kernel]/(6964:6966): Se recibio algo de MEMORIA
+[INFO] 06:32:07:350 [Kernel]/(6964:6966): Memoria soluciono el PAGE FAULT
+[INFO] 06:32:09:884 [Kernel]/(6964:6968): Se recibio algo de CPU_Dispatch
+[WARNING] 06:32:09:884 [Kernel]/(6964:6968): Entre a atender instruccion
+[INFO] 06:32:09:885 [Kernel]/(6964:6979): Se solicito a Memoria resolver Page FAULT
+[INFO] 06:32:15:399 [Kernel]/(6964:6966): Se recibio algo de MEMORIA
+[INFO] 06:32:17:401 [Kernel]/(6964:6966): Memoria soluciono el PAGE FAULT
+[INFO] 06:32:19:921 [Kernel]/(6964:6968): Se recibio algo de CPU_Dispatch
+[WARNING] 06:32:19:921 [Kernel]/(6964:6968): Entre a atender instruccion
+[INFO] 06:32:19:922 [Kernel]/(6964:6982): Se solicito a Memoria resolver Page FAULT
+[INFO] 06:32:25:433 [Kernel]/(6964:6966): Se recibio algo de MEMORIA
+[INFO] 06:32:27:439 [Kernel]/(6964:6966): Memoria soluciono el PAGE FAULT
+[INFO] 06:32:29:957 [Kernel]/(6964:6968): Se recibio algo de CPU_Dispatch
+[WARNING] 06:32:29:957 [Kernel]/(6964:6968): Entre a atender instruccion
+[INFO] 06:32:29:957 [Kernel]/(6964:6985): Se solicito a Memoria resolver Page FAULT
+[INFO] 06:32:35:475 [Kernel]/(6964:6966): Se recibio algo de MEMORIA
+[INFO] 06:32:37:481 [Kernel]/(6964:6966): Memoria soluciono el PAGE FAULT
+[INFO] 06:32:43:576 [Kernel]/(6964:6968): Se recibio algo de CPU_Dispatch
+[WARNING] 06:32:43:576 [Kernel]/(6964:6968): Entre a atender instruccion
+[INFO] 06:32:43:576 [Kernel]/(6964:6988): Se solicito a Memoria resolver Page FAULT
+[INFO] 06:32:43:736 [Kernel]/(6964:6966): Se recibio algo de MEMORIA
+[ERROR] 06:32:43:736 [Kernel]/(6964:6966): [DESCONEXION]: MEMORIA
+[INFO] 06:44:32:793 [Kernel]/(18031:18031): [RECURSO | 1]
+[INFO] 06:44:32:870 [Kernel]/(18031:18031): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 06:44:32:885 [Kernel]/(18031:18031): HANDSHAKE CON FILESYSTEM [EXITOSO]
+[INFO] 06:44:32:914 [Kernel]/(18031:18031): HANDSHAKE CON CPU_Dispatch [EXITOSO]
+[INFO] 06:44:32:915 [Kernel]/(18031:18031): HANDSHAKE CON CPU_Interrupt [EXITOSO]
+[INFO] 06:44:40:840 [Kernel]/(18031:18439): Se aviso a Memoria del nuevo proceso
+[INFO] 06:44:54:121 [Kernel]/(18031:18033): Se recibio algo de MEMORIA
+[INFO] 06:44:55:637 [Kernel]/(18031:18035): Se recibio algo de CPU_Dispatch
+[WARNING] 06:44:55:637 [Kernel]/(18031:18035): Entre a atender instruccion
+[INFO] 06:44:55:643 [Kernel]/(18031:19862): Se solicito a Memoria resolver Page FAULT
+[INFO] 06:45:01:156 [Kernel]/(18031:18033): Se recibio algo de MEMORIA
+[INFO] 06:45:03:157 [Kernel]/(18031:18033): Memoria soluciono el PAGE FAULT
+[INFO] 06:45:05:679 [Kernel]/(18031:18035): Se recibio algo de CPU_Dispatch
+[WARNING] 06:45:05:679 [Kernel]/(18031:18035): Entre a atender instruccion
+[INFO] 06:45:05:680 [Kernel]/(18031:20718): Se solicito a Memoria resolver Page FAULT
+[INFO] 06:45:11:185 [Kernel]/(18031:18033): Se recibio algo de MEMORIA
+[INFO] 06:45:13:186 [Kernel]/(18031:18033): Memoria soluciono el PAGE FAULT
+[INFO] 06:45:15:705 [Kernel]/(18031:18035): Se recibio algo de CPU_Dispatch
+[WARNING] 06:45:15:705 [Kernel]/(18031:18035): Entre a atender instruccion
+[INFO] 06:45:15:706 [Kernel]/(18031:23310): Se solicito a Memoria resolver Page FAULT
+[INFO] 06:45:21:216 [Kernel]/(18031:18033): Se recibio algo de MEMORIA
+[INFO] 06:45:23:217 [Kernel]/(18031:18033): Memoria soluciono el PAGE FAULT
+[INFO] 06:45:25:772 [Kernel]/(18031:18035): Se recibio algo de CPU_Dispatch
+[WARNING] 06:45:25:772 [Kernel]/(18031:18035): Entre a atender instruccion
+[INFO] 06:45:25:775 [Kernel]/(18031:26220): Se solicito a Memoria resolver Page FAULT
+[INFO] 06:45:31:283 [Kernel]/(18031:18033): Se recibio algo de MEMORIA
+[INFO] 06:45:33:284 [Kernel]/(18031:18033): Memoria soluciono el PAGE FAULT
+[INFO] 06:45:39:314 [Kernel]/(18031:18035): Se recibio algo de CPU_Dispatch
+[WARNING] 06:45:39:314 [Kernel]/(18031:18035): Entre a atender instruccion
+[INFO] 06:45:39:315 [Kernel]/(18031:30479): Se solicito a Memoria resolver Page FAULT
+[INFO] 06:45:39:912 [Kernel]/(18031:18033): Se recibio algo de MEMORIA
+[ERROR] 06:45:39:912 [Kernel]/(18031:18033): [DESCONEXION]: MEMORIA
+[INFO] 06:49:07:654 [Kernel]/(35647:35647): [RECURSO | 1]
+[INFO] 06:49:07:655 [Kernel]/(35647:35647): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 06:49:07:656 [Kernel]/(35647:35647): HANDSHAKE CON FILESYSTEM [EXITOSO]
+[INFO] 06:49:07:656 [Kernel]/(35647:35647): HANDSHAKE CON CPU_Dispatch [EXITOSO]
+[INFO] 06:49:07:657 [Kernel]/(35647:35647): HANDSHAKE CON CPU_Interrupt [EXITOSO]
+[INFO] 06:49:12:939 [Kernel]/(35647:35657): Se aviso a Memoria del nuevo proceso
+[INFO] 06:49:25:970 [Kernel]/(35647:35649): Se recibio algo de MEMORIA
+[INFO] 06:49:27:488 [Kernel]/(35647:35651): Se recibio algo de CPU_Dispatch
+[WARNING] 06:49:27:488 [Kernel]/(35647:35651): Entre a atender instruccion
+[INFO] 06:49:27:489 [Kernel]/(35647:35660): Se solicito a Memoria resolver Page FAULT
+[INFO] 06:49:33:044 [Kernel]/(35647:35649): Se recibio algo de MEMORIA
+[INFO] 06:49:35:046 [Kernel]/(35647:35649): Memoria soluciono el PAGE FAULT
+[INFO] 06:49:37:567 [Kernel]/(35647:35651): Se recibio algo de CPU_Dispatch
+[WARNING] 06:49:37:567 [Kernel]/(35647:35651): Entre a atender instruccion
+[INFO] 06:49:37:568 [Kernel]/(35647:35663): Se solicito a Memoria resolver Page FAULT
+[INFO] 06:49:43:087 [Kernel]/(35647:35649): Se recibio algo de MEMORIA
+[INFO] 06:49:45:102 [Kernel]/(35647:35649): Memoria soluciono el PAGE FAULT
+[INFO] 06:49:47:650 [Kernel]/(35647:35651): Se recibio algo de CPU_Dispatch
+[WARNING] 06:49:47:650 [Kernel]/(35647:35651): Entre a atender instruccion
+[INFO] 06:49:47:652 [Kernel]/(35647:35666): Se solicito a Memoria resolver Page FAULT
+[INFO] 06:49:53:170 [Kernel]/(35647:35649): Se recibio algo de MEMORIA
+[INFO] 06:49:55:172 [Kernel]/(35647:35649): Memoria soluciono el PAGE FAULT
+[INFO] 06:49:57:690 [Kernel]/(35647:35651): Se recibio algo de CPU_Dispatch
+[WARNING] 06:49:57:690 [Kernel]/(35647:35651): Entre a atender instruccion
+[INFO] 06:49:57:691 [Kernel]/(35647:35669): Se solicito a Memoria resolver Page FAULT
+[INFO] 06:50:03:200 [Kernel]/(35647:35649): Se recibio algo de MEMORIA
+[INFO] 06:50:05:200 [Kernel]/(35647:35649): Memoria soluciono el PAGE FAULT
+[INFO] 06:50:11:233 [Kernel]/(35647:35651): Se recibio algo de CPU_Dispatch
+[WARNING] 06:50:11:234 [Kernel]/(35647:35651): Entre a atender instruccion
+[INFO] 06:50:11:235 [Kernel]/(35647:35672): Se solicito a Memoria resolver Page FAULT
+[INFO] 06:50:11:348 [Kernel]/(35647:35649): Se recibio algo de MEMORIA
+[ERROR] 06:50:11:348 [Kernel]/(35647:35649): [DESCONEXION]: MEMORIA
+[INFO] 06:51:20:110 [Kernel]/(35707:35707): [RECURSO | 1]
+[INFO] 06:51:20:112 [Kernel]/(35707:35707): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 06:51:20:112 [Kernel]/(35707:35707): HANDSHAKE CON FILESYSTEM [EXITOSO]
+[INFO] 06:51:20:112 [Kernel]/(35707:35707): HANDSHAKE CON CPU_Dispatch [EXITOSO]
+[INFO] 06:51:20:116 [Kernel]/(35707:35707): HANDSHAKE CON CPU_Interrupt [EXITOSO]
+[INFO] 06:51:43:366 [Kernel]/(35707:35718): Se aviso a Memoria del nuevo proceso
+[INFO] 06:51:56:412 [Kernel]/(35707:35709): Se recibio algo de MEMORIA
+[INFO] 06:51:57:942 [Kernel]/(35707:35711): Se recibio algo de CPU_Dispatch
+[WARNING] 06:51:57:942 [Kernel]/(35707:35711): Entre a atender instruccion
+[INFO] 06:51:57:943 [Kernel]/(35707:35721): Se solicito a Memoria resolver Page FAULT
+[INFO] 06:52:03:463 [Kernel]/(35707:35709): Se recibio algo de MEMORIA
+[INFO] 06:52:05:466 [Kernel]/(35707:35709): Memoria soluciono el PAGE FAULT
+[INFO] 06:52:07:985 [Kernel]/(35707:35711): Se recibio algo de CPU_Dispatch
+[WARNING] 06:52:07:985 [Kernel]/(35707:35711): Entre a atender instruccion
+[INFO] 06:52:07:986 [Kernel]/(35707:35724): Se solicito a Memoria resolver Page FAULT
+[INFO] 06:52:13:499 [Kernel]/(35707:35709): Se recibio algo de MEMORIA
+[INFO] 06:52:15:515 [Kernel]/(35707:35709): Memoria soluciono el PAGE FAULT
+[INFO] 06:52:18:031 [Kernel]/(35707:35711): Se recibio algo de CPU_Dispatch
+[WARNING] 06:52:18:031 [Kernel]/(35707:35711): Entre a atender instruccion
+[INFO] 06:52:18:032 [Kernel]/(35707:35727): Se solicito a Memoria resolver Page FAULT
+[INFO] 06:52:23:540 [Kernel]/(35707:35709): Se recibio algo de MEMORIA
+[INFO] 06:52:25:542 [Kernel]/(35707:35709): Memoria soluciono el PAGE FAULT
+[INFO] 06:52:28:058 [Kernel]/(35707:35711): Se recibio algo de CPU_Dispatch
+[WARNING] 06:52:28:058 [Kernel]/(35707:35711): Entre a atender instruccion
+[INFO] 06:52:28:059 [Kernel]/(35707:35730): Se solicito a Memoria resolver Page FAULT
+[INFO] 06:52:33:566 [Kernel]/(35707:35709): Se recibio algo de MEMORIA
+[INFO] 06:52:35:571 [Kernel]/(35707:35709): Memoria soluciono el PAGE FAULT
+[INFO] 06:52:41:663 [Kernel]/(35707:35711): Se recibio algo de CPU_Dispatch
+[WARNING] 06:52:41:664 [Kernel]/(35707:35711): Entre a atender instruccion
+[INFO] 06:52:41:664 [Kernel]/(35707:35733): Se solicito a Memoria resolver Page FAULT
+[INFO] 06:52:47:176 [Kernel]/(35707:35709): Se recibio algo de MEMORIA
+[INFO] 06:52:49:178 [Kernel]/(35707:35709): Memoria soluciono el PAGE FAULT
+[INFO] 06:52:51:707 [Kernel]/(35707:35711): Se recibio algo de CPU_Dispatch
+[WARNING] 06:52:51:707 [Kernel]/(35707:35711): Entre a atender instruccion
+[INFO] 06:52:51:707 [Kernel]/(35707:35736): Se solicito a Memoria resolver Page FAULT
+[INFO] 06:52:57:226 [Kernel]/(35707:35709): Se recibio algo de MEMORIA
+[INFO] 06:52:59:228 [Kernel]/(35707:35709): Memoria soluciono el PAGE FAULT
+[INFO] 06:53:01:738 [Kernel]/(35707:35711): Se recibio algo de CPU_Dispatch
+[WARNING] 06:53:01:738 [Kernel]/(35707:35711): Entre a atender instruccion
+[INFO] 06:53:01:739 [Kernel]/(35707:35739): Se solicito a Memoria resolver Page FAULT
+[INFO] 06:53:07:271 [Kernel]/(35707:35709): Se recibio algo de MEMORIA
+[INFO] 06:53:09:274 [Kernel]/(35707:35709): Memoria soluciono el PAGE FAULT
+[INFO] 06:53:11:799 [Kernel]/(35707:35711): Se recibio algo de CPU_Dispatch
+[WARNING] 06:53:11:799 [Kernel]/(35707:35711): Entre a atender instruccion
+[INFO] 06:53:11:799 [Kernel]/(35707:35742): Se solicito a Memoria resolver Page FAULT
+[INFO] 06:53:17:306 [Kernel]/(35707:35709): Se recibio algo de MEMORIA
+[INFO] 06:53:19:313 [Kernel]/(35707:35709): Memoria soluciono el PAGE FAULT
+[INFO] 06:53:21:335 [Kernel]/(35707:35711): Se recibio algo de CPU_Dispatch
+[WARNING] 06:53:21:335 [Kernel]/(35707:35711): Entre a atender instruccion
+[INFO] 06:53:21:336 [Kernel]/(35707:35711): Mensaje a MEMORIA: LIBERAR_ESTRUCTURA_KM [PID: 1]
+[INFO] 06:53:21:839 [Kernel]/(35707:35709): Se recibio algo de MEMORIA
+[INFO] 06:55:10:067 [Kernel]/(35776:35776): [RECURSO | 1]
+[INFO] 06:55:10:069 [Kernel]/(35776:35776): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 06:55:10:069 [Kernel]/(35776:35776): HANDSHAKE CON FILESYSTEM [EXITOSO]
+[INFO] 06:55:10:070 [Kernel]/(35776:35776): HANDSHAKE CON CPU_Dispatch [EXITOSO]
+[INFO] 06:55:10:071 [Kernel]/(35776:35776): HANDSHAKE CON CPU_Interrupt [EXITOSO]
+[INFO] 06:55:16:468 [Kernel]/(35776:35785): Se aviso a Memoria del nuevo proceso
+[INFO] 06:55:29:498 [Kernel]/(35776:35778): Se recibio algo de MEMORIA
+[INFO] 06:55:31:025 [Kernel]/(35776:35780): Se recibio algo de CPU_Dispatch
+[WARNING] 06:55:31:025 [Kernel]/(35776:35780): Entre a atender instruccion
+[INFO] 06:55:31:025 [Kernel]/(35776:35788): Se solicito a Memoria resolver Page FAULT
+[INFO] 06:55:36:537 [Kernel]/(35776:35778): Se recibio algo de MEMORIA
+[INFO] 06:55:36:537 [Kernel]/(35776:35778): Memoria soluciono el PAGE FAULT
+[INFO] 06:55:39:060 [Kernel]/(35776:35780): Se recibio algo de CPU_Dispatch
+[WARNING] 06:55:39:060 [Kernel]/(35776:35780): Entre a atender instruccion
+[INFO] 06:55:39:061 [Kernel]/(35776:35791): Se solicito a Memoria resolver Page FAULT
+[INFO] 06:55:44:579 [Kernel]/(35776:35778): Se recibio algo de MEMORIA
+[INFO] 06:55:44:579 [Kernel]/(35776:35778): Memoria soluciono el PAGE FAULT
+[INFO] 06:55:47:140 [Kernel]/(35776:35780): Se recibio algo de CPU_Dispatch
+[WARNING] 06:55:47:140 [Kernel]/(35776:35780): Entre a atender instruccion
+[INFO] 06:55:47:141 [Kernel]/(35776:35794): Se solicito a Memoria resolver Page FAULT
+[INFO] 06:55:52:658 [Kernel]/(35776:35778): Se recibio algo de MEMORIA
+[INFO] 06:55:52:658 [Kernel]/(35776:35778): Memoria soluciono el PAGE FAULT
+[INFO] 06:55:55:171 [Kernel]/(35776:35780): Se recibio algo de CPU_Dispatch
+[WARNING] 06:55:55:171 [Kernel]/(35776:35780): Entre a atender instruccion
+[INFO] 06:55:55:172 [Kernel]/(35776:35797): Se solicito a Memoria resolver Page FAULT
+[INFO] 06:56:00:681 [Kernel]/(35776:35778): Se recibio algo de MEMORIA
+[INFO] 06:56:00:681 [Kernel]/(35776:35778): Memoria soluciono el PAGE FAULT
+[INFO] 06:56:06:720 [Kernel]/(35776:35780): Se recibio algo de CPU_Dispatch
+[WARNING] 06:56:06:720 [Kernel]/(35776:35780): Entre a atender instruccion
+[INFO] 06:56:06:721 [Kernel]/(35776:35800): Se solicito a Memoria resolver Page FAULT
+[INFO] 06:56:12:238 [Kernel]/(35776:35778): Se recibio algo de MEMORIA
+[INFO] 06:56:12:239 [Kernel]/(35776:35778): Memoria soluciono el PAGE FAULT
+[INFO] 06:56:14:763 [Kernel]/(35776:35780): Se recibio algo de CPU_Dispatch
+[WARNING] 06:56:14:763 [Kernel]/(35776:35780): Entre a atender instruccion
+[INFO] 06:56:14:764 [Kernel]/(35776:35803): Se solicito a Memoria resolver Page FAULT
+[INFO] 06:56:20:287 [Kernel]/(35776:35778): Se recibio algo de MEMORIA
+[INFO] 06:56:20:287 [Kernel]/(35776:35778): Memoria soluciono el PAGE FAULT
+[INFO] 06:56:22:805 [Kernel]/(35776:35780): Se recibio algo de CPU_Dispatch
+[WARNING] 06:56:22:805 [Kernel]/(35776:35780): Entre a atender instruccion
+[INFO] 06:56:22:805 [Kernel]/(35776:35806): Se solicito a Memoria resolver Page FAULT
+[INFO] 06:56:28:321 [Kernel]/(35776:35778): Se recibio algo de MEMORIA
+[INFO] 06:56:28:321 [Kernel]/(35776:35778): Memoria soluciono el PAGE FAULT
+[INFO] 06:56:30:841 [Kernel]/(35776:35780): Se recibio algo de CPU_Dispatch
+[WARNING] 06:56:30:841 [Kernel]/(35776:35780): Entre a atender instruccion
+[INFO] 06:56:30:842 [Kernel]/(35776:35809): Se solicito a Memoria resolver Page FAULT
+[INFO] 06:56:36:348 [Kernel]/(35776:35778): Se recibio algo de MEMORIA
+[INFO] 06:56:36:348 [Kernel]/(35776:35778): Memoria soluciono el PAGE FAULT
+[INFO] 06:56:38:389 [Kernel]/(35776:35780): Se recibio algo de CPU_Dispatch
+[WARNING] 06:56:38:389 [Kernel]/(35776:35780): Entre a atender instruccion
+[INFO] 06:56:38:389 [Kernel]/(35776:35780): Mensaje a MEMORIA: LIBERAR_ESTRUCTURA_KM [PID: 1]
+[INFO] 06:56:38:891 [Kernel]/(35776:35778): Se recibio algo de MEMORIA
+[INFO] 06:56:54:626 [Kernel]/(35776:35813): Se aviso a Memoria del nuevo proceso
+[INFO] 06:57:07:666 [Kernel]/(35776:35778): Se recibio algo de MEMORIA
+[INFO] 06:57:07:667 [Kernel]/(35776:35815): Se aviso a Memoria del nuevo proceso
+[INFO] 06:57:09:183 [Kernel]/(35776:35780): Se recibio algo de CPU_Dispatch
+[WARNING] 06:57:09:183 [Kernel]/(35776:35780): Entre a atender instruccion
+[INFO] 06:57:09:184 [Kernel]/(35776:35819): Se solicito a Memoria resolver Page FAULT
+[INFO] 06:57:20:722 [Kernel]/(35776:35778): Se recibio algo de MEMORIA
+[INFO] 06:57:20:723 [Kernel]/(35776:35814): Se aviso a Memoria del nuevo proceso
+[INFO] 06:57:22:233 [Kernel]/(35776:35780): Se recibio algo de CPU_Dispatch
+[WARNING] 06:57:22:233 [Kernel]/(35776:35780): Entre a atender instruccion
+[INFO] 06:57:26:244 [Kernel]/(35776:35778): Se recibio algo de MEMORIA
+[INFO] 06:57:26:244 [Kernel]/(35776:35778): Memoria soluciono el PAGE FAULT
+[INFO] 06:57:26:245 [Kernel]/(35776:35822): Se solicito a Memoria resolver Page FAULT
+[INFO] 06:57:28:763 [Kernel]/(35776:35780): Se recibio algo de CPU_Dispatch
+[WARNING] 06:57:28:763 [Kernel]/(35776:35780): Entre a atender instruccion
+[INFO] 06:57:35:277 [Kernel]/(35776:35778): Se recibio algo de MEMORIA
+[INFO] 06:57:35:277 [Kernel]/(35776:35816): Se aviso a Memoria del nuevo proceso
+[INFO] 06:57:36:791 [Kernel]/(35776:35780): Se recibio algo de CPU_Dispatch
+[WARNING] 06:57:36:791 [Kernel]/(35776:35780): Entre a atender instruccion
+[INFO] 06:57:40:787 [Kernel]/(35776:35778): Se recibio algo de MEMORIA
+[INFO] 06:57:40:787 [Kernel]/(35776:35778): Memoria soluciono el PAGE FAULT
+[INFO] 06:57:40:787 [Kernel]/(35776:35825): Se solicito a Memoria resolver Page FAULT
+[INFO] 06:57:43:345 [Kernel]/(35776:35780): Se recibio algo de CPU_Dispatch
+[WARNING] 06:57:43:345 [Kernel]/(35776:35780): Entre a atender instruccion
+[INFO] 06:57:49:807 [Kernel]/(35776:35778): Se recibio algo de MEMORIA
+[INFO] 06:57:51:324 [Kernel]/(35776:35780): Se recibio algo de CPU_Dispatch
+[WARNING] 06:57:51:324 [Kernel]/(35776:35780): Entre a atender instruccion
+[INFO] 06:57:55:328 [Kernel]/(35776:35778): Se recibio algo de MEMORIA
+[INFO] 06:57:55:328 [Kernel]/(35776:35778): Memoria soluciono el PAGE FAULT
+[INFO] 06:57:55:329 [Kernel]/(35776:35828): Se solicito a Memoria resolver Page FAULT
+[INFO] 06:57:57:879 [Kernel]/(35776:35780): Se recibio algo de CPU_Dispatch
+[WARNING] 06:57:57:879 [Kernel]/(35776:35780): Entre a atender instruccion
+[INFO] 06:58:00:851 [Kernel]/(35776:35778): Se recibio algo de MEMORIA
+[INFO] 06:58:00:851 [Kernel]/(35776:35778): Memoria soluciono el PAGE FAULT
+[INFO] 06:58:00:851 [Kernel]/(35776:35831): Se solicito a Memoria resolver Page FAULT
+[INFO] 06:58:03:369 [Kernel]/(35776:35780): Se recibio algo de CPU_Dispatch
+[WARNING] 06:58:03:370 [Kernel]/(35776:35780): Entre a atender instruccion
+[INFO] 06:58:06:378 [Kernel]/(35776:35778): Se recibio algo de MEMORIA
+[INFO] 06:58:06:378 [Kernel]/(35776:35778): Memoria soluciono el PAGE FAULT
+[INFO] 06:58:06:379 [Kernel]/(35776:35834): Se solicito a Memoria resolver Page FAULT
+[INFO] 06:58:08:909 [Kernel]/(35776:35780): Se recibio algo de CPU_Dispatch
+[WARNING] 06:58:08:909 [Kernel]/(35776:35780): Entre a atender instruccion
+[INFO] 06:58:11:888 [Kernel]/(35776:35778): Se recibio algo de MEMORIA
+[INFO] 06:58:11:888 [Kernel]/(35776:35778): Memoria soluciono el PAGE FAULT
+[INFO] 06:58:11:888 [Kernel]/(35776:35837): Se solicito a Memoria resolver Page FAULT
+[INFO] 06:58:14:414 [Kernel]/(35776:35780): Se recibio algo de CPU_Dispatch
+[WARNING] 06:58:14:414 [Kernel]/(35776:35780): Entre a atender instruccion
+[INFO] 06:58:17:402 [Kernel]/(35776:35778): Se recibio algo de MEMORIA
+[INFO] 06:58:17:402 [Kernel]/(35776:35778): Memoria soluciono el PAGE FAULT
+[INFO] 06:58:17:414 [Kernel]/(35776:35840): Se solicito a Memoria resolver Page FAULT
+[INFO] 06:58:19:938 [Kernel]/(35776:35780): Se recibio algo de CPU_Dispatch
+[WARNING] 06:58:19:938 [Kernel]/(35776:35780): Entre a atender instruccion
+[INFO] 06:58:22:922 [Kernel]/(35776:35778): Se recibio algo de MEMORIA
+[INFO] 06:58:22:923 [Kernel]/(35776:35778): Memoria soluciono el PAGE FAULT
+[INFO] 06:58:22:923 [Kernel]/(35776:35843): Se solicito a Memoria resolver Page FAULT
+[INFO] 06:58:25:453 [Kernel]/(35776:35780): Se recibio algo de CPU_Dispatch
+[WARNING] 06:58:25:453 [Kernel]/(35776:35780): Entre a atender instruccion
+[INFO] 06:58:28:444 [Kernel]/(35776:35778): Se recibio algo de MEMORIA
+[INFO] 06:58:28:445 [Kernel]/(35776:35778): Memoria soluciono el PAGE FAULT
+[INFO] 06:58:28:446 [Kernel]/(35776:35846): Se solicito a Memoria resolver Page FAULT
+[INFO] 06:58:30:961 [Kernel]/(35776:35780): Se recibio algo de CPU_Dispatch
+[WARNING] 06:58:30:961 [Kernel]/(35776:35780): Entre a atender instruccion
+[INFO] 06:58:33:958 [Kernel]/(35776:35778): Se recibio algo de MEMORIA
+[INFO] 06:58:33:959 [Kernel]/(35776:35778): Memoria soluciono el PAGE FAULT
+[INFO] 06:58:33:959 [Kernel]/(35776:35849): Se solicito a Memoria resolver Page FAULT
+[INFO] 06:58:36:476 [Kernel]/(35776:35780): Se recibio algo de CPU_Dispatch
+[WARNING] 06:58:36:476 [Kernel]/(35776:35780): Entre a atender instruccion
+[INFO] 06:58:39:465 [Kernel]/(35776:35778): Se recibio algo de MEMORIA
+[INFO] 06:58:39:466 [Kernel]/(35776:35778): Memoria soluciono el PAGE FAULT
+[INFO] 06:58:39:466 [Kernel]/(35776:35852): Se solicito a Memoria resolver Page FAULT
+[INFO] 06:58:41:993 [Kernel]/(35776:35780): Se recibio algo de CPU_Dispatch
+[WARNING] 06:58:41:993 [Kernel]/(35776:35780): Entre a atender instruccion
+[INFO] 06:58:44:992 [Kernel]/(35776:35778): Se recibio algo de MEMORIA
+[INFO] 06:58:44:992 [Kernel]/(35776:35778): Memoria soluciono el PAGE FAULT
+[INFO] 06:58:44:993 [Kernel]/(35776:35855): Se solicito a Memoria resolver Page FAULT
+[INFO] 06:58:47:502 [Kernel]/(35776:35780): Se recibio algo de CPU_Dispatch
+[WARNING] 06:58:47:502 [Kernel]/(35776:35780): Entre a atender instruccion
+[INFO] 06:58:50:509 [Kernel]/(35776:35778): Se recibio algo de MEMORIA
+[INFO] 06:58:50:509 [Kernel]/(35776:35778): Memoria soluciono el PAGE FAULT
+[INFO] 06:58:50:510 [Kernel]/(35776:35858): Se solicito a Memoria resolver Page FAULT
+[INFO] 06:58:53:040 [Kernel]/(35776:35780): Se recibio algo de CPU_Dispatch
+[WARNING] 06:58:53:040 [Kernel]/(35776:35780): Entre a atender instruccion
+[INFO] 06:58:56:021 [Kernel]/(35776:35778): Se recibio algo de MEMORIA
+[INFO] 06:58:56:022 [Kernel]/(35776:35778): Memoria soluciono el PAGE FAULT
+[INFO] 06:58:56:022 [Kernel]/(35776:35861): Se solicito a Memoria resolver Page FAULT
+[INFO] 06:58:58:536 [Kernel]/(35776:35780): Se recibio algo de CPU_Dispatch
+[WARNING] 06:58:58:536 [Kernel]/(35776:35780): Entre a atender instruccion
+[INFO] 06:59:01:532 [Kernel]/(35776:35778): Se recibio algo de MEMORIA
+[INFO] 06:59:01:532 [Kernel]/(35776:35778): Memoria soluciono el PAGE FAULT
+[INFO] 06:59:01:539 [Kernel]/(35776:35864): Se solicito a Memoria resolver Page FAULT
+[INFO] 06:59:04:059 [Kernel]/(35776:35780): Se recibio algo de CPU_Dispatch
+[WARNING] 06:59:04:059 [Kernel]/(35776:35780): Entre a atender instruccion
+[INFO] 06:59:07:053 [Kernel]/(35776:35778): Se recibio algo de MEMORIA
+[INFO] 06:59:07:053 [Kernel]/(35776:35778): Memoria soluciono el PAGE FAULT
+[INFO] 06:59:07:054 [Kernel]/(35776:35867): Se solicito a Memoria resolver Page FAULT
+[INFO] 06:59:09:599 [Kernel]/(35776:35780): Se recibio algo de CPU_Dispatch
+[WARNING] 06:59:09:599 [Kernel]/(35776:35780): Entre a atender instruccion
+[INFO] 06:59:12:563 [Kernel]/(35776:35778): Se recibio algo de MEMORIA
+[INFO] 06:59:12:564 [Kernel]/(35776:35778): Memoria soluciono el PAGE FAULT
+[INFO] 06:59:12:564 [Kernel]/(35776:35878): Se solicito a Memoria resolver Page FAULT
+[INFO] 06:59:15:095 [Kernel]/(35776:35780): Se recibio algo de CPU_Dispatch
+[WARNING] 06:59:15:095 [Kernel]/(35776:35780): Entre a atender instruccion
+[INFO] 06:59:18:082 [Kernel]/(35776:35778): Se recibio algo de MEMORIA
+[INFO] 06:59:18:083 [Kernel]/(35776:35778): Memoria soluciono el PAGE FAULT
+[INFO] 06:59:18:084 [Kernel]/(35776:35882): Se solicito a Memoria resolver Page FAULT
+[INFO] 06:59:20:609 [Kernel]/(35776:35780): Se recibio algo de CPU_Dispatch
+[WARNING] 06:59:20:609 [Kernel]/(35776:35780): Entre a atender instruccion
+[INFO] 06:59:23:620 [Kernel]/(35776:35778): Se recibio algo de MEMORIA
+[INFO] 06:59:23:620 [Kernel]/(35776:35778): Memoria soluciono el PAGE FAULT
+[INFO] 06:59:23:621 [Kernel]/(35776:35885): Se solicito a Memoria resolver Page FAULT
+[INFO] 06:59:26:644 [Kernel]/(35776:35780): Se recibio algo de CPU_Dispatch
+[WARNING] 06:59:26:644 [Kernel]/(35776:35780): Entre a atender instruccion
+[INFO] 06:59:29:143 [Kernel]/(35776:35778): Se recibio algo de MEMORIA
+[INFO] 06:59:29:143 [Kernel]/(35776:35778): Memoria soluciono el PAGE FAULT
+[INFO] 06:59:29:143 [Kernel]/(35776:35888): Se solicito a Memoria resolver Page FAULT
+[INFO] 06:59:31:659 [Kernel]/(35776:35780): Se recibio algo de CPU_Dispatch
+[WARNING] 06:59:31:659 [Kernel]/(35776:35780): Entre a atender instruccion
+[INFO] 06:59:34:657 [Kernel]/(35776:35778): Se recibio algo de MEMORIA
+[INFO] 06:59:34:658 [Kernel]/(35776:35778): Memoria soluciono el PAGE FAULT
+[INFO] 06:59:34:658 [Kernel]/(35776:35892): Se solicito a Memoria resolver Page FAULT
+[INFO] 06:59:37:679 [Kernel]/(35776:35780): Se recibio algo de CPU_Dispatch
+[WARNING] 06:59:37:679 [Kernel]/(35776:35780): Entre a atender instruccion
+[INFO] 06:59:40:234 [Kernel]/(35776:35778): Se recibio algo de MEMORIA
+[INFO] 06:59:40:234 [Kernel]/(35776:35778): Memoria soluciono el PAGE FAULT
+[INFO] 06:59:40:235 [Kernel]/(35776:35895): Se solicito a Memoria resolver Page FAULT
+[INFO] 06:59:42:749 [Kernel]/(35776:35780): Se recibio algo de CPU_Dispatch
+[WARNING] 06:59:42:749 [Kernel]/(35776:35780): Entre a atender instruccion
+[INFO] 06:59:45:740 [Kernel]/(35776:35778): Se recibio algo de MEMORIA
+[INFO] 06:59:45:741 [Kernel]/(35776:35778): Memoria soluciono el PAGE FAULT
+[INFO] 06:59:45:741 [Kernel]/(35776:35898): Se solicito a Memoria resolver Page FAULT
+[INFO] 06:59:48:258 [Kernel]/(35776:35780): Se recibio algo de CPU_Dispatch
+[WARNING] 06:59:48:258 [Kernel]/(35776:35780): Entre a atender instruccion
+[INFO] 06:59:51:255 [Kernel]/(35776:35778): Se recibio algo de MEMORIA
+[INFO] 06:59:51:257 [Kernel]/(35776:35778): Memoria soluciono el PAGE FAULT
+[INFO] 06:59:51:257 [Kernel]/(35776:35901): Se solicito a Memoria resolver Page FAULT
+[INFO] 07:00:19:213 [Kernel]/(35921:35921): [RECURSO | 1]
+[INFO] 07:00:19:215 [Kernel]/(35921:35921): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 07:00:19:215 [Kernel]/(35921:35921): HANDSHAKE CON FILESYSTEM [EXITOSO]
+[INFO] 07:00:19:216 [Kernel]/(35921:35921): HANDSHAKE CON CPU_Dispatch [EXITOSO]
+[INFO] 07:00:19:216 [Kernel]/(35921:35921): HANDSHAKE CON CPU_Interrupt [EXITOSO]
+[INFO] 07:01:07:408 [Kernel]/(35956:35956): [RECURSO | 1]
+[INFO] 07:01:07:409 [Kernel]/(35956:35956): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 07:01:18:714 [Kernel]/(35969:35969): [RECURSO | 1]
+[INFO] 07:01:18:715 [Kernel]/(35969:35969): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 07:01:18:716 [Kernel]/(35969:35969): HANDSHAKE CON FILESYSTEM [EXITOSO]
+[INFO] 07:01:18:716 [Kernel]/(35969:35969): HANDSHAKE CON CPU_Dispatch [EXITOSO]
+[INFO] 07:01:18:717 [Kernel]/(35969:35969): HANDSHAKE CON CPU_Interrupt [EXITOSO]
+[WARNING] 07:01:28:560 [Kernel]/(35969:35976): N°  Param. Incorrecto
+[ERROR] 07:02:08:816 [Kernel]/(35969:35976): Comando no reconocido
+[INFO] 07:03:15:876 [Kernel]/(35969:35981): Se aviso a Memoria del nuevo proceso
+[INFO] 07:03:22:906 [Kernel]/(35969:35971): Se recibio algo de MEMORIA
+[INFO] 07:03:22:906 [Kernel]/(35969:35984): Se aviso a Memoria del nuevo proceso
+[INFO] 07:03:24:914 [Kernel]/(35969:35973): Se recibio algo de CPU_Dispatch
+[WARNING] 07:03:24:914 [Kernel]/(35969:35973): Entre a atender instruccion
+[INFO] 07:03:24:915 [Kernel]/(35969:35990): Se solicito a Memoria resolver Page FAULT
+[INFO] 07:03:29:918 [Kernel]/(35969:35971): Se recibio algo de MEMORIA
+[INFO] 07:03:29:919 [Kernel]/(35969:35985): Se aviso a Memoria del nuevo proceso
+[INFO] 07:03:31:932 [Kernel]/(35969:35973): Se recibio algo de CPU_Dispatch
+[WARNING] 07:03:31:932 [Kernel]/(35969:35973): Entre a atender instruccion
+[INFO] 07:03:35:425 [Kernel]/(35969:35971): Se recibio algo de MEMORIA
+[INFO] 07:03:35:425 [Kernel]/(35969:35971): Memoria soluciono el PAGE FAULT
+[INFO] 07:03:35:426 [Kernel]/(35969:35993): Se solicito a Memoria resolver Page FAULT
+[INFO] 07:03:37:949 [Kernel]/(35969:35973): Se recibio algo de CPU_Dispatch
+[WARNING] 07:03:37:949 [Kernel]/(35969:35973): Entre a atender instruccion
+[INFO] 07:03:38:434 [Kernel]/(35969:35971): Se recibio algo de MEMORIA
+[INFO] 07:03:38:435 [Kernel]/(35969:35986): Se aviso a Memoria del nuevo proceso
+[INFO] 07:03:40:451 [Kernel]/(35969:35973): Se recibio algo de CPU_Dispatch
+[WARNING] 07:03:40:451 [Kernel]/(35969:35973): Entre a atender instruccion
+[INFO] 07:03:43:962 [Kernel]/(35969:35971): Se recibio algo de MEMORIA
+[INFO] 07:03:43:962 [Kernel]/(35969:35971): Memoria soluciono el PAGE FAULT
+[INFO] 07:03:43:964 [Kernel]/(35969:35996): Se solicito a Memoria resolver Page FAULT
+[INFO] 07:03:46:485 [Kernel]/(35969:35973): Se recibio algo de CPU_Dispatch
+[WARNING] 07:03:46:485 [Kernel]/(35969:35973): Entre a atender instruccion
+[INFO] 07:03:46:974 [Kernel]/(35969:35971): Se recibio algo de MEMORIA
+[INFO] 07:03:48:991 [Kernel]/(35969:35973): Se recibio algo de CPU_Dispatch
+[WARNING] 07:03:48:991 [Kernel]/(35969:35973): Entre a atender instruccion
+[INFO] 07:03:52:487 [Kernel]/(35969:35971): Se recibio algo de MEMORIA
+[INFO] 07:03:52:487 [Kernel]/(35969:35971): Memoria soluciono el PAGE FAULT
+[INFO] 07:03:52:488 [Kernel]/(35969:35999): Se solicito a Memoria resolver Page FAULT
+[INFO] 07:03:55:017 [Kernel]/(35969:35973): Se recibio algo de CPU_Dispatch
+[WARNING] 07:03:55:017 [Kernel]/(35969:35973): Entre a atender instruccion
+[INFO] 07:03:57:996 [Kernel]/(35969:35971): Se recibio algo de MEMORIA
+[INFO] 07:03:57:997 [Kernel]/(35969:35971): Memoria soluciono el PAGE FAULT
+[INFO] 07:03:57:997 [Kernel]/(35969:36002): Se solicito a Memoria resolver Page FAULT
+[INFO] 07:04:00:527 [Kernel]/(35969:35973): Se recibio algo de CPU_Dispatch
+[WARNING] 07:04:00:527 [Kernel]/(35969:35973): Entre a atender instruccion
+[INFO] 07:04:03:501 [Kernel]/(35969:35971): Se recibio algo de MEMORIA
+[INFO] 07:04:03:501 [Kernel]/(35969:35971): Memoria soluciono el PAGE FAULT
+[INFO] 07:04:03:501 [Kernel]/(35969:36005): Se solicito a Memoria resolver Page FAULT
+[INFO] 07:04:06:028 [Kernel]/(35969:35973): Se recibio algo de CPU_Dispatch
+[WARNING] 07:04:06:028 [Kernel]/(35969:35973): Entre a atender instruccion
+[INFO] 07:04:09:011 [Kernel]/(35969:35971): Se recibio algo de MEMORIA
+[INFO] 07:04:09:011 [Kernel]/(35969:35971): Memoria soluciono el PAGE FAULT
+[INFO] 07:04:09:012 [Kernel]/(35969:36008): Se solicito a Memoria resolver Page FAULT
+[INFO] 07:04:11:525 [Kernel]/(35969:35973): Se recibio algo de CPU_Dispatch
+[WARNING] 07:04:11:525 [Kernel]/(35969:35973): Entre a atender instruccion
+[INFO] 07:04:14:540 [Kernel]/(35969:35971): Se recibio algo de MEMORIA
+[INFO] 07:04:14:540 [Kernel]/(35969:35971): Memoria soluciono el PAGE FAULT
+[INFO] 07:04:14:541 [Kernel]/(35969:36011): Se solicito a Memoria resolver Page FAULT
+[INFO] 07:04:17:057 [Kernel]/(35969:35973): Se recibio algo de CPU_Dispatch
+[WARNING] 07:04:17:057 [Kernel]/(35969:35973): Entre a atender instruccion
+[INFO] 07:04:20:056 [Kernel]/(35969:35971): Se recibio algo de MEMORIA
+[INFO] 07:04:20:057 [Kernel]/(35969:35971): Memoria soluciono el PAGE FAULT
+[INFO] 07:04:20:058 [Kernel]/(35969:36014): Se solicito a Memoria resolver Page FAULT
+[INFO] 07:04:22:594 [Kernel]/(35969:35973): Se recibio algo de CPU_Dispatch
+[WARNING] 07:04:22:594 [Kernel]/(35969:35973): Entre a atender instruccion
+[INFO] 07:04:25:576 [Kernel]/(35969:35971): Se recibio algo de MEMORIA
+[INFO] 07:04:25:578 [Kernel]/(35969:35971): Memoria soluciono el PAGE FAULT
+[INFO] 07:04:25:578 [Kernel]/(35969:36017): Se solicito a Memoria resolver Page FAULT
+[INFO] 07:04:28:109 [Kernel]/(35969:35973): Se recibio algo de CPU_Dispatch
+[WARNING] 07:04:28:109 [Kernel]/(35969:35973): Entre a atender instruccion
+[INFO] 07:04:31:090 [Kernel]/(35969:35971): Se recibio algo de MEMORIA
+[INFO] 07:04:31:090 [Kernel]/(35969:35971): Memoria soluciono el PAGE FAULT
+[INFO] 07:04:31:090 [Kernel]/(35969:36020): Se solicito a Memoria resolver Page FAULT
+[INFO] 07:04:33:599 [Kernel]/(35969:35973): Se recibio algo de CPU_Dispatch
+[WARNING] 07:04:33:599 [Kernel]/(35969:35973): Entre a atender instruccion
+[INFO] 07:04:36:599 [Kernel]/(35969:35971): Se recibio algo de MEMORIA
+[INFO] 07:04:36:601 [Kernel]/(35969:35971): Memoria soluciono el PAGE FAULT
+[INFO] 07:04:36:602 [Kernel]/(35969:36023): Se solicito a Memoria resolver Page FAULT
+[INFO] 07:04:39:626 [Kernel]/(35969:35973): Se recibio algo de CPU_Dispatch
+[WARNING] 07:04:39:626 [Kernel]/(35969:35973): Entre a atender instruccion
+[INFO] 07:04:39:626 [Kernel]/(35969:35973): Mensaje a MEMORIA: LIBERAR_ESTRUCTURA_KM [PID: 1]
+[INFO] 07:04:40:127 [Kernel]/(35969:35971): Se recibio algo de MEMORIA
+[INFO] 07:04:42:110 [Kernel]/(35969:35971): Se recibio algo de MEMORIA
+[INFO] 07:04:42:110 [Kernel]/(35969:35971): Memoria soluciono el PAGE FAULT
+[INFO] 07:04:42:112 [Kernel]/(35969:36027): Se solicito a Memoria resolver Page FAULT
+[INFO] 07:04:44:634 [Kernel]/(35969:35973): Se recibio algo de CPU_Dispatch
+[WARNING] 07:04:44:634 [Kernel]/(35969:35973): Entre a atender instruccion
+[INFO] 07:04:50:651 [Kernel]/(35969:35971): Se recibio algo de MEMORIA
+[INFO] 07:04:50:652 [Kernel]/(35969:35971): Memoria soluciono el PAGE FAULT
+[INFO] 07:04:50:652 [Kernel]/(35969:36031): Se solicito a Memoria resolver Page FAULT
+[INFO] 07:09:07:142 [Kernel]/(36068:36068): [RECURSO | 1]
+[INFO] 07:09:07:144 [Kernel]/(36068:36068): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 07:09:07:144 [Kernel]/(36068:36068): HANDSHAKE CON FILESYSTEM [EXITOSO]
+[INFO] 07:09:07:145 [Kernel]/(36068:36068): HANDSHAKE CON CPU_Dispatch [EXITOSO]
+[INFO] 07:09:07:146 [Kernel]/(36068:36068): HANDSHAKE CON CPU_Interrupt [EXITOSO]
+[INFO] 07:09:17:331 [Kernel]/(36068:36077): Se aviso a Memoria del nuevo proceso
+[INFO] 07:09:24:358 [Kernel]/(36068:36070): Se recibio algo de MEMORIA
+[INFO] 07:09:26:397 [Kernel]/(36068:36072): Se recibio algo de CPU_Dispatch
+[WARNING] 07:09:26:397 [Kernel]/(36068:36072): Entre a atender instruccion
+[INFO] 07:09:26:398 [Kernel]/(36068:36080): Se solicito a Memoria resolver Page FAULT
+[INFO] 07:09:31:905 [Kernel]/(36068:36070): Se recibio algo de MEMORIA
+[INFO] 07:09:31:905 [Kernel]/(36068:36070): Memoria soluciono el PAGE FAULT
+[INFO] 07:09:34:444 [Kernel]/(36068:36072): Se recibio algo de CPU_Dispatch
+[WARNING] 07:09:34:445 [Kernel]/(36068:36072): Entre a atender instruccion
+[INFO] 07:09:34:445 [Kernel]/(36068:36083): Se solicito a Memoria resolver Page FAULT
+[INFO] 07:09:39:965 [Kernel]/(36068:36070): Se recibio algo de MEMORIA
+[INFO] 07:09:39:965 [Kernel]/(36068:36070): Memoria soluciono el PAGE FAULT
+[INFO] 07:09:42:494 [Kernel]/(36068:36072): Se recibio algo de CPU_Dispatch
+[WARNING] 07:09:42:494 [Kernel]/(36068:36072): Entre a atender instruccion
+[INFO] 07:09:42:495 [Kernel]/(36068:36087): Se solicito a Memoria resolver Page FAULT
+[INFO] 07:09:48:016 [Kernel]/(36068:36070): Se recibio algo de MEMORIA
+[INFO] 07:09:48:016 [Kernel]/(36068:36070): Memoria soluciono el PAGE FAULT
+[INFO] 07:09:50:541 [Kernel]/(36068:36072): Se recibio algo de CPU_Dispatch
+[WARNING] 07:09:50:541 [Kernel]/(36068:36072): Entre a atender instruccion
+[INFO] 07:09:50:542 [Kernel]/(36068:36090): Se solicito a Memoria resolver Page FAULT
+[INFO] 07:09:56:080 [Kernel]/(36068:36070): Se recibio algo de MEMORIA
+[INFO] 07:09:56:081 [Kernel]/(36068:36070): Memoria soluciono el PAGE FAULT
+[INFO] 07:09:59:105 [Kernel]/(36068:36072): Se recibio algo de CPU_Dispatch
+[WARNING] 07:09:59:105 [Kernel]/(36068:36072): Entre a atender instruccion
+[INFO] 07:09:59:105 [Kernel]/(36068:36072): Mensaje a MEMORIA: LIBERAR_ESTRUCTURA_KM [PID: 1]
+[INFO] 07:09:59:612 [Kernel]/(36068:36070): Se recibio algo de MEMORIA
+[INFO] 07:15:02:243 [Kernel]/(36171:36171): [RECURSO | 1]
+[INFO] 07:15:02:244 [Kernel]/(36171:36171): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 07:15:02:245 [Kernel]/(36171:36171): HANDSHAKE CON FILESYSTEM [EXITOSO]
+[INFO] 07:15:02:246 [Kernel]/(36171:36171): HANDSHAKE CON CPU_Dispatch [EXITOSO]
+[INFO] 07:15:02:247 [Kernel]/(36171:36171): HANDSHAKE CON CPU_Interrupt [EXITOSO]
+[INFO] 07:15:11:636 [Kernel]/(36171:36180): Se aviso a Memoria del nuevo proceso
+[INFO] 07:15:18:668 [Kernel]/(36171:36173): Se recibio algo de MEMORIA
+[INFO] 07:15:20:692 [Kernel]/(36171:36175): Se recibio algo de CPU_Dispatch
+[WARNING] 07:15:20:693 [Kernel]/(36171:36175): Entre a atender instruccion
+[INFO] 07:15:20:693 [Kernel]/(36171:36183): Se solicito a Memoria resolver Page FAULT
+[INFO] 07:15:26:204 [Kernel]/(36171:36173): Se recibio algo de MEMORIA
+[INFO] 07:15:26:204 [Kernel]/(36171:36173): Memoria soluciono el PAGE FAULT
+[INFO] 07:15:28:725 [Kernel]/(36171:36175): Se recibio algo de CPU_Dispatch
+[WARNING] 07:15:28:725 [Kernel]/(36171:36175): Entre a atender instruccion
+[INFO] 07:15:28:725 [Kernel]/(36171:36186): Se solicito a Memoria resolver Page FAULT
+[INFO] 07:15:34:232 [Kernel]/(36171:36173): Se recibio algo de MEMORIA
+[INFO] 07:15:34:232 [Kernel]/(36171:36173): Memoria soluciono el PAGE FAULT
+[INFO] 07:15:36:752 [Kernel]/(36171:36175): Se recibio algo de CPU_Dispatch
+[WARNING] 07:15:36:752 [Kernel]/(36171:36175): Entre a atender instruccion
+[INFO] 07:15:36:752 [Kernel]/(36171:36189): Se solicito a Memoria resolver Page FAULT
+[INFO] 07:15:42:288 [Kernel]/(36171:36173): Se recibio algo de MEMORIA
+[INFO] 07:15:42:288 [Kernel]/(36171:36173): Memoria soluciono el PAGE FAULT
+[INFO] 07:15:44:806 [Kernel]/(36171:36175): Se recibio algo de CPU_Dispatch
+[WARNING] 07:15:44:806 [Kernel]/(36171:36175): Entre a atender instruccion
+[INFO] 07:15:44:806 [Kernel]/(36171:36192): Se solicito a Memoria resolver Page FAULT
+[INFO] 07:15:50:314 [Kernel]/(36171:36173): Se recibio algo de MEMORIA
+[INFO] 07:15:50:314 [Kernel]/(36171:36173): Memoria soluciono el PAGE FAULT
+[INFO] 07:15:53:369 [Kernel]/(36171:36175): Se recibio algo de CPU_Dispatch
+[WARNING] 07:15:53:369 [Kernel]/(36171:36175): Entre a atender instruccion
+[INFO] 07:15:53:369 [Kernel]/(36171:36175): Mensaje a MEMORIA: LIBERAR_ESTRUCTURA_KM [PID: 1]
+[INFO] 07:15:53:874 [Kernel]/(36171:36173): Se recibio algo de MEMORIA
+[INFO] 07:18:02:057 [Kernel]/(36248:36248): [RECURSO | 1]
+[INFO] 07:18:02:059 [Kernel]/(36248:36248): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 07:18:02:059 [Kernel]/(36248:36248): HANDSHAKE CON FILESYSTEM [EXITOSO]
+[INFO] 07:18:02:060 [Kernel]/(36248:36248): HANDSHAKE CON CPU_Dispatch [EXITOSO]
+[INFO] 07:18:02:060 [Kernel]/(36248:36248): HANDSHAKE CON CPU_Interrupt [EXITOSO]
+[INFO] 07:18:08:563 [Kernel]/(36248:36257): Se aviso a Memoria del nuevo proceso
+[INFO] 07:18:15:571 [Kernel]/(36248:36250): Se recibio algo de MEMORIA
+[INFO] 07:18:17:590 [Kernel]/(36248:36252): Se recibio algo de CPU_Dispatch
+[WARNING] 07:18:17:591 [Kernel]/(36248:36252): Entre a atender instruccion
+[INFO] 07:18:17:592 [Kernel]/(36248:36260): Se solicito a Memoria resolver Page FAULT
+[INFO] 07:18:23:105 [Kernel]/(36248:36250): Se recibio algo de MEMORIA
+[INFO] 07:18:23:105 [Kernel]/(36248:36250): Memoria soluciono el PAGE FAULT
+[INFO] 07:18:25:616 [Kernel]/(36248:36252): Se recibio algo de CPU_Dispatch
+[WARNING] 07:18:25:616 [Kernel]/(36248:36252): Entre a atender instruccion
+[INFO] 07:18:25:617 [Kernel]/(36248:36263): Se solicito a Memoria resolver Page FAULT
+[INFO] 07:18:31:126 [Kernel]/(36248:36250): Se recibio algo de MEMORIA
+[INFO] 07:18:31:126 [Kernel]/(36248:36250): Memoria soluciono el PAGE FAULT
+[INFO] 07:18:33:652 [Kernel]/(36248:36252): Se recibio algo de CPU_Dispatch
+[WARNING] 07:18:33:652 [Kernel]/(36248:36252): Entre a atender instruccion
+[INFO] 07:18:33:653 [Kernel]/(36248:36266): Se solicito a Memoria resolver Page FAULT
+[INFO] 07:18:39:169 [Kernel]/(36248:36250): Se recibio algo de MEMORIA
+[INFO] 07:18:39:169 [Kernel]/(36248:36250): Memoria soluciono el PAGE FAULT
+[INFO] 07:18:41:682 [Kernel]/(36248:36252): Se recibio algo de CPU_Dispatch
+[WARNING] 07:18:41:682 [Kernel]/(36248:36252): Entre a atender instruccion
+[INFO] 07:18:41:683 [Kernel]/(36248:36269): Se solicito a Memoria resolver Page FAULT
+[INFO] 07:18:47:195 [Kernel]/(36248:36250): Se recibio algo de MEMORIA
+[INFO] 07:18:47:195 [Kernel]/(36248:36250): Memoria soluciono el PAGE FAULT
+[INFO] 07:18:50:222 [Kernel]/(36248:36252): Se recibio algo de CPU_Dispatch
+[WARNING] 07:18:50:222 [Kernel]/(36248:36252): Entre a atender instruccion
+[INFO] 07:18:50:222 [Kernel]/(36248:36252): Mensaje a MEMORIA: LIBERAR_ESTRUCTURA_KM [PID: 1]
+[INFO] 07:18:50:724 [Kernel]/(36248:36250): Se recibio algo de MEMORIA
+[INFO] 07:23:09:830 [Kernel]/(36329:36329): [RECURSO | 1]
+[INFO] 07:23:09:831 [Kernel]/(36329:36329): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 07:23:09:832 [Kernel]/(36329:36329): HANDSHAKE CON FILESYSTEM [EXITOSO]
+[INFO] 07:23:09:832 [Kernel]/(36329:36329): HANDSHAKE CON CPU_Dispatch [EXITOSO]
+[INFO] 07:23:09:833 [Kernel]/(36329:36329): HANDSHAKE CON CPU_Interrupt [EXITOSO]
+[INFO] 07:23:17:159 [Kernel]/(36329:36338): Se aviso a Memoria del nuevo proceso
+[INFO] 07:23:24:173 [Kernel]/(36329:36331): Se recibio algo de MEMORIA
+[INFO] 07:23:26:198 [Kernel]/(36329:36333): Se recibio algo de CPU_Dispatch
+[WARNING] 07:23:26:198 [Kernel]/(36329:36333): Entre a atender instruccion
+[INFO] 07:23:26:199 [Kernel]/(36329:36341): Se solicito a Memoria resolver Page FAULT
+[INFO] 07:23:31:716 [Kernel]/(36329:36331): Se recibio algo de MEMORIA
+[INFO] 07:23:31:717 [Kernel]/(36329:36331): Memoria soluciono el PAGE FAULT
+[INFO] 07:23:34:232 [Kernel]/(36329:36333): Se recibio algo de CPU_Dispatch
+[WARNING] 07:23:34:232 [Kernel]/(36329:36333): Entre a atender instruccion
+[INFO] 07:23:34:232 [Kernel]/(36329:36344): Se solicito a Memoria resolver Page FAULT
+[INFO] 07:25:46:602 [Kernel]/(36428:36428): [RECURSO | 1]
+[INFO] 07:25:46:603 [Kernel]/(36428:36428): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 07:25:46:603 [Kernel]/(36428:36428): HANDSHAKE CON FILESYSTEM [EXITOSO]
+[INFO] 07:25:46:604 [Kernel]/(36428:36428): HANDSHAKE CON CPU_Dispatch [EXITOSO]
+[INFO] 07:25:46:604 [Kernel]/(36428:36428): HANDSHAKE CON CPU_Interrupt [EXITOSO]
+[INFO] 07:25:52:519 [Kernel]/(36428:36437): Se aviso a Memoria del nuevo proceso
+[INFO] 07:25:59:551 [Kernel]/(36428:36430): Se recibio algo de MEMORIA
+[INFO] 07:26:01:559 [Kernel]/(36428:36432): Se recibio algo de CPU_Dispatch
+[WARNING] 07:26:01:560 [Kernel]/(36428:36432): Entre a atender instruccion
+[INFO] 07:26:01:560 [Kernel]/(36428:36440): Se solicito a Memoria resolver Page FAULT
+[INFO] 07:26:07:081 [Kernel]/(36428:36430): Se recibio algo de MEMORIA
+[INFO] 07:26:07:081 [Kernel]/(36428:36430): Memoria soluciono el PAGE FAULT
+[INFO] 07:26:09:597 [Kernel]/(36428:36432): Se recibio algo de CPU_Dispatch
+[WARNING] 07:26:09:597 [Kernel]/(36428:36432): Entre a atender instruccion
+[INFO] 07:26:09:598 [Kernel]/(36428:36443): Se solicito a Memoria resolver Page FAULT
+[INFO] 07:26:15:110 [Kernel]/(36428:36430): Se recibio algo de MEMORIA
+[INFO] 07:26:15:110 [Kernel]/(36428:36430): Memoria soluciono el PAGE FAULT
+[INFO] 07:26:17:656 [Kernel]/(36428:36432): Se recibio algo de CPU_Dispatch
+[WARNING] 07:26:17:656 [Kernel]/(36428:36432): Entre a atender instruccion
+[INFO] 07:26:17:656 [Kernel]/(36428:36446): Se solicito a Memoria resolver Page FAULT
+[INFO] 07:26:23:197 [Kernel]/(36428:36430): Se recibio algo de MEMORIA
+[INFO] 07:26:23:198 [Kernel]/(36428:36430): Memoria soluciono el PAGE FAULT
+[INFO] 07:26:25:715 [Kernel]/(36428:36432): Se recibio algo de CPU_Dispatch
+[WARNING] 07:26:25:715 [Kernel]/(36428:36432): Entre a atender instruccion
+[INFO] 07:26:25:715 [Kernel]/(36428:36449): Se solicito a Memoria resolver Page FAULT
+[INFO] 07:26:31:259 [Kernel]/(36428:36430): Se recibio algo de MEMORIA
+[INFO] 07:26:31:260 [Kernel]/(36428:36430): Memoria soluciono el PAGE FAULT
+[INFO] 07:26:34:283 [Kernel]/(36428:36432): Se recibio algo de CPU_Dispatch
+[WARNING] 07:26:34:283 [Kernel]/(36428:36432): Entre a atender instruccion
+[INFO] 07:26:34:283 [Kernel]/(36428:36432): Mensaje a MEMORIA: LIBERAR_ESTRUCTURA_KM [PID: 1]
+[INFO] 07:26:34:784 [Kernel]/(36428:36430): Se recibio algo de MEMORIA
+[INFO] 07:47:55:617 [Kernel]/(36880:36880): [RECURSO | 1]
+[INFO] 07:47:55:618 [Kernel]/(36880:36880): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 07:47:55:619 [Kernel]/(36880:36880): HANDSHAKE CON FILESYSTEM [EXITOSO]
+[INFO] 07:47:55:620 [Kernel]/(36880:36880): HANDSHAKE CON CPU_Dispatch [EXITOSO]
+[INFO] 07:47:55:620 [Kernel]/(36880:36880): HANDSHAKE CON CPU_Interrupt [EXITOSO]
+[INFO] 07:48:09:010 [Kernel]/(36880:36889): Se aviso a Memoria del nuevo proceso
+[INFO] 07:48:16:024 [Kernel]/(36880:36882): Se recibio algo de MEMORIA
+[INFO] 07:48:18:038 [Kernel]/(36880:36884): Se recibio algo de CPU_Dispatch
+[WARNING] 07:48:18:038 [Kernel]/(36880:36884): Entre a atender instruccion
+[INFO] 07:48:18:039 [Kernel]/(36880:36892): Se solicito a Memoria resolver Page FAULT
+[INFO] 07:48:23:543 [Kernel]/(36880:36882): Se recibio algo de MEMORIA
+[INFO] 07:48:23:543 [Kernel]/(36880:36882): Memoria soluciono el PAGE FAULT
+[INFO] 07:48:26:057 [Kernel]/(36880:36884): Se recibio algo de CPU_Dispatch
+[WARNING] 07:48:26:057 [Kernel]/(36880:36884): Entre a atender instruccion
+[INFO] 07:48:26:058 [Kernel]/(36880:36895): Se solicito a Memoria resolver Page FAULT
+[INFO] 07:48:31:564 [Kernel]/(36880:36882): Se recibio algo de MEMORIA
+[INFO] 07:48:31:564 [Kernel]/(36880:36882): Memoria soluciono el PAGE FAULT
+[INFO] 07:48:34:077 [Kernel]/(36880:36884): Se recibio algo de CPU_Dispatch
+[WARNING] 07:48:34:077 [Kernel]/(36880:36884): Entre a atender instruccion
+[INFO] 07:48:34:078 [Kernel]/(36880:36898): Se solicito a Memoria resolver Page FAULT
+[INFO] 07:48:39:587 [Kernel]/(36880:36882): Se recibio algo de MEMORIA
+[INFO] 07:48:39:587 [Kernel]/(36880:36882): Memoria soluciono el PAGE FAULT
+[INFO] 07:48:42:104 [Kernel]/(36880:36884): Se recibio algo de CPU_Dispatch
+[WARNING] 07:48:42:104 [Kernel]/(36880:36884): Entre a atender instruccion
+[INFO] 07:48:42:115 [Kernel]/(36880:36901): Se solicito a Memoria resolver Page FAULT
+[INFO] 07:48:47:619 [Kernel]/(36880:36882): Se recibio algo de MEMORIA
+[INFO] 07:48:47:619 [Kernel]/(36880:36882): Memoria soluciono el PAGE FAULT
+[INFO] 07:48:50:636 [Kernel]/(36880:36884): Se recibio algo de CPU_Dispatch
+[WARNING] 07:48:50:636 [Kernel]/(36880:36884): Entre a atender instruccion
+[INFO] 07:48:50:636 [Kernel]/(36880:36884): Mensaje a MEMORIA: LIBERAR_ESTRUCTURA_KM [PID: 1]
+[INFO] 07:48:51:137 [Kernel]/(36880:36882): Se recibio algo de MEMORIA
+[INFO] 07:50:37:185 [Kernel]/(36944:36944): [RECURSO | 1]
+[INFO] 07:50:37:186 [Kernel]/(36944:36944): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 07:50:37:190 [Kernel]/(36944:36944): HANDSHAKE CON FILESYSTEM [EXITOSO]
+[INFO] 07:50:37:190 [Kernel]/(36944:36944): HANDSHAKE CON CPU_Dispatch [EXITOSO]
+[INFO] 07:50:37:191 [Kernel]/(36944:36944): HANDSHAKE CON CPU_Interrupt [EXITOSO]
+[INFO] 07:50:45:010 [Kernel]/(36944:36953): Se aviso a Memoria del nuevo proceso
+[INFO] 07:50:52:050 [Kernel]/(36944:36946): Se recibio algo de MEMORIA
+[INFO] 07:50:54:066 [Kernel]/(36944:36948): Se recibio algo de CPU_Dispatch
+[WARNING] 07:50:54:066 [Kernel]/(36944:36948): Entre a atender instruccion
+[INFO] 07:50:54:067 [Kernel]/(36944:36956): Se solicito a Memoria resolver Page FAULT
+[INFO] 07:50:59:586 [Kernel]/(36944:36946): Se recibio algo de MEMORIA
+[INFO] 07:50:59:586 [Kernel]/(36944:36946): Memoria soluciono el PAGE FAULT
+[INFO] 07:51:02:105 [Kernel]/(36944:36948): Se recibio algo de CPU_Dispatch
+[WARNING] 07:51:02:105 [Kernel]/(36944:36948): Entre a atender instruccion
+[INFO] 07:51:02:105 [Kernel]/(36944:36959): Se solicito a Memoria resolver Page FAULT
+[INFO] 07:51:07:618 [Kernel]/(36944:36946): Se recibio algo de MEMORIA
+[INFO] 07:51:07:618 [Kernel]/(36944:36946): Memoria soluciono el PAGE FAULT
+[INFO] 07:51:10:132 [Kernel]/(36944:36948): Se recibio algo de CPU_Dispatch
+[WARNING] 07:51:10:132 [Kernel]/(36944:36948): Entre a atender instruccion
+[INFO] 07:51:10:133 [Kernel]/(36944:36962): Se solicito a Memoria resolver Page FAULT
+[INFO] 07:51:15:652 [Kernel]/(36944:36946): Se recibio algo de MEMORIA
+[INFO] 07:51:15:652 [Kernel]/(36944:36946): Memoria soluciono el PAGE FAULT
+[INFO] 07:51:18:205 [Kernel]/(36944:36948): Se recibio algo de CPU_Dispatch
+[WARNING] 07:51:18:205 [Kernel]/(36944:36948): Entre a atender instruccion
+[INFO] 07:51:18:206 [Kernel]/(36944:36965): Se solicito a Memoria resolver Page FAULT
+[INFO] 07:51:23:728 [Kernel]/(36944:36946): Se recibio algo de MEMORIA
+[INFO] 07:51:23:729 [Kernel]/(36944:36946): Memoria soluciono el PAGE FAULT
+[INFO] 07:53:40:962 [Kernel]/(36944:36948): Se recibio algo de CPU_Dispatch
+[WARNING] 07:53:40:962 [Kernel]/(36944:36948): Entre a atender instruccion
+[INFO] 07:53:40:962 [Kernel]/(36944:36948): Mensaje a MEMORIA: LIBERAR_ESTRUCTURA_KM [PID: 1]
+[INFO] 07:53:41:510 [Kernel]/(36944:36946): Se recibio algo de MEMORIA
+[INFO] 07:54:27:337 [Kernel]/(36944:36972): Se aviso a Memoria del nuevo proceso
+[INFO] 07:54:34:357 [Kernel]/(36944:36946): Se recibio algo de MEMORIA
+[INFO] 07:54:34:358 [Kernel]/(36944:36973): Se aviso a Memoria del nuevo proceso
+[INFO] 07:54:36:367 [Kernel]/(36944:36948): Se recibio algo de CPU_Dispatch
+[WARNING] 07:54:36:367 [Kernel]/(36944:36948): Entre a atender instruccion
+[INFO] 07:54:36:368 [Kernel]/(36944:36980): Se solicito a Memoria resolver Page FAULT
+[INFO] 07:54:41:510 [Kernel]/(36944:36946): Se recibio algo de MEMORIA
+[INFO] 07:54:41:510 [Kernel]/(36944:36974): Se aviso a Memoria del nuevo proceso
+[INFO] 07:54:43:531 [Kernel]/(36944:36948): Se recibio algo de CPU_Dispatch
+[WARNING] 07:54:43:531 [Kernel]/(36944:36948): Entre a atender instruccion
+[INFO] 07:54:47:023 [Kernel]/(36944:36946): Se recibio algo de MEMORIA
+[INFO] 07:54:47:024 [Kernel]/(36944:36946): Memoria soluciono el PAGE FAULT
+[INFO] 07:54:47:024 [Kernel]/(36944:36983): Se solicito a Memoria resolver Page FAULT
+[INFO] 07:54:49:534 [Kernel]/(36944:36948): Se recibio algo de CPU_Dispatch
+[WARNING] 07:54:49:534 [Kernel]/(36944:36948): Entre a atender instruccion
+[INFO] 07:54:50:035 [Kernel]/(36944:36946): Se recibio algo de MEMORIA
+[INFO] 07:54:50:035 [Kernel]/(36944:36975): Se aviso a Memoria del nuevo proceso
+[INFO] 07:54:52:058 [Kernel]/(36944:36948): Se recibio algo de CPU_Dispatch
+[WARNING] 07:54:52:058 [Kernel]/(36944:36948): Entre a atender instruccion
+[INFO] 07:54:55:548 [Kernel]/(36944:36946): Se recibio algo de MEMORIA
+[INFO] 07:54:55:549 [Kernel]/(36944:36946): Memoria soluciono el PAGE FAULT
+[INFO] 07:54:55:549 [Kernel]/(36944:36986): Se solicito a Memoria resolver Page FAULT
+[INFO] 07:54:58:062 [Kernel]/(36944:36948): Se recibio algo de CPU_Dispatch
+[WARNING] 07:54:58:062 [Kernel]/(36944:36948): Entre a atender instruccion
+[INFO] 07:54:58:559 [Kernel]/(36944:36946): Se recibio algo de MEMORIA
+[INFO] 07:55:00:583 [Kernel]/(36944:36948): Se recibio algo de CPU_Dispatch
+[WARNING] 07:55:00:583 [Kernel]/(36944:36948): Entre a atender instruccion
+[INFO] 07:55:04:069 [Kernel]/(36944:36946): Se recibio algo de MEMORIA
+[INFO] 07:55:04:070 [Kernel]/(36944:36946): Memoria soluciono el PAGE FAULT
+[INFO] 07:55:04:070 [Kernel]/(36944:36989): Se solicito a Memoria resolver Page FAULT
+[INFO] 07:55:06:613 [Kernel]/(36944:36948): Se recibio algo de CPU_Dispatch
+[WARNING] 07:55:06:613 [Kernel]/(36944:36948): Entre a atender instruccion
+[INFO] 07:55:09:604 [Kernel]/(36944:36946): Se recibio algo de MEMORIA
+[INFO] 07:55:09:605 [Kernel]/(36944:36946): Memoria soluciono el PAGE FAULT
+[INFO] 07:55:09:605 [Kernel]/(36944:36992): Se solicito a Memoria resolver Page FAULT
+[INFO] 07:55:12:128 [Kernel]/(36944:36948): Se recibio algo de CPU_Dispatch
+[WARNING] 07:55:12:128 [Kernel]/(36944:36948): Entre a atender instruccion
+[INFO] 07:55:15:146 [Kernel]/(36944:36946): Se recibio algo de MEMORIA
+[INFO] 07:55:15:147 [Kernel]/(36944:36946): Memoria soluciono el PAGE FAULT
+[INFO] 07:55:15:148 [Kernel]/(36944:36995): Se solicito a Memoria resolver Page FAULT
+[INFO] 07:55:17:665 [Kernel]/(36944:36948): Se recibio algo de CPU_Dispatch
+[WARNING] 07:55:17:665 [Kernel]/(36944:36948): Entre a atender instruccion
+[INFO] 07:55:20:658 [Kernel]/(36944:36946): Se recibio algo de MEMORIA
+[INFO] 07:55:20:659 [Kernel]/(36944:36946): Memoria soluciono el PAGE FAULT
+[INFO] 07:55:20:665 [Kernel]/(36944:36998): Se solicito a Memoria resolver Page FAULT
+[INFO] 07:55:23:183 [Kernel]/(36944:36948): Se recibio algo de CPU_Dispatch
+[WARNING] 07:55:23:183 [Kernel]/(36944:36948): Entre a atender instruccion
+[INFO] 07:55:26:182 [Kernel]/(36944:36946): Se recibio algo de MEMORIA
+[INFO] 07:55:26:183 [Kernel]/(36944:36946): Memoria soluciono el PAGE FAULT
+[INFO] 07:55:26:183 [Kernel]/(36944:37001): Se solicito a Memoria resolver Page FAULT
+[INFO] 07:55:28:701 [Kernel]/(36944:36948): Se recibio algo de CPU_Dispatch
+[WARNING] 07:55:28:701 [Kernel]/(36944:36948): Entre a atender instruccion
+[INFO] 07:55:31:697 [Kernel]/(36944:36946): Se recibio algo de MEMORIA
+[INFO] 07:55:31:698 [Kernel]/(36944:36946): Memoria soluciono el PAGE FAULT
+[INFO] 07:55:31:698 [Kernel]/(36944:37004): Se solicito a Memoria resolver Page FAULT
+[INFO] 07:55:34:223 [Kernel]/(36944:36948): Se recibio algo de CPU_Dispatch
+[WARNING] 07:55:34:223 [Kernel]/(36944:36948): Entre a atender instruccion
+[INFO] 07:55:37:233 [Kernel]/(36944:36946): Se recibio algo de MEMORIA
+[INFO] 07:55:37:233 [Kernel]/(36944:36946): Memoria soluciono el PAGE FAULT
+[INFO] 07:55:37:233 [Kernel]/(36944:37007): Se solicito a Memoria resolver Page FAULT
+[INFO] 07:55:39:745 [Kernel]/(36944:36948): Se recibio algo de CPU_Dispatch
+[WARNING] 07:55:39:745 [Kernel]/(36944:36948): Entre a atender instruccion
+[INFO] 07:55:42:755 [Kernel]/(36944:36946): Se recibio algo de MEMORIA
+[INFO] 07:55:42:755 [Kernel]/(36944:36946): Memoria soluciono el PAGE FAULT
+[INFO] 07:55:42:756 [Kernel]/(36944:37010): Se solicito a Memoria resolver Page FAULT
+[INFO] 07:55:45:266 [Kernel]/(36944:36948): Se recibio algo de CPU_Dispatch
+[WARNING] 07:55:45:266 [Kernel]/(36944:36948): Entre a atender instruccion
+[INFO] 07:55:48:260 [Kernel]/(36944:36946): Se recibio algo de MEMORIA
+[INFO] 07:55:48:260 [Kernel]/(36944:36946): Memoria soluciono el PAGE FAULT
+[INFO] 07:55:48:260 [Kernel]/(36944:37013): Se solicito a Memoria resolver Page FAULT
+[INFO] 07:55:51:783 [Kernel]/(36944:36948): Se recibio algo de CPU_Dispatch
+[WARNING] 07:55:51:783 [Kernel]/(36944:36948): Entre a atender instruccion
+[INFO] 07:55:53:774 [Kernel]/(36944:36946): Se recibio algo de MEMORIA
+[INFO] 07:55:53:774 [Kernel]/(36944:36946): Memoria soluciono el PAGE FAULT
+[INFO] 07:55:53:775 [Kernel]/(36944:37016): Se solicito a Memoria resolver Page FAULT
+[INFO] 07:55:56:287 [Kernel]/(36944:36948): Se recibio algo de CPU_Dispatch
+[WARNING] 07:55:56:288 [Kernel]/(36944:36948): Entre a atender instruccion
+[INFO] 07:55:59:284 [Kernel]/(36944:36946): Se recibio algo de MEMORIA
+[INFO] 07:55:59:284 [Kernel]/(36944:36946): Memoria soluciono el PAGE FAULT
+[INFO] 07:55:59:285 [Kernel]/(36944:37020): Se solicito a Memoria resolver Page FAULT
+[INFO] 07:56:02:806 [Kernel]/(36944:36948): Se recibio algo de CPU_Dispatch
+[WARNING] 07:56:02:807 [Kernel]/(36944:36948): Entre a atender instruccion
+[INFO] 07:56:04:803 [Kernel]/(36944:36946): Se recibio algo de MEMORIA
+[INFO] 07:56:04:804 [Kernel]/(36944:36946): Memoria soluciono el PAGE FAULT
+[INFO] 07:56:04:805 [Kernel]/(36944:37023): Se solicito a Memoria resolver Page FAULT
+[INFO] 07:56:07:330 [Kernel]/(36944:36948): Se recibio algo de CPU_Dispatch
+[WARNING] 07:56:07:330 [Kernel]/(36944:36948): Entre a atender instruccion
+[INFO] 07:56:10:312 [Kernel]/(36944:36946): Se recibio algo de MEMORIA
+[INFO] 07:56:10:312 [Kernel]/(36944:36946): Memoria soluciono el PAGE FAULT
+[INFO] 07:56:10:313 [Kernel]/(36944:37026): Se solicito a Memoria resolver Page FAULT
+[INFO] 07:56:12:833 [Kernel]/(36944:36948): Se recibio algo de CPU_Dispatch
+[WARNING] 07:56:12:833 [Kernel]/(36944:36948): Entre a atender instruccion
+[INFO] 07:56:15:835 [Kernel]/(36944:36946): Se recibio algo de MEMORIA
+[INFO] 07:56:15:835 [Kernel]/(36944:36946): Memoria soluciono el PAGE FAULT
+[INFO] 07:56:15:836 [Kernel]/(36944:37029): Se solicito a Memoria resolver Page FAULT
+[INFO] 07:56:19:392 [Kernel]/(36944:36948): Se recibio algo de CPU_Dispatch
+[WARNING] 07:56:19:392 [Kernel]/(36944:36948): Entre a atender instruccion
+[INFO] 07:56:21:346 [Kernel]/(36944:36946): Se recibio algo de MEMORIA
+[INFO] 07:56:21:346 [Kernel]/(36944:36946): Memoria soluciono el PAGE FAULT
+[INFO] 07:56:21:347 [Kernel]/(36944:37032): Se solicito a Memoria resolver Page FAULT
+[INFO] 07:56:23:856 [Kernel]/(36944:36948): Se recibio algo de CPU_Dispatch
+[WARNING] 07:56:23:856 [Kernel]/(36944:36948): Entre a atender instruccion
+[INFO] 07:56:26:861 [Kernel]/(36944:36946): Se recibio algo de MEMORIA
+[INFO] 07:56:26:861 [Kernel]/(36944:36946): Memoria soluciono el PAGE FAULT
+[INFO] 07:56:26:862 [Kernel]/(36944:37035): Se solicito a Memoria resolver Page FAULT
+[INFO] 07:56:30:382 [Kernel]/(36944:36948): Se recibio algo de CPU_Dispatch
+[WARNING] 07:56:30:382 [Kernel]/(36944:36948): Entre a atender instruccion
+[INFO] 07:56:32:373 [Kernel]/(36944:36946): Se recibio algo de MEMORIA
+[INFO] 07:56:32:373 [Kernel]/(36944:36946): Memoria soluciono el PAGE FAULT
+[INFO] 07:56:32:380 [Kernel]/(36944:37038): Se solicito a Memoria resolver Page FAULT
+[INFO] 07:56:34:886 [Kernel]/(36944:36948): Se recibio algo de CPU_Dispatch
+[WARNING] 07:56:34:886 [Kernel]/(36944:36948): Entre a atender instruccion
+[INFO] 07:56:37:903 [Kernel]/(36944:36946): Se recibio algo de MEMORIA
+[INFO] 07:56:37:904 [Kernel]/(36944:36946): Memoria soluciono el PAGE FAULT
+[INFO] 07:56:37:904 [Kernel]/(36944:37041): Se solicito a Memoria resolver Page FAULT
+[INFO] 07:56:40:432 [Kernel]/(36944:36948): Se recibio algo de CPU_Dispatch
+[WARNING] 07:56:40:432 [Kernel]/(36944:36948): Entre a atender instruccion
+[INFO] 07:56:43:420 [Kernel]/(36944:36946): Se recibio algo de MEMORIA
+[INFO] 07:56:43:422 [Kernel]/(36944:36946): Memoria soluciono el PAGE FAULT
+[INFO] 07:56:43:422 [Kernel]/(36944:37044): Se solicito a Memoria resolver Page FAULT
+[INFO] 07:56:45:931 [Kernel]/(36944:36948): Se recibio algo de CPU_Dispatch
+[WARNING] 07:56:45:931 [Kernel]/(36944:36948): Entre a atender instruccion
+[INFO] 07:56:48:929 [Kernel]/(36944:36946): Se recibio algo de MEMORIA
+[INFO] 07:59:29:434 [Kernel]/(36944:36946): Memoria soluciono el PAGE FAULT
+[INFO] 07:59:29:434 [Kernel]/(36944:37054): Mensaje a MEMORIA: LIBERAR_ESTRUCTURA_KM [PID: 4]
+[INFO] 07:59:29:434 [Kernel]/(36944:37057): Mensaje a MEMORIA: LIBERAR_ESTRUCTURA_KM [PID: 5]
+[INFO] 07:59:29:434 [Kernel]/(36944:37059): Se solicito a Memoria resolver Page FAULT
+[INFO] 07:59:29:937 [Kernel]/(36944:36946): Se recibio algo de MEMORIA
+[INFO] 07:59:29:937 [Kernel]/(36944:37056): Mensaje a MEMORIA: LIBERAR_ESTRUCTURA_KM [PID: 2]
+[INFO] 07:59:30:439 [Kernel]/(36944:36946): Se recibio algo de MEMORIA
+[INFO] 07:59:31:443 [Kernel]/(36944:36946): Se recibio algo de MEMORIA
+[INFO] 07:59:35:792 [Kernel]/(36944:37064): Mensaje a MEMORIA: LIBERAR_ESTRUCTURA_KM [PID: 3]
+[INFO] 07:59:36:293 [Kernel]/(36944:36946): Se recibio algo de MEMORIA
+[INFO] 07:59:42:975 [Kernel]/(36944:36946): Se recibio algo de MEMORIA
+[ERROR] 07:59:42:975 [Kernel]/(36944:36946): [DESCONEXION]: MEMORIA

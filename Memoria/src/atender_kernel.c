@@ -16,6 +16,7 @@ void iniciar_estructura_para_un_proceso_nuevo(t_buffer* un_Buffer){
 	//Enviar a FS la cant_marcos para swap
 	enviar_a_fs_peticion_de_asignacion_de_bloques(un_proceso->pid, list_size(un_proceso->tabla_paginas));
 
+	sem_wait(&sem_control_swap_asign);
 	//REsponder a Kernel
 	responder_a_kernel_confirmacion_del_proceso_creado();
 }
@@ -38,11 +39,16 @@ void atender_pagefault_kernel(t_buffer* un_buffer){
 	int pid = recibir_int_del_buffer(un_buffer);
 	int nro_pagina = recibir_int_del_buffer(un_buffer);
 
+//	log_info(memoria_logger, "");
+	log_info(memoria_logger, "BBB_1");
 	t_proceso* un_proceso = obtener_proceso_por_id(pid);
-	t_pagina* una_pagina = pag_obtener_pagina_completa(un_proceso, nro_pagina);
+	log_info(memoria_logger, "BBB_2");
+	t_pagina* una_pagina = pag_obtener_pagina_completa_(un_proceso, nro_pagina);
+	log_info(memoria_logger, "BBB_3");
 
 	int tipo_marco = 10;
 	t_marco* un_marco = obtener_un_marco_de_la_lista_de_marcos(&tipo_marco);
+	log_info(memoria_logger, "BBB_4");
 
 	if(tipo_marco == MARCO_VICTIMA){
 		if(un_marco->info_old != NULL){
@@ -58,11 +64,14 @@ void atender_pagefault_kernel(t_buffer* un_buffer){
 	setear_config_del_marco_segun_algoritmo(un_marco);
 
 	una_pagina->nro_marco = un_marco->nro_marco;
+	logg_acceso_a_tabla_de_paginas(pid, nro_pagina, una_pagina->nro_marco);
 
 	//Enviar a FileSystem peticion de lectura de pagina SWAP
 	//M -> FS: [PID][pos_swap]
 	pedir_lectura_de_pag_swap_a_fs(pid, nro_pagina, una_pagina->pos_en_swap);
 	log_info(memoria_logger, "PAG_SWAP <PID:%d> <Pag:%d> <Pos_SWAP:%d>", pid, nro_pagina, una_pagina->pos_en_swap);
+
+
 
 	//Log de lectura obligatorio
 	logg_lectura_pagina_swap(pid, un_marco->nro_marco, nro_pagina);

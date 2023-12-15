@@ -1965,3 +1965,1727 @@
 [INFO] 04:16:56:331 [CPU - Log obligatorio]/(19588:19616): PID: <1> - Ejecutando: <MOV_OUT> - <48> - <AX>
 [INFO] 04:16:56:834 [CPU - Log obligatorio]/(19588:19616): Page Fault PID: <1> - Página: <3>
 [INFO] 04:16:57:341 [CPU - Log obligatorio]/(19588:19616): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <-1> - Valor: <4>
+[INFO] 04:53:39:082 [CPU - Log obligatorio]/(4759:5039): PID: <1> - FETCH - Program Counter: <0>
+[INFO] 04:53:39:588 [CPU - Log obligatorio]/(4759:5039): PID: <1> - Ejecutando: <SET> - <AX> - <1>
+[INFO] 04:53:39:588 [CPU - Log obligatorio]/(4759:5039): PID: <1> - FETCH - Program Counter: <1>
+[INFO] 04:53:40:100 [CPU - Log obligatorio]/(4759:5039): PID: <1> - Ejecutando: <MOV_OUT> - <0> - <AX>
+[INFO] 04:53:40:605 [CPU - Log obligatorio]/(4759:5039): Page Fault PID: <1> - Página: <0>
+[INFO] 04:53:41:109 [CPU - Log obligatorio]/(4759:5039): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <-1> - Valor: <0>
+[INFO] 04:53:52:640 [CPU - Log obligatorio]/(4759:5042): PID: <1> - FETCH - Program Counter: <1>
+[INFO] 04:53:53:143 [CPU - Log obligatorio]/(4759:5042): PID: <1> - Ejecutando: <MOV_OUT> - <0> - <AX>
+[INFO] 04:53:53:645 [CPU - Log obligatorio]/(4759:5042): PID: <1> - OBTENER MARCO - Página: <0> - Marco: <0>
+[INFO] 04:53:54:147 [CPU - Log obligatorio]/(4759:5042): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <0> - Valor: <4>
+[INFO] 04:53:54:147 [CPU - Log obligatorio]/(4759:5042): PID: <1> - FETCH - Program Counter: <2>
+[INFO] 04:53:54:651 [CPU - Log obligatorio]/(4759:5042): PID: <1> - Ejecutando: <MOV_OUT> - <16> - <AX>
+[INFO] 04:53:55:155 [CPU - Log obligatorio]/(4759:5042): Page Fault PID: <1> - Página: <1>
+[INFO] 04:53:55:659 [CPU - Log obligatorio]/(4759:5042): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <-1> - Valor: <4>
+[INFO] 04:53:58:174 [CPU - Log obligatorio]/(4759:5045): PID: <1> - FETCH - Program Counter: <2>
+[INFO] 04:53:58:675 [CPU - Log obligatorio]/(4759:5045): PID: <1> - Ejecutando: <MOV_OUT> - <16> - <AX>
+[INFO] 04:53:59:179 [CPU - Log obligatorio]/(4759:5045): PID: <1> - OBTENER MARCO - Página: <1> - Marco: <1>
+[INFO] 04:53:59:691 [CPU - Log obligatorio]/(4759:5045): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <16> - Valor: <4>
+[INFO] 04:53:59:691 [CPU - Log obligatorio]/(4759:5045): PID: <1> - FETCH - Program Counter: <3>
+[INFO] 04:54:00:193 [CPU - Log obligatorio]/(4759:5045): PID: <1> - Ejecutando: <MOV_OUT> - <32> - <AX>
+[INFO] 04:54:00:699 [CPU - Log obligatorio]/(4759:5045): Page Fault PID: <1> - Página: <2>
+[INFO] 04:54:01:205 [CPU - Log obligatorio]/(4759:5045): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <-1> - Valor: <4>
+[INFO] 04:54:03:712 [CPU - Log obligatorio]/(4759:5048): PID: <1> - FETCH - Program Counter: <3>
+[INFO] 04:54:04:215 [CPU - Log obligatorio]/(4759:5048): PID: <1> - Ejecutando: <MOV_OUT> - <32> - <AX>
+[INFO] 04:54:04:717 [CPU - Log obligatorio]/(4759:5048): PID: <1> - OBTENER MARCO - Página: <2> - Marco: <2>
+[INFO] 04:54:05:222 [CPU - Log obligatorio]/(4759:5048): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <32> - Valor: <4>
+[INFO] 04:54:05:222 [CPU - Log obligatorio]/(4759:5048): PID: <1> - FETCH - Program Counter: <4>
+[INFO] 04:54:05:725 [CPU - Log obligatorio]/(4759:5048): PID: <1> - Ejecutando: <MOV_OUT> - <48> - <AX>
+[INFO] 04:54:06:230 [CPU - Log obligatorio]/(4759:5048): Page Fault PID: <1> - Página: <3>
+[INFO] 04:54:06:731 [CPU - Log obligatorio]/(4759:5048): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <-1> - Valor: <4>
+[INFO] 04:54:09:241 [CPU - Log obligatorio]/(4759:5051): PID: <1> - FETCH - Program Counter: <4>
+[INFO] 04:54:09:744 [CPU - Log obligatorio]/(4759:5051): PID: <1> - Ejecutando: <MOV_OUT> - <48> - <AX>
+[INFO] 04:54:10:246 [CPU - Log obligatorio]/(4759:5051): PID: <1> - OBTENER MARCO - Página: <3> - Marco: <3>
+[INFO] 04:54:10:750 [CPU - Log obligatorio]/(4759:5051): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <48> - Valor: <4>
+[INFO] 04:54:10:750 [CPU - Log obligatorio]/(4759:5051): PID: <1> - FETCH - Program Counter: <5>
+[INFO] 04:54:11:258 [CPU - Log obligatorio]/(4759:5051): PID: <1> - Ejecutando: <MOV_IN> - <DX> - <16>
+[INFO] 04:54:11:770 [CPU - Log obligatorio]/(4759:5051): PID: <1> - OBTENER MARCO - Página: <1> - Marco: <1>
+[INFO] 04:54:12:273 [CPU - Log obligatorio]/(4759:5051): PID: <1> - Acción: <LEER> - Dirección Física: <16> - Valor: <4>
+[INFO] 04:54:12:273 [CPU - Log obligatorio]/(4759:5051): PID: <1> - FETCH - Program Counter: <6>
+[INFO] 04:54:12:775 [CPU - Log obligatorio]/(4759:5051): PID: <1> - Ejecutando: <MOV_IN> - <CX> - <32>
+[INFO] 04:54:13:279 [CPU - Log obligatorio]/(4759:5051): PID: <1> - OBTENER MARCO - Página: <2> - Marco: <2>
+[INFO] 04:54:13:780 [CPU - Log obligatorio]/(4759:5051): PID: <1> - Acción: <LEER> - Dirección Física: <32> - Valor: <4>
+[INFO] 04:54:13:780 [CPU - Log obligatorio]/(4759:5051): PID: <1> - FETCH - Program Counter: <7>
+[INFO] 04:54:14:281 [CPU - Log obligatorio]/(4759:5051): PID: <1> - Ejecutando: <SET> - <BX> - <2>
+[INFO] 04:54:14:281 [CPU - Log obligatorio]/(4759:5051): PID: <1> - FETCH - Program Counter: <8>
+[INFO] 04:54:14:782 [CPU - Log obligatorio]/(4759:5051): PID: <1> - Ejecutando: <MOV_OUT> - <64> - <BX>
+[INFO] 04:54:15:283 [CPU - Log obligatorio]/(4759:5051): Page Fault PID: <1> - Página: <4>
+[INFO] 04:54:15:786 [CPU - Log obligatorio]/(4759:5051): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <-1> - Valor: <0>
+[INFO] 04:55:45:902 [CPU - Log obligatorio]/(5078:5098): PID: <1> - FETCH - Program Counter: <0>
+[INFO] 04:55:46:409 [CPU - Log obligatorio]/(5078:5098): PID: <1> - Ejecutando: <SET> - <AX> - <1>
+[INFO] 04:55:46:409 [CPU - Log obligatorio]/(5078:5098): PID: <1> - FETCH - Program Counter: <1>
+[INFO] 04:55:46:912 [CPU - Log obligatorio]/(5078:5098): PID: <1> - Ejecutando: <MOV_OUT> - <0> - <AX>
+[INFO] 04:55:47:415 [CPU - Log obligatorio]/(5078:5098): Page Fault PID: <1> - Página: <0>
+[INFO] 04:55:47:923 [CPU - Log obligatorio]/(5078:5098): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <-1> - Valor: <0>
+[INFO] 04:55:59:428 [CPU - Log obligatorio]/(5078:5101): PID: <1> - FETCH - Program Counter: <1>
+[INFO] 04:55:59:936 [CPU - Log obligatorio]/(5078:5101): PID: <1> - Ejecutando: <MOV_OUT> - <0> - <AX>
+[INFO] 04:56:00:443 [CPU - Log obligatorio]/(5078:5101): PID: <1> - OBTENER MARCO - Página: <0> - Marco: <0>
+[INFO] 04:56:00:948 [CPU - Log obligatorio]/(5078:5101): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <0> - Valor: <4>
+[INFO] 04:56:00:948 [CPU - Log obligatorio]/(5078:5101): PID: <1> - FETCH - Program Counter: <2>
+[INFO] 04:56:01:451 [CPU - Log obligatorio]/(5078:5101): PID: <1> - Ejecutando: <MOV_OUT> - <16> - <AX>
+[INFO] 04:56:01:952 [CPU - Log obligatorio]/(5078:5101): Page Fault PID: <1> - Página: <1>
+[INFO] 04:56:02:456 [CPU - Log obligatorio]/(5078:5101): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <-1> - Valor: <4>
+[INFO] 04:56:04:973 [CPU - Log obligatorio]/(5078:5104): PID: <1> - FETCH - Program Counter: <2>
+[INFO] 04:56:05:478 [CPU - Log obligatorio]/(5078:5104): PID: <1> - Ejecutando: <MOV_OUT> - <16> - <AX>
+[INFO] 04:56:05:980 [CPU - Log obligatorio]/(5078:5104): PID: <1> - OBTENER MARCO - Página: <1> - Marco: <1>
+[INFO] 04:56:06:483 [CPU - Log obligatorio]/(5078:5104): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <16> - Valor: <4>
+[INFO] 04:56:06:484 [CPU - Log obligatorio]/(5078:5104): PID: <1> - FETCH - Program Counter: <3>
+[INFO] 04:56:06:989 [CPU - Log obligatorio]/(5078:5104): PID: <1> - Ejecutando: <MOV_OUT> - <32> - <AX>
+[INFO] 04:56:07:499 [CPU - Log obligatorio]/(5078:5104): Page Fault PID: <1> - Página: <2>
+[INFO] 04:56:08:001 [CPU - Log obligatorio]/(5078:5104): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <-1> - Valor: <4>
+[INFO] 04:56:10:526 [CPU - Log obligatorio]/(5078:5107): PID: <1> - FETCH - Program Counter: <3>
+[INFO] 04:56:11:028 [CPU - Log obligatorio]/(5078:5107): PID: <1> - Ejecutando: <MOV_OUT> - <32> - <AX>
+[INFO] 04:56:11:542 [CPU - Log obligatorio]/(5078:5107): PID: <1> - OBTENER MARCO - Página: <2> - Marco: <2>
+[INFO] 04:56:12:049 [CPU - Log obligatorio]/(5078:5107): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <32> - Valor: <4>
+[INFO] 04:56:12:049 [CPU - Log obligatorio]/(5078:5107): PID: <1> - FETCH - Program Counter: <4>
+[INFO] 04:56:12:556 [CPU - Log obligatorio]/(5078:5107): PID: <1> - Ejecutando: <MOV_OUT> - <48> - <AX>
+[INFO] 04:56:13:058 [CPU - Log obligatorio]/(5078:5107): Page Fault PID: <1> - Página: <3>
+[INFO] 04:56:13:562 [CPU - Log obligatorio]/(5078:5107): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <-1> - Valor: <4>
+[INFO] 04:56:16:073 [CPU - Log obligatorio]/(5078:5110): PID: <1> - FETCH - Program Counter: <4>
+[INFO] 04:56:16:578 [CPU - Log obligatorio]/(5078:5110): PID: <1> - Ejecutando: <MOV_OUT> - <48> - <AX>
+[INFO] 04:56:17:082 [CPU - Log obligatorio]/(5078:5110): PID: <1> - OBTENER MARCO - Página: <3> - Marco: <3>
+[INFO] 04:56:17:587 [CPU - Log obligatorio]/(5078:5110): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <48> - Valor: <4>
+[INFO] 04:56:17:588 [CPU - Log obligatorio]/(5078:5110): PID: <1> - FETCH - Program Counter: <5>
+[INFO] 04:56:18:089 [CPU - Log obligatorio]/(5078:5110): PID: <1> - Ejecutando: <MOV_IN> - <DX> - <16>
+[INFO] 04:56:18:591 [CPU - Log obligatorio]/(5078:5110): PID: <1> - OBTENER MARCO - Página: <1> - Marco: <1>
+[INFO] 04:56:19:106 [CPU - Log obligatorio]/(5078:5110): PID: <1> - Acción: <LEER> - Dirección Física: <16> - Valor: <4>
+[INFO] 04:56:19:106 [CPU - Log obligatorio]/(5078:5110): PID: <1> - FETCH - Program Counter: <6>
+[INFO] 04:56:19:611 [CPU - Log obligatorio]/(5078:5110): PID: <1> - Ejecutando: <MOV_IN> - <CX> - <32>
+[INFO] 04:56:20:113 [CPU - Log obligatorio]/(5078:5110): PID: <1> - OBTENER MARCO - Página: <2> - Marco: <2>
+[INFO] 04:56:20:615 [CPU - Log obligatorio]/(5078:5110): PID: <1> - Acción: <LEER> - Dirección Física: <32> - Valor: <4>
+[INFO] 04:56:20:616 [CPU - Log obligatorio]/(5078:5110): PID: <1> - FETCH - Program Counter: <7>
+[INFO] 04:56:21:119 [CPU - Log obligatorio]/(5078:5110): PID: <1> - Ejecutando: <SET> - <BX> - <2>
+[INFO] 04:56:21:120 [CPU - Log obligatorio]/(5078:5110): PID: <1> - FETCH - Program Counter: <8>
+[INFO] 04:56:21:623 [CPU - Log obligatorio]/(5078:5110): PID: <1> - Ejecutando: <MOV_OUT> - <64> - <BX>
+[INFO] 04:56:22:129 [CPU - Log obligatorio]/(5078:5110): Page Fault PID: <1> - Página: <4>
+[INFO] 04:56:22:644 [CPU - Log obligatorio]/(5078:5110): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <-1> - Valor: <0>
+[INFO] 05:00:04:603 [CPU - Log obligatorio]/(5116:5136): PID: <1> - FETCH - Program Counter: <0>
+[INFO] 05:00:05:105 [CPU - Log obligatorio]/(5116:5136): PID: <1> - Ejecutando: <SET> - <AX> - <1>
+[INFO] 05:00:05:105 [CPU - Log obligatorio]/(5116:5136): PID: <1> - FETCH - Program Counter: <1>
+[INFO] 05:00:05:608 [CPU - Log obligatorio]/(5116:5136): PID: <1> - Ejecutando: <MOV_OUT> - <0> - <AX>
+[INFO] 05:00:06:110 [CPU - Log obligatorio]/(5116:5136): Page Fault PID: <1> - Página: <0>
+[INFO] 05:00:06:612 [CPU - Log obligatorio]/(5116:5136): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <-1> - Valor: <0>
+[INFO] 05:05:23:932 [CPU - Log obligatorio]/(5272:5290): PID: <1> - FETCH - Program Counter: <0>
+[INFO] 05:05:24:444 [CPU - Log obligatorio]/(5272:5290): PID: <1> - Ejecutando: <SET> - <AX> - <1>
+[INFO] 05:05:24:444 [CPU - Log obligatorio]/(5272:5290): PID: <1> - FETCH - Program Counter: <1>
+[INFO] 05:05:24:946 [CPU - Log obligatorio]/(5272:5290): PID: <1> - Ejecutando: <MOV_OUT> - <0> - <AX>
+[INFO] 05:05:25:447 [CPU - Log obligatorio]/(5272:5290): Page Fault PID: <1> - Página: <0>
+[INFO] 05:05:25:950 [CPU - Log obligatorio]/(5272:5290): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <-1> - Valor: <0>
+[INFO] 05:05:37:480 [CPU - Log obligatorio]/(5272:5294): PID: <1> - FETCH - Program Counter: <1>
+[INFO] 05:05:37:982 [CPU - Log obligatorio]/(5272:5294): PID: <1> - Ejecutando: <MOV_OUT> - <0> - <AX>
+[INFO] 05:05:38:492 [CPU - Log obligatorio]/(5272:5294): PID: <1> - OBTENER MARCO - Página: <0> - Marco: <0>
+[INFO] 05:05:38:996 [CPU - Log obligatorio]/(5272:5294): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <0> - Valor: <4>
+[INFO] 05:05:38:996 [CPU - Log obligatorio]/(5272:5294): PID: <1> - FETCH - Program Counter: <2>
+[INFO] 05:05:39:510 [CPU - Log obligatorio]/(5272:5294): PID: <1> - Ejecutando: <MOV_OUT> - <16> - <AX>
+[INFO] 05:18:58:945 [CPU - Log obligatorio]/(5537:5558): PID: <1> - FETCH - Program Counter: <0>
+[INFO] 05:18:59:450 [CPU - Log obligatorio]/(5537:5558): PID: <1> - Ejecutando: <SET> - <AX> - <1>
+[INFO] 05:18:59:450 [CPU - Log obligatorio]/(5537:5558): PID: <1> - FETCH - Program Counter: <1>
+[INFO] 05:18:59:954 [CPU - Log obligatorio]/(5537:5558): PID: <1> - Ejecutando: <MOV_OUT> - <0> - <AX>
+[INFO] 05:19:00:455 [CPU - Log obligatorio]/(5537:5558): Page Fault PID: <1> - Página: <0>
+[INFO] 05:19:00:960 [CPU - Log obligatorio]/(5537:5558): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <-1> - Valor: <0>
+[INFO] 05:19:12:465 [CPU - Log obligatorio]/(5537:5561): PID: <1> - FETCH - Program Counter: <1>
+[INFO] 05:19:12:970 [CPU - Log obligatorio]/(5537:5561): PID: <1> - Ejecutando: <MOV_OUT> - <0> - <AX>
+[INFO] 05:19:13:474 [CPU - Log obligatorio]/(5537:5561): PID: <1> - OBTENER MARCO - Página: <0> - Marco: <0>
+[INFO] 05:19:13:977 [CPU - Log obligatorio]/(5537:5561): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <0> - Valor: <4>
+[INFO] 05:19:13:977 [CPU - Log obligatorio]/(5537:5561): PID: <1> - FETCH - Program Counter: <2>
+[INFO] 05:19:14:491 [CPU - Log obligatorio]/(5537:5561): PID: <1> - Ejecutando: <MOV_OUT> - <16> - <AX>
+[INFO] 05:19:14:994 [CPU - Log obligatorio]/(5537:5561): Page Fault PID: <1> - Página: <1>
+[INFO] 05:19:15:498 [CPU - Log obligatorio]/(5537:5561): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <-1> - Valor: <4>
+[INFO] 05:19:18:013 [CPU - Log obligatorio]/(5537:5564): PID: <1> - FETCH - Program Counter: <2>
+[INFO] 05:19:18:517 [CPU - Log obligatorio]/(5537:5564): PID: <1> - Ejecutando: <MOV_OUT> - <16> - <AX>
+[INFO] 05:19:19:022 [CPU - Log obligatorio]/(5537:5564): PID: <1> - OBTENER MARCO - Página: <1> - Marco: <1>
+[INFO] 05:19:19:524 [CPU - Log obligatorio]/(5537:5564): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <16> - Valor: <4>
+[INFO] 05:19:19:524 [CPU - Log obligatorio]/(5537:5564): PID: <1> - FETCH - Program Counter: <3>
+[INFO] 05:19:20:026 [CPU - Log obligatorio]/(5537:5564): PID: <1> - Ejecutando: <MOV_OUT> - <32> - <AX>
+[INFO] 05:19:20:528 [CPU - Log obligatorio]/(5537:5564): Page Fault PID: <1> - Página: <2>
+[INFO] 05:19:21:030 [CPU - Log obligatorio]/(5537:5564): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <-1> - Valor: <4>
+[INFO] 05:19:23:546 [CPU - Log obligatorio]/(5537:5567): PID: <1> - FETCH - Program Counter: <3>
+[INFO] 05:19:24:054 [CPU - Log obligatorio]/(5537:5567): PID: <1> - Ejecutando: <MOV_OUT> - <32> - <AX>
+[INFO] 05:19:24:559 [CPU - Log obligatorio]/(5537:5567): PID: <1> - OBTENER MARCO - Página: <2> - Marco: <2>
+[INFO] 05:19:25:065 [CPU - Log obligatorio]/(5537:5567): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <32> - Valor: <4>
+[INFO] 05:19:25:065 [CPU - Log obligatorio]/(5537:5567): PID: <1> - FETCH - Program Counter: <4>
+[INFO] 05:19:25:568 [CPU - Log obligatorio]/(5537:5567): PID: <1> - Ejecutando: <MOV_OUT> - <48> - <AX>
+[INFO] 05:19:26:075 [CPU - Log obligatorio]/(5537:5567): Page Fault PID: <1> - Página: <3>
+[INFO] 05:19:26:577 [CPU - Log obligatorio]/(5537:5567): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <-1> - Valor: <4>
+[INFO] 05:19:29:095 [CPU - Log obligatorio]/(5537:5569): PID: <1> - FETCH - Program Counter: <4>
+[INFO] 05:19:29:597 [CPU - Log obligatorio]/(5537:5569): PID: <1> - Ejecutando: <MOV_OUT> - <48> - <AX>
+[INFO] 05:19:30:099 [CPU - Log obligatorio]/(5537:5569): PID: <1> - OBTENER MARCO - Página: <3> - Marco: <3>
+[INFO] 05:19:30:602 [CPU - Log obligatorio]/(5537:5569): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <48> - Valor: <4>
+[INFO] 05:19:30:602 [CPU - Log obligatorio]/(5537:5569): PID: <1> - FETCH - Program Counter: <5>
+[INFO] 05:19:31:106 [CPU - Log obligatorio]/(5537:5569): PID: <1> - Ejecutando: <MOV_IN> - <DX> - <16>
+[INFO] 05:19:31:609 [CPU - Log obligatorio]/(5537:5569): PID: <1> - OBTENER MARCO - Página: <1> - Marco: <1>
+[INFO] 05:19:32:112 [CPU - Log obligatorio]/(5537:5569): PID: <1> - Acción: <LEER> - Dirección Física: <16> - Valor: <4>
+[INFO] 05:19:32:112 [CPU - Log obligatorio]/(5537:5569): PID: <1> - FETCH - Program Counter: <6>
+[INFO] 05:19:32:617 [CPU - Log obligatorio]/(5537:5569): PID: <1> - Ejecutando: <MOV_IN> - <CX> - <32>
+[INFO] 05:19:33:119 [CPU - Log obligatorio]/(5537:5569): PID: <1> - OBTENER MARCO - Página: <2> - Marco: <2>
+[INFO] 05:19:33:622 [CPU - Log obligatorio]/(5537:5569): PID: <1> - Acción: <LEER> - Dirección Física: <32> - Valor: <4>
+[INFO] 05:19:33:622 [CPU - Log obligatorio]/(5537:5569): PID: <1> - FETCH - Program Counter: <7>
+[INFO] 05:19:34:125 [CPU - Log obligatorio]/(5537:5569): PID: <1> - Ejecutando: <SET> - <BX> - <2>
+[INFO] 05:19:34:125 [CPU - Log obligatorio]/(5537:5569): PID: <1> - FETCH - Program Counter: <8>
+[INFO] 05:19:34:626 [CPU - Log obligatorio]/(5537:5569): PID: <1> - Ejecutando: <MOV_OUT> - <64> - <BX>
+[INFO] 05:19:35:142 [CPU - Log obligatorio]/(5537:5569): Page Fault PID: <1> - Página: <4>
+[INFO] 05:19:35:647 [CPU - Log obligatorio]/(5537:5569): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <-1> - Valor: <0>
+[INFO] 05:20:21:120 [CPU - Log obligatorio]/(5574:5594): PID: <1> - FETCH - Program Counter: <0>
+[INFO] 05:20:21:622 [CPU - Log obligatorio]/(5574:5594): PID: <1> - Ejecutando: <SET> - <AX> - <1>
+[INFO] 05:20:21:622 [CPU - Log obligatorio]/(5574:5594): PID: <1> - FETCH - Program Counter: <1>
+[INFO] 05:20:22:126 [CPU - Log obligatorio]/(5574:5594): PID: <1> - Ejecutando: <MOV_OUT> - <0> - <AX>
+[INFO] 05:20:22:627 [CPU - Log obligatorio]/(5574:5594): Page Fault PID: <1> - Página: <0>
+[INFO] 05:28:44:677 [CPU - Log obligatorio]/(5790:5811): PID: <1> - FETCH - Program Counter: <0>
+[INFO] 05:28:45:179 [CPU - Log obligatorio]/(5790:5811): PID: <1> - Ejecutando: <SET> - <AX> - <1>
+[INFO] 05:28:45:179 [CPU - Log obligatorio]/(5790:5811): PID: <1> - FETCH - Program Counter: <1>
+[INFO] 05:28:45:688 [CPU - Log obligatorio]/(5790:5811): PID: <1> - Ejecutando: <MOV_OUT> - <0> - <AX>
+[INFO] 05:28:46:190 [CPU - Log obligatorio]/(5790:5811): Page Fault PID: <1> - Página: <0>
+[INFO] 05:28:46:691 [CPU - Log obligatorio]/(5790:5811): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <-1> - Valor: <0>
+[INFO] 05:28:49:198 [CPU - Log obligatorio]/(5790:5813): PID: <1> - FETCH - Program Counter: <1>
+[INFO] 05:28:49:699 [CPU - Log obligatorio]/(5790:5813): PID: <1> - Ejecutando: <MOV_OUT> - <0> - <AX>
+[INFO] 05:28:50:201 [CPU - Log obligatorio]/(5790:5813): PID: <1> - OBTENER MARCO - Página: <0> - Marco: <0>
+[INFO] 05:28:50:705 [CPU - Log obligatorio]/(5790:5813): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <0> - Valor: <4>
+[INFO] 05:28:50:705 [CPU - Log obligatorio]/(5790:5813): PID: <1> - FETCH - Program Counter: <2>
+[INFO] 05:28:51:208 [CPU - Log obligatorio]/(5790:5813): PID: <1> - Ejecutando: <MOV_OUT> - <16> - <AX>
+[INFO] 05:28:51:715 [CPU - Log obligatorio]/(5790:5813): Page Fault PID: <1> - Página: <1>
+[INFO] 05:36:54:269 [CPU - Log obligatorio]/(6016:6037): PID: <1> - FETCH - Program Counter: <0>
+[INFO] 05:36:54:771 [CPU - Log obligatorio]/(6016:6037): PID: <1> - Ejecutando: <SET> - <AX> - <1>
+[INFO] 05:36:54:771 [CPU - Log obligatorio]/(6016:6037): PID: <1> - FETCH - Program Counter: <1>
+[INFO] 05:36:55:282 [CPU - Log obligatorio]/(6016:6037): PID: <1> - Ejecutando: <MOV_OUT> - <0> - <AX>
+[INFO] 05:36:55:785 [CPU - Log obligatorio]/(6016:6037): Page Fault PID: <1> - Página: <0>
+[INFO] 05:36:56:287 [CPU - Log obligatorio]/(6016:6037): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <-1> - Valor: <0>
+[INFO] 05:51:16:866 [CPU - Log obligatorio]/(6126:6147): PID: <1> - FETCH - Program Counter: <0>
+[INFO] 05:51:17:369 [CPU - Log obligatorio]/(6126:6147): PID: <1> - Ejecutando: <SET> - <AX> - <1>
+[INFO] 05:51:17:369 [CPU - Log obligatorio]/(6126:6147): PID: <1> - FETCH - Program Counter: <1>
+[INFO] 05:51:17:873 [CPU - Log obligatorio]/(6126:6147): PID: <1> - Ejecutando: <MOV_OUT> - <0> - <AX>
+[INFO] 05:51:18:375 [CPU - Log obligatorio]/(6126:6147): Page Fault PID: <1> - Página: <0>
+[INFO] 05:51:20:883 [CPU - Log obligatorio]/(6126:6150): PID: <1> - FETCH - Program Counter: <1>
+[INFO] 05:51:21:385 [CPU - Log obligatorio]/(6126:6150): PID: <1> - Ejecutando: <MOV_OUT> - <0> - <AX>
+[INFO] 05:51:21:888 [CPU - Log obligatorio]/(6126:6150): PID: <1> - OBTENER MARCO - Página: <0> - Marco: <0>
+[INFO] 05:51:22:389 [CPU - Log obligatorio]/(6126:6150): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <0> - Valor: <4>
+[INFO] 05:51:22:389 [CPU - Log obligatorio]/(6126:6150): PID: <1> - FETCH - Program Counter: <2>
+[INFO] 05:51:22:895 [CPU - Log obligatorio]/(6126:6150): PID: <1> - Ejecutando: <MOV_OUT> - <16> - <AX>
+[INFO] 06:10:12:803 [CPU - Log obligatorio]/(6516:6538): PID: <1> - FETCH - Program Counter: <0>
+[INFO] 06:10:13:304 [CPU - Log obligatorio]/(6516:6538): PID: <1> - Ejecutando: <SET> - <AX> - <1>
+[INFO] 06:10:13:304 [CPU - Log obligatorio]/(6516:6538): PID: <1> - FETCH - Program Counter: <1>
+[INFO] 06:10:13:808 [CPU - Log obligatorio]/(6516:6538): PID: <1> - Ejecutando: <MOV_OUT> - <0> - <AX>
+[INFO] 06:10:14:313 [CPU - Log obligatorio]/(6516:6538): Page Fault PID: <1> - Página: <0>
+[INFO] 06:10:19:889 [CPU - Log obligatorio]/(6516:6541): PID: <1> - FETCH - Program Counter: <1>
+[INFO] 06:10:20:393 [CPU - Log obligatorio]/(6516:6541): PID: <1> - Ejecutando: <MOV_OUT> - <0> - <AX>
+[INFO] 06:10:20:898 [CPU - Log obligatorio]/(6516:6541): PID: <1> - OBTENER MARCO - Página: <0> - Marco: <0>
+[INFO] 06:10:21:402 [CPU - Log obligatorio]/(6516:6541): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <0> - Valor: <4>
+[INFO] 06:10:21:402 [CPU - Log obligatorio]/(6516:6541): PID: <1> - FETCH - Program Counter: <2>
+[INFO] 06:10:21:908 [CPU - Log obligatorio]/(6516:6541): PID: <1> - Ejecutando: <MOV_OUT> - <16> - <AX>
+[INFO] 06:10:22:409 [CPU - Log obligatorio]/(6516:6541): Page Fault PID: <1> - Página: <1>
+[INFO] 06:10:27:922 [CPU - Log obligatorio]/(6516:6544): PID: <1> - FETCH - Program Counter: <2>
+[INFO] 06:10:28:426 [CPU - Log obligatorio]/(6516:6544): PID: <1> - Ejecutando: <MOV_OUT> - <16> - <AX>
+[INFO] 06:10:28:932 [CPU - Log obligatorio]/(6516:6544): PID: <1> - OBTENER MARCO - Página: <1> - Marco: <1>
+[INFO] 06:10:29:432 [CPU - Log obligatorio]/(6516:6544): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <16> - Valor: <4>
+[INFO] 06:10:29:432 [CPU - Log obligatorio]/(6516:6544): PID: <1> - FETCH - Program Counter: <3>
+[INFO] 06:10:29:933 [CPU - Log obligatorio]/(6516:6544): PID: <1> - Ejecutando: <MOV_OUT> - <32> - <AX>
+[INFO] 06:10:30:439 [CPU - Log obligatorio]/(6516:6544): Page Fault PID: <1> - Página: <2>
+[INFO] 06:10:35:952 [CPU - Log obligatorio]/(6516:6547): PID: <1> - FETCH - Program Counter: <3>
+[INFO] 06:10:36:455 [CPU - Log obligatorio]/(6516:6547): PID: <1> - Ejecutando: <MOV_OUT> - <32> - <AX>
+[INFO] 06:10:36:957 [CPU - Log obligatorio]/(6516:6547): PID: <1> - OBTENER MARCO - Página: <2> - Marco: <2>
+[INFO] 06:10:37:461 [CPU - Log obligatorio]/(6516:6547): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <32> - Valor: <4>
+[INFO] 06:10:37:461 [CPU - Log obligatorio]/(6516:6547): PID: <1> - FETCH - Program Counter: <4>
+[INFO] 06:10:37:963 [CPU - Log obligatorio]/(6516:6547): PID: <1> - Ejecutando: <MOV_OUT> - <48> - <AX>
+[INFO] 06:10:38:465 [CPU - Log obligatorio]/(6516:6547): Page Fault PID: <1> - Página: <3>
+[INFO] 06:10:43:970 [CPU - Log obligatorio]/(6516:6550): PID: <1> - FETCH - Program Counter: <4>
+[INFO] 06:10:44:471 [CPU - Log obligatorio]/(6516:6550): PID: <1> - Ejecutando: <MOV_OUT> - <48> - <AX>
+[INFO] 06:10:44:975 [CPU - Log obligatorio]/(6516:6550): PID: <1> - OBTENER MARCO - Página: <3> - Marco: <3>
+[INFO] 06:10:45:476 [CPU - Log obligatorio]/(6516:6550): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <48> - Valor: <4>
+[INFO] 06:10:45:476 [CPU - Log obligatorio]/(6516:6550): PID: <1> - FETCH - Program Counter: <5>
+[INFO] 06:10:45:977 [CPU - Log obligatorio]/(6516:6550): PID: <1> - Ejecutando: <MOV_IN> - <DX> - <16>
+[INFO] 06:10:46:478 [CPU - Log obligatorio]/(6516:6550): PID: <1> - OBTENER MARCO - Página: <1> - Marco: <1>
+[INFO] 06:10:46:986 [CPU - Log obligatorio]/(6516:6550): PID: <1> - Acción: <LEER> - Dirección Física: <16> - Valor: <4>
+[INFO] 06:10:46:986 [CPU - Log obligatorio]/(6516:6550): PID: <1> - FETCH - Program Counter: <6>
+[INFO] 06:10:47:486 [CPU - Log obligatorio]/(6516:6550): PID: <1> - Ejecutando: <MOV_IN> - <CX> - <32>
+[INFO] 06:10:47:989 [CPU - Log obligatorio]/(6516:6550): PID: <1> - OBTENER MARCO - Página: <2> - Marco: <2>
+[INFO] 06:10:48:490 [CPU - Log obligatorio]/(6516:6550): PID: <1> - Acción: <LEER> - Dirección Física: <32> - Valor: <4>
+[INFO] 06:10:48:490 [CPU - Log obligatorio]/(6516:6550): PID: <1> - FETCH - Program Counter: <7>
+[INFO] 06:10:48:990 [CPU - Log obligatorio]/(6516:6550): PID: <1> - Ejecutando: <SET> - <BX> - <2>
+[INFO] 06:10:48:991 [CPU - Log obligatorio]/(6516:6550): PID: <1> - FETCH - Program Counter: <8>
+[INFO] 06:10:49:491 [CPU - Log obligatorio]/(6516:6550): PID: <1> - Ejecutando: <MOV_OUT> - <64> - <BX>
+[INFO] 06:10:49:992 [CPU - Log obligatorio]/(6516:6550): Page Fault PID: <1> - Página: <4>
+[INFO] 06:20:26:118 [CPU - Log obligatorio]/(6739:6760): PID: <1> - FETCH - Program Counter: <0>
+[INFO] 06:20:26:623 [CPU - Log obligatorio]/(6739:6760): PID: <1> - Ejecutando: <SET> - <AX> - <1>
+[INFO] 06:20:26:623 [CPU - Log obligatorio]/(6739:6760): PID: <1> - FETCH - Program Counter: <1>
+[INFO] 06:20:27:127 [CPU - Log obligatorio]/(6739:6760): PID: <1> - Ejecutando: <MOV_OUT> - <0> - <AX>
+[INFO] 06:20:27:629 [CPU - Log obligatorio]/(6739:6760): Page Fault PID: <1> - Página: <0>
+[INFO] 06:20:33:152 [CPU - Log obligatorio]/(6739:6763): PID: <1> - FETCH - Program Counter: <1>
+[INFO] 06:20:33:655 [CPU - Log obligatorio]/(6739:6763): PID: <1> - Ejecutando: <MOV_OUT> - <0> - <AX>
+[INFO] 06:20:34:166 [CPU - Log obligatorio]/(6739:6763): PID: <1> - OBTENER MARCO - Página: <0> - Marco: <0>
+[INFO] 06:20:34:694 [CPU - Log obligatorio]/(6739:6763): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <0> - Valor: <4>
+[INFO] 06:20:34:694 [CPU - Log obligatorio]/(6739:6763): PID: <1> - FETCH - Program Counter: <2>
+[INFO] 06:20:35:225 [CPU - Log obligatorio]/(6739:6763): PID: <1> - Ejecutando: <MOV_OUT> - <16> - <AX>
+[INFO] 06:20:35:728 [CPU - Log obligatorio]/(6739:6763): Page Fault PID: <1> - Página: <1>
+[INFO] 06:20:41:260 [CPU - Log obligatorio]/(6739:6766): PID: <1> - FETCH - Program Counter: <2>
+[INFO] 06:20:41:764 [CPU - Log obligatorio]/(6739:6766): PID: <1> - Ejecutando: <MOV_OUT> - <16> - <AX>
+[INFO] 06:20:42:276 [CPU - Log obligatorio]/(6739:6766): PID: <1> - OBTENER MARCO - Página: <1> - Marco: <1>
+[INFO] 06:20:42:777 [CPU - Log obligatorio]/(6739:6766): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <16> - Valor: <4>
+[INFO] 06:20:42:778 [CPU - Log obligatorio]/(6739:6766): PID: <1> - FETCH - Program Counter: <3>
+[INFO] 06:20:43:280 [CPU - Log obligatorio]/(6739:6766): PID: <1> - Ejecutando: <MOV_OUT> - <32> - <AX>
+[INFO] 06:20:43:783 [CPU - Log obligatorio]/(6739:6766): Page Fault PID: <1> - Página: <2>
+[INFO] 06:20:49:296 [CPU - Log obligatorio]/(6739:6769): PID: <1> - FETCH - Program Counter: <3>
+[INFO] 06:20:49:802 [CPU - Log obligatorio]/(6739:6769): PID: <1> - Ejecutando: <MOV_OUT> - <32> - <AX>
+[INFO] 06:20:50:310 [CPU - Log obligatorio]/(6739:6769): PID: <1> - OBTENER MARCO - Página: <2> - Marco: <2>
+[INFO] 06:20:50:816 [CPU - Log obligatorio]/(6739:6769): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <32> - Valor: <4>
+[INFO] 06:20:50:816 [CPU - Log obligatorio]/(6739:6769): PID: <1> - FETCH - Program Counter: <4>
+[INFO] 06:20:51:317 [CPU - Log obligatorio]/(6739:6769): PID: <1> - Ejecutando: <MOV_OUT> - <48> - <AX>
+[INFO] 06:20:51:818 [CPU - Log obligatorio]/(6739:6769): Page Fault PID: <1> - Página: <3>
+[INFO] 06:20:57:330 [CPU - Log obligatorio]/(6739:6772): PID: <1> - FETCH - Program Counter: <4>
+[INFO] 06:20:57:835 [CPU - Log obligatorio]/(6739:6772): PID: <1> - Ejecutando: <MOV_OUT> - <48> - <AX>
+[INFO] 06:20:58:337 [CPU - Log obligatorio]/(6739:6772): PID: <1> - OBTENER MARCO - Página: <3> - Marco: <3>
+[INFO] 06:20:58:840 [CPU - Log obligatorio]/(6739:6772): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <48> - Valor: <4>
+[INFO] 06:20:58:840 [CPU - Log obligatorio]/(6739:6772): PID: <1> - FETCH - Program Counter: <5>
+[INFO] 06:20:59:341 [CPU - Log obligatorio]/(6739:6772): PID: <1> - Ejecutando: <MOV_IN> - <DX> - <16>
+[INFO] 06:20:59:842 [CPU - Log obligatorio]/(6739:6772): PID: <1> - OBTENER MARCO - Página: <1> - Marco: <1>
+[INFO] 06:21:00:346 [CPU - Log obligatorio]/(6739:6772): PID: <1> - Acción: <LEER> - Dirección Física: <16> - Valor: <4>
+[INFO] 06:21:00:346 [CPU - Log obligatorio]/(6739:6772): PID: <1> - FETCH - Program Counter: <6>
+[INFO] 06:21:00:847 [CPU - Log obligatorio]/(6739:6772): PID: <1> - Ejecutando: <MOV_IN> - <CX> - <32>
+[INFO] 06:21:01:357 [CPU - Log obligatorio]/(6739:6772): PID: <1> - OBTENER MARCO - Página: <2> - Marco: <2>
+[INFO] 06:21:01:860 [CPU - Log obligatorio]/(6739:6772): PID: <1> - Acción: <LEER> - Dirección Física: <32> - Valor: <4>
+[INFO] 06:21:01:861 [CPU - Log obligatorio]/(6739:6772): PID: <1> - FETCH - Program Counter: <7>
+[INFO] 06:21:02:380 [CPU - Log obligatorio]/(6739:6772): PID: <1> - Ejecutando: <SET> - <BX> - <2>
+[INFO] 06:21:02:381 [CPU - Log obligatorio]/(6739:6772): PID: <1> - FETCH - Program Counter: <8>
+[INFO] 06:21:02:891 [CPU - Log obligatorio]/(6739:6772): PID: <1> - Ejecutando: <MOV_OUT> - <64> - <BX>
+[INFO] 06:21:03:395 [CPU - Log obligatorio]/(6739:6772): Page Fault PID: <1> - Página: <4>
+[INFO] 06:26:31:344 [CPU - Log obligatorio]/(6820:6843): PID: <1> - FETCH - Program Counter: <0>
+[INFO] 06:26:31:855 [CPU - Log obligatorio]/(6820:6843): PID: <1> - Ejecutando: <SET> - <AX> - <1>
+[INFO] 06:26:31:855 [CPU - Log obligatorio]/(6820:6843): PID: <1> - FETCH - Program Counter: <1>
+[INFO] 06:26:32:358 [CPU - Log obligatorio]/(6820:6843): PID: <1> - Ejecutando: <MOV_OUT> - <0> - <AX>
+[INFO] 06:26:32:861 [CPU - Log obligatorio]/(6820:6843): Page Fault PID: <1> - Página: <0>
+[INFO] 06:26:40:426 [CPU - Log obligatorio]/(6820:6846): PID: <1> - FETCH - Program Counter: <1>
+[INFO] 06:26:40:953 [CPU - Log obligatorio]/(6820:6846): PID: <1> - Ejecutando: <MOV_OUT> - <0> - <AX>
+[INFO] 06:26:41:476 [CPU - Log obligatorio]/(6820:6846): PID: <1> - OBTENER MARCO - Página: <0> - Marco: <0>
+[INFO] 06:26:41:978 [CPU - Log obligatorio]/(6820:6846): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <0> - Valor: <4>
+[INFO] 06:26:41:979 [CPU - Log obligatorio]/(6820:6846): PID: <1> - FETCH - Program Counter: <2>
+[INFO] 06:26:42:481 [CPU - Log obligatorio]/(6820:6846): PID: <1> - Ejecutando: <MOV_OUT> - <16> - <AX>
+[INFO] 06:26:42:986 [CPU - Log obligatorio]/(6820:6846): Page Fault PID: <1> - Página: <1>
+[INFO] 06:26:50:496 [CPU - Log obligatorio]/(6820:6849): PID: <1> - FETCH - Program Counter: <2>
+[INFO] 06:26:50:999 [CPU - Log obligatorio]/(6820:6849): PID: <1> - Ejecutando: <MOV_OUT> - <16> - <AX>
+[INFO] 06:26:51:507 [CPU - Log obligatorio]/(6820:6849): PID: <1> - OBTENER MARCO - Página: <1> - Marco: <1>
+[INFO] 06:26:52:011 [CPU - Log obligatorio]/(6820:6849): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <16> - Valor: <4>
+[INFO] 06:26:52:012 [CPU - Log obligatorio]/(6820:6849): PID: <1> - FETCH - Program Counter: <3>
+[INFO] 06:26:52:519 [CPU - Log obligatorio]/(6820:6849): PID: <1> - Ejecutando: <MOV_OUT> - <32> - <AX>
+[INFO] 06:26:53:034 [CPU - Log obligatorio]/(6820:6849): Page Fault PID: <1> - Página: <2>
+[INFO] 06:27:00:561 [CPU - Log obligatorio]/(6820:6851): PID: <1> - FETCH - Program Counter: <3>
+[INFO] 06:27:01:071 [CPU - Log obligatorio]/(6820:6851): PID: <1> - Ejecutando: <MOV_OUT> - <32> - <AX>
+[INFO] 06:27:01:573 [CPU - Log obligatorio]/(6820:6851): PID: <1> - OBTENER MARCO - Página: <2> - Marco: <2>
+[INFO] 06:27:02:075 [CPU - Log obligatorio]/(6820:6851): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <32> - Valor: <4>
+[INFO] 06:27:02:076 [CPU - Log obligatorio]/(6820:6851): PID: <1> - FETCH - Program Counter: <4>
+[INFO] 06:27:02:584 [CPU - Log obligatorio]/(6820:6851): PID: <1> - Ejecutando: <MOV_OUT> - <48> - <AX>
+[INFO] 06:27:03:088 [CPU - Log obligatorio]/(6820:6851): Page Fault PID: <1> - Página: <3>
+[INFO] 06:27:10:604 [CPU - Log obligatorio]/(6820:6855): PID: <1> - FETCH - Program Counter: <4>
+[INFO] 06:27:11:107 [CPU - Log obligatorio]/(6820:6855): PID: <1> - Ejecutando: <MOV_OUT> - <48> - <AX>
+[INFO] 06:27:11:616 [CPU - Log obligatorio]/(6820:6855): PID: <1> - OBTENER MARCO - Página: <3> - Marco: <3>
+[INFO] 06:27:12:119 [CPU - Log obligatorio]/(6820:6855): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <48> - Valor: <4>
+[INFO] 06:27:12:119 [CPU - Log obligatorio]/(6820:6855): PID: <1> - FETCH - Program Counter: <5>
+[INFO] 06:27:12:621 [CPU - Log obligatorio]/(6820:6855): PID: <1> - Ejecutando: <MOV_IN> - <DX> - <16>
+[INFO] 06:27:13:125 [CPU - Log obligatorio]/(6820:6855): PID: <1> - OBTENER MARCO - Página: <1> - Marco: <1>
+[INFO] 06:27:13:629 [CPU - Log obligatorio]/(6820:6855): PID: <1> - Acción: <LEER> - Dirección Física: <16> - Valor: <4>
+[INFO] 06:27:13:629 [CPU - Log obligatorio]/(6820:6855): PID: <1> - FETCH - Program Counter: <6>
+[INFO] 06:27:14:129 [CPU - Log obligatorio]/(6820:6855): PID: <1> - Ejecutando: <MOV_IN> - <CX> - <32>
+[INFO] 06:27:14:635 [CPU - Log obligatorio]/(6820:6855): PID: <1> - OBTENER MARCO - Página: <2> - Marco: <2>
+[INFO] 06:27:15:139 [CPU - Log obligatorio]/(6820:6855): PID: <1> - Acción: <LEER> - Dirección Física: <32> - Valor: <4>
+[INFO] 06:27:15:139 [CPU - Log obligatorio]/(6820:6855): PID: <1> - FETCH - Program Counter: <7>
+[INFO] 06:27:15:640 [CPU - Log obligatorio]/(6820:6855): PID: <1> - Ejecutando: <SET> - <BX> - <2>
+[INFO] 06:27:15:640 [CPU - Log obligatorio]/(6820:6855): PID: <1> - FETCH - Program Counter: <8>
+[INFO] 06:27:16:143 [CPU - Log obligatorio]/(6820:6855): PID: <1> - Ejecutando: <MOV_OUT> - <64> - <BX>
+[INFO] 06:27:16:650 [CPU - Log obligatorio]/(6820:6855): Page Fault PID: <1> - Página: <4>
+[INFO] 06:31:58:316 [CPU - Log obligatorio]/(6955:6975): PID: <1> - FETCH - Program Counter: <0>
+[INFO] 06:31:58:817 [CPU - Log obligatorio]/(6955:6975): PID: <1> - Ejecutando: <SET> - <AX> - <1>
+[INFO] 06:31:58:817 [CPU - Log obligatorio]/(6955:6975): PID: <1> - FETCH - Program Counter: <1>
+[INFO] 06:31:59:322 [CPU - Log obligatorio]/(6955:6975): PID: <1> - Ejecutando: <MOV_OUT> - <0> - <AX>
+[INFO] 06:31:59:825 [CPU - Log obligatorio]/(6955:6975): Page Fault PID: <1> - Página: <0>
+[INFO] 06:32:07:351 [CPU - Log obligatorio]/(6955:6978): PID: <1> - FETCH - Program Counter: <1>
+[INFO] 06:32:07:852 [CPU - Log obligatorio]/(6955:6978): PID: <1> - Ejecutando: <MOV_OUT> - <0> - <AX>
+[INFO] 06:32:08:358 [CPU - Log obligatorio]/(6955:6978): PID: <1> - OBTENER MARCO - Página: <0> - Marco: <0>
+[INFO] 06:32:08:863 [CPU - Log obligatorio]/(6955:6978): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <0> - Valor: <4>
+[INFO] 06:32:08:863 [CPU - Log obligatorio]/(6955:6978): PID: <1> - FETCH - Program Counter: <2>
+[INFO] 06:32:09:377 [CPU - Log obligatorio]/(6955:6978): PID: <1> - Ejecutando: <MOV_OUT> - <16> - <AX>
+[INFO] 06:32:09:884 [CPU - Log obligatorio]/(6955:6978): Page Fault PID: <1> - Página: <1>
+[INFO] 06:32:17:401 [CPU - Log obligatorio]/(6955:6981): PID: <1> - FETCH - Program Counter: <2>
+[INFO] 06:32:17:905 [CPU - Log obligatorio]/(6955:6981): PID: <1> - Ejecutando: <MOV_OUT> - <16> - <AX>
+[INFO] 06:32:18:408 [CPU - Log obligatorio]/(6955:6981): PID: <1> - OBTENER MARCO - Página: <1> - Marco: <1>
+[INFO] 06:32:18:913 [CPU - Log obligatorio]/(6955:6981): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <16> - Valor: <4>
+[INFO] 06:32:18:913 [CPU - Log obligatorio]/(6955:6981): PID: <1> - FETCH - Program Counter: <3>
+[INFO] 06:32:19:420 [CPU - Log obligatorio]/(6955:6981): PID: <1> - Ejecutando: <MOV_OUT> - <32> - <AX>
+[INFO] 06:32:19:921 [CPU - Log obligatorio]/(6955:6981): Page Fault PID: <1> - Página: <2>
+[INFO] 06:32:27:439 [CPU - Log obligatorio]/(6955:6983): PID: <1> - FETCH - Program Counter: <3>
+[INFO] 06:32:27:946 [CPU - Log obligatorio]/(6955:6983): PID: <1> - Ejecutando: <MOV_OUT> - <32> - <AX>
+[INFO] 06:32:28:449 [CPU - Log obligatorio]/(6955:6983): PID: <1> - OBTENER MARCO - Página: <2> - Marco: <2>
+[INFO] 06:32:28:950 [CPU - Log obligatorio]/(6955:6983): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <32> - Valor: <4>
+[INFO] 06:32:28:951 [CPU - Log obligatorio]/(6955:6983): PID: <1> - FETCH - Program Counter: <4>
+[INFO] 06:32:29:455 [CPU - Log obligatorio]/(6955:6983): PID: <1> - Ejecutando: <MOV_OUT> - <48> - <AX>
+[INFO] 06:32:29:956 [CPU - Log obligatorio]/(6955:6983): Page Fault PID: <1> - Página: <3>
+[INFO] 06:32:37:481 [CPU - Log obligatorio]/(6955:6987): PID: <1> - FETCH - Program Counter: <4>
+[INFO] 06:32:37:994 [CPU - Log obligatorio]/(6955:6987): PID: <1> - Ejecutando: <MOV_OUT> - <48> - <AX>
+[INFO] 06:32:38:499 [CPU - Log obligatorio]/(6955:6987): PID: <1> - OBTENER MARCO - Página: <3> - Marco: <3>
+[INFO] 06:32:39:003 [CPU - Log obligatorio]/(6955:6987): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <48> - Valor: <4>
+[INFO] 06:32:39:003 [CPU - Log obligatorio]/(6955:6987): PID: <1> - FETCH - Program Counter: <5>
+[INFO] 06:32:39:512 [CPU - Log obligatorio]/(6955:6987): PID: <1> - Ejecutando: <MOV_IN> - <DX> - <16>
+[INFO] 06:32:40:019 [CPU - Log obligatorio]/(6955:6987): PID: <1> - OBTENER MARCO - Página: <1> - Marco: <1>
+[INFO] 06:32:40:520 [CPU - Log obligatorio]/(6955:6987): PID: <1> - Acción: <LEER> - Dirección Física: <16> - Valor: <4>
+[INFO] 06:32:40:520 [CPU - Log obligatorio]/(6955:6987): PID: <1> - FETCH - Program Counter: <6>
+[INFO] 06:32:41:023 [CPU - Log obligatorio]/(6955:6987): PID: <1> - Ejecutando: <MOV_IN> - <CX> - <32>
+[INFO] 06:32:41:527 [CPU - Log obligatorio]/(6955:6987): PID: <1> - OBTENER MARCO - Página: <2> - Marco: <2>
+[INFO] 06:32:42:062 [CPU - Log obligatorio]/(6955:6987): PID: <1> - Acción: <LEER> - Dirección Física: <32> - Valor: <4>
+[INFO] 06:32:42:062 [CPU - Log obligatorio]/(6955:6987): PID: <1> - FETCH - Program Counter: <7>
+[INFO] 06:32:42:567 [CPU - Log obligatorio]/(6955:6987): PID: <1> - Ejecutando: <SET> - <BX> - <2>
+[INFO] 06:32:42:567 [CPU - Log obligatorio]/(6955:6987): PID: <1> - FETCH - Program Counter: <8>
+[INFO] 06:32:43:069 [CPU - Log obligatorio]/(6955:6987): PID: <1> - Ejecutando: <MOV_OUT> - <64> - <BX>
+[INFO] 06:32:43:575 [CPU - Log obligatorio]/(6955:6987): Page Fault PID: <1> - Página: <4>
+[INFO] 06:44:54:122 [CPU - Log obligatorio]/(7384:19861): PID: <1> - FETCH - Program Counter: <0>
+[INFO] 06:44:54:628 [CPU - Log obligatorio]/(7384:19861): PID: <1> - Ejecutando: <SET> - <AX> - <1>
+[INFO] 06:44:54:628 [CPU - Log obligatorio]/(7384:19861): PID: <1> - FETCH - Program Counter: <1>
+[INFO] 06:44:55:130 [CPU - Log obligatorio]/(7384:19861): PID: <1> - Ejecutando: <MOV_OUT> - <0> - <AX>
+[INFO] 06:44:55:637 [CPU - Log obligatorio]/(7384:19861): Page Fault PID: <1> - Página: <0>
+[INFO] 06:45:03:157 [CPU - Log obligatorio]/(7384:20023): PID: <1> - FETCH - Program Counter: <1>
+[INFO] 06:45:03:658 [CPU - Log obligatorio]/(7384:20023): PID: <1> - Ejecutando: <MOV_OUT> - <0> - <AX>
+[INFO] 06:45:04:173 [CPU - Log obligatorio]/(7384:20023): PID: <1> - OBTENER MARCO - Página: <0> - Marco: <0>
+[INFO] 06:45:04:674 [CPU - Log obligatorio]/(7384:20023): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <0> - Valor: <4>
+[INFO] 06:45:04:674 [CPU - Log obligatorio]/(7384:20023): PID: <1> - FETCH - Program Counter: <2>
+[INFO] 06:45:05:177 [CPU - Log obligatorio]/(7384:20023): PID: <1> - Ejecutando: <MOV_OUT> - <16> - <AX>
+[INFO] 06:45:05:678 [CPU - Log obligatorio]/(7384:20023): Page Fault PID: <1> - Página: <1>
+[INFO] 06:45:13:186 [CPU - Log obligatorio]/(7384:22671): PID: <1> - FETCH - Program Counter: <2>
+[INFO] 06:45:13:689 [CPU - Log obligatorio]/(7384:22671): PID: <1> - Ejecutando: <MOV_OUT> - <16> - <AX>
+[INFO] 06:45:14:202 [CPU - Log obligatorio]/(7384:22671): PID: <1> - OBTENER MARCO - Página: <1> - Marco: <1>
+[INFO] 06:45:14:703 [CPU - Log obligatorio]/(7384:22671): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <16> - Valor: <4>
+[INFO] 06:45:14:703 [CPU - Log obligatorio]/(7384:22671): PID: <1> - FETCH - Program Counter: <3>
+[INFO] 06:45:15:204 [CPU - Log obligatorio]/(7384:22671): PID: <1> - Ejecutando: <MOV_OUT> - <32> - <AX>
+[INFO] 06:45:15:705 [CPU - Log obligatorio]/(7384:22671): Page Fault PID: <1> - Página: <2>
+[INFO] 06:45:23:217 [CPU - Log obligatorio]/(7384:25645): PID: <1> - FETCH - Program Counter: <3>
+[INFO] 06:45:23:718 [CPU - Log obligatorio]/(7384:25645): PID: <1> - Ejecutando: <MOV_OUT> - <32> - <AX>
+[INFO] 06:45:24:220 [CPU - Log obligatorio]/(7384:25645): PID: <1> - OBTENER MARCO - Página: <2> - Marco: <2>
+[INFO] 06:45:24:762 [CPU - Log obligatorio]/(7384:25645): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <32> - Valor: <4>
+[INFO] 06:45:24:762 [CPU - Log obligatorio]/(7384:25645): PID: <1> - FETCH - Program Counter: <4>
+[INFO] 06:45:25:263 [CPU - Log obligatorio]/(7384:25645): PID: <1> - Ejecutando: <MOV_OUT> - <48> - <AX>
+[INFO] 06:45:25:771 [CPU - Log obligatorio]/(7384:25645): Page Fault PID: <1> - Página: <3>
+[INFO] 06:45:33:285 [CPU - Log obligatorio]/(7384:28025): PID: <1> - FETCH - Program Counter: <4>
+[INFO] 06:45:33:787 [CPU - Log obligatorio]/(7384:28025): PID: <1> - Ejecutando: <MOV_OUT> - <48> - <AX>
+[INFO] 06:45:34:290 [CPU - Log obligatorio]/(7384:28025): PID: <1> - OBTENER MARCO - Página: <3> - Marco: <3>
+[INFO] 06:45:34:790 [CPU - Log obligatorio]/(7384:28025): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <48> - Valor: <4>
+[INFO] 06:45:34:791 [CPU - Log obligatorio]/(7384:28025): PID: <1> - FETCH - Program Counter: <5>
+[INFO] 06:45:35:292 [CPU - Log obligatorio]/(7384:28025): PID: <1> - Ejecutando: <MOV_IN> - <DX> - <16>
+[INFO] 06:45:35:793 [CPU - Log obligatorio]/(7384:28025): PID: <1> - OBTENER MARCO - Página: <1> - Marco: <1>
+[INFO] 06:45:36:294 [CPU - Log obligatorio]/(7384:28025): PID: <1> - Acción: <LEER> - Dirección Física: <16> - Valor: <4>
+[INFO] 06:45:36:294 [CPU - Log obligatorio]/(7384:28025): PID: <1> - FETCH - Program Counter: <6>
+[INFO] 06:45:36:804 [CPU - Log obligatorio]/(7384:28025): PID: <1> - Ejecutando: <MOV_IN> - <CX> - <32>
+[INFO] 06:45:37:305 [CPU - Log obligatorio]/(7384:28025): PID: <1> - OBTENER MARCO - Página: <2> - Marco: <2>
+[INFO] 06:45:37:807 [CPU - Log obligatorio]/(7384:28025): PID: <1> - Acción: <LEER> - Dirección Física: <32> - Valor: <4>
+[INFO] 06:45:37:807 [CPU - Log obligatorio]/(7384:28025): PID: <1> - FETCH - Program Counter: <7>
+[INFO] 06:45:38:312 [CPU - Log obligatorio]/(7384:28025): PID: <1> - Ejecutando: <SET> - <BX> - <2>
+[INFO] 06:45:38:313 [CPU - Log obligatorio]/(7384:28025): PID: <1> - FETCH - Program Counter: <8>
+[INFO] 06:45:38:813 [CPU - Log obligatorio]/(7384:28025): PID: <1> - Ejecutando: <MOV_OUT> - <64> - <BX>
+[INFO] 06:45:39:314 [CPU - Log obligatorio]/(7384:28025): Page Fault PID: <1> - Página: <4>
+[INFO] 06:49:25:972 [CPU - Log obligatorio]/(35638:35659): PID: <1> - FETCH - Program Counter: <0>
+[INFO] 06:49:26:476 [CPU - Log obligatorio]/(35638:35659): PID: <1> - Ejecutando: <SET> - <AX> - <1>
+[INFO] 06:49:26:476 [CPU - Log obligatorio]/(35638:35659): PID: <1> - FETCH - Program Counter: <1>
+[INFO] 06:49:26:979 [CPU - Log obligatorio]/(35638:35659): PID: <1> - Ejecutando: <MOV_OUT> - <0> - <AX>
+[INFO] 06:49:27:488 [CPU - Log obligatorio]/(35638:35659): Page Fault PID: <1> - Página: <0>
+[INFO] 06:49:35:047 [CPU - Log obligatorio]/(35638:35662): PID: <1> - FETCH - Program Counter: <1>
+[INFO] 06:49:35:549 [CPU - Log obligatorio]/(35638:35662): PID: <1> - Ejecutando: <MOV_OUT> - <0> - <AX>
+[INFO] 06:49:36:051 [CPU - Log obligatorio]/(35638:35662): PID: <1> - OBTENER MARCO - Página: <0> - Marco: <0>
+[INFO] 06:49:36:562 [CPU - Log obligatorio]/(35638:35662): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <0> - Valor: <4>
+[INFO] 06:49:36:562 [CPU - Log obligatorio]/(35638:35662): PID: <1> - FETCH - Program Counter: <2>
+[INFO] 06:49:37:065 [CPU - Log obligatorio]/(35638:35662): PID: <1> - Ejecutando: <MOV_OUT> - <16> - <AX>
+[INFO] 06:49:37:567 [CPU - Log obligatorio]/(35638:35662): Page Fault PID: <1> - Página: <1>
+[INFO] 06:49:45:104 [CPU - Log obligatorio]/(35638:35664): PID: <1> - FETCH - Program Counter: <2>
+[INFO] 06:49:45:611 [CPU - Log obligatorio]/(35638:35664): PID: <1> - Ejecutando: <MOV_OUT> - <16> - <AX>
+[INFO] 06:49:46:113 [CPU - Log obligatorio]/(35638:35664): PID: <1> - OBTENER MARCO - Página: <1> - Marco: <1>
+[INFO] 06:49:46:615 [CPU - Log obligatorio]/(35638:35664): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <16> - Valor: <4>
+[INFO] 06:49:46:616 [CPU - Log obligatorio]/(35638:35664): PID: <1> - FETCH - Program Counter: <3>
+[INFO] 06:49:47:117 [CPU - Log obligatorio]/(35638:35664): PID: <1> - Ejecutando: <MOV_OUT> - <32> - <AX>
+[INFO] 06:49:47:649 [CPU - Log obligatorio]/(35638:35664): Page Fault PID: <1> - Página: <2>
+[INFO] 06:49:55:172 [CPU - Log obligatorio]/(35638:35668): PID: <1> - FETCH - Program Counter: <3>
+[INFO] 06:49:55:674 [CPU - Log obligatorio]/(35638:35668): PID: <1> - Ejecutando: <MOV_OUT> - <32> - <AX>
+[INFO] 06:49:56:177 [CPU - Log obligatorio]/(35638:35668): PID: <1> - OBTENER MARCO - Página: <2> - Marco: <2>
+[INFO] 06:49:56:682 [CPU - Log obligatorio]/(35638:35668): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <32> - Valor: <4>
+[INFO] 06:49:56:682 [CPU - Log obligatorio]/(35638:35668): PID: <1> - FETCH - Program Counter: <4>
+[INFO] 06:49:57:185 [CPU - Log obligatorio]/(35638:35668): PID: <1> - Ejecutando: <MOV_OUT> - <48> - <AX>
+[INFO] 06:49:57:690 [CPU - Log obligatorio]/(35638:35668): Page Fault PID: <1> - Página: <3>
+[INFO] 06:50:05:200 [CPU - Log obligatorio]/(35638:35671): PID: <1> - FETCH - Program Counter: <4>
+[INFO] 06:50:05:702 [CPU - Log obligatorio]/(35638:35671): PID: <1> - Ejecutando: <MOV_OUT> - <48> - <AX>
+[INFO] 06:50:06:205 [CPU - Log obligatorio]/(35638:35671): PID: <1> - OBTENER MARCO - Página: <3> - Marco: <3>
+[INFO] 06:50:06:708 [CPU - Log obligatorio]/(35638:35671): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <48> - Valor: <4>
+[INFO] 06:50:06:708 [CPU - Log obligatorio]/(35638:35671): PID: <1> - FETCH - Program Counter: <5>
+[INFO] 06:50:07:210 [CPU - Log obligatorio]/(35638:35671): PID: <1> - Ejecutando: <MOV_IN> - <DX> - <16>
+[INFO] 06:50:07:713 [CPU - Log obligatorio]/(35638:35671): PID: <1> - OBTENER MARCO - Página: <1> - Marco: <1>
+[INFO] 06:50:08:215 [CPU - Log obligatorio]/(35638:35671): PID: <1> - Acción: <LEER> - Dirección Física: <16> - Valor: <4>
+[INFO] 06:50:08:216 [CPU - Log obligatorio]/(35638:35671): PID: <1> - FETCH - Program Counter: <6>
+[INFO] 06:50:08:717 [CPU - Log obligatorio]/(35638:35671): PID: <1> - Ejecutando: <MOV_IN> - <CX> - <32>
+[INFO] 06:50:09:219 [CPU - Log obligatorio]/(35638:35671): PID: <1> - OBTENER MARCO - Página: <2> - Marco: <2>
+[INFO] 06:50:09:722 [CPU - Log obligatorio]/(35638:35671): PID: <1> - Acción: <LEER> - Dirección Física: <32> - Valor: <4>
+[INFO] 06:50:09:722 [CPU - Log obligatorio]/(35638:35671): PID: <1> - FETCH - Program Counter: <7>
+[INFO] 06:50:10:226 [CPU - Log obligatorio]/(35638:35671): PID: <1> - Ejecutando: <SET> - <BX> - <2>
+[INFO] 06:50:10:227 [CPU - Log obligatorio]/(35638:35671): PID: <1> - FETCH - Program Counter: <8>
+[INFO] 06:50:10:728 [CPU - Log obligatorio]/(35638:35671): PID: <1> - Ejecutando: <MOV_OUT> - <64> - <BX>
+[INFO] 06:50:11:233 [CPU - Log obligatorio]/(35638:35671): Page Fault PID: <1> - Página: <4>
+[INFO] 06:51:56:414 [CPU - Log obligatorio]/(35698:35720): PID: <1> - FETCH - Program Counter: <0>
+[INFO] 06:51:56:917 [CPU - Log obligatorio]/(35698:35720): PID: <1> - Ejecutando: <SET> - <AX> - <1>
+[INFO] 06:51:56:917 [CPU - Log obligatorio]/(35698:35720): PID: <1> - FETCH - Program Counter: <1>
+[INFO] 06:51:57:419 [CPU - Log obligatorio]/(35698:35720): PID: <1> - Ejecutando: <MOV_OUT> - <0> - <AX>
+[INFO] 06:51:57:941 [CPU - Log obligatorio]/(35698:35720): Page Fault PID: <1> - Página: <0>
+[INFO] 06:52:05:467 [CPU - Log obligatorio]/(35698:35722): PID: <1> - FETCH - Program Counter: <1>
+[INFO] 06:52:05:968 [CPU - Log obligatorio]/(35698:35722): PID: <1> - Ejecutando: <MOV_OUT> - <0> - <AX>
+[INFO] 06:52:06:471 [CPU - Log obligatorio]/(35698:35722): PID: <1> - OBTENER MARCO - Página: <0> - Marco: <0>
+[INFO] 06:52:06:973 [CPU - Log obligatorio]/(35698:35722): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <0> - Valor: <4>
+[INFO] 06:52:06:973 [CPU - Log obligatorio]/(35698:35722): PID: <1> - FETCH - Program Counter: <2>
+[INFO] 06:52:07:479 [CPU - Log obligatorio]/(35698:35722): PID: <1> - Ejecutando: <MOV_OUT> - <16> - <AX>
+[INFO] 06:52:07:984 [CPU - Log obligatorio]/(35698:35722): Page Fault PID: <1> - Página: <1>
+[INFO] 06:52:15:516 [CPU - Log obligatorio]/(35698:35725): PID: <1> - FETCH - Program Counter: <2>
+[INFO] 06:52:16:018 [CPU - Log obligatorio]/(35698:35725): PID: <1> - Ejecutando: <MOV_OUT> - <16> - <AX>
+[INFO] 06:52:16:521 [CPU - Log obligatorio]/(35698:35725): PID: <1> - OBTENER MARCO - Página: <1> - Marco: <1>
+[INFO] 06:52:17:023 [CPU - Log obligatorio]/(35698:35725): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <16> - Valor: <4>
+[INFO] 06:52:17:023 [CPU - Log obligatorio]/(35698:35725): PID: <1> - FETCH - Program Counter: <3>
+[INFO] 06:52:17:527 [CPU - Log obligatorio]/(35698:35725): PID: <1> - Ejecutando: <MOV_OUT> - <32> - <AX>
+[INFO] 06:52:18:030 [CPU - Log obligatorio]/(35698:35725): Page Fault PID: <1> - Página: <2>
+[INFO] 06:52:25:543 [CPU - Log obligatorio]/(35698:35729): PID: <1> - FETCH - Program Counter: <3>
+[INFO] 06:52:26:044 [CPU - Log obligatorio]/(35698:35729): PID: <1> - Ejecutando: <MOV_OUT> - <32> - <AX>
+[INFO] 06:52:26:547 [CPU - Log obligatorio]/(35698:35729): PID: <1> - OBTENER MARCO - Página: <2> - Marco: <2>
+[INFO] 06:52:27:049 [CPU - Log obligatorio]/(35698:35729): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <32> - Valor: <4>
+[INFO] 06:52:27:049 [CPU - Log obligatorio]/(35698:35729): PID: <1> - FETCH - Program Counter: <4>
+[INFO] 06:52:27:552 [CPU - Log obligatorio]/(35698:35729): PID: <1> - Ejecutando: <MOV_OUT> - <48> - <AX>
+[INFO] 06:52:28:058 [CPU - Log obligatorio]/(35698:35729): Page Fault PID: <1> - Página: <3>
+[INFO] 06:52:35:572 [CPU - Log obligatorio]/(35698:35732): PID: <1> - FETCH - Program Counter: <4>
+[INFO] 06:52:36:076 [CPU - Log obligatorio]/(35698:35732): PID: <1> - Ejecutando: <MOV_OUT> - <48> - <AX>
+[INFO] 06:52:36:580 [CPU - Log obligatorio]/(35698:35732): PID: <1> - OBTENER MARCO - Página: <3> - Marco: <3>
+[INFO] 06:52:37:084 [CPU - Log obligatorio]/(35698:35732): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <48> - Valor: <4>
+[INFO] 06:52:37:084 [CPU - Log obligatorio]/(35698:35732): PID: <1> - FETCH - Program Counter: <5>
+[INFO] 06:52:37:592 [CPU - Log obligatorio]/(35698:35732): PID: <1> - Ejecutando: <MOV_IN> - <DX> - <16>
+[INFO] 06:52:38:108 [CPU - Log obligatorio]/(35698:35732): PID: <1> - OBTENER MARCO - Página: <1> - Marco: <1>
+[INFO] 06:52:38:618 [CPU - Log obligatorio]/(35698:35732): PID: <1> - Acción: <LEER> - Dirección Física: <16> - Valor: <4>
+[INFO] 06:52:38:618 [CPU - Log obligatorio]/(35698:35732): PID: <1> - FETCH - Program Counter: <6>
+[INFO] 06:52:39:123 [CPU - Log obligatorio]/(35698:35732): PID: <1> - Ejecutando: <MOV_IN> - <CX> - <32>
+[INFO] 06:52:39:628 [CPU - Log obligatorio]/(35698:35732): PID: <1> - OBTENER MARCO - Página: <2> - Marco: <2>
+[INFO] 06:52:40:146 [CPU - Log obligatorio]/(35698:35732): PID: <1> - Acción: <LEER> - Dirección Física: <32> - Valor: <4>
+[INFO] 06:52:40:146 [CPU - Log obligatorio]/(35698:35732): PID: <1> - FETCH - Program Counter: <7>
+[INFO] 06:52:40:649 [CPU - Log obligatorio]/(35698:35732): PID: <1> - Ejecutando: <SET> - <BX> - <2>
+[INFO] 06:52:40:650 [CPU - Log obligatorio]/(35698:35732): PID: <1> - FETCH - Program Counter: <8>
+[INFO] 06:52:41:157 [CPU - Log obligatorio]/(35698:35732): PID: <1> - Ejecutando: <MOV_OUT> - <64> - <BX>
+[INFO] 06:52:41:663 [CPU - Log obligatorio]/(35698:35732): Page Fault PID: <1> - Página: <4>
+[INFO] 06:52:49:179 [CPU - Log obligatorio]/(35698:35735): PID: <1> - FETCH - Program Counter: <8>
+[INFO] 06:52:49:688 [CPU - Log obligatorio]/(35698:35735): PID: <1> - Ejecutando: <MOV_OUT> - <64> - <BX>
+[INFO] 06:52:50:196 [CPU - Log obligatorio]/(35698:35735): PID: <1> - OBTENER MARCO - Página: <4> - Marco: <0>
+[INFO] 06:52:50:698 [CPU - Log obligatorio]/(35698:35735): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <0> - Valor: <4>
+[INFO] 06:52:50:698 [CPU - Log obligatorio]/(35698:35735): PID: <1> - FETCH - Program Counter: <9>
+[INFO] 06:52:51:204 [CPU - Log obligatorio]/(35698:35735): PID: <1> - Ejecutando: <MOV_OUT> - <80> - <BX>
+[INFO] 06:52:51:706 [CPU - Log obligatorio]/(35698:35735): Page Fault PID: <1> - Página: <5>
+[INFO] 06:52:59:228 [CPU - Log obligatorio]/(35698:35738): PID: <1> - FETCH - Program Counter: <9>
+[INFO] 06:52:59:732 [CPU - Log obligatorio]/(35698:35738): PID: <1> - Ejecutando: <MOV_OUT> - <80> - <BX>
+[INFO] 06:53:00:234 [CPU - Log obligatorio]/(35698:35738): PID: <1> - OBTENER MARCO - Página: <5> - Marco: <1>
+[INFO] 06:53:00:735 [CPU - Log obligatorio]/(35698:35738): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <16> - Valor: <4>
+[INFO] 06:53:00:735 [CPU - Log obligatorio]/(35698:35738): PID: <1> - FETCH - Program Counter: <10>
+[INFO] 06:53:01:236 [CPU - Log obligatorio]/(35698:35738): PID: <1> - Ejecutando: <MOV_OUT> - <96> - <BX>
+[INFO] 06:53:01:738 [CPU - Log obligatorio]/(35698:35738): Page Fault PID: <1> - Página: <6>
+[INFO] 06:53:09:275 [CPU - Log obligatorio]/(35698:35741): PID: <1> - FETCH - Program Counter: <10>
+[INFO] 06:53:09:788 [CPU - Log obligatorio]/(35698:35741): PID: <1> - Ejecutando: <MOV_OUT> - <96> - <BX>
+[INFO] 06:53:10:290 [CPU - Log obligatorio]/(35698:35741): PID: <1> - OBTENER MARCO - Página: <6> - Marco: <2>
+[INFO] 06:53:10:792 [CPU - Log obligatorio]/(35698:35741): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <32> - Valor: <4>
+[INFO] 06:53:10:792 [CPU - Log obligatorio]/(35698:35741): PID: <1> - FETCH - Program Counter: <11>
+[INFO] 06:53:11:295 [CPU - Log obligatorio]/(35698:35741): PID: <1> - Ejecutando: <MOV_OUT> - <112> - <BX>
+[INFO] 06:53:11:798 [CPU - Log obligatorio]/(35698:35741): Page Fault PID: <1> - Página: <7>
+[INFO] 06:53:19:314 [CPU - Log obligatorio]/(35698:35743): PID: <1> - FETCH - Program Counter: <11>
+[INFO] 06:53:19:818 [CPU - Log obligatorio]/(35698:35743): PID: <1> - Ejecutando: <MOV_OUT> - <112> - <BX>
+[INFO] 06:53:20:320 [CPU - Log obligatorio]/(35698:35743): PID: <1> - OBTENER MARCO - Página: <7> - Marco: <3>
+[INFO] 06:53:20:828 [CPU - Log obligatorio]/(35698:35743): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <48> - Valor: <4>
+[INFO] 06:53:20:828 [CPU - Log obligatorio]/(35698:35743): PID: <1> - FETCH - Program Counter: <12>
+[INFO] 06:53:21:335 [CPU - Log obligatorio]/(35698:35743): PID: <1> - Ejecutando: <EXIT>
+[INFO] 06:55:29:500 [CPU - Log obligatorio]/(35767:35787): PID: <1> - FETCH - Program Counter: <0>
+[INFO] 06:55:30:011 [CPU - Log obligatorio]/(35767:35787): PID: <1> - Ejecutando: <SET> - <AX> - <1>
+[INFO] 06:55:30:014 [CPU - Log obligatorio]/(35767:35787): PID: <1> - FETCH - Program Counter: <1>
+[INFO] 06:55:30:515 [CPU - Log obligatorio]/(35767:35787): PID: <1> - Ejecutando: <MOV_OUT> - <0> - <AX>
+[INFO] 06:55:31:025 [CPU - Log obligatorio]/(35767:35787): Page Fault PID: <1> - Página: <0>
+[INFO] 06:55:36:537 [CPU - Log obligatorio]/(35767:35790): PID: <1> - FETCH - Program Counter: <1>
+[INFO] 06:55:37:042 [CPU - Log obligatorio]/(35767:35790): PID: <1> - Ejecutando: <MOV_OUT> - <0> - <AX>
+[INFO] 06:55:37:544 [CPU - Log obligatorio]/(35767:35790): PID: <1> - OBTENER MARCO - Página: <0> - Marco: <0>
+[INFO] 06:55:38:051 [CPU - Log obligatorio]/(35767:35790): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <0> - Valor: <4>
+[INFO] 06:55:38:051 [CPU - Log obligatorio]/(35767:35790): PID: <1> - FETCH - Program Counter: <2>
+[INFO] 06:55:38:556 [CPU - Log obligatorio]/(35767:35790): PID: <1> - Ejecutando: <MOV_OUT> - <16> - <AX>
+[INFO] 06:55:39:060 [CPU - Log obligatorio]/(35767:35790): Page Fault PID: <1> - Página: <1>
+[INFO] 06:55:44:580 [CPU - Log obligatorio]/(35767:35793): PID: <1> - FETCH - Program Counter: <2>
+[INFO] 06:55:45:092 [CPU - Log obligatorio]/(35767:35793): PID: <1> - Ejecutando: <MOV_OUT> - <16> - <AX>
+[INFO] 06:55:45:601 [CPU - Log obligatorio]/(35767:35793): PID: <1> - OBTENER MARCO - Página: <1> - Marco: <1>
+[INFO] 06:55:46:130 [CPU - Log obligatorio]/(35767:35793): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <16> - Valor: <4>
+[INFO] 06:55:46:130 [CPU - Log obligatorio]/(35767:35793): PID: <1> - FETCH - Program Counter: <3>
+[INFO] 06:55:46:636 [CPU - Log obligatorio]/(35767:35793): PID: <1> - Ejecutando: <MOV_OUT> - <32> - <AX>
+[INFO] 06:55:47:140 [CPU - Log obligatorio]/(35767:35793): Page Fault PID: <1> - Página: <2>
+[INFO] 06:55:52:659 [CPU - Log obligatorio]/(35767:35796): PID: <1> - FETCH - Program Counter: <3>
+[INFO] 06:55:53:160 [CPU - Log obligatorio]/(35767:35796): PID: <1> - Ejecutando: <MOV_OUT> - <32> - <AX>
+[INFO] 06:55:53:663 [CPU - Log obligatorio]/(35767:35796): PID: <1> - OBTENER MARCO - Página: <2> - Marco: <2>
+[INFO] 06:55:54:166 [CPU - Log obligatorio]/(35767:35796): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <32> - Valor: <4>
+[INFO] 06:55:54:166 [CPU - Log obligatorio]/(35767:35796): PID: <1> - FETCH - Program Counter: <4>
+[INFO] 06:55:54:668 [CPU - Log obligatorio]/(35767:35796): PID: <1> - Ejecutando: <MOV_OUT> - <48> - <AX>
+[INFO] 06:55:55:171 [CPU - Log obligatorio]/(35767:35796): Page Fault PID: <1> - Página: <3>
+[INFO] 06:56:00:682 [CPU - Log obligatorio]/(35767:35799): PID: <1> - FETCH - Program Counter: <4>
+[INFO] 06:56:01:183 [CPU - Log obligatorio]/(35767:35799): PID: <1> - Ejecutando: <MOV_OUT> - <48> - <AX>
+[INFO] 06:56:01:686 [CPU - Log obligatorio]/(35767:35799): PID: <1> - OBTENER MARCO - Página: <3> - Marco: <3>
+[INFO] 06:56:02:187 [CPU - Log obligatorio]/(35767:35799): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <48> - Valor: <4>
+[INFO] 06:56:02:187 [CPU - Log obligatorio]/(35767:35799): PID: <1> - FETCH - Program Counter: <5>
+[INFO] 06:56:02:690 [CPU - Log obligatorio]/(35767:35799): PID: <1> - Ejecutando: <MOV_IN> - <DX> - <16>
+[INFO] 06:56:03:195 [CPU - Log obligatorio]/(35767:35799): PID: <1> - OBTENER MARCO - Página: <1> - Marco: <1>
+[INFO] 06:56:03:698 [CPU - Log obligatorio]/(35767:35799): PID: <1> - Acción: <LEER> - Dirección Física: <16> - Valor: <4>
+[INFO] 06:56:03:698 [CPU - Log obligatorio]/(35767:35799): PID: <1> - FETCH - Program Counter: <6>
+[INFO] 06:56:04:200 [CPU - Log obligatorio]/(35767:35799): PID: <1> - Ejecutando: <MOV_IN> - <CX> - <32>
+[INFO] 06:56:04:702 [CPU - Log obligatorio]/(35767:35799): PID: <1> - OBTENER MARCO - Página: <2> - Marco: <2>
+[INFO] 06:56:05:205 [CPU - Log obligatorio]/(35767:35799): PID: <1> - Acción: <LEER> - Dirección Física: <32> - Valor: <4>
+[INFO] 06:56:05:205 [CPU - Log obligatorio]/(35767:35799): PID: <1> - FETCH - Program Counter: <7>
+[INFO] 06:56:05:708 [CPU - Log obligatorio]/(35767:35799): PID: <1> - Ejecutando: <SET> - <BX> - <2>
+[INFO] 06:56:05:709 [CPU - Log obligatorio]/(35767:35799): PID: <1> - FETCH - Program Counter: <8>
+[INFO] 06:56:06:215 [CPU - Log obligatorio]/(35767:35799): PID: <1> - Ejecutando: <MOV_OUT> - <64> - <BX>
+[INFO] 06:56:06:720 [CPU - Log obligatorio]/(35767:35799): Page Fault PID: <1> - Página: <4>
+[INFO] 06:56:12:240 [CPU - Log obligatorio]/(35767:35802): PID: <1> - FETCH - Program Counter: <8>
+[INFO] 06:56:12:746 [CPU - Log obligatorio]/(35767:35802): PID: <1> - Ejecutando: <MOV_OUT> - <64> - <BX>
+[INFO] 06:56:13:253 [CPU - Log obligatorio]/(35767:35802): PID: <1> - OBTENER MARCO - Página: <4> - Marco: <0>
+[INFO] 06:56:13:755 [CPU - Log obligatorio]/(35767:35802): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <0> - Valor: <4>
+[INFO] 06:56:13:756 [CPU - Log obligatorio]/(35767:35802): PID: <1> - FETCH - Program Counter: <9>
+[INFO] 06:56:14:258 [CPU - Log obligatorio]/(35767:35802): PID: <1> - Ejecutando: <MOV_OUT> - <80> - <BX>
+[INFO] 06:56:14:763 [CPU - Log obligatorio]/(35767:35802): Page Fault PID: <1> - Página: <5>
+[INFO] 06:56:20:288 [CPU - Log obligatorio]/(35767:35805): PID: <1> - FETCH - Program Counter: <9>
+[INFO] 06:56:20:796 [CPU - Log obligatorio]/(35767:35805): PID: <1> - Ejecutando: <MOV_OUT> - <80> - <BX>
+[INFO] 06:56:21:297 [CPU - Log obligatorio]/(35767:35805): PID: <1> - OBTENER MARCO - Página: <5> - Marco: <3>
+[INFO] 06:56:21:801 [CPU - Log obligatorio]/(35767:35805): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <48> - Valor: <4>
+[INFO] 06:56:21:801 [CPU - Log obligatorio]/(35767:35805): PID: <1> - FETCH - Program Counter: <10>
+[INFO] 06:56:22:302 [CPU - Log obligatorio]/(35767:35805): PID: <1> - Ejecutando: <MOV_OUT> - <96> - <BX>
+[INFO] 06:56:22:804 [CPU - Log obligatorio]/(35767:35805): Page Fault PID: <1> - Página: <6>
+[INFO] 06:56:28:322 [CPU - Log obligatorio]/(35767:35808): PID: <1> - FETCH - Program Counter: <10>
+[INFO] 06:56:28:827 [CPU - Log obligatorio]/(35767:35808): PID: <1> - Ejecutando: <MOV_OUT> - <96> - <BX>
+[INFO] 06:56:29:329 [CPU - Log obligatorio]/(35767:35808): PID: <1> - OBTENER MARCO - Página: <6> - Marco: <1>
+[INFO] 06:56:29:832 [CPU - Log obligatorio]/(35767:35808): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <16> - Valor: <4>
+[INFO] 06:56:29:832 [CPU - Log obligatorio]/(35767:35808): PID: <1> - FETCH - Program Counter: <11>
+[INFO] 06:56:30:338 [CPU - Log obligatorio]/(35767:35808): PID: <1> - Ejecutando: <MOV_OUT> - <112> - <BX>
+[INFO] 06:56:30:841 [CPU - Log obligatorio]/(35767:35808): Page Fault PID: <1> - Página: <7>
+[INFO] 06:56:36:349 [CPU - Log obligatorio]/(35767:35811): PID: <1> - FETCH - Program Counter: <11>
+[INFO] 06:56:36:855 [CPU - Log obligatorio]/(35767:35811): PID: <1> - Ejecutando: <MOV_OUT> - <112> - <BX>
+[INFO] 06:56:37:368 [CPU - Log obligatorio]/(35767:35811): PID: <1> - OBTENER MARCO - Página: <7> - Marco: <2>
+[INFO] 06:56:37:870 [CPU - Log obligatorio]/(35767:35811): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <32> - Valor: <4>
+[INFO] 06:56:37:870 [CPU - Log obligatorio]/(35767:35811): PID: <1> - FETCH - Program Counter: <12>
+[INFO] 06:56:38:389 [CPU - Log obligatorio]/(35767:35811): PID: <1> - Ejecutando: <EXIT>
+[INFO] 06:57:07:668 [CPU - Log obligatorio]/(35767:35818): PID: <2> - FETCH - Program Counter: <0>
+[INFO] 06:57:08:170 [CPU - Log obligatorio]/(35767:35818): PID: <2> - Ejecutando: <SET> - <AX> - <1>
+[INFO] 06:57:08:170 [CPU - Log obligatorio]/(35767:35818): PID: <2> - FETCH - Program Counter: <1>
+[INFO] 06:57:08:675 [CPU - Log obligatorio]/(35767:35818): PID: <2> - Ejecutando: <MOV_OUT> - <0> - <AX>
+[INFO] 06:57:09:180 [CPU - Log obligatorio]/(35767:35818): Page Fault PID: <2> - Página: <0>
+[INFO] 06:57:20:729 [CPU - Log obligatorio]/(35767:35821): PID: <3> - FETCH - Program Counter: <0>
+[INFO] 06:57:21:230 [CPU - Log obligatorio]/(35767:35821): PID: <3> - Ejecutando: <SET> - <AX> - <1>
+[INFO] 06:57:21:231 [CPU - Log obligatorio]/(35767:35821): PID: <3> - FETCH - Program Counter: <1>
+[INFO] 06:57:21:732 [CPU - Log obligatorio]/(35767:35821): PID: <3> - Ejecutando: <MOV_OUT> - <0> - <AX>
+[INFO] 06:57:22:232 [CPU - Log obligatorio]/(35767:35821): Page Fault PID: <3> - Página: <0>
+[INFO] 06:57:26:245 [CPU - Log obligatorio]/(35767:35824): PID: <2> - FETCH - Program Counter: <1>
+[INFO] 06:57:26:753 [CPU - Log obligatorio]/(35767:35824): PID: <2> - Ejecutando: <MOV_OUT> - <0> - <AX>
+[INFO] 06:57:27:254 [CPU - Log obligatorio]/(35767:35824): PID: <2> - OBTENER MARCO - Página: <0> - Marco: <0>
+[INFO] 06:57:27:761 [CPU - Log obligatorio]/(35767:35824): PID: <2> - Acción: <ESCRIBIR> - Dirección Física: <0> - Valor: <4>
+[INFO] 06:57:27:761 [CPU - Log obligatorio]/(35767:35824): PID: <2> - FETCH - Program Counter: <2>
+[INFO] 06:57:28:262 [CPU - Log obligatorio]/(35767:35824): PID: <2> - Ejecutando: <MOV_OUT> - <16> - <AX>
+[INFO] 06:57:28:763 [CPU - Log obligatorio]/(35767:35824): Page Fault PID: <2> - Página: <1>
+[INFO] 06:57:35:277 [CPU - Log obligatorio]/(35767:35827): PID: <4> - FETCH - Program Counter: <0>
+[INFO] 06:57:35:780 [CPU - Log obligatorio]/(35767:35827): PID: <4> - Ejecutando: <SET> - <AX> - <1>
+[INFO] 06:57:35:780 [CPU - Log obligatorio]/(35767:35827): PID: <4> - FETCH - Program Counter: <1>
+[INFO] 06:57:36:282 [CPU - Log obligatorio]/(35767:35827): PID: <4> - Ejecutando: <MOV_OUT> - <0> - <AX>
+[INFO] 06:57:36:791 [CPU - Log obligatorio]/(35767:35827): Page Fault PID: <4> - Página: <0>
+[INFO] 06:57:40:788 [CPU - Log obligatorio]/(35767:35830): PID: <3> - FETCH - Program Counter: <1>
+[INFO] 06:57:41:295 [CPU - Log obligatorio]/(35767:35830): PID: <3> - Ejecutando: <MOV_OUT> - <0> - <AX>
+[INFO] 06:57:41:803 [CPU - Log obligatorio]/(35767:35830): PID: <3> - OBTENER MARCO - Página: <0> - Marco: <1>
+[INFO] 06:57:42:337 [CPU - Log obligatorio]/(35767:35830): PID: <3> - Acción: <ESCRIBIR> - Dirección Física: <16> - Valor: <4>
+[INFO] 06:57:42:337 [CPU - Log obligatorio]/(35767:35830): PID: <3> - FETCH - Program Counter: <2>
+[INFO] 06:57:42:839 [CPU - Log obligatorio]/(35767:35830): PID: <3> - Ejecutando: <MOV_OUT> - <16> - <AX>
+[INFO] 06:57:43:345 [CPU - Log obligatorio]/(35767:35830): Page Fault PID: <3> - Página: <1>
+[INFO] 06:57:49:808 [CPU - Log obligatorio]/(35767:35833): PID: <5> - FETCH - Program Counter: <0>
+[INFO] 06:57:50:311 [CPU - Log obligatorio]/(35767:35833): PID: <5> - Ejecutando: <SET> - <AX> - <1>
+[INFO] 06:57:50:311 [CPU - Log obligatorio]/(35767:35833): PID: <5> - FETCH - Program Counter: <1>
+[INFO] 06:57:50:817 [CPU - Log obligatorio]/(35767:35833): PID: <5> - Ejecutando: <MOV_OUT> - <0> - <AX>
+[INFO] 06:57:51:324 [CPU - Log obligatorio]/(35767:35833): Page Fault PID: <5> - Página: <0>
+[INFO] 06:57:55:328 [CPU - Log obligatorio]/(35767:35836): PID: <2> - FETCH - Program Counter: <2>
+[INFO] 06:57:55:833 [CPU - Log obligatorio]/(35767:35836): PID: <2> - Ejecutando: <MOV_OUT> - <16> - <AX>
+[INFO] 06:57:56:371 [CPU - Log obligatorio]/(35767:35836): PID: <2> - OBTENER MARCO - Página: <1> - Marco: <2>
+[INFO] 06:57:56:871 [CPU - Log obligatorio]/(35767:35836): PID: <2> - Acción: <ESCRIBIR> - Dirección Física: <32> - Valor: <4>
+[INFO] 06:57:56:871 [CPU - Log obligatorio]/(35767:35836): PID: <2> - FETCH - Program Counter: <3>
+[INFO] 06:57:57:378 [CPU - Log obligatorio]/(35767:35836): PID: <2> - Ejecutando: <MOV_OUT> - <32> - <AX>
+[INFO] 06:57:57:879 [CPU - Log obligatorio]/(35767:35836): Page Fault PID: <2> - Página: <2>
+[INFO] 06:58:00:852 [CPU - Log obligatorio]/(35767:35839): PID: <4> - FETCH - Program Counter: <1>
+[INFO] 06:58:01:355 [CPU - Log obligatorio]/(35767:35839): PID: <4> - Ejecutando: <MOV_OUT> - <0> - <AX>
+[INFO] 06:58:01:857 [CPU - Log obligatorio]/(35767:35839): PID: <4> - OBTENER MARCO - Página: <0> - Marco: <3>
+[INFO] 06:58:02:360 [CPU - Log obligatorio]/(35767:35839): PID: <4> - Acción: <ESCRIBIR> - Dirección Física: <48> - Valor: <4>
+[INFO] 06:58:02:360 [CPU - Log obligatorio]/(35767:35839): PID: <4> - FETCH - Program Counter: <2>
+[INFO] 06:58:02:868 [CPU - Log obligatorio]/(35767:35839): PID: <4> - Ejecutando: <MOV_OUT> - <16> - <AX>
+[INFO] 06:58:03:369 [CPU - Log obligatorio]/(35767:35839): Page Fault PID: <4> - Página: <1>
+[INFO] 06:58:06:380 [CPU - Log obligatorio]/(35767:35842): PID: <3> - FETCH - Program Counter: <2>
+[INFO] 06:58:06:884 [CPU - Log obligatorio]/(35767:35842): PID: <3> - Ejecutando: <MOV_OUT> - <16> - <AX>
+[INFO] 06:58:07:404 [CPU - Log obligatorio]/(35767:35842): PID: <3> - OBTENER MARCO - Página: <1> - Marco: <0>
+[INFO] 06:58:07:904 [CPU - Log obligatorio]/(35767:35842): PID: <3> - Acción: <ESCRIBIR> - Dirección Física: <0> - Valor: <4>
+[INFO] 06:58:07:904 [CPU - Log obligatorio]/(35767:35842): PID: <3> - FETCH - Program Counter: <3>
+[INFO] 06:58:08:406 [CPU - Log obligatorio]/(35767:35842): PID: <3> - Ejecutando: <MOV_OUT> - <32> - <AX>
+[INFO] 06:58:08:909 [CPU - Log obligatorio]/(35767:35842): Page Fault PID: <3> - Página: <2>
+[INFO] 06:58:11:889 [CPU - Log obligatorio]/(35767:35845): PID: <5> - FETCH - Program Counter: <1>
+[INFO] 06:58:12:390 [CPU - Log obligatorio]/(35767:35845): PID: <5> - Ejecutando: <MOV_OUT> - <0> - <AX>
+[INFO] 06:58:12:895 [CPU - Log obligatorio]/(35767:35845): PID: <5> - OBTENER MARCO - Página: <0> - Marco: <1>
+[INFO] 06:58:13:410 [CPU - Log obligatorio]/(35767:35845): PID: <5> - Acción: <ESCRIBIR> - Dirección Física: <16> - Valor: <4>
+[INFO] 06:58:13:410 [CPU - Log obligatorio]/(35767:35845): PID: <5> - FETCH - Program Counter: <2>
+[INFO] 06:58:13:912 [CPU - Log obligatorio]/(35767:35845): PID: <5> - Ejecutando: <MOV_OUT> - <16> - <AX>
+[INFO] 06:58:14:414 [CPU - Log obligatorio]/(35767:35845): Page Fault PID: <5> - Página: <1>
+[INFO] 06:58:17:414 [CPU - Log obligatorio]/(35767:35847): PID: <2> - FETCH - Program Counter: <3>
+[INFO] 06:58:17:915 [CPU - Log obligatorio]/(35767:35847): PID: <2> - Ejecutando: <MOV_OUT> - <32> - <AX>
+[INFO] 06:58:18:417 [CPU - Log obligatorio]/(35767:35847): PID: <2> - OBTENER MARCO - Página: <2> - Marco: <2>
+[INFO] 06:58:18:928 [CPU - Log obligatorio]/(35767:35847): PID: <2> - Acción: <ESCRIBIR> - Dirección Física: <32> - Valor: <4>
+[INFO] 06:58:18:928 [CPU - Log obligatorio]/(35767:35847): PID: <2> - FETCH - Program Counter: <4>
+[INFO] 06:58:19:432 [CPU - Log obligatorio]/(35767:35847): PID: <2> - Ejecutando: <MOV_OUT> - <48> - <AX>
+[INFO] 06:58:19:937 [CPU - Log obligatorio]/(35767:35847): Page Fault PID: <2> - Página: <3>
+[INFO] 06:58:22:923 [CPU - Log obligatorio]/(35767:35850): PID: <4> - FETCH - Program Counter: <2>
+[INFO] 06:58:23:427 [CPU - Log obligatorio]/(35767:35850): PID: <4> - Ejecutando: <MOV_OUT> - <16> - <AX>
+[INFO] 06:58:23:928 [CPU - Log obligatorio]/(35767:35850): PID: <4> - OBTENER MARCO - Página: <1> - Marco: <3>
+[INFO] 06:58:24:430 [CPU - Log obligatorio]/(35767:35850): PID: <4> - Acción: <ESCRIBIR> - Dirección Física: <48> - Valor: <4>
+[INFO] 06:58:24:430 [CPU - Log obligatorio]/(35767:35850): PID: <4> - FETCH - Program Counter: <3>
+[INFO] 06:58:24:930 [CPU - Log obligatorio]/(35767:35850): PID: <4> - Ejecutando: <MOV_OUT> - <32> - <AX>
+[INFO] 06:58:25:453 [CPU - Log obligatorio]/(35767:35850): Page Fault PID: <4> - Página: <2>
+[INFO] 06:58:28:446 [CPU - Log obligatorio]/(35767:35853): PID: <3> - FETCH - Program Counter: <3>
+[INFO] 06:58:28:947 [CPU - Log obligatorio]/(35767:35853): PID: <3> - Ejecutando: <MOV_OUT> - <32> - <AX>
+[INFO] 06:58:29:453 [CPU - Log obligatorio]/(35767:35853): PID: <3> - OBTENER MARCO - Página: <2> - Marco: <0>
+[INFO] 06:58:29:960 [CPU - Log obligatorio]/(35767:35853): PID: <3> - Acción: <ESCRIBIR> - Dirección Física: <0> - Valor: <4>
+[INFO] 06:58:29:960 [CPU - Log obligatorio]/(35767:35853): PID: <3> - FETCH - Program Counter: <4>
+[INFO] 06:58:30:461 [CPU - Log obligatorio]/(35767:35853): PID: <3> - Ejecutando: <MOV_OUT> - <48> - <AX>
+[INFO] 06:58:30:961 [CPU - Log obligatorio]/(35767:35853): Page Fault PID: <3> - Página: <3>
+[INFO] 06:58:33:960 [CPU - Log obligatorio]/(35767:35857): PID: <5> - FETCH - Program Counter: <2>
+[INFO] 06:58:34:461 [CPU - Log obligatorio]/(35767:35857): PID: <5> - Ejecutando: <MOV_OUT> - <16> - <AX>
+[INFO] 06:58:34:962 [CPU - Log obligatorio]/(35767:35857): PID: <5> - OBTENER MARCO - Página: <1> - Marco: <1>
+[INFO] 06:58:35:464 [CPU - Log obligatorio]/(35767:35857): PID: <5> - Acción: <ESCRIBIR> - Dirección Física: <16> - Valor: <4>
+[INFO] 06:58:35:464 [CPU - Log obligatorio]/(35767:35857): PID: <5> - FETCH - Program Counter: <3>
+[INFO] 06:58:35:965 [CPU - Log obligatorio]/(35767:35857): PID: <5> - Ejecutando: <MOV_OUT> - <32> - <AX>
+[INFO] 06:58:36:476 [CPU - Log obligatorio]/(35767:35857): Page Fault PID: <5> - Página: <2>
+[INFO] 06:58:39:466 [CPU - Log obligatorio]/(35767:35860): PID: <2> - FETCH - Program Counter: <4>
+[INFO] 06:58:39:980 [CPU - Log obligatorio]/(35767:35860): PID: <2> - Ejecutando: <MOV_OUT> - <48> - <AX>
+[INFO] 06:58:40:485 [CPU - Log obligatorio]/(35767:35860): PID: <2> - OBTENER MARCO - Página: <3> - Marco: <2>
+[INFO] 06:58:40:988 [CPU - Log obligatorio]/(35767:35860): PID: <2> - Acción: <ESCRIBIR> - Dirección Física: <32> - Valor: <4>
+[INFO] 06:58:40:988 [CPU - Log obligatorio]/(35767:35860): PID: <2> - FETCH - Program Counter: <5>
+[INFO] 06:58:41:490 [CPU - Log obligatorio]/(35767:35860): PID: <2> - Ejecutando: <MOV_IN> - <DX> - <16>
+[INFO] 06:58:41:993 [CPU - Log obligatorio]/(35767:35860): Page Fault PID: <2> - Página: <1>
+[INFO] 06:58:44:993 [CPU - Log obligatorio]/(35767:35863): PID: <4> - FETCH - Program Counter: <3>
+[INFO] 06:58:45:494 [CPU - Log obligatorio]/(35767:35863): PID: <4> - Ejecutando: <MOV_OUT> - <32> - <AX>
+[INFO] 06:58:45:995 [CPU - Log obligatorio]/(35767:35863): PID: <4> - OBTENER MARCO - Página: <2> - Marco: <3>
+[INFO] 06:58:46:498 [CPU - Log obligatorio]/(35767:35863): PID: <4> - Acción: <ESCRIBIR> - Dirección Física: <48> - Valor: <4>
+[INFO] 06:58:46:498 [CPU - Log obligatorio]/(35767:35863): PID: <4> - FETCH - Program Counter: <4>
+[INFO] 06:58:47:000 [CPU - Log obligatorio]/(35767:35863): PID: <4> - Ejecutando: <MOV_OUT> - <48> - <AX>
+[INFO] 06:58:47:502 [CPU - Log obligatorio]/(35767:35863): Page Fault PID: <4> - Página: <3>
+[INFO] 06:58:50:510 [CPU - Log obligatorio]/(35767:35865): PID: <3> - FETCH - Program Counter: <4>
+[INFO] 06:58:51:012 [CPU - Log obligatorio]/(35767:35865): PID: <3> - Ejecutando: <MOV_OUT> - <48> - <AX>
+[INFO] 06:58:51:516 [CPU - Log obligatorio]/(35767:35865): PID: <3> - OBTENER MARCO - Página: <3> - Marco: <0>
+[INFO] 06:58:52:023 [CPU - Log obligatorio]/(35767:35865): PID: <3> - Acción: <ESCRIBIR> - Dirección Física: <0> - Valor: <4>
+[INFO] 06:58:52:023 [CPU - Log obligatorio]/(35767:35865): PID: <3> - FETCH - Program Counter: <5>
+[INFO] 06:58:52:525 [CPU - Log obligatorio]/(35767:35865): PID: <3> - Ejecutando: <MOV_IN> - <DX> - <16>
+[INFO] 06:58:53:039 [CPU - Log obligatorio]/(35767:35865): Page Fault PID: <3> - Página: <1>
+[INFO] 06:58:56:022 [CPU - Log obligatorio]/(35767:35877): PID: <5> - FETCH - Program Counter: <3>
+[INFO] 06:58:56:526 [CPU - Log obligatorio]/(35767:35877): PID: <5> - Ejecutando: <MOV_OUT> - <32> - <AX>
+[INFO] 06:58:57:027 [CPU - Log obligatorio]/(35767:35877): PID: <5> - OBTENER MARCO - Página: <2> - Marco: <1>
+[INFO] 06:58:57:529 [CPU - Log obligatorio]/(35767:35877): PID: <5> - Acción: <ESCRIBIR> - Dirección Física: <16> - Valor: <4>
+[INFO] 06:58:57:529 [CPU - Log obligatorio]/(35767:35877): PID: <5> - FETCH - Program Counter: <4>
+[INFO] 06:58:58:030 [CPU - Log obligatorio]/(35767:35877): PID: <5> - Ejecutando: <MOV_OUT> - <48> - <AX>
+[INFO] 06:58:58:536 [CPU - Log obligatorio]/(35767:35877): Page Fault PID: <5> - Página: <3>
+[INFO] 06:59:01:539 [CPU - Log obligatorio]/(35767:35881): PID: <2> - FETCH - Program Counter: <5>
+[INFO] 06:59:02:045 [CPU - Log obligatorio]/(35767:35881): PID: <2> - Ejecutando: <MOV_IN> - <DX> - <16>
+[INFO] 06:59:02:548 [CPU - Log obligatorio]/(35767:35881): PID: <2> - OBTENER MARCO - Página: <1> - Marco: <2>
+[INFO] 06:59:03:050 [CPU - Log obligatorio]/(35767:35881): PID: <2> - Acción: <LEER> - Dirección Física: <32> - Valor: <0>
+[INFO] 06:59:03:050 [CPU - Log obligatorio]/(35767:35881): PID: <2> - FETCH - Program Counter: <6>
+[INFO] 06:59:03:551 [CPU - Log obligatorio]/(35767:35881): PID: <2> - Ejecutando: <MOV_IN> - <CX> - <32>
+[INFO] 06:59:04:059 [CPU - Log obligatorio]/(35767:35881): Page Fault PID: <2> - Página: <2>
+[INFO] 06:59:07:054 [CPU - Log obligatorio]/(35767:35884): PID: <4> - FETCH - Program Counter: <4>
+[INFO] 06:59:07:556 [CPU - Log obligatorio]/(35767:35884): PID: <4> - Ejecutando: <MOV_OUT> - <48> - <AX>
+[INFO] 06:59:08:064 [CPU - Log obligatorio]/(35767:35884): PID: <4> - OBTENER MARCO - Página: <3> - Marco: <3>
+[INFO] 06:59:08:584 [CPU - Log obligatorio]/(35767:35884): PID: <4> - Acción: <ESCRIBIR> - Dirección Física: <48> - Valor: <4>
+[INFO] 06:59:08:591 [CPU - Log obligatorio]/(35767:35884): PID: <4> - FETCH - Program Counter: <5>
+[INFO] 06:59:09:098 [CPU - Log obligatorio]/(35767:35884): PID: <4> - Ejecutando: <MOV_IN> - <DX> - <16>
+[INFO] 06:59:09:599 [CPU - Log obligatorio]/(35767:35884): Page Fault PID: <4> - Página: <1>
+[INFO] 06:59:12:565 [CPU - Log obligatorio]/(35767:35887): PID: <3> - FETCH - Program Counter: <5>
+[INFO] 06:59:13:070 [CPU - Log obligatorio]/(35767:35887): PID: <3> - Ejecutando: <MOV_IN> - <DX> - <16>
+[INFO] 06:59:13:579 [CPU - Log obligatorio]/(35767:35887): PID: <3> - OBTENER MARCO - Página: <1> - Marco: <0>
+[INFO] 06:59:14:084 [CPU - Log obligatorio]/(35767:35887): PID: <3> - Acción: <LEER> - Dirección Física: <0> - Valor: <1768292352>
+[INFO] 06:59:14:084 [CPU - Log obligatorio]/(35767:35887): PID: <3> - FETCH - Program Counter: <6>
+[INFO] 06:59:14:590 [CPU - Log obligatorio]/(35767:35887): PID: <3> - Ejecutando: <MOV_IN> - <CX> - <32>
+[INFO] 06:59:15:095 [CPU - Log obligatorio]/(35767:35887): Page Fault PID: <3> - Página: <2>
+[INFO] 06:59:18:084 [CPU - Log obligatorio]/(35767:35889): PID: <5> - FETCH - Program Counter: <4>
+[INFO] 06:59:18:593 [CPU - Log obligatorio]/(35767:35889): PID: <5> - Ejecutando: <MOV_OUT> - <48> - <AX>
+[INFO] 06:59:19:101 [CPU - Log obligatorio]/(35767:35889): PID: <5> - OBTENER MARCO - Página: <3> - Marco: <1>
+[INFO] 06:59:19:606 [CPU - Log obligatorio]/(35767:35889): PID: <5> - Acción: <ESCRIBIR> - Dirección Física: <16> - Valor: <4>
+[INFO] 06:59:19:606 [CPU - Log obligatorio]/(35767:35889): PID: <5> - FETCH - Program Counter: <5>
+[INFO] 06:59:20:107 [CPU - Log obligatorio]/(35767:35889): PID: <5> - Ejecutando: <MOV_IN> - <DX> - <16>
+[INFO] 06:59:20:609 [CPU - Log obligatorio]/(35767:35889): Page Fault PID: <5> - Página: <1>
+[INFO] 06:59:23:621 [CPU - Log obligatorio]/(35767:35893): PID: <2> - FETCH - Program Counter: <6>
+[INFO] 06:59:24:125 [CPU - Log obligatorio]/(35767:35893): PID: <2> - Ejecutando: <MOV_IN> - <CX> - <32>
+[INFO] 06:59:24:628 [CPU - Log obligatorio]/(35767:35893): PID: <2> - OBTENER MARCO - Página: <2> - Marco: <2>
+[INFO] 06:59:25:130 [CPU - Log obligatorio]/(35767:35893): PID: <2> - Acción: <LEER> - Dirección Física: <32> - Valor: <0>
+[INFO] 06:59:25:130 [CPU - Log obligatorio]/(35767:35893): PID: <2> - FETCH - Program Counter: <7>
+[INFO] 06:59:25:639 [CPU - Log obligatorio]/(35767:35893): PID: <2> - Ejecutando: <SET> - <BX> - <2>
+[INFO] 06:59:25:639 [CPU - Log obligatorio]/(35767:35893): PID: <2> - FETCH - Program Counter: <8>
+[INFO] 06:59:26:141 [CPU - Log obligatorio]/(35767:35893): PID: <2> - Ejecutando: <MOV_OUT> - <64> - <BX>
+[INFO] 06:59:26:644 [CPU - Log obligatorio]/(35767:35893): Page Fault PID: <2> - Página: <4>
+[INFO] 06:59:29:144 [CPU - Log obligatorio]/(35767:35897): PID: <4> - FETCH - Program Counter: <5>
+[INFO] 06:59:29:649 [CPU - Log obligatorio]/(35767:35897): PID: <4> - Ejecutando: <MOV_IN> - <DX> - <16>
+[INFO] 06:59:30:150 [CPU - Log obligatorio]/(35767:35897): PID: <4> - OBTENER MARCO - Página: <1> - Marco: <3>
+[INFO] 06:59:30:653 [CPU - Log obligatorio]/(35767:35897): PID: <4> - Acción: <LEER> - Dirección Física: <48> - Valor: <1918985588>
+[INFO] 06:59:30:654 [CPU - Log obligatorio]/(35767:35897): PID: <4> - FETCH - Program Counter: <6>
+[INFO] 06:59:31:157 [CPU - Log obligatorio]/(35767:35897): PID: <4> - Ejecutando: <MOV_IN> - <CX> - <32>
+[INFO] 06:59:31:659 [CPU - Log obligatorio]/(35767:35897): Page Fault PID: <4> - Página: <2>
+[INFO] 06:59:34:658 [CPU - Log obligatorio]/(35767:35900): PID: <3> - FETCH - Program Counter: <6>
+[INFO] 06:59:35:160 [CPU - Log obligatorio]/(35767:35900): PID: <3> - Ejecutando: <MOV_IN> - <CX> - <32>
+[INFO] 06:59:35:662 [CPU - Log obligatorio]/(35767:35900): PID: <3> - OBTENER MARCO - Página: <2> - Marco: <0>
+[INFO] 06:59:36:165 [CPU - Log obligatorio]/(35767:35900): PID: <3> - Acción: <LEER> - Dirección Física: <0> - Valor: <1852401152>
+[INFO] 06:59:36:166 [CPU - Log obligatorio]/(35767:35900): PID: <3> - FETCH - Program Counter: <7>
+[INFO] 06:59:36:675 [CPU - Log obligatorio]/(35767:35900): PID: <3> - Ejecutando: <SET> - <BX> - <2>
+[INFO] 06:59:36:675 [CPU - Log obligatorio]/(35767:35900): PID: <3> - FETCH - Program Counter: <8>
+[INFO] 06:59:37:177 [CPU - Log obligatorio]/(35767:35900): PID: <3> - Ejecutando: <MOV_OUT> - <64> - <BX>
+[INFO] 06:59:37:679 [CPU - Log obligatorio]/(35767:35900): Page Fault PID: <3> - Página: <4>
+[INFO] 06:59:40:235 [CPU - Log obligatorio]/(35767:35903): PID: <5> - FETCH - Program Counter: <5>
+[INFO] 06:59:40:736 [CPU - Log obligatorio]/(35767:35903): PID: <5> - Ejecutando: <MOV_IN> - <DX> - <16>
+[INFO] 06:59:41:240 [CPU - Log obligatorio]/(35767:35903): PID: <5> - OBTENER MARCO - Página: <1> - Marco: <1>
+[INFO] 06:59:41:742 [CPU - Log obligatorio]/(35767:35903): PID: <5> - Acción: <LEER> - Dirección Física: <16> - Valor: <1635218271>
+[INFO] 06:59:41:743 [CPU - Log obligatorio]/(35767:35903): PID: <5> - FETCH - Program Counter: <6>
+[INFO] 06:59:42:246 [CPU - Log obligatorio]/(35767:35903): PID: <5> - Ejecutando: <MOV_IN> - <CX> - <32>
+[INFO] 06:59:42:749 [CPU - Log obligatorio]/(35767:35903): Page Fault PID: <5> - Página: <2>
+[INFO] 06:59:45:741 [CPU - Log obligatorio]/(35767:35905): PID: <2> - FETCH - Program Counter: <8>
+[INFO] 06:59:46:248 [CPU - Log obligatorio]/(35767:35905): PID: <2> - Ejecutando: <MOV_OUT> - <64> - <BX>
+[INFO] 06:59:46:751 [CPU - Log obligatorio]/(35767:35905): PID: <2> - OBTENER MARCO - Página: <4> - Marco: <2>
+[INFO] 06:59:47:254 [CPU - Log obligatorio]/(35767:35905): PID: <2> - Acción: <ESCRIBIR> - Dirección Física: <32> - Valor: <4>
+[INFO] 06:59:47:254 [CPU - Log obligatorio]/(35767:35905): PID: <2> - FETCH - Program Counter: <9>
+[INFO] 06:59:47:756 [CPU - Log obligatorio]/(35767:35905): PID: <2> - Ejecutando: <MOV_OUT> - <80> - <BX>
+[INFO] 06:59:48:258 [CPU - Log obligatorio]/(35767:35905): Page Fault PID: <2> - Página: <5>
+[INFO] 06:59:51:257 [CPU - Log obligatorio]/(35767:35909): PID: <4> - FETCH - Program Counter: <6>
+[INFO] 06:59:51:759 [CPU - Log obligatorio]/(35767:35909): PID: <4> - Ejecutando: <MOV_IN> - <CX> - <32>
+[INFO] 06:59:52:267 [CPU - Log obligatorio]/(35767:35909): PID: <4> - OBTENER MARCO - Página: <2> - Marco: <3>
+[INFO] 06:59:52:772 [CPU - Log obligatorio]/(35767:35909): PID: <4> - Acción: <LEER> - Dirección Física: <48> - Valor: <1601331557>
+[INFO] 06:59:52:772 [CPU - Log obligatorio]/(35767:35909): PID: <4> - FETCH - Program Counter: <7>
+[INFO] 06:59:53:276 [CPU - Log obligatorio]/(35767:35909): PID: <4> - Ejecutando: <SET> - <BX> - <2>
+[INFO] 06:59:53:276 [CPU - Log obligatorio]/(35767:35909): PID: <4> - FETCH - Program Counter: <8>
+[INFO] 06:59:53:778 [CPU - Log obligatorio]/(35767:35909): PID: <4> - Ejecutando: <MOV_OUT> - <64> - <BX>
+[INFO] 06:59:54:280 [CPU - Log obligatorio]/(35767:35909): Page Fault PID: <4> - Página: <4>
+[INFO] 07:03:22:907 [CPU - Log obligatorio]/(35960:35989): PID: <1> - FETCH - Program Counter: <0>
+[INFO] 07:03:23:409 [CPU - Log obligatorio]/(35960:35989): PID: <1> - Ejecutando: <SET> - <CX> - <20>
+[INFO] 07:03:23:409 [CPU - Log obligatorio]/(35960:35989): PID: <1> - FETCH - Program Counter: <1>
+[INFO] 07:03:23:911 [CPU - Log obligatorio]/(35960:35989): PID: <1> - Ejecutando: <SET> - <AX> - <1>
+[INFO] 07:03:23:911 [CPU - Log obligatorio]/(35960:35989): PID: <1> - FETCH - Program Counter: <2>
+[INFO] 07:03:24:412 [CPU - Log obligatorio]/(35960:35989): PID: <1> - Ejecutando: <MOV_OUT> - <0> - <CX>
+[INFO] 07:03:24:914 [CPU - Log obligatorio]/(35960:35989): Page Fault PID: <1> - Página: <0>
+[INFO] 07:03:29:920 [CPU - Log obligatorio]/(35960:35992): PID: <2> - FETCH - Program Counter: <0>
+[INFO] 07:03:30:422 [CPU - Log obligatorio]/(35960:35992): PID: <2> - Ejecutando: <SET> - <CX> - <20>
+[INFO] 07:03:30:422 [CPU - Log obligatorio]/(35960:35992): PID: <2> - FETCH - Program Counter: <1>
+[INFO] 07:03:30:925 [CPU - Log obligatorio]/(35960:35992): PID: <2> - Ejecutando: <SET> - <AX> - <1>
+[INFO] 07:03:30:925 [CPU - Log obligatorio]/(35960:35992): PID: <2> - FETCH - Program Counter: <2>
+[INFO] 07:03:31:429 [CPU - Log obligatorio]/(35960:35992): PID: <2> - Ejecutando: <MOV_OUT> - <0> - <CX>
+[INFO] 07:03:31:932 [CPU - Log obligatorio]/(35960:35992): Page Fault PID: <2> - Página: <0>
+[INFO] 07:03:35:426 [CPU - Log obligatorio]/(35960:35995): PID: <1> - FETCH - Program Counter: <2>
+[INFO] 07:03:35:928 [CPU - Log obligatorio]/(35960:35995): PID: <1> - Ejecutando: <MOV_OUT> - <0> - <CX>
+[INFO] 07:03:36:431 [CPU - Log obligatorio]/(35960:35995): PID: <1> - OBTENER MARCO - Página: <0> - Marco: <0>
+[INFO] 07:03:36:934 [CPU - Log obligatorio]/(35960:35995): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <0> - Valor: <4>
+[INFO] 07:03:36:935 [CPU - Log obligatorio]/(35960:35995): PID: <1> - FETCH - Program Counter: <3>
+[INFO] 07:03:37:443 [CPU - Log obligatorio]/(35960:35995): PID: <1> - Ejecutando: <MOV_OUT> - <16> - <CX>
+[INFO] 07:03:37:948 [CPU - Log obligatorio]/(35960:35995): Page Fault PID: <1> - Página: <1>
+[INFO] 07:03:38:436 [CPU - Log obligatorio]/(35960:35998): PID: <3> - FETCH - Program Counter: <0>
+[INFO] 07:03:38:937 [CPU - Log obligatorio]/(35960:35998): PID: <3> - Ejecutando: <SET> - <CX> - <20>
+[INFO] 07:03:38:937 [CPU - Log obligatorio]/(35960:35998): PID: <3> - FETCH - Program Counter: <1>
+[INFO] 07:03:39:439 [CPU - Log obligatorio]/(35960:35998): PID: <3> - Ejecutando: <SET> - <AX> - <1>
+[INFO] 07:03:39:440 [CPU - Log obligatorio]/(35960:35998): PID: <3> - FETCH - Program Counter: <2>
+[INFO] 07:03:39:943 [CPU - Log obligatorio]/(35960:35998): PID: <3> - Ejecutando: <MOV_OUT> - <0> - <CX>
+[INFO] 07:03:40:450 [CPU - Log obligatorio]/(35960:35998): Page Fault PID: <3> - Página: <0>
+[INFO] 07:03:43:963 [CPU - Log obligatorio]/(35960:36000): PID: <2> - FETCH - Program Counter: <2>
+[INFO] 07:03:44:469 [CPU - Log obligatorio]/(35960:36000): PID: <2> - Ejecutando: <MOV_OUT> - <0> - <CX>
+[INFO] 07:03:44:973 [CPU - Log obligatorio]/(35960:36000): PID: <2> - OBTENER MARCO - Página: <0> - Marco: <1>
+[INFO] 07:03:45:476 [CPU - Log obligatorio]/(35960:36000): PID: <2> - Acción: <ESCRIBIR> - Dirección Física: <16> - Valor: <4>
+[INFO] 07:03:45:476 [CPU - Log obligatorio]/(35960:36000): PID: <2> - FETCH - Program Counter: <3>
+[INFO] 07:03:45:982 [CPU - Log obligatorio]/(35960:36000): PID: <2> - Ejecutando: <MOV_OUT> - <16> - <CX>
+[INFO] 07:03:46:485 [CPU - Log obligatorio]/(35960:36000): Page Fault PID: <2> - Página: <1>
+[INFO] 07:03:46:976 [CPU - Log obligatorio]/(35960:36004): PID: <4> - FETCH - Program Counter: <0>
+[INFO] 07:03:47:477 [CPU - Log obligatorio]/(35960:36004): PID: <4> - Ejecutando: <SET> - <CX> - <20>
+[INFO] 07:03:47:477 [CPU - Log obligatorio]/(35960:36004): PID: <4> - FETCH - Program Counter: <1>
+[INFO] 07:03:47:981 [CPU - Log obligatorio]/(35960:36004): PID: <4> - Ejecutando: <SET> - <AX> - <1>
+[INFO] 07:03:47:981 [CPU - Log obligatorio]/(35960:36004): PID: <4> - FETCH - Program Counter: <2>
+[INFO] 07:03:48:483 [CPU - Log obligatorio]/(35960:36004): PID: <4> - Ejecutando: <MOV_OUT> - <0> - <CX>
+[INFO] 07:03:48:991 [CPU - Log obligatorio]/(35960:36004): Page Fault PID: <4> - Página: <0>
+[INFO] 07:03:52:488 [CPU - Log obligatorio]/(35960:36007): PID: <1> - FETCH - Program Counter: <3>
+[INFO] 07:03:52:990 [CPU - Log obligatorio]/(35960:36007): PID: <1> - Ejecutando: <MOV_OUT> - <16> - <CX>
+[INFO] 07:03:53:501 [CPU - Log obligatorio]/(35960:36007): PID: <1> - OBTENER MARCO - Página: <1> - Marco: <2>
+[INFO] 07:03:54:002 [CPU - Log obligatorio]/(35960:36007): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <32> - Valor: <4>
+[INFO] 07:03:54:002 [CPU - Log obligatorio]/(35960:36007): PID: <1> - FETCH - Program Counter: <4>
+[INFO] 07:03:54:509 [CPU - Log obligatorio]/(35960:36007): PID: <1> - Ejecutando: <MOV_OUT> - <32> - <CX>
+[INFO] 07:03:55:017 [CPU - Log obligatorio]/(35960:36007): Page Fault PID: <1> - Página: <2>
+[INFO] 07:03:57:997 [CPU - Log obligatorio]/(35960:36010): PID: <3> - FETCH - Program Counter: <2>
+[INFO] 07:03:58:499 [CPU - Log obligatorio]/(35960:36010): PID: <3> - Ejecutando: <MOV_OUT> - <0> - <CX>
+[INFO] 07:03:59:010 [CPU - Log obligatorio]/(35960:36010): PID: <3> - OBTENER MARCO - Página: <0> - Marco: <3>
+[INFO] 07:03:59:514 [CPU - Log obligatorio]/(35960:36010): PID: <3> - Acción: <ESCRIBIR> - Dirección Física: <48> - Valor: <4>
+[INFO] 07:03:59:514 [CPU - Log obligatorio]/(35960:36010): PID: <3> - FETCH - Program Counter: <3>
+[INFO] 07:04:00:017 [CPU - Log obligatorio]/(35960:36010): PID: <3> - Ejecutando: <MOV_OUT> - <16> - <CX>
+[INFO] 07:04:00:527 [CPU - Log obligatorio]/(35960:36010): Page Fault PID: <3> - Página: <1>
+[INFO] 07:04:03:501 [CPU - Log obligatorio]/(35960:36013): PID: <2> - FETCH - Program Counter: <3>
+[INFO] 07:04:04:012 [CPU - Log obligatorio]/(35960:36013): PID: <2> - Ejecutando: <MOV_OUT> - <16> - <CX>
+[INFO] 07:04:04:513 [CPU - Log obligatorio]/(35960:36013): PID: <2> - OBTENER MARCO - Página: <1> - Marco: <0>
+[INFO] 07:04:05:015 [CPU - Log obligatorio]/(35960:36013): PID: <2> - Acción: <ESCRIBIR> - Dirección Física: <0> - Valor: <4>
+[INFO] 07:04:05:015 [CPU - Log obligatorio]/(35960:36013): PID: <2> - FETCH - Program Counter: <4>
+[INFO] 07:04:05:521 [CPU - Log obligatorio]/(35960:36013): PID: <2> - Ejecutando: <MOV_OUT> - <32> - <CX>
+[INFO] 07:04:06:028 [CPU - Log obligatorio]/(35960:36013): Page Fault PID: <2> - Página: <2>
+[INFO] 07:04:09:012 [CPU - Log obligatorio]/(35960:36015): PID: <4> - FETCH - Program Counter: <2>
+[INFO] 07:04:09:516 [CPU - Log obligatorio]/(35960:36015): PID: <4> - Ejecutando: <MOV_OUT> - <0> - <CX>
+[INFO] 07:04:10:018 [CPU - Log obligatorio]/(35960:36015): PID: <4> - OBTENER MARCO - Página: <0> - Marco: <1>
+[INFO] 07:04:10:521 [CPU - Log obligatorio]/(35960:36015): PID: <4> - Acción: <ESCRIBIR> - Dirección Física: <16> - Valor: <4>
+[INFO] 07:04:10:521 [CPU - Log obligatorio]/(35960:36015): PID: <4> - FETCH - Program Counter: <3>
+[INFO] 07:04:11:023 [CPU - Log obligatorio]/(35960:36015): PID: <4> - Ejecutando: <MOV_OUT> - <16> - <CX>
+[INFO] 07:04:11:524 [CPU - Log obligatorio]/(35960:36015): Page Fault PID: <4> - Página: <1>
+[INFO] 07:04:14:541 [CPU - Log obligatorio]/(35960:36018): PID: <1> - FETCH - Program Counter: <4>
+[INFO] 07:04:15:046 [CPU - Log obligatorio]/(35960:36018): PID: <1> - Ejecutando: <MOV_OUT> - <32> - <CX>
+[INFO] 07:04:15:550 [CPU - Log obligatorio]/(35960:36018): PID: <1> - OBTENER MARCO - Página: <2> - Marco: <2>
+[INFO] 07:04:16:052 [CPU - Log obligatorio]/(35960:36018): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <32> - Valor: <4>
+[INFO] 07:04:16:052 [CPU - Log obligatorio]/(35960:36018): PID: <1> - FETCH - Program Counter: <5>
+[INFO] 07:04:16:554 [CPU - Log obligatorio]/(35960:36018): PID: <1> - Ejecutando: <MOV_OUT> - <48> - <CX>
+[INFO] 07:04:17:057 [CPU - Log obligatorio]/(35960:36018): Page Fault PID: <1> - Página: <3>
+[INFO] 07:04:20:058 [CPU - Log obligatorio]/(35960:36021): PID: <3> - FETCH - Program Counter: <3>
+[INFO] 07:04:20:567 [CPU - Log obligatorio]/(35960:36021): PID: <3> - Ejecutando: <MOV_OUT> - <16> - <CX>
+[INFO] 07:04:21:082 [CPU - Log obligatorio]/(35960:36021): PID: <3> - OBTENER MARCO - Página: <1> - Marco: <3>
+[INFO] 07:04:21:583 [CPU - Log obligatorio]/(35960:36021): PID: <3> - Acción: <ESCRIBIR> - Dirección Física: <48> - Valor: <4>
+[INFO] 07:04:21:583 [CPU - Log obligatorio]/(35960:36021): PID: <3> - FETCH - Program Counter: <4>
+[INFO] 07:04:22:090 [CPU - Log obligatorio]/(35960:36021): PID: <3> - Ejecutando: <MOV_OUT> - <32> - <CX>
+[INFO] 07:04:22:594 [CPU - Log obligatorio]/(35960:36021): Page Fault PID: <3> - Página: <2>
+[INFO] 07:04:25:591 [CPU - Log obligatorio]/(35960:36025): PID: <2> - FETCH - Program Counter: <4>
+[INFO] 07:04:26:092 [CPU - Log obligatorio]/(35960:36025): PID: <2> - Ejecutando: <MOV_OUT> - <32> - <CX>
+[INFO] 07:04:26:594 [CPU - Log obligatorio]/(35960:36025): PID: <2> - OBTENER MARCO - Página: <2> - Marco: <0>
+[INFO] 07:04:27:104 [CPU - Log obligatorio]/(35960:36025): PID: <2> - Acción: <ESCRIBIR> - Dirección Física: <0> - Valor: <4>
+[INFO] 07:04:27:104 [CPU - Log obligatorio]/(35960:36025): PID: <2> - FETCH - Program Counter: <5>
+[INFO] 07:04:27:606 [CPU - Log obligatorio]/(35960:36025): PID: <2> - Ejecutando: <MOV_OUT> - <48> - <CX>
+[INFO] 07:04:28:109 [CPU - Log obligatorio]/(35960:36025): Page Fault PID: <2> - Página: <3>
+[INFO] 07:04:31:091 [CPU - Log obligatorio]/(35960:36029): PID: <4> - FETCH - Program Counter: <3>
+[INFO] 07:04:31:592 [CPU - Log obligatorio]/(35960:36029): PID: <4> - Ejecutando: <MOV_OUT> - <16> - <CX>
+[INFO] 07:04:32:093 [CPU - Log obligatorio]/(35960:36029): PID: <4> - OBTENER MARCO - Página: <1> - Marco: <1>
+[INFO] 07:04:32:595 [CPU - Log obligatorio]/(35960:36029): PID: <4> - Acción: <ESCRIBIR> - Dirección Física: <16> - Valor: <4>
+[INFO] 07:04:32:595 [CPU - Log obligatorio]/(35960:36029): PID: <4> - FETCH - Program Counter: <4>
+[INFO] 07:04:33:096 [CPU - Log obligatorio]/(35960:36029): PID: <4> - Ejecutando: <MOV_OUT> - <32> - <CX>
+[INFO] 07:04:33:599 [CPU - Log obligatorio]/(35960:36029): Page Fault PID: <4> - Página: <2>
+[INFO] 07:04:36:602 [CPU - Log obligatorio]/(35960:36033): PID: <1> - FETCH - Program Counter: <5>
+[INFO] 07:04:37:104 [CPU - Log obligatorio]/(35960:36033): PID: <1> - Ejecutando: <MOV_OUT> - <48> - <CX>
+[INFO] 07:04:37:610 [CPU - Log obligatorio]/(35960:36033): PID: <1> - OBTENER MARCO - Página: <3> - Marco: <2>
+[INFO] 07:04:38:115 [CPU - Log obligatorio]/(35960:36033): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <32> - Valor: <4>
+[INFO] 07:04:38:115 [CPU - Log obligatorio]/(35960:36033): PID: <1> - FETCH - Program Counter: <6>
+[INFO] 07:04:38:616 [CPU - Log obligatorio]/(35960:36033): PID: <1> - Ejecutando: <SUB> - <CX> - <AX>
+[INFO] 07:04:38:616 [CPU - Log obligatorio]/(35960:36033): PID: <1> - FETCH - Program Counter: <7>
+[INFO] 07:04:39:119 [CPU - Log obligatorio]/(35960:36033): PID: <1> - Ejecutando: <JNZ> - <CX> - <2>
+[INFO] 07:04:39:119 [CPU - Log obligatorio]/(35960:36033): PID: <1> - FETCH - Program Counter: <8>
+[INFO] 07:04:39:625 [CPU - Log obligatorio]/(35960:36033): PID: <1> - Ejecutando: <EXIT>
+[INFO] 07:04:42:111 [CPU - Log obligatorio]/(35960:36035): PID: <3> - FETCH - Program Counter: <4>
+[INFO] 07:04:42:614 [CPU - Log obligatorio]/(35960:36035): PID: <3> - Ejecutando: <MOV_OUT> - <32> - <CX>
+[INFO] 07:04:43:116 [CPU - Log obligatorio]/(35960:36035): PID: <3> - OBTENER MARCO - Página: <2> - Marco: <3>
+[INFO] 07:04:43:621 [CPU - Log obligatorio]/(35960:36035): PID: <3> - Acción: <ESCRIBIR> - Dirección Física: <48> - Valor: <4>
+[INFO] 07:04:43:621 [CPU - Log obligatorio]/(35960:36035): PID: <3> - FETCH - Program Counter: <5>
+[INFO] 07:04:44:122 [CPU - Log obligatorio]/(35960:36035): PID: <3> - Ejecutando: <MOV_OUT> - <48> - <CX>
+[INFO] 07:04:44:634 [CPU - Log obligatorio]/(35960:36035): Page Fault PID: <3> - Página: <3>
+[INFO] 07:04:50:653 [CPU - Log obligatorio]/(35960:36038): PID: <2> - FETCH - Program Counter: <5>
+[INFO] 07:04:51:155 [CPU - Log obligatorio]/(35960:36038): PID: <2> - Ejecutando: <MOV_OUT> - <48> - <CX>
+[INFO] 07:04:51:657 [CPU - Log obligatorio]/(35960:36038): PID: <2> - OBTENER MARCO - Página: <3> - Marco: <2>
+[INFO] 07:04:52:162 [CPU - Log obligatorio]/(35960:36038): PID: <2> - Acción: <ESCRIBIR> - Dirección Física: <32> - Valor: <4>
+[INFO] 07:04:52:162 [CPU - Log obligatorio]/(35960:36038): PID: <2> - FETCH - Program Counter: <6>
+[INFO] 07:04:52:664 [CPU - Log obligatorio]/(35960:36038): PID: <2> - Ejecutando: <SUB> - <CX> - <AX>
+[INFO] 07:04:52:664 [CPU - Log obligatorio]/(35960:36038): PID: <2> - FETCH - Program Counter: <7>
+[INFO] 07:09:24:360 [CPU - Log obligatorio]/(36059:36079): PID: <1> - FETCH - Program Counter: <0>
+[INFO] 07:09:24:872 [CPU - Log obligatorio]/(36059:36079): PID: <1> - Ejecutando: <SET> - <CX> - <20>
+[INFO] 07:09:24:872 [CPU - Log obligatorio]/(36059:36079): PID: <1> - FETCH - Program Counter: <1>
+[INFO] 07:09:25:389 [CPU - Log obligatorio]/(36059:36079): PID: <1> - Ejecutando: <SET> - <AX> - <1>
+[INFO] 07:09:25:389 [CPU - Log obligatorio]/(36059:36079): PID: <1> - FETCH - Program Counter: <2>
+[INFO] 07:09:25:895 [CPU - Log obligatorio]/(36059:36079): PID: <1> - Ejecutando: <MOV_OUT> - <0> - <CX>
+[INFO] 07:09:26:397 [CPU - Log obligatorio]/(36059:36079): Page Fault PID: <1> - Página: <0>
+[INFO] 07:09:31:907 [CPU - Log obligatorio]/(36059:36082): PID: <1> - FETCH - Program Counter: <2>
+[INFO] 07:09:32:409 [CPU - Log obligatorio]/(36059:36082): PID: <1> - Ejecutando: <MOV_OUT> - <0> - <CX>
+[INFO] 07:09:32:910 [CPU - Log obligatorio]/(36059:36082): PID: <1> - OBTENER MARCO - Página: <0> - Marco: <0>
+[INFO] 07:09:33:412 [CPU - Log obligatorio]/(36059:36082): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <0> - Valor: <4>
+[INFO] 07:09:33:412 [CPU - Log obligatorio]/(36059:36082): PID: <1> - FETCH - Program Counter: <3>
+[INFO] 07:09:33:917 [CPU - Log obligatorio]/(36059:36082): PID: <1> - Ejecutando: <MOV_OUT> - <16> - <CX>
+[INFO] 07:09:34:444 [CPU - Log obligatorio]/(36059:36082): Page Fault PID: <1> - Página: <1>
+[INFO] 07:09:39:965 [CPU - Log obligatorio]/(36059:36086): PID: <1> - FETCH - Program Counter: <3>
+[INFO] 07:09:40:472 [CPU - Log obligatorio]/(36059:36086): PID: <1> - Ejecutando: <MOV_OUT> - <16> - <CX>
+[INFO] 07:09:40:980 [CPU - Log obligatorio]/(36059:36086): PID: <1> - OBTENER MARCO - Página: <1> - Marco: <1>
+[INFO] 07:09:41:482 [CPU - Log obligatorio]/(36059:36086): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <16> - Valor: <4>
+[INFO] 07:09:41:482 [CPU - Log obligatorio]/(36059:36086): PID: <1> - FETCH - Program Counter: <4>
+[INFO] 07:09:41:990 [CPU - Log obligatorio]/(36059:36086): PID: <1> - Ejecutando: <MOV_OUT> - <32> - <CX>
+[INFO] 07:09:42:494 [CPU - Log obligatorio]/(36059:36086): Page Fault PID: <1> - Página: <2>
+[INFO] 07:09:48:017 [CPU - Log obligatorio]/(36059:36089): PID: <1> - FETCH - Program Counter: <4>
+[INFO] 07:09:48:532 [CPU - Log obligatorio]/(36059:36089): PID: <1> - Ejecutando: <MOV_OUT> - <32> - <CX>
+[INFO] 07:09:49:033 [CPU - Log obligatorio]/(36059:36089): PID: <1> - OBTENER MARCO - Página: <2> - Marco: <2>
+[INFO] 07:09:49:536 [CPU - Log obligatorio]/(36059:36089): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <32> - Valor: <4>
+[INFO] 07:09:49:536 [CPU - Log obligatorio]/(36059:36089): PID: <1> - FETCH - Program Counter: <5>
+[INFO] 07:09:50:038 [CPU - Log obligatorio]/(36059:36089): PID: <1> - Ejecutando: <MOV_OUT> - <48> - <CX>
+[INFO] 07:09:50:541 [CPU - Log obligatorio]/(36059:36089): Page Fault PID: <1> - Página: <3>
+[INFO] 07:09:56:082 [CPU - Log obligatorio]/(36059:36092): PID: <1> - FETCH - Program Counter: <5>
+[INFO] 07:09:56:584 [CPU - Log obligatorio]/(36059:36092): PID: <1> - Ejecutando: <MOV_OUT> - <48> - <CX>
+[INFO] 07:09:57:091 [CPU - Log obligatorio]/(36059:36092): PID: <1> - OBTENER MARCO - Página: <3> - Marco: <3>
+[INFO] 07:09:57:594 [CPU - Log obligatorio]/(36059:36092): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <48> - Valor: <4>
+[INFO] 07:09:57:594 [CPU - Log obligatorio]/(36059:36092): PID: <1> - FETCH - Program Counter: <6>
+[INFO] 07:09:58:097 [CPU - Log obligatorio]/(36059:36092): PID: <1> - Ejecutando: <SUB> - <CX> - <AX>
+[INFO] 07:09:58:097 [CPU - Log obligatorio]/(36059:36092): PID: <1> - FETCH - Program Counter: <7>
+[INFO] 07:09:58:598 [CPU - Log obligatorio]/(36059:36092): PID: <1> - Ejecutando: <JNZ> - <CX> - <2>
+[INFO] 07:09:58:599 [CPU - Log obligatorio]/(36059:36092): PID: <1> - FETCH - Program Counter: <8>
+[INFO] 07:09:59:105 [CPU - Log obligatorio]/(36059:36092): PID: <1> - Ejecutando: <EXIT>
+[INFO] 07:15:18:674 [CPU - Log obligatorio]/(36161:36182): PID: <1> - FETCH - Program Counter: <0>
+[INFO] 07:15:19:178 [CPU - Log obligatorio]/(36161:36182): PID: <1> - Ejecutando: <SET> - <CX> - <20>
+[INFO] 07:15:19:178 [CPU - Log obligatorio]/(36161:36182): PID: <1> - FETCH - Program Counter: <1>
+[INFO] 07:15:19:685 [CPU - Log obligatorio]/(36161:36182): PID: <1> - Ejecutando: <SET> - <AX> - <1>
+[INFO] 07:15:19:685 [CPU - Log obligatorio]/(36161:36182): PID: <1> - FETCH - Program Counter: <2>
+[INFO] 07:15:20:188 [CPU - Log obligatorio]/(36161:36182): PID: <1> - Ejecutando: <MOV_OUT> - <0> - <CX>
+[INFO] 07:15:20:692 [CPU - Log obligatorio]/(36161:36182): Page Fault PID: <1> - Página: <0>
+[INFO] 07:15:26:205 [CPU - Log obligatorio]/(36161:36185): PID: <1> - FETCH - Program Counter: <2>
+[INFO] 07:15:26:707 [CPU - Log obligatorio]/(36161:36185): PID: <1> - Ejecutando: <MOV_OUT> - <0> - <CX>
+[INFO] 07:15:27:210 [CPU - Log obligatorio]/(36161:36185): PID: <1> - OBTENER MARCO - Página: <0> - Marco: <0>
+[INFO] 07:15:27:713 [CPU - Log obligatorio]/(36161:36185): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <0> - Valor: <4>
+[INFO] 07:15:27:713 [CPU - Log obligatorio]/(36161:36185): PID: <1> - FETCH - Program Counter: <3>
+[INFO] 07:15:28:223 [CPU - Log obligatorio]/(36161:36185): PID: <1> - Ejecutando: <MOV_OUT> - <16> - <CX>
+[INFO] 07:15:28:724 [CPU - Log obligatorio]/(36161:36185): Page Fault PID: <1> - Página: <1>
+[INFO] 07:15:34:233 [CPU - Log obligatorio]/(36161:36188): PID: <1> - FETCH - Program Counter: <3>
+[INFO] 07:15:34:736 [CPU - Log obligatorio]/(36161:36188): PID: <1> - Ejecutando: <MOV_OUT> - <16> - <CX>
+[INFO] 07:15:35:239 [CPU - Log obligatorio]/(36161:36188): PID: <1> - OBTENER MARCO - Página: <1> - Marco: <1>
+[INFO] 07:15:35:742 [CPU - Log obligatorio]/(36161:36188): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <16> - Valor: <4>
+[INFO] 07:15:35:742 [CPU - Log obligatorio]/(36161:36188): PID: <1> - FETCH - Program Counter: <4>
+[INFO] 07:15:36:244 [CPU - Log obligatorio]/(36161:36188): PID: <1> - Ejecutando: <MOV_OUT> - <32> - <CX>
+[INFO] 07:15:36:751 [CPU - Log obligatorio]/(36161:36188): Page Fault PID: <1> - Página: <2>
+[INFO] 07:15:42:289 [CPU - Log obligatorio]/(36161:36191): PID: <1> - FETCH - Program Counter: <4>
+[INFO] 07:15:42:793 [CPU - Log obligatorio]/(36161:36191): PID: <1> - Ejecutando: <MOV_OUT> - <32> - <CX>
+[INFO] 07:15:43:295 [CPU - Log obligatorio]/(36161:36191): PID: <1> - OBTENER MARCO - Página: <2> - Marco: <2>
+[INFO] 07:15:43:797 [CPU - Log obligatorio]/(36161:36191): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <32> - Valor: <4>
+[INFO] 07:15:43:797 [CPU - Log obligatorio]/(36161:36191): PID: <1> - FETCH - Program Counter: <5>
+[INFO] 07:15:44:300 [CPU - Log obligatorio]/(36161:36191): PID: <1> - Ejecutando: <MOV_OUT> - <48> - <CX>
+[INFO] 07:15:44:805 [CPU - Log obligatorio]/(36161:36191): Page Fault PID: <1> - Página: <3>
+[INFO] 07:15:50:314 [CPU - Log obligatorio]/(36161:36194): PID: <1> - FETCH - Program Counter: <5>
+[INFO] 07:15:50:829 [CPU - Log obligatorio]/(36161:36194): PID: <1> - Ejecutando: <MOV_OUT> - <48> - <CX>
+[INFO] 07:15:51:332 [CPU - Log obligatorio]/(36161:36194): PID: <1> - OBTENER MARCO - Página: <3> - Marco: <3>
+[INFO] 07:15:51:833 [CPU - Log obligatorio]/(36161:36194): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <48> - Valor: <4>
+[INFO] 07:15:51:834 [CPU - Log obligatorio]/(36161:36194): PID: <1> - FETCH - Program Counter: <6>
+[INFO] 07:15:52:336 [CPU - Log obligatorio]/(36161:36194): PID: <1> - Ejecutando: <SUB> - <CX> - <AX>
+[INFO] 07:15:52:337 [CPU - Log obligatorio]/(36161:36194): PID: <1> - FETCH - Program Counter: <7>
+[INFO] 07:15:52:841 [CPU - Log obligatorio]/(36161:36194): PID: <1> - Ejecutando: <JNZ> - <CX> - <2>
+[INFO] 07:15:52:841 [CPU - Log obligatorio]/(36161:36194): PID: <1> - FETCH - Program Counter: <8>
+[INFO] 07:15:53:369 [CPU - Log obligatorio]/(36161:36194): PID: <1> - Ejecutando: <EXIT>
+[INFO] 07:18:15:573 [CPU - Log obligatorio]/(36239:36259): PID: <1> - FETCH - Program Counter: <0>
+[INFO] 07:18:16:077 [CPU - Log obligatorio]/(36239:36259): PID: <1> - Ejecutando: <SET> - <CX> - <20>
+[INFO] 07:18:16:077 [CPU - Log obligatorio]/(36239:36259): PID: <1> - FETCH - Program Counter: <1>
+[INFO] 07:18:16:584 [CPU - Log obligatorio]/(36239:36259): PID: <1> - Ejecutando: <SET> - <AX> - <1>
+[INFO] 07:18:16:584 [CPU - Log obligatorio]/(36239:36259): PID: <1> - FETCH - Program Counter: <2>
+[INFO] 07:18:17:087 [CPU - Log obligatorio]/(36239:36259): PID: <1> - Ejecutando: <MOV_OUT> - <0> - <CX>
+[INFO] 07:18:17:590 [CPU - Log obligatorio]/(36239:36259): Page Fault PID: <1> - Página: <0>
+[INFO] 07:18:23:109 [CPU - Log obligatorio]/(36239:36262): PID: <1> - FETCH - Program Counter: <2>
+[INFO] 07:18:23:611 [CPU - Log obligatorio]/(36239:36262): PID: <1> - Ejecutando: <MOV_OUT> - <0> - <CX>
+[INFO] 07:18:24:112 [CPU - Log obligatorio]/(36239:36262): PID: <1> - OBTENER MARCO - Página: <0> - Marco: <0>
+[INFO] 07:18:24:613 [CPU - Log obligatorio]/(36239:36262): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <0> - Valor: <4>
+[INFO] 07:18:24:613 [CPU - Log obligatorio]/(36239:36262): PID: <1> - FETCH - Program Counter: <3>
+[INFO] 07:18:25:115 [CPU - Log obligatorio]/(36239:36262): PID: <1> - Ejecutando: <MOV_OUT> - <16> - <CX>
+[INFO] 07:18:25:616 [CPU - Log obligatorio]/(36239:36262): Page Fault PID: <1> - Página: <1>
+[INFO] 07:18:31:127 [CPU - Log obligatorio]/(36239:36265): PID: <1> - FETCH - Program Counter: <3>
+[INFO] 07:18:31:630 [CPU - Log obligatorio]/(36239:36265): PID: <1> - Ejecutando: <MOV_OUT> - <16> - <CX>
+[INFO] 07:18:32:139 [CPU - Log obligatorio]/(36239:36265): PID: <1> - OBTENER MARCO - Página: <1> - Marco: <1>
+[INFO] 07:18:32:647 [CPU - Log obligatorio]/(36239:36265): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <16> - Valor: <4>
+[INFO] 07:18:32:647 [CPU - Log obligatorio]/(36239:36265): PID: <1> - FETCH - Program Counter: <4>
+[INFO] 07:18:33:149 [CPU - Log obligatorio]/(36239:36265): PID: <1> - Ejecutando: <MOV_OUT> - <32> - <CX>
+[INFO] 07:18:33:652 [CPU - Log obligatorio]/(36239:36265): Page Fault PID: <1> - Página: <2>
+[INFO] 07:18:39:170 [CPU - Log obligatorio]/(36239:36268): PID: <1> - FETCH - Program Counter: <4>
+[INFO] 07:18:39:671 [CPU - Log obligatorio]/(36239:36268): PID: <1> - Ejecutando: <MOV_OUT> - <32> - <CX>
+[INFO] 07:18:40:173 [CPU - Log obligatorio]/(36239:36268): PID: <1> - OBTENER MARCO - Página: <2> - Marco: <2>
+[INFO] 07:18:40:675 [CPU - Log obligatorio]/(36239:36268): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <32> - Valor: <4>
+[INFO] 07:18:40:675 [CPU - Log obligatorio]/(36239:36268): PID: <1> - FETCH - Program Counter: <5>
+[INFO] 07:18:41:178 [CPU - Log obligatorio]/(36239:36268): PID: <1> - Ejecutando: <MOV_OUT> - <48> - <CX>
+[INFO] 07:18:41:682 [CPU - Log obligatorio]/(36239:36268): Page Fault PID: <1> - Página: <3>
+[INFO] 07:18:47:196 [CPU - Log obligatorio]/(36239:36271): PID: <1> - FETCH - Program Counter: <5>
+[INFO] 07:18:47:702 [CPU - Log obligatorio]/(36239:36271): PID: <1> - Ejecutando: <MOV_OUT> - <48> - <CX>
+[INFO] 07:18:48:204 [CPU - Log obligatorio]/(36239:36271): PID: <1> - OBTENER MARCO - Página: <3> - Marco: <3>
+[INFO] 07:18:48:707 [CPU - Log obligatorio]/(36239:36271): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <48> - Valor: <4>
+[INFO] 07:18:48:707 [CPU - Log obligatorio]/(36239:36271): PID: <1> - FETCH - Program Counter: <6>
+[INFO] 07:18:49:208 [CPU - Log obligatorio]/(36239:36271): PID: <1> - Ejecutando: <SUB> - <CX> - <AX>
+[INFO] 07:18:49:208 [CPU - Log obligatorio]/(36239:36271): PID: <1> - FETCH - Program Counter: <7>
+[INFO] 07:18:49:711 [CPU - Log obligatorio]/(36239:36271): PID: <1> - Ejecutando: <JNZ> - <CX> - <2>
+[INFO] 07:18:49:711 [CPU - Log obligatorio]/(36239:36271): PID: <1> - FETCH - Program Counter: <8>
+[INFO] 07:18:50:221 [CPU - Log obligatorio]/(36239:36271): PID: <1> - Ejecutando: <EXIT>
+[INFO] 07:23:24:175 [CPU - Log obligatorio]/(36320:36340): PID: <1> - FETCH - Program Counter: <0>
+[INFO] 07:23:24:682 [CPU - Log obligatorio]/(36320:36340): PID: <1> - Ejecutando: <SET> - <CX> - <20>
+[INFO] 07:23:24:682 [CPU - Log obligatorio]/(36320:36340): PID: <1> - FETCH - Program Counter: <1>
+[INFO] 07:23:25:187 [CPU - Log obligatorio]/(36320:36340): PID: <1> - Ejecutando: <SET> - <AX> - <1>
+[INFO] 07:23:25:187 [CPU - Log obligatorio]/(36320:36340): PID: <1> - FETCH - Program Counter: <2>
+[INFO] 07:23:25:696 [CPU - Log obligatorio]/(36320:36340): PID: <1> - Ejecutando: <MOV_OUT> - <0> - <CX>
+[INFO] 07:23:26:198 [CPU - Log obligatorio]/(36320:36340): Page Fault PID: <1> - Página: <0>
+[INFO] 07:23:31:717 [CPU - Log obligatorio]/(36320:36343): PID: <1> - FETCH - Program Counter: <2>
+[INFO] 07:23:32:219 [CPU - Log obligatorio]/(36320:36343): PID: <1> - Ejecutando: <MOV_OUT> - <0> - <CX>
+[INFO] 07:23:32:720 [CPU - Log obligatorio]/(36320:36343): PID: <1> - OBTENER MARCO - Página: <0> - Marco: <0>
+[INFO] 07:23:33:221 [CPU - Log obligatorio]/(36320:36343): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <0> - Valor: <4>
+[INFO] 07:23:33:221 [CPU - Log obligatorio]/(36320:36343): PID: <1> - FETCH - Program Counter: <3>
+[INFO] 07:23:33:728 [CPU - Log obligatorio]/(36320:36343): PID: <1> - Ejecutando: <MOV_OUT> - <16> - <CX>
+[INFO] 07:23:34:232 [CPU - Log obligatorio]/(36320:36343): Page Fault PID: <1> - Página: <1>
+[INFO] 07:25:59:551 [CPU - Log obligatorio]/(36419:36439): PID: <1> - FETCH - Program Counter: <0>
+[INFO] 07:26:00:053 [CPU - Log obligatorio]/(36419:36439): PID: <1> - Ejecutando: <SET> - <CX> - <20>
+[INFO] 07:26:00:053 [CPU - Log obligatorio]/(36419:36439): PID: <1> - FETCH - Program Counter: <1>
+[INFO] 07:26:00:555 [CPU - Log obligatorio]/(36419:36439): PID: <1> - Ejecutando: <SET> - <AX> - <1>
+[INFO] 07:26:00:555 [CPU - Log obligatorio]/(36419:36439): PID: <1> - FETCH - Program Counter: <2>
+[INFO] 07:26:01:057 [CPU - Log obligatorio]/(36419:36439): PID: <1> - Ejecutando: <MOV_OUT> - <0> - <CX>
+[INFO] 07:26:01:559 [CPU - Log obligatorio]/(36419:36439): Page Fault PID: <1> - Página: <0>
+[INFO] 07:26:07:081 [CPU - Log obligatorio]/(36419:36442): PID: <1> - FETCH - Program Counter: <2>
+[INFO] 07:26:07:587 [CPU - Log obligatorio]/(36419:36442): PID: <1> - Ejecutando: <MOV_OUT> - <0> - <CX>
+[INFO] 07:26:08:088 [CPU - Log obligatorio]/(36419:36442): PID: <1> - OBTENER MARCO - Página: <0> - Marco: <0>
+[INFO] 07:26:08:594 [CPU - Log obligatorio]/(36419:36442): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <0> - Valor: <4>
+[INFO] 07:26:08:594 [CPU - Log obligatorio]/(36419:36442): PID: <1> - FETCH - Program Counter: <3>
+[INFO] 07:26:09:096 [CPU - Log obligatorio]/(36419:36442): PID: <1> - Ejecutando: <MOV_OUT> - <16> - <CX>
+[INFO] 07:26:09:597 [CPU - Log obligatorio]/(36419:36442): Page Fault PID: <1> - Página: <1>
+[INFO] 07:26:15:111 [CPU - Log obligatorio]/(36419:36445): PID: <1> - FETCH - Program Counter: <3>
+[INFO] 07:26:15:614 [CPU - Log obligatorio]/(36419:36445): PID: <1> - Ejecutando: <MOV_OUT> - <16> - <CX>
+[INFO] 07:26:16:119 [CPU - Log obligatorio]/(36419:36445): PID: <1> - OBTENER MARCO - Página: <1> - Marco: <1>
+[INFO] 07:26:16:635 [CPU - Log obligatorio]/(36419:36445): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <16> - Valor: <4>
+[INFO] 07:26:16:636 [CPU - Log obligatorio]/(36419:36445): PID: <1> - FETCH - Program Counter: <4>
+[INFO] 07:26:17:139 [CPU - Log obligatorio]/(36419:36445): PID: <1> - Ejecutando: <MOV_OUT> - <32> - <CX>
+[INFO] 07:26:17:655 [CPU - Log obligatorio]/(36419:36445): Page Fault PID: <1> - Página: <2>
+[INFO] 07:26:23:198 [CPU - Log obligatorio]/(36419:36448): PID: <1> - FETCH - Program Counter: <4>
+[INFO] 07:26:23:699 [CPU - Log obligatorio]/(36419:36448): PID: <1> - Ejecutando: <MOV_OUT> - <32> - <CX>
+[INFO] 07:26:24:203 [CPU - Log obligatorio]/(36419:36448): PID: <1> - OBTENER MARCO - Página: <2> - Marco: <2>
+[INFO] 07:26:24:705 [CPU - Log obligatorio]/(36419:36448): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <32> - Valor: <4>
+[INFO] 07:26:24:705 [CPU - Log obligatorio]/(36419:36448): PID: <1> - FETCH - Program Counter: <5>
+[INFO] 07:26:25:210 [CPU - Log obligatorio]/(36419:36448): PID: <1> - Ejecutando: <MOV_OUT> - <48> - <CX>
+[INFO] 07:26:25:714 [CPU - Log obligatorio]/(36419:36448): Page Fault PID: <1> - Página: <3>
+[INFO] 07:26:31:260 [CPU - Log obligatorio]/(36419:36450): PID: <1> - FETCH - Program Counter: <5>
+[INFO] 07:26:31:761 [CPU - Log obligatorio]/(36419:36450): PID: <1> - Ejecutando: <MOV_OUT> - <48> - <CX>
+[INFO] 07:26:32:265 [CPU - Log obligatorio]/(36419:36450): PID: <1> - OBTENER MARCO - Página: <3> - Marco: <3>
+[INFO] 07:26:32:773 [CPU - Log obligatorio]/(36419:36450): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <48> - Valor: <4>
+[INFO] 07:26:32:773 [CPU - Log obligatorio]/(36419:36450): PID: <1> - FETCH - Program Counter: <6>
+[INFO] 07:26:33:280 [CPU - Log obligatorio]/(36419:36450): PID: <1> - Ejecutando: <SUB> - <CX> - <AX>
+[INFO] 07:26:33:280 [CPU - Log obligatorio]/(36419:36450): PID: <1> - FETCH - Program Counter: <7>
+[INFO] 07:26:33:781 [CPU - Log obligatorio]/(36419:36450): PID: <1> - Ejecutando: <JNZ> - <CX> - <2>
+[INFO] 07:26:33:781 [CPU - Log obligatorio]/(36419:36450): PID: <1> - FETCH - Program Counter: <8>
+[INFO] 07:26:34:283 [CPU - Log obligatorio]/(36419:36450): PID: <1> - Ejecutando: <EXIT>
+[INFO] 07:48:16:026 [CPU - Log obligatorio]/(36871:36891): PID: <1> - FETCH - Program Counter: <0>
+[INFO] 07:48:16:531 [CPU - Log obligatorio]/(36871:36891): PID: <1> - Ejecutando: <SET> - <CX> - <20>
+[INFO] 07:48:16:531 [CPU - Log obligatorio]/(36871:36891): PID: <1> - FETCH - Program Counter: <1>
+[INFO] 07:48:17:033 [CPU - Log obligatorio]/(36871:36891): PID: <1> - Ejecutando: <SET> - <AX> - <1>
+[INFO] 07:48:17:033 [CPU - Log obligatorio]/(36871:36891): PID: <1> - FETCH - Program Counter: <2>
+[INFO] 07:48:17:534 [CPU - Log obligatorio]/(36871:36891): PID: <1> - Ejecutando: <MOV_OUT> - <0> - <CX>
+[INFO] 07:48:18:038 [CPU - Log obligatorio]/(36871:36891): Page Fault PID: <1> - Página: <0>
+[INFO] 07:48:23:544 [CPU - Log obligatorio]/(36871:36894): PID: <1> - FETCH - Program Counter: <2>
+[INFO] 07:48:24:047 [CPU - Log obligatorio]/(36871:36894): PID: <1> - Ejecutando: <MOV_OUT> - <0> - <CX>
+[INFO] 07:48:24:549 [CPU - Log obligatorio]/(36871:36894): PID: <1> - OBTENER MARCO - Página: <0> - Marco: <0>
+[INFO] 07:48:25:051 [CPU - Log obligatorio]/(36871:36894): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <0> - Valor: <0>
+[INFO] 07:48:25:051 [CPU - Log obligatorio]/(36871:36894): PID: <1> - FETCH - Program Counter: <3>
+[INFO] 07:48:25:554 [CPU - Log obligatorio]/(36871:36894): PID: <1> - Ejecutando: <MOV_OUT> - <16> - <CX>
+[INFO] 07:48:26:057 [CPU - Log obligatorio]/(36871:36894): Page Fault PID: <1> - Página: <1>
+[INFO] 07:48:31:564 [CPU - Log obligatorio]/(36871:36897): PID: <1> - FETCH - Program Counter: <3>
+[INFO] 07:48:32:065 [CPU - Log obligatorio]/(36871:36897): PID: <1> - Ejecutando: <MOV_OUT> - <16> - <CX>
+[INFO] 07:48:32:567 [CPU - Log obligatorio]/(36871:36897): PID: <1> - OBTENER MARCO - Página: <1> - Marco: <1>
+[INFO] 07:48:33:068 [CPU - Log obligatorio]/(36871:36897): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <16> - Valor: <0>
+[INFO] 07:48:33:068 [CPU - Log obligatorio]/(36871:36897): PID: <1> - FETCH - Program Counter: <4>
+[INFO] 07:48:33:576 [CPU - Log obligatorio]/(36871:36897): PID: <1> - Ejecutando: <MOV_OUT> - <32> - <CX>
+[INFO] 07:48:34:077 [CPU - Log obligatorio]/(36871:36897): Page Fault PID: <1> - Página: <2>
+[INFO] 07:48:39:587 [CPU - Log obligatorio]/(36871:36900): PID: <1> - FETCH - Program Counter: <4>
+[INFO] 07:48:40:090 [CPU - Log obligatorio]/(36871:36900): PID: <1> - Ejecutando: <MOV_OUT> - <32> - <CX>
+[INFO] 07:48:40:597 [CPU - Log obligatorio]/(36871:36900): PID: <1> - OBTENER MARCO - Página: <2> - Marco: <2>
+[INFO] 07:48:41:099 [CPU - Log obligatorio]/(36871:36900): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <32> - Valor: <0>
+[INFO] 07:48:41:100 [CPU - Log obligatorio]/(36871:36900): PID: <1> - FETCH - Program Counter: <5>
+[INFO] 07:48:41:602 [CPU - Log obligatorio]/(36871:36900): PID: <1> - Ejecutando: <MOV_OUT> - <48> - <CX>
+[INFO] 07:48:42:104 [CPU - Log obligatorio]/(36871:36900): Page Fault PID: <1> - Página: <3>
+[INFO] 07:48:47:620 [CPU - Log obligatorio]/(36871:36903): PID: <1> - FETCH - Program Counter: <5>
+[INFO] 07:48:48:126 [CPU - Log obligatorio]/(36871:36903): PID: <1> - Ejecutando: <MOV_OUT> - <48> - <CX>
+[INFO] 07:48:48:629 [CPU - Log obligatorio]/(36871:36903): PID: <1> - OBTENER MARCO - Página: <3> - Marco: <3>
+[INFO] 07:48:49:131 [CPU - Log obligatorio]/(36871:36903): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <48> - Valor: <0>
+[INFO] 07:48:49:131 [CPU - Log obligatorio]/(36871:36903): PID: <1> - FETCH - Program Counter: <6>
+[INFO] 07:48:49:633 [CPU - Log obligatorio]/(36871:36903): PID: <1> - Ejecutando: <SUB> - <CX> - <AX>
+[INFO] 07:48:49:633 [CPU - Log obligatorio]/(36871:36903): PID: <1> - FETCH - Program Counter: <7>
+[INFO] 07:48:50:134 [CPU - Log obligatorio]/(36871:36903): PID: <1> - Ejecutando: <JNZ> - <CX> - <2>
+[INFO] 07:48:50:134 [CPU - Log obligatorio]/(36871:36903): PID: <1> - FETCH - Program Counter: <8>
+[INFO] 07:48:50:636 [CPU - Log obligatorio]/(36871:36903): PID: <1> - Ejecutando: <EXIT>
+[INFO] 07:50:52:053 [CPU - Log obligatorio]/(36935:36955): PID: <1> - FETCH - Program Counter: <0>
+[INFO] 07:50:52:556 [CPU - Log obligatorio]/(36935:36955): PID: <1> - Ejecutando: <SET> - <CX> - <20>
+[INFO] 07:50:52:556 [CPU - Log obligatorio]/(36935:36955): PID: <1> - FETCH - Program Counter: <1>
+[INFO] 07:50:53:059 [CPU - Log obligatorio]/(36935:36955): PID: <1> - Ejecutando: <SET> - <AX> - <1>
+[INFO] 07:50:53:059 [CPU - Log obligatorio]/(36935:36955): PID: <1> - FETCH - Program Counter: <2>
+[INFO] 07:50:53:563 [CPU - Log obligatorio]/(36935:36955): PID: <1> - Ejecutando: <MOV_OUT> - <0> - <CX>
+[INFO] 07:50:54:065 [CPU - Log obligatorio]/(36935:36955): Page Fault PID: <1> - Página: <0>
+[INFO] 07:50:59:587 [CPU - Log obligatorio]/(36935:36957): PID: <1> - FETCH - Program Counter: <2>
+[INFO] 07:51:00:089 [CPU - Log obligatorio]/(36935:36957): PID: <1> - Ejecutando: <MOV_OUT> - <0> - <CX>
+[INFO] 07:51:00:591 [CPU - Log obligatorio]/(36935:36957): PID: <1> - OBTENER MARCO - Página: <0> - Marco: <0>
+[INFO] 07:51:01:094 [CPU - Log obligatorio]/(36935:36957): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <0> - Valor: <20>
+[INFO] 07:51:01:094 [CPU - Log obligatorio]/(36935:36957): PID: <1> - FETCH - Program Counter: <3>
+[INFO] 07:51:01:595 [CPU - Log obligatorio]/(36935:36957): PID: <1> - Ejecutando: <MOV_OUT> - <16> - <CX>
+[INFO] 07:51:02:105 [CPU - Log obligatorio]/(36935:36957): Page Fault PID: <1> - Página: <1>
+[INFO] 07:51:07:619 [CPU - Log obligatorio]/(36935:36960): PID: <1> - FETCH - Program Counter: <3>
+[INFO] 07:51:08:121 [CPU - Log obligatorio]/(36935:36960): PID: <1> - Ejecutando: <MOV_OUT> - <16> - <CX>
+[INFO] 07:51:08:624 [CPU - Log obligatorio]/(36935:36960): PID: <1> - OBTENER MARCO - Página: <1> - Marco: <1>
+[INFO] 07:51:09:126 [CPU - Log obligatorio]/(36935:36960): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <16> - Valor: <20>
+[INFO] 07:51:09:126 [CPU - Log obligatorio]/(36935:36960): PID: <1> - FETCH - Program Counter: <4>
+[INFO] 07:51:09:628 [CPU - Log obligatorio]/(36935:36960): PID: <1> - Ejecutando: <MOV_OUT> - <32> - <CX>
+[INFO] 07:51:10:132 [CPU - Log obligatorio]/(36935:36960): Page Fault PID: <1> - Página: <2>
+[INFO] 07:51:15:653 [CPU - Log obligatorio]/(36935:36964): PID: <1> - FETCH - Program Counter: <4>
+[INFO] 07:51:16:156 [CPU - Log obligatorio]/(36935:36964): PID: <1> - Ejecutando: <MOV_OUT> - <32> - <CX>
+[INFO] 07:51:16:695 [CPU - Log obligatorio]/(36935:36964): PID: <1> - OBTENER MARCO - Página: <2> - Marco: <2>
+[INFO] 07:51:17:201 [CPU - Log obligatorio]/(36935:36964): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <32> - Valor: <20>
+[INFO] 07:51:17:202 [CPU - Log obligatorio]/(36935:36964): PID: <1> - FETCH - Program Counter: <5>
+[INFO] 07:51:17:703 [CPU - Log obligatorio]/(36935:36964): PID: <1> - Ejecutando: <MOV_OUT> - <48> - <CX>
+[INFO] 07:51:18:205 [CPU - Log obligatorio]/(36935:36964): Page Fault PID: <1> - Página: <3>
+[INFO] 07:51:23:729 [CPU - Log obligatorio]/(36935:36967): PID: <1> - FETCH - Program Counter: <5>
+[INFO] 07:51:24:230 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Ejecutando: <MOV_OUT> - <48> - <CX>
+[INFO] 07:51:24:732 [CPU - Log obligatorio]/(36935:36967): PID: <1> - OBTENER MARCO - Página: <3> - Marco: <3>
+[INFO] 07:51:25:234 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <48> - Valor: <20>
+[INFO] 07:51:25:234 [CPU - Log obligatorio]/(36935:36967): PID: <1> - FETCH - Program Counter: <6>
+[INFO] 07:51:25:739 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Ejecutando: <SUB> - <CX> - <AX>
+[INFO] 07:51:25:739 [CPU - Log obligatorio]/(36935:36967): PID: <1> - FETCH - Program Counter: <7>
+[INFO] 07:51:26:241 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Ejecutando: <JNZ> - <CX> - <2>
+[INFO] 07:51:26:241 [CPU - Log obligatorio]/(36935:36967): PID: <1> - FETCH - Program Counter: <2>
+[INFO] 07:51:26:744 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Ejecutando: <MOV_OUT> - <0> - <CX>
+[INFO] 07:51:27:246 [CPU - Log obligatorio]/(36935:36967): PID: <1> - OBTENER MARCO - Página: <0> - Marco: <0>
+[INFO] 07:51:27:748 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <0> - Valor: <19>
+[INFO] 07:51:27:748 [CPU - Log obligatorio]/(36935:36967): PID: <1> - FETCH - Program Counter: <3>
+[INFO] 07:51:28:250 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Ejecutando: <MOV_OUT> - <16> - <CX>
+[INFO] 07:51:28:753 [CPU - Log obligatorio]/(36935:36967): PID: <1> - OBTENER MARCO - Página: <1> - Marco: <1>
+[INFO] 07:51:29:256 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <16> - Valor: <19>
+[INFO] 07:51:29:256 [CPU - Log obligatorio]/(36935:36967): PID: <1> - FETCH - Program Counter: <4>
+[INFO] 07:51:29:758 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Ejecutando: <MOV_OUT> - <32> - <CX>
+[INFO] 07:51:30:260 [CPU - Log obligatorio]/(36935:36967): PID: <1> - OBTENER MARCO - Página: <2> - Marco: <2>
+[INFO] 07:51:30:766 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <32> - Valor: <19>
+[INFO] 07:51:30:766 [CPU - Log obligatorio]/(36935:36967): PID: <1> - FETCH - Program Counter: <5>
+[INFO] 07:51:31:273 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Ejecutando: <MOV_OUT> - <48> - <CX>
+[INFO] 07:51:31:777 [CPU - Log obligatorio]/(36935:36967): PID: <1> - OBTENER MARCO - Página: <3> - Marco: <3>
+[INFO] 07:51:32:280 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <48> - Valor: <19>
+[INFO] 07:51:32:280 [CPU - Log obligatorio]/(36935:36967): PID: <1> - FETCH - Program Counter: <6>
+[INFO] 07:51:32:782 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Ejecutando: <SUB> - <CX> - <AX>
+[INFO] 07:51:32:782 [CPU - Log obligatorio]/(36935:36967): PID: <1> - FETCH - Program Counter: <7>
+[INFO] 07:51:33:287 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Ejecutando: <JNZ> - <CX> - <2>
+[INFO] 07:51:33:287 [CPU - Log obligatorio]/(36935:36967): PID: <1> - FETCH - Program Counter: <2>
+[INFO] 07:51:33:790 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Ejecutando: <MOV_OUT> - <0> - <CX>
+[INFO] 07:51:34:292 [CPU - Log obligatorio]/(36935:36967): PID: <1> - OBTENER MARCO - Página: <0> - Marco: <0>
+[INFO] 07:51:34:793 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <0> - Valor: <18>
+[INFO] 07:51:34:793 [CPU - Log obligatorio]/(36935:36967): PID: <1> - FETCH - Program Counter: <3>
+[INFO] 07:51:35:298 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Ejecutando: <MOV_OUT> - <16> - <CX>
+[INFO] 07:51:35:804 [CPU - Log obligatorio]/(36935:36967): PID: <1> - OBTENER MARCO - Página: <1> - Marco: <1>
+[INFO] 07:51:36:306 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <16> - Valor: <18>
+[INFO] 07:51:36:306 [CPU - Log obligatorio]/(36935:36967): PID: <1> - FETCH - Program Counter: <4>
+[INFO] 07:51:36:809 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Ejecutando: <MOV_OUT> - <32> - <CX>
+[INFO] 07:51:37:312 [CPU - Log obligatorio]/(36935:36967): PID: <1> - OBTENER MARCO - Página: <2> - Marco: <2>
+[INFO] 07:51:37:814 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <32> - Valor: <18>
+[INFO] 07:51:37:815 [CPU - Log obligatorio]/(36935:36967): PID: <1> - FETCH - Program Counter: <5>
+[INFO] 07:51:38:317 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Ejecutando: <MOV_OUT> - <48> - <CX>
+[INFO] 07:51:38:825 [CPU - Log obligatorio]/(36935:36967): PID: <1> - OBTENER MARCO - Página: <3> - Marco: <3>
+[INFO] 07:51:39:330 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <48> - Valor: <18>
+[INFO] 07:51:39:330 [CPU - Log obligatorio]/(36935:36967): PID: <1> - FETCH - Program Counter: <6>
+[INFO] 07:51:39:831 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Ejecutando: <SUB> - <CX> - <AX>
+[INFO] 07:51:39:831 [CPU - Log obligatorio]/(36935:36967): PID: <1> - FETCH - Program Counter: <7>
+[INFO] 07:51:40:336 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Ejecutando: <JNZ> - <CX> - <2>
+[INFO] 07:51:40:336 [CPU - Log obligatorio]/(36935:36967): PID: <1> - FETCH - Program Counter: <2>
+[INFO] 07:51:40:838 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Ejecutando: <MOV_OUT> - <0> - <CX>
+[INFO] 07:51:41:345 [CPU - Log obligatorio]/(36935:36967): PID: <1> - OBTENER MARCO - Página: <0> - Marco: <0>
+[INFO] 07:51:41:853 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <0> - Valor: <17>
+[INFO] 07:51:41:853 [CPU - Log obligatorio]/(36935:36967): PID: <1> - FETCH - Program Counter: <3>
+[INFO] 07:51:42:357 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Ejecutando: <MOV_OUT> - <16> - <CX>
+[INFO] 07:51:42:865 [CPU - Log obligatorio]/(36935:36967): PID: <1> - OBTENER MARCO - Página: <1> - Marco: <1>
+[INFO] 07:51:43:367 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <16> - Valor: <17>
+[INFO] 07:51:43:367 [CPU - Log obligatorio]/(36935:36967): PID: <1> - FETCH - Program Counter: <4>
+[INFO] 07:51:43:872 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Ejecutando: <MOV_OUT> - <32> - <CX>
+[INFO] 07:51:44:376 [CPU - Log obligatorio]/(36935:36967): PID: <1> - OBTENER MARCO - Página: <2> - Marco: <2>
+[INFO] 07:51:44:879 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <32> - Valor: <17>
+[INFO] 07:51:44:879 [CPU - Log obligatorio]/(36935:36967): PID: <1> - FETCH - Program Counter: <5>
+[INFO] 07:51:45:381 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Ejecutando: <MOV_OUT> - <48> - <CX>
+[INFO] 07:51:45:892 [CPU - Log obligatorio]/(36935:36967): PID: <1> - OBTENER MARCO - Página: <3> - Marco: <3>
+[INFO] 07:51:46:398 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <48> - Valor: <17>
+[INFO] 07:51:46:398 [CPU - Log obligatorio]/(36935:36967): PID: <1> - FETCH - Program Counter: <6>
+[INFO] 07:51:46:899 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Ejecutando: <SUB> - <CX> - <AX>
+[INFO] 07:51:46:900 [CPU - Log obligatorio]/(36935:36967): PID: <1> - FETCH - Program Counter: <7>
+[INFO] 07:51:47:402 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Ejecutando: <JNZ> - <CX> - <2>
+[INFO] 07:51:47:403 [CPU - Log obligatorio]/(36935:36967): PID: <1> - FETCH - Program Counter: <2>
+[INFO] 07:51:47:913 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Ejecutando: <MOV_OUT> - <0> - <CX>
+[INFO] 07:51:48:416 [CPU - Log obligatorio]/(36935:36967): PID: <1> - OBTENER MARCO - Página: <0> - Marco: <0>
+[INFO] 07:51:48:918 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <0> - Valor: <16>
+[INFO] 07:51:48:919 [CPU - Log obligatorio]/(36935:36967): PID: <1> - FETCH - Program Counter: <3>
+[INFO] 07:51:49:422 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Ejecutando: <MOV_OUT> - <16> - <CX>
+[INFO] 07:51:49:926 [CPU - Log obligatorio]/(36935:36967): PID: <1> - OBTENER MARCO - Página: <1> - Marco: <1>
+[INFO] 07:51:50:427 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <16> - Valor: <16>
+[INFO] 07:51:50:427 [CPU - Log obligatorio]/(36935:36967): PID: <1> - FETCH - Program Counter: <4>
+[INFO] 07:51:50:929 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Ejecutando: <MOV_OUT> - <32> - <CX>
+[INFO] 07:51:51:493 [CPU - Log obligatorio]/(36935:36967): PID: <1> - OBTENER MARCO - Página: <2> - Marco: <2>
+[INFO] 07:51:51:999 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <32> - Valor: <16>
+[INFO] 07:51:51:999 [CPU - Log obligatorio]/(36935:36967): PID: <1> - FETCH - Program Counter: <5>
+[INFO] 07:51:52:505 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Ejecutando: <MOV_OUT> - <48> - <CX>
+[INFO] 07:51:53:007 [CPU - Log obligatorio]/(36935:36967): PID: <1> - OBTENER MARCO - Página: <3> - Marco: <3>
+[INFO] 07:51:53:511 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <48> - Valor: <16>
+[INFO] 07:51:53:511 [CPU - Log obligatorio]/(36935:36967): PID: <1> - FETCH - Program Counter: <6>
+[INFO] 07:51:54:014 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Ejecutando: <SUB> - <CX> - <AX>
+[INFO] 07:51:54:015 [CPU - Log obligatorio]/(36935:36967): PID: <1> - FETCH - Program Counter: <7>
+[INFO] 07:51:54:519 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Ejecutando: <JNZ> - <CX> - <2>
+[INFO] 07:51:54:519 [CPU - Log obligatorio]/(36935:36967): PID: <1> - FETCH - Program Counter: <2>
+[INFO] 07:51:55:021 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Ejecutando: <MOV_OUT> - <0> - <CX>
+[INFO] 07:51:55:523 [CPU - Log obligatorio]/(36935:36967): PID: <1> - OBTENER MARCO - Página: <0> - Marco: <0>
+[INFO] 07:51:56:024 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <0> - Valor: <15>
+[INFO] 07:51:56:024 [CPU - Log obligatorio]/(36935:36967): PID: <1> - FETCH - Program Counter: <3>
+[INFO] 07:51:56:527 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Ejecutando: <MOV_OUT> - <16> - <CX>
+[INFO] 07:51:57:030 [CPU - Log obligatorio]/(36935:36967): PID: <1> - OBTENER MARCO - Página: <1> - Marco: <1>
+[INFO] 07:51:57:534 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <16> - Valor: <15>
+[INFO] 07:51:57:534 [CPU - Log obligatorio]/(36935:36967): PID: <1> - FETCH - Program Counter: <4>
+[INFO] 07:51:58:036 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Ejecutando: <MOV_OUT> - <32> - <CX>
+[INFO] 07:51:58:537 [CPU - Log obligatorio]/(36935:36967): PID: <1> - OBTENER MARCO - Página: <2> - Marco: <2>
+[INFO] 07:51:59:039 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <32> - Valor: <15>
+[INFO] 07:51:59:039 [CPU - Log obligatorio]/(36935:36967): PID: <1> - FETCH - Program Counter: <5>
+[INFO] 07:51:59:542 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Ejecutando: <MOV_OUT> - <48> - <CX>
+[INFO] 07:52:00:044 [CPU - Log obligatorio]/(36935:36967): PID: <1> - OBTENER MARCO - Página: <3> - Marco: <3>
+[INFO] 07:52:00:547 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <48> - Valor: <15>
+[INFO] 07:52:00:547 [CPU - Log obligatorio]/(36935:36967): PID: <1> - FETCH - Program Counter: <6>
+[INFO] 07:52:01:050 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Ejecutando: <SUB> - <CX> - <AX>
+[INFO] 07:52:01:050 [CPU - Log obligatorio]/(36935:36967): PID: <1> - FETCH - Program Counter: <7>
+[INFO] 07:52:01:552 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Ejecutando: <JNZ> - <CX> - <2>
+[INFO] 07:52:01:552 [CPU - Log obligatorio]/(36935:36967): PID: <1> - FETCH - Program Counter: <2>
+[INFO] 07:52:02:057 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Ejecutando: <MOV_OUT> - <0> - <CX>
+[INFO] 07:52:02:564 [CPU - Log obligatorio]/(36935:36967): PID: <1> - OBTENER MARCO - Página: <0> - Marco: <0>
+[INFO] 07:52:03:072 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <0> - Valor: <14>
+[INFO] 07:52:03:072 [CPU - Log obligatorio]/(36935:36967): PID: <1> - FETCH - Program Counter: <3>
+[INFO] 07:52:03:574 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Ejecutando: <MOV_OUT> - <16> - <CX>
+[INFO] 07:52:04:077 [CPU - Log obligatorio]/(36935:36967): PID: <1> - OBTENER MARCO - Página: <1> - Marco: <1>
+[INFO] 07:52:04:580 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <16> - Valor: <14>
+[INFO] 07:52:04:580 [CPU - Log obligatorio]/(36935:36967): PID: <1> - FETCH - Program Counter: <4>
+[INFO] 07:52:05:083 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Ejecutando: <MOV_OUT> - <32> - <CX>
+[INFO] 07:52:05:587 [CPU - Log obligatorio]/(36935:36967): PID: <1> - OBTENER MARCO - Página: <2> - Marco: <2>
+[INFO] 07:52:06:089 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <32> - Valor: <14>
+[INFO] 07:52:06:090 [CPU - Log obligatorio]/(36935:36967): PID: <1> - FETCH - Program Counter: <5>
+[INFO] 07:52:06:591 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Ejecutando: <MOV_OUT> - <48> - <CX>
+[INFO] 07:52:07:094 [CPU - Log obligatorio]/(36935:36967): PID: <1> - OBTENER MARCO - Página: <3> - Marco: <3>
+[INFO] 07:52:07:600 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <48> - Valor: <14>
+[INFO] 07:52:07:600 [CPU - Log obligatorio]/(36935:36967): PID: <1> - FETCH - Program Counter: <6>
+[INFO] 07:52:08:104 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Ejecutando: <SUB> - <CX> - <AX>
+[INFO] 07:52:08:104 [CPU - Log obligatorio]/(36935:36967): PID: <1> - FETCH - Program Counter: <7>
+[INFO] 07:52:08:612 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Ejecutando: <JNZ> - <CX> - <2>
+[INFO] 07:52:08:612 [CPU - Log obligatorio]/(36935:36967): PID: <1> - FETCH - Program Counter: <2>
+[INFO] 07:52:09:120 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Ejecutando: <MOV_OUT> - <0> - <CX>
+[INFO] 07:52:09:622 [CPU - Log obligatorio]/(36935:36967): PID: <1> - OBTENER MARCO - Página: <0> - Marco: <0>
+[INFO] 07:52:10:123 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <0> - Valor: <13>
+[INFO] 07:52:10:123 [CPU - Log obligatorio]/(36935:36967): PID: <1> - FETCH - Program Counter: <3>
+[INFO] 07:52:10:625 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Ejecutando: <MOV_OUT> - <16> - <CX>
+[INFO] 07:52:11:137 [CPU - Log obligatorio]/(36935:36967): PID: <1> - OBTENER MARCO - Página: <1> - Marco: <1>
+[INFO] 07:52:11:643 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <16> - Valor: <13>
+[INFO] 07:52:11:643 [CPU - Log obligatorio]/(36935:36967): PID: <1> - FETCH - Program Counter: <4>
+[INFO] 07:52:12:148 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Ejecutando: <MOV_OUT> - <32> - <CX>
+[INFO] 07:52:12:651 [CPU - Log obligatorio]/(36935:36967): PID: <1> - OBTENER MARCO - Página: <2> - Marco: <2>
+[INFO] 07:52:13:153 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <32> - Valor: <13>
+[INFO] 07:52:13:153 [CPU - Log obligatorio]/(36935:36967): PID: <1> - FETCH - Program Counter: <5>
+[INFO] 07:52:13:656 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Ejecutando: <MOV_OUT> - <48> - <CX>
+[INFO] 07:52:14:160 [CPU - Log obligatorio]/(36935:36967): PID: <1> - OBTENER MARCO - Página: <3> - Marco: <3>
+[INFO] 07:52:14:664 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <48> - Valor: <13>
+[INFO] 07:52:14:665 [CPU - Log obligatorio]/(36935:36967): PID: <1> - FETCH - Program Counter: <6>
+[INFO] 07:52:15:166 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Ejecutando: <SUB> - <CX> - <AX>
+[INFO] 07:52:15:166 [CPU - Log obligatorio]/(36935:36967): PID: <1> - FETCH - Program Counter: <7>
+[INFO] 07:52:15:674 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Ejecutando: <JNZ> - <CX> - <2>
+[INFO] 07:52:15:674 [CPU - Log obligatorio]/(36935:36967): PID: <1> - FETCH - Program Counter: <2>
+[INFO] 07:52:16:175 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Ejecutando: <MOV_OUT> - <0> - <CX>
+[INFO] 07:52:16:677 [CPU - Log obligatorio]/(36935:36967): PID: <1> - OBTENER MARCO - Página: <0> - Marco: <0>
+[INFO] 07:52:17:180 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <0> - Valor: <12>
+[INFO] 07:52:17:180 [CPU - Log obligatorio]/(36935:36967): PID: <1> - FETCH - Program Counter: <3>
+[INFO] 07:52:17:690 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Ejecutando: <MOV_OUT> - <16> - <CX>
+[INFO] 07:52:18:196 [CPU - Log obligatorio]/(36935:36967): PID: <1> - OBTENER MARCO - Página: <1> - Marco: <1>
+[INFO] 07:52:18:697 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <16> - Valor: <12>
+[INFO] 07:52:18:697 [CPU - Log obligatorio]/(36935:36967): PID: <1> - FETCH - Program Counter: <4>
+[INFO] 07:52:19:201 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Ejecutando: <MOV_OUT> - <32> - <CX>
+[INFO] 07:52:19:703 [CPU - Log obligatorio]/(36935:36967): PID: <1> - OBTENER MARCO - Página: <2> - Marco: <2>
+[INFO] 07:52:20:211 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <32> - Valor: <12>
+[INFO] 07:52:20:211 [CPU - Log obligatorio]/(36935:36967): PID: <1> - FETCH - Program Counter: <5>
+[INFO] 07:52:20:713 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Ejecutando: <MOV_OUT> - <48> - <CX>
+[INFO] 07:52:21:215 [CPU - Log obligatorio]/(36935:36967): PID: <1> - OBTENER MARCO - Página: <3> - Marco: <3>
+[INFO] 07:52:21:722 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <48> - Valor: <12>
+[INFO] 07:52:21:724 [CPU - Log obligatorio]/(36935:36967): PID: <1> - FETCH - Program Counter: <6>
+[INFO] 07:52:22:234 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Ejecutando: <SUB> - <CX> - <AX>
+[INFO] 07:52:22:234 [CPU - Log obligatorio]/(36935:36967): PID: <1> - FETCH - Program Counter: <7>
+[INFO] 07:52:22:741 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Ejecutando: <JNZ> - <CX> - <2>
+[INFO] 07:52:22:741 [CPU - Log obligatorio]/(36935:36967): PID: <1> - FETCH - Program Counter: <2>
+[INFO] 07:52:23:245 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Ejecutando: <MOV_OUT> - <0> - <CX>
+[INFO] 07:52:23:757 [CPU - Log obligatorio]/(36935:36967): PID: <1> - OBTENER MARCO - Página: <0> - Marco: <0>
+[INFO] 07:52:24:259 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <0> - Valor: <11>
+[INFO] 07:52:24:260 [CPU - Log obligatorio]/(36935:36967): PID: <1> - FETCH - Program Counter: <3>
+[INFO] 07:52:24:763 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Ejecutando: <MOV_OUT> - <16> - <CX>
+[INFO] 07:52:25:266 [CPU - Log obligatorio]/(36935:36967): PID: <1> - OBTENER MARCO - Página: <1> - Marco: <1>
+[INFO] 07:52:25:767 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <16> - Valor: <11>
+[INFO] 07:52:25:767 [CPU - Log obligatorio]/(36935:36967): PID: <1> - FETCH - Program Counter: <4>
+[INFO] 07:52:26:269 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Ejecutando: <MOV_OUT> - <32> - <CX>
+[INFO] 07:52:26:771 [CPU - Log obligatorio]/(36935:36967): PID: <1> - OBTENER MARCO - Página: <2> - Marco: <2>
+[INFO] 07:52:27:275 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <32> - Valor: <11>
+[INFO] 07:52:27:275 [CPU - Log obligatorio]/(36935:36967): PID: <1> - FETCH - Program Counter: <5>
+[INFO] 07:52:27:777 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Ejecutando: <MOV_OUT> - <48> - <CX>
+[INFO] 07:52:28:279 [CPU - Log obligatorio]/(36935:36967): PID: <1> - OBTENER MARCO - Página: <3> - Marco: <3>
+[INFO] 07:52:28:781 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <48> - Valor: <11>
+[INFO] 07:52:28:781 [CPU - Log obligatorio]/(36935:36967): PID: <1> - FETCH - Program Counter: <6>
+[INFO] 07:52:29:283 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Ejecutando: <SUB> - <CX> - <AX>
+[INFO] 07:52:29:284 [CPU - Log obligatorio]/(36935:36967): PID: <1> - FETCH - Program Counter: <7>
+[INFO] 07:52:29:787 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Ejecutando: <JNZ> - <CX> - <2>
+[INFO] 07:52:29:787 [CPU - Log obligatorio]/(36935:36967): PID: <1> - FETCH - Program Counter: <2>
+[INFO] 07:52:30:293 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Ejecutando: <MOV_OUT> - <0> - <CX>
+[INFO] 07:52:30:799 [CPU - Log obligatorio]/(36935:36967): PID: <1> - OBTENER MARCO - Página: <0> - Marco: <0>
+[INFO] 07:52:31:317 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <0> - Valor: <10>
+[INFO] 07:52:31:317 [CPU - Log obligatorio]/(36935:36967): PID: <1> - FETCH - Program Counter: <3>
+[INFO] 07:52:31:820 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Ejecutando: <MOV_OUT> - <16> - <CX>
+[INFO] 07:52:32:323 [CPU - Log obligatorio]/(36935:36967): PID: <1> - OBTENER MARCO - Página: <1> - Marco: <1>
+[INFO] 07:52:32:830 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <16> - Valor: <10>
+[INFO] 07:52:32:830 [CPU - Log obligatorio]/(36935:36967): PID: <1> - FETCH - Program Counter: <4>
+[INFO] 07:52:33:332 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Ejecutando: <MOV_OUT> - <32> - <CX>
+[INFO] 07:52:33:840 [CPU - Log obligatorio]/(36935:36967): PID: <1> - OBTENER MARCO - Página: <2> - Marco: <2>
+[INFO] 07:52:34:345 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <32> - Valor: <10>
+[INFO] 07:52:34:347 [CPU - Log obligatorio]/(36935:36967): PID: <1> - FETCH - Program Counter: <5>
+[INFO] 07:52:34:852 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Ejecutando: <MOV_OUT> - <48> - <CX>
+[INFO] 07:52:35:356 [CPU - Log obligatorio]/(36935:36967): PID: <1> - OBTENER MARCO - Página: <3> - Marco: <3>
+[INFO] 07:52:35:857 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <48> - Valor: <10>
+[INFO] 07:52:35:857 [CPU - Log obligatorio]/(36935:36967): PID: <1> - FETCH - Program Counter: <6>
+[INFO] 07:52:36:368 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Ejecutando: <SUB> - <CX> - <AX>
+[INFO] 07:52:36:368 [CPU - Log obligatorio]/(36935:36967): PID: <1> - FETCH - Program Counter: <7>
+[INFO] 07:52:36:872 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Ejecutando: <JNZ> - <CX> - <2>
+[INFO] 07:52:36:872 [CPU - Log obligatorio]/(36935:36967): PID: <1> - FETCH - Program Counter: <2>
+[INFO] 07:52:37:374 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Ejecutando: <MOV_OUT> - <0> - <CX>
+[INFO] 07:52:37:879 [CPU - Log obligatorio]/(36935:36967): PID: <1> - OBTENER MARCO - Página: <0> - Marco: <0>
+[INFO] 07:52:38:389 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <0> - Valor: <9>
+[INFO] 07:52:38:389 [CPU - Log obligatorio]/(36935:36967): PID: <1> - FETCH - Program Counter: <3>
+[INFO] 07:52:38:892 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Ejecutando: <MOV_OUT> - <16> - <CX>
+[INFO] 07:52:39:402 [CPU - Log obligatorio]/(36935:36967): PID: <1> - OBTENER MARCO - Página: <1> - Marco: <1>
+[INFO] 07:52:39:907 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <16> - Valor: <9>
+[INFO] 07:52:39:907 [CPU - Log obligatorio]/(36935:36967): PID: <1> - FETCH - Program Counter: <4>
+[INFO] 07:52:40:414 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Ejecutando: <MOV_OUT> - <32> - <CX>
+[INFO] 07:52:40:921 [CPU - Log obligatorio]/(36935:36967): PID: <1> - OBTENER MARCO - Página: <2> - Marco: <2>
+[INFO] 07:52:41:423 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <32> - Valor: <9>
+[INFO] 07:52:41:423 [CPU - Log obligatorio]/(36935:36967): PID: <1> - FETCH - Program Counter: <5>
+[INFO] 07:52:41:939 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Ejecutando: <MOV_OUT> - <48> - <CX>
+[INFO] 07:52:42:442 [CPU - Log obligatorio]/(36935:36967): PID: <1> - OBTENER MARCO - Página: <3> - Marco: <3>
+[INFO] 07:52:42:946 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <48> - Valor: <9>
+[INFO] 07:52:42:947 [CPU - Log obligatorio]/(36935:36967): PID: <1> - FETCH - Program Counter: <6>
+[INFO] 07:52:43:452 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Ejecutando: <SUB> - <CX> - <AX>
+[INFO] 07:52:43:452 [CPU - Log obligatorio]/(36935:36967): PID: <1> - FETCH - Program Counter: <7>
+[INFO] 07:52:43:954 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Ejecutando: <JNZ> - <CX> - <2>
+[INFO] 07:52:43:954 [CPU - Log obligatorio]/(36935:36967): PID: <1> - FETCH - Program Counter: <2>
+[INFO] 07:52:44:456 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Ejecutando: <MOV_OUT> - <0> - <CX>
+[INFO] 07:52:44:960 [CPU - Log obligatorio]/(36935:36967): PID: <1> - OBTENER MARCO - Página: <0> - Marco: <0>
+[INFO] 07:52:45:461 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <0> - Valor: <8>
+[INFO] 07:52:45:461 [CPU - Log obligatorio]/(36935:36967): PID: <1> - FETCH - Program Counter: <3>
+[INFO] 07:52:45:965 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Ejecutando: <MOV_OUT> - <16> - <CX>
+[INFO] 07:52:46:470 [CPU - Log obligatorio]/(36935:36967): PID: <1> - OBTENER MARCO - Página: <1> - Marco: <1>
+[INFO] 07:52:46:973 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <16> - Valor: <8>
+[INFO] 07:52:46:973 [CPU - Log obligatorio]/(36935:36967): PID: <1> - FETCH - Program Counter: <4>
+[INFO] 07:52:47:474 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Ejecutando: <MOV_OUT> - <32> - <CX>
+[INFO] 07:52:47:975 [CPU - Log obligatorio]/(36935:36967): PID: <1> - OBTENER MARCO - Página: <2> - Marco: <2>
+[INFO] 07:52:48:485 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <32> - Valor: <8>
+[INFO] 07:52:48:485 [CPU - Log obligatorio]/(36935:36967): PID: <1> - FETCH - Program Counter: <5>
+[INFO] 07:52:48:993 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Ejecutando: <MOV_OUT> - <48> - <CX>
+[INFO] 07:52:49:504 [CPU - Log obligatorio]/(36935:36967): PID: <1> - OBTENER MARCO - Página: <3> - Marco: <3>
+[INFO] 07:52:50:005 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <48> - Valor: <8>
+[INFO] 07:52:50:005 [CPU - Log obligatorio]/(36935:36967): PID: <1> - FETCH - Program Counter: <6>
+[INFO] 07:52:50:507 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Ejecutando: <SUB> - <CX> - <AX>
+[INFO] 07:52:50:507 [CPU - Log obligatorio]/(36935:36967): PID: <1> - FETCH - Program Counter: <7>
+[INFO] 07:52:51:010 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Ejecutando: <JNZ> - <CX> - <2>
+[INFO] 07:52:51:010 [CPU - Log obligatorio]/(36935:36967): PID: <1> - FETCH - Program Counter: <2>
+[INFO] 07:52:51:513 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Ejecutando: <MOV_OUT> - <0> - <CX>
+[INFO] 07:52:52:021 [CPU - Log obligatorio]/(36935:36967): PID: <1> - OBTENER MARCO - Página: <0> - Marco: <0>
+[INFO] 07:52:52:524 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <0> - Valor: <7>
+[INFO] 07:52:52:524 [CPU - Log obligatorio]/(36935:36967): PID: <1> - FETCH - Program Counter: <3>
+[INFO] 07:52:53:025 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Ejecutando: <MOV_OUT> - <16> - <CX>
+[INFO] 07:52:53:529 [CPU - Log obligatorio]/(36935:36967): PID: <1> - OBTENER MARCO - Página: <1> - Marco: <1>
+[INFO] 07:52:54:048 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <16> - Valor: <7>
+[INFO] 07:52:54:048 [CPU - Log obligatorio]/(36935:36967): PID: <1> - FETCH - Program Counter: <4>
+[INFO] 07:52:54:549 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Ejecutando: <MOV_OUT> - <32> - <CX>
+[INFO] 07:52:55:053 [CPU - Log obligatorio]/(36935:36967): PID: <1> - OBTENER MARCO - Página: <2> - Marco: <2>
+[INFO] 07:52:55:555 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <32> - Valor: <7>
+[INFO] 07:52:55:555 [CPU - Log obligatorio]/(36935:36967): PID: <1> - FETCH - Program Counter: <5>
+[INFO] 07:52:56:060 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Ejecutando: <MOV_OUT> - <48> - <CX>
+[INFO] 07:52:56:562 [CPU - Log obligatorio]/(36935:36967): PID: <1> - OBTENER MARCO - Página: <3> - Marco: <3>
+[INFO] 07:52:57:065 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <48> - Valor: <7>
+[INFO] 07:52:57:065 [CPU - Log obligatorio]/(36935:36967): PID: <1> - FETCH - Program Counter: <6>
+[INFO] 07:52:57:566 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Ejecutando: <SUB> - <CX> - <AX>
+[INFO] 07:52:57:566 [CPU - Log obligatorio]/(36935:36967): PID: <1> - FETCH - Program Counter: <7>
+[INFO] 07:52:58:074 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Ejecutando: <JNZ> - <CX> - <2>
+[INFO] 07:52:58:074 [CPU - Log obligatorio]/(36935:36967): PID: <1> - FETCH - Program Counter: <2>
+[INFO] 07:52:58:576 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Ejecutando: <MOV_OUT> - <0> - <CX>
+[INFO] 07:52:59:078 [CPU - Log obligatorio]/(36935:36967): PID: <1> - OBTENER MARCO - Página: <0> - Marco: <0>
+[INFO] 07:52:59:584 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <0> - Valor: <6>
+[INFO] 07:52:59:585 [CPU - Log obligatorio]/(36935:36967): PID: <1> - FETCH - Program Counter: <3>
+[INFO] 07:53:00:088 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Ejecutando: <MOV_OUT> - <16> - <CX>
+[INFO] 07:53:00:590 [CPU - Log obligatorio]/(36935:36967): PID: <1> - OBTENER MARCO - Página: <1> - Marco: <1>
+[INFO] 07:53:01:106 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <16> - Valor: <6>
+[INFO] 07:53:01:106 [CPU - Log obligatorio]/(36935:36967): PID: <1> - FETCH - Program Counter: <4>
+[INFO] 07:53:01:607 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Ejecutando: <MOV_OUT> - <32> - <CX>
+[INFO] 07:53:02:119 [CPU - Log obligatorio]/(36935:36967): PID: <1> - OBTENER MARCO - Página: <2> - Marco: <2>
+[INFO] 07:53:02:624 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <32> - Valor: <6>
+[INFO] 07:53:02:624 [CPU - Log obligatorio]/(36935:36967): PID: <1> - FETCH - Program Counter: <5>
+[INFO] 07:53:03:134 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Ejecutando: <MOV_OUT> - <48> - <CX>
+[INFO] 07:53:03:640 [CPU - Log obligatorio]/(36935:36967): PID: <1> - OBTENER MARCO - Página: <3> - Marco: <3>
+[INFO] 07:53:04:144 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <48> - Valor: <6>
+[INFO] 07:53:04:144 [CPU - Log obligatorio]/(36935:36967): PID: <1> - FETCH - Program Counter: <6>
+[INFO] 07:53:04:646 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Ejecutando: <SUB> - <CX> - <AX>
+[INFO] 07:53:04:647 [CPU - Log obligatorio]/(36935:36967): PID: <1> - FETCH - Program Counter: <7>
+[INFO] 07:53:05:150 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Ejecutando: <JNZ> - <CX> - <2>
+[INFO] 07:53:05:150 [CPU - Log obligatorio]/(36935:36967): PID: <1> - FETCH - Program Counter: <2>
+[INFO] 07:53:05:652 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Ejecutando: <MOV_OUT> - <0> - <CX>
+[INFO] 07:53:06:168 [CPU - Log obligatorio]/(36935:36967): PID: <1> - OBTENER MARCO - Página: <0> - Marco: <0>
+[INFO] 07:53:06:669 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <0> - Valor: <5>
+[INFO] 07:53:06:669 [CPU - Log obligatorio]/(36935:36967): PID: <1> - FETCH - Program Counter: <3>
+[INFO] 07:53:07:172 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Ejecutando: <MOV_OUT> - <16> - <CX>
+[INFO] 07:53:07:674 [CPU - Log obligatorio]/(36935:36967): PID: <1> - OBTENER MARCO - Página: <1> - Marco: <1>
+[INFO] 07:53:08:175 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <16> - Valor: <5>
+[INFO] 07:53:08:175 [CPU - Log obligatorio]/(36935:36967): PID: <1> - FETCH - Program Counter: <4>
+[INFO] 07:53:08:680 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Ejecutando: <MOV_OUT> - <32> - <CX>
+[INFO] 07:53:09:191 [CPU - Log obligatorio]/(36935:36967): PID: <1> - OBTENER MARCO - Página: <2> - Marco: <2>
+[INFO] 07:53:09:692 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <32> - Valor: <5>
+[INFO] 07:53:09:693 [CPU - Log obligatorio]/(36935:36967): PID: <1> - FETCH - Program Counter: <5>
+[INFO] 07:53:10:203 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Ejecutando: <MOV_OUT> - <48> - <CX>
+[INFO] 07:53:10:711 [CPU - Log obligatorio]/(36935:36967): PID: <1> - OBTENER MARCO - Página: <3> - Marco: <3>
+[INFO] 07:53:11:212 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <48> - Valor: <5>
+[INFO] 07:53:11:212 [CPU - Log obligatorio]/(36935:36967): PID: <1> - FETCH - Program Counter: <6>
+[INFO] 07:53:11:718 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Ejecutando: <SUB> - <CX> - <AX>
+[INFO] 07:53:11:718 [CPU - Log obligatorio]/(36935:36967): PID: <1> - FETCH - Program Counter: <7>
+[INFO] 07:53:12:220 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Ejecutando: <JNZ> - <CX> - <2>
+[INFO] 07:53:12:220 [CPU - Log obligatorio]/(36935:36967): PID: <1> - FETCH - Program Counter: <2>
+[INFO] 07:53:12:724 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Ejecutando: <MOV_OUT> - <0> - <CX>
+[INFO] 07:53:13:228 [CPU - Log obligatorio]/(36935:36967): PID: <1> - OBTENER MARCO - Página: <0> - Marco: <0>
+[INFO] 07:53:13:731 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <0> - Valor: <4>
+[INFO] 07:53:13:731 [CPU - Log obligatorio]/(36935:36967): PID: <1> - FETCH - Program Counter: <3>
+[INFO] 07:53:14:237 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Ejecutando: <MOV_OUT> - <16> - <CX>
+[INFO] 07:53:14:739 [CPU - Log obligatorio]/(36935:36967): PID: <1> - OBTENER MARCO - Página: <1> - Marco: <1>
+[INFO] 07:53:15:241 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <16> - Valor: <4>
+[INFO] 07:53:15:241 [CPU - Log obligatorio]/(36935:36967): PID: <1> - FETCH - Program Counter: <4>
+[INFO] 07:53:15:743 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Ejecutando: <MOV_OUT> - <32> - <CX>
+[INFO] 07:53:16:245 [CPU - Log obligatorio]/(36935:36967): PID: <1> - OBTENER MARCO - Página: <2> - Marco: <2>
+[INFO] 07:53:16:750 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <32> - Valor: <4>
+[INFO] 07:53:16:751 [CPU - Log obligatorio]/(36935:36967): PID: <1> - FETCH - Program Counter: <5>
+[INFO] 07:53:17:256 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Ejecutando: <MOV_OUT> - <48> - <CX>
+[INFO] 07:53:17:760 [CPU - Log obligatorio]/(36935:36967): PID: <1> - OBTENER MARCO - Página: <3> - Marco: <3>
+[INFO] 07:53:18:270 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <48> - Valor: <4>
+[INFO] 07:53:18:270 [CPU - Log obligatorio]/(36935:36967): PID: <1> - FETCH - Program Counter: <6>
+[INFO] 07:53:18:773 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Ejecutando: <SUB> - <CX> - <AX>
+[INFO] 07:53:18:773 [CPU - Log obligatorio]/(36935:36967): PID: <1> - FETCH - Program Counter: <7>
+[INFO] 07:53:19:276 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Ejecutando: <JNZ> - <CX> - <2>
+[INFO] 07:53:19:276 [CPU - Log obligatorio]/(36935:36967): PID: <1> - FETCH - Program Counter: <2>
+[INFO] 07:53:19:780 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Ejecutando: <MOV_OUT> - <0> - <CX>
+[INFO] 07:53:20:282 [CPU - Log obligatorio]/(36935:36967): PID: <1> - OBTENER MARCO - Página: <0> - Marco: <0>
+[INFO] 07:53:20:784 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <0> - Valor: <3>
+[INFO] 07:53:20:784 [CPU - Log obligatorio]/(36935:36967): PID: <1> - FETCH - Program Counter: <3>
+[INFO] 07:53:21:286 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Ejecutando: <MOV_OUT> - <16> - <CX>
+[INFO] 07:53:21:788 [CPU - Log obligatorio]/(36935:36967): PID: <1> - OBTENER MARCO - Página: <1> - Marco: <1>
+[INFO] 07:53:22:292 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <16> - Valor: <3>
+[INFO] 07:53:22:292 [CPU - Log obligatorio]/(36935:36967): PID: <1> - FETCH - Program Counter: <4>
+[INFO] 07:53:22:794 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Ejecutando: <MOV_OUT> - <32> - <CX>
+[INFO] 07:53:23:299 [CPU - Log obligatorio]/(36935:36967): PID: <1> - OBTENER MARCO - Página: <2> - Marco: <2>
+[INFO] 07:53:23:807 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <32> - Valor: <3>
+[INFO] 07:53:23:807 [CPU - Log obligatorio]/(36935:36967): PID: <1> - FETCH - Program Counter: <5>
+[INFO] 07:53:24:310 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Ejecutando: <MOV_OUT> - <48> - <CX>
+[INFO] 07:53:24:813 [CPU - Log obligatorio]/(36935:36967): PID: <1> - OBTENER MARCO - Página: <3> - Marco: <3>
+[INFO] 07:53:25:317 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <48> - Valor: <3>
+[INFO] 07:53:25:317 [CPU - Log obligatorio]/(36935:36967): PID: <1> - FETCH - Program Counter: <6>
+[INFO] 07:53:25:823 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Ejecutando: <SUB> - <CX> - <AX>
+[INFO] 07:53:25:823 [CPU - Log obligatorio]/(36935:36967): PID: <1> - FETCH - Program Counter: <7>
+[INFO] 07:53:26:325 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Ejecutando: <JNZ> - <CX> - <2>
+[INFO] 07:53:26:325 [CPU - Log obligatorio]/(36935:36967): PID: <1> - FETCH - Program Counter: <2>
+[INFO] 07:53:26:829 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Ejecutando: <MOV_OUT> - <0> - <CX>
+[INFO] 07:53:27:340 [CPU - Log obligatorio]/(36935:36967): PID: <1> - OBTENER MARCO - Página: <0> - Marco: <0>
+[INFO] 07:53:27:842 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <0> - Valor: <2>
+[INFO] 07:53:27:843 [CPU - Log obligatorio]/(36935:36967): PID: <1> - FETCH - Program Counter: <3>
+[INFO] 07:53:28:345 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Ejecutando: <MOV_OUT> - <16> - <CX>
+[INFO] 07:53:28:851 [CPU - Log obligatorio]/(36935:36967): PID: <1> - OBTENER MARCO - Página: <1> - Marco: <1>
+[INFO] 07:53:29:358 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <16> - Valor: <2>
+[INFO] 07:53:29:358 [CPU - Log obligatorio]/(36935:36967): PID: <1> - FETCH - Program Counter: <4>
+[INFO] 07:53:29:865 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Ejecutando: <MOV_OUT> - <32> - <CX>
+[INFO] 07:53:30:368 [CPU - Log obligatorio]/(36935:36967): PID: <1> - OBTENER MARCO - Página: <2> - Marco: <2>
+[INFO] 07:53:30:879 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <32> - Valor: <2>
+[INFO] 07:53:30:879 [CPU - Log obligatorio]/(36935:36967): PID: <1> - FETCH - Program Counter: <5>
+[INFO] 07:53:31:381 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Ejecutando: <MOV_OUT> - <48> - <CX>
+[INFO] 07:53:31:886 [CPU - Log obligatorio]/(36935:36967): PID: <1> - OBTENER MARCO - Página: <3> - Marco: <3>
+[INFO] 07:53:32:387 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <48> - Valor: <2>
+[INFO] 07:53:32:388 [CPU - Log obligatorio]/(36935:36967): PID: <1> - FETCH - Program Counter: <6>
+[INFO] 07:53:32:890 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Ejecutando: <SUB> - <CX> - <AX>
+[INFO] 07:53:32:891 [CPU - Log obligatorio]/(36935:36967): PID: <1> - FETCH - Program Counter: <7>
+[INFO] 07:53:33:393 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Ejecutando: <JNZ> - <CX> - <2>
+[INFO] 07:53:33:393 [CPU - Log obligatorio]/(36935:36967): PID: <1> - FETCH - Program Counter: <2>
+[INFO] 07:53:33:900 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Ejecutando: <MOV_OUT> - <0> - <CX>
+[INFO] 07:53:34:403 [CPU - Log obligatorio]/(36935:36967): PID: <1> - OBTENER MARCO - Página: <0> - Marco: <0>
+[INFO] 07:53:34:908 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <0> - Valor: <1>
+[INFO] 07:53:34:908 [CPU - Log obligatorio]/(36935:36967): PID: <1> - FETCH - Program Counter: <3>
+[INFO] 07:53:35:412 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Ejecutando: <MOV_OUT> - <16> - <CX>
+[INFO] 07:53:35:914 [CPU - Log obligatorio]/(36935:36967): PID: <1> - OBTENER MARCO - Página: <1> - Marco: <1>
+[INFO] 07:53:36:415 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <16> - Valor: <1>
+[INFO] 07:53:36:416 [CPU - Log obligatorio]/(36935:36967): PID: <1> - FETCH - Program Counter: <4>
+[INFO] 07:53:36:923 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Ejecutando: <MOV_OUT> - <32> - <CX>
+[INFO] 07:53:37:426 [CPU - Log obligatorio]/(36935:36967): PID: <1> - OBTENER MARCO - Página: <2> - Marco: <2>
+[INFO] 07:53:37:928 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <32> - Valor: <1>
+[INFO] 07:53:37:928 [CPU - Log obligatorio]/(36935:36967): PID: <1> - FETCH - Program Counter: <5>
+[INFO] 07:53:38:439 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Ejecutando: <MOV_OUT> - <48> - <CX>
+[INFO] 07:53:38:942 [CPU - Log obligatorio]/(36935:36967): PID: <1> - OBTENER MARCO - Página: <3> - Marco: <3>
+[INFO] 07:53:39:443 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Acción: <ESCRIBIR> - Dirección Física: <48> - Valor: <1>
+[INFO] 07:53:39:443 [CPU - Log obligatorio]/(36935:36967): PID: <1> - FETCH - Program Counter: <6>
+[INFO] 07:53:39:947 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Ejecutando: <SUB> - <CX> - <AX>
+[INFO] 07:53:39:948 [CPU - Log obligatorio]/(36935:36967): PID: <1> - FETCH - Program Counter: <7>
+[INFO] 07:53:40:459 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Ejecutando: <JNZ> - <CX> - <2>
+[INFO] 07:53:40:459 [CPU - Log obligatorio]/(36935:36967): PID: <1> - FETCH - Program Counter: <8>
+[INFO] 07:53:40:962 [CPU - Log obligatorio]/(36935:36967): PID: <1> - Ejecutando: <EXIT>
+[INFO] 07:54:34:359 [CPU - Log obligatorio]/(36935:36979): PID: <2> - FETCH - Program Counter: <0>
+[INFO] 07:54:34:861 [CPU - Log obligatorio]/(36935:36979): PID: <2> - Ejecutando: <SET> - <CX> - <20>
+[INFO] 07:54:34:861 [CPU - Log obligatorio]/(36935:36979): PID: <2> - FETCH - Program Counter: <1>
+[INFO] 07:54:35:364 [CPU - Log obligatorio]/(36935:36979): PID: <2> - Ejecutando: <SET> - <AX> - <1>
+[INFO] 07:54:35:364 [CPU - Log obligatorio]/(36935:36979): PID: <2> - FETCH - Program Counter: <2>
+[INFO] 07:54:35:865 [CPU - Log obligatorio]/(36935:36979): PID: <2> - Ejecutando: <MOV_OUT> - <0> - <CX>
+[INFO] 07:54:36:367 [CPU - Log obligatorio]/(36935:36979): Page Fault PID: <2> - Página: <0>
+[INFO] 07:54:41:511 [CPU - Log obligatorio]/(36935:36982): PID: <3> - FETCH - Program Counter: <0>
+[INFO] 07:54:42:020 [CPU - Log obligatorio]/(36935:36982): PID: <3> - Ejecutando: <SET> - <CX> - <20>
+[INFO] 07:54:42:020 [CPU - Log obligatorio]/(36935:36982): PID: <3> - FETCH - Program Counter: <1>
+[INFO] 07:54:42:522 [CPU - Log obligatorio]/(36935:36982): PID: <3> - Ejecutando: <SET> - <AX> - <1>
+[INFO] 07:54:42:522 [CPU - Log obligatorio]/(36935:36982): PID: <3> - FETCH - Program Counter: <2>
+[INFO] 07:54:43:027 [CPU - Log obligatorio]/(36935:36982): PID: <3> - Ejecutando: <MOV_OUT> - <0> - <CX>
+[INFO] 07:54:43:531 [CPU - Log obligatorio]/(36935:36982): Page Fault PID: <3> - Página: <0>
+[INFO] 07:54:47:024 [CPU - Log obligatorio]/(36935:36985): PID: <2> - FETCH - Program Counter: <2>
+[INFO] 07:54:47:526 [CPU - Log obligatorio]/(36935:36985): PID: <2> - Ejecutando: <MOV_OUT> - <0> - <CX>
+[INFO] 07:54:48:028 [CPU - Log obligatorio]/(36935:36985): PID: <2> - OBTENER MARCO - Página: <0> - Marco: <0>
+[INFO] 07:54:48:531 [CPU - Log obligatorio]/(36935:36985): PID: <2> - Acción: <ESCRIBIR> - Dirección Física: <0> - Valor: <20>
+[INFO] 07:54:48:531 [CPU - Log obligatorio]/(36935:36985): PID: <2> - FETCH - Program Counter: <3>
+[INFO] 07:54:49:033 [CPU - Log obligatorio]/(36935:36985): PID: <2> - Ejecutando: <MOV_OUT> - <16> - <CX>
+[INFO] 07:54:49:534 [CPU - Log obligatorio]/(36935:36985): Page Fault PID: <2> - Página: <1>
+[INFO] 07:54:50:036 [CPU - Log obligatorio]/(36935:36988): PID: <4> - FETCH - Program Counter: <0>
+[INFO] 07:54:50:541 [CPU - Log obligatorio]/(36935:36988): PID: <4> - Ejecutando: <SET> - <CX> - <20>
+[INFO] 07:54:50:541 [CPU - Log obligatorio]/(36935:36988): PID: <4> - FETCH - Program Counter: <1>
+[INFO] 07:54:51:044 [CPU - Log obligatorio]/(36935:36988): PID: <4> - Ejecutando: <SET> - <AX> - <1>
+[INFO] 07:54:51:044 [CPU - Log obligatorio]/(36935:36988): PID: <4> - FETCH - Program Counter: <2>
+[INFO] 07:54:51:548 [CPU - Log obligatorio]/(36935:36988): PID: <4> - Ejecutando: <MOV_OUT> - <0> - <CX>
+[INFO] 07:54:52:058 [CPU - Log obligatorio]/(36935:36988): Page Fault PID: <4> - Página: <0>
+[INFO] 07:54:55:549 [CPU - Log obligatorio]/(36935:36991): PID: <3> - FETCH - Program Counter: <2>
+[INFO] 07:54:56:051 [CPU - Log obligatorio]/(36935:36991): PID: <3> - Ejecutando: <MOV_OUT> - <0> - <CX>
+[INFO] 07:54:56:553 [CPU - Log obligatorio]/(36935:36991): PID: <3> - OBTENER MARCO - Página: <0> - Marco: <1>
+[INFO] 07:54:57:054 [CPU - Log obligatorio]/(36935:36991): PID: <3> - Acción: <ESCRIBIR> - Dirección Física: <16> - Valor: <20>
+[INFO] 07:54:57:054 [CPU - Log obligatorio]/(36935:36991): PID: <3> - FETCH - Program Counter: <3>
+[INFO] 07:54:57:559 [CPU - Log obligatorio]/(36935:36991): PID: <3> - Ejecutando: <MOV_OUT> - <16> - <CX>
+[INFO] 07:54:58:061 [CPU - Log obligatorio]/(36935:36991): Page Fault PID: <3> - Página: <1>
+[INFO] 07:54:58:560 [CPU - Log obligatorio]/(36935:36994): PID: <5> - FETCH - Program Counter: <0>
+[INFO] 07:54:59:067 [CPU - Log obligatorio]/(36935:36994): PID: <5> - Ejecutando: <SET> - <CX> - <20>
+[INFO] 07:54:59:067 [CPU - Log obligatorio]/(36935:36994): PID: <5> - FETCH - Program Counter: <1>
+[INFO] 07:54:59:573 [CPU - Log obligatorio]/(36935:36994): PID: <5> - Ejecutando: <SET> - <AX> - <1>
+[INFO] 07:54:59:573 [CPU - Log obligatorio]/(36935:36994): PID: <5> - FETCH - Program Counter: <2>
+[INFO] 07:55:00:077 [CPU - Log obligatorio]/(36935:36994): PID: <5> - Ejecutando: <MOV_OUT> - <0> - <CX>
+[INFO] 07:55:00:583 [CPU - Log obligatorio]/(36935:36994): Page Fault PID: <5> - Página: <0>
+[INFO] 07:55:04:070 [CPU - Log obligatorio]/(36935:36997): PID: <2> - FETCH - Program Counter: <3>
+[INFO] 07:55:04:579 [CPU - Log obligatorio]/(36935:36997): PID: <2> - Ejecutando: <MOV_OUT> - <16> - <CX>
+[INFO] 07:55:05:084 [CPU - Log obligatorio]/(36935:36997): PID: <2> - OBTENER MARCO - Página: <1> - Marco: <2>
+[INFO] 07:55:05:589 [CPU - Log obligatorio]/(36935:36997): PID: <2> - Acción: <ESCRIBIR> - Dirección Física: <32> - Valor: <20>
+[INFO] 07:55:05:590 [CPU - Log obligatorio]/(36935:36997): PID: <2> - FETCH - Program Counter: <4>
+[INFO] 07:55:06:100 [CPU - Log obligatorio]/(36935:36997): PID: <2> - Ejecutando: <MOV_OUT> - <32> - <CX>
+[INFO] 07:55:06:613 [CPU - Log obligatorio]/(36935:36997): Page Fault PID: <2> - Página: <2>
+[INFO] 07:55:09:605 [CPU - Log obligatorio]/(36935:37000): PID: <4> - FETCH - Program Counter: <2>
+[INFO] 07:55:10:120 [CPU - Log obligatorio]/(36935:37000): PID: <4> - Ejecutando: <MOV_OUT> - <0> - <CX>
+[INFO] 07:55:10:623 [CPU - Log obligatorio]/(36935:37000): PID: <4> - OBTENER MARCO - Página: <0> - Marco: <3>
+[INFO] 07:55:11:125 [CPU - Log obligatorio]/(36935:37000): PID: <4> - Acción: <ESCRIBIR> - Dirección Física: <48> - Valor: <20>
+[INFO] 07:55:11:125 [CPU - Log obligatorio]/(36935:37000): PID: <4> - FETCH - Program Counter: <3>
+[INFO] 07:55:11:626 [CPU - Log obligatorio]/(36935:37000): PID: <4> - Ejecutando: <MOV_OUT> - <16> - <CX>
+[INFO] 07:55:12:128 [CPU - Log obligatorio]/(36935:37000): Page Fault PID: <4> - Página: <1>
+[INFO] 07:55:15:148 [CPU - Log obligatorio]/(36935:37002): PID: <3> - FETCH - Program Counter: <3>
+[INFO] 07:55:15:651 [CPU - Log obligatorio]/(36935:37002): PID: <3> - Ejecutando: <MOV_OUT> - <16> - <CX>
+[INFO] 07:55:16:153 [CPU - Log obligatorio]/(36935:37002): PID: <3> - OBTENER MARCO - Página: <1> - Marco: <0>
+[INFO] 07:55:16:660 [CPU - Log obligatorio]/(36935:37002): PID: <3> - Acción: <ESCRIBIR> - Dirección Física: <0> - Valor: <20>
+[INFO] 07:55:16:660 [CPU - Log obligatorio]/(36935:37002): PID: <3> - FETCH - Program Counter: <4>
+[INFO] 07:55:17:162 [CPU - Log obligatorio]/(36935:37002): PID: <3> - Ejecutando: <MOV_OUT> - <32> - <CX>
+[INFO] 07:55:17:664 [CPU - Log obligatorio]/(36935:37002): Page Fault PID: <3> - Página: <2>
+[INFO] 07:55:20:666 [CPU - Log obligatorio]/(36935:37006): PID: <5> - FETCH - Program Counter: <2>
+[INFO] 07:55:21:169 [CPU - Log obligatorio]/(36935:37006): PID: <5> - Ejecutando: <MOV_OUT> - <0> - <CX>
+[INFO] 07:55:21:673 [CPU - Log obligatorio]/(36935:37006): PID: <5> - OBTENER MARCO - Página: <0> - Marco: <1>
+[INFO] 07:55:22:177 [CPU - Log obligatorio]/(36935:37006): PID: <5> - Acción: <ESCRIBIR> - Dirección Física: <16> - Valor: <20>
+[INFO] 07:55:22:177 [CPU - Log obligatorio]/(36935:37006): PID: <5> - FETCH - Program Counter: <3>
+[INFO] 07:55:22:678 [CPU - Log obligatorio]/(36935:37006): PID: <5> - Ejecutando: <MOV_OUT> - <16> - <CX>
+[INFO] 07:55:23:183 [CPU - Log obligatorio]/(36935:37006): Page Fault PID: <5> - Página: <1>
+[INFO] 07:55:26:183 [CPU - Log obligatorio]/(36935:37008): PID: <2> - FETCH - Program Counter: <4>
+[INFO] 07:55:26:685 [CPU - Log obligatorio]/(36935:37008): PID: <2> - Ejecutando: <MOV_OUT> - <32> - <CX>
+[INFO] 07:55:27:188 [CPU - Log obligatorio]/(36935:37008): PID: <2> - OBTENER MARCO - Página: <2> - Marco: <2>
+[INFO] 07:55:27:691 [CPU - Log obligatorio]/(36935:37008): PID: <2> - Acción: <ESCRIBIR> - Dirección Física: <32> - Valor: <20>
+[INFO] 07:55:27:691 [CPU - Log obligatorio]/(36935:37008): PID: <2> - FETCH - Program Counter: <5>
+[INFO] 07:55:28:193 [CPU - Log obligatorio]/(36935:37008): PID: <2> - Ejecutando: <MOV_OUT> - <48> - <CX>
+[INFO] 07:55:28:701 [CPU - Log obligatorio]/(36935:37008): Page Fault PID: <2> - Página: <3>
+[INFO] 07:55:31:699 [CPU - Log obligatorio]/(36935:37012): PID: <4> - FETCH - Program Counter: <3>
+[INFO] 07:55:32:210 [CPU - Log obligatorio]/(36935:37012): PID: <4> - Ejecutando: <MOV_OUT> - <16> - <CX>
+[INFO] 07:55:32:711 [CPU - Log obligatorio]/(36935:37012): PID: <4> - OBTENER MARCO - Página: <1> - Marco: <3>
+[INFO] 07:55:33:213 [CPU - Log obligatorio]/(36935:37012): PID: <4> - Acción: <ESCRIBIR> - Dirección Física: <48> - Valor: <20>
+[INFO] 07:55:33:213 [CPU - Log obligatorio]/(36935:37012): PID: <4> - FETCH - Program Counter: <4>
+[INFO] 07:55:33:717 [CPU - Log obligatorio]/(36935:37012): PID: <4> - Ejecutando: <MOV_OUT> - <32> - <CX>
+[INFO] 07:55:34:223 [CPU - Log obligatorio]/(36935:37012): Page Fault PID: <4> - Página: <2>
+[INFO] 07:55:37:233 [CPU - Log obligatorio]/(36935:37015): PID: <3> - FETCH - Program Counter: <4>
+[INFO] 07:55:37:736 [CPU - Log obligatorio]/(36935:37015): PID: <3> - Ejecutando: <MOV_OUT> - <32> - <CX>
+[INFO] 07:55:38:238 [CPU - Log obligatorio]/(36935:37015): PID: <3> - OBTENER MARCO - Página: <2> - Marco: <0>
+[INFO] 07:55:38:739 [CPU - Log obligatorio]/(36935:37015): PID: <3> - Acción: <ESCRIBIR> - Dirección Física: <0> - Valor: <20>
+[INFO] 07:55:38:739 [CPU - Log obligatorio]/(36935:37015): PID: <3> - FETCH - Program Counter: <5>
+[INFO] 07:55:39:241 [CPU - Log obligatorio]/(36935:37015): PID: <3> - Ejecutando: <MOV_OUT> - <48> - <CX>
+[INFO] 07:55:39:745 [CPU - Log obligatorio]/(36935:37015): Page Fault PID: <3> - Página: <3>
+[INFO] 07:55:42:756 [CPU - Log obligatorio]/(36935:37018): PID: <5> - FETCH - Program Counter: <3>
+[INFO] 07:55:43:256 [CPU - Log obligatorio]/(36935:37018): PID: <5> - Ejecutando: <MOV_OUT> - <16> - <CX>
+[INFO] 07:55:43:759 [CPU - Log obligatorio]/(36935:37018): PID: <5> - OBTENER MARCO - Página: <1> - Marco: <1>
+[INFO] 07:55:44:260 [CPU - Log obligatorio]/(36935:37018): PID: <5> - Acción: <ESCRIBIR> - Dirección Física: <16> - Valor: <20>
+[INFO] 07:55:44:260 [CPU - Log obligatorio]/(36935:37018): PID: <5> - FETCH - Program Counter: <4>
+[INFO] 07:55:44:762 [CPU - Log obligatorio]/(36935:37018): PID: <5> - Ejecutando: <MOV_OUT> - <32> - <CX>
+[INFO] 07:55:45:265 [CPU - Log obligatorio]/(36935:37018): Page Fault PID: <5> - Página: <2>
+[INFO] 07:55:48:260 [CPU - Log obligatorio]/(36935:37022): PID: <2> - FETCH - Program Counter: <5>
+[INFO] 07:55:48:765 [CPU - Log obligatorio]/(36935:37022): PID: <2> - Ejecutando: <MOV_OUT> - <48> - <CX>
+[INFO] 07:55:49:267 [CPU - Log obligatorio]/(36935:37022): PID: <2> - OBTENER MARCO - Página: <3> - Marco: <2>
+[INFO] 07:55:49:769 [CPU - Log obligatorio]/(36935:37022): PID: <2> - Acción: <ESCRIBIR> - Dirección Física: <32> - Valor: <20>
+[INFO] 07:55:49:769 [CPU - Log obligatorio]/(36935:37022): PID: <2> - FETCH - Program Counter: <6>
+[INFO] 07:55:50:271 [CPU - Log obligatorio]/(36935:37022): PID: <2> - Ejecutando: <SUB> - <CX> - <AX>
+[INFO] 07:55:50:271 [CPU - Log obligatorio]/(36935:37022): PID: <2> - FETCH - Program Counter: <7>
+[INFO] 07:55:50:773 [CPU - Log obligatorio]/(36935:37022): PID: <2> - Ejecutando: <JNZ> - <CX> - <2>
+[INFO] 07:55:50:773 [CPU - Log obligatorio]/(36935:37022): PID: <2> - FETCH - Program Counter: <2>
+[INFO] 07:55:51:274 [CPU - Log obligatorio]/(36935:37022): PID: <2> - Ejecutando: <MOV_OUT> - <0> - <CX>
+[INFO] 07:55:51:783 [CPU - Log obligatorio]/(36935:37022): Page Fault PID: <2> - Página: <0>
+[INFO] 07:55:53:775 [CPU - Log obligatorio]/(36935:37024): PID: <4> - FETCH - Program Counter: <4>
+[INFO] 07:55:54:276 [CPU - Log obligatorio]/(36935:37024): PID: <4> - Ejecutando: <MOV_OUT> - <32> - <CX>
+[INFO] 07:55:54:782 [CPU - Log obligatorio]/(36935:37024): PID: <4> - OBTENER MARCO - Página: <2> - Marco: <3>
+[INFO] 07:55:55:285 [CPU - Log obligatorio]/(36935:37024): PID: <4> - Acción: <ESCRIBIR> - Dirección Física: <48> - Valor: <20>
+[INFO] 07:55:55:285 [CPU - Log obligatorio]/(36935:37024): PID: <4> - FETCH - Program Counter: <5>
+[INFO] 07:55:55:786 [CPU - Log obligatorio]/(36935:37024): PID: <4> - Ejecutando: <MOV_OUT> - <48> - <CX>
+[INFO] 07:55:56:287 [CPU - Log obligatorio]/(36935:37024): Page Fault PID: <4> - Página: <3>
+[INFO] 07:55:59:284 [CPU - Log obligatorio]/(36935:37028): PID: <3> - FETCH - Program Counter: <5>
+[INFO] 07:55:59:787 [CPU - Log obligatorio]/(36935:37028): PID: <3> - Ejecutando: <MOV_OUT> - <48> - <CX>
+[INFO] 07:56:00:292 [CPU - Log obligatorio]/(36935:37028): PID: <3> - OBTENER MARCO - Página: <3> - Marco: <0>
+[INFO] 07:56:00:794 [CPU - Log obligatorio]/(36935:37028): PID: <3> - Acción: <ESCRIBIR> - Dirección Física: <0> - Valor: <20>
+[INFO] 07:56:00:795 [CPU - Log obligatorio]/(36935:37028): PID: <3> - FETCH - Program Counter: <6>
+[INFO] 07:56:01:300 [CPU - Log obligatorio]/(36935:37028): PID: <3> - Ejecutando: <SUB> - <CX> - <AX>
+[INFO] 07:56:01:300 [CPU - Log obligatorio]/(36935:37028): PID: <3> - FETCH - Program Counter: <7>
+[INFO] 07:56:01:801 [CPU - Log obligatorio]/(36935:37028): PID: <3> - Ejecutando: <JNZ> - <CX> - <2>
+[INFO] 07:56:01:801 [CPU - Log obligatorio]/(36935:37028): PID: <3> - FETCH - Program Counter: <2>
+[INFO] 07:56:02:304 [CPU - Log obligatorio]/(36935:37028): PID: <3> - Ejecutando: <MOV_OUT> - <0> - <CX>
+[INFO] 07:56:02:806 [CPU - Log obligatorio]/(36935:37028): Page Fault PID: <3> - Página: <0>
+[INFO] 07:56:04:805 [CPU - Log obligatorio]/(36935:37031): PID: <5> - FETCH - Program Counter: <4>
+[INFO] 07:56:05:310 [CPU - Log obligatorio]/(36935:37031): PID: <5> - Ejecutando: <MOV_OUT> - <32> - <CX>
+[INFO] 07:56:05:812 [CPU - Log obligatorio]/(36935:37031): PID: <5> - OBTENER MARCO - Página: <2> - Marco: <1>
+[INFO] 07:56:06:326 [CPU - Log obligatorio]/(36935:37031): PID: <5> - Acción: <ESCRIBIR> - Dirección Física: <16> - Valor: <20>
+[INFO] 07:56:06:326 [CPU - Log obligatorio]/(36935:37031): PID: <5> - FETCH - Program Counter: <5>
+[INFO] 07:56:06:828 [CPU - Log obligatorio]/(36935:37031): PID: <5> - Ejecutando: <MOV_OUT> - <48> - <CX>
+[INFO] 07:56:07:330 [CPU - Log obligatorio]/(36935:37031): Page Fault PID: <5> - Página: <3>
+[INFO] 07:56:10:313 [CPU - Log obligatorio]/(36935:37034): PID: <2> - FETCH - Program Counter: <2>
+[INFO] 07:56:10:822 [CPU - Log obligatorio]/(36935:37034): PID: <2> - Ejecutando: <MOV_OUT> - <0> - <CX>
+[INFO] 07:56:11:326 [CPU - Log obligatorio]/(36935:37034): PID: <2> - OBTENER MARCO - Página: <0> - Marco: <2>
+[INFO] 07:56:11:828 [CPU - Log obligatorio]/(36935:37034): PID: <2> - Acción: <ESCRIBIR> - Dirección Física: <32> - Valor: <19>
+[INFO] 07:56:11:828 [CPU - Log obligatorio]/(36935:37034): PID: <2> - FETCH - Program Counter: <3>
+[INFO] 07:56:12:331 [CPU - Log obligatorio]/(36935:37034): PID: <2> - Ejecutando: <MOV_OUT> - <16> - <CX>
+[INFO] 07:56:12:833 [CPU - Log obligatorio]/(36935:37034): Page Fault PID: <2> - Página: <1>
+[INFO] 07:56:15:836 [CPU - Log obligatorio]/(36935:37036): PID: <4> - FETCH - Program Counter: <5>
+[INFO] 07:56:16:337 [CPU - Log obligatorio]/(36935:37036): PID: <4> - Ejecutando: <MOV_OUT> - <48> - <CX>
+[INFO] 07:56:16:841 [CPU - Log obligatorio]/(36935:37036): PID: <4> - OBTENER MARCO - Página: <3> - Marco: <3>
+[INFO] 07:56:17:345 [CPU - Log obligatorio]/(36935:37036): PID: <4> - Acción: <ESCRIBIR> - Dirección Física: <48> - Valor: <20>
+[INFO] 07:56:17:346 [CPU - Log obligatorio]/(36935:37036): PID: <4> - FETCH - Program Counter: <6>
+[INFO] 07:56:17:847 [CPU - Log obligatorio]/(36935:37036): PID: <4> - Ejecutando: <SUB> - <CX> - <AX>
+[INFO] 07:56:17:847 [CPU - Log obligatorio]/(36935:37036): PID: <4> - FETCH - Program Counter: <7>
+[INFO] 07:56:18:350 [CPU - Log obligatorio]/(36935:37036): PID: <4> - Ejecutando: <JNZ> - <CX> - <2>
+[INFO] 07:56:18:350 [CPU - Log obligatorio]/(36935:37036): PID: <4> - FETCH - Program Counter: <2>
+[INFO] 07:56:18:853 [CPU - Log obligatorio]/(36935:37036): PID: <4> - Ejecutando: <MOV_OUT> - <0> - <CX>
+[INFO] 07:56:19:391 [CPU - Log obligatorio]/(36935:37036): Page Fault PID: <4> - Página: <0>
+[INFO] 07:56:21:347 [CPU - Log obligatorio]/(36935:37039): PID: <3> - FETCH - Program Counter: <2>
+[INFO] 07:56:21:849 [CPU - Log obligatorio]/(36935:37039): PID: <3> - Ejecutando: <MOV_OUT> - <0> - <CX>
+[INFO] 07:56:22:351 [CPU - Log obligatorio]/(36935:37039): PID: <3> - OBTENER MARCO - Página: <0> - Marco: <0>
+[INFO] 07:56:22:851 [CPU - Log obligatorio]/(36935:37039): PID: <3> - Acción: <ESCRIBIR> - Dirección Física: <0> - Valor: <19>
+[INFO] 07:56:22:852 [CPU - Log obligatorio]/(36935:37039): PID: <3> - FETCH - Program Counter: <3>
+[INFO] 07:56:23:354 [CPU - Log obligatorio]/(36935:37039): PID: <3> - Ejecutando: <MOV_OUT> - <16> - <CX>
+[INFO] 07:56:23:856 [CPU - Log obligatorio]/(36935:37039): Page Fault PID: <3> - Página: <1>
+[INFO] 07:56:26:862 [CPU - Log obligatorio]/(36935:37043): PID: <5> - FETCH - Program Counter: <5>
+[INFO] 07:56:27:364 [CPU - Log obligatorio]/(36935:37043): PID: <5> - Ejecutando: <MOV_OUT> - <48> - <CX>
+[INFO] 07:56:27:867 [CPU - Log obligatorio]/(36935:37043): PID: <5> - OBTENER MARCO - Página: <3> - Marco: <1>
+[INFO] 07:56:28:372 [CPU - Log obligatorio]/(36935:37043): PID: <5> - Acción: <ESCRIBIR> - Dirección Física: <16> - Valor: <20>
+[INFO] 07:56:28:372 [CPU - Log obligatorio]/(36935:37043): PID: <5> - FETCH - Program Counter: <6>
+[INFO] 07:56:28:875 [CPU - Log obligatorio]/(36935:37043): PID: <5> - Ejecutando: <SUB> - <CX> - <AX>
+[INFO] 07:56:28:875 [CPU - Log obligatorio]/(36935:37043): PID: <5> - FETCH - Program Counter: <7>
+[INFO] 07:56:29:377 [CPU - Log obligatorio]/(36935:37043): PID: <5> - Ejecutando: <JNZ> - <CX> - <2>
+[INFO] 07:56:29:377 [CPU - Log obligatorio]/(36935:37043): PID: <5> - FETCH - Program Counter: <2>
+[INFO] 07:56:29:879 [CPU - Log obligatorio]/(36935:37043): PID: <5> - Ejecutando: <MOV_OUT> - <0> - <CX>
+[INFO] 07:56:30:381 [CPU - Log obligatorio]/(36935:37043): Page Fault PID: <5> - Página: <0>
+[INFO] 07:56:32:374 [CPU - Log obligatorio]/(36935:37046): PID: <2> - FETCH - Program Counter: <3>
+[INFO] 07:56:32:875 [CPU - Log obligatorio]/(36935:37046): PID: <2> - Ejecutando: <MOV_OUT> - <16> - <CX>
+[INFO] 07:56:33:377 [CPU - Log obligatorio]/(36935:37046): PID: <2> - OBTENER MARCO - Página: <1> - Marco: <2>
+[INFO] 07:56:33:878 [CPU - Log obligatorio]/(36935:37046): PID: <2> - Acción: <ESCRIBIR> - Dirección Física: <32> - Valor: <19>
+[INFO] 07:56:33:878 [CPU - Log obligatorio]/(36935:37046): PID: <2> - FETCH - Program Counter: <4>
+[INFO] 07:56:34:380 [CPU - Log obligatorio]/(36935:37046): PID: <2> - Ejecutando: <MOV_OUT> - <32> - <CX>
+[INFO] 07:56:34:885 [CPU - Log obligatorio]/(36935:37046): Page Fault PID: <2> - Página: <2>
+[INFO] 07:56:37:905 [CPU - Log obligatorio]/(36935:37049): PID: <4> - FETCH - Program Counter: <2>
+[INFO] 07:56:38:407 [CPU - Log obligatorio]/(36935:37049): PID: <4> - Ejecutando: <MOV_OUT> - <0> - <CX>
+[INFO] 07:56:38:921 [CPU - Log obligatorio]/(36935:37049): PID: <4> - OBTENER MARCO - Página: <0> - Marco: <3>
+[INFO] 07:56:39:425 [CPU - Log obligatorio]/(36935:37049): PID: <4> - Acción: <ESCRIBIR> - Dirección Física: <48> - Valor: <19>
+[INFO] 07:56:39:425 [CPU - Log obligatorio]/(36935:37049): PID: <4> - FETCH - Program Counter: <3>
+[INFO] 07:56:39:927 [CPU - Log obligatorio]/(36935:37049): PID: <4> - Ejecutando: <MOV_OUT> - <16> - <CX>
+[INFO] 07:56:40:431 [CPU - Log obligatorio]/(36935:37049): Page Fault PID: <4> - Página: <1>
+[INFO] 07:56:43:422 [CPU - Log obligatorio]/(36935:37052): PID: <3> - FETCH - Program Counter: <3>
+[INFO] 07:56:43:924 [CPU - Log obligatorio]/(36935:37052): PID: <3> - Ejecutando: <MOV_OUT> - <16> - <CX>
+[INFO] 07:56:44:425 [CPU - Log obligatorio]/(36935:37052): PID: <3> - OBTENER MARCO - Página: <1> - Marco: <0>
+[INFO] 07:56:44:927 [CPU - Log obligatorio]/(36935:37052): PID: <3> - Acción: <ESCRIBIR> - Dirección Física: <0> - Valor: <19>
+[INFO] 07:56:44:927 [CPU - Log obligatorio]/(36935:37052): PID: <3> - FETCH - Program Counter: <4>
+[INFO] 07:56:45:429 [CPU - Log obligatorio]/(36935:37052): PID: <3> - Ejecutando: <MOV_OUT> - <32> - <CX>
+[INFO] 07:56:45:931 [CPU - Log obligatorio]/(36935:37052): Page Fault PID: <3> - Página: <2>

@@ -59,25 +59,19 @@ t_list* swap_obtener_n_cantidad_de_bloques(int cant_bloques){
 	log_warning(filesystem_logger, "inicio swap_obtener_n_cantidad_de_bloques: %d", bitarray_test_bit(bitmapSWAP, 2));
 
 	for (int i = 0; i < bitarray_get_max_bit(bitmapSWAP); i++) {
-		log_info(filesystem_logger, "VALOR BITMAP: %d en la pos de i: %d", bitarray_test_bit(bitmapSWAP, i), i);
 		if (!bitarray_test_bit(bitmapSWAP, i)) {
-			log_info(filesystem_logger, "AAA 3");
 			int* ptr_contador = malloc(sizeof(int));
 			*ptr_contador = i;
 			list_add(bloques_a_obtener, ptr_contador);
-			log_info(filesystem_logger, "AAA 4");
 			contador++;
 			if (contador == cant_bloques) {
 				break;
 			}
 		} else {
-			log_info(filesystem_logger, "AAA 5");
 			contador = 0;
 			list_clean(bloques_a_obtener);
-			log_info(filesystem_logger, "AAA 6");
 		}
 	}
-	log_info(filesystem_logger, "AAA 7");
 	for(int i=0; i < list_size(bloques_a_obtener); i++){
 		//si sale mal, asignar el list_get a un int
 		bitarray_set_bit(bitmapSWAP, *((int*)list_get(bloques_a_obtener, i)));

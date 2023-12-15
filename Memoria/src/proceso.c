@@ -241,6 +241,7 @@ void cargar_bloques_asignados_en_proceso(t_proceso* un_proceso, t_list* lista_de
 		int* pos_swap = list_get(lista_de_pos_swap, i);
 		t_pagina* una_pagina = list_get(un_proceso->tabla_paginas, i);
 		una_pagina->pos_en_swap = *pos_swap;
+		log_warning(memoria_logger, ">>>>> CARGA_BLOQUES_PAG: PID:%d|PAG:%d|POS_SWAP:%d",un_proceso->pid,una_pagina->nro_pagina, una_pagina->pos_en_swap);
 		//
 //		log_warning(memoria_logger, "Seteado pos_swap: <PID:%d> <n_pag:%d> <pos_swap:%d>", un_proceso->pid, i, *pos_swap);
 //		logg_acceso_a_tabla_de_paginas(un_proceso->pid, i, una_pagina->nro_marco);
@@ -248,6 +249,11 @@ void cargar_bloques_asignados_en_proceso(t_proceso* un_proceso, t_list* lista_de
 	log_warning(memoria_logger, "Se Cargaron pos_SWAP en proceso <PID:%d>", un_proceso->pid);
 }
 
+t_pagina* pag_obtener_pagina_completa_(t_proceso* un_proceso, int nro_pagina){
+	t_pagina* una_pagina = list_get(un_proceso->tabla_paginas, nro_pagina);
+//	log_info(memoria_log_obligatorio, "PID: <%d> - Pagina: <%d> - Marco: NULL", un_proceso->pid, nro_pagina);
+	return una_pagina;
+}
 
 t_pagina* pag_obtener_pagina_completa(t_proceso* un_proceso, int nro_pagina){
 	t_pagina* una_pagina = list_get(un_proceso->tabla_paginas, nro_pagina);

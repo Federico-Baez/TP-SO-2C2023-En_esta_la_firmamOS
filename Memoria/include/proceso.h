@@ -22,6 +22,7 @@ char* obtener_instruccion_por_indice(t_proceso* un_proceso, int indice_instrucci
 void cargar_bloques_asignados_en_proceso(t_proceso* un_proceso, t_list* lista_de_pos_swap);
 
 t_pagina* pag_obtener_pagina_completa(t_proceso* un_proceso, int nro_pagina);
+t_pagina* pag_obtener_pagina_completa_(t_proceso* un_proceso, int nro_pagina);
 int pag_obtener_nro_de_marco(t_proceso* un_proceso, int nro_pagina);
 int pag_obtener_pos_en_swap(t_proceso* un_proceso, int nro_pagina);
 bool pag_obtener_bit_de_PRESENCIA(t_proceso* un_proceso, int nro_pagina);

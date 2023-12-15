@@ -7,11 +7,14 @@ void asignar_posicions_de_SWAP_a_tabla_de_paginas_de_un_proceso(t_buffer* un_buf
 	int pid = recibir_int_del_buffer(un_buffer);
 	int cant_bloques = recibir_int_del_buffer(un_buffer);
 
+	log_warning(memoria_logger, ">>>>> PID:%d | BLOQUES:%d", pid, cant_bloques);
+
 	//Extrayendo pos_en_swap del buffer en una lista auxiliar
 	t_list* lista_de_pos_swap = list_create();
 	for(int i=0; i<cant_bloques; i++){
 		int* pos_en_swap = malloc(sizeof(int));
 		*pos_en_swap = recibir_int_del_buffer(un_buffer);
+		log_info(memoria_logger, ">>>>>LLEGA:: PID:%d | POS_SWAP:%d",pid,*pos_en_swap);
 		list_add(lista_de_pos_swap, pos_en_swap);
 	}
 
@@ -58,6 +61,9 @@ void atender_lectura_de_pagina_de_swap_a_memoria(t_buffer* un_buffer){
 
 	//Setear pagina
 	una_pagina->presente = true;
+
+	log_info(memoria_logger, ">>>>SETEADO");
+	sleep(3);
 
 	//Avisar a KERNEL el exito de la operacion
 	enviar_a_kernel_rpta_del_pedido_de_carga_de_pagina(pid);
@@ -114,7 +120,7 @@ void enviar_a_fs_peticion_de_asignacion_de_bloques(int pid, int cantidad_de_pagi
 
 void enviar_a_fs_orden_de_liberacion_de_posiciones_swap(t_proceso* un_proceso){
 	//[int cant_bloq_swap][int][int]...[int]
-	retardo_respuesta_cpu_fs();
+//	retardo_respuesta_cpu_fs();
 	int cant_elementos = list_size(un_proceso->tabla_paginas);
 	t_paquete* un_paquete = crear_super_paquete(LIBERAR_PAGINAS_FM);
 	cargar_int_al_super_paquete(un_paquete, cant_elementos);
@@ -129,7 +135,7 @@ void enviar_a_fs_orden_de_liberacion_de_posiciones_swap(t_proceso* un_proceso){
 
 void evniar_pagina_a_fs_area_swap(int pos_swap, void* coso_marco){
 	//[int pos_swap][void* choclo]
-	retardo_respuesta_cpu_fs();
+//	retardo_respuesta_cpu_fs();
 	t_paquete* un_paquete = crear_super_paquete(GUARDAR_MARCO_EN_SWAP_FM);
 	cargar_int_al_super_paquete(un_paquete, pos_swap);
 	cargar_choclo_al_super_paquete(un_paquete, coso_marco, TAM_PAGINA);

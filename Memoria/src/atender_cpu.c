@@ -23,18 +23,20 @@ void atender_consulta_de_pagina(t_buffer* unBuffer){
 	int nro_pagina = recibir_int_del_buffer(unBuffer);
 
 	t_proceso* un_proceso = obtener_proceso_por_id(pid);
-	t_pagina* una_pagina = pag_obtener_pagina_completa(un_proceso, nro_pagina);
+	t_pagina* una_pagina = pag_obtener_pagina_completa_(un_proceso, nro_pagina);
 
 	int respuesta_a_cpu;
 	if(una_pagina->presente){
 		respuesta_a_cpu = una_pagina->nro_marco;
 		t_marco* un_marco = obtener_marco_por_nro_marco(una_pagina->nro_marco);
 		setear_config_por_ultima_referencia(un_marco);
+		logg_acceso_a_tabla_de_paginas(pid, nro_pagina, un_marco->nro_marco);
 		log_info(memoria_log_obligatorio, "PAGINA ENCONTRADA <PID:%d> <Pag:%d> <Marco:%d>", pid, nro_pagina, una_pagina->nro_marco);
 	}else{
 		respuesta_a_cpu = -1;
 		log_warning(memoria_log_obligatorio, "PAGEFAULT <PID:%d> <Pag:%d>", pid, nro_pagina);
 	}
+	log_info(memoria_logger, "AAA_0");
 	enviar_a_CPU_respuesta_por_consulta_de_pagina(respuesta_a_cpu);
 }
 
@@ -95,6 +97,7 @@ void enviar_una_instruccion_a_cpu(char* instruccion){
 void enviar_a_CPU_respuesta_por_consulta_de_pagina(int respuesta_a_cpu){
 	// M -> CPU : [int nro_bloque_o_(-1)_pagefault]
 	retardo_respuesta_cpu_fs();
+	log_info(memoria_logger, "AAA_1");
 	t_paquete* un_paquete = crear_super_paquete(CONSULTA_DE_PAGINA_CM);
 	cargar_int_al_super_paquete(un_paquete, respuesta_a_cpu);
 	enviar_paquete(un_paquete, fd_cpu);
