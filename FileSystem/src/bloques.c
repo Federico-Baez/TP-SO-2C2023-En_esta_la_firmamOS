@@ -56,8 +56,9 @@ t_list* swap_obtener_n_cantidad_de_bloques(int cant_bloques){
 
 	int contador = 0;
 
-	log_warning(filesystem_logger, "inicio swap_obtener_n_cantidad_de_bloques: %d", bitarray_test_bit(bitmapSWAP, 2));
-
+	//log_warning(filesystem_logger, "inicio swap_obtener_n_cantidad_de_bloques: %d", bitarray_test_bit(bitmapSWAP, 2));
+	log_warning(filesystem_logger, "inicio swap_obtener_n_cantidad_de_bloques: %d", cant_bloques);
+	log_warning(filesystem_logger, "bitarray_get_max_bit(bitmapSWAP): %d", bitarray_get_max_bit(bitmapSWAP));
 	for (int i = 0; i < bitarray_get_max_bit(bitmapSWAP); i++) {
 		if (!bitarray_test_bit(bitmapSWAP, i)) {
 			int* ptr_contador = malloc(sizeof(int));

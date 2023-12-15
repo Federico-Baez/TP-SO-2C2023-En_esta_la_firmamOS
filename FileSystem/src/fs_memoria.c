@@ -128,6 +128,7 @@ void enviar_bloque_pagina_a_memoria(int pid, int nro_pagina, void* un_bloque){
 
 void enviar_rpta_a_kernel_del_f_write(int pid){
 	log_warning(filesystem_logger, "inicio enviar_rpta_a_kernel_del_f_write");
+	//log_error(kernel_logger, "ENTRO A desbloquear_proceso_por_pid: %d", pid);
 	t_paquete* un_paquete = crear_super_paquete(RESPUESTA_F_WRITE_FK);
 	cargar_string_al_super_paquete(un_paquete, "OK");
 	cargar_int_al_super_paquete(un_paquete, pid);

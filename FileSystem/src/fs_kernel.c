@@ -72,6 +72,7 @@ void atender_f_truncate_de_kernel(t_buffer* un_buffer){
 	if(tamanio_nuevo > tamanio_viejo){
 		if(tamanio_viejo == 0){
 			lista_bloques_libres_asignados = obtener_n_cantidad_de_bloques_libres_de_tabla_fat(cantidad_bloques);
+			log_info(filesystem_log_obligatorio, " Tamaño LISTA BLOQ ASIG: <%d>", lista_bloques_libres_asignados);
 			cargar_secuencia_de_bloques_asignados_a_tabla_fat(lista_bloques_libres_asignados);
 			fcb->bloque_inicial = *((int*)list_get(lista_bloques_libres_asignados, 0));
 
@@ -87,7 +88,7 @@ void atender_f_truncate_de_kernel(t_buffer* un_buffer){
 		}
 	}
 
-	log_info(filesystem_log_obligatorio, "Truncar Archivo: %s - Tamaño: %d", nombre_archivo, tamanio_nuevo);
+	log_info(filesystem_log_obligatorio, "Truncar Archivo: <%s> - Tamaño: <%d>", nombre_archivo, tamanio_nuevo);
 	enviar_rta_f_truncate_a_kernel(pid_process);
 	free(un_buffer);
 	if(!list_is_empty(lista_bloques_libres_asignados)){
@@ -113,6 +114,8 @@ void atender_f_read_de_kernel(t_buffer* un_buffer){
 	// Se supone que si usamos mmap ya me da el bloque y puedo mandarselo a memoria.
 	enviar_contenido_a_memoria(pid_process,dir_fisica, bloque_a_leer);
 
+	log_info(filesystem_log_obligatorio, "Leer Archivo: <%s> - Puntero: <%d> - Memoria: <%d>", nombre_archivo, puntero, dir_fisica);
+
 	// Ahora queda esperar la respuesta de memoria en atender_memoria
 	free(un_buffer);
 	log_warning(filesystem_logger, "fin atender_f_read_de_kernel");
@@ -131,6 +134,8 @@ void atender_f_write_de_kernel(t_buffer* un_buffer){
 	uint32_t bloque_a_escribir_fat = obtener_el_nro_bloque_segun_el_la_posicion_del_seek(fcb->bloque_inicial, puntero);
 
 	enviar_solicitud_de_escritura_a_memoria(pid_process, dir_fisica, bloque_a_escribir_fat, nombre_archivo);
+
+	log_info(filesystem_log_obligatorio, "Escribir Archivo: <%s> - Puntero: <%d> - Memoria: <%d>", nombre_archivo, puntero, dir_fisica);
 
 	// Ahora queda esperar la respuesta de memoria en atender_memoria
 	// y desde fs_memoria se sigue con el procedimiento
