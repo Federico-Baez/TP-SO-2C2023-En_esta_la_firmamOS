@@ -90,6 +90,9 @@ void inicializar_memoria(){
 	pthread_mutex_init(&mutex_espacio_usuario, NULL);
 	pthread_mutex_init(&mutex_ord_carga_global, NULL);
 
+	sem_init(&sem_control_swap_asign, 0, 0);
+	sem_init(&sem_rpta_pagefault, 0, 0);
+
 }
 
 void* buscar_tabla(int pid){
@@ -201,6 +204,7 @@ void atender_kernel(int cliente_socket) {
 					break;
 				case PETICION_PAGE_FAULT_KM: //[int pid][int nro_pagina]
 					unBuffer = recibiendo_super_paquete(fd_kernel);
+					log_info(memoria_logger, "PAGE_FAUL: K->M");
 					atender_pagefault_kernel(unBuffer);
 					break;
 			case -1:
@@ -287,6 +291,7 @@ void atender_filesystem(int cliente_socket){
 			unBuffer = recibiendo_super_paquete(fd_filesystem);
 //			retardo_respuesta_cpu_fs();
 			asignar_posicions_de_SWAP_a_tabla_de_paginas_de_un_proceso(unBuffer);
+			sem_post(&sem_control_swap_asign);
 			//
 			break;
 		case LIBERAR_PAGINAS_FM: //[FALTA] Coordinarlo y leer TP
@@ -300,7 +305,8 @@ void atender_filesystem(int cliente_socket){
 //			retardo_respuesta_cpu_fs();
 			//
 			break;
-		case BLOQUE_DE_MEMORIA_A_FILESYSTEM_FM: //[int pid][int dir_fisica]
+		case BLOQUE_DE_MEMORIA_A_FILESYSTEM_FM:
+			//[int pid][int dir_fisica][int nro_bloque][char* nombre_archivo]
 			unBuffer = recibiendo_super_paquete(fd_filesystem);
 			atender_bloque_de_memoria_y_llevarlos_a_fylesystem(unBuffer);
 //			retardo_respuesta_cpu_fs();

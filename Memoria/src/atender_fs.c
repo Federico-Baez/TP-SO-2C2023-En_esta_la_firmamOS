@@ -7,11 +7,14 @@ void asignar_posicions_de_SWAP_a_tabla_de_paginas_de_un_proceso(t_buffer* un_buf
 	int pid = recibir_int_del_buffer(un_buffer);
 	int cant_bloques = recibir_int_del_buffer(un_buffer);
 
+	log_warning(memoria_logger, ">>>>> PID:%d | BLOQUES:%d", pid, cant_bloques);
+
 	//Extrayendo pos_en_swap del buffer en una lista auxiliar
 	t_list* lista_de_pos_swap = list_create();
 	for(int i=0; i<cant_bloques; i++){
 		int* pos_en_swap = malloc(sizeof(int));
 		*pos_en_swap = recibir_int_del_buffer(un_buffer);
+		log_info(memoria_logger, ">>>>>LLEGA:: PID:%d | POS_SWAP:%d",pid,*pos_en_swap);
 		list_add(lista_de_pos_swap, pos_en_swap);
 	}
 
@@ -53,6 +56,15 @@ void atender_lectura_de_pagina_de_swap_a_memoria(t_buffer* un_buffer){
 	//Guardar en el espacio_usuario el choclo
 	escribir_pagina_en_una_dir_fisica_especifica(pid, un_marco->base, pagina);
 
+	//Setear config por ultima referencia
+	setear_config_del_marco_segun_algoritmo(un_marco);
+
+	//Setear pagina
+	una_pagina->presente = true;
+
+	log_info(memoria_logger, ">>>>SETEADO");
+	sleep(3);
+
 	//Avisar a KERNEL el exito de la operacion
 	enviar_a_kernel_rpta_del_pedido_de_carga_de_pagina(pid);
 }
@@ -60,12 +72,17 @@ void atender_lectura_de_pagina_de_swap_a_memoria(t_buffer* un_buffer){
 void atender_bloque_de_memoria_y_llevarlos_a_fylesystem(t_buffer* un_buffer){
 	int pid = recibir_int_del_buffer(un_buffer);
 	int dir_fisica = recibir_int_del_buffer(un_buffer);
+	int nro_bloque = recibir_int_del_buffer(un_buffer);
+	char* nombre_archivo = recibir_string_del_buffer(un_buffer);
 
 	//Extraer el marco completo en un void*
 	void* un_marco = copiar_marco_desde_una_dir_fisica(pid, dir_fisica);
 
+	//Setear referencia al marco
+	setear_config_por_ultima_referencia(un_marco);
+
 	//Enviar marco a FS
-	enviar_marco_a_fs(pid, un_marco);
+	enviar_marco_a_fs(pid, nro_bloque, un_marco, nombre_archivo);
 
 	free(un_marco);
 
@@ -78,6 +95,11 @@ void atender_bloque_de_fs_a_memoria(t_buffer* un_buffer){
 
 	//Guardar bloque en memoria
 	escribir_pagina_en_una_dir_fisica_especifica(pid, dir_fisica, choclito_bloque);
+
+	//Setear referencia al marco
+	int nro_marco = obtener_nro_marco_a_partir_de_una_dir_fisica(dir_fisica);
+	t_marco* un_marco = obtener_marco_por_nro_marco(nro_marco);
+	setear_config_del_marco_segun_algoritmo(un_marco);
 
 	//Responder a FS el exito de la operacion
 	enviar_rpta_por_pedido_de_escritura_en_memoria(pid);
@@ -98,7 +120,7 @@ void enviar_a_fs_peticion_de_asignacion_de_bloques(int pid, int cantidad_de_pagi
 
 void enviar_a_fs_orden_de_liberacion_de_posiciones_swap(t_proceso* un_proceso){
 	//[int cant_bloq_swap][int][int]...[int]
-	retardo_respuesta_cpu_fs();
+//	retardo_respuesta_cpu_fs();
 	int cant_elementos = list_size(un_proceso->tabla_paginas);
 	t_paquete* un_paquete = crear_super_paquete(LIBERAR_PAGINAS_FM);
 	cargar_int_al_super_paquete(un_paquete, cant_elementos);
@@ -113,7 +135,7 @@ void enviar_a_fs_orden_de_liberacion_de_posiciones_swap(t_proceso* un_proceso){
 
 void evniar_pagina_a_fs_area_swap(int pos_swap, void* coso_marco){
 	//[int pos_swap][void* choclo]
-	retardo_respuesta_cpu_fs();
+//	retardo_respuesta_cpu_fs();
 	t_paquete* un_paquete = crear_super_paquete(GUARDAR_MARCO_EN_SWAP_FM);
 	cargar_int_al_super_paquete(un_paquete, pos_swap);
 	cargar_choclo_al_super_paquete(un_paquete, coso_marco, TAM_PAGINA);
@@ -133,12 +155,14 @@ void pedir_lectura_de_pag_swap_a_fs(int pid, int nro_pagina, int pos_en_swap){
 	eliminar_paquete(un_paquete);
 }
 
-void enviar_marco_a_fs(int pid, void* un_marco){
-	//[int pid][void* marco_bloque]
+void enviar_marco_a_fs(int pid, int nro_bloque, void* un_marco, char* nombre_archivo){
+	//[int pid][int nro_bloque][void* marco_bloque][char* nombre_archivo]
 	retardo_respuesta_cpu_fs();
 	t_paquete* un_paquete = crear_super_paquete(BLOQUE_DE_MEMORIA_A_FILESYSTEM_FM);
 	cargar_int_al_super_paquete(un_paquete, pid);
+	cargar_int_al_super_paquete(un_paquete, nro_bloque);
 	cargar_choclo_al_super_paquete(un_paquete, un_marco, TAM_PAGINA);
+	cargar_string_al_super_paquete(un_paquete, nombre_archivo);
 	enviar_paquete(un_paquete, fd_filesystem);
 	eliminar_paquete(un_paquete);
 }

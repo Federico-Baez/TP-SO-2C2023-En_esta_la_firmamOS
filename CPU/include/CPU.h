@@ -1,20 +1,7 @@
 #ifndef CPU_H_
 #define CPU_H_
 
-#include <protocolo.h>
-#include <commons/log.h>
-#include <commons/config.h>
-#include <commons/collections/list.h>
-#include <commons/string.h>
-#include <shared.h>
-#include <pthread.h>
-#include <protocolo.h>
-#include <socket.h>
-#include <stdlib.h>
-#include <stdio.h>
-#include <semaphore.h>
-
-#include <math.h>
+#include "../../Shared/include/shared.h"
 
 #define IP_CPU "127.0.0.1"
 

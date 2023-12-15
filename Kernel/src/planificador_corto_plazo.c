@@ -26,6 +26,7 @@ static void _programar_interrupcion_por_quantum(t_pcb* un_pcb){
 
 static void _atender_RR_FIFO(){
 	//Verificar que la lista de EXECUTE esté vacía
+
 	pthread_mutex_lock(&mutex_lista_exec);
 	if(list_is_empty(lista_execute)){
 		t_pcb* un_pcb = NULL;
@@ -38,7 +39,6 @@ static void _atender_RR_FIFO(){
 		pthread_mutex_unlock(&mutex_lista_ready);
 
 		if(un_pcb != NULL){
-
 			list_add(lista_execute, un_pcb);
 			cambiar_estado(un_pcb, EXEC);
 			log_info(kernel_log_obligatorio, " PID: %d - Estado Anterior: READY - Estado Actual: EXEC", un_pcb -> pid);
@@ -109,11 +109,13 @@ void pcp_planificar_corto_plazo(){
 	int flag_lista_ready_vacia = 0;
 
 	pthread_mutex_lock(&mutex_lista_ready);
-	if(list_is_empty(lista_ready))
+	if(list_is_empty(lista_ready)){
 		flag_lista_ready_vacia = 1;
+	}
 	pthread_mutex_unlock(&mutex_lista_ready);
 
 	if(flag_lista_ready_vacia == 0){
+
 		switch (ALGORITMO_PLANIFICACION) {
 			case FIFO:
 				_atender_RR_FIFO();

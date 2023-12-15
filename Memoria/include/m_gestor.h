@@ -63,6 +63,8 @@ extern pthread_mutex_t mutex_lst_marco;
 extern pthread_mutex_t mutex_espacio_usuario;
 extern pthread_mutex_t mutex_ord_carga_global;
 extern int ordenCargaGlobal;
+extern sem_t sem_control_swap_asign;
+extern sem_t sem_rpta_pagefault;
 //-------------------
 
 

@@ -12,8 +12,13 @@ t_proceso* crear_proceso(int pid, int size, char* path_instruc){
 
 	//Cargando instrucciones
 	proceso_nuevo->instrucciones = leer_archivo_y_cargar_instrucciones(proceso_nuevo->pathInstrucciones);
+
 	//Creando Paginas necesarias y Asignar marcos
-	crear_paginas_y_asignar_marcos_para_un_proceso_nuevo(proceso_nuevo);
+//	crear_paginas_y_asignar_marcos_para_un_proceso_nuevo(proceso_nuevo);
+
+	//Solo crear paginas y crear tabla de paginas
+	solo_crear_y_setear_tabla_de_paginas(proceso_nuevo);
+
 	//Logg Obligatorio
 	logg_crear_tabla_de_paginas(proceso_nuevo->pid, list_size(proceso_nuevo->tabla_paginas));
 
@@ -49,8 +54,11 @@ void eliminar_tabla_de_paginas(t_proceso* un_proceso){
 	int cant_paginas = list_size(un_proceso->tabla_paginas);
 	void _eliminar_pagina_y_liberar_marco(t_pagina* una_pagina){
 		//Marcar como libre el marco correspondiente
-		t_marco* un_marco = obtener_marco_por_nro_marco(una_pagina->nro_marco);
-		liberar_marco(un_marco);
+		if(una_pagina->presente){
+			t_marco* un_marco = obtener_marco_por_nro_marco(una_pagina->nro_marco);
+			liberar_marco(un_marco);
+
+		}
 		free(una_pagina);
 	}
 	list_destroy_and_destroy_elements(un_proceso->tabla_paginas, (void*)_eliminar_pagina_y_liberar_marco);
@@ -64,7 +72,7 @@ void crear_paginas_y_asignar_marcos_para_un_proceso_nuevo(t_proceso* un_proceso)
 	for(int i=0; i<cantidad_paginas_necesarias; i++){
 		t_pagina* una_pagina = malloc(sizeof(t_pagina));
 		una_pagina->nro_pagina = i;
-		una_pagina->presente = true;
+		una_pagina->presente = false;
 		una_pagina->modificado = false;
 
 		//Asignando marco a cada pagina
@@ -101,6 +109,21 @@ void crear_paginas_y_asignar_marcos_para_un_proceso_nuevo(t_proceso* un_proceso)
 			exit(EXIT_FAILURE);
 		}
 	}
+}
+
+void solo_crear_y_setear_tabla_de_paginas(t_proceso* un_proceso){
+	int cantidad_paginas_necesarias = (int)ceil(un_proceso->size / TAM_PAGINA);
+	for(int i=0; i<cantidad_paginas_necesarias; i++){
+		t_pagina* una_pagina = malloc(sizeof(t_pagina));
+		una_pagina->nro_pagina = i;
+		una_pagina->presente = false;
+		una_pagina->modificado = false;
+
+		list_add(un_proceso->tabla_paginas, una_pagina);
+	}
+
+
+
 }
 
 t_list* leer_archivo_y_cargar_instrucciones(const char* path_archivo) {
@@ -218,6 +241,7 @@ void cargar_bloques_asignados_en_proceso(t_proceso* un_proceso, t_list* lista_de
 		int* pos_swap = list_get(lista_de_pos_swap, i);
 		t_pagina* una_pagina = list_get(un_proceso->tabla_paginas, i);
 		una_pagina->pos_en_swap = *pos_swap;
+		log_warning(memoria_logger, ">>>>> CARGA_BLOQUES_PAG: PID:%d|PAG:%d|POS_SWAP:%d",un_proceso->pid,una_pagina->nro_pagina, una_pagina->pos_en_swap);
 		//
 //		log_warning(memoria_logger, "Seteado pos_swap: <PID:%d> <n_pag:%d> <pos_swap:%d>", un_proceso->pid, i, *pos_swap);
 //		logg_acceso_a_tabla_de_paginas(un_proceso->pid, i, una_pagina->nro_marco);
@@ -225,6 +249,11 @@ void cargar_bloques_asignados_en_proceso(t_proceso* un_proceso, t_list* lista_de
 	log_warning(memoria_logger, "Se Cargaron pos_SWAP en proceso <PID:%d>", un_proceso->pid);
 }
 
+t_pagina* pag_obtener_pagina_completa_(t_proceso* un_proceso, int nro_pagina){
+	t_pagina* una_pagina = list_get(un_proceso->tabla_paginas, nro_pagina);
+//	log_info(memoria_log_obligatorio, "PID: <%d> - Pagina: <%d> - Marco: NULL", un_proceso->pid, nro_pagina);
+	return una_pagina;
+}
 
 t_pagina* pag_obtener_pagina_completa(t_proceso* un_proceso, int nro_pagina){
 	t_pagina* una_pagina = list_get(un_proceso->tabla_paginas, nro_pagina);

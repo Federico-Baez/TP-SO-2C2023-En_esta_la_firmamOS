@@ -1,0 +1,10 @@
+SET BX 1
+F_OPEN consolas R
+F_SEEK consolas 16
+F_READ consolas 0
+MOV_IN AX 0
+MOV_IN BX 4
+MOV_IN CX 8
+MOV_IN DX 12
+F_CLOSE consolas
+EXIT

@@ -28,6 +28,8 @@ int server_fd_memoria;
 void* espacio_usuario;
 
 int ordenCargaGlobal = 1;
+sem_t sem_control_swap_asign;
+sem_t sem_rpta_pagefault;
 /*
  * MEMORIA VIRTUAL
  */

@@ -24,7 +24,7 @@ void enviar_a_fs_peticion_de_asignacion_de_bloques(int pid, int cantidad_de_pagi
 void enviar_a_fs_orden_de_liberacion_de_posiciones_swap(t_proceso* un_proceso);
 void evniar_pagina_a_fs_area_swap(int pos_swap, void* coso_marco);
 void pedir_lectura_de_pag_swap_a_fs(int pid, int nro_pagina, int pos_en_swap);
-void enviar_marco_a_fs(int pid, void* un_marco);
+void enviar_marco_a_fs(int pid, int nro_bloque, void* un_marco, char* nombre_archivo);
 void enviar_rpta_por_pedido_de_escritura_en_memoria(int pid);
 
 

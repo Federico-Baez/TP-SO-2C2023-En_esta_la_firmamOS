@@ -4,6 +4,7 @@ static void _finalizar_logger(){
 	log_destroy(kernel_logger);
 	log_destroy(kernel_log_obligatorio);
 }
+
 static void _finalizar_config(){
 	string_array_destroy(RECURSOS);
 	string_array_destroy(INSTANCIAS_RECURSOS);
@@ -18,7 +19,6 @@ static void _finalizar_listas(){
 	list_destroy(lista_blocked);
 	list_destroy(lista_exit);
 	list_destroy(lista_general);
-	list_destroy(lista_recursos);
 	list_destroy(cola_blocked_fs);
 }
 
@@ -60,23 +60,26 @@ static void _finalizar_recursos(){
 	void __eliminar_nodo_recurso(t_recurso* un_recurso){
 		list_destroy(un_recurso->lista_bloqueados);
 		pthread_mutex_destroy(&un_recurso->mutex_bloqueados);
+		un_recurso->pcb_asignado = NULL;
 		free(un_recurso);
 	}
 
-	list_clean_and_destroy_elements(lista_recursos, (void*)__eliminar_nodo_recurso);
+	list_destroy_and_destroy_elements(lista_recursos, (void*)__eliminar_nodo_recurso);
 }
-
-//typedef struct{
-//	char* nombre_archivo;
-//	t_lock_escritura* lock_escritura; // 'w' para escritura
-//	t_lock_lectura* lock_lectura;  // 'r' para lectura
-//	t_list* cola_block_procesos; // Procesos en espera para acceder al archivo
-//	pthread_mutex_t mutex_cola_block;
-//	int size; // tamaño del archivo
-//}t_archivo;
 
 static void _finalizar_archivos(){
 
+	void __eliminar_nodo_archivo(t_archivo* archivo){
+		list_destroy(archivo->cola_block_procesos);
+		pthread_mutex_destroy(&archivo->mutex_cola_block);
+		free(archivo->nombre_archivo);
+		archivo->lock_escritura->pcb = NULL;
+		list_destroy(archivo->lock_lectura->lista_participantes);
+		pthread_mutex_destroy(&archivo->lock_lectura->mutex_lista_asiganada);
+		free(archivo);
+	}
+
+	list_destroy_and_destroy_elements(lista_archivos_abiertos, (void*)__eliminar_nodo_archivo);
 }
 
 static void _destruir_conexiones(){

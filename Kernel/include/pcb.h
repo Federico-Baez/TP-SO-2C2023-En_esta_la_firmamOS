@@ -18,6 +18,9 @@ void imprimir_pcb_v2(t_pcb* una_pcb);
 
 t_pcb* buscar_y_remover_pcb_por_pid(int un_pid);
 
+void destruir_t_archivos_abiertos (t_list* lista_archivos_abiertos_pcb);
+
+
 // Envios a CPU por DISPATCH
 void _enviar_pcb_a_CPU_por_dispatch(t_pcb* una_pcb);
 void _enviar_respuesta_instruccion_CPU_por_dispatch(int respuesta);
@@ -35,7 +38,7 @@ void asignar_recurso_liberado_pcb(t_recurso* recurso);
 t_pcb* recibir_pcb_memoria(t_buffer* un_buffer);
 t_pcb* buscar_pcb_por_pid_en(int un_pid, t_list* lista_estado, pthread_mutex_t mutex_lista);
 
-void desbloquear_proceso_por_pid(int pid_process);
+void desbloquear_proceso_por_pid(int* pid_process);
 void bloquear_proceso_cola_fs(t_pcb* pcb, t_archivo* archivo);
 
 // Funciones para Archivos

@@ -1,15 +1,10 @@
-#include <stdio.h>
-#include <stdlib.h>
-
 #include "../include/CPU.h"
-#include "../include/CPU.h"
-#include "../../Shared/include/protocolo.h"
 
 int main(int argc, char** argv) {
 	cpu_logger = log_create("cpu.log", "[CPU]", 1, LOG_LEVEL_INFO);
 	cpu_log_obligatorio = log_create("cpu_log_obligatorio.log", "[CPU - Log obligatorio]", 1, LOG_LEVEL_INFO);
 
-	cpu_config = config_create(argv[1]); //Esto quiza lo descomentemos para las pruebas
+	cpu_config = config_create(argv[1]); //Esto quiza lo descomentemos para las pruebass
 	//cpu_config = config_create("cpu.config");
 
 	if(cpu_config == NULL){
@@ -490,7 +485,10 @@ void ciclo_de_instruccion_execute(){
 		log_info(cpu_log_obligatorio, "PID: <%d> - Ejecutando: <%s> - <%s> - <%s>", contexto->proceso_pid, instruccion_split[0], instruccion_split[1], instruccion_split[2]);
 		contexto->proceso_ip = contexto->proceso_ip + 1;
 		uint32_t* registro_referido = detectar_registro(instruccion_split[1]);
-		*registro_referido = strtoul(instruccion_split[1], NULL, 10);
+		log_info(cpu_logger, "AAAA 1");
+//		*registro_referido = strtoul(instruccion_split[1], NULL, 10);
+		*registro_referido = atoi(instruccion_split[2]);
+		log_info(cpu_logger, "AAAA 1: %u", *registro_referido);
 
 	}else if(strcmp(instruccion_split[0], "SUM") == 0){//[SUM][destino:AX][origen:BX]
 		log_info(cpu_log_obligatorio, "PID: <%d> - Ejecutando: <%s> - <%s> - <%s>", contexto->proceso_pid, instruccion_split[0], instruccion_split[1], instruccion_split[2]);
@@ -509,11 +507,14 @@ void ciclo_de_instruccion_execute(){
 	}else if(strcmp(instruccion_split[0], "JNZ") == 0){// [JNZ][Registro][Instruccion]
 		log_info(cpu_log_obligatorio, "PID: <%d> - Ejecutando: <%s> - <%s> - <%s>", contexto->proceso_pid, instruccion_split[0], instruccion_split[1], instruccion_split[2]);
 		uint32_t* registro_referido = detectar_registro(instruccion_split[1]);
+		log_info(cpu_logger, "REgistro_referido:%u", *registro_referido);
 		if(*registro_referido != 0) {
 			contexto->proceso_ip = atoi(instruccion_split[2]);
+			log_info(cpu_logger, "Entre IF JNZ:");
 		}else{
 			contexto->proceso_ip ++;
 		}
+		log_info(cpu_logger, "SALI IF JNZ:%d",contexto->proceso_ip);
 
 	}else if(strcmp(instruccion_split[0], "SLEEP") == 0){// [SLEEP][tiempo]
 		log_info(cpu_log_obligatorio, "PID: <%d> - Ejecutando: <%s> - <%s>", contexto->proceso_pid, instruccion_split[0], instruccion_split[1]);
@@ -563,9 +564,9 @@ void ciclo_de_instruccion_execute(){
 
 	    uint32_t* registro_destino = detectar_registro(instruccion_split[1]);
 	    int direccion_logica = atoi(instruccion_split[2]);
-	    uint32_t valor = solicitar_valor_memoria(direccion_logica);
+	    int valor = solicitar_valor_memoria(direccion_logica);
 	    if(valor != -1){ // NO hubo PF
-	    	*registro_destino = valor;
+	    	*registro_destino = (uint32_t)valor;
 	    }
 
 	}else if(strcmp(instruccion_split[0], "MOV_OUT") == 0){// [MOV_OUT][Dir_logica][RX]
@@ -681,6 +682,7 @@ int MMU(int dir_logica){
 
 	sem_wait(&sem_control_peticion_marco_a_memoria);
 
+	log_error(cpu_logger, ">>>>>>< Nro_marco:%d",marco);
 	if(marco >= 0){
 		log_info(cpu_log_obligatorio, "PID: <%d> - OBTENER MARCO - Página: <%d> - Marco: <%d>", contexto->proceso_pid, num_pagina, marco);
 		int dir_fisica = marco *tam_pagina + desplazamiento;
@@ -715,7 +717,8 @@ int solicitar_valor_memoria(int dir_logica){
 
 		log_info(cpu_log_obligatorio, "PID: <%d> - Acción: <LEER> - Dirección Física: <%d> - Valor: <%d>", contexto->proceso_pid, dir_fisica, *valorMarco);
 
-		return *valorMarco;
+		int aux_valor_marco = *valorMarco;
+		return aux_valor_marco;
 	}
 }
 
@@ -723,7 +726,7 @@ int solicitar_valor_memoria(int dir_logica){
 void escribir_valor_memoria(int dir_logica, uint32_t valorAEscribir){
 	int dir_fisica = MMU(dir_logica);
 
-	if(dir_logica != -1){
+	if(dir_fisica != -1){
 		//Le pido a memoria escribir el contenido del registro en la direccion fisica
 		t_paquete* paqueteEscrituraMemoria = crear_super_paquete(ESCRITURA_BLOQUE_CM);
 		cargar_int_al_super_paquete(paqueteEscrituraMemoria, contexto->proceso_pid);
@@ -741,27 +744,38 @@ void escribir_valor_memoria(int dir_logica, uint32_t valorAEscribir){
 
 /*Descargando contenido del buffer y actualizando el contenido de los registros*/
 void iniciar_estructuras_para_atender_al_proceso(t_buffer*  unBuffer){
-	contexto= (t_contexto*) malloc(sizeof(t_contexto));
+	contexto= malloc(sizeof(t_contexto));
 
-	void* bufferRecibido = unBuffer->stream;
+	contexto->proceso_pid = recibir_int_del_buffer(unBuffer);
+	contexto->proceso_ticket = recibir_int_del_buffer(unBuffer);
+	contexto->proceso_ip = recibir_int_del_buffer(unBuffer);
+	uint32_t* RRRXXX = (uint32_t*)recibir_choclo_del_buffer(unBuffer);
+	contexto->AX = *RRRXXX;
+	RRRXXX = (uint32_t*)recibir_choclo_del_buffer(unBuffer);
+	contexto->BX = *RRRXXX;
+	RRRXXX = (uint32_t*)recibir_choclo_del_buffer(unBuffer);
+	contexto->CX = *RRRXXX;
+	RRRXXX = (uint32_t*)recibir_choclo_del_buffer(unBuffer);
+	contexto->DX = *RRRXXX;
 
-	int offset = 0;
-
-	// TODO: Confirmar que kernel efectivamente mande el mensaje en este orden
-	memcpy(&(contexto -> proceso_pid), (bufferRecibido + offset), sizeof(int));
-	offset += sizeof(int);
-	memcpy(&(contexto -> proceso_ticket), (bufferRecibido + offset), sizeof(int));
-	offset += sizeof(int);
-	memcpy(&(contexto -> proceso_ip), (bufferRecibido + offset), sizeof(int));
-	offset += sizeof(int);
-	memcpy(&(contexto -> AX), (bufferRecibido + offset), sizeof(uint32_t));
-	offset += sizeof(uint32_t);
-	memcpy(&(contexto -> BX), (bufferRecibido + offset), sizeof(uint32_t));
-	offset += sizeof(uint32_t);
-	memcpy(&(contexto -> CX), (bufferRecibido + offset), sizeof(uint32_t));
-	offset += sizeof(uint32_t);
-	memcpy(&(contexto -> DX), (bufferRecibido + offset), sizeof(uint32_t));
-	offset += sizeof(uint32_t);
+//	void* bufferRecibido = unBuffer->stream;
+//	int offset = 0;
+//
+//	// TODO: Confirmar que kernel efectivamente mande el mensaje en este orden
+//	memcpy(&(contexto -> proceso_pid), (bufferRecibido + offset), sizeof(int));
+//	offset += sizeof(int);
+//	memcpy(&(contexto -> proceso_ticket), (bufferRecibido + offset), sizeof(int));
+//	offset += sizeof(int);
+//	memcpy(&(contexto -> proceso_ip), (bufferRecibido + offset), sizeof(int));
+//	offset += sizeof(int);
+//	memcpy(&(contexto -> AX), (bufferRecibido + offset), sizeof(uint32_t));
+//	offset += sizeof(uint32_t);
+//	memcpy(&(contexto -> BX), (bufferRecibido + offset), sizeof(uint32_t));
+//	offset += sizeof(uint32_t);
+//	memcpy(&(contexto -> CX), (bufferRecibido + offset), sizeof(uint32_t));
+//	offset += sizeof(uint32_t);
+//	memcpy(&(contexto -> DX), (bufferRecibido + offset), sizeof(uint32_t));
+//	offset += sizeof(uint32_t);
 
 	free(unBuffer);
 

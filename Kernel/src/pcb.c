@@ -82,7 +82,17 @@ void destruir_pcb(t_pcb* un_pcb){
 	free(un_pcb->registros_CPU);
 	list_destroy(un_pcb->lista_recursos_pcb);
 	pthread_mutex_destroy(&un_pcb->mutex_lista_recursos);
+	destruir_t_archivos_abiertos(un_pcb->archivos_abiertos);
 	free(un_pcb);
+}
+
+void destruir_t_archivos_abiertos (t_list* lista_archivos_abiertos_pcb){
+	void __eliminar_nodo_archivo_pcb(t_archivo_abierto_pcb* archivo_pcb){
+		free(archivo_pcb->modo_apertura);
+		free(archivo_pcb);
+	}
+
+	list_clean_and_destroy_elements(lista_archivos_abiertos_pcb, (void*)__eliminar_nodo_archivo_pcb);
 }
 
 void imprimir_pcb(t_pcb* un_pcb){
@@ -213,7 +223,6 @@ t_pcb* buscar_pcb_por_pid_en(int un_pid, t_list* lista_estado, pthread_mutex_t m
 	}
 	else{
 		un_pcb = NULL;
-		log_error(kernel_logger, "PID no encontrada en ninguna lista");
 	}
 //	pthread_mutex_unlock(&mutex_lista);
 	return un_pcb;
@@ -369,23 +378,27 @@ void asignar_recurso_liberado_pcb(t_recurso* un_recurso){
 
 		un_recurso->pcb_asignado = pcb_liberado;
 		un_recurso->instancias--;
-		desbloquear_proceso_por_pid(pcb_liberado->pid);
-		log_info(kernel_log_obligatorio, "PID: %d - Wait: %s - Instancias: %d", pcb_liberado->pid, un_recurso->recurso_name, un_recurso->instancias);
+		int* pid_process = malloc(sizeof(int));
+		*pid_process = pcb_liberado->pid;
+		desbloquear_proceso_por_pid(pid_process);
 	}else
 		log_warning(kernel_logger, "La lista de BLOQUEADOS del RECURSO esta vacia");
 
 	pthread_mutex_unlock(&un_recurso->mutex_bloqueados);
 }
 
-void desbloquear_proceso_por_pid(int pid_process){
+void desbloquear_proceso_por_pid(int* pid_process){
 //	Busco el pcb en la lista de bloqueados y lo elimino
+	pausador();
 	pthread_mutex_lock(&mutex_lista_blocked);
-	t_pcb* pcb = buscar_pcb_por_pid_en(pid_process, lista_blocked, mutex_lista_blocked);
-	list_remove_element(lista_blocked, pcb);
+	t_pcb* pcb = buscar_pcb_por_pid_en(*pid_process, lista_blocked, mutex_lista_blocked);
+	if(pcb != NULL){
+		list_remove_element(lista_blocked, pcb);
+	//	El pcb pasa a la lista de READY
+		transferir_from_actual_to_siguiente(pcb, lista_ready, mutex_lista_ready, READY);
+	}
 	pthread_mutex_unlock(&mutex_lista_blocked);
-
-//	El pcb pasa a la lista de READY
-	transferir_from_actual_to_siguiente(pcb, lista_ready, mutex_lista_ready, READY);
+	free(pid_process);
 	pcp_planificar_corto_plazo();
 }
 
