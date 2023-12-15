@@ -108,6 +108,7 @@ void atender_F_open(t_pcb* pcb, char* nombre_archivo, char* tipo_apertura){
 		pthread_mutex_lock(&mutex_existe_archivo);
 		if(flag_existe_archivo == 0){
 			archivo = crear_archivo(nombre_archivo, 0);
+			list_add(lista_archivos_abiertos, archivo);
 			log_info(kernel_logger, "Cree el archivo: %s", archivo->nombre_archivo);
 			send_atender_f_open(nombre_archivo, "CREAR_ARCHIVO");
 			// Espero la respuesta del file system
@@ -202,9 +203,11 @@ void atender_F_truncate(char* nombre_archivo , int nuevo_size_archivo, t_pcb* pc
 		list_remove(lista_execute, 0);
 		pthread_mutex_unlock(&mutex_lista_exec);
 
+
 		transferir_from_actual_to_siguiente(pcb, lista_blocked, mutex_lista_blocked, BLOCKED);
 		log_blocked_proceso(pcb->pid, nombre_archivo);
-
+		t_archivo* archivo = obtener_archivo_global(nombre_archivo);
+		archivo->size = nuevo_size_archivo;
 		// Llamo al planificador para que envie un nuevo preceso a CPU.
 		pcp_planificar_corto_plazo();
 
@@ -308,16 +311,13 @@ t_archivo* crear_archivo(char* nombre_archivo, int size_archivo){
 
 t_archivo* obtener_archivo_global(char* nombre_archivo){
 	t_archivo* archivo;
-	log_info(kernel_logger,"ENtrew a obetener archiso");
 
-		for(int i = 0; i < list_size(lista_archivos_abiertos); i++){
-			log_info(kernel_logger,"Itereacion %d ", i);
-			archivo = list_get(lista_archivos_abiertos, i);
-			log_info(kernel_logger,"Archivo n° %d  --- nombre %s  ", i, archivo->nombre_archivo);
-			if(strcmp(archivo->nombre_archivo, nombre_archivo) == 0){
-					return archivo;
-			}
+	for(int i = 0; i < list_size(lista_archivos_abiertos); i++){
+		archivo = list_get(lista_archivos_abiertos, i);
+		if(strcmp(archivo->nombre_archivo, nombre_archivo) == 0){
+				return archivo;
 		}
+	}
 	return NULL;
 }
 
@@ -361,7 +361,6 @@ void validar_respuesta_F_open(char* operacion, int confirmacion, t_buffer* unBuf
 	}else if(strcmp(operacion , "CREAR_ARCHIVO") == 0){
 		log_info(kernel_logger,"Se creo el archivo en FS");
 	}
-
 }
 
 // ----- ENVIOS A FILE SYSTEM -----

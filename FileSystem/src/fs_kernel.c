@@ -55,9 +55,7 @@ void atender_f_truncate_de_kernel(t_buffer* un_buffer){
 
 	int cantidad_bloques = fcb->tamanio / TAM_BLOQUE;
 
-	t_list* lista_bloques_libres_asignados = obtener_n_cantidad_de_bloques_libres_de_tabla_fat(cantidad_bloques);
-	cargar_secuencia_de_bloques_asignados_a_tabla_fat(lista_bloques_libres_asignados);
-	fcb->bloque_inicial = *((int*)list_get(lista_bloques_libres_asignados, 0));
+
 
 	char* bloque_inicial = malloc(10);
 	sprintf(bloque_inicial, "%d", fcb->bloque_inicial);
@@ -69,9 +67,15 @@ void atender_f_truncate_de_kernel(t_buffer* un_buffer){
 	int cantidad_bloques_viejos = tamanio_viejo / TAM_BLOQUE;
 	int cantidad_bloques_nuevos = tamanio_nuevo / TAM_BLOQUE;
 
+	t_list* lista_bloques_libres_asignados;
+
 	if(tamanio_nuevo > tamanio_viejo){
-		//diferencia_tamanio = tamanio_nuevo - tamanio_viejo;
-		if(cantidad_bloques_viejos != cantidad_bloques_nuevos){
+		if(tamanio_viejo == 0){
+			lista_bloques_libres_asignados = obtener_n_cantidad_de_bloques_libres_de_tabla_fat(cantidad_bloques);
+			cargar_secuencia_de_bloques_asignados_a_tabla_fat(lista_bloques_libres_asignados);
+			fcb->bloque_inicial = *((int*)list_get(lista_bloques_libres_asignados, 0));
+
+		}else if(cantidad_bloques_viejos != cantidad_bloques_nuevos){
 			int agrear_nro_bloques = cantidad_bloques_nuevos - cantidad_bloques_viejos;
 			asignar_mas_nro_de_bloque_a_la_secuencia_de_tabla_fat(fcb->bloque_inicial, agrear_nro_bloques);
 		}
@@ -86,7 +90,9 @@ void atender_f_truncate_de_kernel(t_buffer* un_buffer){
 	log_info(filesystem_log_obligatorio, "Truncar Archivo: %s - Tamaño: %d", nombre_archivo, tamanio_nuevo);
 	enviar_rta_f_truncate_a_kernel(pid_process);
 	free(un_buffer);
-	destruir_bloques_libres(lista_bloques_libres_asignados);
+	if(!list_is_empty(lista_bloques_libres_asignados)){
+		destruir_bloques_libres(lista_bloques_libres_asignados);
+	}
 	log_warning(filesystem_logger, "fin atender_f_truncate_de_kernel");
 }
 
@@ -124,7 +130,7 @@ void atender_f_write_de_kernel(t_buffer* un_buffer){
 
 	uint32_t bloque_a_escribir_fat = obtener_el_nro_bloque_segun_el_la_posicion_del_seek(fcb->bloque_inicial, puntero);
 
-	enviar_solicitud_de_escritura_a_memoria(pid_process, dir_fisica, bloque_a_escribir_fat);
+	enviar_solicitud_de_escritura_a_memoria(pid_process, dir_fisica, bloque_a_escribir_fat, nombre_archivo);
 
 	// Ahora queda esperar la respuesta de memoria en atender_memoria
 	// y desde fs_memoria se sigue con el procedimiento
@@ -167,12 +173,13 @@ void enviar_contenido_a_memoria(int pid_process ,int dir_fisica, void* contenido
 	log_warning(filesystem_logger, "fin enviar_contenido_a_memoria");
 }
 
-void enviar_solicitud_de_escritura_a_memoria(int pid_process, int dir_fisica, uint32_t bloque_a_escribir_fat){
+void enviar_solicitud_de_escritura_a_memoria(int pid_process, int dir_fisica, uint32_t bloque_a_escribir_fat, char* nombre_archivo){
 	log_warning(filesystem_logger, "inicio enviar_solicitud_de_escritura_a_memoria");
 	t_paquete* paquete = crear_super_paquete(BLOQUE_DE_MEMORIA_A_FILESYSTEM_FM);
 	cargar_int_al_super_paquete(paquete,pid_process);
 	cargar_int_al_super_paquete(paquete,dir_fisica);
 	cargar_int_al_super_paquete(paquete, (int)bloque_a_escribir_fat);
+	cargar_string_al_super_paquete(paquete, nombre_archivo);
 	enviar_paquete(paquete, fd_memoria);
 	eliminar_paquete(paquete);
 	log_warning(filesystem_logger, "fin enviar_solicitud_de_escritura_a_memoria");

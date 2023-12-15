@@ -4536,3 +4536,369 @@
 [INFO] 16:30:54:639 [Kernel]/(14668:14672): El lock es: 1 y su modo de apertura W
 [INFO] 16:30:54:639 [Kernel]/(14668:14672): VOy a entrar a obtener archivo
 [INFO] 16:30:54:639 [Kernel]/(14668:14672): ENtrew a obetener archiso
+[INFO] 16:42:12:275 [Kernel]/(2160:2160): [R1 | 1]
+[INFO] 16:42:12:275 [Kernel]/(2160:2160): [R2 | 1]
+[INFO] 16:42:12:275 [Kernel]/(2160:2160): [R3 | 1]
+[INFO] 16:42:12:275 [Kernel]/(2160:2160): [R4 | 1]
+[INFO] 16:42:12:276 [Kernel]/(2160:2160): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 16:42:12:277 [Kernel]/(2160:2160): HANDSHAKE CON FILESYSTEM [EXITOSO]
+[INFO] 16:42:12:277 [Kernel]/(2160:2160): HANDSHAKE CON CPU_Dispatch [EXITOSO]
+[INFO] 16:42:12:278 [Kernel]/(2160:2160): HANDSHAKE CON CPU_Interrupt [EXITOSO]
+[INFO] 16:44:39:867 [Kernel]/(2160:2534): Entre al IF
+[INFO] 16:44:39:869 [Kernel]/(2160:2534): Se aviso a Memoria del nuevo proceso
+[INFO] 16:44:46:915 [Kernel]/(2160:2162): Se recibio algo de MEMORIA
+[INFO] 16:44:49:441 [Kernel]/(2160:2164): Se recibio algo de CPU_Dispatch
+[WARNING] 16:44:49:441 [Kernel]/(2160:2164): Entre a atender instruccion
+[INFO] 16:44:49:441 [Kernel]/(2160:2164): ENtrew a obetener archiso
+[INFO] 16:44:49:443 [Kernel]/(2160:2163): Se recibio algo de FILESYSTEM
+[INFO] 16:44:49:443 [Kernel]/(2160:2163): LA oepracion es: -1 -- ABRIR_ARCHIVO
+[INFO] 16:44:49:443 [Kernel]/(2160:2164): ENtrew a obetener archiso
+[INFO] 16:44:49:443 [Kernel]/(2160:2164): Cree el archivo: consolas
+[INFO] 16:44:49:448 [Kernel]/(2160:2163): Se recibio algo de FILESYSTEM
+[INFO] 16:44:49:448 [Kernel]/(2160:2163): LA oepracion es: 0 -- CREAR_ARCHIVO
+[INFO] 16:44:49:448 [Kernel]/(2160:2163): Se creo el archivo en FS
+[INFO] 16:44:49:951 [Kernel]/(2160:2164): Se recibio algo de CPU_Dispatch
+[WARNING] 16:44:49:957 [Kernel]/(2160:2164): Entre a atender instruccion
+[INFO] 16:45:35:027 [Kernel]/(2160:2163): Se recibio algo de FILESYSTEM
+[ERROR] 16:45:35:028 [Kernel]/(2160:2163): [DESCONEXION]: FILESYSTEM
+[INFO] 16:46:04:344 [Kernel]/(2562:2562): [R1 | 1]
+[INFO] 16:46:04:344 [Kernel]/(2562:2562): [R2 | 1]
+[INFO] 16:46:04:344 [Kernel]/(2562:2562): [R3 | 1]
+[INFO] 16:46:04:344 [Kernel]/(2562:2562): [R4 | 1]
+[INFO] 16:46:04:345 [Kernel]/(2562:2562): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 16:46:04:345 [Kernel]/(2562:2562): HANDSHAKE CON FILESYSTEM [EXITOSO]
+[INFO] 16:46:04:346 [Kernel]/(2562:2562): HANDSHAKE CON CPU_Dispatch [EXITOSO]
+[INFO] 16:46:04:346 [Kernel]/(2562:2562): HANDSHAKE CON CPU_Interrupt [EXITOSO]
+[ERROR] 16:46:07:730 [Kernel]/(2562:2569): Comando no reconocido
+[INFO] 16:49:57:612 [Kernel]/(2630:2630): [R1 | 1]
+[INFO] 16:49:57:612 [Kernel]/(2630:2630): [R2 | 1]
+[INFO] 16:49:57:612 [Kernel]/(2630:2630): [R3 | 1]
+[INFO] 16:49:57:612 [Kernel]/(2630:2630): [R4 | 1]
+[INFO] 16:49:57:613 [Kernel]/(2630:2630): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 16:49:57:613 [Kernel]/(2630:2630): HANDSHAKE CON FILESYSTEM [EXITOSO]
+[INFO] 16:49:57:614 [Kernel]/(2630:2630): HANDSHAKE CON CPU_Dispatch [EXITOSO]
+[INFO] 16:49:57:615 [Kernel]/(2630:2630): HANDSHAKE CON CPU_Interrupt [EXITOSO]
+[INFO] 16:50:36:626 [Kernel]/(2630:2641): Entre al IF
+[INFO] 16:50:36:626 [Kernel]/(2630:2641): Se aviso a Memoria del nuevo proceso
+[INFO] 16:50:43:656 [Kernel]/(2630:2632): Se recibio algo de MEMORIA
+[INFO] 16:50:46:425 [Kernel]/(2630:2634): Se recibio algo de CPU_Dispatch
+[WARNING] 16:50:46:426 [Kernel]/(2630:2634): Entre a atender instruccion
+[INFO] 16:50:46:426 [Kernel]/(2630:2634): ENtrew a obetener archiso
+[INFO] 16:50:46:426 [Kernel]/(2630:2633): Se recibio algo de FILESYSTEM
+[INFO] 16:50:46:426 [Kernel]/(2630:2633): LA oepracion es: -1 -- ABRIR_ARCHIVO
+[INFO] 16:50:46:426 [Kernel]/(2630:2634): ENtrew a obetener archiso
+[INFO] 16:50:46:426 [Kernel]/(2630:2634): Cree el archivo: consolas
+[INFO] 16:50:46:427 [Kernel]/(2630:2633): Se recibio algo de FILESYSTEM
+[INFO] 16:50:46:427 [Kernel]/(2630:2633): LA oepracion es: 0 -- CREAR_ARCHIVO
+[INFO] 16:50:46:427 [Kernel]/(2630:2633): Se creo el archivo en FS
+[INFO] 16:50:46:929 [Kernel]/(2630:2634): Se recibio algo de CPU_Dispatch
+[WARNING] 16:50:46:929 [Kernel]/(2630:2634): Entre a atender instruccion
+[INFO] 16:51:00:022 [Kernel]/(2630:2633): Se recibio algo de FILESYSTEM
+[INFO] 16:51:00:022 [Kernel]/(2630:2633):  La respuesta es: Truncate realizado
+[INFO] 16:51:00:529 [Kernel]/(2630:2634): Se recibio algo de CPU_Dispatch
+[WARNING] 16:51:00:530 [Kernel]/(2630:2634): Entre a atender instruccion
+[INFO] 16:51:01:563 [Kernel]/(2630:2634): Se recibio algo de CPU_Dispatch
+[WARNING] 16:51:01:563 [Kernel]/(2630:2634): Entre a atender instruccion
+[INFO] 16:51:01:569 [Kernel]/(2630:2648): Se solicito a Memoria resolver Page FAULT
+[INFO] 16:51:07:136 [Kernel]/(2630:2632): Se recibio algo de MEMORIA
+[INFO] 16:51:07:137 [Kernel]/(2630:2632): Memoria soluciono el PAGE FAULT
+[INFO] 16:51:08:143 [Kernel]/(2630:2634): Se recibio algo de CPU_Dispatch
+[WARNING] 16:51:08:143 [Kernel]/(2630:2634): Entre a atender instruccion
+[INFO] 16:51:08:143 [Kernel]/(2630:2634): El lock es: 1 y su modo de apertura W
+[INFO] 16:51:08:143 [Kernel]/(2630:2634): VOy a entrar a obtener archivo
+[INFO] 16:51:08:143 [Kernel]/(2630:2634): ENtrew a obetener archiso
+[ERROR] 16:54:56:152 [Kernel]/(2686:2686): No se encontro el path del config
+
+[INFO] 16:55:17:038 [Kernel]/(2689:2689): [R1 | 1]
+[INFO] 16:55:17:038 [Kernel]/(2689:2689): [R2 | 1]
+[INFO] 16:55:17:038 [Kernel]/(2689:2689): [R3 | 1]
+[INFO] 16:55:17:039 [Kernel]/(2689:2689): [R4 | 1]
+[INFO] 16:55:17:040 [Kernel]/(2689:2689): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 16:55:17:040 [Kernel]/(2689:2689): HANDSHAKE CON FILESYSTEM [EXITOSO]
+[INFO] 16:55:17:041 [Kernel]/(2689:2689): HANDSHAKE CON CPU_Dispatch [EXITOSO]
+[INFO] 16:55:17:042 [Kernel]/(2689:2689): HANDSHAKE CON CPU_Interrupt [EXITOSO]
+[INFO] 16:55:19:555 [Kernel]/(2689:2697): Entre al IF
+[INFO] 16:55:19:555 [Kernel]/(2689:2697): Se aviso a Memoria del nuevo proceso
+[INFO] 16:55:26:570 [Kernel]/(2689:2691): Se recibio algo de MEMORIA
+[INFO] 16:55:29:106 [Kernel]/(2689:2693): Se recibio algo de CPU_Dispatch
+[WARNING] 16:55:29:106 [Kernel]/(2689:2693): Entre a atender instruccion
+[INFO] 16:55:29:107 [Kernel]/(2689:2693): ENtrew a obetener archiso
+[INFO] 16:55:29:110 [Kernel]/(2689:2692): Se recibio algo de FILESYSTEM
+[INFO] 16:55:29:110 [Kernel]/(2689:2692): LA oepracion es: -1 -- ABRIR_ARCHIVO
+[INFO] 16:55:29:110 [Kernel]/(2689:2693): ENtrew a obetener archiso
+[INFO] 16:55:29:110 [Kernel]/(2689:2693): Cree el archivo: consolas
+[INFO] 16:55:29:115 [Kernel]/(2689:2692): Se recibio algo de FILESYSTEM
+[INFO] 16:55:29:115 [Kernel]/(2689:2692): LA oepracion es: 0 -- CREAR_ARCHIVO
+[INFO] 16:55:29:115 [Kernel]/(2689:2692): Se creo el archivo en FS
+[INFO] 16:55:29:650 [Kernel]/(2689:2693): Se recibio algo de CPU_Dispatch
+[WARNING] 16:55:29:650 [Kernel]/(2689:2693): Entre a atender instruccion
+[INFO] 16:55:50:869 [Kernel]/(2689:2692): Se recibio algo de FILESYSTEM
+[INFO] 16:55:50:869 [Kernel]/(2689:2692):  La respuesta es: Truncate realizado
+[INFO] 16:55:51:375 [Kernel]/(2689:2693): Se recibio algo de CPU_Dispatch
+[WARNING] 16:55:51:375 [Kernel]/(2689:2693): Entre a atender instruccion
+[INFO] 16:55:52:416 [Kernel]/(2689:2693): Se recibio algo de CPU_Dispatch
+[WARNING] 16:55:52:417 [Kernel]/(2689:2693): Entre a atender instruccion
+[INFO] 16:55:52:417 [Kernel]/(2689:2693): El lock es: 1 y su modo de apertura W
+[INFO] 16:55:52:417 [Kernel]/(2689:2693): VOy a entrar a obtener archivo
+[INFO] 16:55:52:417 [Kernel]/(2689:2693): ENtrew a obetener archiso
+[INFO] 16:59:21:418 [Kernel]/(2735:2735): [R1 | 1]
+[INFO] 16:59:21:418 [Kernel]/(2735:2735): [R2 | 1]
+[INFO] 16:59:21:418 [Kernel]/(2735:2735): [R3 | 1]
+[INFO] 16:59:21:418 [Kernel]/(2735:2735): [R4 | 1]
+[INFO] 16:59:21:421 [Kernel]/(2735:2735): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 16:59:21:421 [Kernel]/(2735:2735): HANDSHAKE CON FILESYSTEM [EXITOSO]
+[INFO] 16:59:21:422 [Kernel]/(2735:2735): HANDSHAKE CON CPU_Dispatch [EXITOSO]
+[INFO] 16:59:21:423 [Kernel]/(2735:2735): HANDSHAKE CON CPU_Interrupt [EXITOSO]
+[INFO] 16:59:27:159 [Kernel]/(2735:2744): Entre al IF
+[INFO] 16:59:27:159 [Kernel]/(2735:2744): Se aviso a Memoria del nuevo proceso
+[INFO] 16:59:34:177 [Kernel]/(2735:2737): Se recibio algo de MEMORIA
+[INFO] 16:59:36:726 [Kernel]/(2735:2739): Se recibio algo de CPU_Dispatch
+[WARNING] 16:59:36:726 [Kernel]/(2735:2739): Entre a atender instruccion
+[INFO] 16:59:36:726 [Kernel]/(2735:2739): ENtrew a obetener archiso
+[INFO] 16:59:36:727 [Kernel]/(2735:2738): Se recibio algo de FILESYSTEM
+[INFO] 16:59:36:727 [Kernel]/(2735:2738): LA oepracion es: -1 -- ABRIR_ARCHIVO
+[INFO] 16:59:36:727 [Kernel]/(2735:2739): ENtrew a obetener archiso
+[INFO] 16:59:36:727 [Kernel]/(2735:2739): Cree el archivo: consolas
+[INFO] 16:59:36:731 [Kernel]/(2735:2738): Se recibio algo de FILESYSTEM
+[INFO] 16:59:36:731 [Kernel]/(2735:2738): LA oepracion es: 0 -- CREAR_ARCHIVO
+[INFO] 16:59:36:731 [Kernel]/(2735:2738): Se creo el archivo en FS
+[INFO] 16:59:37:236 [Kernel]/(2735:2739): Se recibio algo de CPU_Dispatch
+[WARNING] 16:59:37:237 [Kernel]/(2735:2739): Entre a atender instruccion
+[INFO] 17:03:55:692 [Kernel]/(2886:2886): [R1 | 1]
+[INFO] 17:03:55:692 [Kernel]/(2886:2886): [R2 | 1]
+[INFO] 17:03:55:692 [Kernel]/(2886:2886): [R3 | 1]
+[INFO] 17:03:55:692 [Kernel]/(2886:2886): [R4 | 1]
+[INFO] 17:03:55:694 [Kernel]/(2886:2886): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 17:03:55:695 [Kernel]/(2886:2886): HANDSHAKE CON FILESYSTEM [EXITOSO]
+[INFO] 17:03:55:695 [Kernel]/(2886:2886): HANDSHAKE CON CPU_Dispatch [EXITOSO]
+[INFO] 17:03:55:695 [Kernel]/(2886:2886): HANDSHAKE CON CPU_Interrupt [EXITOSO]
+[INFO] 17:04:00:126 [Kernel]/(2886:2896): Entre al IF
+[INFO] 17:04:00:126 [Kernel]/(2886:2896): Se aviso a Memoria del nuevo proceso
+[INFO] 17:04:07:143 [Kernel]/(2886:2888): Se recibio algo de MEMORIA
+[INFO] 17:04:09:671 [Kernel]/(2886:2890): Se recibio algo de CPU_Dispatch
+[WARNING] 17:04:09:671 [Kernel]/(2886:2890): Entre a atender instruccion
+[INFO] 17:04:09:671 [Kernel]/(2886:2890): ENtrew a obetener archiso
+[INFO] 17:04:09:673 [Kernel]/(2886:2889): Se recibio algo de FILESYSTEM
+[INFO] 17:04:09:673 [Kernel]/(2886:2889): LA oepracion es: -1 -- ABRIR_ARCHIVO
+[INFO] 17:04:09:673 [Kernel]/(2886:2890): ENtrew a obetener archiso
+[INFO] 17:04:09:673 [Kernel]/(2886:2890): Cree el archivo: consolas
+[INFO] 17:04:09:677 [Kernel]/(2886:2889): Se recibio algo de FILESYSTEM
+[INFO] 17:04:09:677 [Kernel]/(2886:2889): LA oepracion es: 0 -- CREAR_ARCHIVO
+[INFO] 17:04:09:677 [Kernel]/(2886:2889): Se creo el archivo en FS
+[INFO] 17:04:10:182 [Kernel]/(2886:2890): Se recibio algo de CPU_Dispatch
+[WARNING] 17:04:10:183 [Kernel]/(2886:2890): Entre a atender instruccion
+[INFO] 17:04:39:430 [Kernel]/(2886:2889): Se recibio algo de FILESYSTEM
+[INFO] 17:04:39:431 [Kernel]/(2886:2889):  La respuesta es: Truncate realizado
+[INFO] 17:04:39:954 [Kernel]/(2886:2890): Se recibio algo de CPU_Dispatch
+[WARNING] 17:04:39:954 [Kernel]/(2886:2890): Entre a atender instruccion
+[INFO] 17:04:40:963 [Kernel]/(2886:2890): Se recibio algo de CPU_Dispatch
+[WARNING] 17:04:40:963 [Kernel]/(2886:2890): Entre a atender instruccion
+[INFO] 17:04:40:963 [Kernel]/(2886:2890): El lock es: 1 y su modo de apertura W
+[INFO] 17:04:40:963 [Kernel]/(2886:2890): VOy a entrar a obtener archivo
+[INFO] 17:04:40:963 [Kernel]/(2886:2890): ENtrew a obetener archiso
+[INFO] 17:10:30:391 [Kernel]/(3019:3019): [R1 | 1]
+[INFO] 17:10:30:392 [Kernel]/(3019:3019): [R2 | 1]
+[INFO] 17:10:30:393 [Kernel]/(3019:3019): [R3 | 1]
+[INFO] 17:10:30:393 [Kernel]/(3019:3019): [R4 | 1]
+[INFO] 17:10:30:394 [Kernel]/(3019:3019): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 17:10:30:395 [Kernel]/(3019:3019): HANDSHAKE CON FILESYSTEM [EXITOSO]
+[INFO] 17:10:30:396 [Kernel]/(3019:3019): HANDSHAKE CON CPU_Dispatch [EXITOSO]
+[INFO] 17:10:30:397 [Kernel]/(3019:3019): HANDSHAKE CON CPU_Interrupt [EXITOSO]
+[INFO] 17:10:37:653 [Kernel]/(3019:3029): Entre al IF
+[INFO] 17:10:37:653 [Kernel]/(3019:3029): Se aviso a Memoria del nuevo proceso
+[INFO] 17:10:44:667 [Kernel]/(3019:3021): Se recibio algo de MEMORIA
+[INFO] 17:10:47:187 [Kernel]/(3019:3023): Se recibio algo de CPU_Dispatch
+[WARNING] 17:10:47:187 [Kernel]/(3019:3023): Entre a atender instruccion
+[INFO] 17:10:47:187 [Kernel]/(3019:3023): ENtrew a obetener archiso
+[INFO] 17:10:47:190 [Kernel]/(3019:3022): Se recibio algo de FILESYSTEM
+[INFO] 17:10:47:191 [Kernel]/(3019:3022): LA oepracion es: -1 -- ABRIR_ARCHIVO
+[INFO] 17:10:47:192 [Kernel]/(3019:3023): ENtrew a obetener archiso
+[INFO] 17:10:47:192 [Kernel]/(3019:3023): Cree el archivo: consolas
+[INFO] 17:10:47:197 [Kernel]/(3019:3022): Se recibio algo de FILESYSTEM
+[INFO] 17:10:47:197 [Kernel]/(3019:3022): LA oepracion es: 0 -- CREAR_ARCHIVO
+[INFO] 17:10:47:197 [Kernel]/(3019:3022): Se creo el archivo en FS
+[INFO] 17:10:47:701 [Kernel]/(3019:3023): Se recibio algo de CPU_Dispatch
+[WARNING] 17:10:47:701 [Kernel]/(3019:3023): Entre a atender instruccion
+[INFO] 17:11:00:835 [Kernel]/(3019:3022): Se recibio algo de FILESYSTEM
+[INFO] 17:11:00:835 [Kernel]/(3019:3022):  La respuesta es: Truncate realizado
+[INFO] 17:11:01:349 [Kernel]/(3019:3023): Se recibio algo de CPU_Dispatch
+[WARNING] 17:11:01:349 [Kernel]/(3019:3023): Entre a atender instruccion
+[INFO] 17:11:02:358 [Kernel]/(3019:3023): Se recibio algo de CPU_Dispatch
+[WARNING] 17:11:02:358 [Kernel]/(3019:3023): Entre a atender instruccion
+[INFO] 17:11:02:358 [Kernel]/(3019:3023): El lock es: 1 y su modo de apertura W
+[INFO] 17:11:02:358 [Kernel]/(3019:3023): VOy a entrar a obtener archivo
+[INFO] 17:11:02:358 [Kernel]/(3019:3023): ENtrew a obetener archiso
+[INFO] 17:14:54:571 [Kernel]/(3428:3428): [R1 | 1]
+[INFO] 17:14:54:571 [Kernel]/(3428:3428): [R2 | 1]
+[INFO] 17:14:54:571 [Kernel]/(3428:3428): [R3 | 1]
+[INFO] 17:14:54:571 [Kernel]/(3428:3428): [R4 | 1]
+[INFO] 17:14:54:571 [Kernel]/(3428:3428): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 17:14:54:572 [Kernel]/(3428:3428): HANDSHAKE CON FILESYSTEM [EXITOSO]
+[INFO] 17:14:54:572 [Kernel]/(3428:3428): HANDSHAKE CON CPU_Dispatch [EXITOSO]
+[INFO] 17:14:54:573 [Kernel]/(3428:3428): HANDSHAKE CON CPU_Interrupt [EXITOSO]
+[INFO] 17:14:58:229 [Kernel]/(3428:3438): Entre al IF
+[INFO] 17:14:58:229 [Kernel]/(3428:3438): Se aviso a Memoria del nuevo proceso
+[INFO] 17:15:05:375 [Kernel]/(3428:3430): Se recibio algo de MEMORIA
+[INFO] 17:15:07:926 [Kernel]/(3428:3432): Se recibio algo de CPU_Dispatch
+[WARNING] 17:15:07:926 [Kernel]/(3428:3432): Entre a atender instruccion
+[INFO] 17:15:07:926 [Kernel]/(3428:3432): ENtrew a obetener archiso
+[INFO] 17:15:07:931 [Kernel]/(3428:3431): Se recibio algo de FILESYSTEM
+[INFO] 17:15:07:931 [Kernel]/(3428:3431): LA oepracion es: -1 -- ABRIR_ARCHIVO
+[INFO] 17:15:07:931 [Kernel]/(3428:3432): ENtrew a obetener archiso
+[INFO] 17:15:07:931 [Kernel]/(3428:3432): Cree el archivo: consolas
+[INFO] 17:15:07:939 [Kernel]/(3428:3431): Se recibio algo de FILESYSTEM
+[INFO] 17:15:07:939 [Kernel]/(3428:3431): LA oepracion es: 0 -- CREAR_ARCHIVO
+[INFO] 17:15:07:939 [Kernel]/(3428:3431): Se creo el archivo en FS
+[INFO] 17:15:08:445 [Kernel]/(3428:3432): Se recibio algo de CPU_Dispatch
+[WARNING] 17:15:08:445 [Kernel]/(3428:3432): Entre a atender instruccion
+[INFO] 17:17:44:659 [Kernel]/(3748:3748): [R1 | 1]
+[INFO] 17:17:44:660 [Kernel]/(3748:3748): [R2 | 1]
+[INFO] 17:17:44:660 [Kernel]/(3748:3748): [R3 | 1]
+[INFO] 17:17:44:660 [Kernel]/(3748:3748): [R4 | 1]
+[INFO] 17:17:44:661 [Kernel]/(3748:3748): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 17:17:44:662 [Kernel]/(3748:3748): HANDSHAKE CON FILESYSTEM [EXITOSO]
+[INFO] 17:17:44:662 [Kernel]/(3748:3748): HANDSHAKE CON CPU_Dispatch [EXITOSO]
+[INFO] 17:17:44:663 [Kernel]/(3748:3748): HANDSHAKE CON CPU_Interrupt [EXITOSO]
+[INFO] 17:17:48:178 [Kernel]/(3748:3758): Entre al IF
+[INFO] 17:17:48:178 [Kernel]/(3748:3758): Se aviso a Memoria del nuevo proceso
+[INFO] 17:17:55:192 [Kernel]/(3748:3750): Se recibio algo de MEMORIA
+[INFO] 17:17:57:715 [Kernel]/(3748:3752): Se recibio algo de CPU_Dispatch
+[WARNING] 17:17:57:715 [Kernel]/(3748:3752): Entre a atender instruccion
+[INFO] 17:17:57:715 [Kernel]/(3748:3752): ENtrew a obetener archiso
+[INFO] 17:17:57:718 [Kernel]/(3748:3751): Se recibio algo de FILESYSTEM
+[INFO] 17:17:57:719 [Kernel]/(3748:3751): LA oepracion es: -1 -- ABRIR_ARCHIVO
+[INFO] 17:17:57:719 [Kernel]/(3748:3752): ENtrew a obetener archiso
+[INFO] 17:17:57:719 [Kernel]/(3748:3752): Cree el archivo: consolas
+[INFO] 17:17:57:729 [Kernel]/(3748:3751): Se recibio algo de FILESYSTEM
+[INFO] 17:17:57:729 [Kernel]/(3748:3751): LA oepracion es: 0 -- CREAR_ARCHIVO
+[INFO] 17:17:57:729 [Kernel]/(3748:3751): Se creo el archivo en FS
+[INFO] 17:17:58:233 [Kernel]/(3748:3752): Se recibio algo de CPU_Dispatch
+[WARNING] 17:17:58:236 [Kernel]/(3748:3752): Entre a atender instruccion
+[INFO] 17:18:23:382 [Kernel]/(3748:3751): Se recibio algo de FILESYSTEM
+[INFO] 17:18:23:382 [Kernel]/(3748:3751):  La respuesta es: Truncate realizado
+[INFO] 17:18:23:884 [Kernel]/(3748:3752): Se recibio algo de CPU_Dispatch
+[WARNING] 17:18:23:884 [Kernel]/(3748:3752): Entre a atender instruccion
+[INFO] 17:18:24:888 [Kernel]/(3748:3752): Se recibio algo de CPU_Dispatch
+[WARNING] 17:18:24:888 [Kernel]/(3748:3752): Entre a atender instruccion
+[INFO] 17:18:24:888 [Kernel]/(3748:3752): El lock es: 1 y su modo de apertura W
+[INFO] 17:18:24:888 [Kernel]/(3748:3752): VOy a entrar a obtener archivo
+[INFO] 17:18:24:888 [Kernel]/(3748:3752): ENtrew a obetener archiso
+[INFO] 17:19:56:099 [Kernel]/(4084:4084): [R1 | 1]
+[INFO] 17:19:56:099 [Kernel]/(4084:4084): [R2 | 1]
+[INFO] 17:19:56:100 [Kernel]/(4084:4084): [R3 | 1]
+[INFO] 17:19:56:101 [Kernel]/(4084:4084): [R4 | 1]
+[INFO] 17:19:56:102 [Kernel]/(4084:4084): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 17:19:56:102 [Kernel]/(4084:4084): HANDSHAKE CON FILESYSTEM [EXITOSO]
+[INFO] 17:19:56:103 [Kernel]/(4084:4084): HANDSHAKE CON CPU_Dispatch [EXITOSO]
+[INFO] 17:19:56:103 [Kernel]/(4084:4084): HANDSHAKE CON CPU_Interrupt [EXITOSO]
+[INFO] 17:20:00:171 [Kernel]/(4084:4094): Entre al IF
+[INFO] 17:20:00:171 [Kernel]/(4084:4094): Se aviso a Memoria del nuevo proceso
+[INFO] 17:20:07:208 [Kernel]/(4084:4086): Se recibio algo de MEMORIA
+[INFO] 17:20:09:742 [Kernel]/(4084:4088): Se recibio algo de CPU_Dispatch
+[WARNING] 17:20:09:742 [Kernel]/(4084:4088): Entre a atender instruccion
+[INFO] 17:20:09:743 [Kernel]/(4084:4088): ENtrew a obetener archiso
+[INFO] 17:20:09:746 [Kernel]/(4084:4087): Se recibio algo de FILESYSTEM
+[INFO] 17:20:09:747 [Kernel]/(4084:4087): LA oepracion es: -1 -- ABRIR_ARCHIVO
+[INFO] 17:20:09:747 [Kernel]/(4084:4088): ENtrew a obetener archiso
+[INFO] 17:20:09:747 [Kernel]/(4084:4088): Cree el archivo: consolas
+[INFO] 17:20:09:751 [Kernel]/(4084:4087): Se recibio algo de FILESYSTEM
+[INFO] 17:20:09:751 [Kernel]/(4084:4087): LA oepracion es: 0 -- CREAR_ARCHIVO
+[INFO] 17:20:09:751 [Kernel]/(4084:4087): Se creo el archivo en FS
+[INFO] 17:20:10:269 [Kernel]/(4084:4088): Se recibio algo de CPU_Dispatch
+[WARNING] 17:20:10:269 [Kernel]/(4084:4088): Entre a atender instruccion
+[INFO] 17:21:21:537 [Kernel]/(4138:4138): [R1 | 1]
+[INFO] 17:21:21:537 [Kernel]/(4138:4138): [R2 | 1]
+[INFO] 17:21:21:537 [Kernel]/(4138:4138): [R3 | 1]
+[INFO] 17:21:21:537 [Kernel]/(4138:4138): [R4 | 1]
+[INFO] 17:21:21:538 [Kernel]/(4138:4138): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 17:21:21:539 [Kernel]/(4138:4138): HANDSHAKE CON FILESYSTEM [EXITOSO]
+[INFO] 17:21:21:539 [Kernel]/(4138:4138): HANDSHAKE CON CPU_Dispatch [EXITOSO]
+[INFO] 17:21:21:540 [Kernel]/(4138:4138): HANDSHAKE CON CPU_Interrupt [EXITOSO]
+[INFO] 17:21:24:783 [Kernel]/(4138:4148): Entre al IF
+[INFO] 17:21:24:783 [Kernel]/(4138:4148): Se aviso a Memoria del nuevo proceso
+[INFO] 17:21:31:803 [Kernel]/(4138:4140): Se recibio algo de MEMORIA
+[INFO] 17:21:34:355 [Kernel]/(4138:4142): Se recibio algo de CPU_Dispatch
+[WARNING] 17:21:34:355 [Kernel]/(4138:4142): Entre a atender instruccion
+[INFO] 17:21:34:356 [Kernel]/(4138:4142): ENtrew a obetener archiso
+[INFO] 17:21:34:358 [Kernel]/(4138:4141): Se recibio algo de FILESYSTEM
+[INFO] 17:21:34:359 [Kernel]/(4138:4141): LA oepracion es: -1 -- ABRIR_ARCHIVO
+[INFO] 17:21:34:361 [Kernel]/(4138:4142): ENtrew a obetener archiso
+[INFO] 17:21:34:361 [Kernel]/(4138:4142): Cree el archivo: consolas
+[INFO] 17:21:34:366 [Kernel]/(4138:4141): Se recibio algo de FILESYSTEM
+[INFO] 17:21:34:366 [Kernel]/(4138:4141): LA oepracion es: 0 -- CREAR_ARCHIVO
+[INFO] 17:21:34:366 [Kernel]/(4138:4141): Se creo el archivo en FS
+[INFO] 17:21:34:877 [Kernel]/(4138:4142): Se recibio algo de CPU_Dispatch
+[WARNING] 17:21:34:877 [Kernel]/(4138:4142): Entre a atender instruccion
+[INFO] 17:22:12:265 [Kernel]/(4138:4141): Se recibio algo de FILESYSTEM
+[INFO] 17:22:12:266 [Kernel]/(4138:4141):  La respuesta es: Truncate realizado
+[INFO] 17:22:12:771 [Kernel]/(4138:4142): Se recibio algo de CPU_Dispatch
+[WARNING] 17:22:12:771 [Kernel]/(4138:4142): Entre a atender instruccion
+[INFO] 17:22:13:793 [Kernel]/(4138:4142): Se recibio algo de CPU_Dispatch
+[WARNING] 17:22:13:793 [Kernel]/(4138:4142): Entre a atender instruccion
+[INFO] 17:22:13:793 [Kernel]/(4138:4142): El lock es: 1 y su modo de apertura W
+[INFO] 17:22:13:794 [Kernel]/(4138:4142): VOy a entrar a obtener archivo
+[INFO] 17:22:13:794 [Kernel]/(4138:4142): ENtrew a obetener archiso
+[INFO] 17:24:52:536 [Kernel]/(4302:4302): [R1 | 1]
+[INFO] 17:24:52:536 [Kernel]/(4302:4302): [R2 | 1]
+[INFO] 17:24:52:536 [Kernel]/(4302:4302): [R3 | 1]
+[INFO] 17:24:52:536 [Kernel]/(4302:4302): [R4 | 1]
+[INFO] 17:24:52:538 [Kernel]/(4302:4302): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 17:24:52:539 [Kernel]/(4302:4302): HANDSHAKE CON FILESYSTEM [EXITOSO]
+[INFO] 17:24:52:539 [Kernel]/(4302:4302): HANDSHAKE CON CPU_Dispatch [EXITOSO]
+[INFO] 17:24:52:540 [Kernel]/(4302:4302): HANDSHAKE CON CPU_Interrupt [EXITOSO]
+[INFO] 17:24:55:560 [Kernel]/(4302:4311): Entre al IF
+[INFO] 17:24:55:560 [Kernel]/(4302:4311): Se aviso a Memoria del nuevo proceso
+[INFO] 17:25:02:593 [Kernel]/(4302:4304): Se recibio algo de MEMORIA
+[INFO] 17:25:05:136 [Kernel]/(4302:4306): Se recibio algo de CPU_Dispatch
+[WARNING] 17:25:05:137 [Kernel]/(4302:4306): Entre a atender instruccion
+[INFO] 17:25:05:137 [Kernel]/(4302:4306): ENtrew a obetener archiso
+[INFO] 17:25:05:138 [Kernel]/(4302:4305): Se recibio algo de FILESYSTEM
+[INFO] 17:25:05:139 [Kernel]/(4302:4305): LA oepracion es: -1 -- ABRIR_ARCHIVO
+[INFO] 17:25:05:139 [Kernel]/(4302:4306): ENtrew a obetener archiso
+[INFO] 17:25:05:139 [Kernel]/(4302:4306): Cree el archivo: consolas
+[INFO] 17:25:05:154 [Kernel]/(4302:4305): Se recibio algo de FILESYSTEM
+[INFO] 17:25:05:154 [Kernel]/(4302:4305): LA oepracion es: 0 -- CREAR_ARCHIVO
+[INFO] 17:25:05:154 [Kernel]/(4302:4305): Se creo el archivo en FS
+[INFO] 17:25:05:662 [Kernel]/(4302:4306): Se recibio algo de CPU_Dispatch
+[WARNING] 17:25:05:662 [Kernel]/(4302:4306): Entre a atender instruccion
+[INFO] 17:25:18:753 [Kernel]/(4302:4305): Se recibio algo de FILESYSTEM
+[INFO] 17:25:18:753 [Kernel]/(4302:4305):  La respuesta es: Truncate realizado
+[INFO] 17:25:19:255 [Kernel]/(4302:4306): Se recibio algo de CPU_Dispatch
+[WARNING] 17:25:19:255 [Kernel]/(4302:4306): Entre a atender instruccion
+[INFO] 17:25:20:262 [Kernel]/(4302:4306): Se recibio algo de CPU_Dispatch
+[WARNING] 17:25:20:262 [Kernel]/(4302:4306): Entre a atender instruccion
+[INFO] 17:25:20:262 [Kernel]/(4302:4306): El lock es: 1 y su modo de apertura W
+[INFO] 17:25:20:262 [Kernel]/(4302:4306): VOy a entrar a obtener archivo
+[INFO] 17:25:20:262 [Kernel]/(4302:4306): ENtrew a obetener archiso
+[INFO] 17:39:44:634 [Kernel]/(4772:4772): [R1 | 1]
+[INFO] 17:39:44:635 [Kernel]/(4772:4772): [R2 | 1]
+[INFO] 17:39:44:635 [Kernel]/(4772:4772): [R3 | 1]
+[INFO] 17:39:44:635 [Kernel]/(4772:4772): [R4 | 1]
+[INFO] 17:39:44:635 [Kernel]/(4772:4772): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 17:39:44:636 [Kernel]/(4772:4772): HANDSHAKE CON FILESYSTEM [EXITOSO]
+[INFO] 17:39:44:636 [Kernel]/(4772:4772): HANDSHAKE CON CPU_Dispatch [EXITOSO]
+[INFO] 17:39:44:636 [Kernel]/(4772:4772): HANDSHAKE CON CPU_Interrupt [EXITOSO]
+[INFO] 17:39:50:518 [Kernel]/(4772:4782): Entre al IF
+[INFO] 17:39:50:519 [Kernel]/(4772:4782): Se aviso a Memoria del nuevo proceso
+[INFO] 17:39:57:531 [Kernel]/(4772:4774): Se recibio algo de MEMORIA
+[INFO] 17:40:00:043 [Kernel]/(4772:4776): Se recibio algo de CPU_Dispatch
+[WARNING] 17:40:00:043 [Kernel]/(4772:4776): Entre a atender instruccion
+[INFO] 17:40:00:043 [Kernel]/(4772:4776): ENtrew a obetener archiso
+[INFO] 17:40:00:043 [Kernel]/(4772:4775): Se recibio algo de FILESYSTEM
+[INFO] 17:40:00:043 [Kernel]/(4772:4775): LA oepracion es: -1 -- ABRIR_ARCHIVO
+[INFO] 17:40:00:043 [Kernel]/(4772:4776): ENtrew a obetener archiso
+[INFO] 17:40:00:043 [Kernel]/(4772:4776): Cree el archivo: consolas
+[INFO] 17:40:00:046 [Kernel]/(4772:4775): Se recibio algo de FILESYSTEM
+[INFO] 17:40:00:046 [Kernel]/(4772:4775): LA oepracion es: 0 -- CREAR_ARCHIVO
+[INFO] 17:40:00:046 [Kernel]/(4772:4775): Se creo el archivo en FS
+[INFO] 17:40:00:551 [Kernel]/(4772:4776): Se recibio algo de CPU_Dispatch
+[WARNING] 17:40:00:551 [Kernel]/(4772:4776): Entre a atender instruccion
+[INFO] 17:40:09:130 [Kernel]/(4772:4775): Se recibio algo de FILESYSTEM
+[INFO] 17:40:09:130 [Kernel]/(4772:4775):  La respuesta es: Truncate realizado
+[INFO] 17:40:09:649 [Kernel]/(4772:4776): Se recibio algo de CPU_Dispatch
+[WARNING] 17:40:09:649 [Kernel]/(4772:4776): Entre a atender instruccion
+[INFO] 17:40:10:664 [Kernel]/(4772:4776): Se recibio algo de CPU_Dispatch
+[WARNING] 17:40:10:664 [Kernel]/(4772:4776): Entre a atender instruccion
+[INFO] 17:40:10:664 [Kernel]/(4772:4776): El lock es: 1 y su modo de apertura W
+[INFO] 17:40:10:664 [Kernel]/(4772:4776): VOy a entrar a obtener archivo
+[INFO] 17:40:10:664 [Kernel]/(4772:4776): ENtrew a obetener archiso

@@ -4297,3 +4297,125 @@
 [INFO] 16:30:53:578 [Memoria- Log obligatorio]/(14658:14667): <PID:1> <IP:3> <F_WRITE consolas 0>
 [INFO] 16:30:54:100 [Memoria- Log obligatorio]/(14658:14667): PID: <1> - Pagina: <0> - Marco: <0>
 [INFO] 16:30:54:100 [Memoria- Log obligatorio]/(14658:14667): PAGINA ENCONTRADA <PID:1> <Pag:0> <Marco:0>
+[INFO] 16:44:39:873 [Memoria- Log obligatorio]/(2136:2161): PID: <1> - Tamaño: <4>
+[INFO] 16:44:46:923 [Memoria- Log obligatorio]/(2136:2155): <PID:1> <IP:0> <SET AX 1>
+[INFO] 16:44:47:429 [Memoria- Log obligatorio]/(2136:2155): <PID:1> <IP:1> <SET BX 1>
+[INFO] 16:44:47:931 [Memoria- Log obligatorio]/(2136:2155): <PID:1> <IP:2> <SET CX 1>
+[INFO] 16:44:48:435 [Memoria- Log obligatorio]/(2136:2155): <PID:1> <IP:3> <SET DX 1>
+[INFO] 16:44:48:938 [Memoria- Log obligatorio]/(2136:2155): <PID:1> <IP:4> <F_OPEN consolas W>
+[INFO] 16:44:49:448 [Memoria- Log obligatorio]/(2136:2155): <PID:1> <IP:5> <F_TRUNCATE consolas 64>
+[INFO] 16:50:36:627 [Memoria- Log obligatorio]/(2136:2631): PID: <1> - Tamaño: <4>
+[INFO] 16:50:43:665 [Memoria- Log obligatorio]/(2136:2628): <PID:1> <IP:0> <SET AX 1>
+[INFO] 16:50:44:168 [Memoria- Log obligatorio]/(2136:2628): <PID:1> <IP:1> <SET BX 1>
+[INFO] 16:50:44:668 [Memoria- Log obligatorio]/(2136:2628): <PID:1> <IP:2> <SET CX 1>
+[INFO] 16:50:45:169 [Memoria- Log obligatorio]/(2136:2628): <PID:1> <IP:3> <SET DX 1>
+[INFO] 16:50:45:925 [Memoria- Log obligatorio]/(2136:2628): <PID:1> <IP:4> <F_OPEN consolas W>
+[INFO] 16:50:46:428 [Memoria- Log obligatorio]/(2136:2628): <PID:1> <IP:5> <F_TRUNCATE consolas 64>
+[INFO] 16:51:00:024 [Memoria- Log obligatorio]/(2136:2628): <PID:1> <IP:6> <F_SEEK consolas 0>
+[INFO] 16:51:00:533 [Memoria- Log obligatorio]/(2136:2628): <PID:1> <IP:7> <F_WRITE consolas 16>
+[WARNING] 16:51:01:062 [Memoria- Log obligatorio]/(2136:2628): PAGEFAULT <PID:1> <Pag:1>
+[INFO] 16:51:01:570 [Memoria- Log obligatorio]/(2136:2631): PID: <1> - Pagina: <1> - Marco: <0>
+[INFO] 16:51:02:088 [Memoria- Log obligatorio]/(2136:2631): SWAP IN - PID: <1> - Marco: <0> - Page In: <1>-<1>
+[INFO] 16:51:03:625 [Memoria- Log obligatorio]/(2136:2623): PID: <1> - Pagina: <1> - Marco: <0>
+[INFO] 16:51:03:631 [Memoria- Log obligatorio]/(2136:2623): PID: <1> - Accion: <ESCRIBIR> - Direccion fisica: <0>
+[INFO] 16:51:07:138 [Memoria- Log obligatorio]/(2136:2628): <PID:1> <IP:7> <F_WRITE consolas 16>
+[INFO] 16:51:07:640 [Memoria- Log obligatorio]/(2136:2628): PID: <1> - Pagina: <1> - Marco: <0>
+[INFO] 16:51:07:640 [Memoria- Log obligatorio]/(2136:2628): PAGINA ENCONTRADA <PID:1> <Pag:1> <Marco:0>
+[INFO] 16:55:19:555 [Memoria- Log obligatorio]/(2136:2690): PID: <1> - Tamaño: <4>
+[INFO] 16:55:26:582 [Memoria- Log obligatorio]/(2136:2685): <PID:1> <IP:0> <SET AX 1>
+[INFO] 16:55:27:088 [Memoria- Log obligatorio]/(2136:2685): <PID:1> <IP:1> <SET BX 1>
+[INFO] 16:55:27:590 [Memoria- Log obligatorio]/(2136:2685): <PID:1> <IP:2> <SET CX 1>
+[INFO] 16:55:28:091 [Memoria- Log obligatorio]/(2136:2685): <PID:1> <IP:3> <SET DX 1>
+[INFO] 16:55:28:604 [Memoria- Log obligatorio]/(2136:2685): <PID:1> <IP:4> <F_OPEN consolas W>
+[INFO] 16:55:29:118 [Memoria- Log obligatorio]/(2136:2685): <PID:1> <IP:5> <F_TRUNCATE consolas 64>
+[INFO] 16:55:50:871 [Memoria- Log obligatorio]/(2136:2685): <PID:1> <IP:6> <F_SEEK consolas 0>
+[INFO] 16:55:51:376 [Memoria- Log obligatorio]/(2136:2685): <PID:1> <IP:7> <F_WRITE consolas 16>
+[INFO] 16:55:51:915 [Memoria- Log obligatorio]/(2136:2685): PID: <1> - Pagina: <1> - Marco: <0>
+[INFO] 16:55:51:915 [Memoria- Log obligatorio]/(2136:2685): PAGINA ENCONTRADA <PID:1> <Pag:1> <Marco:0>
+[INFO] 16:59:27:159 [Memoria- Log obligatorio]/(2136:2736): PID: <1> - Tamaño: <4>
+[INFO] 16:59:34:180 [Memoria- Log obligatorio]/(2136:2733): <PID:1> <IP:0> <SET AX 1>
+[INFO] 16:59:34:693 [Memoria- Log obligatorio]/(2136:2733): <PID:1> <IP:1> <SET BX 1>
+[INFO] 16:59:35:197 [Memoria- Log obligatorio]/(2136:2733): <PID:1> <IP:2> <SET CX 1>
+[INFO] 16:59:35:701 [Memoria- Log obligatorio]/(2136:2733): <PID:1> <IP:3> <SET DX 1>
+[INFO] 16:59:36:205 [Memoria- Log obligatorio]/(2136:2733): <PID:1> <IP:4> <F_OPEN consolas W>
+[INFO] 16:59:36:733 [Memoria- Log obligatorio]/(2136:2733): <PID:1> <IP:5> <F_TRUNCATE consolas 64>
+[INFO] 17:04:00:127 [Memoria- Log obligatorio]/(2136:2887): PID: <1> - Tamaño: <4>
+[INFO] 17:04:07:149 [Memoria- Log obligatorio]/(2136:2885): <PID:1> <IP:0> <SET AX 1>
+[INFO] 17:04:07:652 [Memoria- Log obligatorio]/(2136:2885): <PID:1> <IP:1> <SET BX 1>
+[INFO] 17:04:08:156 [Memoria- Log obligatorio]/(2136:2885): <PID:1> <IP:2> <SET CX 1>
+[INFO] 17:04:08:658 [Memoria- Log obligatorio]/(2136:2885): <PID:1> <IP:3> <SET DX 1>
+[INFO] 17:04:09:160 [Memoria- Log obligatorio]/(2136:2885): <PID:1> <IP:4> <F_OPEN consolas W>
+[INFO] 17:04:09:679 [Memoria- Log obligatorio]/(2136:2885): <PID:1> <IP:5> <F_TRUNCATE consolas 64>
+[INFO] 17:04:39:441 [Memoria- Log obligatorio]/(2136:2885): <PID:1> <IP:6> <F_SEEK consolas 0>
+[INFO] 17:04:39:957 [Memoria- Log obligatorio]/(2136:2885): <PID:1> <IP:7> <F_WRITE consolas 16>
+[INFO] 17:04:40:458 [Memoria- Log obligatorio]/(2136:2885): PID: <1> - Pagina: <1> - Marco: <0>
+[INFO] 17:04:40:458 [Memoria- Log obligatorio]/(2136:2885): PAGINA ENCONTRADA <PID:1> <Pag:1> <Marco:0>
+[INFO] 17:10:37:653 [Memoria- Log obligatorio]/(2136:3020): PID: <1> - Tamaño: <4>
+[INFO] 17:10:44:668 [Memoria- Log obligatorio]/(2136:3018): <PID:1> <IP:0> <SET AX 1>
+[INFO] 17:10:45:170 [Memoria- Log obligatorio]/(2136:3018): <PID:1> <IP:1> <SET BX 1>
+[INFO] 17:10:45:673 [Memoria- Log obligatorio]/(2136:3018): <PID:1> <IP:2> <SET CX 1>
+[INFO] 17:10:46:178 [Memoria- Log obligatorio]/(2136:3018): <PID:1> <IP:3> <SET DX 1>
+[INFO] 17:10:46:680 [Memoria- Log obligatorio]/(2136:3018): <PID:1> <IP:4> <F_OPEN consolas W>
+[INFO] 17:10:47:199 [Memoria- Log obligatorio]/(2136:3018): <PID:1> <IP:5> <F_TRUNCATE consolas 64>
+[INFO] 17:11:00:838 [Memoria- Log obligatorio]/(2136:3018): <PID:1> <IP:6> <F_SEEK consolas 0>
+[INFO] 17:11:01:349 [Memoria- Log obligatorio]/(2136:3018): <PID:1> <IP:7> <F_WRITE consolas 16>
+[INFO] 17:11:01:854 [Memoria- Log obligatorio]/(2136:3018): PID: <1> - Pagina: <1> - Marco: <0>
+[INFO] 17:11:01:854 [Memoria- Log obligatorio]/(2136:3018): PAGINA ENCONTRADA <PID:1> <Pag:1> <Marco:0>
+[INFO] 17:14:58:230 [Memoria- Log obligatorio]/(2136:3429): PID: <1> - Tamaño: <4>
+[INFO] 17:15:05:377 [Memoria- Log obligatorio]/(2136:3427): <PID:1> <IP:0> <SET AX 1>
+[INFO] 17:15:05:907 [Memoria- Log obligatorio]/(2136:3427): <PID:1> <IP:1> <SET BX 1>
+[INFO] 17:15:06:411 [Memoria- Log obligatorio]/(2136:3427): <PID:1> <IP:2> <SET CX 1>
+[INFO] 17:15:06:917 [Memoria- Log obligatorio]/(2136:3427): <PID:1> <IP:3> <SET DX 1>
+[INFO] 17:15:07:420 [Memoria- Log obligatorio]/(2136:3427): <PID:1> <IP:4> <F_OPEN consolas W>
+[INFO] 17:15:07:942 [Memoria- Log obligatorio]/(2136:3427): <PID:1> <IP:5> <F_TRUNCATE consolas 64>
+[INFO] 17:17:48:180 [Memoria- Log obligatorio]/(2136:3749): PID: <1> - Tamaño: <4>
+[INFO] 17:17:55:195 [Memoria- Log obligatorio]/(2136:3747): <PID:1> <IP:0> <SET AX 1>
+[INFO] 17:17:55:702 [Memoria- Log obligatorio]/(2136:3747): <PID:1> <IP:1> <SET BX 1>
+[INFO] 17:17:56:206 [Memoria- Log obligatorio]/(2136:3747): <PID:1> <IP:2> <SET CX 1>
+[INFO] 17:17:56:707 [Memoria- Log obligatorio]/(2136:3747): <PID:1> <IP:3> <SET DX 1>
+[INFO] 17:17:57:211 [Memoria- Log obligatorio]/(2136:3747): <PID:1> <IP:4> <F_OPEN consolas W>
+[INFO] 17:17:57:731 [Memoria- Log obligatorio]/(2136:3747): <PID:1> <IP:5> <F_TRUNCATE consolas 64>
+[INFO] 17:18:23:382 [Memoria- Log obligatorio]/(2136:3747): <PID:1> <IP:6> <F_SEEK consolas 0>
+[INFO] 17:18:23:884 [Memoria- Log obligatorio]/(2136:3747): <PID:1> <IP:7> <F_WRITE consolas 16>
+[INFO] 17:18:24:385 [Memoria- Log obligatorio]/(2136:3747): PID: <1> - Pagina: <1> - Marco: <0>
+[INFO] 17:18:24:385 [Memoria- Log obligatorio]/(2136:3747): PAGINA ENCONTRADA <PID:1> <Pag:1> <Marco:0>
+[INFO] 17:20:00:172 [Memoria- Log obligatorio]/(2136:4085): PID: <1> - Tamaño: <4>
+[INFO] 17:20:07:215 [Memoria- Log obligatorio]/(2136:4083): <PID:1> <IP:0> <SET AX 1>
+[INFO] 17:20:07:721 [Memoria- Log obligatorio]/(2136:4083): <PID:1> <IP:1> <SET BX 1>
+[INFO] 17:20:08:226 [Memoria- Log obligatorio]/(2136:4083): <PID:1> <IP:2> <SET CX 1>
+[INFO] 17:20:08:728 [Memoria- Log obligatorio]/(2136:4083): <PID:1> <IP:3> <SET DX 1>
+[INFO] 17:20:09:238 [Memoria- Log obligatorio]/(2136:4083): <PID:1> <IP:4> <F_OPEN consolas W>
+[INFO] 17:20:09:753 [Memoria- Log obligatorio]/(2136:4083): <PID:1> <IP:5> <F_TRUNCATE consolas 64>
+[INFO] 17:21:24:783 [Memoria- Log obligatorio]/(2136:4139): PID: <1> - Tamaño: <4>
+[INFO] 17:21:31:806 [Memoria- Log obligatorio]/(2136:4137): <PID:1> <IP:0> <SET AX 1>
+[INFO] 17:21:32:326 [Memoria- Log obligatorio]/(2136:4137): <PID:1> <IP:1> <SET BX 1>
+[INFO] 17:21:32:828 [Memoria- Log obligatorio]/(2136:4137): <PID:1> <IP:2> <SET CX 1>
+[INFO] 17:21:33:342 [Memoria- Log obligatorio]/(2136:4137): <PID:1> <IP:3> <SET DX 1>
+[INFO] 17:21:33:849 [Memoria- Log obligatorio]/(2136:4137): <PID:1> <IP:4> <F_OPEN consolas W>
+[INFO] 17:21:34:369 [Memoria- Log obligatorio]/(2136:4137): <PID:1> <IP:5> <F_TRUNCATE consolas 64>
+[INFO] 17:22:12:267 [Memoria- Log obligatorio]/(2136:4137): <PID:1> <IP:6> <F_SEEK consolas 0>
+[INFO] 17:22:12:773 [Memoria- Log obligatorio]/(2136:4137): <PID:1> <IP:7> <F_WRITE consolas 16>
+[INFO] 17:22:13:278 [Memoria- Log obligatorio]/(2136:4137): PID: <1> - Pagina: <1> - Marco: <0>
+[INFO] 17:22:13:278 [Memoria- Log obligatorio]/(2136:4137): PAGINA ENCONTRADA <PID:1> <Pag:1> <Marco:0>
+[INFO] 17:24:55:561 [Memoria- Log obligatorio]/(2136:4303): PID: <1> - Tamaño: <4>
+[INFO] 17:25:02:603 [Memoria- Log obligatorio]/(2136:4301): <PID:1> <IP:0> <SET AX 1>
+[INFO] 17:25:03:116 [Memoria- Log obligatorio]/(2136:4301): <PID:1> <IP:1> <SET BX 1>
+[INFO] 17:25:03:617 [Memoria- Log obligatorio]/(2136:4301): <PID:1> <IP:2> <SET CX 1>
+[INFO] 17:25:04:130 [Memoria- Log obligatorio]/(2136:4301): <PID:1> <IP:3> <SET DX 1>
+[INFO] 17:25:04:632 [Memoria- Log obligatorio]/(2136:4301): <PID:1> <IP:4> <F_OPEN consolas W>
+[INFO] 17:25:05:156 [Memoria- Log obligatorio]/(2136:4301): <PID:1> <IP:5> <F_TRUNCATE consolas 64>
+[INFO] 17:25:18:754 [Memoria- Log obligatorio]/(2136:4301): <PID:1> <IP:6> <F_SEEK consolas 0>
+[INFO] 17:25:19:256 [Memoria- Log obligatorio]/(2136:4301): <PID:1> <IP:7> <F_WRITE consolas 16>
+[INFO] 17:25:19:757 [Memoria- Log obligatorio]/(2136:4301): PID: <1> - Pagina: <1> - Marco: <0>
+[INFO] 17:25:19:757 [Memoria- Log obligatorio]/(2136:4301): PAGINA ENCONTRADA <PID:1> <Pag:1> <Marco:0>
+[INFO] 17:39:50:521 [Memoria- Log obligatorio]/(2136:4773): PID: <1> - Tamaño: <4>
+[INFO] 17:39:57:533 [Memoria- Log obligatorio]/(2136:4771): <PID:1> <IP:0> <SET AX 1>
+[INFO] 17:39:58:034 [Memoria- Log obligatorio]/(2136:4771): <PID:1> <IP:1> <SET BX 1>
+[INFO] 17:39:58:535 [Memoria- Log obligatorio]/(2136:4771): <PID:1> <IP:2> <SET CX 1>
+[INFO] 17:39:59:036 [Memoria- Log obligatorio]/(2136:4771): <PID:1> <IP:3> <SET DX 1>
+[INFO] 17:39:59:539 [Memoria- Log obligatorio]/(2136:4771): <PID:1> <IP:4> <F_OPEN consolas W>
+[INFO] 17:40:00:047 [Memoria- Log obligatorio]/(2136:4771): <PID:1> <IP:5> <F_TRUNCATE consolas 64>
+[INFO] 17:40:09:131 [Memoria- Log obligatorio]/(2136:4771): <PID:1> <IP:6> <F_SEEK consolas 0>
+[INFO] 17:40:09:650 [Memoria- Log obligatorio]/(2136:4771): <PID:1> <IP:7> <F_WRITE consolas 16>
+[INFO] 17:40:10:152 [Memoria- Log obligatorio]/(2136:4771): PID: <1> - Pagina: <1> - Marco: <0>
+[INFO] 17:40:10:152 [Memoria- Log obligatorio]/(2136:4771): PAGINA ENCONTRADA <PID:1> <Pag:1> <Marco:0>
