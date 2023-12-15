@@ -169,10 +169,8 @@ void _gestionar_peticiones_de_cpu_dispatch(){
 
 				free(nombre_archivo);
 			}else if(strcmp(instruccion, "EXIT") == 0){
-//				pthread_mutex_lock(&mutex_flag_exit);
-//				flag_exit = true;
-//				pthread_mutex_unlock(&mutex_flag_exit);
 
+				pcb->motivo_exit = SUCCESS;
 				plp_exit(pcb);
 
 			}else if(strcmp(instruccion, "PAGE_FAULT") == 0){
