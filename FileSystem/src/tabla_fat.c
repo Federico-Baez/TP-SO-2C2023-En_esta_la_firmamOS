@@ -80,6 +80,7 @@ void cargar_secuencia_de_bloques_asignados_a_tabla_fat(t_list* una_lista){
 
 uint32_t obtener_el_nro_bloque_segun_el_la_posicion_del_seek(int nro_bloque_inicial, int index_seek){
 	log_warning(filesystem_logger, "inicio obtener_el_nro_bloque_segun_el_la_posicion_del_seek");
+	log_warning(filesystem_logger, "BLOQUE: %d PUNTERO: %d", nro_bloque_inicial, index_seek);
 	log_error(filesystem_logger, "SSS 1");
 	uint32_t bloque_desplazado = index_seek/TAM_BLOQUE;
 	uint32_t i = nro_bloque_inicial;
@@ -108,7 +109,7 @@ uint32_t obtener_el_nro_bloque_segun_el_la_posicion_del_seek(int nro_bloque_inic
 		} // 0 -> 4byets | 1 -> 8bytes | 2 -> 12bytes | 3 -> 16bytes
 	}
 	log_error(filesystem_logger, "SSS 7");
-	log_warning(filesystem_logger, "fin obtener_el_nro_bloque_segun_el_la_posicion_del_seek");
+	log_warning(filesystem_logger, "fin obtener_el_nro_bloque_segun_el_la_posicion_del_seek con un valor de : %d", i);
 	return i;
 }
 

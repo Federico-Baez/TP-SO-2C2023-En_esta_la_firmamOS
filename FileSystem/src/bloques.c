@@ -13,12 +13,12 @@ void* obtener_bloque(char* nombre_archivo, int nro_bloque){
 
 	if(nombre_archivo == NULL){
 		//Para obtener bloque SWAP
-		memcpy(bloque_a_obtener, bloquesEnMemoria + nro_bloque, TAM_BLOQUE);
+		memcpy(bloque_a_obtener, bloquesEnMemoria + (nro_bloque*TAM_BLOQUE), TAM_BLOQUE);
 		log_info(filesystem_log_obligatorio, "Acceso SWAP: <%d>", nro_bloque);
 		usleep(RETARDO_ACCESO_BLOQUE*1000);
 	}else{
 		//Para obtener bloque de archivo
-		memcpy(bloque_a_obtener, bloquesEnMemoria + CANT_BLOQUES_SWAP + nro_bloque, TAM_BLOQUE);
+		memcpy(bloque_a_obtener, bloquesEnMemoria + (CANT_BLOQUES_SWAP * TAM_BLOQUE) + (nro_bloque * TAM_BLOQUE), TAM_BLOQUE);
 		int nro_bloque_fs = nro_bloque + CANT_BLOQUES_SWAP;
 		log_info(filesystem_log_obligatorio, "Acceso Bloque - Archivo: <%s> - Bloque Archivo: <%d> - Bloque FS: <%d>", nombre_archivo, nro_bloque, nro_bloque_fs);
 		usleep(RETARDO_ACCESO_BLOQUE*1000);
@@ -102,8 +102,8 @@ void setear_bloque_de_swap_como_libre(uint32_t nro_bloque_swap){
 
 	bitarray_clean_bit(bitmapSWAP, nro_bloque_swap);
 	log_warning(filesystem_logger, "NUM BLOQUE SWAP: %d", nro_bloque_swap);
-	memcpy(bloquesEnMemoria + nro_bloque_swap, "\0", TAM_BLOQUE);
-	//memset(bloquesEnMemoria + nro_bloque_swap, 0, TAM_BLOQUE);
+	//memcpy(bloquesEnMemoria + nro_bloque_swap, "\0", TAM_BLOQUE);
+	memset(bloquesEnMemoria + nro_bloque_swap, 0, TAM_BLOQUE);
 	log_info(filesystem_log_obligatorio, "Acceso SWAP: <%d>", nro_bloque_swap);
 	usleep(RETARDO_ACCESO_BLOQUE*1000);
 

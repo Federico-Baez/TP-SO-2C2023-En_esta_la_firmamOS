@@ -130,6 +130,8 @@ void atender_f_write_de_kernel(t_buffer* un_buffer){
 
 	uint32_t bloque_a_escribir_fat = obtener_el_nro_bloque_segun_el_la_posicion_del_seek(fcb->bloque_inicial, puntero);
 
+	log_info(filesystem_logger, "Bloque a escribir fat: <%u>", bloque_a_escribir_fat);
+
 	enviar_solicitud_de_escritura_a_memoria(pid_process, dir_fisica, bloque_a_escribir_fat, nombre_archivo);
 
 	log_info(filesystem_log_obligatorio, "Escribir Archivo: <%s> - Puntero: <%d> - Memoria: <%d>", nombre_archivo, puntero, dir_fisica);
