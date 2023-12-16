@@ -23,7 +23,7 @@ int main(int argc, char** argv) {
 	server_fd_cpu_dispatch = iniciar_servidor(cpu_logger, IP_CPU, PUERTO_ESCUCHA_DISPATCH);
 	server_fd_cpu_interrupt = iniciar_servidor(cpu_logger, IP_CPU, PUERTO_ESCUCHA_INTERRUPT);
 
-	//log_info(cpu_logger, "Servidor listo para recibir a Kernel\n");
+	log_warning(cpu_logger, "Servidor listo para recibir a Kernel\n");
 
 	pthread_t hilo_cpu_dispatch, hilo_cpu_interrupt, hilo_cpu_memoria;
 
@@ -55,7 +55,7 @@ void leer_config(t_config* config){
 
 
 void iterator(char* value) {
-	log_info(cpu_logger,"%s", value);
+	log_warning(cpu_logger,"%s", value);
 }
 
 void iniciar_estructuras(){
@@ -113,7 +113,7 @@ void destruir_semaforos(){
 	pthread_mutex_destroy(&mutex_interruptFlag);
 	pthread_mutex_destroy(&mutex_manejo_contexto);
 
-	log_info(cpu_logger, "Semaforos destruidos");
+	log_warning(cpu_logger, "Semaforos destruidos");
 }
 
 void finalizar_CPU(){
@@ -125,7 +125,7 @@ static void atender_mensajes_kernel_v2(t_buffer* buffer, char* tipo_de_hilo){
 	int tamanio = recibir_int_del_buffer(buffer);
 //	char* mensaje = recibir_string_del_buffer(buffer);
 
-	log_info(cpu_logger, "[KERNEL_%s]> [%d]", tipo_de_hilo, tamanio);
+	log_warning(cpu_logger, "[KERNEL_%s]> [%d]", tipo_de_hilo, tamanio);
 //	free(mensaje);
 	//free(buffer->stream);
 	free(buffer);
@@ -134,7 +134,7 @@ static void atender_mensajes_kernel_v2(t_buffer* buffer, char* tipo_de_hilo){
 void atender_cpu_dispatch(){
 	fd_kernel_dispatch = esperar_cliente(cpu_logger, "Kernel por dispatch", server_fd_cpu_dispatch);
 	gestionar_handshake_como_server(fd_kernel_dispatch, cpu_logger);
-	log_info(cpu_logger, "::::::::::: KERNEL CONECTADO POR DISPATCH ::::::::::::");
+	log_warning(cpu_logger, "::::::::::: KERNEL CONECTADO POR DISPATCH ::::::::::::");
 	while(1){
 		int cod_op = recibir_operacion(fd_kernel_dispatch);
 		t_buffer* unBuffer;
@@ -154,7 +154,7 @@ void atender_cpu_dispatch(){
 			//char* instruccion = recibir_string_del_buffer(unBuffer);  por ahora no es necesario, si se agrega avisar a luca
 			int estadoInstruccion = recibir_int_del_buffer(unBuffer);
 			if(estadoInstruccion == -1){
-				log_info(cpu_logger, "PID: <%d> - Voy a tener que desaloajr %d",contexto->proceso_pid,  hay_que_desalojar_sin_mensaje);
+				log_warning(cpu_logger, "PID: <%d> - Voy a tener que desaloajr %d",contexto->proceso_pid,  hay_que_desalojar_sin_mensaje);
 
 				hay_que_desalojar_sin_mensaje = true;
 			}
@@ -206,7 +206,7 @@ void atender_cpu_dispatch(){
 			break;
 		}
 	}
-	log_info(cpu_logger, "Saliendo del hilo de CPU_DISPATCH - KERNEL");
+	log_warning(cpu_logger, "Saliendo del hilo de CPU_DISPATCH - KERNEL");
 }
 
 
@@ -237,7 +237,7 @@ static void _manejar_interrupcion(t_buffer* un_buffer){
 				interrupt_motivo = puntero_string;
 				free(punteros[0]);
 				free(punteros[1]);
-				log_warning(cpu_logger, "BATISENAL DE DESALOJO RECIBIDA");
+				log_warning(cpu_logger, "SENAL DE DESALOJO RECIBIDA");
 			}
 			// este else habria que sacarlo, consultarlo
 			else{
@@ -245,12 +245,12 @@ static void _manejar_interrupcion(t_buffer* un_buffer){
 				free(punteros[0]);
 				free(punteros[1]);
 				free(puntero_string);
-				log_error(cpu_logger, "Ignnorar a esta interrupcion - atender esta advertencia porque se supone que el control de interrupcions va desde el kernel");
+				//log_error(cpu_logger, "Ignorar a esta interrupcion - atender esta advertencia porque se supone que el control de interrupcions va desde el kernel");
 			}
 		}
 
 	}else{
-		log_info(cpu_logger, "INTERRUPCION RECHAZADA XQ NO HAY PROCESOS CORRIENDO EN CPU ACTUALMENTE");
+		log_warning(cpu_logger, "INTERRUPCION RECHAZADA PORQUE NO HAY PROCESOS CORRIENDO EN CPU ACTUALMENTE");
 		free(punteros[0]);
 		free(punteros[1]);
 		free(puntero_string);
@@ -260,7 +260,7 @@ static void _manejar_interrupcion(t_buffer* un_buffer){
 void atender_cpu_interrupt(){
 	fd_kernel_interrupt = esperar_cliente(cpu_logger, "Kernel por interrupt", server_fd_cpu_interrupt);
 	gestionar_handshake_como_server(fd_kernel_interrupt, cpu_logger);
-	log_info(cpu_logger, "::::::::::: KERNEL CONECTADO POR INTERRUPT ::::::::::::");
+	log_warning(cpu_logger, "::::::::::: KERNEL CONECTADO POR INTERRUPT ::::::::::::");
 	while(1){
 		int cod_op = recibir_operacion(fd_kernel_interrupt);
 		t_buffer* unBuffer;
@@ -291,14 +291,14 @@ void atender_cpu_interrupt(){
 			break;
 		}
 	}
-	log_info(cpu_logger, "Saliendo del hilo de CPU_INTERRUPT - KERNEL");
+	log_warning(cpu_logger, "Saliendo del hilo de CPU_INTERRUPT - KERNEL");
 }
 
 void atender_cpu_memoria(){
 	fd_memoria = crear_conexion(IP_MEMORIA, PUERTO_MEMORIA);
 	gestionar_handshake_como_cliente(fd_memoria, "MEMORIA", cpu_logger);
 	identificarme_con_memoria(fd_memoria, CPU);
-	log_info(cpu_logger, "HANDSHAKE CON MEMORIA [EXITOSO]");
+	log_warning(cpu_logger, "HANDSHAKE CON MEMORIA [EXITOSO]");
 	int seguir=1;
 	while(seguir){
 		int cod_op = recibir_operacion(fd_memoria);
@@ -348,7 +348,7 @@ void atender_cpu_memoria(){
 			break;
 		}
 	}
-	log_info(cpu_logger, "Saliendo del hilo de CPU - MEMORIA");
+	log_warning(cpu_logger, "Saliendo del hilo de CPU - MEMORIA");
 }
 
 
@@ -415,7 +415,7 @@ void atender_proceso_del_kernel(t_buffer* unBuffer){
 
 	if(!hay_que_desalojar_sin_mensaje){
 		enviar_paquete(un_paquete, fd_kernel_dispatch);
-		log_info(cpu_logger, "Elimino paquete");
+		log_warning(cpu_logger, "Elimino paquete");
 		eliminar_paquete(un_paquete);
 	}
 
@@ -423,7 +423,7 @@ void atender_proceso_del_kernel(t_buffer* unBuffer){
 
 	destruir_estructuras_del_contexto_acttual();
 
-	log_info(cpu_logger, "Todo el contexto se elimino correctamente .....");
+	log_warning(cpu_logger, "Todo el contexto se elimino correctamente .....");
 	pthread_mutex_unlock(&mutex_manejo_contexto);
 }
 
@@ -485,10 +485,10 @@ void ciclo_de_instruccion_execute(){
 		log_info(cpu_log_obligatorio, "PID: <%d> - Ejecutando: <%s> - <%s> - <%s>", contexto->proceso_pid, instruccion_split[0], instruccion_split[1], instruccion_split[2]);
 		contexto->proceso_ip = contexto->proceso_ip + 1;
 		uint32_t* registro_referido = detectar_registro(instruccion_split[1]);
-		log_info(cpu_logger, "AAAA 1");
+		//log_info(cpu_logger, "AAAA 1");
 //		*registro_referido = strtoul(instruccion_split[1], NULL, 10);
 		*registro_referido = atoi(instruccion_split[2]);
-		log_info(cpu_logger, "AAAA 1: %u", *registro_referido);
+		//log_info(cpu_logger, "AAAA 1: %u", *registro_referido);
 
 	}else if(strcmp(instruccion_split[0], "SUM") == 0){//[SUM][destino:AX][origen:BX]
 		log_info(cpu_log_obligatorio, "PID: <%d> - Ejecutando: <%s> - <%s> - <%s>", contexto->proceso_pid, instruccion_split[0], instruccion_split[1], instruccion_split[2]);
@@ -507,14 +507,14 @@ void ciclo_de_instruccion_execute(){
 	}else if(strcmp(instruccion_split[0], "JNZ") == 0){// [JNZ][Registro][Instruccion]
 		log_info(cpu_log_obligatorio, "PID: <%d> - Ejecutando: <%s> - <%s> - <%s>", contexto->proceso_pid, instruccion_split[0], instruccion_split[1], instruccion_split[2]);
 		uint32_t* registro_referido = detectar_registro(instruccion_split[1]);
-		log_info(cpu_logger, "REgistro_referido:%u", *registro_referido);
+		//log_info(cpu_logger, "REgistro_referido:%u", *registro_referido);
 		if(*registro_referido != 0) {
 			contexto->proceso_ip = atoi(instruccion_split[2]);
-			log_info(cpu_logger, "Entre IF JNZ:");
+			//log_info(cpu_logger, "Entre IF JNZ:");
 		}else{
 			contexto->proceso_ip ++;
 		}
-		log_info(cpu_logger, "SALI IF JNZ:%d",contexto->proceso_ip);
+		//log_info(cpu_logger, "SALI IF JNZ:%d",contexto->proceso_ip);
 
 	}else if(strcmp(instruccion_split[0], "SLEEP") == 0){// [SLEEP][tiempo]
 		log_info(cpu_log_obligatorio, "PID: <%d> - Ejecutando: <%s> - <%s>", contexto->proceso_pid, instruccion_split[0], instruccion_split[1]);
@@ -661,8 +661,6 @@ void ciclo_de_instruccion_execute(){
 		mochila = crear_super_paquete(100);
 		cargar_string_al_super_paquete(mochila, "EXIT"); //Motivo del desalojo
 		hay_que_desalojar = true;
-	}else{
-		log_error(cpu_logger, "Nunca se deberia llegar aqui :(");
 	}
 }
 
@@ -682,7 +680,7 @@ int MMU(int dir_logica){
 
 	sem_wait(&sem_control_peticion_marco_a_memoria);
 
-	log_error(cpu_logger, ">>>>>>< Nro_marco:%d",marco);
+	//log_error(cpu_logger, ">>>>>>< Nro_marco:%d",marco);
 	if(marco >= 0){
 		log_info(cpu_log_obligatorio, "PID: <%d> - OBTENER MARCO - Página: <%d> - Marco: <%d>", contexto->proceso_pid, num_pagina, marco);
 		int dir_fisica = marco *tam_pagina + desplazamiento;
@@ -832,7 +830,7 @@ uint32_t* detectar_registro(char* RX){
 
 void atender_recepcion_de_instruccion(t_buffer* unBuffer){
 	char* instruccion_actual_string = recibir_string_del_buffer(unBuffer);
-	log_info(cpu_logger, "Instruccion recibida: [%s]", instruccion_actual_string);
+	log_warning(cpu_logger, "Instruccion recibida: [%s]", instruccion_actual_string);
 
 	instruccion_split = string_split(instruccion_actual_string, " ");
 	sem_post(&sem_control_fetch_decode);
@@ -885,7 +883,7 @@ void enviarPaqueteKernelConInfoExtra(t_paquete* infoExtra){
 
 
 void print_proceso(){
-	log_info(cpu_logger, "[PID: %d][PC: %d][Registros: %u|%u|%u|%u]",
+	log_warning(cpu_logger, "[PID: %d][PC: %d][Registros: %u|%u|%u|%u]",
 			contexto->proceso_pid,
 			contexto->proceso_ip,
 			contexto->AX,
