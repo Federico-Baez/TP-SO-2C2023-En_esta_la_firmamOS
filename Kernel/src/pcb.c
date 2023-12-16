@@ -442,6 +442,7 @@ void asignar_lock_pcb(t_archivo* archivo){
 				list_remove_element(archivo->cola_block_procesos, pcb);
 				pcb = list_get(archivo->cola_block_procesos,0);
 				archivo_pcb = obtener_archivo_pcb(pcb, archivo->nombre_archivo);
+			}
 		}
 	}else{
 		archivo->lock_escritura->locked = 1;
