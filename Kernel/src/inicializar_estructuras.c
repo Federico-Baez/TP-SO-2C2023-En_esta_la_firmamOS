@@ -52,6 +52,7 @@ static void iniciar_listas(){
 
 	lista_general = list_create();
 	lista_recursos = list_create();
+
 	lista_archivos_abiertos = list_create();
 }
 

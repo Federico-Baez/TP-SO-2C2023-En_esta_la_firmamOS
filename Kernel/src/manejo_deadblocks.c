@@ -16,7 +16,6 @@ void deteccion_deadlock(){
 
 		bool hay_ciclo = false;
 		if(list_size(lista_posibles_deadlocks_recurso) > 1){
-
 			t_pcb* pcb = list_get(lista_posibles_deadlocks_recurso, 0);
 			while(1){
 				t_recurso* recurso = list_get(pcb->lista_recursos_pcb, list_size(pcb->lista_recursos_pcb)-1);
@@ -48,14 +47,13 @@ void deteccion_deadlock(){
 			}else
 				log_info(kernel_logger, "No hay procesos en DEADLOCK");
 		}
+		list_destroy(lista_posibles_deadlocks_recurso);
 	}
 }
 
 
 void obtener_lista_pcbs_block_recursos(t_list** lista_posibles_deadlocks_recurso ){
 	pthread_mutex_lock(&mutex_lista_blocked);
-	log_info(kernel_logger, "Entre a obtener lista de recursos");
-
 	for(int i = 0; i < list_size(lista_blocked); i++){
 		t_pcb* pcb = list_get(lista_blocked, i);
 		if(pcb->motivo_block == 0){

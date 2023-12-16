@@ -126,11 +126,8 @@ void plp_planificar_proceso_exit(int pid){
 
 			pthread_mutex_lock(&mutex_flag_proceso_desalojado);
 			pthread_mutex_lock(&mutex_flag_finalizar_proceso);
-			if(flag_proceso_desalojado){
-				log_info(kernel_logger, "ENTRO A CAMBIAR EL VALOR DEL FLAG");
-
+			if(flag_proceso_desalojado && flag_exit){
 				flag_proceso_desalojado = false;
-
 			}else{
 	//			Enviar un interrupt
 				flag_finalizar_proceso = true;

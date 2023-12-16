@@ -463,16 +463,7 @@ void _desalojar_proceso(t_pcb* un_pcb){
 	flag_finalizar_proceso = false;
 	pthread_mutex_unlock(&mutex_flag_finalizar_proceso);
 
-	int flag_new_vacia = 0;
-	pthread_mutex_lock(&mutex_lista_new);
-	if(list_is_empty(lista_new))
-		flag_new_vacia = 1;
-	pthread_mutex_unlock(&mutex_lista_new);
-
-	if(flag_new_vacia == 1){
-		pcp_planificar_corto_plazo();
-	}else
-		plp_planificar_proceso_nuevo(NULL);
+	plp_planificar_proceso_nuevo(NULL);
 }
 
 void _reubicar_pcb_de_execute_a_ready(t_pcb* un_pcb){

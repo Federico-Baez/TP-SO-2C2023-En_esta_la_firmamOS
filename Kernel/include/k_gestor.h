@@ -38,9 +38,9 @@ typedef enum{
 }t_motivo_exit;
 
 typedef enum{
-	RECURSO,
-	ARCHIVO,
-	OTRO
+	RECURSO, // 0
+ 	ARCHIVO, // 1
+	OTRO  // 2
 }t_motivo_block;
 
 
@@ -88,7 +88,8 @@ typedef struct{
 
 typedef struct{
 	int locked; // Si es " = 1 ", quiere decir que existe lock de lectura
- 	t_list* lista_participantes; // Todos aquellos que posean un lock de lectura
+ 	int cantidad_participantes;
+	t_list* lista_participantes; // Todos aquellos que posean un lock de lectura
 	pthread_mutex_t mutex_lista_asiganada;  // El mutex para la lista de participantes
 }t_lock_lectura;
 
