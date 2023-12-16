@@ -22,6 +22,8 @@
 - memoria (cd /home/utnso/tp-2023-2c-En_esta_la_firmamOS/Memoria/)
 ./run_memoria.sh
 
+##===================================
+
 ## CONFIGS
 ./Kernel ./configs/base.config
 ./Kernel ./configs/recursos.config
