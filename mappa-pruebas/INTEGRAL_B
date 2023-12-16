@@ -27,7 +27,7 @@ MOV_OUT 44 AX
 SET AX 85
 MOV_OUT 48 AX
 SET AX 78
-MOV OUT 52 AX
+MOV_OUT 52 AX
 F_SEEK GuiaPlatinoSagaDarkSouls 0
 F_WRITE GuiaPlatinoSagaDarkSouls 0
 F_SEEK GuiaPlatinoSagaDarkSouls 16
