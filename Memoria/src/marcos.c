@@ -68,12 +68,9 @@ t_marco* obtener_un_marco_de_la_lista_de_marcos(int* tipo_de_marco){
 	}
 //	pthread_mutex_lock(&mutex_lst_marco);
 	un_marco = list_find(lst_marco, (void*)_marco_libre);
-	log_info(memoria_logger, "TTT_1");
 	//Asumiendo que retorne NULL por no encontrar marcos vacios disponibles
 	if(un_marco == NULL){
-		log_info(memoria_logger, "TTT_1.5");
 		un_marco = elegir_victima_segun_algoritmo();
-		log_info(memoria_logger, "TTT_2");
 		*tipo_de_marco = MARCO_VICTIMA;
 
 		//Si es pagina victima, preguntar si la pagina correspondiente tiene bit de modificado y actuar en conescueencia
@@ -81,10 +78,8 @@ t_marco* obtener_un_marco_de_la_lista_de_marcos(int* tipo_de_marco){
 
 	}
 	else{
-		log_info(memoria_logger, "TTT_ENTRE_AL_ELSE");
 		*tipo_de_marco = MARCO_LIMPIO;
 	}
-	log_info(memoria_logger, "TTT_SALI_DEL_IF");
 	un_marco->libre = false;
 //	pthread_mutex_unlock(&mutex_lst_marco);
 
@@ -94,12 +89,9 @@ t_marco* obtener_un_marco_de_la_lista_de_marcos(int* tipo_de_marco){
 /*Si llamaas esta funcion es que todos los marcos estan ocupados (asignados a alguna pagina)*/
 t_marco* elegir_victima_segun_algoritmo(){
 	t_marco* un_marco;
-	log_info(memoria_logger, "Entre a legir victima RRRRRRR");
 	t_marco* _comparar_orden_carga(t_marco* marco1, t_marco* marco2) {
 		if (marco1->orden_carga < marco2->orden_carga){
-			log_info(memoria_logger, "VVV_1");
 			if(marco1->orden_carga == 0 || marco2->orden_carga == 0){
-				log_error(memoria_logger, "SE SUPONE QUE TODAS LOS MARCOS ESTAN OCUPADOS Y NINGUNO DEBERIA ESTAR SETEADO CON ORDEN DE CARGA = 0");
 				exit(EXIT_FAILURE);
 			}
 			return marco1;
@@ -109,16 +101,13 @@ t_marco* elegir_victima_segun_algoritmo(){
 
 	t_marco* _comparar_acceso_LRU(t_marco* marco1, t_marco* marco2) {
 		if (temporal_gettime(marco1->ultimo_uso) > temporal_gettime(marco2->ultimo_uso)){
-			log_info(memoria_logger, "ZZZ_1");
 			return marco1;
 		}
 		else return marco2;
 	}
 
 	if(strcmp(ALGORITMO_REEMPLAZO, "FIFO") == 0){
-		log_warning(memoria_logger, "VVV_100");
 		un_marco = list_get_minimum(lst_marco, (void*)_comparar_orden_carga);
-		log_warning(memoria_logger, "VVV_200");
 	}else if(strcmp(ALGORITMO_REEMPLAZO, "LRU") == 0){
 		un_marco = list_get_maximum(lst_marco, (void*)_comparar_acceso_LRU);
 	}else{

@@ -40,15 +40,11 @@ void atender_pagefault_kernel(t_buffer* un_buffer){
 	int nro_pagina = recibir_int_del_buffer(un_buffer);
 
 //	log_info(memoria_logger, "");
-	log_info(memoria_logger, "BBB_1");
 	t_proceso* un_proceso = obtener_proceso_por_id(pid);
-	log_info(memoria_logger, "BBB_2");
 	t_pagina* una_pagina = pag_obtener_pagina_completa_(un_proceso, nro_pagina);
-	log_info(memoria_logger, "BBB_3");
 
 	int tipo_marco = 10;
 	t_marco* un_marco = obtener_un_marco_de_la_lista_de_marcos(&tipo_marco);
-	log_info(memoria_logger, "BBB_4");
 
 	if(tipo_marco == MARCO_VICTIMA){
 		if(un_marco->info_old != NULL){

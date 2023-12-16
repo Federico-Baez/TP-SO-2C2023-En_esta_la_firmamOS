@@ -4,7 +4,6 @@
 
 
 void atender_f_open_de_kernel(t_buffer* un_buffer){
-	log_warning(filesystem_logger, "inicio atender_f_open_de_kernel");
 	char* nombre_archivo = recibir_string_del_buffer(un_buffer);
 	char* operacion = recibir_string_del_buffer(un_buffer);
 
@@ -20,7 +19,6 @@ void atender_f_open_de_kernel(t_buffer* un_buffer){
 			cargar_string_al_super_paquete(paquete, nombre_archivo);
 			cargar_int_al_super_paquete(paquete, fcb->tamanio);
 		}else{
-			log_info(filesystem_logger, "El archivo solicitado no existe");
 			cargar_int_al_super_paquete(paquete, -1);
 		}
 	}else{
@@ -31,7 +29,6 @@ void atender_f_open_de_kernel(t_buffer* un_buffer){
 	}
 	enviar_rta_f_open_a_kernel(paquete);
 	free(un_buffer);
-	log_warning(filesystem_logger, "fin atender_f_open_de_kernel");
 }
 
 static void destruir_bloques_libres(t_list* lista_bloques_libres_asignadose){
@@ -42,7 +39,6 @@ static void destruir_bloques_libres(t_list* lista_bloques_libres_asignadose){
 }
 
 void atender_f_truncate_de_kernel(t_buffer* un_buffer){
-	log_warning(filesystem_logger, "inicio atender_f_truncate_de_kernel");
 	char* nombre_archivo = recibir_string_del_buffer(un_buffer);
 	int tamanio_nuevo = recibir_int_del_buffer(un_buffer);
 	int pid_process = recibir_int_del_buffer(un_buffer);
@@ -69,7 +65,6 @@ void atender_f_truncate_de_kernel(t_buffer* un_buffer){
 	if(tamanio_nuevo > tamanio_viejo){
 		if(tamanio_viejo == 0){
 			lista_bloques_libres_asignados = obtener_n_cantidad_de_bloques_libres_de_tabla_fat(cantidad_bloques);
-			log_info(filesystem_logger, " Tamaño LISTA BLOQ ASIG: <%d>", list_size(lista_bloques_libres_asignados));
 			cargar_secuencia_de_bloques_asignados_a_tabla_fat(lista_bloques_libres_asignados);
 			fcb->bloque_inicial = *((int*)list_get(lista_bloques_libres_asignados, 0));
 			config_set_value(fcb->archivo_fcb, "BLOQUE_INICIAL", bloque_inicial);
@@ -93,11 +88,9 @@ void atender_f_truncate_de_kernel(t_buffer* un_buffer){
 	if(!list_is_empty(lista_bloques_libres_asignados)){
 		destruir_bloques_libres(lista_bloques_libres_asignados);
 	}
-	log_warning(filesystem_logger, "fin atender_f_truncate_de_kernel");
 }
 
 void atender_f_read_de_kernel(t_buffer* un_buffer){
-	log_warning(filesystem_logger, "inicio atender_f_read_de_kernel");
 	char* nombre_archivo = recibir_string_del_buffer(un_buffer);
 	int pid_process = recibir_int_del_buffer(un_buffer);
 	int puntero = recibir_int_del_buffer(un_buffer);
@@ -115,11 +108,9 @@ void atender_f_read_de_kernel(t_buffer* un_buffer){
 
 	// Ahora queda esperar la respuesta de memoria en atender_memoria
 	free(un_buffer);
-	log_warning(filesystem_logger, "fin atender_f_read_de_kernel");
 }
 
 void atender_f_write_de_kernel(t_buffer* un_buffer){
-	log_warning(filesystem_logger, "inicio atender_f_write_de_kernel");
 //	[PID][DIR_FISICA][NRO_BLOQUE]
 	char* nombre_archivo = recibir_string_del_buffer(un_buffer);
 	int pid_process = recibir_int_del_buffer(un_buffer);
@@ -139,7 +130,6 @@ void atender_f_write_de_kernel(t_buffer* un_buffer){
 	// Ahora queda esperar la respuesta de memoria en atender_memoria
 	// y desde fs_memoria se sigue con el procedimiento
 	free(un_buffer);
-	log_warning(filesystem_logger, "fin atender_f_write_de_kernel");
 }
 
 
@@ -147,38 +137,31 @@ void atender_f_write_de_kernel(t_buffer* un_buffer){
 // =========== ENVIAR A KERNEL ===============
 
 void enviar_rta_f_open_a_kernel(t_paquete* un_paquete){
-	log_warning(filesystem_logger, "inicio enviar_rta_f_open_a_kernel");
 	// Se carga todo en la funcion de f_open porque tiene distintos criterios para hacerlo
 	enviar_paquete(un_paquete, fd_kernel);
-	log_warning(filesystem_logger, "fin enviar_rta_f_open_a_kernel");
 }
 
 void enviar_rta_f_truncate_a_kernel(int pid_process){
-	log_warning(filesystem_logger, "inicio enviar_rta_f_truncate_a_kernel");
 	t_paquete* paquete = crear_super_paquete(RESPUESTA_F_TRUNCATE_FK);
 	cargar_string_al_super_paquete(paquete, "Truncate realizado");
 	cargar_int_al_super_paquete(paquete, pid_process);
 	enviar_paquete(paquete, fd_kernel);
 	eliminar_paquete(paquete);
-	log_warning(filesystem_logger, "fin enviar_rta_f_truncate_a_kernel");
 }
 
 
 // =========== ENVIAR A MEMORIA ===============
 
 void enviar_contenido_a_memoria(int pid_process ,int dir_fisica, void* contenido_leido){
-	log_warning(filesystem_logger, "inicio enviar_contenido_a_memoria");
 	t_paquete* paquete = crear_super_paquete(CARGAR_INFO_DE_LECTURA_FM);
 	cargar_int_al_super_paquete(paquete,pid_process);
 	cargar_int_al_super_paquete(paquete,dir_fisica);
 	cargar_choclo_al_super_paquete(paquete, contenido_leido, TAM_BLOQUE);
 	enviar_paquete(paquete, fd_memoria);
 	eliminar_paquete(paquete);
-	log_warning(filesystem_logger, "fin enviar_contenido_a_memoria");
 }
 
 void enviar_solicitud_de_escritura_a_memoria(int pid_process, int dir_fisica, uint32_t bloque_a_escribir_fat, char* nombre_archivo){
-	log_warning(filesystem_logger, "inicio enviar_solicitud_de_escritura_a_memoria");
 	t_paquete* paquete = crear_super_paquete(BLOQUE_DE_MEMORIA_A_FILESYSTEM_FM);
 	cargar_int_al_super_paquete(paquete,pid_process);
 	cargar_int_al_super_paquete(paquete,dir_fisica);
@@ -186,7 +169,6 @@ void enviar_solicitud_de_escritura_a_memoria(int pid_process, int dir_fisica, ui
 	cargar_string_al_super_paquete(paquete, nombre_archivo);
 	enviar_paquete(paquete, fd_memoria);
 	eliminar_paquete(paquete);
-	log_warning(filesystem_logger, "fin enviar_solicitud_de_escritura_a_memoria");
 }
 
 

@@ -78,12 +78,9 @@ void atender_bloque_de_memoria_y_llevarlos_a_fylesystem(t_buffer* un_buffer){
 	//Extraer el marco completo en un void*
 	void* un_marco = copiar_marco_desde_una_dir_fisica(pid, dir_fisica);
 
-	log_info(memoria_logger, "AA1");
 	//Setear referencia al marco
 	setear_config_por_ultima_referencia(un_marco);
-	log_info(memoria_logger, "AA SALI");
 	//Enviar marco a FS
-	log_info(memoria_logger, "VOY A ENVIAR MARCO");
 	enviar_marco_a_fs(pid, nro_bloque, un_marco, nombre_archivo);
 
 	free(un_marco);

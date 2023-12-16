@@ -6,9 +6,7 @@ void plp_planifica(){
 
 	pthread_mutex_lock(&mutex_core);
 	pthread_mutex_lock(&mutex_lista_new);
-	log_warning(kernel_logger, "ESTOY POR ENTRAR AL IF - CORE %d", procesos_en_core);
 	if(GRADO_MULTIPROGRAMACION_INI > procesos_en_core && !list_is_empty(lista_new)){
-		log_info(kernel_logger, "Entre al IF");
 
 		//Remover PCB de NEW si existen elementos
 		un_pcb = list_remove(lista_new, 0); //Sale por FIFO
@@ -126,9 +124,9 @@ void plp_planificar_proceso_exit(int pid){
 
 			pthread_mutex_lock(&mutex_flag_proceso_desalojado);
 			pthread_mutex_lock(&mutex_flag_finalizar_proceso);
-			if(flag_proceso_desalojado && flag_exit){
-				flag_proceso_desalojado = false;
-			}else{
+			if(!flag_proceso_desalojado){
+//				flag_proceso_desalojado = false;
+//			}else{
 	//			Enviar un interrupt
 				flag_finalizar_proceso = true;
 				log_info(kernel_logger, "Envio interrupcion");

@@ -5,7 +5,6 @@
 void* obtener_bloque(char* nombre_archivo, int nro_bloque){
     //LA info de nombre de archivo y puntero_de_kernel son para el log obligatorio
     //Acceso Bloque - Archivo: <NOMBRE_ARCHIVO> - Bloque Archivo: <NUMERO_BLOQUE_ARCHIVO> - Bloque FS: <NUMERO_BLOQUE_FS>
-	log_warning(filesystem_logger, "inicio obtener_bloque");
     //LOG Obligatorio para acceso a SWAP
     //Acceso SWAP: <NRO_BLOQUE>
 
@@ -23,14 +22,12 @@ void* obtener_bloque(char* nombre_archivo, int nro_bloque){
 		log_info(filesystem_log_obligatorio, "Acceso Bloque - Archivo: <%s> - Bloque Archivo: <%d> - Bloque FS: <%d>", nombre_archivo, nro_bloque, nro_bloque_fs);
 		usleep(RETARDO_ACCESO_BLOQUE*1000);
 	}
-	log_warning(filesystem_logger, "fin obtener_bloque");
 	return bloque_a_obtener;
 }
 
 void modificar_bloque(char* nombre_archivo, int nro_bloque, void* contenido_bloque){
     //LA info de nombre de archivo y puntero_de_kernel son para el log obligatorio
     //Acceso Bloque - Archivo: <NOMBRE_ARCHIVO> - Bloque Archivo: <NUMERO_BLOQUE_ARCHIVO> - Bloque FS: <NUMERO_BLOQUE_FS>
-	log_warning(filesystem_logger, "inicio modificar_bloque");
     //LOG Obligatorio para acceso a SWAP
     //Acceso SWAP: <NRO_BLOQUE>
 
@@ -57,7 +54,6 @@ void modificar_bloque(char* nombre_archivo, int nro_bloque, void* contenido_bloq
 		log_info(filesystem_log_obligatorio, "Acceso Bloque - Archivo: <%s> - Bloque Archivso: <%d> - Bloque FS: <%d>", nombre_archivo, nro_bloque, nro_bloque_fs);
 		usleep(RETARDO_ACCESO_BLOQUE*1000);
 	}
-	log_warning(filesystem_logger, "fin modificar_bloque");
 }
 
 //========== SWAP =====================
@@ -67,9 +63,6 @@ t_list* swap_obtener_n_cantidad_de_bloques(int cant_bloques){
 
 	int contador = 0;
 
-	//log_warning(filesystem_logger, "inicio swap_obtener_n_cantidad_de_bloques: %d", bitarray_test_bit(bitmapSWAP, 2));
-	log_warning(filesystem_logger, "inicio swap_obtener_n_cantidad_de_bloques: %d", cant_bloques);
-	log_warning(filesystem_logger, "bitarray_get_max_bit(bitmapSWAP): %d", bitarray_get_max_bit(bitmapSWAP));
 	for (int i = 0; i < bitarray_get_max_bit(bitmapSWAP); i++) {
 		if (!bitarray_test_bit(bitmapSWAP, i)) {
 			int* ptr_contador = malloc(sizeof(int));
@@ -91,14 +84,12 @@ t_list* swap_obtener_n_cantidad_de_bloques(int cant_bloques){
 		usleep(RETARDO_ACCESO_BLOQUE*1000);
 	}
 
-	log_warning(filesystem_logger, "fin swap_obtener_n_cantidad_de_bloques");
 	return bloques_a_obtener;
 }
 
 void setear_bloque_de_swap_como_libre(uint32_t nro_bloque_swap){
     //LOG Obligatorio
     //Acceso SWAP: <NRO_BLOQUE>
-	log_warning(filesystem_logger, "inicio setear_bloque_de_swap_como_libre");
 
 	bitarray_clean_bit(bitmapSWAP, nro_bloque_swap);
 	log_warning(filesystem_logger, "NUM BLOQUE SWAP: %d", nro_bloque_swap);

@@ -161,25 +161,18 @@ void atender_F_close(char* close_nombre_archivo, t_pcb* pcb){
 	if(archivo_pcb != NULL){
 		t_archivo* archivo = obtener_archivo_global(close_nombre_archivo);
 		// Aca determinamos si el pcb tiene el lock otorgado
-		log_info(kernel_logger, "AAA");
 		if(archivo_pcb->lock_otorgado == 1){
-			log_info(kernel_logger, "AAA1 APER %s", archivo_pcb->modo_apertura);
-
 			if(strcmp(archivo_pcb->modo_apertura, "R") == 0){
-				log_info(kernel_logger, "AAA2");
 				liberar_lock_lectura(archivo->lock_lectura, pcb);
 			}else{
 				liberar_lock_escritura(archivo->lock_escritura, pcb);
 			}
-			log_info(kernel_logger, "AAA3 ES TODO == 0 , %d --- %d", archivo->lock_lectura->locked, archivo->lock_escritura->locked );
 			if(archivo->lock_lectura->locked == 0 && archivo->lock_escritura->locked == 0){
 				pthread_mutex_lock(&archivo->mutex_cola_block);
-				log_info(kernel_logger, "AAA4 ENTRO PARA PID_%d", pcb->pid);
 				if(list_size(archivo->cola_block_procesos) == 0){
 					list_remove_element(pcb->archivos_abiertos, archivo_pcb);
 //					list_remove_element(lista_archivos_abiertos, archivo);
 				}else{
-					log_info(kernel_logger, "VOY A ASIGNAR LOCK");
 					asignar_lock_pcb(archivo);
 				}
 				pthread_mutex_unlock(&archivo->mutex_cola_block);

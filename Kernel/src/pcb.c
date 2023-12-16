@@ -411,10 +411,7 @@ void bloquear_proceso_cola_fs(t_pcb* pcb, t_archivo* archivo){
 void liberar_lock_lectura(t_lock_lectura* el_lock, t_pcb* pcb){
 	pthread_mutex_lock(&el_lock->mutex_lista_asiganada);
 	list_remove_element(el_lock->lista_participantes, pcb);
-	log_info(kernel_logger, "CANTIDAD EN LOCK LECTURA %d y el PID_%d", list_size(el_lock->lista_participantes), pcb->pid);
-	log_info(kernel_logger, "EL LOCK TIENE N PARTICIPANTES: %d", el_lock->cantidad_participantes);
 	el_lock->cantidad_participantes--;
-	log_warning(kernel_logger, " N PARTICIPANTES: %d", el_lock->cantidad_participantes);
 
 	if(el_lock->cantidad_participantes <= 0){
 		el_lock->locked = 0;
@@ -433,7 +430,6 @@ void asignar_lock_pcb(t_archivo* archivo){
 	// Busco el strcut del archivo dentro del pcb
 	t_archivo_abierto_pcb* archivo_pcb = obtener_archivo_pcb(pcb, archivo->nombre_archivo);
 	// Consulto si su solicitud de apertura es "r" o "w"
-	log_info(kernel_logger, "AAA5 el PID_%d tiene apertura: %s", pcb->pid, archivo_pcb->modo_apertura);
 	if(strcmp(archivo_pcb->modo_apertura , "R") == 0){
 		archivo->lock_lectura->locked = 1;
 		list_add(archivo->lock_lectura->lista_participantes, pcb);
@@ -460,9 +456,9 @@ void asignar_lock_pcb(t_archivo* archivo){
 			}
 		}
 	}else{
-		log_info(kernel_logger, "ENtre a asginar LOCK de escritura");
 		archivo->lock_escritura->locked = 1;
 		archivo->lock_escritura->pcb = pcb;
+		archivo_pcb->lock_otorgado = 1;
 		int* pid = malloc(sizeof(int));
 		*pid = pcb->pid;
 		desbloquear_proceso_por_pid(pid);

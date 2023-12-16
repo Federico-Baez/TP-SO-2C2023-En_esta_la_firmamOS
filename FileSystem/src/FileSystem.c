@@ -60,7 +60,6 @@ void inicializar_archivos(){
 }
 
 void crear_fat(){
-	log_warning(filesystem_logger, "inicio crear_fat");
 	fd_archivoTablaFAT = open(PATH_FAT, O_CREAT | O_RDWR, S_IRUSR | S_IWUSR);
 	tamanio_fat = (CANT_BLOQUES_TOTAL - CANT_BLOQUES_SWAP) * sizeof(uint32_t);
 	ftruncate(fd_archivoTablaFAT, tamanio_fat);
@@ -78,11 +77,9 @@ void crear_fat(){
 	}
 
 	tablaFatEnMemoria[0] = EOF_FS;
-	log_warning(filesystem_logger, "fin crear_fat(mmapeo la tabla fat joya)");
 }
 
 void inicializar_archivo_de_bloques(){
-	log_warning(filesystem_logger, "inicio inicializar_archivo_de_bloques");
 	fd_archivoBloques = open(PATH_BLOQUES, O_CREAT | O_RDWR, S_IRUSR | S_IWUSR);
 	int tamanio_archivo_bloques = CANT_BLOQUES_TOTAL * TAM_BLOQUE;
 	ftruncate(fd_archivoBloques, tamanio_archivo_bloques);
@@ -104,7 +101,6 @@ void inicializar_archivo_de_bloques(){
 		log_error(filesystem_logger, "Error al mapear los bloques SWAP");
 		exit(1);
 	}
-	log_warning(filesystem_logger, "fin inicializar_archivo_de_bloques(mmapeo de bloques correcto)");
 }
 
 //void mapear_bloques_swap(int fd){
@@ -231,9 +227,7 @@ void atender_memoria(){
 		switch (cod_op) {
 		case PETICION_ASIGNACION_BLOQUE_SWAP_FM:
 			//[int pid][int catn_bloques]
-			log_info(filesystem_logger, "entro a PETICION_ASIGNACION_BLOQUE_SWAP_FM");
 			unBuffer = recibiendo_super_paquete(fd_memoria);
-			log_info(filesystem_logger, "recibo buffer");
 			atender_asignacion_de_bloques_por_creacion_de_proceso(unBuffer);
 
 			break;

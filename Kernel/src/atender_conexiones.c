@@ -91,7 +91,6 @@ void _gestionar_peticiones_de_cpu_dispatch(){
 
 		switch (cod_op) {
 		case ATENDER_INSTRUCCION_CPK:
-			log_warning(kernel_logger, "Entre a atender instruccion");
 
 			pcb = _recibir_proceso_desalojado(unBuffer);
 			t_buffer* mochila = recibir_mochila_del_buffer(unBuffer);
