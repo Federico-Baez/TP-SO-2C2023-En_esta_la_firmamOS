@@ -85,18 +85,27 @@ uint32_t obtener_el_nro_bloque_segun_el_la_posicion_del_seek(int nro_bloque_inic
 	uint32_t i = nro_bloque_inicial;
 	log_error(filesystem_logger, "INICIAL: %d  |  INDEX SEEK: %d   |  BLOQUE_DESPLAZADO: %d", nro_bloque_inicial, index_seek, bloque_desplazado );
 	log_error(filesystem_logger, "SSS 2");
-	for(int j=0; j<bloque_desplazado; j++){
-		log_error(filesystem_logger, "SSS 3");
+	if(bloque_desplazado == 0){
 		if(tablaFatEnMemoria[i] == EOF_FS){
 			log_error(filesystem_logger, "SSS 4");
 			log_info(filesystem_log_obligatorio, "Acceso FAT - Entrada: <%d> - Valor: <EOF>", i);
 		}else{
-			log_error(filesystem_logger, "SSS 5");
 			log_info(filesystem_log_obligatorio, "Acceso FAT - Entrada: <%d> - Valor: <%d>", i, tablaFatEnMemoria[i]);
 		}
-		log_error(filesystem_logger, "SSS 6");
-		usleep(RETARDO_ACCESO_FAT*1000);
-		i = tablaFatEnMemoria[i];
+	}else{
+		for(int j=0; j<bloque_desplazado; j++){
+			log_error(filesystem_logger, "SSS 3");
+			if(tablaFatEnMemoria[i] == EOF_FS){
+				log_error(filesystem_logger, "SSS 4");
+				log_info(filesystem_log_obligatorio, "Acceso FAT - Entrada: <%d> - Valor: <EOF>", i);
+			}else{
+				log_error(filesystem_logger, "SSS 5");
+				log_info(filesystem_log_obligatorio, "Acceso FAT - Entrada: <%d> - Valor: <%d>", i, tablaFatEnMemoria[i]);
+			}
+			log_error(filesystem_logger, "SSS 6");
+			usleep(RETARDO_ACCESO_FAT*1000);
+			i = tablaFatEnMemoria[i];
+		} // 0 -> 4byets | 1 -> 8bytes | 2 -> 12bytes | 3 -> 16bytes
 	}
 	log_error(filesystem_logger, "SSS 7");
 	log_warning(filesystem_logger, "fin obtener_el_nro_bloque_segun_el_la_posicion_del_seek");

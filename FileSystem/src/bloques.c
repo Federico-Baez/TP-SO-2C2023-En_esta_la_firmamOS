@@ -19,7 +19,7 @@ void* obtener_bloque(char* nombre_archivo, int nro_bloque){
 	}else{
 		//Para obtener bloque de archivo
 		memcpy(bloque_a_obtener, bloquesEnMemoria + CANT_BLOQUES_SWAP + nro_bloque, TAM_BLOQUE);
-		int nro_bloque_fs = nro_bloque + CANT_BLOQUES_SWAP + 1;
+		int nro_bloque_fs = nro_bloque + CANT_BLOQUES_SWAP;
 		log_info(filesystem_log_obligatorio, "Acceso Bloque - Archivo: <%s> - Bloque Archivo: <%d> - Bloque FS: <%d>", nombre_archivo, nro_bloque, nro_bloque_fs);
 		usleep(RETARDO_ACCESO_BLOQUE*1000);
 	}
@@ -41,8 +41,10 @@ void modificar_bloque(char* nombre_archivo, int nro_bloque, void* contenido_bloq
 		usleep(RETARDO_ACCESO_BLOQUE*1000);
 	}else{
 		//Para obtener bloque de archivo
+		log_warning(filesystem_log_obligatorio, "Valor del NRO BLOQUE %d en el ARCHIVO: %s, VALOR TOTAL %d" , nro_bloque, nombre_archivo, (CANT_BLOQUES_SWAP + nro_bloque)*TAM_BLOQUE);
 		memcpy(bloquesEnMemoria + CANT_BLOQUES_SWAP + nro_bloque, contenido_bloque, TAM_BLOQUE);
-		int nro_bloque_fs = nro_bloque + CANT_BLOQUES_SWAP + 1;
+		int nro_bloque_fs = nro_bloque + CANT_BLOQUES_SWAP; // 1 + 1024(0 - 1023), bloquesEnMemoria[1025] = bloque 1 FAT => S 00 00 00 O 00 00 N 00 00 00 Y 00 00 00
+																														// X 00 00 B 00 00 00 O 00 00 00 X 00 00 00
 		log_info(filesystem_log_obligatorio, "Acceso Bloque - Archivo: <%s> - Bloque Archivo: <%d> - Bloque FS: <%d>", nombre_archivo, nro_bloque, nro_bloque_fs);
 		usleep(RETARDO_ACCESO_BLOQUE*1000);
 	}

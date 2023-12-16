@@ -84,7 +84,7 @@ void crear_fat(){
 void inicializar_archivo_de_bloques(){
 	log_warning(filesystem_logger, "inicio inicializar_archivo_de_bloques");
 	fd_archivoBloques = open(PATH_BLOQUES, O_CREAT | O_RDWR, S_IRUSR | S_IWUSR);
-	tamanio_archivo_bloques = CANT_BLOQUES_TOTAL * TAM_BLOQUE;
+	int tamanio_archivo_bloques = CANT_BLOQUES_TOTAL * TAM_BLOQUE;
 	ftruncate(fd_archivoBloques, tamanio_archivo_bloques);
 //	if(fd_archivoBloques == -1){
 //		fd_archivoBloques = open(PATH_BLOQUES, O_CREAT | O_RDWR);

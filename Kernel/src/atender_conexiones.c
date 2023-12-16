@@ -305,22 +305,22 @@ void _gestionar_peticiones_de_filesystem(){
 
 			break;
 		case RESPUESTA_F_READ_FK:
-			int respuesta_read = recibir_int_del_buffer(unBuffer);
-			log_info(kernel_logger, " La respuesta es: %d" , respuesta_read);
+			char* respuesta_read = recibir_string_del_buffer(unBuffer);
+			log_info(kernel_logger, " La respuesta es: %s" , respuesta_read);
 
 			int* pid_process_read = malloc(sizeof(int));
 			*pid_process_read = recibir_int_del_buffer(unBuffer);
 			desbloquear_proceso_por_pid(pid_process_read);
-
+			free(respuesta_read);
 			break;
 		case RESPUESTA_F_WRITE_FK:
-			int respuesta_write = recibir_int_del_buffer(unBuffer);
-			log_info(kernel_logger, " La respuesta es: %d" , respuesta_write);
+			char* respuesta_write = recibir_string_del_buffer(unBuffer);
+			log_info(kernel_logger, " La respuesta es: %s" , respuesta_write);
 
 			int* pid_process_write = malloc(sizeof(int));
 			*pid_process_write = recibir_int_del_buffer(unBuffer);
 			desbloquear_proceso_por_pid(pid_process_write);
-
+			free(respuesta_write);
 			break;
 		case -1:
 			log_error(kernel_logger, "[DESCONEXION]: FILESYSTEM");

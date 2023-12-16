@@ -29,7 +29,7 @@ int TAM_BLOQUE;
 int RETARDO_ACCESO_BLOQUE;
 int RETARDO_ACCESO_FAT;
 
-int tamanio_archivo_bloques;
+//int tamanio_archivo_bloques;
 int tamanio_fat;
 t_list* lista_struct_fcbs;
 t_list* lista_configs_fcbs;

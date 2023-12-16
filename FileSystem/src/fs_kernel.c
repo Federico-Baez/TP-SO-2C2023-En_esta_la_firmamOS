@@ -60,9 +60,6 @@ void atender_f_truncate_de_kernel(t_buffer* un_buffer){
 	char* bloque_inicial = malloc(10);
 	sprintf(bloque_inicial, "%d", fcb->bloque_inicial);
 
-	config_set_value(fcb->archivo_fcb, "BLOQUE_INICIAL", bloque_inicial);
-	config_save(fcb->archivo_fcb);
-
 	//int diferencia_tamanio = 0;
 	int cantidad_bloques_viejos = tamanio_viejo / TAM_BLOQUE;
 	int cantidad_bloques_nuevos = tamanio_nuevo / TAM_BLOQUE;
@@ -72,9 +69,11 @@ void atender_f_truncate_de_kernel(t_buffer* un_buffer){
 	if(tamanio_nuevo > tamanio_viejo){
 		if(tamanio_viejo == 0){
 			lista_bloques_libres_asignados = obtener_n_cantidad_de_bloques_libres_de_tabla_fat(cantidad_bloques);
-			log_info(filesystem_log_obligatorio, " Tamaño LISTA BLOQ ASIG: <%d>", list_size(lista_bloques_libres_asignados));
+			log_info(filesystem_logger, " Tamaño LISTA BLOQ ASIG: <%d>", list_size(lista_bloques_libres_asignados));
 			cargar_secuencia_de_bloques_asignados_a_tabla_fat(lista_bloques_libres_asignados);
 			fcb->bloque_inicial = *((int*)list_get(lista_bloques_libres_asignados, 0));
+			config_set_value(fcb->archivo_fcb, "BLOQUE_INICIAL", bloque_inicial);
+			config_save(fcb->archivo_fcb);
 
 		}else if(cantidad_bloques_viejos != cantidad_bloques_nuevos){
 			int agrear_nro_bloques = cantidad_bloques_nuevos - cantidad_bloques_viejos;
@@ -96,8 +95,6 @@ void atender_f_truncate_de_kernel(t_buffer* un_buffer){
 	}
 	log_warning(filesystem_logger, "fin atender_f_truncate_de_kernel");
 }
-
-
 
 void atender_f_read_de_kernel(t_buffer* un_buffer){
 	log_warning(filesystem_logger, "inicio atender_f_read_de_kernel");
