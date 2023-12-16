@@ -36,16 +36,25 @@ void modificar_bloque(char* nombre_archivo, int nro_bloque, void* contenido_bloq
 
 	if(nombre_archivo == NULL){
 		//Para obtener bloque SWAP
-		memcpy(bloquesEnMemoria + nro_bloque, contenido_bloque, TAM_BLOQUE);
+		//memcpy(bloquesEnMemoria + (CANT_BLOQUES_SWAP + nro_bloque) * TAM_BLOQUE, contenido_bloque, TAM_BLOQUE);
+		uint32_t indiceEnBytes = nro_bloque * TAM_BLOQUE;
+
+		memcpy(bloquesEnMemoria + indiceEnBytes, contenido_bloque, TAM_BLOQUE);
+
+		//memcpy(bloquesEnMemoria + nro_bloque, contenido_bloque, TAM_BLOQUE);
 		log_info(filesystem_log_obligatorio, "Acceso SWAP: <%d>", nro_bloque);
 		usleep(RETARDO_ACCESO_BLOQUE*1000);
 	}else{
 		//Para obtener bloque de archivo
 		log_warning(filesystem_log_obligatorio, "Valor del NRO BLOQUE %d en el ARCHIVO: %s, VALOR TOTAL %d" , nro_bloque, nombre_archivo, (CANT_BLOQUES_SWAP + nro_bloque)*TAM_BLOQUE);
-		memcpy(bloquesEnMemoria + CANT_BLOQUES_SWAP + nro_bloque, contenido_bloque, TAM_BLOQUE);
+
+		uint32_t indiceEnBytes = nro_bloque * TAM_BLOQUE;
+
+		memcpy(bloquesEnMemoria + (CANT_BLOQUES_SWAP* TAM_BLOQUE) + indiceEnBytes, contenido_bloque, TAM_BLOQUE);
+
 		int nro_bloque_fs = nro_bloque + CANT_BLOQUES_SWAP; // 1 + 1024(0 - 1023), bloquesEnMemoria[1025] = bloque 1 FAT => S 00 00 00 O 00 00 N 00 00 00 Y 00 00 00
 																														// X 00 00 B 00 00 00 O 00 00 00 X 00 00 00
-		log_info(filesystem_log_obligatorio, "Acceso Bloque - Archivo: <%s> - Bloque Archivo: <%d> - Bloque FS: <%d>", nombre_archivo, nro_bloque, nro_bloque_fs);
+		log_info(filesystem_log_obligatorio, "Acceso Bloque - Archivo: <%s> - Bloque Archivso: <%d> - Bloque FS: <%d>", nombre_archivo, nro_bloque, nro_bloque_fs);
 		usleep(RETARDO_ACCESO_BLOQUE*1000);
 	}
 	log_warning(filesystem_logger, "fin modificar_bloque");
@@ -99,6 +108,6 @@ void setear_bloque_de_swap_como_libre(uint32_t nro_bloque_swap){
 	usleep(RETARDO_ACCESO_BLOQUE*1000);
 
 
-	log_warning(filesystem_logger, "fin setear_bloque_de_swap_como_libre");
+	//log_warning(filesystem_logger, "fin setear_bloque_de_swap_como_libre");
 }
 
