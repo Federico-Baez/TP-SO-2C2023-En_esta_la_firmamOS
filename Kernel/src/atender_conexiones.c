@@ -203,6 +203,9 @@ void _gestionar_peticiones_de_cpu_dispatch(){
 			pthread_mutex_lock(&mutex_flag_proceso_desalojado);
 			flag_proceso_desalojado = true;
 			pthread_mutex_unlock(&mutex_flag_proceso_desalojado);
+			pthread_mutex_lock(&mutex_flag_exit);
+			flag_exit = true;
+			pthread_mutex_unlock(&mutex_flag_exit);
 
 			char* motivo_desalojo = recibir_string_del_buffer(unBuffer);
 			log_warning(kernel_logger, "<PID:%d>[PC:%d][%u|%u|%u|%u][%s]",
@@ -398,9 +401,9 @@ void _atender_motivo_desalojo(char* motivo_desalojo, t_buffer* un_buffer, t_pcb*
 
 	if(strcmp(motivo_desalojo, "DESALOJO_POR_CONSOLA") == 0){
 
-		pthread_mutex_lock(&mutex_flag_exit);
-		flag_exit = true;
-		pthread_mutex_unlock(&mutex_flag_exit);
+//		pthread_mutex_lock(&mutex_flag_exit);
+//		flag_exit = true;
+//		pthread_mutex_unlock(&mutex_flag_exit);
 
 		_desalojar_proceso(un_pcb);
 
@@ -411,9 +414,9 @@ void _atender_motivo_desalojo(char* motivo_desalojo, t_buffer* un_buffer, t_pcb*
 		pthread_mutex_lock(&mutex_flag_finalizar_proceso);
 		if(flag_finalizar_proceso){
 			//Esto sirve para darle prioridad al desalojo por consola
-			pthread_mutex_lock(&mutex_flag_exit);
-			flag_exit = true;
-			pthread_mutex_unlock(&mutex_flag_exit);
+//			pthread_mutex_lock(&mutex_flag_exit);
+//			flag_exit = true;
+//			pthread_mutex_unlock(&mutex_flag_exit);
 
 			ejecutar_en_un_hilo_nuevo_detach((void*)_desalojar_proceso, un_pcb);
 //			_desalojar_proceso(un_pcb);

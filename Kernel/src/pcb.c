@@ -432,16 +432,16 @@ void asignar_lock_pcb(t_archivo* archivo){
 		archivo->lock_lectura->locked = 1;
 		list_add(archivo->lock_lectura->lista_participantes, pcb);
 		archivo_pcb->lock_otorgado = 1;
-
-		pcb = list_get(archivo->cola_block_procesos,0);
-		archivo_pcb = obtener_archivo_pcb(pcb, archivo->nombre_archivo);
-		while(strcmp(archivo_pcb->modo_apertura , "R") == 0 && pcb != NULL){
-			archivo->lock_lectura->locked = 1;
-			list_add(archivo->lock_lectura->lista_participantes, pcb);
-			archivo_pcb->lock_otorgado = 1;
-			list_remove_element(archivo->cola_block_procesos, pcb);
+		if(!list_is_empty(archivo->cola_block_procesos)){
 			pcb = list_get(archivo->cola_block_procesos,0);
 			archivo_pcb = obtener_archivo_pcb(pcb, archivo->nombre_archivo);
+			while(strcmp(archivo_pcb->modo_apertura , "R") == 0 && pcb != NULL){
+				archivo->lock_lectura->locked = 1;
+				list_add(archivo->lock_lectura->lista_participantes, pcb);
+				archivo_pcb->lock_otorgado = 1;
+				list_remove_element(archivo->cola_block_procesos, pcb);
+				pcb = list_get(archivo->cola_block_procesos,0);
+				archivo_pcb = obtener_archivo_pcb(pcb, archivo->nombre_archivo);
 		}
 	}else{
 		archivo->lock_escritura->locked = 1;

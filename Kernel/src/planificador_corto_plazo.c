@@ -2,7 +2,7 @@
 
 static void _programar_interrupcion_por_quantum(t_pcb* un_pcb){
 	int ticket_referencia = un_pcb->ticket;
-	sleep(QUANTUM/1000);
+	usleep(QUANTUM*1000);
 
 	/*Esta comprobacion de ticket es en caso de que la PCB haya salido de CPU,
 	 * Puesto en READY y por casulaidades de la vida haya vuelto a la CPU

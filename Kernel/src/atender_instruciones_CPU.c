@@ -297,7 +297,7 @@ t_archivo* crear_archivo(char* nombre_archivo, int size_archivo){
 	t_archivo* archivo = malloc(sizeof(t_archivo));
 	archivo->nombre_archivo = strdup(nombre_archivo);
 	archivo->cola_block_procesos = list_create();
-	pthread_mutex_init(&archivo->mutex_cola_block, NULL);
+	pthread_mutex_init(&(archivo->mutex_cola_block), NULL);
 	archivo->size = size_archivo;
 
 	archivo->lock_escritura = malloc(sizeof(t_lock_escritura));
@@ -307,7 +307,7 @@ t_archivo* crear_archivo(char* nombre_archivo, int size_archivo){
 	archivo->lock_lectura = malloc(sizeof(t_lock_lectura));
 	archivo->lock_lectura->locked = 0;
 	archivo->lock_lectura->lista_participantes = list_create();
-	pthread_mutex_init(&archivo->lock_lectura->mutex_lista_asiganada, NULL);
+	pthread_mutex_init(&(archivo->lock_lectura->mutex_lista_asiganada), NULL);
 
 	return archivo;
 }
