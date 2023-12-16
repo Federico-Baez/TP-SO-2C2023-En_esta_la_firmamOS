@@ -6,7 +6,7 @@
 void pausador(){
 	pthread_mutex_lock(&mutex_pausa);
 	if(var_pausa == 1){
-		log_warning(kernel_log_obligatorio, "PAUSA DE PLANIFICACIÓN"); // --> Tiene que ser log_info, por ahora lo dejamos asi para que se note
+		log_info(kernel_log_obligatorio, "PAUSA DE PLANIFICACIÓN"); // --> Tiene que ser log_info, por ahora lo dejamos asi para que se note
 		sem_wait(&sem_pausa);
 	}
 	pthread_mutex_unlock(&mutex_pausa);

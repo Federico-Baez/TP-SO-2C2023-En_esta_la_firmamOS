@@ -186,8 +186,6 @@ void _gestionar_peticiones_de_cpu_dispatch(){
 					ejecutar_en_un_hilo_nuevo_detach((void*)_atender_page_fault, un_page_fault);
 				}
 				pthread_mutex_unlock(&mutex_lista_exec);
-			}else{
-				log_info(kernel_logger, "Entre al if vacio");
 			}
 
 			pthread_mutex_unlock(&mutex_flag_finalizar_proceso);

@@ -122,7 +122,7 @@ static void _iniciar_planificadores(){
 //		log_info(kernel_logger, "");
 	}else{
 		var_pausa = 0;
-		log_warning(kernel_log_obligatorio, "INICIO DE PLANIFICACIÓN");  // --> Tiene que ser log_info, por ahora lo dejamos asi para que se note
+		log_info(kernel_log_obligatorio, "INICIO DE PLANIFICACIÓN");  // --> Tiene que ser log_info, por ahora lo dejamos asi para que se note
 		sem_post(&sem_pausa);
 	}
 }

@@ -43,7 +43,7 @@ void modificar_bloque(char* nombre_archivo, int nro_bloque, void* contenido_bloq
 		usleep(RETARDO_ACCESO_BLOQUE*1000);
 	}else{
 		//Para obtener bloque de archivo
-		log_warning(filesystem_log_obligatorio, "Valor del NRO BLOQUE %d en el ARCHIVO: %s, VALOR TOTAL %d" , nro_bloque, nombre_archivo, (CANT_BLOQUES_SWAP + nro_bloque)*TAM_BLOQUE);
+		log_warning(filesystem_logger, "Valor del NRO BLOQUE %d en el ARCHIVO: %s, VALOR TOTAL %d" , nro_bloque, nombre_archivo, (CANT_BLOQUES_SWAP + nro_bloque)*TAM_BLOQUE);
 
 		uint32_t indiceEnBytes = nro_bloque * TAM_BLOQUE;
 

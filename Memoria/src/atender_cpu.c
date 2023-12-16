@@ -12,7 +12,7 @@ void atender_peticion_de_instruccion(t_buffer* un_buffer){
 	//Obtener Instruccion especifica
 	char* instruccion = obtener_instruccion_por_indice(un_proceso, ip);
 
-	log_info(memoria_log_obligatorio, "<PID:%d> <IP:%d> <%s>", pid, ip, instruccion);
+	log_info(memoria_logger, "<PID:%d> <IP:%d> <%s>", pid, ip, instruccion);
 
 	//Enviar_instruccion a CPU
 	enviar_una_instruccion_a_cpu(instruccion);
@@ -31,10 +31,10 @@ void atender_consulta_de_pagina(t_buffer* unBuffer){
 		t_marco* un_marco = obtener_marco_por_nro_marco(una_pagina->nro_marco);
 		setear_config_por_ultima_referencia(un_marco);
 		logg_acceso_a_tabla_de_paginas(pid, nro_pagina, un_marco->nro_marco);
-		log_info(memoria_log_obligatorio, "PAGINA ENCONTRADA <PID:%d> <Pag:%d> <Marco:%d>", pid, nro_pagina, una_pagina->nro_marco);
+		log_info(memoria_logger, "PAGINA ENCONTRADA <PID:%d> <Pag:%d> <Marco:%d>", pid, nro_pagina, una_pagina->nro_marco);
 	}else{
 		respuesta_a_cpu = -1;
-		log_warning(memoria_log_obligatorio, "PAGEFAULT <PID:%d> <Pag:%d>", pid, nro_pagina);
+		log_warning(memoria_logger, "PAGEFAULT <PID:%d> <Pag:%d>", pid, nro_pagina);
 	}
 	enviar_a_CPU_respuesta_por_consulta_de_pagina(respuesta_a_cpu);
 }
@@ -45,7 +45,7 @@ void leer_valor_de_dir_fisica_y_devolver_a_cpu(t_buffer* un_buffer){
 
 	//Copiar dato de uint32_t
 	uint32_t valor = leer_data_de_dir_fisica(pid, dir_fisica);
-	log_info(memoria_log_obligatorio, "LEIDO <PID:%d> <dir_fisi:%d> <VALOR:%u>", pid, dir_fisica, valor);
+	log_info(memoria_logger, "LEIDO <PID:%d> <dir_fisi:%d> <VALOR:%u>", pid, dir_fisica, valor);
 
 	//Setear config del marco segun algoritmo
 	int nro_marco = obtener_nro_marco_a_partir_de_una_dir_fisica(dir_fisica);
@@ -73,7 +73,7 @@ void escribir_valor_en_dir_fisica(t_buffer* un_buffer){
 	//Escribir en espacio de usuario
 	escribir_data_en_dir_fisica(pid, dir_fisica, valor);
 
-	log_info(memoria_log_obligatorio, "ESCRITO <PID:%d> <dir_fisi:%d> <VALOR:%u>", pid, dir_fisica, *valor);
+	log_info(memoria_logger, "ESCRITO <PID:%d> <dir_fisi:%d> <VALOR:%u>", pid, dir_fisica, *valor);
 
 	//Enviar valor a CPU
 	enviar_a_CPU_respuesta_por_pedido_de_escritura_en_memoria(pid);
