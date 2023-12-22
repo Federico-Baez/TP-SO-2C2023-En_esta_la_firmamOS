@@ -1,0 +1,99 @@
+[INFO] 15:25:23:150 [File System]/(3315:3317): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 15:25:48:129 [File System]/(3315:3318): Cliente conectado a Kernel
+[INFO] 15:25:48:131 [File System]/(3315:3318): ::::::::::: KERNEL CONECTADO ::::::::::::
+[ERROR] 15:26:05:623 [File System]/(3315:3318): [DESCONEXION]: KERNEL
+[INFO] 15:26:57:395 [File System]/(3391:3392): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 15:27:00:537 [File System]/(3391:3393): Cliente conectado a Kernel
+[INFO] 15:27:00:538 [File System]/(3391:3393): ::::::::::: KERNEL CONECTADO ::::::::::::
+[INFO] 15:27:22:171 [File System]/(3391:3392): Se recibio algo de MEMORIA
+[INFO] 15:27:25:778 [File System]/(3391:3392): Se recibio algo de MEMORIA
+[ERROR] 15:27:26:058 [File System]/(3391:3393): [DESCONEXION]: KERNEL
+[INFO] 15:27:28:766 [File System]/(3433:3434): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 15:27:31:408 [File System]/(3433:3435): Cliente conectado a Kernel
+[INFO] 15:27:31:410 [File System]/(3433:3435): ::::::::::: KERNEL CONECTADO ::::::::::::
+[INFO] 15:28:04:298 [File System]/(3433:3434): Se recibio algo de MEMORIA
+[ERROR] 15:29:20:803 [File System]/(3433:3435): [DESCONEXION]: KERNEL
+[INFO] 15:31:12:772 [File System]/(3538:3540): HANDSHAKE CON MEMORIA [EXITOSO]
+[INFO] 15:31:23:066 [File System]/(3538:3541): Cliente conectado a Kernel
+[INFO] 15:31:23:067 [File System]/(3538:3541): ::::::::::: KERNEL CONECTADO ::::::::::::
+[INFO] 15:32:26:188 [File System]/(3538:3540): Se recibio algo de MEMORIA
+[INFO] 15:32:26:813 [File System]/(3538:3540): Se recibio algo de MEMORIA
+[INFO] 15:32:27:422 [File System]/(3538:3540): Se recibio algo de MEMORIA
+[INFO] 15:32:28:029 [File System]/(3538:3540): Se recibio algo de MEMORIA
+[INFO] 15:32:28:702 [File System]/(3538:3540): Se recibio algo de MEMORIA
+[WARNING] 15:32:28:702 [File System]/(3538:3540): CANT_BLOQUES_A_LIBERAR: 2
+[WARNING] 15:32:28:702 [File System]/(3538:3540): NUM BLOQUE SWAP: 2
+[WARNING] 15:32:28:954 [File System]/(3538:3540): NUM BLOQUE SWAP: 3
+[INFO] 15:32:29:214 [File System]/(3538:3540): Se recibio algo de MEMORIA
+[INFO] 15:32:29:829 [File System]/(3538:3540): Se recibio algo de MEMORIA
+[INFO] 15:32:30:448 [File System]/(3538:3540): Se recibio algo de MEMORIA
+[INFO] 15:32:38:225 [File System]/(3538:3540): Se recibio algo de MEMORIA
+[WARNING] 15:32:47:423 [File System]/(3538:3709): BLOQUE: 1 PUNTERO: 0
+[WARNING] 15:32:47:423 [File System]/(3538:3709): INICIAL: 1  |  INDEX SEEK: 0   |  BLOQUE_DESPLAZADO: 0
+[INFO] 15:32:47:423 [File System]/(3538:3709): Bloque a escribir fat: <1>
+[INFO] 15:32:47:474 [File System]/(3538:3540): Se recibio algo de MEMORIA
+[WARNING] 15:32:47:474 [File System]/(3538:3540): Valor del NRO BLOQUE 1 en el ARCHIVO: ArchivoRandom, VALOR TOTAL 32800
+[WARNING] 15:32:48:860 [File System]/(3538:3723): BLOQUE: 1 PUNTERO: 128
+[WARNING] 15:32:48:860 [File System]/(3538:3723): INICIAL: 1  |  INDEX SEEK: 128   |  BLOQUE_DESPLAZADO: 4
+[INFO] 15:32:49:264 [File System]/(3538:3723): Bloque a escribir fat: <5>
+[INFO] 15:32:49:317 [File System]/(3538:3540): Se recibio algo de MEMORIA
+[WARNING] 15:32:49:317 [File System]/(3538:3540): Valor del NRO BLOQUE 5 en el ARCHIVO: ArchivoRandom, VALOR TOTAL 32928
+[INFO] 15:32:50:780 [File System]/(3538:3540): Se recibio algo de MEMORIA
+[INFO] 15:32:59:887 [File System]/(3538:3540): Se recibio algo de MEMORIA
+[WARNING] 15:32:59:887 [File System]/(3538:3540): CANT_BLOQUES_A_LIBERAR: 2
+[WARNING] 15:32:59:887 [File System]/(3538:3540): NUM BLOQUE SWAP: 0
+[WARNING] 15:33:00:137 [File System]/(3538:3540): NUM BLOQUE SWAP: 1
+[WARNING] 15:33:00:948 [File System]/(3538:3805): BLOQUE: 1 PUNTERO: 32
+[WARNING] 15:33:00:948 [File System]/(3538:3805): INICIAL: 1  |  INDEX SEEK: 32   |  BLOQUE_DESPLAZADO: 1
+[INFO] 15:33:01:049 [File System]/(3538:3805): Bloque a escribir fat: <2>
+[INFO] 15:33:01:100 [File System]/(3538:3540): Se recibio algo de MEMORIA
+[WARNING] 15:33:01:100 [File System]/(3538:3540): Valor del NRO BLOQUE 2 en el ARCHIVO: ArchivoRandom, VALOR TOTAL 32832
+[WARNING] 15:33:02:152 [File System]/(3538:3818): BLOQUE: 1 PUNTERO: 160
+[WARNING] 15:33:02:152 [File System]/(3538:3818): INICIAL: 1  |  INDEX SEEK: 160   |  BLOQUE_DESPLAZADO: 5
+[INFO] 15:33:02:655 [File System]/(3538:3818): Bloque a escribir fat: <6>
+[INFO] 15:33:02:706 [File System]/(3538:3540): Se recibio algo de MEMORIA
+[WARNING] 15:33:02:706 [File System]/(3538:3540): Valor del NRO BLOQUE 6 en el ARCHIVO: ArchivoRandom, VALOR TOTAL 32960
+[INFO] 15:33:03:793 [File System]/(3538:3540): Se recibio algo de MEMORIA
+[WARNING] 15:33:12:990 [File System]/(3538:3888): BLOQUE: 1 PUNTERO: 64
+[WARNING] 15:33:12:991 [File System]/(3538:3888): INICIAL: 1  |  INDEX SEEK: 64   |  BLOQUE_DESPLAZADO: 2
+[INFO] 15:33:13:197 [File System]/(3538:3888): Bloque a escribir fat: <3>
+[INFO] 15:33:13:248 [File System]/(3538:3540): Se recibio algo de MEMORIA
+[WARNING] 15:33:13:249 [File System]/(3538:3540): Valor del NRO BLOQUE 3 en el ARCHIVO: ArchivoRandom, VALOR TOTAL 32864
+[WARNING] 15:33:14:430 [File System]/(3538:3904): BLOQUE: 1 PUNTERO: 192
+[WARNING] 15:33:14:431 [File System]/(3538:3904): INICIAL: 1  |  INDEX SEEK: 192   |  BLOQUE_DESPLAZADO: 6
+[INFO] 15:33:15:044 [File System]/(3538:3904): Bloque a escribir fat: <7>
+[INFO] 15:33:15:098 [File System]/(3538:3540): Se recibio algo de MEMORIA
+[WARNING] 15:33:15:098 [File System]/(3538:3540): Valor del NRO BLOQUE 7 en el ARCHIVO: ArchivoRandom, VALOR TOTAL 32992
+[INFO] 15:33:16:274 [File System]/(3538:3540): Se recibio algo de MEMORIA
+[WARNING] 15:33:25:408 [File System]/(3538:3975): BLOQUE: 1 PUNTERO: 96
+[WARNING] 15:33:25:409 [File System]/(3538:3975): INICIAL: 1  |  INDEX SEEK: 96   |  BLOQUE_DESPLAZADO: 3
+[INFO] 15:33:25:714 [File System]/(3538:3975): Bloque a escribir fat: <4>
+[INFO] 15:33:25:767 [File System]/(3538:3540): Se recibio algo de MEMORIA
+[WARNING] 15:33:25:767 [File System]/(3538:3540): Valor del NRO BLOQUE 4 en el ARCHIVO: ArchivoRandom, VALOR TOTAL 32896
+[WARNING] 15:33:26:877 [File System]/(3538:3988): BLOQUE: 1 PUNTERO: 224
+[WARNING] 15:33:26:877 [File System]/(3538:3988): INICIAL: 1  |  INDEX SEEK: 224   |  BLOQUE_DESPLAZADO: 7
+[INFO] 15:33:27:592 [File System]/(3538:3988): Bloque a escribir fat: <8>
+[INFO] 15:33:27:651 [File System]/(3538:3540): Se recibio algo de MEMORIA
+[WARNING] 15:33:27:651 [File System]/(3538:3540): Valor del NRO BLOQUE 8 en el ARCHIVO: ArchivoRandom, VALOR TOTAL 33024
+[INFO] 15:33:28:756 [File System]/(3538:3540): Se recibio algo de MEMORIA
+[WARNING] 15:33:28:756 [File System]/(3538:3540): CANT_BLOQUES_A_LIBERAR: 8
+[WARNING] 15:33:28:756 [File System]/(3538:3540): NUM BLOQUE SWAP: 10
+[WARNING] 15:33:29:013 [File System]/(3538:3540): NUM BLOQUE SWAP: 11
+[WARNING] 15:33:29:264 [File System]/(3538:3540): NUM BLOQUE SWAP: 12
+[WARNING] 15:33:29:515 [File System]/(3538:3540): NUM BLOQUE SWAP: 13
+[WARNING] 15:33:29:766 [File System]/(3538:3540): NUM BLOQUE SWAP: 14
+[WARNING] 15:33:30:017 [File System]/(3538:3540): NUM BLOQUE SWAP: 15
+[WARNING] 15:33:30:270 [File System]/(3538:3540): NUM BLOQUE SWAP: 16
+[WARNING] 15:33:30:520 [File System]/(3538:3540): NUM BLOQUE SWAP: 17
+[INFO] 15:35:13:838 [File System]/(3538:3540): Se recibio algo de MEMORIA
+[WARNING] 15:35:13:838 [File System]/(3538:3540): CANT_BLOQUES_A_LIBERAR: 2
+[WARNING] 15:35:13:838 [File System]/(3538:3540): NUM BLOQUE SWAP: 4
+[WARNING] 15:35:14:091 [File System]/(3538:3540): NUM BLOQUE SWAP: 5
+[INFO] 15:35:57:928 [File System]/(3538:3540): Se recibio algo de MEMORIA
+[WARNING] 15:35:57:928 [File System]/(3538:3540): CANT_BLOQUES_A_LIBERAR: 2
+[WARNING] 15:35:57:928 [File System]/(3538:3540): NUM BLOQUE SWAP: 8
+[WARNING] 15:35:58:180 [File System]/(3538:3540): NUM BLOQUE SWAP: 9
+[INFO] 15:38:28:659 [File System]/(3538:3540): Se recibio algo de MEMORIA
+[WARNING] 15:38:28:659 [File System]/(3538:3540): CANT_BLOQUES_A_LIBERAR: 2
+[WARNING] 15:38:28:659 [File System]/(3538:3540): NUM BLOQUE SWAP: 6
+[ERROR] 15:38:28:877 [File System]/(3538:3541): [DESCONEXION]: KERNEL

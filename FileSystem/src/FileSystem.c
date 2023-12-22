@@ -40,6 +40,7 @@ int main(int argc, char** argv) {
 }
 
 void leer_config(t_config* config){
+	IP_FILESYSTEM = config_get_string_value(config,"IP_FILESYSTEM");
 	IP_MEMORIA = config_get_string_value(config,"IP_MEMORIA");
 	PUERTO_MEMORIA = config_get_string_value(config,"PUERTO_MEMORIA");
 	PUERTO_ESCUCHA = config_get_string_value(config,"PUERTO_ESCUCHA");

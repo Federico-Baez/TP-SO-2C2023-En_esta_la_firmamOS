@@ -1,0 +1,113 @@
+[INFO] 15:27:22:104 [Memoria- Log obligatorio]/(3390:3401): PID: <1> - Tamaño: <2>
+[INFO] 15:27:25:727 [Memoria- Log obligatorio]/(3390:3401): PID: <2> - Tamaño: <2>
+[INFO] 15:28:04:244 [Memoria- Log obligatorio]/(3390:3443): PID: <1> - Tamaño: <2>
+[INFO] 15:32:26:138 [Memoria- Log obligatorio]/(3536:3548): PID: <1> - Tamaño: <2>
+[INFO] 15:32:26:760 [Memoria- Log obligatorio]/(3536:3548): PID: <2> - Tamaño: <2>
+[INFO] 15:32:27:372 [Memoria- Log obligatorio]/(3536:3548): PID: <3> - Tamaño: <2>
+[INFO] 15:32:27:976 [Memoria- Log obligatorio]/(3536:3548): PID: <4> - Tamaño: <2>
+[INFO] 15:32:28:702 [Memoria- Log obligatorio]/(3536:3548): PID: <2> - Tamaño: <2>
+[INFO] 15:32:28:754 [Memoria- Log obligatorio]/(3536:3548): PID: <5> - Tamaño: <2>
+[INFO] 15:32:29:777 [Memoria- Log obligatorio]/(3536:3548): PID: <6> - Tamaño: <2>
+[INFO] 15:32:30:394 [Memoria- Log obligatorio]/(3536:3548): PID: <7> - Tamaño: <8>
+[INFO] 15:32:38:172 [Memoria- Log obligatorio]/(3536:3548): PID: <7> - Pagina: <0> - Marco: <0>
+[INFO] 15:32:38:225 [Memoria- Log obligatorio]/(3536:3548): SWAP IN - PID: <7> - Marco: <0> - Page In: <7>-<0>
+[INFO] 15:32:38:475 [Memoria- Log obligatorio]/(3536:3539): PID: <7> - Pagina: <0> - Marco: <0>
+[INFO] 15:32:38:475 [Memoria- Log obligatorio]/(3536:3539): PID: <7> - Accion: <ESCRIBIR> - Direccion fisica: <0>
+[INFO] 15:32:42:450 [Memoria- Log obligatorio]/(3536:3546): PID: <7> - Pagina: <0> - Marco: <0>
+[INFO] 15:32:42:501 [Memoria- Log obligatorio]/(3536:3546): PID: <7> - Accion: <ESCRIBIR> - Direccion fisica: <0>
+[INFO] 15:32:42:606 [Memoria- Log obligatorio]/(3536:3546): PID: <7> - Pagina: <0> - Marco: <0>
+[INFO] 15:32:42:657 [Memoria- Log obligatorio]/(3536:3546): PID: <7> - Accion: <ESCRIBIR> - Direccion fisica: <4>
+[INFO] 15:32:43:628 [Memoria- Log obligatorio]/(3536:3546): PID: <7> - Pagina: <0> - Marco: <0>
+[INFO] 15:32:43:681 [Memoria- Log obligatorio]/(3536:3546): PID: <7> - Accion: <ESCRIBIR> - Direccion fisica: <8>
+[INFO] 15:32:43:783 [Memoria- Log obligatorio]/(3536:3546): PID: <7> - Pagina: <0> - Marco: <0>
+[INFO] 15:32:43:834 [Memoria- Log obligatorio]/(3536:3546): PID: <7> - Accion: <ESCRIBIR> - Direccion fisica: <12>
+[INFO] 15:32:44:796 [Memoria- Log obligatorio]/(3536:3546): PID: <7> - Pagina: <0> - Marco: <0>
+[INFO] 15:32:44:848 [Memoria- Log obligatorio]/(3536:3546): PID: <7> - Accion: <ESCRIBIR> - Direccion fisica: <16>
+[INFO] 15:32:44:949 [Memoria- Log obligatorio]/(3536:3546): PID: <7> - Pagina: <0> - Marco: <0>
+[INFO] 15:32:45:002 [Memoria- Log obligatorio]/(3536:3546): PID: <7> - Accion: <ESCRIBIR> - Direccion fisica: <20>
+[INFO] 15:32:45:947 [Memoria- Log obligatorio]/(3536:3546): PID: <7> - Pagina: <0> - Marco: <0>
+[INFO] 15:32:45:998 [Memoria- Log obligatorio]/(3536:3546): PID: <7> - Accion: <ESCRIBIR> - Direccion fisica: <24>
+[INFO] 15:32:46:104 [Memoria- Log obligatorio]/(3536:3546): PID: <7> - Pagina: <0> - Marco: <0>
+[INFO] 15:32:46:155 [Memoria- Log obligatorio]/(3536:3546): PID: <7> - Accion: <ESCRIBIR> - Direccion fisica: <28>
+[INFO] 15:32:47:372 [Memoria- Log obligatorio]/(3536:3546): PID: <7> - Pagina: <0> - Marco: <0>
+[INFO] 15:32:47:424 [Memoria- Log obligatorio]/(3536:3539): PID: <7> - Accion: <LEER> - Direccion fisica: <0>
+[INFO] 15:32:48:808 [Memoria- Log obligatorio]/(3536:3546): PID: <7> - Pagina: <0> - Marco: <0>
+[INFO] 15:32:49:265 [Memoria- Log obligatorio]/(3536:3539): PID: <7> - Accion: <LEER> - Direccion fisica: <0>
+[INFO] 15:32:50:724 [Memoria- Log obligatorio]/(3536:3548): PID: <7> - Pagina: <1> - Marco: <1>
+[INFO] 15:32:50:781 [Memoria- Log obligatorio]/(3536:3548): SWAP IN - PID: <7> - Marco: <1> - Page In: <7>-<1>
+[INFO] 15:32:51:036 [Memoria- Log obligatorio]/(3536:3539): PID: <7> - Pagina: <1> - Marco: <1>
+[INFO] 15:32:51:036 [Memoria- Log obligatorio]/(3536:3539): PID: <7> - Accion: <ESCRIBIR> - Direccion fisica: <32>
+[INFO] 15:32:55:234 [Memoria- Log obligatorio]/(3536:3546): PID: <7> - Pagina: <1> - Marco: <1>
+[INFO] 15:32:55:284 [Memoria- Log obligatorio]/(3536:3546): PID: <7> - Accion: <ESCRIBIR> - Direccion fisica: <32>
+[INFO] 15:32:55:386 [Memoria- Log obligatorio]/(3536:3546): PID: <7> - Pagina: <1> - Marco: <1>
+[INFO] 15:32:55:437 [Memoria- Log obligatorio]/(3536:3546): PID: <7> - Accion: <ESCRIBIR> - Direccion fisica: <36>
+[INFO] 15:32:56:626 [Memoria- Log obligatorio]/(3536:3546): PID: <7> - Pagina: <1> - Marco: <1>
+[INFO] 15:32:56:677 [Memoria- Log obligatorio]/(3536:3546): PID: <7> - Accion: <ESCRIBIR> - Direccion fisica: <40>
+[INFO] 15:32:56:785 [Memoria- Log obligatorio]/(3536:3546): PID: <7> - Pagina: <1> - Marco: <1>
+[INFO] 15:32:56:836 [Memoria- Log obligatorio]/(3536:3546): PID: <7> - Accion: <ESCRIBIR> - Direccion fisica: <44>
+[INFO] 15:32:58:008 [Memoria- Log obligatorio]/(3536:3546): PID: <7> - Pagina: <1> - Marco: <1>
+[INFO] 15:32:58:060 [Memoria- Log obligatorio]/(3536:3546): PID: <7> - Accion: <ESCRIBIR> - Direccion fisica: <48>
+[INFO] 15:32:58:169 [Memoria- Log obligatorio]/(3536:3546): PID: <7> - Pagina: <1> - Marco: <1>
+[INFO] 15:32:58:221 [Memoria- Log obligatorio]/(3536:3546): PID: <7> - Accion: <ESCRIBIR> - Direccion fisica: <52>
+[INFO] 15:32:59:469 [Memoria- Log obligatorio]/(3536:3546): PID: <7> - Pagina: <1> - Marco: <1>
+[INFO] 15:32:59:521 [Memoria- Log obligatorio]/(3536:3546): PID: <7> - Accion: <ESCRIBIR> - Direccion fisica: <56>
+[INFO] 15:32:59:624 [Memoria- Log obligatorio]/(3536:3546): PID: <7> - Pagina: <1> - Marco: <1>
+[INFO] 15:32:59:681 [Memoria- Log obligatorio]/(3536:3546): PID: <7> - Accion: <ESCRIBIR> - Direccion fisica: <60>
+[INFO] 15:32:59:887 [Memoria- Log obligatorio]/(3536:3548): PID: <1> - Tamaño: <2>
+[INFO] 15:33:00:897 [Memoria- Log obligatorio]/(3536:3546): PID: <7> - Pagina: <0> - Marco: <0>
+[INFO] 15:33:01:049 [Memoria- Log obligatorio]/(3536:3539): PID: <7> - Accion: <LEER> - Direccion fisica: <0>
+[INFO] 15:33:02:099 [Memoria- Log obligatorio]/(3536:3546): PID: <7> - Pagina: <0> - Marco: <0>
+[INFO] 15:33:02:655 [Memoria- Log obligatorio]/(3536:3539): PID: <7> - Accion: <LEER> - Direccion fisica: <0>
+[INFO] 15:33:03:737 [Memoria- Log obligatorio]/(3536:3548): PID: <7> - Pagina: <2> - Marco: <2>
+[INFO] 15:33:03:793 [Memoria- Log obligatorio]/(3536:3548): SWAP IN - PID: <7> - Marco: <2> - Page In: <7>-<2>
+[INFO] 15:33:04:052 [Memoria- Log obligatorio]/(3536:3539): PID: <7> - Pagina: <2> - Marco: <2>
+[INFO] 15:33:04:053 [Memoria- Log obligatorio]/(3536:3539): PID: <7> - Accion: <ESCRIBIR> - Direccion fisica: <64>
+[INFO] 15:33:08:005 [Memoria- Log obligatorio]/(3536:3546): PID: <7> - Pagina: <2> - Marco: <2>
+[INFO] 15:33:08:056 [Memoria- Log obligatorio]/(3536:3546): PID: <7> - Accion: <ESCRIBIR> - Direccion fisica: <64>
+[INFO] 15:33:08:157 [Memoria- Log obligatorio]/(3536:3546): PID: <7> - Pagina: <2> - Marco: <2>
+[INFO] 15:33:08:208 [Memoria- Log obligatorio]/(3536:3546): PID: <7> - Accion: <ESCRIBIR> - Direccion fisica: <68>
+[INFO] 15:33:09:199 [Memoria- Log obligatorio]/(3536:3546): PID: <7> - Pagina: <2> - Marco: <2>
+[INFO] 15:33:09:250 [Memoria- Log obligatorio]/(3536:3546): PID: <7> - Accion: <ESCRIBIR> - Direccion fisica: <72>
+[INFO] 15:33:09:352 [Memoria- Log obligatorio]/(3536:3546): PID: <7> - Pagina: <2> - Marco: <2>
+[INFO] 15:33:09:403 [Memoria- Log obligatorio]/(3536:3546): PID: <7> - Accion: <ESCRIBIR> - Direccion fisica: <76>
+[INFO] 15:33:10:461 [Memoria- Log obligatorio]/(3536:3546): PID: <7> - Pagina: <2> - Marco: <2>
+[INFO] 15:33:10:513 [Memoria- Log obligatorio]/(3536:3546): PID: <7> - Accion: <ESCRIBIR> - Direccion fisica: <80>
+[INFO] 15:33:10:617 [Memoria- Log obligatorio]/(3536:3546): PID: <7> - Pagina: <2> - Marco: <2>
+[INFO] 15:33:10:667 [Memoria- Log obligatorio]/(3536:3546): PID: <7> - Accion: <ESCRIBIR> - Direccion fisica: <84>
+[INFO] 15:33:11:651 [Memoria- Log obligatorio]/(3536:3546): PID: <7> - Pagina: <2> - Marco: <2>
+[INFO] 15:33:11:702 [Memoria- Log obligatorio]/(3536:3546): PID: <7> - Accion: <ESCRIBIR> - Direccion fisica: <88>
+[INFO] 15:33:11:805 [Memoria- Log obligatorio]/(3536:3546): PID: <7> - Pagina: <2> - Marco: <2>
+[INFO] 15:33:11:857 [Memoria- Log obligatorio]/(3536:3546): PID: <7> - Accion: <ESCRIBIR> - Direccion fisica: <92>
+[INFO] 15:33:12:932 [Memoria- Log obligatorio]/(3536:3546): PID: <7> - Pagina: <0> - Marco: <0>
+[INFO] 15:33:13:197 [Memoria- Log obligatorio]/(3536:3539): PID: <7> - Accion: <LEER> - Direccion fisica: <0>
+[INFO] 15:33:14:374 [Memoria- Log obligatorio]/(3536:3546): PID: <7> - Pagina: <0> - Marco: <0>
+[INFO] 15:33:15:045 [Memoria- Log obligatorio]/(3536:3539): PID: <7> - Accion: <LEER> - Direccion fisica: <0>
+[INFO] 15:33:16:223 [Memoria- Log obligatorio]/(3536:3548): PID: <7> - Pagina: <3> - Marco: <3>
+[INFO] 15:33:16:274 [Memoria- Log obligatorio]/(3536:3548): SWAP IN - PID: <7> - Marco: <3> - Page In: <7>-<3>
+[INFO] 15:33:16:525 [Memoria- Log obligatorio]/(3536:3539): PID: <7> - Pagina: <3> - Marco: <3>
+[INFO] 15:33:16:525 [Memoria- Log obligatorio]/(3536:3539): PID: <7> - Accion: <ESCRIBIR> - Direccion fisica: <96>
+[INFO] 15:33:20:599 [Memoria- Log obligatorio]/(3536:3546): PID: <7> - Pagina: <3> - Marco: <3>
+[INFO] 15:33:20:649 [Memoria- Log obligatorio]/(3536:3546): PID: <7> - Accion: <ESCRIBIR> - Direccion fisica: <96>
+[INFO] 15:33:20:750 [Memoria- Log obligatorio]/(3536:3546): PID: <7> - Pagina: <3> - Marco: <3>
+[INFO] 15:33:20:800 [Memoria- Log obligatorio]/(3536:3546): PID: <7> - Accion: <ESCRIBIR> - Direccion fisica: <100>
+[INFO] 15:33:21:743 [Memoria- Log obligatorio]/(3536:3546): PID: <7> - Pagina: <3> - Marco: <3>
+[INFO] 15:33:21:797 [Memoria- Log obligatorio]/(3536:3546): PID: <7> - Accion: <ESCRIBIR> - Direccion fisica: <104>
+[INFO] 15:33:21:902 [Memoria- Log obligatorio]/(3536:3546): PID: <7> - Pagina: <3> - Marco: <3>
+[INFO] 15:33:21:953 [Memoria- Log obligatorio]/(3536:3546): PID: <7> - Accion: <ESCRIBIR> - Direccion fisica: <108>
+[INFO] 15:33:22:920 [Memoria- Log obligatorio]/(3536:3546): PID: <7> - Pagina: <3> - Marco: <3>
+[INFO] 15:33:22:971 [Memoria- Log obligatorio]/(3536:3546): PID: <7> - Accion: <ESCRIBIR> - Direccion fisica: <112>
+[INFO] 15:33:23:080 [Memoria- Log obligatorio]/(3536:3546): PID: <7> - Pagina: <3> - Marco: <3>
+[INFO] 15:33:23:132 [Memoria- Log obligatorio]/(3536:3546): PID: <7> - Accion: <ESCRIBIR> - Direccion fisica: <116>
+[INFO] 15:33:24:097 [Memoria- Log obligatorio]/(3536:3546): PID: <7> - Pagina: <3> - Marco: <3>
+[INFO] 15:33:24:148 [Memoria- Log obligatorio]/(3536:3546): PID: <7> - Accion: <ESCRIBIR> - Direccion fisica: <120>
+[INFO] 15:33:24:250 [Memoria- Log obligatorio]/(3536:3546): PID: <7> - Pagina: <3> - Marco: <3>
+[INFO] 15:33:24:343 [Memoria- Log obligatorio]/(3536:3546): PID: <7> - Accion: <ESCRIBIR> - Direccion fisica: <124>
+[INFO] 15:33:25:346 [Memoria- Log obligatorio]/(3536:3546): PID: <7> - Pagina: <0> - Marco: <0>
+[INFO] 15:33:25:715 [Memoria- Log obligatorio]/(3536:3539): PID: <7> - Accion: <LEER> - Direccion fisica: <0>
+[INFO] 15:33:26:823 [Memoria- Log obligatorio]/(3536:3546): PID: <7> - Pagina: <0> - Marco: <0>
+[INFO] 15:33:27:592 [Memoria- Log obligatorio]/(3536:3539): PID: <7> - Accion: <LEER> - Direccion fisica: <0>
+[INFO] 15:33:28:756 [Memoria- Log obligatorio]/(3536:3548): PID: <7> - Tamaño: <8>
+[INFO] 15:35:13:838 [Memoria- Log obligatorio]/(3536:3548): PID: <3> - Tamaño: <2>
+[INFO] 15:35:57:928 [Memoria- Log obligatorio]/(3536:3548): PID: <6> - Tamaño: <2>
+[INFO] 15:38:28:659 [Memoria- Log obligatorio]/(3536:3548): PID: <4> - Tamaño: <2>
+[INFO] 15:38:28:721 [Memoria- Log obligatorio]/(3536:3548): PID: <5> - Tamaño: <2>

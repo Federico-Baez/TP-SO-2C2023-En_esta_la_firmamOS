@@ -1,0 +1,127 @@
+[INFO] 15:27:22:171 [File System - Log obligatorio]/(3391:3392): Acceso SWAP: <0>
+[INFO] 15:27:22:423 [File System - Log obligatorio]/(3391:3392): Acceso SWAP: <1>
+[INFO] 15:27:25:778 [File System - Log obligatorio]/(3391:3392): Acceso SWAP: <2>
+[INFO] 15:27:26:029 [File System - Log obligatorio]/(3391:3392): Acceso SWAP: <3>
+[INFO] 15:28:04:298 [File System - Log obligatorio]/(3433:3434): Acceso SWAP: <0>
+[INFO] 15:28:04:681 [File System - Log obligatorio]/(3433:3434): Acceso SWAP: <1>
+[INFO] 15:32:26:188 [File System - Log obligatorio]/(3538:3540): Acceso SWAP: <0>
+[INFO] 15:32:26:440 [File System - Log obligatorio]/(3538:3540): Acceso SWAP: <1>
+[INFO] 15:32:26:813 [File System - Log obligatorio]/(3538:3540): Acceso SWAP: <2>
+[INFO] 15:32:27:064 [File System - Log obligatorio]/(3538:3540): Acceso SWAP: <3>
+[INFO] 15:32:27:423 [File System - Log obligatorio]/(3538:3540): Acceso SWAP: <4>
+[INFO] 15:32:27:673 [File System - Log obligatorio]/(3538:3540): Acceso SWAP: <5>
+[INFO] 15:32:28:029 [File System - Log obligatorio]/(3538:3540): Acceso SWAP: <6>
+[INFO] 15:32:28:283 [File System - Log obligatorio]/(3538:3540): Acceso SWAP: <7>
+[INFO] 15:32:28:702 [File System - Log obligatorio]/(3538:3540): Acceso SWAP: <2>
+[INFO] 15:32:28:954 [File System - Log obligatorio]/(3538:3540): Acceso SWAP: <3>
+[INFO] 15:32:29:215 [File System - Log obligatorio]/(3538:3540): Acceso SWAP: <2>
+[INFO] 15:32:29:465 [File System - Log obligatorio]/(3538:3540): Acceso SWAP: <3>
+[INFO] 15:32:29:829 [File System - Log obligatorio]/(3538:3540): Acceso SWAP: <8>
+[INFO] 15:32:30:081 [File System - Log obligatorio]/(3538:3540): Acceso SWAP: <9>
+[INFO] 15:32:30:448 [File System - Log obligatorio]/(3538:3540): Acceso SWAP: <10>
+[INFO] 15:32:30:701 [File System - Log obligatorio]/(3538:3540): Acceso SWAP: <11>
+[INFO] 15:32:30:961 [File System - Log obligatorio]/(3538:3540): Acceso SWAP: <12>
+[INFO] 15:32:31:212 [File System - Log obligatorio]/(3538:3540): Acceso SWAP: <13>
+[INFO] 15:32:31:472 [File System - Log obligatorio]/(3538:3540): Acceso SWAP: <14>
+[INFO] 15:32:31:727 [File System - Log obligatorio]/(3538:3540): Acceso SWAP: <15>
+[INFO] 15:32:31:978 [File System - Log obligatorio]/(3538:3540): Acceso SWAP: <16>
+[INFO] 15:32:32:232 [File System - Log obligatorio]/(3538:3540): Acceso SWAP: <17>
+[INFO] 15:32:33:783 [File System - Log obligatorio]/(3538:3608): Crear Archivo: ArchivoRandom
+[INFO] 15:32:33:840 [File System - Log obligatorio]/(3538:3611): Acceso FAT - Entrada: <0> - Valor: <EOF>
+[INFO] 15:32:33:940 [File System - Log obligatorio]/(3538:3611): Acceso FAT - Entrada: <1> - Valor: <0>
+[INFO] 15:32:34:046 [File System - Log obligatorio]/(3538:3611): Acceso FAT - Entrada: <2> - Valor: <0>
+[INFO] 15:32:34:150 [File System - Log obligatorio]/(3538:3611): Acceso FAT - Entrada: <3> - Valor: <0>
+[INFO] 15:32:34:250 [File System - Log obligatorio]/(3538:3611): Acceso FAT - Entrada: <4> - Valor: <0>
+[INFO] 15:32:34:350 [File System - Log obligatorio]/(3538:3611): Acceso FAT - Entrada: <5> - Valor: <0>
+[INFO] 15:32:34:452 [File System - Log obligatorio]/(3538:3611): Acceso FAT - Entrada: <6> - Valor: <0>
+[INFO] 15:32:34:553 [File System - Log obligatorio]/(3538:3611): Acceso FAT - Entrada: <7> - Valor: <0>
+[INFO] 15:32:34:654 [File System - Log obligatorio]/(3538:3611): Acceso FAT - Entrada: <8> - Valor: <0>
+[INFO] 15:32:34:754 [File System - Log obligatorio]/(3538:3611): Acceso FAT - Entrada: <9> - Valor: <0>
+[INFO] 15:32:34:855 [File System - Log obligatorio]/(3538:3611): Acceso FAT - Entrada: <10> - Valor: <0>
+[INFO] 15:32:34:956 [File System - Log obligatorio]/(3538:3611): Acceso FAT - Entrada: <11> - Valor: <0>
+[INFO] 15:32:35:060 [File System - Log obligatorio]/(3538:3611): Acceso FAT - Entrada: <12> - Valor: <0>
+[INFO] 15:32:35:161 [File System - Log obligatorio]/(3538:3611): Acceso FAT - Entrada: <13> - Valor: <0>
+[INFO] 15:32:35:262 [File System - Log obligatorio]/(3538:3611): Acceso FAT - Entrada: <14> - Valor: <0>
+[INFO] 15:32:35:362 [File System - Log obligatorio]/(3538:3611): Acceso FAT - Entrada: <15> - Valor: <0>
+[INFO] 15:32:35:466 [File System - Log obligatorio]/(3538:3611): Acceso FAT - Entrada: <16> - Valor: <0>
+[INFO] 15:32:35:567 [File System - Log obligatorio]/(3538:3611): Acceso FAT - Entrada: <1> - Valor: <2>
+[INFO] 15:32:35:667 [File System - Log obligatorio]/(3538:3611): Acceso FAT - Entrada: <2> - Valor: <3>
+[INFO] 15:32:35:768 [File System - Log obligatorio]/(3538:3611): Acceso FAT - Entrada: <3> - Valor: <4>
+[INFO] 15:32:35:868 [File System - Log obligatorio]/(3538:3611): Acceso FAT - Entrada: <4> - Valor: <5>
+[INFO] 15:32:35:969 [File System - Log obligatorio]/(3538:3611): Acceso FAT - Entrada: <5> - Valor: <6>
+[INFO] 15:32:36:074 [File System - Log obligatorio]/(3538:3611): Acceso FAT - Entrada: <6> - Valor: <7>
+[INFO] 15:32:36:174 [File System - Log obligatorio]/(3538:3611): Acceso FAT - Entrada: <7> - Valor: <8>
+[INFO] 15:32:36:274 [File System - Log obligatorio]/(3538:3611): Acceso FAT - Entrada: <8> - Valor: <9>
+[INFO] 15:32:36:379 [File System - Log obligatorio]/(3538:3611): Acceso FAT - Entrada: <9> - Valor: <10>
+[INFO] 15:32:36:480 [File System - Log obligatorio]/(3538:3611): Acceso FAT - Entrada: <10> - Valor: <11>
+[INFO] 15:32:36:583 [File System - Log obligatorio]/(3538:3611): Acceso FAT - Entrada: <11> - Valor: <12>
+[INFO] 15:32:36:684 [File System - Log obligatorio]/(3538:3611): Acceso FAT - Entrada: <12> - Valor: <13>
+[INFO] 15:32:36:786 [File System - Log obligatorio]/(3538:3611): Acceso FAT - Entrada: <13> - Valor: <14>
+[INFO] 15:32:36:889 [File System - Log obligatorio]/(3538:3611): Acceso FAT - Entrada: <14> - Valor: <15>
+[INFO] 15:32:36:990 [File System - Log obligatorio]/(3538:3611): Acceso FAT - Entrada: <15> - Valor: <16>
+[INFO] 15:32:37:091 [File System - Log obligatorio]/(3538:3611): Acceso FAT - Entrada: <16> - Valor: <EOF>
+[INFO] 15:32:37:202 [File System - Log obligatorio]/(3538:3611): Truncar Archivo: <ArchivoRandom> - Tamaño: <512>
+[INFO] 15:32:38:225 [File System - Log obligatorio]/(3538:3540): Acceso SWAP: <10>
+[INFO] 15:32:47:423 [File System - Log obligatorio]/(3538:3709): Acceso FAT - Entrada: <1> - Valor: <2>
+[INFO] 15:32:47:424 [File System - Log obligatorio]/(3538:3709): Escribir Archivo: <ArchivoRandom> - Puntero: <0> - Memoria: <0>
+[INFO] 15:32:47:475 [File System - Log obligatorio]/(3538:3540): Acceso Bloque - Archivo: <ArchivoRandom> - Bloque Archivso: <1> - Bloque FS: <1025>
+[INFO] 15:32:48:860 [File System - Log obligatorio]/(3538:3723): Acceso FAT - Entrada: <1> - Valor: <2>
+[INFO] 15:32:48:961 [File System - Log obligatorio]/(3538:3723): Acceso FAT - Entrada: <2> - Valor: <3>
+[INFO] 15:32:49:062 [File System - Log obligatorio]/(3538:3723): Acceso FAT - Entrada: <3> - Valor: <4>
+[INFO] 15:32:49:164 [File System - Log obligatorio]/(3538:3723): Acceso FAT - Entrada: <4> - Valor: <5>
+[INFO] 15:32:49:264 [File System - Log obligatorio]/(3538:3723): Escribir Archivo: <ArchivoRandom> - Puntero: <128> - Memoria: <0>
+[INFO] 15:32:49:317 [File System - Log obligatorio]/(3538:3540): Acceso Bloque - Archivo: <ArchivoRandom> - Bloque Archivso: <5> - Bloque FS: <1029>
+[INFO] 15:32:50:780 [File System - Log obligatorio]/(3538:3540): Acceso SWAP: <11>
+[INFO] 15:32:59:887 [File System - Log obligatorio]/(3538:3540): Acceso SWAP: <0>
+[INFO] 15:33:00:138 [File System - Log obligatorio]/(3538:3540): Acceso SWAP: <1>
+[INFO] 15:33:00:948 [File System - Log obligatorio]/(3538:3805): Acceso FAT - Entrada: <1> - Valor: <2>
+[INFO] 15:33:01:049 [File System - Log obligatorio]/(3538:3805): Escribir Archivo: <ArchivoRandom> - Puntero: <32> - Memoria: <0>
+[INFO] 15:33:01:100 [File System - Log obligatorio]/(3538:3540): Acceso Bloque - Archivo: <ArchivoRandom> - Bloque Archivso: <2> - Bloque FS: <1026>
+[INFO] 15:33:02:152 [File System - Log obligatorio]/(3538:3818): Acceso FAT - Entrada: <1> - Valor: <2>
+[INFO] 15:33:02:253 [File System - Log obligatorio]/(3538:3818): Acceso FAT - Entrada: <2> - Valor: <3>
+[INFO] 15:33:02:353 [File System - Log obligatorio]/(3538:3818): Acceso FAT - Entrada: <3> - Valor: <4>
+[INFO] 15:33:02:454 [File System - Log obligatorio]/(3538:3818): Acceso FAT - Entrada: <4> - Valor: <5>
+[INFO] 15:33:02:555 [File System - Log obligatorio]/(3538:3818): Acceso FAT - Entrada: <5> - Valor: <6>
+[INFO] 15:33:02:655 [File System - Log obligatorio]/(3538:3818): Escribir Archivo: <ArchivoRandom> - Puntero: <160> - Memoria: <0>
+[INFO] 15:33:02:706 [File System - Log obligatorio]/(3538:3540): Acceso Bloque - Archivo: <ArchivoRandom> - Bloque Archivso: <6> - Bloque FS: <1030>
+[INFO] 15:33:03:793 [File System - Log obligatorio]/(3538:3540): Acceso SWAP: <12>
+[INFO] 15:33:12:991 [File System - Log obligatorio]/(3538:3888): Acceso FAT - Entrada: <1> - Valor: <2>
+[INFO] 15:33:13:095 [File System - Log obligatorio]/(3538:3888): Acceso FAT - Entrada: <2> - Valor: <3>
+[INFO] 15:33:13:197 [File System - Log obligatorio]/(3538:3888): Escribir Archivo: <ArchivoRandom> - Puntero: <64> - Memoria: <0>
+[INFO] 15:33:13:249 [File System - Log obligatorio]/(3538:3540): Acceso Bloque - Archivo: <ArchivoRandom> - Bloque Archivso: <3> - Bloque FS: <1027>
+[INFO] 15:33:14:431 [File System - Log obligatorio]/(3538:3904): Acceso FAT - Entrada: <1> - Valor: <2>
+[INFO] 15:33:14:533 [File System - Log obligatorio]/(3538:3904): Acceso FAT - Entrada: <2> - Valor: <3>
+[INFO] 15:33:14:639 [File System - Log obligatorio]/(3538:3904): Acceso FAT - Entrada: <3> - Valor: <4>
+[INFO] 15:33:14:740 [File System - Log obligatorio]/(3538:3904): Acceso FAT - Entrada: <4> - Valor: <5>
+[INFO] 15:33:14:841 [File System - Log obligatorio]/(3538:3904): Acceso FAT - Entrada: <5> - Valor: <6>
+[INFO] 15:33:14:942 [File System - Log obligatorio]/(3538:3904): Acceso FAT - Entrada: <6> - Valor: <7>
+[INFO] 15:33:15:045 [File System - Log obligatorio]/(3538:3904): Escribir Archivo: <ArchivoRandom> - Puntero: <192> - Memoria: <0>
+[INFO] 15:33:15:098 [File System - Log obligatorio]/(3538:3540): Acceso Bloque - Archivo: <ArchivoRandom> - Bloque Archivso: <7> - Bloque FS: <1031>
+[INFO] 15:33:16:274 [File System - Log obligatorio]/(3538:3540): Acceso SWAP: <13>
+[INFO] 15:33:25:409 [File System - Log obligatorio]/(3538:3975): Acceso FAT - Entrada: <1> - Valor: <2>
+[INFO] 15:33:25:509 [File System - Log obligatorio]/(3538:3975): Acceso FAT - Entrada: <2> - Valor: <3>
+[INFO] 15:33:25:614 [File System - Log obligatorio]/(3538:3975): Acceso FAT - Entrada: <3> - Valor: <4>
+[INFO] 15:33:25:714 [File System - Log obligatorio]/(3538:3975): Escribir Archivo: <ArchivoRandom> - Puntero: <96> - Memoria: <0>
+[INFO] 15:33:25:767 [File System - Log obligatorio]/(3538:3540): Acceso Bloque - Archivo: <ArchivoRandom> - Bloque Archivso: <4> - Bloque FS: <1028>
+[INFO] 15:33:26:877 [File System - Log obligatorio]/(3538:3988): Acceso FAT - Entrada: <1> - Valor: <2>
+[INFO] 15:33:26:978 [File System - Log obligatorio]/(3538:3988): Acceso FAT - Entrada: <2> - Valor: <3>
+[INFO] 15:33:27:086 [File System - Log obligatorio]/(3538:3988): Acceso FAT - Entrada: <3> - Valor: <4>
+[INFO] 15:33:27:186 [File System - Log obligatorio]/(3538:3988): Acceso FAT - Entrada: <4> - Valor: <5>
+[INFO] 15:33:27:288 [File System - Log obligatorio]/(3538:3988): Acceso FAT - Entrada: <5> - Valor: <6>
+[INFO] 15:33:27:389 [File System - Log obligatorio]/(3538:3988): Acceso FAT - Entrada: <6> - Valor: <7>
+[INFO] 15:33:27:492 [File System - Log obligatorio]/(3538:3988): Acceso FAT - Entrada: <7> - Valor: <8>
+[INFO] 15:33:27:592 [File System - Log obligatorio]/(3538:3988): Escribir Archivo: <ArchivoRandom> - Puntero: <224> - Memoria: <0>
+[INFO] 15:33:27:651 [File System - Log obligatorio]/(3538:3540): Acceso Bloque - Archivo: <ArchivoRandom> - Bloque Archivso: <8> - Bloque FS: <1032>
+[INFO] 15:33:28:756 [File System - Log obligatorio]/(3538:3540): Acceso SWAP: <10>
+[INFO] 15:33:29:014 [File System - Log obligatorio]/(3538:3540): Acceso SWAP: <11>
+[INFO] 15:33:29:264 [File System - Log obligatorio]/(3538:3540): Acceso SWAP: <12>
+[INFO] 15:33:29:515 [File System - Log obligatorio]/(3538:3540): Acceso SWAP: <13>
+[INFO] 15:33:29:766 [File System - Log obligatorio]/(3538:3540): Acceso SWAP: <14>
+[INFO] 15:33:30:017 [File System - Log obligatorio]/(3538:3540): Acceso SWAP: <15>
+[INFO] 15:33:30:270 [File System - Log obligatorio]/(3538:3540): Acceso SWAP: <16>
+[INFO] 15:33:30:520 [File System - Log obligatorio]/(3538:3540): Acceso SWAP: <17>
+[INFO] 15:35:13:838 [File System - Log obligatorio]/(3538:3540): Acceso SWAP: <4>
+[INFO] 15:35:14:091 [File System - Log obligatorio]/(3538:3540): Acceso SWAP: <5>
+[INFO] 15:35:57:928 [File System - Log obligatorio]/(3538:3540): Acceso SWAP: <8>
+[INFO] 15:35:58:180 [File System - Log obligatorio]/(3538:3540): Acceso SWAP: <9>
+[INFO] 15:38:28:659 [File System - Log obligatorio]/(3538:3540): Acceso SWAP: <6>

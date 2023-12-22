@@ -39,6 +39,7 @@ extern int server_fd_filesystem;
 extern int fd_memoria;
 extern int fd_kernel;
 
+extern char* IP_FILESYSTEM;
 extern char* IP_MEMORIA;
 extern char* PUERTO_MEMORIA;
 extern char* PUERTO_ESCUCHA;

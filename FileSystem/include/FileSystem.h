@@ -5,8 +5,6 @@
 #include "fs_memoria.h"
 #include "fs_kernel.h"
 
-#define IP_FILESYSTEM "127.0.0.1"
-
 const uint32_t EOF_FS = UINT32_MAX;
 
 t_log* filesystem_logger;
@@ -17,6 +15,7 @@ int server_fd_filesystem;
 int fd_memoria;
 int fd_kernel;
 
+char* IP_FILESYSTEM;
 char* IP_MEMORIA;
 char* PUERTO_MEMORIA;
 char* PUERTO_ESCUCHA;
