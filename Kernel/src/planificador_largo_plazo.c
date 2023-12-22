@@ -124,7 +124,7 @@ void plp_planificar_proceso_exit(int pid){
 
 			pthread_mutex_lock(&mutex_flag_proceso_desalojado);
 			pthread_mutex_lock(&mutex_flag_finalizar_proceso);
-			if(!flag_proceso_desalojado){
+			if(flag_proceso_desalojado){
 //				flag_proceso_desalojado = false;
 //			}else{
 	//			Enviar un interrupt
